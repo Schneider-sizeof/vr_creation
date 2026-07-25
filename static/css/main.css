@@ -757,3 +757,20 @@ body.vr-mode #vr-mode-toggle-btn {
         bottom: 300px; /* More clearance on mobile phones */
     }
 }
+
+/* VR Mode Custom Section Overrides */
+body.vr-mode .section-light {
+    background-color: #08090d !important;
+    background-image: 
+        linear-gradient(135deg, rgba(0, 240, 255, 0.025) 25%, transparent 25%),
+        linear-gradient(225deg, rgba(0, 240, 255, 0.025) 25%, transparent 25%) !important;
+}
+
+body.vr-mode .section-tint {
+    background-color: rgba(0, 240, 255, 0.04) !important;
+}
+
+body.vr-mode .section-gradient {
+    background: linear-gradient(135deg, #030406 0%, rgba(0, 240, 255, 0.06) 50%, rgba(255, 0, 127, 0.06) 100%, #030406 100%) !important;
+    background-size: 300% 300% !important;
+}
