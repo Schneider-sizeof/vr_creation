@@ -651,8 +651,29 @@ body.vr-mode {
 
 body.vr-mode .bg-white, 
 body.vr-mode .bg-gray-50, 
-body.vr-mode .bg-gray-100 {
+body.vr-mode .bg-gray-100,
+body.vr-mode .bg-gray-200 {
     background-color: #06070a !important;
+}
+
+/* Light Borders & Dividers -> Neon Cyan Borders */
+body.vr-mode .border,
+body.vr-mode .border-t,
+body.vr-mode .border-b,
+body.vr-mode .border-l,
+body.vr-mode .border-r,
+body.vr-mode .border-gray-100,
+body.vr-mode .border-gray-200,
+body.vr-mode .border-gray-300,
+body.vr-mode .border-gray-400 {
+    border-color: rgba(0, 240, 255, 0.15) !important;
+}
+
+/* Light Hovers -> Glowing Cyan Hovers */
+body.vr-mode .hover\:bg-gray-50:hover,
+body.vr-mode .hover\:bg-gray-100:hover,
+body.vr-mode .hover\:bg-gray-200:hover {
+    background-color: rgba(0, 240, 255, 0.12) !important;
 }
 
 body.vr-mode header,
