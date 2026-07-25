@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl font-bold text-dark mb-4">{{ service.title }}</h1>
+        <div class="flex items-center justify-center gap-2 text-sm text-gray-500">
+            <a href="{% url 'core:home' %}" class="hover:text-primary">{% trans "Accueil" %}</a>
+            <span>/</span>
+            <a href="{% url 'services:list' %}" class="hover:text-primary">{% trans "Services" %}</a>
+            <span>/</span>
+            <span class="text-primary font-medium">{{ service.title }}</span>
+        </div>
+    </div>
+</div>
+
+<section class="section bg-white">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <div class="lg:col-span-2">
+                {% if service.featured_image %}
+                <img src="{{ service.featured_image.url }}" alt="{{ service.title }}" class="w-full h-auto rounded-xl shadow-md mb-8">
+                {% else %}
+                <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&q=80" alt="{{ service.title }}" class="w-full h-auto rounded-xl shadow-md mb-8">
+                {% endif %}
+                
+                <div class="prose max-w-none text-gray-700">
+                    <h2 class="text-2xl font-bold mb-4">{% trans "Aperçu du Service" %}</h2>
+                    <p class="text-lg font-light mb-6">{{ service.short_description }}</p>
+                    
+                    <div class="mt-8">
+                        {{ service.full_description|safe }}
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lg:col-span-1">
+                <!-- Sidebar -->
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 shadow-sm sticky top-24">
+                    <h3 class="text-lg font-bold mb-4 border-b pb-2">{% trans "Autres Services" %}</h3>
+                    <ul class="space-y-3">
+                        {% for s in other_services %}
+                        <li>
+                            <a href="{% url 'services:detail' s.slug %}" class="flex items-center text-gray-600 hover:text-primary transition-colors">
+                                <i class="fas fa-chevron-right text-xs mr-2 text-primary"></i>
+                                {{ s.title }}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    
+                    <div class="mt-8 pt-6 border-t border-gray-200">
+                        <h4 class="font-bold mb-2">{% trans "Besoin d'un devis ?" %}</h4>
+                        <p class="text-sm text-gray-600 mb-4">{% trans "Contactez-nous pour discuter de votre projet et obtenir une estimation gratuite." %}</p>
+                        <a href="{% url 'contact:contact' %}" class="btn btn-primary w-full">{% trans "Nous Contacter" %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

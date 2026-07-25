@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% load i18n static %}
+
+{% block content %}
+<!-- Page Header -->
+<div class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl font-bold text-dark mb-4">{% trans "À Propos de Nous" %}</h1>
+        <div class="flex items-center justify-center gap-2 text-sm text-gray-500">
+            <a href="{% url 'core:home' %}" class="hover:text-primary">{% trans "Accueil" %}</a>
+            <span>/</span>
+            <span class="text-primary font-medium">{% trans "À propos" %}</span>
+        </div>
+    </div>
+</div>
+
+<!-- Intro Section -->
+<section class="section bg-white">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="animate-on-scroll slide-left">
+                <span class="pill-badge mb-4">{% trans "Notre Histoire" %}</span>
+                <h2 class="text-3xl font-bold mb-6">{% trans "L'alliance entre" %} <span class="text-primary">{% trans "esthétique" %}</span> {% trans "et technologie." %}</h2>
+                <div class="prose max-w-none text-gray-600 space-y-4">
+                    <p>{% trans "VR CREATION COMPANY est une agence spécialisée dans la création de contenus 3D et de visites virtuelles interactives. Nous accompagnons les professionnels de l'immobilier, de l'architecture et de l'aménagement d'intérieur dans la mise en valeur de leurs projets." %}</p>
+                    <p>{% trans "Notre équipe d'experts passionnés met son savoir-faire technique et sa sensibilité artistique à votre service pour créer des expériences visuelles immersives et impactantes." %}</p>
+                </div>
+            </div>
+            <div class="relative animate-on-scroll slide-right">
+                {% if site_settings.about_image %}
+                <img src="{{ site_settings.about_image.url }}" alt="About VR Creation" class="rounded-[40px] shadow-lg border-8 border-primary-light object-cover aspect-[4/3] w-full">
+                {% else %}
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="About VR Creation" class="rounded-[40px] shadow-lg border-8 border-primary-light object-cover aspect-[4/3] w-full">
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Timeline / Process -->
+<section class="section section-light">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16 animate-on-scroll slide-up">
+            <span class="pill-badge">{% trans "Notre Processus" %}</span>
+            <h2 class="section-title">{% trans "Comment nous travaillons" %}</h2>
+        </div>
+        
+        <div class="timeline mt-12 hidden md:block">
+            <div class="timeline-item animate-on-scroll slide-left">
+                <div class="timeline-number">01</div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-primary">
+                    <h4 class="text-lg font-bold mb-2">{% trans "Analyse et Conseil" %}</h4>
+                    <p class="text-gray-600 text-sm">{% trans "Étude de vos besoins, récupération de vos plans et brief créatif pour définir l'ambiance." %}</p>
+                </div>
+            </div>
+            <div class="timeline-item animate-on-scroll slide-right" style="transition-delay: 150ms;">
+                <div class="timeline-number">02</div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-primary">
+                    <h4 class="text-lg font-bold mb-2">{% trans "Modélisation 3D" %}</h4>
+                    <p class="text-gray-600 text-sm">{% trans "Création de l'architecture, du mobilier et des éléments décoratifs en 3D avec une grande précision." %}</p>
+                </div>
+            </div>
+            <div class="timeline-item animate-on-scroll slide-left" style="transition-delay: 300ms;">
+                <div class="timeline-number">03</div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-primary">
+                    <h4 class="text-lg font-bold mb-2">{% trans "Éclairage et Textures" %}</h4>
+                    <p class="text-gray-600 text-sm">{% trans "Application des matériaux réalistes et configuration de la lumière pour une atmosphère parfaite." %}</p>
+                </div>
+            </div>
+            <div class="timeline-item animate-on-scroll slide-right" style="transition-delay: 450ms;">
+                <div class="timeline-number">04</div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-primary">
+                    <h4 class="text-lg font-bold mb-2">{% trans "Rendu et Post-production" %}</h4>
+                    <p class="text-gray-600 text-sm">{% trans "Génération des images haute résolution et retouches finales pour un résultat optimal." %}</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Timeline -->
+        <div class="space-y-6 md:hidden">
+            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-primary relative pl-12 animate-on-scroll slide-up">
+                <div class="absolute top-6 left-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold -ml-4">1</div>
+                <h4 class="text-lg font-bold mb-2">{% trans "Analyse et Conseil" %}</h4>
+                <p class="text-gray-600 text-sm">{% trans "Étude de vos besoins, récupération de vos plans et brief créatif." %}</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-primary relative pl-12 animate-on-scroll slide-up" style="transition-delay: 150ms;">
+                <div class="absolute top-6 left-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold -ml-4">2</div>
+                <h4 class="text-lg font-bold mb-2">{% trans "Modélisation 3D" %}</h4>
+                <p class="text-gray-600 text-sm">{% trans "Création de l'architecture et du mobilier en 3D." %}</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

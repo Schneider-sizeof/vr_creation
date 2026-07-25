@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl font-bold text-dark">{% trans "Politique de Cookies" %}</h1>
+        <div class="flex items-center justify-center gap-2 text-sm text-gray-500 mt-2">
+            <a href="{% url 'core:home' %}" class="hover:text-primary">{% trans "Accueil" %}</a>
+            <span>/</span>
+            <span class="text-primary font-medium">{% trans "Cookies" %}</span>
+        </div>
+    </div>
+</div>
+
+<section class="section bg-white">
+    <div class="container mx-auto px-4 max-w-4xl">
+        <!-- Interactive preferences box -->
+        <div class="bg-primary-light/50 border border-primary/20 rounded-2xl p-6 md:p-8 mb-12 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="max-w-xl">
+                <h3 class="text-xl font-bold text-dark mb-2">{% trans "Préférences de cookies" %}</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    {% trans "Vous pouvez à tout moment modifier vos préférences de cookies, accepter ou refuser le chargement des scripts analytiques ou marketing." %}
+                </p>
+            </div>
+            <button class="btn btn-primary shadow-md hover:shadow-lg whitespace-nowrap js-manage-cookies">
+                <i class="fas fa-cookie-bite mr-2"></i>{% trans "Gérer mes choix" %}
+            </button>
+        </div>
+
+        <div class="prose prose-lg text-gray-700 max-w-none">
+            <h2>{% trans "Qu'est-ce qu'un cookie ?" %}</h2>
+            <p>
+                {% trans "Un cookie est un petit fichier texte déposé sur votre terminal (ordinateur, tablette ou smartphone) lors de la visite d'un site internet. Il permet de conserver des données utilisateur afin de faciliter la navigation et de permettre certaines fonctionnalités." %}
+            </p>
+
+            <h2>{% trans "Quels cookies utilisons-nous ?" %}</h2>
+            <ul>
+                <li>
+                    <strong>{% trans "Cookies nécessaires" %} :</strong>
+                    {% trans "Ces cookies sont essentiels au fonctionnement du site et ne peuvent pas être désactivés dans nos systèmes." %}
+                </li>
+                <li>
+                    <strong>{% trans "Cookies analytiques (Google Analytics)" %} :</strong>
+                    {% trans "Ces cookies nous aident à mesurer l'audience de notre site, à analyser la navigation et à identifier d'éventuels dysfonctionnements pour améliorer votre expérience utilisateur." %}
+                </li>
+                <li>
+                    <strong>{% trans "Cookies de marketing et de partage" %} :</strong>
+                    {% trans "Ces cookies sont liés au partage sur les réseaux sociaux et peuvent être installés pour suivre l'activité sur d'autres sites." %}
+                </li>
+            </ul>
+
+            <h2>{% trans "Durée de conservation" %}</h2>
+            <p>
+                {% trans "Conformément à la réglementation RGPD, le consentement donné pour le dépôt de cookies a une durée de validité de 13 mois maximum. À l'issue de cette période, votre consentement sera à nouveau demandé." %}
+            </p>
+        </div>
+    </div>
+</section>
+{% endblock %}

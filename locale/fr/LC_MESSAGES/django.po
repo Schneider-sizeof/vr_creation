@@ -1,0 +1,986 @@
+# VR Creation - fr translations
+msgid ""
+msgstr ""
+"Project-Id-Version: VR Creation 1.0\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Accepter"
+msgstr "Accepter"
+
+msgid "Accueil"
+msgstr "Accueil"
+
+msgid "Actif"
+msgstr "Actif"
+
+msgid "Actualités & Blog"
+msgstr "Actualités & Blog"
+
+msgid "Adresse"
+msgstr "Adresse"
+
+msgid "Agence de Réalité Virtuelle"
+msgstr "Agence de Réalité Virtuelle"
+
+msgid "Ajouter noindex à cette page"
+msgstr "Ajouter noindex à cette page"
+
+msgid "Analyse et Conseil"
+msgstr "Analyse et Conseil"
+
+msgid "Animation 3D"
+msgstr "Animation 3D"
+
+msgid "Aperçu"
+msgstr "Aperçu"
+
+msgid "Aperçu du Service"
+msgstr "Aperçu du Service"
+
+msgid "Application des matériaux réalistes et configuration de la lumière pour une atmosphère parfaite."
+msgstr "Application des matériaux réalistes et configuration de la lumière pour une atmosphère parfaite."
+
+msgid "Architecture"
+msgstr "Architecture"
+
+msgid "Article"
+msgstr "Article"
+
+msgid "Articles"
+msgstr "Articles"
+
+msgid "Aucun article publié pour le moment."
+msgstr "Aucun article publié pour le moment."
+
+msgid "Aucun projet disponible pour le moment."
+msgstr "Aucun projet disponible pour le moment."
+
+msgid "Aucun service disponible pour le moment."
+msgstr "Aucun service disponible pour le moment."
+
+msgid "Aucune visite virtuelle disponible pour le moment."
+msgstr "Aucune visite virtuelle disponible pour le moment."
+
+msgid "Aucune étude de cas disponible."
+msgstr "Aucune étude de cas disponible."
+
+msgid "Auteur"
+msgstr "Auteur"
+
+msgid "Autre"
+msgstr "Autre"
+
+msgid "Autres Services"
+msgstr "Autres Services"
+
+msgid "Avantages"
+msgstr "Avantages"
+
+msgid "Behance"
+msgstr "Behance"
+
+msgid "Besoin d'un devis ?"
+msgstr "Besoin d'un devis ?"
+
+msgid "Biographie"
+msgstr "Biographie"
+
+msgid "Blog"
+msgstr "Blog"
+
+msgid "Branding visuel"
+msgstr "Branding visuel"
+
+msgid "Captures 360°"
+msgstr "Captures 360°"
+
+msgid "Catégorie"
+msgstr "Catégorie"
+
+msgid "Catégories"
+msgstr "Catégories"
+
+msgid "Ces cookies nous aident à mesurer l'audience de notre site, à analyser la navigation et à identifier d'éventuels dysfonctionnements pour améliorer votre expérience utilisateur."
+msgstr "Ces cookies nous aident à mesurer l'audience de notre site, à analyser la navigation et à identifier d'éventuels dysfonctionnements pour améliorer votre expérience utilisateur."
+
+msgid "Ces cookies sont essentiels au fonctionnement du site et ne peuvent pas être désactivés dans nos systèmes."
+msgstr "Ces cookies sont essentiels au fonctionnement du site et ne peuvent pas être désactivés dans nos systèmes."
+
+msgid "Ces cookies sont liés au partage sur les réseaux sociaux et peuvent être installés pour suivre l'activité sur d'autres sites."
+msgstr "Ces cookies sont liés au partage sur les réseaux sociaux et peuvent être installés pour suivre l'activité sur d'autres sites."
+
+msgid "Chiffre clé"
+msgstr "Chiffre clé"
+
+msgid "Classe d\\'icône (ex: fas fa-lightbulb) ou emoji"
+msgstr "Classe d\\'icône (ex: fas fa-lightbulb) ou emoji"
+
+msgid "Classe d\\'icône ou emoji"
+msgstr "Classe d\\'icône ou emoji"
+
+msgid "Client"
+msgstr "Client"
+
+msgid "Code de vérification Google Search Console (contenu de la balise meta)"
+msgstr "Code de vérification Google Search Console (contenu de la balise meta)"
+
+msgid "Collecte des données"
+msgstr "Collecte des données"
+
+msgid "Combien font %(num1)d + %(num2)d ?"
+msgstr "Combien font %(num1)d + %(num2)d ?"
+
+msgid "Comment nous travaillons"
+msgstr "Comment nous travaillons"
+
+msgid "Confidentialité"
+msgstr "Confidentialité"
+
+msgid "Conformément à la réglementation RGPD, le consentement donné pour le dépôt de cookies a une durée de validité de 13 mois maximum. À l'issue de cette période, votre consentement sera à nouveau demandé."
+msgstr "Conformément à la réglementation RGPD, le consentement donné pour le dépôt de cookies a une durée de validité de 13 mois maximum. À l'issue de cette période, votre consentement sera à nouveau demandé."
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "Contactez-nous"
+msgstr "Contactez-nous"
+
+msgid "Contactez-nous pour discuter de vos besoins et obtenir un devis personnalisé."
+msgstr "Contactez-nous pour discuter de vos besoins et obtenir un devis personnalisé."
+
+msgid "Contactez-nous pour discuter de votre projet et obtenir une estimation gratuite."
+msgstr "Contactez-nous pour discuter de votre projet et obtenir une estimation gratuite."
+
+msgid "Contenu"
+msgstr "Contenu"
+
+msgid "Cookies"
+msgstr "Cookies"
+
+msgid "Cookies Nécessaires"
+msgstr "Cookies Nécessaires"
+
+msgid "Cookies analytiques (Google Analytics)"
+msgstr "Cookies analytiques (Google Analytics)"
+
+msgid "Cookies de marketing et de partage"
+msgstr "Cookies de marketing et de partage"
+
+msgid "Cookies de marketing et réseaux sociaux"
+msgstr "Cookies de marketing et réseaux sociaux"
+
+msgid "Cookies de statistiques et d'analyse"
+msgstr "Cookies de statistiques et d'analyse"
+
+msgid "Cookies nécessaires"
+msgstr "Cookies nécessaires"
+
+msgid "Coordonnées"
+msgstr "Coordonnées"
+
+msgid "Création de l'architecture et du mobilier en 3D."
+msgstr "Création de l'architecture et du mobilier en 3D."
+
+msgid "Création de l'architecture, du mobilier et des éléments décoratifs en 3D avec une grande précision."
+msgstr "Création de l'architecture, du mobilier et des éléments décoratifs en 3D avec une grande précision."
+
+msgid "Créativité"
+msgstr "Créativité"
+
+msgid "Créé le"
+msgstr "Créé le"
+
+msgid "Date"
+msgstr "Date"
+
+msgid "Date de publication"
+msgstr "Date de publication"
+
+msgid "Date de réalisation"
+msgstr "Date de réalisation"
+
+msgid "Description"
+msgstr "Description"
+
+msgid "Description SEO"
+msgstr "Description SEO"
+
+msgid "Description complète"
+msgstr "Description complète"
+
+msgid "Description courte"
+msgstr "Description courte"
+
+msgid "Diapositive Hero"
+msgstr "Diapositive Hero"
+
+msgid "Diapositives Hero"
+msgstr "Diapositives Hero"
+
+msgid "Différenciation"
+msgstr "Différenciation"
+
+msgid "Durée de conservation"
+msgstr "Durée de conservation"
+
+msgid "Découvrez comment nos solutions de réalité virtuelle apportent une valeur mesurable à nos clients."
+msgstr "Découvrez comment nos solutions de réalité virtuelle apportent une valeur mesurable à nos clients."
+
+msgid "Découvrez nos derniers articles, conseils et tendances sur la réalité virtuelle et l'immobilier."
+msgstr "Découvrez nos derniers articles, conseils et tendances sur la réalité virtuelle et l'immobilier."
+
+msgid "Découvrir ce service"
+msgstr "Découvrir ce service"
+
+msgid "Découvrir nos projets"
+msgstr "Découvrir nos projets"
+
+msgid "Décrivez votre projet..."
+msgstr "Décrivez votre projet..."
+
+msgid "Défi / Problématique"
+msgstr "Défi / Problématique"
+
+msgid "Démarrer un projet"
+msgstr "Démarrer un projet"
+
+msgid "Désolé, la page que vous recherchez n'existe pas ou a été déplacée."
+msgstr "Désolé, la page que vous recherchez n'existe pas ou a été déplacée."
+
+msgid "Détails"
+msgstr "Détails"
+
+msgid "Efficacité"
+msgstr "Efficacité"
+
+msgid "Efficacité / Impact"
+msgstr "Efficacité / Impact"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Email de contact"
+msgstr "Email de contact"
+
+msgid "En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de cookies pour améliorer votre expérience utilisateur et réaliser des statistiques de visites."
+msgstr "En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de cookies pour améliorer votre expérience utilisateur et réaliser des statistiques de visites."
+
+msgid "En savoir plus"
+msgstr "En savoir plus"
+
+msgid "Enregistrer mes choix"
+msgstr "Enregistrer mes choix"
+
+msgid "Envoyer le message"
+msgstr "Envoyer le message"
+
+msgid "Envoyez-nous un message"
+msgstr "Envoyez-nous un message"
+
+msgid "Envoyé le"
+msgstr "Envoyé le"
+
+msgid "Erreur Serveur"
+msgstr "Erreur Serveur"
+
+msgid "Ex: 150+, 98%, 10 ans"
+msgstr "Ex: 150+, 98%, 10 ans"
+
+msgid "Ex: G-XXXXXXXXXX. Chargé uniquement après consentement cookies."
+msgstr "Ex: G-XXXXXXXXXX. Chargé uniquement après consentement cookies."
+
+msgid "Expertise"
+msgstr "Expertise"
+
+msgid "Expéditeur"
+msgstr "Expéditeur"
+
+msgid "Expérience immersive"
+msgstr "Expérience immersive"
+
+msgid "Extrait"
+msgstr "Extrait"
+
+msgid "Facebook"
+msgstr "Facebook"
+
+msgid "Favicon"
+msgstr "Favicon"
+
+msgid "Flexibilité"
+msgstr "Flexibilité"
+
+msgid "Gain de temps"
+msgstr "Gain de temps"
+
+msgid "Gestion des cookies"
+msgstr "Gestion des cookies"
+
+msgid "Google / Analytics / SEO"
+msgstr "Google / Analytics / SEO"
+
+msgid "Google Analytics ID"
+msgstr "Google Analytics ID"
+
+msgid "Google Search Console"
+msgstr "Google Search Console"
+
+msgid "Génération des images haute résolution et retouches finales pour un résultat optimal."
+msgstr "Génération des images haute résolution et retouches finales pour un résultat optimal."
+
+msgid "Gérer mes choix"
+msgstr "Gérer mes choix"
+
+msgid "Hébergement"
+msgstr "Hébergement"
+
+msgid "ID objet"
+msgstr "ID objet"
+
+msgid "Icône"
+msgstr "Icône"
+
+msgid "Icône CSS"
+msgstr "Icône CSS"
+
+msgid "Identifiant de page"
+msgstr "Identifiant de page"
+
+msgid "Identifiant unique : home, about, services, portfolio, contact, blog, etc."
+msgstr "Identifiant unique : home, about, services, portfolio, contact, blog, etc."
+
+msgid "Identité du site"
+msgstr "Identité du site"
+
+msgid "Image"
+msgstr "Image"
+
+msgid "Image 1200x630px recommandée"
+msgstr "Image 1200x630px recommandée"
+
+msgid "Image 360°"
+msgstr "Image 360°"
+
+msgid "Image OG par défaut"
+msgstr "Image OG par défaut"
+
+msgid "Image Open Graph"
+msgstr "Image Open Graph"
+
+msgid "Image de fond du hero de la page d\\'accueil"
+msgstr "Image de fond du hero de la page d\\'accueil"
+
+msgid "Image du projet"
+msgstr "Image du projet"
+
+msgid "Image du service"
+msgstr "Image du service"
+
+msgid "Image hero accueil"
+msgstr "Image hero accueil"
+
+msgid "Image page À propos"
+msgstr "Image page À propos"
+
+msgid "Image par défaut pour le partage social (1200x630px recommandé)"
+msgstr "Image par défaut pour le partage social (1200x630px recommandé)"
+
+msgid "Image principale"
+msgstr "Image principale"
+
+msgid "Images du projet"
+msgstr "Images du projet"
+
+msgid "Images du service"
+msgstr "Images du service"
+
+msgid "Images principales"
+msgstr "Images principales"
+
+msgid "Immergez-vous dans nos réalisations interactives et découvrez nos projets sous tous les angles."
+msgstr "Immergez-vous dans nos réalisations interactives et découvrez nos projets sous tous les angles."
+
+msgid "Immobilier"
+msgstr "Immobilier"
+
+msgid "Importance du Service"
+msgstr "Importance du Service"
+
+msgid "Importance du service"
+msgstr "Importance du service"
+
+msgid "Innovation"
+msgstr "Innovation"
+
+msgid "Instagram"
+msgstr "Instagram"
+
+msgid "L'alliance entre"
+msgstr "L'alliance entre"
+
+msgid "Label du chiffre"
+msgstr "Label du chiffre"
+
+msgid "Le Défi"
+msgstr "Le Défi"
+
+msgid "Le Problème"
+msgstr "Le Problème"
+
+msgid "Le Résultat"
+msgstr "Le Résultat"
+
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+msgid "Lire l'étude"
+msgstr "Lire l'étude"
+
+msgid "Lire la suite"
+msgstr "Lire la suite"
+
+msgid "Logo"
+msgstr "Logo"
+
+msgid "Lu"
+msgstr "Lu"
+
+msgid "Membre de l\\'équipe"
+msgstr "Membre de l\\'équipe"
+
+msgid "Membres de l\\'équipe"
+msgstr "Membres de l\\'équipe"
+
+msgid "Mentions Légales"
+msgstr "Mentions Légales"
+
+msgid "Mentions légales"
+msgstr "Mentions légales"
+
+msgid "Merci de nous avoir contactés. Nous avons bien reçu votre message et nous vous répondrons dans les plus brefs délais."
+msgstr "Merci de nous avoir contactés. Nous avons bien reçu votre message et nous vous répondrons dans les plus brefs délais."
+
+msgid "Message"
+msgstr "Message"
+
+msgid "Message Envoyé !"
+msgstr "Message Envoyé !"
+
+msgid "Message de contact"
+msgstr "Message de contact"
+
+msgid "Messages de contact"
+msgstr "Messages de contact"
+
+msgid "Mis en avant"
+msgstr "Mis en avant"
+
+msgid "Mode Cyber-VR"
+msgstr "Mode Cyber-VR"
+
+msgid "Mode Immersif VR"
+msgstr "Mode Immersif VR"
+
+msgid "Modifié le"
+msgstr "Modifié le"
+
+msgid "Modélisation 3D"
+msgstr "Modélisation 3D"
+
+msgid "Métadonnées"
+msgstr "Métadonnées"
+
+msgid "Navigation"
+msgstr "Navigation"
+
+msgid "Ne pas indexer"
+msgstr "Ne pas indexer"
+
+msgid "Nom"
+msgstr "Nom"
+
+msgid "Nom complet"
+msgstr "Nom complet"
+
+msgid "Nom du site"
+msgstr "Nom du site"
+
+msgid "Nos Coordonnées"
+msgstr "Nos Coordonnées"
+
+msgid "Nos Points Forts"
+msgstr "Nos Points Forts"
+
+msgid "Nos Services"
+msgstr "Nos Services"
+
+msgid "Nos services"
+msgstr "Nos services"
+
+msgid "Notre Expertise"
+msgstr "Notre Expertise"
+
+msgid "Notre Histoire"
+msgstr "Notre Histoire"
+
+msgid "Notre Mission"
+msgstr "Notre Mission"
+
+msgid "Notre Portfolio"
+msgstr "Notre Portfolio"
+
+msgid "Notre Processus"
+msgstr "Notre Processus"
+
+msgid "Notre Solution"
+msgstr "Notre Solution"
+
+msgid "Notre équipe d'experts passionnés met son savoir-faire technique et sa sensibilité artistique à votre service pour créer des expériences visuelles immersives et impactantes."
+msgstr "Notre équipe d'experts passionnés met son savoir-faire technique et sa sensibilité artistique à votre service pour créer des expériences visuelles immersives et impactantes."
+
+msgid "Nous Contacter"
+msgstr "Nous Contacter"
+
+msgid "Nous contacter"
+msgstr "Nous contacter"
+
+msgid "Nous transformons vos visions en réalités immersives avec une approche centrée sur l'excellence."
+msgstr "Nous transformons vos visions en réalités immersives avec une approche centrée sur l'excellence."
+
+msgid "Nous trouver"
+msgstr "Nous trouver"
+
+msgid "Numéro WhatsApp au format international (ex: +33612345678)"
+msgstr "Numéro WhatsApp au format international (ex: +33612345678)"
+
+msgid "Ordre"
+msgstr "Ordre"
+
+msgid "Page introuvable"
+msgstr "Page introuvable"
+
+msgid "Paramètres du site"
+msgstr "Paramètres du site"
+
+msgid "Partager :"
+msgstr "Partager :"
+
+msgid "Permettent de mesurer l'audience et d'analyser l'utilisation du site pour l'améliorer."
+msgstr "Permettent de mesurer l'audience et d'analyser l'utilisation du site pour l'améliorer."
+
+msgid "Permettent de vous proposer des publicités personnalisées et de partager du contenu."
+msgstr "Permettent de vous proposer des publicités personnalisées et de partager du contenu."
+
+msgid "Personnaliser"
+msgstr "Personnaliser"
+
+msgid "Personnaliser mes choix"
+msgstr "Personnaliser mes choix"
+
+msgid "Photo"
+msgstr "Photo"
+
+msgid "Pied de page"
+msgstr "Pied de page"
+
+msgid "Point fort"
+msgstr "Point fort"
+
+msgid "Points forts"
+msgstr "Points forts"
+
+msgid "Politique de Confidentialité"
+msgstr "Politique de Confidentialité"
+
+msgid "Politique de Cookies"
+msgstr "Politique de Cookies"
+
+msgid "Portfolio"
+msgstr "Portfolio"
+
+msgid "Pourquoi choisir VR Creation ?"
+msgstr "Pourquoi choisir VR Creation ?"
+
+msgid "Problème / Contexte"
+msgstr "Problème / Contexte"
+
+msgid "Professionnalisme"
+msgstr "Professionnalisme"
+
+msgid "Projet"
+msgstr "Projet"
+
+msgid "Projet Similaire ?"
+msgstr "Projet Similaire ?"
+
+msgid "Projet lié"
+msgstr "Projet lié"
+
+msgid "Projets"
+msgstr "Projets"
+
+msgid "Propriété intellectuelle"
+msgstr "Propriété intellectuelle"
+
+msgid "Précision"
+msgstr "Précision"
+
+msgid "Précédent"
+msgstr "Précédent"
+
+msgid "Préférences de cookies"
+msgstr "Préférences de cookies"
+
+msgid "Prêt à sublimer votre prochain projet ?"
+msgstr "Prêt à sublimer votre prochain projet ?"
+
+msgid "Publié"
+msgstr "Publié"
+
+msgid "Qu'est-ce qu'un cookie ?"
+msgstr "Qu'est-ce qu'un cookie ?"
+
+msgid "Quels cookies utilisons-nous ?"
+msgstr "Quels cookies utilisons-nous ?"
+
+msgid "Question de sécurité"
+msgstr "Question de sécurité"
+
+msgid "Reconnue"
+msgstr "Reconnue"
+
+msgid "Refuser"
+msgstr "Refuser"
+
+msgid "Rendu et Post-production"
+msgstr "Rendu et Post-production"
+
+msgid "Rentabilité"
+msgstr "Rentabilité"
+
+msgid "Requis pour le bon fonctionnement et la sécurité du site."
+msgstr "Requis pour le bon fonctionnement et la sécurité du site."
+
+msgid "Respect des délais et accompagnement sur-mesure à chaque étape."
+msgstr "Respect des délais et accompagnement sur-mesure à chaque étape."
+
+msgid "Retail / Commerce"
+msgstr "Retail / Commerce"
+
+msgid "Retour"
+msgstr "Retour"
+
+msgid "Retour aux articles"
+msgstr "Retour aux articles"
+
+msgid "Retour en haut"
+msgstr "Retour en haut"
+
+msgid "Retour à l'accueil"
+msgstr "Retour à l'accueil"
+
+msgid "Réalisations"
+msgstr "Réalisations"
+
+msgid "Réalité Virtuelle"
+msgstr "Réalité Virtuelle"
+
+msgid "Réponse incorrecte. Veuillez réessayer."
+msgstr "Réponse incorrecte. Veuillez réessayer."
+
+msgid "Réseaux sociaux"
+msgstr "Réseaux sociaux"
+
+msgid "Résultat"
+msgstr "Résultat"
+
+msgid "Résultat obtenu"
+msgstr "Résultat obtenu"
+
+msgid "Résumé affiché dans les cartes (max 300 caractères)"
+msgstr "Résumé affiché dans les cartes (max 300 caractères)"
+
+msgid "Résumé de l\\'article (max 500 caractères)"
+msgstr "Résumé de l\\'article (max 500 caractères)"
+
+msgid "Rôle"
+msgstr "Rôle"
+
+msgid "SEO — Métadonnées objet"
+msgstr "SEO — Métadonnées objet"
+
+msgid "SEO — Métadonnées objets"
+msgstr "SEO — Métadonnées objets"
+
+msgid "SEO — Page statique"
+msgstr "SEO — Page statique"
+
+msgid "SEO — Pages statiques"
+msgstr "SEO — Pages statiques"
+
+msgid "Secteur"
+msgstr "Secteur"
+
+msgid "Secteur d\\'activité"
+msgstr "Secteur d\\'activité"
+
+msgid "Secteurs"
+msgstr "Secteurs"
+
+msgid "Service"
+msgstr "Service"
+
+msgid "Services"
+msgstr "Services"
+
+msgid "Simule un espace virtuel 3D (ambiance néon et particules cosmiques)."
+msgstr "Simule un espace virtuel 3D (ambiance néon et particules cosmiques)."
+
+msgid "Simule un espace virtuel 3D en transformant le site avec un design néon et des particules cosmiques flottantes !"
+msgstr "Simule un espace virtuel 3D en transformant le site avec un design néon et des particules cosmiques flottantes !"
+
+msgid "Slogan"
+msgstr "Slogan"
+
+msgid "Slug"
+msgstr "Slug"
+
+msgid "Solution apportée"
+msgstr "Solution apportée"
+
+msgid "Spam detected."
+msgstr "Spam detected."
+
+msgid "Statut"
+msgstr "Statut"
+
+msgid "Sublimer vos projets par des approches visuelles innovantes et esthétiques."
+msgstr "Sublimer vos projets par des approches visuelles innovantes et esthétiques."
+
+msgid "Sublimez vos projets avec la"
+msgstr "Sublimez vos projets avec la"
+
+msgid "Suivant"
+msgstr "Suivant"
+
+msgid "Suivez-nous"
+msgstr "Suivez-nous"
+
+msgid "Sujet"
+msgstr "Sujet"
+
+msgid "Sujet de votre message"
+msgstr "Sujet de votre message"
+
+msgid "Temps de lecture (min)"
+msgstr "Temps de lecture (min)"
+
+msgid "Texte alternatif"
+msgstr "Texte alternatif"
+
+msgid "Texte copyright"
+msgstr "Texte copyright"
+
+msgid "Texte du pied de page"
+msgstr "Texte du pied de page"
+
+msgid "TikTok"
+msgstr "TikTok"
+
+msgid "Titre"
+msgstr "Titre"
+
+msgid "Titre SEO"
+msgstr "Titre SEO"
+
+msgid "Toujours actif"
+msgstr "Toujours actif"
+
+msgid "Tourisme"
+msgstr "Tourisme"
+
+msgid "Tous droits réservés."
+msgstr "Tous droits réservés."
+
+msgid "Twitter / X"
+msgstr "Twitter / X"
+
+msgid "Type de contenu"
+msgstr "Type de contenu"
+
+msgid "Téléphone"
+msgstr "Téléphone"
+
+msgid "URL Google Maps (embed)"
+msgstr "URL Google Maps (embed)"
+
+msgid "URL canonique"
+msgstr "URL canonique"
+
+msgid "URL iframe Google Maps pour la page contact"
+msgstr "URL iframe Google Maps pour la page contact"
+
+msgid "URL iframe de la visite virtuelle 360° (Pannellum, Matterport, etc.)"
+msgstr "URL iframe de la visite virtuelle 360° (Pannellum, Matterport, etc.)"
+
+msgid "URL visite virtuelle"
+msgstr "URL visite virtuelle"
+
+msgid "Un cookie est un petit fichier texte déposé sur votre terminal (ordinateur, tablette ou smartphone) lors de la visite d'un site internet. Il permet de conserver des données utilisateur afin de faciliter la navigation et de permettre certaines fonctionnalités."
+msgstr "Un cookie est un petit fichier texte déposé sur votre terminal (ordinateur, tablette ou smartphone) lors de la visite d'un site internet. Il permet de conserver des données utilisateur afin de faciliter la navigation et de permettre certaines fonctionnalités."
+
+msgid "Un souci du détail minutieux pour des rendus ultra-réalistes."
+msgstr "Un souci du détail minutieux pour des rendus ultra-réalistes."
+
+msgid "Une erreur inattendue s'est produite. Nos équipes ont été alertées."
+msgstr "Une erreur inattendue s'est produite. Nos équipes ont été alertées."
+
+msgid "Utilisation des dernières technologies pour accélérer vos ventes."
+msgstr "Utilisation des dernières technologies pour accélérer vos ventes."
+
+msgid "Utilisation des données"
+msgstr "Utilisation des données"
+
+msgid "VR CREATION COMPANY est une agence spécialisée dans la création de contenus 3D et de visites virtuelles interactives. Nous accompagnons les professionnels de l'immobilier, de l'architecture et de l'aménagement d'intérieur dans la mise en valeur de leurs projets."
+msgstr "VR CREATION COMPANY est une agence spécialisée dans la création de contenus 3D et de visites virtuelles interactives. Nous accompagnons les professionnels de l'immobilier, de l'architecture et de l'aménagement d'intérieur dans la mise en valeur de leurs projets."
+
+msgid "VR CREATION COMPANY incarne l'alliance entre esthétique et technologie pour donner vie à vos concepts avant même leur réalisation."
+msgstr "VR CREATION COMPANY incarne l'alliance entre esthétique et technologie pour donner vie à vos concepts avant même leur réalisation."
+
+msgid "Valeur"
+msgstr "Valeur"
+
+msgid "Valeurs"
+msgstr "Valeurs"
+
+msgid "Visite Virtuelle"
+msgstr "Visite Virtuelle"
+
+msgid "Visite virtuelle"
+msgstr "Visite virtuelle"
+
+msgid "Visites Virtuelles"
+msgstr "Visites Virtuelles"
+
+msgid "Visites virtuelles"
+msgstr "Visites virtuelles"
+
+msgid "Voir le projet"
+msgstr "Voir le projet"
+
+msgid "Voir le projet détaillé"
+msgstr "Voir le projet détaillé"
+
+msgid "Voir les détails du projet"
+msgstr "Voir les détails du projet"
+
+msgid "Voir tous les services"
+msgstr "Voir tous les services"
+
+msgid "Votre nom complet"
+msgstr "Votre nom complet"
+
+msgid "Votre numéro de téléphone"
+msgstr "Votre numéro de téléphone"
+
+msgid "Votre réponse"
+msgstr "Votre réponse"
+
+msgid "Vous avez envoyé trop de messages. Veuillez réessayer dans quelques minutes."
+msgstr "Vous avez envoyé trop de messages. Veuillez réessayer dans quelques minutes."
+
+msgid "Vous avez un projet ? Discutons-en et donnons vie à vos idées."
+msgstr "Vous avez un projet ? Discutons-en et donnons vie à vos idées."
+
+msgid "Vous pouvez à tout moment modifier vos préférences de cookies, accepter ou refuser le chargement des scripts analytiques ou marketing."
+msgstr "Vous pouvez à tout moment modifier vos préférences de cookies, accepter ou refuser le chargement des scripts analytiques ou marketing."
+
+msgid "WhatsApp"
+msgstr "WhatsApp"
+
+msgid "YouTube"
+msgstr "YouTube"
+
+msgid "a-propos/"
+msgstr "a-propos/"
+
+msgid "blog/"
+msgstr "blog/"
+
+msgid "confidentialite/"
+msgstr "confidentialite/"
+
+msgid "contact/"
+msgstr "contact/"
+
+msgid "contact/merci/"
+msgstr "contact/merci/"
+
+msgid "cookies/"
+msgstr "cookies/"
+
+msgid "esthétique"
+msgstr "esthétique"
+
+msgid "et technologie."
+msgstr "et technologie."
+
+msgid "etudes-de-cas/"
+msgstr "etudes-de-cas/"
+
+msgid "mentions-legales/"
+msgstr "mentions-legales/"
+
+msgid "realisations/"
+msgstr "realisations/"
+
+msgid "services/"
+msgstr "services/"
+
+msgid "visites-virtuelles/"
+msgstr "visites-virtuelles/"
+
+msgid "votre@email.com"
+msgstr "votre@email.com"
+
+msgid "À Propos de Nous"
+msgstr "À Propos de Nous"
+
+msgid "À propos"
+msgstr "À propos"
+
+msgid "À propos du projet"
+msgstr "À propos du projet"
+
+msgid "Éclairage et Textures"
+msgstr "Éclairage et Textures"
+
+msgid "Éditeur du site"
+msgstr "Éditeur du site"
+
+msgid "Étape du processus"
+msgstr "Étape du processus"
+
+msgid "Étapes du processus"
+msgstr "Étapes du processus"
+
+msgid "Étude de cas"
+msgstr "Étude de cas"
+
+msgid "Étude de vos besoins, récupération de vos plans et brief créatif pour définir l'ambiance."
+msgstr "Étude de vos besoins, récupération de vos plans et brief créatif pour définir l'ambiance."
+
+msgid "Étude de vos besoins, récupération de vos plans et brief créatif."
+msgstr "Étude de vos besoins, récupération de vos plans et brief créatif."
+
+msgid "Études de Cas"
+msgstr "Études de Cas"
+
+msgid "Études de cas"
+msgstr "Études de cas"
+
+msgid "Événementiel"
+msgstr "Événementiel"

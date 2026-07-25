@@ -1,0 +1,145 @@
+{% load i18n %}
+<div id="cookie-banner" class="fixed bottom-0 right-0 w-full md:max-w-md z-50 p-4 md:p-6 pointer-events-none transform translate-y-full transition-transform duration-500 ease-out rtl:left-0 rtl:right-auto">
+    <div class="bg-white/95 backdrop-blur-md text-dark p-6 rounded-2xl shadow-2xl border border-gray-100 flex flex-col gap-4 pointer-events-auto">
+    <!-- Header/Intro -->
+    <div class="flex items-start gap-4">
+        <div class="w-10 h-10 rounded-full bg-primary-light flex items-center justify-center text-primary text-xl flex-shrink-0 animate-bounce">
+            <i class="fas fa-cookie-bite"></i>
+        </div>
+        <div class="flex-grow">
+            <h4 class="font-bold text-dark text-lg">{% trans "Gestion des cookies" %}</h4>
+            <p class="text-gray-600 text-sm mt-1 leading-relaxed">
+                {% trans "En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de cookies pour améliorer votre expérience utilisateur et réaliser des statistiques de visites." %}
+                <a href="{% url 'core:cookie_policy' %}" class="text-primary hover:underline font-medium">{% trans "En savoir plus" %}</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Collapsible customization panel -->
+    <div id="cookie-preferences" class="hidden border-t border-gray-100 pt-4 flex flex-col gap-3 transition-all duration-300">
+        <p class="text-xs font-semibold text-gray-500 uppercase tracking-wider">{% trans "Personnaliser mes choix" %}</p>
+        
+        <!-- Necessary (Always Enabled) -->
+        <div class="flex items-start justify-between gap-3 bg-gray-50 p-3 rounded-lg">
+            <div class="text-xs">
+                <span class="font-bold text-dark block">{% trans "Cookies Nécessaires" %}</span>
+                <span class="text-gray-500">{% trans "Requis pour le bon fonctionnement et la sécurité du site." %}</span>
+            </div>
+            <span class="text-xs font-semibold text-primary bg-primary-light px-2 py-1 rounded">{% trans "Toujours actif" %}</span>
+        </div>
+
+        <!-- Analytics -->
+        <label class="flex items-start justify-between gap-3 bg-gray-50 p-3 rounded-lg cursor-pointer hover:bg-gray-100/70 transition-colors">
+            <div class="text-xs">
+                <span class="font-bold text-dark block">{% trans "Cookies de statistiques et d'analyse" %}</span>
+                <span class="text-gray-500">{% trans "Permettent de mesurer l'audience et d'analyser l'utilisation du site pour l'améliorer." %}</span>
+            </div>
+            <input type="checkbox" id="cookie-analytics" checked class="w-4 h-4 rounded text-primary focus:ring-primary border-gray-300 mt-0.5">
+        </label>
+
+        <!-- Marketing -->
+        <label class="flex items-start justify-between gap-3 bg-gray-50 p-3 rounded-lg cursor-pointer hover:bg-gray-100/70 transition-colors">
+            <div class="text-xs">
+                <span class="font-bold text-dark block">{% trans "Cookies de marketing et réseaux sociaux" %}</span>
+                <span class="text-gray-500">{% trans "Permettent de vous proposer des publicités personnalisées et de partager du contenu." %}</span>
+            </div>
+            <input type="checkbox" id="cookie-marketing" checked class="w-4 h-4 rounded text-primary focus:ring-primary border-gray-300 mt-0.5">
+        </label>
+    </div>
+
+    <!-- Buttons -->
+    <div class="flex flex-wrap gap-2.5 pt-2 border-t border-gray-100/50">
+        <!-- Main Actions -->
+        <div id="cookie-main-buttons" class="flex w-full gap-2">
+            <button id="cookie-accept-all" class="btn btn-primary flex-1 py-2.5 px-4 text-xs font-bold rounded-xl shadow-md hover:shadow-lg transition-all">
+                {% trans "Accepter" %}
+            </button>
+            <button id="cookie-reject-all" class="btn btn-outline border-gray-250 text-gray-600 hover:bg-gray-50 flex-1 py-2.5 px-4 text-xs font-semibold rounded-xl transition-all">
+                {% trans "Refuser" %}
+            </button>
+            <button id="cookie-toggle-pref" class="p-2.5 text-gray-500 hover:text-primary hover:bg-primary-light rounded-xl border border-gray-200 transition-colors flex items-center justify-center" aria-label="{% trans 'Personnaliser' %}">
+                <i class="fas fa-cog text-base"></i>
+            </button>
+        </div>
+
+        <!-- Customize Actions -->
+        <div id="cookie-custom-buttons" class="hidden w-full gap-2">
+            <button id="cookie-accept-selected" class="btn btn-primary flex-grow py-2.5 px-4 text-xs font-bold rounded-xl shadow-md hover:shadow-lg transition-all">
+                {% trans "Enregistrer mes choix" %}
+            </button>
+            <button id="cookie-back" class="btn btn-outline border-gray-250 text-gray-600 hover:bg-gray-50 py-2.5 px-4 text-xs font-semibold rounded-xl transition-all">
+                {% trans "Retour" %}
+            </button>
+        </div>
+    </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const togglePrefBtn = document.getElementById("cookie-toggle-pref");
+        const backBtn = document.getElementById("cookie-back");
+        const prefPanel = document.getElementById("cookie-preferences");
+        const mainButtons = document.getElementById("cookie-main-buttons");
+        const customButtons = document.getElementById("cookie-custom-buttons");
+
+        function resetBannerUI() {
+            prefPanel.classList.add("hidden");
+            customButtons.classList.add("hidden");
+            customButtons.classList.remove("flex");
+            mainButtons.classList.remove("hidden");
+            mainButtons.classList.add("flex");
+        }
+
+        if (togglePrefBtn && prefPanel && mainButtons && customButtons) {
+            togglePrefBtn.addEventListener("click", function() {
+                // Populate preferences checkboxes from existing cookie if present
+                const consentCookie = document.cookie.match(new RegExp('(^| )cookie_consent=([^;]+)'));
+                if (consentCookie) {
+                    try {
+                        const consent = JSON.parse(decodeURIComponent(consentCookie[2]));
+                        const analyticsInput = document.getElementById("cookie-analytics");
+                        const marketingInput = document.getElementById("cookie-marketing");
+                        if (analyticsInput) analyticsInput.checked = !!consent.analytics;
+                        if (marketingInput) marketingInput.checked = !!consent.marketing;
+                    } catch (e) {}
+                }
+                prefPanel.classList.toggle("hidden");
+                mainButtons.classList.add("hidden");
+                customButtons.classList.remove("hidden");
+                customButtons.classList.add("flex");
+            });
+        }
+
+        if (backBtn) {
+            backBtn.addEventListener("click", resetBannerUI);
+        }
+
+        // Reset the UI when accept or reject actions are taken so it's clean next time it opens
+        const actionButtons = ["cookie-accept-all", "cookie-reject-all", "cookie-accept-selected"];
+        actionButtons.forEach(id => {
+            const btn = document.getElementById(id);
+            if (btn) {
+                btn.addEventListener("click", function() {
+                    // Small delay to let the slide-down animation finish before resetting classes
+                    setTimeout(resetBannerUI, 600);
+                });
+            }
+        });
+
+        // Support opening banner from any link/button with class "js-manage-cookies"
+        document.querySelectorAll(".js-manage-cookies").forEach(btn => {
+            btn.addEventListener("click", function(e) {
+                e.preventDefault();
+                const banner = document.getElementById("cookie-banner");
+                if (banner) {
+                    banner.style.display = "";
+                    setTimeout(() => {
+                        banner.classList.remove("translate-y-full");
+                        banner.classList.add("translate-y-0");
+                    }, 50);
+                }
+            });
+        });
+    });
+</script>

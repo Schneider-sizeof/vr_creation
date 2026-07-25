@@ -1,0 +1,986 @@
+# VR Creation - ar translations
+msgid ""
+msgstr ""
+"Project-Id-Version: VR Creation 1.0\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Accepter"
+msgstr "قبول"
+
+msgid "Accueil"
+msgstr "الرئيسية"
+
+msgid "Actif"
+msgstr "Actif"
+
+msgid "Actualités & Blog"
+msgstr "الأخبار والمدونة"
+
+msgid "Adresse"
+msgstr "العنوان"
+
+msgid "Agence de Réalité Virtuelle"
+msgstr "وكالة الواقع الافتراضي"
+
+msgid "Ajouter noindex à cette page"
+msgstr "إضافة noindex لهذه الصفحة"
+
+msgid "Analyse et Conseil"
+msgstr "التحليل والاستشارة"
+
+msgid "Animation 3D"
+msgstr "الرسوم المتحركة 3D"
+
+msgid "Aperçu"
+msgstr "معاينة"
+
+msgid "Aperçu du Service"
+msgstr "نظرة عامة على الخدمة"
+
+msgid "Application des matériaux réalistes et configuration de la lumière pour une atmosphère parfaite."
+msgstr "تطبيق المواد الواقعية وإعداد الإضاءة لأجواء مثالي."
+
+msgid "Architecture"
+msgstr "هندسة معمارية"
+
+msgid "Article"
+msgstr "مقال"
+
+msgid "Articles"
+msgstr "مقالات"
+
+msgid "Aucun article publié pour le moment."
+msgstr "لا توجد مقالات منشورة حالياً."
+
+msgid "Aucun projet disponible pour le moment."
+msgstr "لا توجد مشاريع متاحة حالياً."
+
+msgid "Aucun service disponible pour le moment."
+msgstr "لا توجد خدمات متاحة حالياً."
+
+msgid "Aucune visite virtuelle disponible pour le moment."
+msgstr "لا توجد جولات افتراضية متاحة حالياً."
+
+msgid "Aucune étude de cas disponible."
+msgstr "لا توجد دراسات حالة متاحة."
+
+msgid "Auteur"
+msgstr "الكاتب"
+
+msgid "Autre"
+msgstr "أخرى"
+
+msgid "Autres Services"
+msgstr "خدمات أخرى"
+
+msgid "Avantages"
+msgstr "المزايا"
+
+msgid "Behance"
+msgstr "Behance"
+
+msgid "Besoin d'un devis ?"
+msgstr "تحتاج عرض أسعار؟"
+
+msgid "Biographie"
+msgstr "السيرة الذاتية"
+
+msgid "Blog"
+msgstr "المدونة"
+
+msgid "Branding visuel"
+msgstr "العلامة التجارية البصرية"
+
+msgid "Captures 360°"
+msgstr "تصوير 360°"
+
+msgid "Catégorie"
+msgstr "الفئة"
+
+msgid "Catégories"
+msgstr "الفئات"
+
+msgid "Ces cookies nous aident à mesurer l'audience de notre site, à analyser la navigation et à identifier d'éventuels dysfonctionnements pour améliorer votre expérience utilisateur."
+msgstr "تساعدنا ملفات تعريف الارتباط هذه في قياس جمهور موقعنا، وتحليل التصفح وتحديد أي أعطال لتحسين تجربة المستخدم الخاصة بك."
+
+msgid "Ces cookies sont essentiels au fonctionnement du site et ne peuvent pas être désactivés dans nos systèmes."
+msgstr "ملفات تعريف الارتباط هذه ضرورية لتشغيل الموقع ولا يمكن إلغاء تفعيلها في أنظمتنا."
+
+msgid "Ces cookies sont liés au partage sur les réseaux sociaux et peuvent être installés pour suivre l'activité sur d'autres sites."
+msgstr "ترتبط ملفات تعريف الارتباط هذه بالمشاركة على الشبكات الاجتماعية ويمكن تثبيتها لتتبع النشاط على مواقع أخرى."
+
+msgid "Chiffre clé"
+msgstr "رقم رئيسي"
+
+msgid "Classe d\\'icône (ex: fas fa-lightbulb) ou emoji"
+msgstr "Classe d\\'icône (ex: fas fa-lightbulb) ou emoji"
+
+msgid "Classe d\\'icône ou emoji"
+msgstr "Classe d\\'icône ou emoji"
+
+msgid "Client"
+msgstr "العميل"
+
+msgid "Code de vérification Google Search Console (contenu de la balise meta)"
+msgstr "رمز التحقق من Google Search Console (محتوى علامة meta)"
+
+msgid "Collecte des données"
+msgstr "جمع البيانات"
+
+msgid "Combien font %(num1)d + %(num2)d ?"
+msgstr "كم يساوي %(num1)d + %(num2)d؟"
+
+msgid "Comment nous travaillons"
+msgstr "كيف نعمل"
+
+msgid "Confidentialité"
+msgstr "الخصوصية"
+
+msgid "Conformément à la réglementation RGPD, le consentement donné pour le dépôt de cookies a une durée de validité de 13 mois maximum. À l'issue de cette période, votre consentement sera à nouveau demandé."
+msgstr "وفقًا للوائح العامة لحماية البيانات (GDPR)، فإن صلاحية الموافقة الممنوحة لملفات تعريف الارتباط هي 13 شهرًا كحد أقصى. وفي نهاية هذه الفترة، سيتم طلب موافقتك مرة أخرى."
+
+msgid "Contact"
+msgstr "اتصل بنا"
+
+msgid "Contactez-nous"
+msgstr "اتصل بنا"
+
+msgid "Contactez-nous pour discuter de vos besoins et obtenir un devis personnalisé."
+msgstr "تواصل معنا لمناقشة احتياجاتك والحصول على عرض أسعار مخصص."
+
+msgid "Contactez-nous pour discuter de votre projet et obtenir une estimation gratuite."
+msgstr "تواصل معنا لمناقشة مشروعك والحصول على تقدير مجاني."
+
+msgid "Contenu"
+msgstr "المحتوى"
+
+msgid "Cookies"
+msgstr "ملفات تعريف الارتباط"
+
+msgid "Cookies Nécessaires"
+msgstr "ملفات تعريف الارتباط الضرورية"
+
+msgid "Cookies analytiques (Google Analytics)"
+msgstr "ملفات تعريف الارتباط التحليلية (جوجل أناليتكس)"
+
+msgid "Cookies de marketing et de partage"
+msgstr "ملفات تعريف ارتباط التسويق والمشاركة"
+
+msgid "Cookies de marketing et réseaux sociaux"
+msgstr "ملفات تعريف ارتباط التسويق ووسائل التواصل الاجتماعي"
+
+msgid "Cookies de statistiques et d'analyse"
+msgstr "ملفات تعريف ارتباط الإحصاءات والتحليل"
+
+msgid "Cookies nécessaires"
+msgstr "ملفات تعريف الارتباط الضرورية"
+
+msgid "Coordonnées"
+msgstr "معلومات الاتصال"
+
+msgid "Création de l'architecture et du mobilier en 3D."
+msgstr "إنشاء الهندسة والأثاث بتقنية 3D."
+
+msgid "Création de l'architecture, du mobilier et des éléments décoratifs en 3D avec une grande précision."
+msgstr "إنشاء الهندسة المعمارية والأثاث والعناصر الزخرفية بدقة عالية بتقنية 3D."
+
+msgid "Créativité"
+msgstr "الإبداع"
+
+msgid "Créé le"
+msgstr "أنشئ في"
+
+msgid "Date"
+msgstr "التاريخ"
+
+msgid "Date de publication"
+msgstr "تاريخ النشر"
+
+msgid "Date de réalisation"
+msgstr "تاريخ الإنجاز"
+
+msgid "Description"
+msgstr "الوصف"
+
+msgid "Description SEO"
+msgstr "وصف SEO"
+
+msgid "Description complète"
+msgstr "الوصف الكامل"
+
+msgid "Description courte"
+msgstr "وصف مختصر"
+
+msgid "Diapositive Hero"
+msgstr "شريحة البانر الرئيسي"
+
+msgid "Diapositives Hero"
+msgstr "شرائح البانر الرئيسي"
+
+msgid "Différenciation"
+msgstr "التميز"
+
+msgid "Durée de conservation"
+msgstr "مدة الاحتفاظ بها"
+
+msgid "Découvrez comment nos solutions de réalité virtuelle apportent une valeur mesurable à nos clients."
+msgstr "اكتشف كيف توفر حلول الواقع الافتراضي لدينا قيمة قابلة للقياس لعملائنا."
+
+msgid "Découvrez nos derniers articles, conseils et tendances sur la réalité virtuelle et l'immobilier."
+msgstr "اكتشف أحدث مقالاتنا ونصائحنا واتجاهاتنا حول الواقع الافتراضي والعقارات."
+
+msgid "Découvrir ce service"
+msgstr "اكتشف هذه الخدمة"
+
+msgid "Découvrir nos projets"
+msgstr "اكتشف مشاريعنا"
+
+msgid "Décrivez votre projet..."
+msgstr "صف مشروعك..."
+
+msgid "Défi / Problématique"
+msgstr "التحدي / الإشكالية"
+
+msgid "Démarrer un projet"
+msgstr "ابدأ مشروعاً"
+
+msgid "Désolé, la page que vous recherchez n'existe pas ou a été déplacée."
+msgstr "عذراً، الصفحة التي تبحث عنها غير موجودة أو تم نقلها."
+
+msgid "Détails"
+msgstr "التفاصيل"
+
+msgid "Efficacité"
+msgstr "الكفاءة"
+
+msgid "Efficacité / Impact"
+msgstr "الكفاءة / التأثير"
+
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+msgid "Email de contact"
+msgstr "بريد الاتصال"
+
+msgid "En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de cookies pour améliorer votre expérience utilisateur et réaliser des statistiques de visites."
+msgstr "بمتابعة تصفح هذا الموقع، فإنك توافق على استخدام ملفات تعريف الارتباط لتحسين تجربة المستخدم وإنشاء إحصائيات الزيارات."
+
+msgid "En savoir plus"
+msgstr "اعرف المزيد"
+
+msgid "Enregistrer mes choix"
+msgstr "حفظ خياراتي"
+
+msgid "Envoyer le message"
+msgstr "إرسال الرسالة"
+
+msgid "Envoyez-nous un message"
+msgstr "أرسل لنا رسالة"
+
+msgid "Envoyé le"
+msgstr "أُرسل في"
+
+msgid "Erreur Serveur"
+msgstr "خطأ في الخادم"
+
+msgid "Ex: 150+, 98%, 10 ans"
+msgstr "مثال: +150، 98%، 10 سنوات"
+
+msgid "Ex: G-XXXXXXXXXX. Chargé uniquement après consentement cookies."
+msgstr "مثال: G-XXXXXXXXXX. يتم تحميله فقط بعد الموافقة على ملفات تعريف الارتباط."
+
+msgid "Expertise"
+msgstr "خبرة"
+
+msgid "Expéditeur"
+msgstr "المُرسل"
+
+msgid "Expérience immersive"
+msgstr "تجربة غامرة"
+
+msgid "Extrait"
+msgstr "مقتطف"
+
+msgid "Facebook"
+msgstr "فيسبوك"
+
+msgid "Favicon"
+msgstr "Favicon"
+
+msgid "Flexibilité"
+msgstr "المرونة"
+
+msgid "Gain de temps"
+msgstr "توفير الوقت"
+
+msgid "Gestion des cookies"
+msgstr "إدارة ملفات تعريف الارتباط"
+
+msgid "Google / Analytics / SEO"
+msgstr "Google / Analytics / SEO"
+
+msgid "Google Analytics ID"
+msgstr "معرف Google Analytics"
+
+msgid "Google Search Console"
+msgstr "Google Search Console"
+
+msgid "Génération des images haute résolution et retouches finales pour un résultat optimal."
+msgstr "إنشاء صور عالية الدقة ولمسات نهائية لنتيجة مثالية."
+
+msgid "Gérer mes choix"
+msgstr "إدارة خياراتي"
+
+msgid "Hébergement"
+msgstr "الاستضافة"
+
+msgid "ID objet"
+msgstr "معرف الكائن"
+
+msgid "Icône"
+msgstr "أيقونة"
+
+msgid "Icône CSS"
+msgstr "أيقونة CSS"
+
+msgid "Identifiant de page"
+msgstr "معرف الصفحة"
+
+msgid "Identifiant unique : home, about, services, portfolio, contact, blog, etc."
+msgstr "معرف فريد: home, about, services, portfolio, contact, blog, إلخ."
+
+msgid "Identité du site"
+msgstr "هوية الموقع"
+
+msgid "Image"
+msgstr "صورة"
+
+msgid "Image 1200x630px recommandée"
+msgstr "صورة 1200x630 بكسل موصى بها"
+
+msgid "Image 360°"
+msgstr "صورة 360°"
+
+msgid "Image OG par défaut"
+msgstr "صورة OG الافتراضية"
+
+msgid "Image Open Graph"
+msgstr "صورة Open Graph"
+
+msgid "Image de fond du hero de la page d\\'accueil"
+msgstr "Image de fond du hero de la page d\\'accueil"
+
+msgid "Image du projet"
+msgstr "صورة المشروع"
+
+msgid "Image du service"
+msgstr "صورة الخدمة"
+
+msgid "Image hero accueil"
+msgstr "صورة البانر الرئيسي"
+
+msgid "Image page À propos"
+msgstr "صورة صفحة من نحن"
+
+msgid "Image par défaut pour le partage social (1200x630px recommandé)"
+msgstr "صورة افتراضية للمشاركة الاجتماعية (1200x630 بكسل موصى بها)"
+
+msgid "Image principale"
+msgstr "الصورة الرئيسية"
+
+msgid "Images du projet"
+msgstr "صور المشروع"
+
+msgid "Images du service"
+msgstr "صور الخدمة"
+
+msgid "Images principales"
+msgstr "الصور الرئيسية"
+
+msgid "Immergez-vous dans nos réalisations interactives et découvrez nos projets sous tous les angles."
+msgstr "انغمس في أعمالنا التفاعلية واكتشف مشاريعنا من كل الزوايا."
+
+msgid "Immobilier"
+msgstr "عقارات"
+
+msgid "Importance du Service"
+msgstr "أهمية الخدمة"
+
+msgid "Importance du service"
+msgstr "أهمية الخدمة"
+
+msgid "Innovation"
+msgstr "الابتكار"
+
+msgid "Instagram"
+msgstr "إنستغرام"
+
+msgid "L'alliance entre"
+msgstr "التحالف بين"
+
+msgid "Label du chiffre"
+msgstr "علامة الرقم"
+
+msgid "Le Défi"
+msgstr "التحدي"
+
+msgid "Le Problème"
+msgstr "المشكلة"
+
+msgid "Le Résultat"
+msgstr "النتيجة"
+
+msgid "LinkedIn"
+msgstr "لينكد إن"
+
+msgid "Lire l'étude"
+msgstr "قراءة الدراسة"
+
+msgid "Lire la suite"
+msgstr "اقرأ المزيد"
+
+msgid "Logo"
+msgstr "شعار"
+
+msgid "Lu"
+msgstr "مقروء"
+
+msgid "Membre de l\\'équipe"
+msgstr "Membre de l\\'équipe"
+
+msgid "Membres de l\\'équipe"
+msgstr "Membres de l\\'équipe"
+
+msgid "Mentions Légales"
+msgstr "إشعارات قانونية"
+
+msgid "Mentions légales"
+msgstr "إشعارات قانونية"
+
+msgid "Merci de nous avoir contactés. Nous avons bien reçu votre message et nous vous répondrons dans les plus brefs délais."
+msgstr "شكراً لتواصلكم معنا. لقد تلقينا رسالتكم وسنرد عليكم في أقرب وقت ممكن."
+
+msgid "Message"
+msgstr "الرسالة"
+
+msgid "Message Envoyé !"
+msgstr "تم إرسال الرسالة!"
+
+msgid "Message de contact"
+msgstr "رسالة اتصال"
+
+msgid "Messages de contact"
+msgstr "رسائل الاتصال"
+
+msgid "Mis en avant"
+msgstr "مميز"
+
+msgid "Mode Cyber-VR"
+msgstr "وضع الواقع الافتراضي السيبراني"
+
+msgid "Mode Immersif VR"
+msgstr "وضع الواقع الافتراضي"
+
+msgid "Modifié le"
+msgstr "عُدل في"
+
+msgid "Modélisation 3D"
+msgstr "النمذجة ثلاثية الأبعاد"
+
+msgid "Métadonnées"
+msgstr "البيانات الوصفية"
+
+msgid "Navigation"
+msgstr "التنقل"
+
+msgid "Ne pas indexer"
+msgstr "عدم الفهرسة"
+
+msgid "Nom"
+msgstr "اللقب"
+
+msgid "Nom complet"
+msgstr "الاسم الكامل"
+
+msgid "Nom du site"
+msgstr "اسم الموقع"
+
+msgid "Nos Coordonnées"
+msgstr "معلومات الاتصال"
+
+msgid "Nos Points Forts"
+msgstr "نقاط قوتنا"
+
+msgid "Nos Services"
+msgstr "خدماتنا"
+
+msgid "Nos services"
+msgstr "خدماتنا"
+
+msgid "Notre Expertise"
+msgstr "خبراتنا"
+
+msgid "Notre Histoire"
+msgstr "تاريخنا"
+
+msgid "Notre Mission"
+msgstr "مهمتنا"
+
+msgid "Notre Portfolio"
+msgstr "معرض أعمالنا"
+
+msgid "Notre Processus"
+msgstr "عمليتنا"
+
+msgid "Notre Solution"
+msgstr "حلنا"
+
+msgid "Notre équipe d'experts passionnés met son savoir-faire technique et sa sensibilité artistique à votre service pour créer des expériences visuelles immersives et impactantes."
+msgstr "فريقنا من الخبراء الشغوفين يضع خبرته التقنية وحسه الفني في خدمتك لإنشاء تجارب بصرية غامرة ومؤثرة."
+
+msgid "Nous Contacter"
+msgstr "اتصل بنا"
+
+msgid "Nous contacter"
+msgstr "اتصل بنا"
+
+msgid "Nous transformons vos visions en réalités immersives avec une approche centrée sur l'excellence."
+msgstr "نحول رؤاك إلى واقع غامر بنهج يركز على التميز."
+
+msgid "Nous trouver"
+msgstr "موقعنا"
+
+msgid "Numéro WhatsApp au format international (ex: +33612345678)"
+msgstr "رقم واتساب بالصيغة الدولية (مثال: +33612345678)"
+
+msgid "Ordre"
+msgstr "الترتيب"
+
+msgid "Page introuvable"
+msgstr "الصفحة غير موجودة"
+
+msgid "Paramètres du site"
+msgstr "إعدادات الموقع"
+
+msgid "Partager :"
+msgstr "مشاركة:"
+
+msgid "Permettent de mesurer l'audience et d'analyser l'utilisation du site pour l'améliorer."
+msgstr "تتيح قياس الجمهور وتحليل استخدام الموقع لتحسينه."
+
+msgid "Permettent de vous proposer des publicités personnalisées et de partager du contenu."
+msgstr "تتيح تقديم إعلانات مخصصة ومشاركة المحتوى."
+
+msgid "Personnaliser"
+msgstr "تخصيص"
+
+msgid "Personnaliser mes choix"
+msgstr "تخصيص خياراتي"
+
+msgid "Photo"
+msgstr "صورة"
+
+msgid "Pied de page"
+msgstr "تذييل الصفحة"
+
+msgid "Point fort"
+msgstr "نقطة قوة"
+
+msgid "Points forts"
+msgstr "نقاط القوة"
+
+msgid "Politique de Confidentialité"
+msgstr "سياسة الخصوصية"
+
+msgid "Politique de Cookies"
+msgstr "سياسة ملفات تعريف الارتباط"
+
+msgid "Portfolio"
+msgstr "الأعمال"
+
+msgid "Pourquoi choisir VR Creation ?"
+msgstr "لماذا تختار VR Creation؟"
+
+msgid "Problème / Contexte"
+msgstr "المشكلة / السياق"
+
+msgid "Professionnalisme"
+msgstr "الاحترافية"
+
+msgid "Projet"
+msgstr "مشروع"
+
+msgid "Projet Similaire ?"
+msgstr "مشروع مماثل؟"
+
+msgid "Projet lié"
+msgstr "مشروع مرتبط"
+
+msgid "Projets"
+msgstr "مشاريع"
+
+msgid "Propriété intellectuelle"
+msgstr "الملكية الفكرية"
+
+msgid "Précision"
+msgstr "الدقة"
+
+msgid "Précédent"
+msgstr "السابق"
+
+msgid "Préférences de cookies"
+msgstr "تفضيلات ملفات تعريف الارتباط"
+
+msgid "Prêt à sublimer votre prochain projet ?"
+msgstr "مستعد للارتقاء بمشروعك القادم؟"
+
+msgid "Publié"
+msgstr "منشور"
+
+msgid "Qu'est-ce qu'un cookie ?"
+msgstr "ما هو ملف تعريف الارتباط؟"
+
+msgid "Quels cookies utilisons-nous ?"
+msgstr "ما هي ملفات تعريف الارتباط التي نستخدمها؟"
+
+msgid "Question de sécurité"
+msgstr "سؤال أمان"
+
+msgid "Reconnue"
+msgstr "معترف بها"
+
+msgid "Refuser"
+msgstr "رفض"
+
+msgid "Rendu et Post-production"
+msgstr "التصيير وما بعد الإنتاج"
+
+msgid "Rentabilité"
+msgstr "الربحية"
+
+msgid "Requis pour le bon fonctionnement et la sécurité du site."
+msgstr "مطلوبة للتشغيل السليم للموقع وأمانه."
+
+msgid "Respect des délais et accompagnement sur-mesure à chaque étape."
+msgstr "الالتزام بالمواعيد والمرافقة المخصصة في كل مرحلة."
+
+msgid "Retail / Commerce"
+msgstr "تجارة التجزئة"
+
+msgid "Retour"
+msgstr "عودة"
+
+msgid "Retour aux articles"
+msgstr "العودة إلى المقالات"
+
+msgid "Retour en haut"
+msgstr "العودة للأعلى"
+
+msgid "Retour à l'accueil"
+msgstr "العودة للرئيسية"
+
+msgid "Réalisations"
+msgstr "الأعمال"
+
+msgid "Réalité Virtuelle"
+msgstr "الواقع الافتراضي"
+
+msgid "Réponse incorrecte. Veuillez réessayer."
+msgstr "إجابة خاطئة. يرجى المحاولة مرة أخرى."
+
+msgid "Réseaux sociaux"
+msgstr "شبكات التواصل الاجتماعي"
+
+msgid "Résultat"
+msgstr "النتيجة"
+
+msgid "Résultat obtenu"
+msgstr "النتيجة المحققة"
+
+msgid "Résumé affiché dans les cartes (max 300 caractères)"
+msgstr "ملخص يظهر في البطاقات (حد أقصى 300 حرف)"
+
+msgid "Résumé de l\\'article (max 500 caractères)"
+msgstr "Résumé de l\\'article (max 500 caractères)"
+
+msgid "Rôle"
+msgstr "الدور"
+
+msgid "SEO — Métadonnées objet"
+msgstr "SEO — بيانات وصفية للكائن"
+
+msgid "SEO — Métadonnées objets"
+msgstr "SEO — بيانات وصفية للكائنات"
+
+msgid "SEO — Page statique"
+msgstr "SEO — صفحة ثابتة"
+
+msgid "SEO — Pages statiques"
+msgstr "SEO — صفحات ثابتة"
+
+msgid "Secteur"
+msgstr "القطاع"
+
+msgid "Secteur d\\'activité"
+msgstr "Secteur d\\'activité"
+
+msgid "Secteurs"
+msgstr "القطاعات"
+
+msgid "Service"
+msgstr "خدمة"
+
+msgid "Services"
+msgstr "الخدمات"
+
+msgid "Simule un espace virtuel 3D (ambiance néon et particules cosmiques)."
+msgstr "يحاكي مساحة ثلاثية الأبعاد تفاعلية (تصميم نيون وجزيئات كونية)."
+
+msgid "Simule un espace virtuel 3D en transformant le site avec un design néon et des particules cosmiques flottantes !"
+msgstr "يحاكي مساحة ثلاثية الأبعاد تفاعلية عن طريق تحويل الموقع بتصميم نيون وجزيئات كونية عائمة!"
+
+msgid "Slogan"
+msgstr "شعار"
+
+msgid "Slug"
+msgstr "Slug"
+
+msgid "Solution apportée"
+msgstr "الحل المقدم"
+
+msgid "Spam detected."
+msgstr "تم اكتشاف رسائل غير مرغوب فيها."
+
+msgid "Statut"
+msgstr "الحالة"
+
+msgid "Sublimer vos projets par des approches visuelles innovantes et esthétiques."
+msgstr "تحسين مشاريعك بأساليب بصرية مبتكرة وجمالية."
+
+msgid "Sublimez vos projets avec la"
+msgstr "ارتقِ بمشاريعك مع"
+
+msgid "Suivant"
+msgstr "التالي"
+
+msgid "Suivez-nous"
+msgstr "تابعنا"
+
+msgid "Sujet"
+msgstr "الموضوع"
+
+msgid "Sujet de votre message"
+msgstr "موضوع رسالتك"
+
+msgid "Temps de lecture (min)"
+msgstr "وقت القراءة (دقيقة)"
+
+msgid "Texte alternatif"
+msgstr "نص بديل"
+
+msgid "Texte copyright"
+msgstr "نص حقوق النشر"
+
+msgid "Texte du pied de page"
+msgstr "نص التذييل"
+
+msgid "TikTok"
+msgstr "تيك توك"
+
+msgid "Titre"
+msgstr "عنوان"
+
+msgid "Titre SEO"
+msgstr "عنوان SEO"
+
+msgid "Toujours actif"
+msgstr "نشط دائماً"
+
+msgid "Tourisme"
+msgstr "سياحة"
+
+msgid "Tous droits réservés."
+msgstr "جميع الحقوق محفوظة."
+
+msgid "Twitter / X"
+msgstr "تويتر / X"
+
+msgid "Type de contenu"
+msgstr "نوع المحتوى"
+
+msgid "Téléphone"
+msgstr "الهاتف"
+
+msgid "URL Google Maps (embed)"
+msgstr "رابط خرائط جوجل (مضمن)"
+
+msgid "URL canonique"
+msgstr "الرابط الأساسي"
+
+msgid "URL iframe Google Maps pour la page contact"
+msgstr "رابط iframe خرائط جوجل لصفحة الاتصال"
+
+msgid "URL iframe de la visite virtuelle 360° (Pannellum, Matterport, etc.)"
+msgstr "رابط iframe للجولة الافتراضية 360°"
+
+msgid "URL visite virtuelle"
+msgstr "رابط الجولة الافتراضية"
+
+msgid "Un cookie est un petit fichier texte déposé sur votre terminal (ordinateur, tablette ou smartphone) lors de la visite d'un site internet. Il permet de conserver des données utilisateur afin de faciliter la navigation et de permettre certaines fonctionnalités."
+msgstr "ملف تعريف الارتباط (الكوكيز) هو ملف نصي صغير يتم حفظه على جهازك (كمبيوتر، جهاز لوحي أو هاتف ذكي) عند زيارة موقع ويب. وهو يسمح بحفظ بيانات المستخدم لتسهيل التصفح وتفعيل ميزات معينة."
+
+msgid "Un souci du détail minutieux pour des rendus ultra-réalistes."
+msgstr "اهتمام دقيق بالتفاصيل لتصييرات فائقة الواقعية."
+
+msgid "Une erreur inattendue s'est produite. Nos équipes ont été alertées."
+msgstr "حدث خطأ غير متوقع. تم تنبيه فرقنا."
+
+msgid "Utilisation des dernières technologies pour accélérer vos ventes."
+msgstr "استخدام أحدث التقنيات لتسريع مبيعاتك."
+
+msgid "Utilisation des données"
+msgstr "استخدام البيانات"
+
+msgid "VR CREATION COMPANY est une agence spécialisée dans la création de contenus 3D et de visites virtuelles interactives. Nous accompagnons les professionnels de l'immobilier, de l'architecture et de l'aménagement d'intérieur dans la mise en valeur de leurs projets."
+msgstr "شركة VR CREATION هي وكالة متخصصة في إنشاء محتوى ثلاثي الأبعاد وجولات افتراضية تفاعلية. نرافق المهنيين في العقارات والهندسة المعمارية والتصميم الداخلي لإبراز مشاريعهم."
+
+msgid "VR CREATION COMPANY incarne l'alliance entre esthétique et technologie pour donner vie à vos concepts avant même leur réalisation."
+msgstr "شركة VR CREATION تجسد التحالف بين الجمال والتكنولوجيا لإحياء مفاهيمك قبل تحقيقها."
+
+msgid "Valeur"
+msgstr "قيمة"
+
+msgid "Valeurs"
+msgstr "القيم"
+
+msgid "Visite Virtuelle"
+msgstr "جولة افتراضية"
+
+msgid "Visite virtuelle"
+msgstr "جولة افتراضية"
+
+msgid "Visites Virtuelles"
+msgstr "الجولات الافتراضية"
+
+msgid "Visites virtuelles"
+msgstr "الجولات الافتراضية"
+
+msgid "Voir le projet"
+msgstr "عرض المشروع"
+
+msgid "Voir le projet détaillé"
+msgstr "عرض المشروع بالتفصيل"
+
+msgid "Voir les détails du projet"
+msgstr "عرض تفاصيل المشروع"
+
+msgid "Voir tous les services"
+msgstr "عرض جميع الخدمات"
+
+msgid "Votre nom complet"
+msgstr "اسمك الكامل"
+
+msgid "Votre numéro de téléphone"
+msgstr "رقم هاتفك"
+
+msgid "Votre réponse"
+msgstr "إجابتك"
+
+msgid "Vous avez envoyé trop de messages. Veuillez réessayer dans quelques minutes."
+msgstr "لقد أرسلت رسائل كثيرة. يرجى المحاولة بعد بضع دقائق."
+
+msgid "Vous avez un projet ? Discutons-en et donnons vie à vos idées."
+msgstr "لديك مشروع؟ دعنا نناقشه ونحقق أفكارك."
+
+msgid "Vous pouvez à tout moment modifier vos préférences de cookies, accepter ou refuser le chargement des scripts analytiques ou marketing."
+msgstr "يمكنك تعديل تفضيلات ملفات تعريف الارتباط الخاصة بك في أي وقت، وقبول أو رفض تحميل نصوص التحليل أو التسويق."
+
+msgid "WhatsApp"
+msgstr "واتساب"
+
+msgid "YouTube"
+msgstr "يوتيوب"
+
+msgid "a-propos/"
+msgstr "a-propos/"
+
+msgid "blog/"
+msgstr "blog/"
+
+msgid "confidentialite/"
+msgstr "confidentialite/"
+
+msgid "contact/"
+msgstr "contact/"
+
+msgid "contact/merci/"
+msgstr "contact/merci/"
+
+msgid "cookies/"
+msgstr "cookies/"
+
+msgid "esthétique"
+msgstr "الجمال"
+
+msgid "et technologie."
+msgstr "والتكنولوجيا."
+
+msgid "etudes-de-cas/"
+msgstr "etudes-de-cas/"
+
+msgid "mentions-legales/"
+msgstr "mentions-legales/"
+
+msgid "realisations/"
+msgstr "realisations/"
+
+msgid "services/"
+msgstr "services/"
+
+msgid "visites-virtuelles/"
+msgstr "visites-virtuelles/"
+
+msgid "votre@email.com"
+msgstr "بريدك@مثال.com"
+
+msgid "À Propos de Nous"
+msgstr "عنّا"
+
+msgid "À propos"
+msgstr "من نحن"
+
+msgid "À propos du projet"
+msgstr "عن المشروع"
+
+msgid "Éclairage et Textures"
+msgstr "الإضاءة والقوام"
+
+msgid "Éditeur du site"
+msgstr "محرر الموقع"
+
+msgid "Étape du processus"
+msgstr "خطوة العملية"
+
+msgid "Étapes du processus"
+msgstr "خطوات العملية"
+
+msgid "Étude de cas"
+msgstr "دراسة حالة"
+
+msgid "Étude de vos besoins, récupération de vos plans et brief créatif pour définir l'ambiance."
+msgstr "دراسة احتياجاتك، استلام المخططات وملخص إبداعي لتحديد الأجواء."
+
+msgid "Étude de vos besoins, récupération de vos plans et brief créatif."
+msgstr "دراسة احتياجاتك واستلام المخططات."
+
+msgid "Études de Cas"
+msgstr "دراسات الحالة"
+
+msgid "Études de cas"
+msgstr "دراسات الحالة"
+
+msgid "Événementiel"
+msgstr "فعاليات"

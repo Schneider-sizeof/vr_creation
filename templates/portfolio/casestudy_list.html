@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl font-bold text-dark mb-4">{% trans "Études de Cas" %}</h1>
+        <p class="text-gray-600 max-w-2xl mx-auto">{% trans "Découvrez comment nos solutions de réalité virtuelle apportent une valeur mesurable à nos clients." %}</p>
+    </div>
+</div>
+
+<section class="section bg-white">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {% for case in casestudies %}
+            <div class="card p-0 overflow-hidden border-0 border-l-4 border-primary group">
+                <div class="grid md:grid-cols-2 h-full">
+                    <div class="relative h-64 md:h-auto">
+                        {% if case.featured_image %}
+                        <img src="{{ case.featured_image.url }}" alt="{{ case.title }}" class="absolute inset-0 w-full h-full object-cover">
+                        {% else %}
+                        <img src="https://images.unsplash.com/photo-1542361345-89ce583cded4?w=600&q=80" alt="{{ case.title }}" class="absolute inset-0 w-full h-full object-cover">
+                        {% endif %}
+                    </div>
+                    <div class="p-6 flex flex-col justify-center">
+                        <span class="text-xs font-semibold text-primary uppercase tracking-wider mb-2">{{ case.sector }}</span>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
+                            <a href="{% url 'portfolio:casestudy_detail' case.slug %}">{{ case.title }}</a>
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">{{ case.problem }}</p>
+                        <a href="{% url 'portfolio:casestudy_detail' case.slug %}" class="mt-auto text-primary font-medium inline-flex items-center hover:text-primary-dark">
+                            {% trans "Lire l'étude" %} <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-span-full text-center py-12">
+                <p class="text-gray-500 text-lg">{% trans "Aucune étude de cas disponible." %}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

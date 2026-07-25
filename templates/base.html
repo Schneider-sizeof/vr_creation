@@ -1,0 +1,130 @@
+{% load static i18n seo_tags %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}" dir="{{ text_dir }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    {# SEO Meta Tags — title, description, OG, Twitter #}
+    {% seo_meta_tags %}
+
+    {# Hreflang alternates #}
+    {% hreflang_tags %}
+
+    {# JSON-LD Organization (all pages) #}
+    {% jsonld_organization %}
+
+    {# Page-specific JSON-LD #}
+    {% block jsonld_extra %}{% endblock %}
+
+    {# Favicon #}
+    {% if site_settings.favicon %}
+    <link rel="icon" href="{{ site_settings.favicon.url }}" type="image/x-icon">
+    {% else %}
+    <link rel="icon" href="{% static 'img/favicon.jpg' %}" type="image/jpeg">
+    {% endif %}
+
+    {# Preconnect for performance #}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    {# Google Fonts — Inter + Playfair Display #}
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    {# Font Awesome #}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    {# Tailwind CSS CDN #}
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#3D8EB9',
+                            light: '#E8F4F8',
+                            dark: '#2A6A8A',
+                            50: '#E8F4F8',
+                            100: '#D0E9F1',
+                            200: '#A1D3E3',
+                            300: '#72BDD5',
+                            400: '#4FAAC7',
+                            500: '#3D8EB9',
+                            600: '#2A6A8A',
+                            700: '#1C4A5D',
+                            800: '#13313E',
+                            900: '#0A191F',
+                        },
+                        accent: {
+                            DEFAULT: '#F5C99B',
+                            dark: '#E8A862',
+                            light: '#FEF5EB',
+                        },
+                        dark: {
+                            DEFAULT: '#3A2E2E',
+                            light: '#5A4E4E',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Playfair Display', 'Georgia', 'serif'],
+                    },
+                },
+            },
+        }
+    </script>
+
+    {# Main CSS #}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    {% if is_rtl %}
+    <link rel="stylesheet" href="{% static 'css/rtl.css' %}">
+    {% endif %}
+
+    {% block extra_css %}{% endblock %}
+    {% block extra_head %}{% endblock %}
+</head>
+<body class="bg-white text-dark min-h-screen flex flex-col font-sans antialiased{% if is_rtl %} rtl{% endif %}">
+
+    {# Cookie Consent Banner #}
+    {% include "partials/cookie_banner.html" %}
+
+    {# Header / Navigation #}
+    {% include "partials/header.html" %}
+
+    {# Main Content #}
+    <main id="main-content" class="flex-grow">
+        {% block content %}{% endblock %}
+    </main>
+
+    {# Footer #}
+    {% include "partials/footer.html" %}
+
+    {# Floating Quick Controls (WhatsApp & Scroll to Top) #}
+    <div id="floating-quick-controls" class="fixed bottom-6 right-6 z-[9999] flex flex-col gap-4 pointer-events-none">
+        {% if site_settings.social_whatsapp %}
+        <a href="https://api.whatsapp.com/send?phone={{ site_settings.social_whatsapp|cut:'+'|cut:' '|cut:'-' }}" target="_blank" rel="noopener" class="w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 hover:shadow-[#25D366]/50 pointer-events-auto cursor-pointer relative" aria-label="WhatsApp" style="box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);">
+            <i class="fab fa-whatsapp text-3xl"></i>
+            <!-- Glowing radar pulse -->
+            <span class="absolute inset-0 rounded-full border-4 border-[#25D366] animate-ping opacity-75 pointer-events-none"></span>
+        </a>
+        {% endif %}
+        
+        <button id="back-to-top-btn" class="w-12 h-12 bg-white text-dark hover:bg-primary hover:text-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 active:scale-95 transition-all duration-300 opacity-0 pointer-events-none translate-y-4 pointer-events-auto cursor-pointer" aria-label="{% trans 'Retour en haut' %}" style="box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);">
+            <i class="fas fa-arrow-up text-base"></i>
+        </button>
+    </div>
+
+    {# Core JavaScript #}
+    <script src="{% static 'js/main.js' %}" defer></script>
+    <script src="{% static 'js/cookies.js' %}" defer></script>
+
+    {# Google Analytics — loaded only after consent #}
+    {% if site_settings.google_analytics_id %}
+    <script id="ga-script-holder" data-ga-id="{{ site_settings.google_analytics_id }}" style="display:none;"></script>
+    {% endif %}
+
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

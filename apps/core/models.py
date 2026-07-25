@@ -1,0 +1,194 @@
+"""
+Core models for VR Creation Company.
+Site settings, team, values, strengths, and process steps.
+"""
+from django.db import models
+from django.utils.translation import gettext_lazy as _
+
+
+class SingletonModel(models.Model):
+    """Abstract base model that ensures only one instance exists."""
+
+    class Meta:
+        abstract = True
+
+    def save(self, *args, **kwargs):
+        self.pk = 1
+        super().save(*args, **kwargs)
+
+    def delete(self, *args, **kwargs):
+        pass  # Prevent deletion
+
+    @classmethod
+    def load(cls):
+        obj, _ = cls.objects.get_or_create(pk=1)
+        return obj
+
+
+class SiteSettings(SingletonModel):
+    """Global site configuration — singleton, editable in admin."""
+    site_name = models.CharField(
+        _('Nom du site'), max_length=200, default='VR Creation Company'
+    )
+    tagline = models.CharField(
+        _('Slogan'), max_length=300, default="L'innovation en action"
+    )
+    logo = models.ImageField(
+        _('Logo'), upload_to='site/', blank=True, null=True
+    )
+    favicon = models.ImageField(
+        _('Favicon'), upload_to='site/', blank=True, null=True
+    )
+    email = models.EmailField(
+        _('Email de contact'), default='contact@vrcreation.com'
+    )
+    phone = models.CharField(
+        _('Téléphone'), max_length=30, blank=True, default='+33 1 23 45 67 89'
+    )
+    address = models.TextField(
+        _('Adresse'), blank=True, default='Paris, France'
+    )
+    google_analytics_id = models.CharField(
+        _('Google Analytics ID'), max_length=30, blank=True,
+        help_text=_('Ex: G-XXXXXXXXXX. Chargé uniquement après consentement cookies.')
+    )
+    google_search_console_id = models.CharField(
+        _('Google Search Console'), max_length=100, blank=True,
+        help_text=_('Code de vérification Google Search Console (contenu de la balise meta)')
+    )
+    google_maps_embed_url = models.CharField(
+        _('URL Google Maps (embed)'), max_length=500, blank=True,
+        help_text=_('URL iframe Google Maps pour la page contact')
+    )
+    hero_image = models.ImageField(
+        _('Image hero accueil'), upload_to='site/', blank=True, null=True,
+        help_text=_('Image de fond du hero de la page d\'accueil')
+    )
+    about_image = models.ImageField(
+        _('Image page À propos'), upload_to='site/', blank=True, null=True
+    )
+    default_og_image = models.ImageField(
+        _('Image OG par défaut'), upload_to='site/', blank=True, null=True,
+        help_text=_('Image par défaut pour le partage social (1200x630px recommandé)')
+    )
+    footer_text = models.TextField(
+        _('Texte du pied de page'), blank=True,
+        default="Nous allions esthétique et technologie de pointe pour transformer vos projets en expériences visuelles immersives et inoubliables."
+    )
+    copyright_text = models.CharField(
+        _('Texte copyright'), max_length=300, blank=True,
+        default='© 2026 VR Creation Company'
+    )
+
+    # Social media
+    social_facebook = models.URLField(_('Facebook'), blank=True)
+    social_instagram = models.URLField(_('Instagram'), blank=True)
+    social_linkedin = models.URLField(_('LinkedIn'), blank=True)
+    social_youtube = models.URLField(_('YouTube'), blank=True)
+    social_twitter = models.URLField(_('Twitter / X'), blank=True)
+    social_tiktok = models.URLField(_('TikTok'), blank=True)
+    social_behance = models.URLField(_('Behance'), blank=True)
+    social_whatsapp = models.CharField(
+        _('WhatsApp'), max_length=30, blank=True,
+        help_text=_('Numéro WhatsApp au format international (ex: +33612345678)')
+    )
+
+    class Meta:
+        verbose_name = _('Paramètres du site')
+        verbose_name_plural = _('Paramètres du site')
+
+    def __str__(self):
+        return self.site_name
+
+
+class TeamMember(models.Model):
+    """Team members displayed on the About page."""
+    name = models.CharField(_('Nom'), max_length=200)
+    role = models.CharField(_('Rôle'), max_length=200)
+    bio = models.TextField(_('Biographie'), blank=True)
+    photo = models.ImageField(
+        _('Photo'), upload_to='team/', blank=True, null=True
+    )
+    order = models.PositiveIntegerField(_('Ordre'), default=0)
+
+    class Meta:
+        verbose_name = _('Membre de l\'équipe')
+        verbose_name_plural = _('Membres de l\'équipe')
+        ordering = ['order', 'name']
+
+    def __str__(self):
+        return f"{self.name} — {self.role}"
+
+
+class Value(models.Model):
+    """Company values (Créativité, Précision, etc.)."""
+    title = models.CharField(_('Titre'), max_length=200)
+    description = models.TextField(_('Description'))
+    icon = models.CharField(
+        _('Icône CSS'), max_length=100, blank=True,
+        help_text=_('Classe d\'icône (ex: fas fa-lightbulb) ou emoji')
+    )
+    order = models.PositiveIntegerField(_('Ordre'), default=0)
+
+    class Meta:
+        verbose_name = _('Valeur')
+        verbose_name_plural = _('Valeurs')
+        ordering = ['order']
+
+    def __str__(self):
+        return self.title
+
+
+class Strength(models.Model):
+    """Key figures and strengths for the home page."""
+    title = models.CharField(_('Titre'), max_length=200)
+    description = models.TextField(_('Description'), blank=True)
+    icon = models.CharField(_('Icône CSS'), max_length=100, blank=True)
+    stat_number = models.CharField(
+        _('Chiffre clé'), max_length=50, blank=True,
+        help_text=_('Ex: 150+, 98%, 10 ans')
+    )
+    stat_label = models.CharField(
+        _('Label du chiffre'), max_length=200, blank=True
+    )
+    order = models.PositiveIntegerField(_('Ordre'), default=0)
+
+    class Meta:
+        verbose_name = _('Point fort')
+        verbose_name_plural = _('Points forts')
+        ordering = ['order']
+
+    def __str__(self):
+        return self.title
+
+
+class ProcessStep(models.Model):
+    """Methodology timeline steps."""
+    title = models.CharField(_('Titre'), max_length=200)
+    description = models.TextField(_('Description'))
+    icon = models.CharField(_('Icône CSS'), max_length=100, blank=True)
+    order = models.PositiveIntegerField(_('Ordre'), default=0)
+
+    class Meta:
+        verbose_name = _('Étape du processus')
+        verbose_name_plural = _('Étapes du processus')
+        ordering = ['order']
+
+    def __str__(self):
+        return f"{self.order}. {self.title}"
+
+
+class HeroSlide(models.Model):
+    """Slides for the homepage hero carousel."""
+    title = models.CharField(_('Titre'), max_length=200, blank=True)
+    image = models.ImageField(_('Image'), upload_to='hero/')
+    order = models.PositiveIntegerField(_('Ordre'), default=0)
+    active = models.BooleanField(_('Actif'), default=True)
+
+    class Meta:
+        verbose_name = _('Diapositive Hero')
+        verbose_name_plural = _('Diapositives Hero')
+        ordering = ['order']
+
+    def __str__(self):
+        return self.title or f"Slide {self.id}"

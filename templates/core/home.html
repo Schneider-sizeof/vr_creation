@@ -1,0 +1,336 @@
+{% extends "base.html" %}
+{% load i18n static %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center overflow-hidden" style="background: linear-gradient(135deg, #ffffff 0%, var(--primary-light) 60%, var(--accent-light) 100%);">
+    <!-- Floating Light Orbs -->
+    <div class="light-orb light-orb-primary" style="width: 500px; height: 500px; top: -150px; right: -100px;"></div>
+    <div class="light-orb light-orb-accent" style="width: 350px; height: 350px; bottom: -100px; left: -80px; animation-delay: 2s;"></div>
+    
+    <!-- Background Decor -->
+    <div class="absolute top-0 right-0 w-1/2 h-full teardrop-shape opacity-30 transform translate-x-1/4 -translate-y-1/4" style="background: linear-gradient(135deg, var(--primary-light), rgba(61,142,185,0.08));"></div>
+    <div class="absolute bottom-0 left-0 w-64 h-64 dotted-grid opacity-20"></div>
+    
+    <div class="container mx-auto px-4 relative z-10 py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="animate-fade-in-up">
+                <span class="pill-badge mb-6 inline-block">{% trans "Agence de Réalité Virtuelle" %}</span>
+                <h1 class="text-5xl lg:text-6xl font-bold text-dark mb-6 leading-tight">
+                    {% trans "Sublimez vos projets avec la" %} <span class="text-primary relative inline-block">{% trans "Réalité Virtuelle" %}<span class="absolute bottom-2 left-0 w-full h-2 bg-accent opacity-50 -z-10 rounded"></span></span>
+                </h1>
+                <p class="text-xl text-gray-600 mb-8 font-light max-w-lg">
+                    {% trans "VR CREATION COMPANY incarne l'alliance entre esthétique et technologie pour donner vie à vos concepts avant même leur réalisation." %}
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="{% url 'portfolio:project_list' %}" class="btn btn-primary">{% trans "Découvrir nos projets" %}</a>
+                    <a href="{% url 'contact:contact' %}" class="btn btn-outline">{% trans "Nous contacter" %}</a>
+                </div>
+            </div>
+            
+            <div class="relative">
+                <!-- Outer glow container -->
+                <div class="absolute inset-0 bg-primary-light rounded-[40px] transform rotate-3 scale-105 opacity-50"></div>
+                
+                <!-- Main Slider Container -->
+                <div class="relative z-10 w-full rounded-[32px] shadow-lg overflow-hidden aspect-[4/3] border-8 border-white bg-gray-100 group animate-float-hero">
+                    <!-- Slides Container -->
+                    <div class="absolute inset-0 w-full h-full">
+                        {% if hero_slides %}
+                            {% for slide in hero_slides %}
+                            <div class="hero-slide absolute inset-0 w-full h-full {% if forloop.first %}opacity-100 z-10{% else %}opacity-0 z-0{% endif %} transition-opacity duration-1000 ease-in-out">
+                                <img src="{{ slide.image.url }}" alt="{{ slide.title|default:'VR Creation' }}" class="w-full h-full object-cover">
+                            </div>
+                            {% endfor %}
+                        {% else %}
+                            <!-- Slide 1 -->
+                            <div class="hero-slide absolute inset-0 w-full h-full opacity-100 transition-opacity duration-1000 ease-in-out z-10">
+                                <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200&q=80" alt="VR Creation Setup" class="w-full h-full object-cover">
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="hero-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0">
+                                <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200&q=80" alt="Immersive architecture" class="w-full h-full object-cover">
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="hero-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0">
+                                <img src="https://images.unsplash.com/photo-1617806118233-18e1db207f62?w=1200&q=80" alt="VR walkthrough" class="w-full h-full object-cover">
+                            </div>
+                        {% endif %}
+                    </div>
+                    
+                    <!-- Navigation Buttons -->
+                    <button id="hero-prev-btn" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/30 backdrop-blur-md border border-white/20 text-white flex items-center justify-center hover:bg-primary hover:text-white transition-all shadow-md opacity-0 group-hover:opacity-100 focus:opacity-100 z-20 cursor-pointer" aria-label="{% trans 'Précédent' %}">
+                        <i class="fas fa-chevron-left text-sm"></i>
+                    </button>
+                    <button id="hero-next-btn" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/30 backdrop-blur-md border border-white/20 text-white flex items-center justify-center hover:bg-primary hover:text-white transition-all shadow-md opacity-0 group-hover:opacity-100 focus:opacity-100 z-20 cursor-pointer" aria-label="{% trans 'Suivant' %}">
+                        <i class="fas fa-chevron-right text-sm"></i>
+                    </button>
+                    
+                    <!-- Indicators/Dots -->
+                    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+                        {% if hero_slides %}
+                            {% for slide in hero_slides %}
+                            <button class="hero-dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300 {% if forloop.first %}active{% endif %}" data-index="{{ forloop.counter0 }}" aria-label="Slide {{ forloop.counter }}"></button>
+                            {% endfor %}
+                        {% else %}
+                            <button class="hero-dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300 active" data-index="0" aria-label="Slide 1"></button>
+                            <button class="hero-dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300" data-index="1" aria-label="Slide 2"></button>
+                            <button class="hero-dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300" data-index="2" aria-label="Slide 3"></button>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <!-- Floating Badge -->
+                <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-lg z-20 flex items-center gap-4 animate-pulse-glow">
+                    <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div>
+                        <p class="font-bold text-dark">{% trans "Expertise" %}</p>
+                        <p class="text-sm text-gray-500">{% trans "Reconnue" %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Values / Mission — diagonal pattern bg -->
+<section class="section section-light relative">
+    <!-- Light orb decoration -->
+    <div class="light-orb light-orb-primary" style="width: 300px; height: 300px; top: -50px; left: 20%; animation-delay: 1s;"></div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center mb-16 max-w-3xl mx-auto animate-on-scroll slide-up">
+            <span class="pill-badge">{% trans "Notre Mission" %}</span>
+            <h2 class="section-title">{% trans "Pourquoi choisir VR Creation ?" %}</h2>
+            <p class="text-gray-600">{% trans "Nous transformons vos visions en réalités immersives avec une approche centrée sur l'excellence." %}</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="card text-center animate-on-scroll slide-up" style="transition-delay: 100ms;">
+                <div class="w-20 h-20 mx-auto bg-primary-light rounded-full flex items-center justify-center text-primary text-3xl mb-6">
+                    <i class="fas fa-magic"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">{% trans "Créativité" %}</h3>
+                <p class="text-gray-600 text-sm">{% trans "Sublimer vos projets par des approches visuelles innovantes et esthétiques." %}</p>
+            </div>
+            
+            <div class="card text-center animate-on-scroll slide-up" style="transition-delay: 200ms;">
+                <div class="w-20 h-20 mx-auto bg-primary-light rounded-full flex items-center justify-center text-primary text-3xl mb-6">
+                    <i class="fas fa-crosshairs"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">{% trans "Précision" %}</h3>
+                <p class="text-gray-600 text-sm">{% trans "Un souci du détail minutieux pour des rendus ultra-réalistes." %}</p>
+            </div>
+            
+            <div class="card text-center animate-on-scroll slide-up" style="transition-delay: 300ms;">
+                <div class="w-20 h-20 mx-auto bg-primary-light rounded-full flex items-center justify-center text-primary text-3xl mb-6">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">{% trans "Professionnalisme" %}</h3>
+                <p class="text-gray-600 text-sm">{% trans "Respect des délais et accompagnement sur-mesure à chaque étape." %}</p>
+            </div>
+            
+            <div class="card text-center animate-on-scroll slide-up" style="transition-delay: 400ms;">
+                <div class="w-20 h-20 mx-auto bg-primary-light rounded-full flex items-center justify-center text-primary text-3xl mb-6">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">{% trans "Innovation" %}</h3>
+                <p class="text-gray-600 text-sm">{% trans "Utilisation des dernières technologies pour accélérer vos ventes." %}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Preview — gradient mesh bg -->
+<section class="section section-wave section-gradient">
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="flex flex-wrap justify-between items-end mb-12 animate-on-scroll slide-up">
+            <div>
+                <span class="pill-badge">{% trans "Nos Services" %}</span>
+                <h2 class="section-title mb-0">{% trans "Notre Expertise" %}</h2>
+            </div>
+            <a href="{% url 'services:list' %}" class="btn btn-outline hidden md:inline-flex">{% trans "Voir tous les services" %}</a>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {% for service in services|slice:":6" %}
+            <a href="{% url 'services:detail' service.slug %}" class="relative group block rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 aspect-[4/3] animate-on-scroll slide-up" style="transition-delay: {% if forloop.counter == 1 %}100ms{% elif forloop.counter == 2 %}200ms{% elif forloop.counter == 3 %}300ms{% elif forloop.counter == 4 %}400ms{% elif forloop.counter == 5 %}500ms{% else %}600ms{% endif %};">
+                <!-- Background Image -->
+                {% if service.featured_image %}
+                <img src="{{ service.featured_image.url }}" alt="{{ service.title }}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out">
+                {% else %}
+                <div class="absolute inset-0 bg-gradient-to-br from-primary to-primary-dark"></div>
+                {% endif %}
+                
+                <!-- Dark readability overlay -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/15 group-hover:from-black/95 transition-colors duration-500"></div>
+                
+                <!-- Content -->
+                <div class="absolute inset-0 p-6 flex flex-col justify-end text-white z-10">
+                    <div class="flex items-center gap-3 mb-2.5">
+                        <span class="w-10 h-10 rounded-full bg-white/15 backdrop-blur-md flex items-center justify-center text-white text-lg">
+                            <i class="{{ service.icon|default:'fas fa-cube' }}"></i>
+                        </span>
+                        <h3 class="text-lg font-bold tracking-tight leading-snug">{{ service.title }}</h3>
+                    </div>
+                    <p class="text-gray-300 text-xs line-clamp-2 leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity">
+                        {{ service.short_description }}
+                    </p>
+                    <div class="mt-4 flex items-center text-primary-light font-medium text-xs group-hover:text-white transition-colors">
+                        {% trans "En savoir plus" %} <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </div>
+                </div>
+            </a>
+            {% empty %}
+            <div class="col-span-3 text-center py-8 text-gray-500">{% trans "Aucun service disponible pour le moment." %}</div>
+            {% endfor %}
+        </div>
+        
+        <div class="mt-8 text-center md:hidden">
+            <a href="{% url 'services:list' %}" class="btn btn-outline">{% trans "Voir tous les services" %}</a>
+        </div>
+    </div>
+</section>
+
+<!-- Nos points forts — teal tint with floating orbs -->
+<section class="section section-tint">
+    <div class="container mx-auto px-4 text-center relative z-10">
+        <div class="animate-on-scroll slide-up mb-8">
+            <span class="pill-badge">{% trans "Avantages" %}</span>
+            <h2 class="section-title">{% trans "Nos Points Forts" %}</h2>
+        </div>
+        
+        <div class="flex flex-wrap justify-center gap-8 mt-12">
+            <div class="flex flex-col items-center max-w-[200px] animate-on-scroll zoom-in" style="transition-delay: 100ms;">
+                <div class="w-32 h-32 rounded-full border-4 border-primary bg-white flex items-center justify-center mb-4 shadow-sm text-3xl text-primary transition-all duration-300 hover:shadow-lg hover:scale-105" style="box-shadow: 0 4px 15px rgba(61,142,185,0.15);">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4 class="font-bold text-dark">{% trans "Différenciation" %}</h4>
+            </div>
+            <div class="flex flex-col items-center max-w-[200px] animate-on-scroll zoom-in" style="transition-delay: 200ms;">
+                <div class="w-32 h-32 rounded-full border-4 border-primary bg-white flex items-center justify-center mb-4 shadow-sm text-3xl text-primary transition-all duration-300 hover:shadow-lg hover:scale-105" style="box-shadow: 0 4px 15px rgba(61,142,185,0.15);">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h4 class="font-bold text-dark">{% trans "Gain de temps" %}</h4>
+            </div>
+            <div class="flex flex-col items-center max-w-[200px] animate-on-scroll zoom-in" style="transition-delay: 300ms;">
+                <div class="w-32 h-32 rounded-full border-4 border-primary bg-white flex items-center justify-center mb-4 shadow-sm text-3xl text-primary transition-all duration-300 hover:shadow-lg hover:scale-105" style="box-shadow: 0 4px 15px rgba(61,142,185,0.15);">
+                    <i class="fas fa-vr-cardboard"></i>
+                </div>
+                <h4 class="font-bold text-dark">{% trans "Expérience immersive" %}</h4>
+            </div>
+            <div class="flex flex-col items-center max-w-[200px] animate-on-scroll zoom-in" style="transition-delay: 400ms;">
+                <div class="w-32 h-32 rounded-full border-4 border-primary bg-white flex items-center justify-center mb-4 shadow-sm text-3xl text-primary transition-all duration-300 hover:shadow-lg hover:scale-105" style="box-shadow: 0 4px 15px rgba(61,142,185,0.15);">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h4 class="font-bold text-dark">{% trans "Rentabilité" %}</h4>
+            </div>
+            <div class="flex flex-col items-center max-w-[200px] animate-on-scroll zoom-in" style="transition-delay: 500ms;">
+                <div class="w-32 h-32 rounded-full border-4 border-primary bg-white flex items-center justify-center mb-4 shadow-sm text-3xl text-primary transition-all duration-300 hover:shadow-lg hover:scale-105" style="box-shadow: 0 4px 15px rgba(61,142,185,0.15);">
+                    <i class="fas fa-compress-arrows-alt"></i>
+                </div>
+                <h4 class="font-bold text-dark">{% trans "Flexibilité" %}</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA — dark premium section with glow effects -->
+<section class="section section-dark">
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="rounded-3xl p-12 text-center relative overflow-hidden animate-on-scroll slide-up" style="background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(61,142,185,0.1) 100%); border: 1px solid rgba(255,255,255,0.08); backdrop-filter: blur(10px);">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-primary rounded-full blur-3xl opacity-15 -mr-32 -mt-32"></div>
+            <div class="absolute bottom-0 left-0 w-64 h-64 bg-accent rounded-full blur-3xl opacity-15 -ml-32 -mb-32"></div>
+            
+            <div class="relative z-10 max-w-2xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">{% trans "Prêt à sublimer votre prochain projet ?" %}</h2>
+                <p class="text-gray-300 mb-8 font-light text-lg">{% trans "Contactez-nous pour discuter de vos besoins et obtenir un devis personnalisé." %}</p>
+                <a href="{% url 'contact:contact' %}" class="btn btn-primary px-8 py-4 text-lg shadow-lg hover:shadow-xl" style="box-shadow: 0 8px 30px rgba(61,142,185,0.4);">
+                    {% trans "Démarrer un projet" %}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const slides = document.querySelectorAll(".hero-slide");
+        const prevBtn = document.getElementById("hero-prev-btn");
+        const nextBtn = document.getElementById("hero-next-btn");
+        const dots = document.querySelectorAll(".hero-dot");
+        
+        if (!slides.length) return;
+
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+        let autoplayInterval;
+        
+        function updateSlider(index) {
+            currentIndex = index;
+            if (currentIndex >= totalSlides) currentIndex = 0;
+            if (currentIndex < 0) currentIndex = totalSlides - 1;
+            
+            slides.forEach((slide, idx) => {
+                if (idx === currentIndex) {
+                    slide.classList.remove("opacity-0", "pointer-events-none", "z-0");
+                    slide.classList.add("opacity-100", "pointer-events-auto", "z-10");
+                } else {
+                    slide.classList.remove("opacity-100", "pointer-events-auto", "z-10");
+                    slide.classList.add("opacity-0", "pointer-events-none", "z-0");
+                }
+            });
+            
+            dots.forEach((dot, idx) => {
+                if (idx === currentIndex) {
+                    dot.classList.add("bg-primary", "w-6");
+                    dot.classList.remove("bg-white/50", "w-2");
+                } else {
+                    dot.classList.remove("bg-primary", "w-6");
+                    dot.classList.add("bg-white/50", "w-2");
+                }
+            });
+        }
+        
+        function startAutoplay() {
+            autoplayInterval = setInterval(() => {
+                updateSlider(currentIndex + 1);
+            }, 6000);
+        }
+        
+        function stopAutoplay() {
+            clearInterval(autoplayInterval);
+        }
+        
+        if (prevBtn && nextBtn && slides.length > 1) {
+            prevBtn.addEventListener("click", () => {
+                stopAutoplay();
+                updateSlider(currentIndex - 1);
+                startAutoplay();
+            });
+            
+            nextBtn.addEventListener("click", () => {
+                stopAutoplay();
+                updateSlider(currentIndex + 1);
+                startAutoplay();
+            });
+            
+            dots.forEach(dot => {
+                dot.addEventListener("click", (e) => {
+                    stopAutoplay();
+                    const index = parseInt(e.target.getAttribute("data-index"));
+                    updateSlider(index);
+                    startAutoplay();
+                });
+            });
+            
+            updateSlider(0);
+            startAutoplay();
+        }
+    });
+</script>
+{% endblock %}

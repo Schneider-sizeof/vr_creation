@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load i18n static %}
+
+{% block content %}
+<div class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4 text-center">
+        <span class="pill-badge mb-4">{{ casestudy.sector }}</span>
+        <h1 class="text-4xl font-bold text-dark mb-4">{{ casestudy.title }}</h1>
+        <div class="flex items-center justify-center gap-2 text-sm text-gray-500">
+            <a href="{% url 'core:home' %}" class="hover:text-primary">{% trans "Accueil" %}</a>
+            <span>/</span>
+            <a href="{% url 'portfolio:casestudy_list' %}" class="hover:text-primary">{% trans "Études de Cas" %}</a>
+        </div>
+    </div>
+</div>
+
+<section class="section bg-white">
+    <div class="container mx-auto px-4 max-w-4xl">
+        
+        <div class="mb-12">
+            {% if casestudy.featured_image %}
+            <img src="{{ casestudy.featured_image.url }}" alt="{{ casestudy.title }}" class="w-full rounded-2xl shadow-md">
+            {% else %}
+            <img src="https://images.unsplash.com/photo-1542361345-89ce583cded4?w=1200&q=80" alt="{{ casestudy.title }}" class="w-full rounded-2xl shadow-md">
+            {% endif %}
+        </div>
+        
+        <div class="space-y-12">
+            <!-- Problem -->
+            <div class="bg-gray-50 p-8 rounded-xl border-l-4 border-gray-400">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-gray-600 shadow-sm"><i class="fas fa-question"></i></span>
+                    {% trans "Le Problème" %}
+                </h2>
+                <div class="prose max-w-none text-gray-700">
+                    <p>{{ casestudy.problem }}</p>
+                </div>
+            </div>
+            
+            <!-- Importance du service -->
+            <div class="bg-primary-light p-8 rounded-xl border-l-4 border-primary">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary shadow-sm"><i class="fas fa-lightbulb"></i></span>
+                    {% trans "Importance du Service" %}
+                </h2>
+                <div class="prose max-w-none text-gray-700">
+                    <p>{{ casestudy.service_importance }}</p>
+                </div>
+            </div>
+            
+            <!-- Resultat & Efficacite grid -->
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="border border-gray-100 p-8 rounded-xl shadow-sm">
+                    <h2 class="text-2xl font-bold mb-4 flex items-center gap-3 text-dark">
+                        <i class="fas fa-chart-line text-accent"></i>
+                        {% trans "Efficacité" %}
+                    </h2>
+                    <div class="text-gray-700">
+                        <p>{{ casestudy.efficiency }}</p>
+                    </div>
+                </div>
+                
+                <div class="border border-gray-100 p-8 rounded-xl shadow-sm">
+                    <h2 class="text-2xl font-bold mb-4 flex items-center gap-3 text-dark">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                        {% trans "Résultat" %}
+                    </h2>
+                    <div class="text-gray-700">
+                        <p>{{ casestudy.result }}</p>
+                    </div>
+                </div>
+            </div>
+            
+            {% if casestudy.project %}
+            <div class="text-center mt-12">
+                <a href="{% url 'portfolio:project_detail' casestudy.project.slug %}" class="btn btn-primary">
+                    {% trans "Voir le projet détaillé" %}
+                </a>
+            </div>
+            {% endif %}
+        </div>
+        
+    </div>
+</section>
+{% endblock %}

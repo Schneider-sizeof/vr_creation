@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl font-bold text-dark mb-4">{% trans "Nos Services" %}</h1>
+        <div class="flex items-center justify-center gap-2 text-sm text-gray-500">
+            <a href="{% url 'core:home' %}" class="hover:text-primary">{% trans "Accueil" %}</a>
+            <span>/</span>
+            <span class="text-primary font-medium">{% trans "Services" %}</span>
+        </div>
+    </div>
+</div>
+
+<section class="section bg-white">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for service in services %}
+            <a href="{% url 'services:detail' service.slug %}" class="relative group block rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 aspect-[4/3] animate-on-scroll slide-up" style="transition-delay: {% if forloop.counter == 1 %}100ms{% elif forloop.counter == 2 %}200ms{% elif forloop.counter == 3 %}300ms{% else %}400ms{% endif %};">
+                <!-- Background Image -->
+                {% if service.featured_image %}
+                <img src="{{ service.featured_image.url }}" alt="{{ service.title }}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out">
+                {% else %}
+                <div class="absolute inset-0 bg-gradient-to-br from-primary to-primary-dark"></div>
+                {% endif %}
+                
+                <!-- Dark readability overlay -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/15 group-hover:from-black/95 transition-colors duration-500"></div>
+                
+                <!-- Content -->
+                <div class="absolute inset-0 p-6 flex flex-col justify-end text-white z-10">
+                    <div class="flex items-center gap-3 mb-2.5">
+                        <span class="w-10 h-10 rounded-full bg-white/15 backdrop-blur-md flex items-center justify-center text-white text-lg">
+                            <i class="{{ service.icon|default:'fas fa-cube' }}"></i>
+                        </span>
+                        <h3 class="text-lg font-bold tracking-tight leading-snug">{{ service.title }}</h3>
+                    </div>
+                    <p class="text-gray-300 text-xs line-clamp-2 leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity">
+                        {{ service.short_description }}
+                    </p>
+                    <div class="mt-4 flex items-center text-primary-light font-medium text-xs group-hover:text-white transition-colors">
+                        {% trans "Découvrir ce service" %} <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </div>
+                </div>
+            </a>
+            {% empty %}
+            <div class="col-span-full text-center py-12">
+                <p class="text-gray-500 text-lg">{% trans "Aucun service disponible pour le moment." %}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

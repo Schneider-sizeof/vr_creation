@@ -1,0 +1,146 @@
+{% load i18n static %}
+<header id="mainHeader" class="main-header py-4 sticky top-0 z-50 transition-all duration-300">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+        <!-- Logo -->
+        <a href="{% url 'core:home' %}" class="flex items-center gap-3">
+            {% if site_settings.logo %}
+            <img src="{{ site_settings.logo.url }}" alt="{{ site_settings.site_name }}" class="h-10 w-auto">
+            {% endif %}
+            <span class="text-2xl font-bold text-dark font-sans tracking-tight">VR<span class="text-primary">CREATION</span></span>
+        </a>
+        
+        <!-- Desktop Nav -->
+        <nav class="hidden lg:flex items-center gap-6">
+            <a href="{% url 'core:home' %}" class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}">{% trans "Accueil" %}</a>
+            <a href="{% url 'core:about' %}" class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}">{% trans "À propos" %}</a>
+            <a href="{% url 'services:list' %}" class="nav-link {% if 'service' in request.resolver_match.url_name %}active{% endif %}">{% trans "Services" %}</a>
+            <a href="{% url 'portfolio:project_list' %}" class="nav-link {% if 'project' in request.resolver_match.url_name or 'casestudy' in request.resolver_match.url_name %}active{% endif %}">{% trans "Réalisations" %}</a>
+            <a href="{% url 'blog:list' %}" class="nav-link {% if request.resolver_match.app_name == 'blog' %}active{% endif %}">{% trans "Blog" %}</a>
+            <a href="{% url 'contact:contact' %}" class="btn btn-primary">{% trans "Contact" %}</a>
+            
+            <!-- VR Immersive Mode Toggle -->
+            <button id="vr-mode-toggle-btn" class="w-9 h-9 rounded-full bg-gray-100 hover:bg-primary-light flex items-center justify-center text-dark hover:text-primary transition-all duration-300 relative group cursor-pointer" aria-label="{% trans 'Mode Immersif VR' %}">
+                <i class="fas fa-vr-cardboard text-base"></i>
+                <!-- Detailed Tooltip -->
+                <span class="absolute top-full mt-2 right-0 hidden group-hover:flex flex-col bg-dark/95 backdrop-blur-md text-white text-xs p-3 rounded-xl shadow-xl w-64 text-left border border-white/10 z-50 gap-1 transition-all duration-300">
+                    <span class="font-bold text-primary flex items-center gap-1.5">
+                        <i class="fas fa-vr-cardboard"></i>
+                        {% trans "Mode Cyber-VR" %}
+                    </span>
+                    <span class="text-gray-300 font-light leading-relaxed">
+                        {% trans "Simule un espace virtuel 3D en transformant le site avec un design néon et des particules cosmiques flottantes !" %}
+                    </span>
+                </span>
+            </button>
+            
+            <!-- Language Switcher with Real Flags -->
+            {% get_current_language as CURRENT_LANG %}
+            <div class="relative group ml-2">
+                <button class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors text-dark">
+                    <img src="https://flagcdn.com/24x18/{% if CURRENT_LANG == 'fr' %}fr{% elif CURRENT_LANG == 'ar' %}ma{% else %}gb{% endif %}.png"
+                         srcset="https://flagcdn.com/48x36/{% if CURRENT_LANG == 'fr' %}fr{% elif CURRENT_LANG == 'ar' %}ma{% else %}gb{% endif %}.png 2x"
+                         width="24" height="18" alt=""
+                         class="rounded-sm shadow-sm">
+                    <i class="fas fa-chevron-down text-xs text-gray-400"></i>
+                </button>
+                <div class="absolute right-0 mt-1 w-48 bg-white rounded-xl shadow-lg py-2 hidden group-hover:block border border-gray-100 z-50">
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    {% for language in languages %}
+                        <form action="{% url 'set_language' %}" method="post" class="lang-switch-form block">
+                            {% csrf_token %}
+                            <input name="next" type="hidden" value="/" class="lang-next-input">
+                            <input name="language" type="hidden" value="{{ language.code }}">
+                            <button type="submit" class="w-full text-left px-4 py-2.5 hover:bg-primary-light transition-colors flex items-center gap-3 {% if language.code == CURRENT_LANG %}font-bold text-primary bg-primary-light/50{% else %}text-gray-700{% endif %}">
+                                <img src="https://flagcdn.com/24x18/{% if language.code == 'fr' %}fr{% elif language.code == 'ar' %}ma{% else %}gb{% endif %}.png"
+                                     srcset="https://flagcdn.com/48x36/{% if language.code == 'fr' %}fr{% elif language.code == 'ar' %}ma{% else %}gb{% endif %}.png 2x"
+                                     width="24" height="18" alt="{{ language.name_local }}"
+                                     class="rounded-sm shadow-sm">
+                                <span>{{ language.name_local|capfirst }}</span>
+                                {% if language.code == CURRENT_LANG %}
+                                <i class="fas fa-check text-primary text-xs ml-auto"></i>
+                                {% endif %}
+                            </button>
+                        </form>
+                    {% endfor %}
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="lg:hidden text-dark focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+        </button>
+    </div>
+    
+    <!-- Mobile Nav -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-md z-50">
+        <div class="container mx-auto px-4 py-4 flex flex-col space-y-3">
+            <a href="{% url 'core:home' %}" class="text-dark font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors">{% trans "Accueil" %}</a>
+            <a href="{% url 'core:about' %}" class="text-dark font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors">{% trans "À propos" %}</a>
+            <a href="{% url 'services:list' %}" class="text-dark font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors">{% trans "Services" %}</a>
+            <a href="{% url 'portfolio:project_list' %}" class="text-dark font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors">{% trans "Réalisations" %}</a>
+            <a href="{% url 'blog:list' %}" class="text-dark font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors">{% trans "Blog" %}</a>
+            <a href="{% url 'contact:contact' %}" class="text-primary font-bold py-2 px-3">{% trans "Contact" %}</a>
+            
+            <button id="mobile-vr-mode-toggle-btn" class="text-dark font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors flex items-center gap-3 text-left w-full cursor-pointer">
+                <i class="fas fa-vr-cardboard text-primary text-xl"></i>
+                <div>
+                    <span class="block font-bold">{% trans "Mode Cyber-VR" %}</span>
+                    <span class="block text-xxs text-gray-500 font-normal mt-0.5 leading-snug">{% trans "Simule un espace virtuel 3D (ambiance néon et particules cosmiques)." %}</span>
+                </div>
+            </button>
+            
+            <!-- Mobile Language Switcher with Real Flags -->
+            <div class="border-t border-gray-100 pt-3 flex gap-2 flex-wrap">
+                {% get_current_language as CURRENT_LANG %}
+                {% get_available_languages as LANGUAGES %}
+                {% get_language_info_list for LANGUAGES as languages %}
+                {% for language in languages %}
+                    <form action="{% url 'set_language' %}" method="post" class="lang-switch-form inline-block">
+                        {% csrf_token %}
+                        <input name="next" type="hidden" value="/" class="lang-next-input">
+                        <input name="language" type="hidden" value="{{ language.code }}">
+                        <button type="submit" class="px-3 py-2 rounded-lg text-sm flex items-center gap-2 {% if language.code == CURRENT_LANG %}bg-primary text-white font-bold shadow-md{% else %}bg-gray-100 text-gray-700 hover:bg-gray-200{% endif %} transition-all">
+                            <img src="https://flagcdn.com/20x15/{% if language.code == 'fr' %}fr{% elif language.code == 'ar' %}ma{% else %}gb{% endif %}.png"
+                                 srcset="https://flagcdn.com/40x30/{% if language.code == 'fr' %}fr{% elif language.code == 'ar' %}ma{% else %}gb{% endif %}.png 2x"
+                                 width="20" height="15" alt=""
+                                 class="rounded-sm">
+                            {{ language.name_local|capfirst }}
+                        </button>
+                    </form>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</header>
+
+<script>
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    // Fix language switcher: strip old language prefix from URL so Django uses the new language
+    (function() {
+        var currentPath = window.location.pathname;
+        // Strip the language prefix (e.g. /fr/, /en/, /ar/) to get the language-neutral path
+        var neutralPath = currentPath.replace(/^\/(fr|en|ar)(\/|$)/, '/');
+        if (neutralPath === '') neutralPath = '/';
+        
+        // Set all language switch forms to use the neutral path
+        var forms = document.querySelectorAll('.lang-switch-form');
+        forms.forEach(function(form) {
+            var langInput = form.querySelector('input[name="language"]');
+            var nextInput = form.querySelector('.lang-next-input');
+            if (langInput && nextInput) {
+                // Build the new URL with the target language prefix
+                var targetLang = langInput.value;
+                var newPath = '/' + targetLang + neutralPath;
+                // Normalize double slashes
+                newPath = newPath.replace(/\/\//g, '/');
+                nextInput.value = newPath;
+            }
+        });
+    })();
+</script>

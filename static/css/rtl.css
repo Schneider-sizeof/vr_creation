@@ -1,0 +1,82 @@
+/* ============================================================
+   RTL (Arabic) — Layout overrides
+   ============================================================ */
+
+/* Process timeline: mirror to right side */
+.rtl .process-step {
+    padding-left: 0;
+    padding-right: 3rem;
+}
+.rtl .process-step::before {
+    left: auto;
+    right: 0.875rem;
+}
+.rtl .process-step .step-dot {
+    left: auto;
+    right: 0;
+}
+
+/* Nav link underline from right */
+.rtl .nav-link::after {
+    left: auto;
+    right: 0;
+}
+
+/* Breadcrumb separator flip */
+.rtl .breadcrumb-sep {
+    transform: scaleX(-1);
+}
+
+/* Hamburger menu alignment */
+.rtl #mobile-toggle {
+    order: -1;
+}
+
+/* Timeline Layout Overrides for About Page */
+.rtl .timeline::before {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.rtl .timeline-item {
+    padding-right: 0;
+    padding-left: 3rem;
+}
+
+.rtl .timeline-item:nth-child(even) {
+    margin-right: auto;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 3rem;
+}
+
+.rtl .timeline-number {
+    right: auto;
+    left: -25px;
+}
+
+.rtl .timeline-item:nth-child(even) .timeline-number {
+    left: auto;
+    right: -25px;
+}
+
+/* Automatic Border Mirroring for RTL */
+.rtl .border-l-4 {
+    border-left-width: 0 !important;
+    border-right-width: 4px !important;
+    border-right-style: solid !important;
+}
+
+/* Icon chevron mirroring for RTL */
+.rtl .fa-chevron-right {
+    transform: scaleX(-1);
+}
+.rtl .fa-arrow-right {
+    transform: scaleX(-1);
+}
+.rtl .fa-chevron-left {
+    transform: scaleX(-1);
+}
+.rtl .fa-arrow-left {
+    transform: scaleX(-1);
+}

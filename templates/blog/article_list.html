@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl font-bold text-dark mb-4">{% trans "Actualités & Blog" %}</h1>
+        <p class="text-gray-600 max-w-2xl mx-auto">{% trans "Découvrez nos derniers articles, conseils et tendances sur la réalité virtuelle et l'immobilier." %}</p>
+    </div>
+</div>
+
+<section class="section bg-white">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for article in articles %}
+            <article class="card p-0 overflow-hidden border-0 shadow-sm hover:shadow-md transition-shadow group">
+                <div class="relative h-48 overflow-hidden">
+                    {% if article.featured_image %}
+                    <img src="{{ article.featured_image.url }}" alt="{{ article.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    {% else %}
+                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&q=80" alt="{{ article.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    {% endif %}
+                    <div class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">
+                        {{ article.category }}
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center text-xs text-gray-500 mb-3 space-x-4">
+                        <span><i class="far fa-calendar-alt mr-1"></i> {{ article.published_date|date:"d M Y" }}</span>
+                        <span><i class="far fa-user mr-1"></i> {{ article.author|default:"Admin" }}</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 line-clamp-2 group-hover:text-primary transition-colors">
+                        <a href="{% url 'blog:detail' article.slug %}">{{ article.title }}</a>
+                    </h3>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">{{ article.excerpt }}</p>
+                    <a href="{% url 'blog:detail' article.slug %}" class="inline-flex items-center text-primary font-medium hover:text-primary-dark">
+                        {% trans "Lire la suite" %} <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </a>
+                </div>
+            </article>
+            {% empty %}
+            <div class="col-span-full text-center py-12">
+                <p class="text-gray-500 text-lg">{% trans "Aucun article publié pour le moment." %}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

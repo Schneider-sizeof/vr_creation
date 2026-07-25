@@ -1,0 +1,46 @@
+# VR Creation Company — Django Project
+
+# Python
+*.pyc
+__pycache__/
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment
+.env
+
+# Database
+data/
+*.sqlite3
+
+# Media uploads
+media/
+
+# Static files (collected)
+staticfiles/
+
+# Cache
+cache/
+
+# Logs
+logs/
+
+# Compiled translations (regenerate with compilemessages)
+*.mo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Django compressor
+CACHE/
