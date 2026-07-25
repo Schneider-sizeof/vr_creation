@@ -795,3 +795,90 @@ body.vr-mode .section-gradient {
     background: linear-gradient(135deg, #030406 0%, rgba(0, 240, 255, 0.06) 50%, rgba(255, 0, 127, 0.06) 100%, #030406 100%) !important;
     background-size: 300% 300% !important;
 }
+
+/* Bulletproof VR Mode Global Text Color Overrides */
+body.vr-mode p,
+body.vr-mode span,
+body.vr-mode li,
+body.vr-mode td,
+body.vr-mode th,
+body.vr-mode label,
+body.vr-mode strong,
+body.vr-mode em,
+body.vr-mode small,
+body.vr-mode time,
+body.vr-mode blockquote,
+body.vr-mode a:not(.btn):not(.pill-badge) {
+    color: #cbd5e1 !important;
+}
+
+body.vr-mode h1,
+body.vr-mode h2,
+body.vr-mode h3,
+body.vr-mode h4,
+body.vr-mode h5,
+body.vr-mode h6 {
+    color: #ffffff !important;
+}
+
+body.vr-mode a:not(.btn):not(.pill-badge):hover {
+    color: #00f0ff !important;
+}
+
+body.vr-mode .text-primary {
+    color: #00f0ff !important;
+}
+
+body.vr-mode .text-accent {
+    color: #ff007f !important;
+}
+
+/* Premium Page Entry Transition */
+body {
+    opacity: 0;
+    animation: body-fade-in 0.4s ease-out forwards;
+}
+@keyframes body-fade-in {
+    to { opacity: 1; }
+}
+
+/* Custom Webkit scrollbars */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--white);
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 5px;
+    border: 2px solid var(--white);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
+/* VR Mode Custom Scrollbar */
+body.vr-mode ::-webkit-scrollbar-track {
+    background: #030406;
+}
+body.vr-mode ::-webkit-scrollbar-thumb {
+    background: rgba(0, 240, 255, 0.35);
+    border: 2px solid #030406;
+}
+body.vr-mode ::-webkit-scrollbar-thumb:hover {
+    background: #00f0ff;
+    box-shadow: 0 0 10px #00f0ff;
+}
+
+/* VR Cyber HUD Scanlines Grid Overlay */
+body.vr-mode::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.12) 50%), linear-gradient(90deg, rgba(255, 0, 127, 0.03), rgba(0, 240, 255, 0.02), rgba(255, 0, 127, 0.03));
+    background-size: 100% 4px, 6px 100%;
+    pointer-events: none;
+    z-index: 99999;
+    opacity: 0.2;
+}
