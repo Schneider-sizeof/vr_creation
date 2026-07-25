@@ -669,13 +669,45 @@ body.vr-mode .cookie-banner .rounded-2xl {
 
 body.vr-mode .text-dark,
 body.vr-mode .text-gray-900,
-body.vr-mode .text-gray-800 {
-    color: #f8fafc !important;
+body.vr-mode .text-gray-800,
+body.vr-mode .text-gray-700,
+body.vr-mode .text-slate-900,
+body.vr-mode .text-slate-800,
+body.vr-mode .text-slate-700,
+body.vr-mode h1,
+body.vr-mode h2,
+body.vr-mode h3,
+body.vr-mode h4,
+body.vr-mode h5,
+body.vr-mode h6 {
+    color: #ffffff !important;
 }
 
 body.vr-mode .text-gray-600,
-body.vr-mode .text-gray-500 {
-    color: #94a3b8 !important;
+body.vr-mode .text-gray-500,
+body.vr-mode .text-slate-600,
+body.vr-mode .text-slate-500,
+body.vr-mode .text-gray-400 {
+    color: #cbd5e1 !important;
+}
+
+/* VR Cyber Inputs & Forms */
+body.vr-mode input,
+body.vr-mode textarea,
+body.vr-mode select {
+    background-color: #0e0f16 !important;
+    color: #ffffff !important;
+    border-color: rgba(0, 240, 255, 0.25) !important;
+}
+body.vr-mode input::placeholder,
+body.vr-mode textarea::placeholder {
+    color: #64748b !important;
+}
+body.vr-mode input:focus,
+body.vr-mode textarea:focus,
+body.vr-mode select:focus {
+    border-color: #00f0ff !important;
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.25) !important;
 }
 
 body.vr-mode .btn-primary {
