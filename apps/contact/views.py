@@ -45,26 +45,57 @@ def contact_view(request):
         elif form.is_valid():
             submission = form.save()
 
-            # Send email notification
+            # Send email notification to Admin
             try:
-                subject = f"[VR Creation] Nouveau message : {submission.subject}"
-                body = (
-                    f"Nom : {submission.name}\n"
-                    f"Email : {submission.email}\n"
-                    f"Téléphone : {submission.phone}\n"
-                    f"Secteur : {submission.get_sector_display()}\n"
-                    f"Sujet : {submission.subject}\n\n"
-                    f"Message :\n{submission.message}\n"
+                admin_subject = f"[VR Creation] Nouveau message de contact : {submission.subject}"
+                admin_body = (
+                    f"Bonjour Admin,\n\n"
+                    f"Vous avez reçu une nouvelle demande de contact depuis le site web VR Creation :\n\n"
+                    f"• Nom / Prénom : {submission.name}\n"
+                    f"• Adresse Email : {submission.email}\n"
+                    f"• Téléphone : {submission.phone or 'Non renseigné'}\n"
+                    f"• Secteur d'activité : {submission.get_sector_display()}\n"
+                    f"• Sujet : {submission.subject}\n\n"
+                    f"Message :\n{submission.message}\n\n"
+                    f"---\nVR Creation Company — Système de notification automatique"
                 )
                 send_mail(
-                    subject,
-                    body,
+                    admin_subject,
+                    admin_body,
                     settings.DEFAULT_FROM_EMAIL,
                     [settings.CONTACT_EMAIL],
                     fail_silently=True,
                 )
             except Exception:
-                pass  # Email failure shouldn't block form submission
+                pass
+
+            # Send automatic confirmation email to Sender (User)
+            try:
+                user_subject = f"Confirmation de votre message — VR Creation Company"
+                user_body = (
+                    f"Bonjour {submission.name},\n\n"
+                    f"Merci d'avoir contacté VR Creation Company !\n\n"
+                    f"Nous avons bien reçu votre message concernant \"{submission.subject}\" et notre équipe l'étudie avec la plus grande attention.\n\n"
+                    f"Récapitulatif de votre demande :\n"
+                    f"----------------------------------------\n"
+                    f"Sujet : {submission.subject}\n"
+                    f"Secteur : {submission.get_sector_display()}\n"
+                    f"Message :\n{submission.message}\n"
+                    f"----------------------------------------\n\n"
+                    f"Un conseiller spécialisé vous recontactera par email ({submission.email}) ou téléphone sous 24h ouvrées.\n\n"
+                    f"Cordialement,\n"
+                    f"L'équipe VR Creation Company\n"
+                    f"https://vrcreation.pythonanywhere.com"
+                )
+                send_mail(
+                    user_subject,
+                    user_body,
+                    settings.DEFAULT_FROM_EMAIL,
+                    [submission.email],
+                    fail_silently=True,
+                )
+            except Exception:
+                pass
 
             # Clear captcha from session
             request.session.pop('captcha_num1', None)

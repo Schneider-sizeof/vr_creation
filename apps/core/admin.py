@@ -55,10 +55,13 @@ class TeamMemberAdmin(TranslationAdmin):
 
     def photo_preview(self, obj):
         if obj.photo:
-            return format_html(
-                '<img src="{}" style="width:40px;height:40px;object-fit:cover;border-radius:50%;">',
-                obj.photo.url
-            )
+            try:
+                return format_html(
+                    '<img src="{}" style="width:40px;height:40px;object-fit:cover;border-radius:50%;">',
+                    obj.photo.url
+                )
+            except Exception:
+                return '—'
         return '—'
     photo_preview.short_description = _('Photo')
 
@@ -89,9 +92,12 @@ class HeroSlideAdmin(TranslationAdmin):
 
     def image_preview(self, obj):
         if obj.image:
-            return format_html(
-                '<img src="{}" style="width:60px;height:40px;object-fit:cover;border-radius:4px;">',
-                obj.image.url
-            )
+            try:
+                return format_html(
+                    '<img src="{}" style="width:60px;height:40px;object-fit:cover;border-radius:4px;">',
+                    obj.image.url
+                )
+            except Exception:
+                return '—'
         return '—'
     image_preview.short_description = _('Aperçu')

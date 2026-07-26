@@ -6,7 +6,16 @@ from .base import *  # noqa: F401, F403
 
 DEBUG = False
 
-ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost,127.0.0.1,.pythonanywhere.com').split(',')
+ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost,127.0.0.1,.pythonanywhere.com,*').split(',')
+
+# CSRF Trusted Origins for HTTPS POST requests on PythonAnywhere and local
+CSRF_TRUSTED_ORIGINS = os.environ.get(
+    'CSRF_TRUSTED_ORIGINS',
+    'https://*.pythonanywhere.com,https://vrcreation.pythonanywhere.com,http://localhost:8000,http://127.0.0.1:8000'
+).split(',')
+
+# Ensure MEDIA_ROOT directory exists for user uploads
+os.makedirs(MEDIA_ROOT, exist_ok=True)
 
 # Email — use SMTP in production
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

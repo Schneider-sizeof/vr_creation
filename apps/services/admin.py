@@ -35,9 +35,12 @@ class ServiceAdmin(TranslationAdmin):
 
     def image_preview(self, obj):
         if obj.featured_image:
-            return format_html(
-                '<img src="{}" style="width:60px;height:40px;object-fit:cover;border-radius:4px;">',
-                obj.featured_image.url
-            )
+            try:
+                return format_html(
+                    '<img src="{}" style="width:60px;height:40px;object-fit:cover;border-radius:4px;">',
+                    obj.featured_image.url
+                )
+            except Exception:
+                return '—'
         return '—'
     image_preview.short_description = _('Aperçu')
