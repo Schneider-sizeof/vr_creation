@@ -7,8 +7,9 @@ from django.conf.urls.i18n import i18n_patterns
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.sitemaps.views import sitemap
-from django.urls import include, path
+from django.urls import include, path, re_path
 from django.views.generic import RedirectView
+from django.views.static import serve
 
 from apps.seo.sitemaps import VR_SITEMAPS
 from apps.seo.views import robots_txt
@@ -32,9 +33,11 @@ urlpatterns += i18n_patterns(
     prefix_default_language=True,
 )
 
-# Serve media files (user uploads) — always serve through Django
-# For PythonAnywhere, also add /media/ -> /home/vrcreation/vr_creation/media/ in Static files
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# Always serve media files (user uploads) — uses django.views.static.serve directly
+# because Django's static() helper silently returns [] when DEBUG=False
+urlpatterns += [
+    re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
+]
 
 # Serve static files in development
 if settings.DEBUG:
