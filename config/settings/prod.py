@@ -46,9 +46,7 @@ STORAGES = {
     },
 }
 
-# Enable compressor
-COMPRESS_ENABLED = True
-COMPRESS_OFFLINE = True
+
 
 # Logging
 LOGGING = {

@@ -11,7 +11,7 @@ from .models import Service, ServiceImage
 
 class ServiceImageInline(TranslationTabularInline):
     model = ServiceImage
-    extra = 1
+    extra = 0
     fields = ('image', 'alt_text', 'order')
 
 

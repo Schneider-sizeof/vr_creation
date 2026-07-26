@@ -36,7 +36,6 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
 
     # Third-party
-    'compressor',
 
     # Project apps
     'apps.core',
@@ -145,32 +144,6 @@ STATICFILES_DIRS = [
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'compressor.finders.CompressorFinder',
-]
-
-# WhiteNoise for serving static files in production
-STORAGES = {
-    "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-    },
-}
-
-# =============================================================================
-# Media files (user uploads)
-# =============================================================================
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
-
-# =============================================================================
-# Django Compressor
-# =============================================================================
-COMPRESS_ENABLED = not DEBUG
-COMPRESS_CSS_FILTERS = [
-    'compressor.filters.css_default.CssAbsoluteFilter',
-    'compressor.filters.cssmin.rCSSMinFilter',
-]
-COMPRESS_JS_FILTERS = [
-    'compressor.filters.jsmin.rJSMinFilter',
 ]
 
 # =============================================================================

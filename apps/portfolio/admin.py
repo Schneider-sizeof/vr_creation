@@ -18,7 +18,7 @@ class SectorAdmin(TranslationAdmin):
 
 class ProjectImageInline(TranslationTabularInline):
     model = ProjectImage
-    extra = 1
+    extra = 0
     fields = ('image', 'alt_text', 'is_360', 'order')
 
 
