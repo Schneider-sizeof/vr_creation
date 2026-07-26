@@ -20,9 +20,9 @@ class SiteSettingsAdmin(TranslationAdmin):
         (_('Coordonnées'), {
             'fields': ('email', 'phone', 'address', 'google_maps_embed_url')
         }),
-        (_('Images principales'), {
-            'fields': ('hero_image', 'about_image'),
-            'classes': ('collapse',),
+        (_('Images & Vidéo principales'), {
+            'fields': ('hero_image', 'hero_video', 'hero_video_poster', 'about_image'),
+            'description': 'La vidéo hero sera affichée en arrière-plan des bannières de toutes les pages (accueil, services, portfolio, blog, contact, etc.).',
         }),
         (_('Réseaux sociaux'), {
             'fields': ('social_facebook', 'social_instagram', 'social_linkedin',

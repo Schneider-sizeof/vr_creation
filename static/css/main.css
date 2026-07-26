@@ -772,6 +772,19 @@ body.vr-mode .rounded-2xl.aspect-\[4\/3\]:hover {
     box-shadow: 0 0 30px rgba(0, 240, 255, 0.15), 0 20px 40px rgba(0, 0, 0, 0.5) !important;
 }
 
+/* VR Mode — Video Hero Banner */
+body.vr-mode .relative.overflow-hidden.py-20 {
+    border-bottom: 1px solid rgba(0, 240, 255, 0.2) !important;
+}
+
+body.vr-mode .relative.overflow-hidden.py-20 h1 {
+    text-shadow: 0 0 30px rgba(0, 240, 255, 0.5), 0 0 60px rgba(0, 240, 255, 0.2), 0 2px 15px rgba(0, 0, 0, 0.8) !important;
+}
+
+body.vr-mode .relative.overflow-hidden.py-20 video {
+    filter: brightness(0.4) saturate(0.6) hue-rotate(180deg) !important;
+}
+
 /* VR Particles */
 #vr-particles-container {
     opacity: 0.8;

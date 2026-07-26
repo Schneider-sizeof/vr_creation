@@ -2,17 +2,9 @@
 {% load i18n static %}
 
 {% block content %}
-<!-- Page Header -->
-<div class="bg-gray-100 py-16">
-    <div class="container mx-auto px-4 text-center">
-        <h1 class="text-4xl font-bold text-dark mb-4">{% trans "À Propos de Nous" %}</h1>
-        <div class="flex items-center justify-center gap-2 text-sm text-gray-500">
-            <a href="{% url 'core:home' %}" class="hover:text-primary">{% trans "Accueil" %}</a>
-            <span>/</span>
-            <span class="text-primary font-medium">{% trans "À propos" %}</span>
-        </div>
-    </div>
-</div>
+{% trans "À Propos de Nous" as page_title %}
+{% trans "À propos" as page_breadcrumb %}
+{% include "partials/page_hero.html" with title=page_title breadcrumb_label=page_breadcrumb %}
 
 <!-- Intro Section -->
 <section class="section bg-white">

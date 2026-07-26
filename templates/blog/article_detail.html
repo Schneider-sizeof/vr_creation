@@ -2,16 +2,7 @@
 {% load i18n static %}
 
 {% block content %}
-<div class="bg-gray-100 py-16">
-    <div class="container mx-auto px-4 text-center max-w-4xl">
-        <span class="pill-badge mb-4">{{ article.category }}</span>
-        <h1 class="text-4xl lg:text-5xl font-bold text-dark mb-6">{{ article.title }}</h1>
-        <div class="flex items-center justify-center gap-6 text-sm text-gray-500">
-            <span class="flex items-center gap-2"><i class="far fa-calendar-alt"></i> {{ article.published_date|date:"d M Y" }}</span>
-            <span class="flex items-center gap-2"><i class="far fa-user"></i> {{ article.author|default:"VR Creation" }}</span>
-        </div>
-    </div>
-</div>
+{% include "partials/page_hero.html" with title=article.title breadcrumb_label=article.title %}
 
 <section class="section bg-white">
     <div class="container mx-auto px-4 max-w-4xl">

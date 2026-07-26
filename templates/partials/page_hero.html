@@ -1,0 +1,39 @@
+{% load i18n static %}
+{# Reusable page hero banner with optional video/3D background #}
+{# Usage: {% include "partials/page_hero.html" with title="..." breadcrumb_label="..." %} #}
+
+<div class="relative overflow-hidden py-20 md:py-24">
+    {# Video / 3D Background Layer #}
+    {% if site_settings.hero_video %}
+    <video 
+        class="absolute inset-0 w-full h-full object-cover z-0"
+        autoplay muted loop playsinline
+        {% if site_settings.hero_video_poster %}poster="{{ site_settings.hero_video_poster.url }}"{% endif %}
+    >
+        <source src="{{ site_settings.hero_video.url }}" type="video/mp4">
+    </video>
+    {% elif site_settings.hero_video_poster %}
+    <img src="{{ site_settings.hero_video_poster.url }}" alt="" class="absolute inset-0 w-full h-full object-cover z-0">
+    {% else %}
+    {# Fallback gradient when no video/poster is set #}
+    <div class="absolute inset-0 z-0" style="background: linear-gradient(135deg, #0a1628 0%, #132742 40%, #1a3a5c 70%, #0d2137 100%);"></div>
+    {% endif %}
+
+    {# Dark overlay for text readability #}
+    <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70 z-10"></div>
+
+    {# Subtle animated particles overlay #}
+    <div class="absolute inset-0 z-10 opacity-30" style="background-image: radial-gradient(circle, rgba(61,142,185,0.15) 1px, transparent 1px); background-size: 40px 40px;"></div>
+
+    {# Content #}
+    <div class="container mx-auto px-4 text-center relative z-20">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4" style="text-shadow: 0 2px 15px rgba(0,0,0,0.6), 0 0 30px rgba(0,0,0,0.3);">
+            {{ title }}
+        </h1>
+        <div class="flex items-center justify-center gap-2 text-sm">
+            <a href="{% url 'core:home' %}" class="text-white/70 hover:text-white transition-colors">{% trans "Accueil" %}</a>
+            <span class="text-white/40">/</span>
+            <span class="text-primary-light font-medium" style="color: #7ec8e3;">{{ breadcrumb_label }}</span>
+        </div>
+    </div>
+</div>

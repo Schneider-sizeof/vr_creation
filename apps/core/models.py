@@ -64,6 +64,16 @@ class SiteSettings(SingletonModel):
         _('Image hero accueil'), upload_to='site/', blank=True, null=True,
         help_text=_('Image de fond du hero de la page d\'accueil')
     )
+    hero_video = models.FileField(
+        _('Vidéo / 3D hero (toutes les pages)'), upload_to='site/hero/',
+        blank=True, null=True,
+        help_text=_('Vidéo de fond (MP4, WebM) ou fichier 3D affichée derrière les titres de toutes les pages. Recommandé : MP4, max 15 Mo, 1920x1080.')
+    )
+    hero_video_poster = models.ImageField(
+        _('Image poster vidéo hero'), upload_to='site/hero/',
+        blank=True, null=True,
+        help_text=_('Image affichée pendant le chargement de la vidéo hero (1920x600 recommandé)')
+    )
     about_image = models.ImageField(
         _('Image page À propos'), upload_to='site/', blank=True, null=True
     )

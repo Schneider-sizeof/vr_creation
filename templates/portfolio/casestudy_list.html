@@ -2,12 +2,9 @@
 {% load i18n %}
 
 {% block content %}
-<div class="bg-gray-100 py-16">
-    <div class="container mx-auto px-4 text-center">
-        <h1 class="text-4xl font-bold text-dark mb-4">{% trans "Études de Cas" %}</h1>
-        <p class="text-gray-600 max-w-2xl mx-auto">{% trans "Découvrez comment nos solutions de réalité virtuelle apportent une valeur mesurable à nos clients." %}</p>
-    </div>
-</div>
+{% trans "Études de Cas" as page_title %}
+{% trans "Études de cas" as page_breadcrumb %}
+{% include "partials/page_hero.html" with title=page_title breadcrumb_label=page_breadcrumb %}
 
 <section class="section bg-white">
     <div class="container mx-auto px-4">

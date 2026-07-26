@@ -2,11 +2,9 @@
 {% load i18n %}
 
 {% block content %}
-<div class="bg-gray-100 py-16">
-    <div class="container mx-auto px-4 text-center">
-        <h1 class="text-4xl font-bold text-dark">{% trans "Mentions Légales" %}</h1>
-    </div>
-</div>
+{% trans "Mentions Légales" as page_title %}
+{% trans "Mentions légales" as page_breadcrumb %}
+{% include "partials/page_hero.html" with title=page_title breadcrumb_label=page_breadcrumb %}
 
 <section class="section bg-white">
     <div class="container mx-auto px-4 max-w-4xl prose prose-lg text-gray-700">
