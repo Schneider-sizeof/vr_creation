@@ -748,6 +748,30 @@ body.vr-mode #vr-mode-toggle-btn {
     box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
 }
 
+/* VR Mode — Service Card Enhancements */
+body.vr-mode .rounded-2xl.aspect-\[4\/3\] h3 {
+    color: #ffffff !important;
+    text-shadow: 0 0 20px rgba(0, 240, 255, 0.6), 0 0 40px rgba(0, 240, 255, 0.3), 0 2px 8px rgba(0, 0, 0, 0.9) !important;
+}
+
+body.vr-mode .rounded-2xl.aspect-\[4\/3\] .bg-primary\/25 {
+    background: rgba(0, 240, 255, 0.2) !important;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.3) !important;
+}
+
+body.vr-mode .rounded-2xl.aspect-\[4\/3\] .text-primary-light {
+    color: #00f0ff !important;
+}
+
+body.vr-mode .rounded-2xl.aspect-\[4\/3\] {
+    border: 1px solid rgba(0, 240, 255, 0.15) !important;
+}
+
+body.vr-mode .rounded-2xl.aspect-\[4\/3\]:hover {
+    border-color: rgba(0, 240, 255, 0.4) !important;
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.15), 0 20px 40px rgba(0, 0, 0, 0.5) !important;
+}
+
 /* VR Particles */
 #vr-particles-container {
     opacity: 0.8;
