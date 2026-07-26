@@ -163,8 +163,8 @@
                 <img src="{{ service.featured_image.url }}" alt="{{ service.title }}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out z-0" onerror="this.style.display='none'">
                 {% endif %}
                 
-                <!-- Dark readability overlay — stronger gradient for text contrast -->
-                <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/30 group-hover:via-black/70 transition-all duration-500 z-10"></div>
+                <!-- Dark readability overlay — full coverage for text contrast -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/75 to-black/50 group-hover:via-black/80 transition-all duration-500 z-10"></div>
                 
                 <!-- Content -->
                 <div class="absolute inset-0 p-6 flex flex-col justify-end text-white z-20">
@@ -172,12 +172,12 @@
                         <span class="w-11 h-11 rounded-full bg-primary/25 backdrop-blur-md flex items-center justify-center text-primary-light text-lg shadow-lg shadow-primary/10 flex-shrink-0">
                             <i class="{{ service.icon|default:'fas fa-cube' }}"></i>
                         </span>
-                        <h3 class="text-xl font-extrabold tracking-tight leading-snug drop-shadow-lg" style="text-shadow: 0 2px 8px rgba(0,0,0,0.8), 0 1px 3px rgba(0,0,0,0.9);">{{ service.title }}</h3>
+                        <h3 class="text-xl font-extrabold tracking-tight leading-snug text-white" style="text-shadow: 0 2px 10px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.7);">{{ service.title }}</h3>
                     </div>
-                    <p class="text-gray-200 text-sm line-clamp-2 leading-relaxed" style="text-shadow: 0 1px 4px rgba(0,0,0,0.7);">
+                    <p class="text-white/90 text-sm line-clamp-2 leading-relaxed" style="text-shadow: 0 1px 6px rgba(0,0,0,0.8);">
                         {{ service.short_description }}
                     </p>
-                    <div class="mt-4 flex items-center text-primary-light font-semibold text-sm group-hover:text-white transition-colors">
+                    <div class="mt-4 flex items-center text-white font-semibold text-sm group-hover:text-primary-light transition-colors" style="text-shadow: 0 1px 4px rgba(0,0,0,0.6);">
                         {% trans "En savoir plus" %} <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
                     </div>
                 </div>
