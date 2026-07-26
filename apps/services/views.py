@@ -1,6 +1,7 @@
 """
 Services views.
 """
+from django.db.models import Q
 from django.shortcuts import render, get_object_or_404
 
 from .models import Service
@@ -24,7 +25,11 @@ def service_list(request):
 
 def service_detail(request, slug):
     """Detail view for a single service."""
-    service = get_object_or_404(Service, slug=slug, is_active=True)
+    service = get_object_or_404(
+        Service,
+        Q(slug_fr=slug) | Q(slug_en=slug) | Q(slug_ar=slug),
+        is_active=True
+    )
     gallery = service.gallery_images.all()
     other_services = Service.objects.filter(is_active=True).exclude(pk=service.pk)[:4]
 

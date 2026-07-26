@@ -1,6 +1,7 @@
 """
 Portfolio views — Projects, Case Studies, Virtual Tours.
 """
+from django.db.models import Q
 from django.shortcuts import render, get_object_or_404
 
 from .models import Sector, Project, CaseStudy
@@ -14,7 +15,11 @@ def project_list(request):
 
     projects = Project.objects.select_related('sector').all()
     if sector_slug:
-        projects = projects.filter(sector__slug=sector_slug)
+        projects = projects.filter(
+            Q(sector__slug_fr=sector_slug) |
+            Q(sector__slug_en=sector_slug) |
+            Q(sector__slug_ar=sector_slug)
+        )
 
     try:
         page_seo = PageSEO.objects.get(page_identifier='portfolio')
@@ -32,7 +37,10 @@ def project_list(request):
 
 def project_detail(request, slug):
     """Project detail with gallery and virtual tour."""
-    project = get_object_or_404(Project.objects.select_related('sector'), slug=slug)
+    project = get_object_or_404(
+        Project.objects.select_related('sector'),
+        Q(slug_fr=slug) | Q(slug_en=slug) | Q(slug_ar=slug)
+    )
     gallery = project.gallery_images.all()
     related_projects = Project.objects.filter(
         sector=project.sector
@@ -65,7 +73,8 @@ def casestudy_list(request):
 def casestudy_detail(request, slug):
     """Case study detail — Problem / Importance / Result / Efficiency."""
     case_study = get_object_or_404(
-        CaseStudy.objects.select_related('sector', 'project'), slug=slug
+        CaseStudy.objects.select_related('sector', 'project'),
+        Q(slug_fr=slug) | Q(slug_en=slug) | Q(slug_ar=slug)
     )
     other_studies = CaseStudy.objects.exclude(pk=case_study.pk)[:3]
 

@@ -1,6 +1,7 @@
 """
 Blog views.
 """
+from django.db.models import Q
 from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
 
@@ -19,7 +20,11 @@ def article_list(request):
     ).select_related('category')
 
     if category_slug:
-        articles = articles.filter(category__slug=category_slug)
+        articles = articles.filter(
+            Q(category__slug_fr=category_slug) |
+            Q(category__slug_en=category_slug) |
+            Q(category__slug_ar=category_slug)
+        )
 
     try:
         page_seo = PageSEO.objects.get(page_identifier='blog')
@@ -39,7 +44,7 @@ def article_detail(request, slug):
     """Article detail view."""
     article = get_object_or_404(
         Article.objects.select_related('category'),
-        slug=slug,
+        Q(slug_fr=slug) | Q(slug_en=slug) | Q(slug_ar=slug),
         is_published=True,
         published_date__lte=timezone.now()
     )
