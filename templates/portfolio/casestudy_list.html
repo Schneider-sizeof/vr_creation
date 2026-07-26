@@ -17,7 +17,7 @@
                 <div class="grid md:grid-cols-2 h-full">
                     <div class="relative h-64 md:h-auto">
                         {% if case.featured_image %}
-                        <img src="{{ case.featured_image.url }}" alt="{{ case.title }}" class="absolute inset-0 w-full h-full object-cover">
+                        <img src="{{ case.featured_image.url }}" alt="{{ case.title }}" class="absolute inset-0 w-full h-full object-cover" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1542361345-89ce583cded4?w=600&q=80';">
                         {% else %}
                         <img src="https://images.unsplash.com/photo-1542361345-89ce583cded4?w=600&q=80" alt="{{ case.title }}" class="absolute inset-0 w-full h-full object-cover">
                         {% endif %}
