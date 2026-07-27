@@ -652,8 +652,13 @@ body.vr-mode {
 body.vr-mode .bg-white, 
 body.vr-mode .bg-gray-50, 
 body.vr-mode .bg-gray-100,
-body.vr-mode .bg-gray-200 {
+body.vr-mode .bg-gray-200,
+body.vr-mode .bg-primary-light {
     background-color: #06070a !important;
+}
+
+body.vr-mode .bg-primary-light\/50 {
+    background-color: rgba(6, 7, 10, 0.5) !important;
 }
 
 /* Light Borders & Dividers -> Neon Cyan Borders */
@@ -665,14 +670,16 @@ body.vr-mode .border-r,
 body.vr-mode .border-gray-100,
 body.vr-mode .border-gray-200,
 body.vr-mode .border-gray-300,
-body.vr-mode .border-gray-400 {
+body.vr-mode .border-gray-400,
+body.vr-mode .border-primary-light {
     border-color: rgba(0, 240, 255, 0.15) !important;
 }
 
 /* Light Hovers -> Glowing Cyan Hovers */
 body.vr-mode .hover\:bg-gray-50:hover,
 body.vr-mode .hover\:bg-gray-100:hover,
-body.vr-mode .hover\:bg-gray-200:hover {
+body.vr-mode .hover\:bg-gray-200:hover,
+body.vr-mode .hover\:bg-primary-light:hover {
     background-color: rgba(0, 240, 255, 0.12) !important;
 }
 
@@ -722,7 +729,7 @@ body.vr-mode select {
 }
 body.vr-mode input::placeholder,
 body.vr-mode textarea::placeholder {
-    color: #64748b !important;
+    color: #94a3b8 !important;
 }
 body.vr-mode input:focus,
 body.vr-mode textarea:focus,
