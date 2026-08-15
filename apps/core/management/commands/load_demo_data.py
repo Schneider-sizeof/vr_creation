@@ -58,6 +58,15 @@ class Command(BaseCommand):
         settings.social_whatsapp = '+33612345678'
         settings.social_tiktok = 'https://tiktok.com/@vrcreation'
         settings.social_behance = 'https://behance.net/vrcreation'
+        
+        # Hero translations
+        settings.hero_headline_fr = "DONNEZ VIE À VOTRE PROJET IMMOBILIER, AVANT MÊME SA CONSTRUCTION."
+        settings.hero_headline_en = "BRING YOUR REAL ESTATE PROJECT TO LIFE, EVEN BEFORE ITS CONSTRUCTION."
+        settings.hero_headline_ar = "امنح الحياة لمشروعك العقاري، حتى قبل بنائه."
+        settings.hero_subheadline_fr = "De la conception 3D à la commercialisation digitale, nous transformons vos projets immobiliers en expériences visuelles capables de séduire, convaincre et générer des prospects."
+        settings.hero_subheadline_en = "From 3D design to digital marketing, we transform your real estate projects into visual experiences capable of seducing, convincing and generating leads."
+        settings.hero_subheadline_ar = "من التصميم ثلاثي الأبعاد إلى التسويق الرقمي، نحول مشاريعكم العقارية إلى تجارب بصرية قادرة على جذب وإقناع وجلب العملاء المحتملين."
+        
         settings.save()
         self.stdout.write('  [+] Paramètres du site')
 

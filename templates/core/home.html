@@ -32,10 +32,10 @@
     <div class="container mx-auto px-4 relative z-20 py-24 md:py-32">
         <div class="max-w-3xl">
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight uppercase tracking-tight animate-fade-in-up" style="text-shadow: 0 2px 20px rgba(0,0,0,0.5);">
-                {{ site_settings.hero_headline|default:"DONNEZ VIE À VOTRE PROJET IMMOBILIER, AVANT MÊME SA CONSTRUCTION." }}
+                {% if site_settings.hero_headline %}{{ site_settings.hero_headline }}{% else %}{% trans "DONNEZ VIE À VOTRE PROJET IMMOBILIER, AVANT MÊME SA CONSTRUCTION." %}{% endif %}
             </h1>
             <p class="text-lg md:text-xl text-white/80 mb-10 font-light max-w-2xl leading-relaxed animate-fade-in-up" style="animation-delay: 0.2s; text-shadow: 0 1px 8px rgba(0,0,0,0.4);">
-                {{ site_settings.hero_subheadline|default:"De la conception 3D à la commercialisation digitale, nous transformons vos projets immobiliers en expériences visuelles capables de séduire, convaincre et générer des prospects." }}
+                {% if site_settings.hero_subheadline %}{{ site_settings.hero_subheadline }}{% else %}{% trans "De la conception 3D à la commercialisation digitale, nous transformons vos projets immobiliers en expériences visuelles capables de séduire, convaincre et générer des prospects." %}{% endif %}
             </p>
             <div class="flex flex-wrap gap-4 animate-fade-in-up" style="animation-delay: 0.4s;">
                 {% if site_settings.hero_cta1_label %}

@@ -1411,3 +1411,9 @@ msgstr "de designers, architectes, décorateurs, développeurs et chefs de proje
 
 msgid "incarne l’alliance entre esthétique et technologie. Notre spécialité est de créer des visuels haut de gamme qui valorisent vos projets et reflètent votre niveau d’excellence."
 msgstr "incarne l’alliance entre esthétique et technologie. Notre spécialité est de créer des visuels haut de gamme qui valorisent vos projets et reflètent votre niveau d’excellence."
+
+msgid "DONNEZ VIE À VOTRE PROJET IMMOBILIER, AVANT MÊME SA CONSTRUCTION."
+msgstr "DONNEZ VIE À VOTRE PROJET IMMOBILIER, AVANT MÊME SA CONSTRUCTION."
+
+msgid "De la conception 3D à la commercialisation digitale, nous transformons vos projets immobiliers en expériences visuelles capables de séduire, convaincre et générer des prospects."
+msgstr "De la conception 3D à la commercialisation digitale, nous transformons vos projets immobiliers en expériences visuelles capables de séduire, convaincre et générer des prospects."

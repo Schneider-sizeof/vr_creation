@@ -1441,3 +1441,9 @@ msgstr "إنشاء صور عالية الدقة والتعديلات النها�
 
 msgid "Aucun exemple disponible pour le moment."
 msgstr "لا توجد أمثلة متاحة حالياً."
+
+msgid "DONNEZ VIE À VOTRE PROJET IMMOBILIER, AVANT MÊME SA CONSTRUCTION."
+msgstr "امنح الحياة لمشروعك العقاري، حتى قبل بنائه."
+
+msgid "De la conception 3D à la commercialisation digitale, nous transformons vos projets immobiliers en expériences visuelles capables de séduire, convaincre et générer des prospects."
+msgstr "من التصميم ثلاثي الأبعاد إلى التسويق الرقمي، نحول مشاريعكم العقارية إلى تجارب بصرية قادرة على جذب وإقناع وجلب العملاء المحتملين."

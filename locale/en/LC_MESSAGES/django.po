@@ -1441,3 +1441,9 @@ msgstr "Generation of high-resolution images and final retouching."
 
 msgid "Aucun exemple disponible pour le moment."
 msgstr "No examples available at the moment."
+
+msgid "DONNEZ VIE À VOTRE PROJET IMMOBILIER, AVANT MÊME SA CONSTRUCTION."
+msgstr "BRING YOUR REAL ESTATE PROJECT TO LIFE, EVEN BEFORE ITS CONSTRUCTION."
+
+msgid "De la conception 3D à la commercialisation digitale, nous transformons vos projets immobiliers en expériences visuelles capables de séduire, convaincre et générer des prospects."
+msgstr "From 3D design to digital marketing, we transform your real estate projects into visual experiences capable of seducing, convincing and generating leads."
