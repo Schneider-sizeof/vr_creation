@@ -8,10 +8,10 @@
     <div class="container mx-auto px-4 max-w-4xl">
         
         <div class="mb-12">
-            {% if casestudy.featured_image %}
-            <img src="{{ casestudy.featured_image.url }}" alt="{{ casestudy.title }}" class="w-full rounded-2xl shadow-md">
+            {% if case_study.featured_image %}
+            <img src="{{ case_study.featured_image.url }}" alt="{{ case_study.title }}" class="w-full rounded-2xl shadow-md">
             {% else %}
-            <img src="https://images.unsplash.com/photo-1542361345-89ce583cded4?w=1200&q=80" alt="{{ casestudy.title }}" class="w-full rounded-2xl shadow-md">
+            <img src="https://images.unsplash.com/photo-1542361345-89ce583cded4?w=1200&q=80" alt="{{ case_study.title }}" class="w-full rounded-2xl shadow-md">
             {% endif %}
         </div>
         
@@ -23,7 +23,7 @@
                     {% trans "Le Problème" %}
                 </h2>
                 <div class="prose max-w-none text-gray-700">
-                    <p>{{ casestudy.problem }}</p>
+                    <p>{{ case_study.problem }}</p>
                 </div>
             </div>
             
@@ -34,7 +34,7 @@
                     {% trans "Importance du Service" %}
                 </h2>
                 <div class="prose max-w-none text-gray-700">
-                    <p>{{ casestudy.service_importance }}</p>
+                    <p>{{ case_study.service_importance }}</p>
                 </div>
             </div>
             
@@ -46,7 +46,7 @@
                         {% trans "Efficacité" %}
                     </h2>
                     <div class="text-gray-700">
-                        <p>{{ casestudy.efficiency }}</p>
+                        <p>{{ case_study.efficiency }}</p>
                     </div>
                 </div>
                 
@@ -56,14 +56,14 @@
                         {% trans "Résultat" %}
                     </h2>
                     <div class="text-gray-700">
-                        <p>{{ casestudy.result }}</p>
+                        <p>{{ case_study.result }}</p>
                     </div>
                 </div>
             </div>
             
-            {% if casestudy.project %}
+            {% if case_study.project %}
             <div class="text-center mt-12">
-                <a href="{% url 'portfolio:project_detail' casestudy.project.slug %}" class="btn btn-primary">
+                <a href="{% url 'portfolio:project_detail' case_study.project.slug %}" class="btn btn-primary">
                     {% trans "Voir le projet détaillé" %}
                 </a>
             </div>

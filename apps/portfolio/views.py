@@ -80,6 +80,7 @@ def casestudy_detail(request, slug):
 
     return render(request, 'portfolio/casestudy_detail.html', {
         'case_study': case_study,
+        'casestudy': case_study, # backward compatibility
         'other_studies': other_studies,
         'page_identifier': 'casestudy_detail',
     })
