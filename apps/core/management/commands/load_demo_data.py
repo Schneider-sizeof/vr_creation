@@ -67,6 +67,16 @@ class Command(BaseCommand):
         settings.hero_subheadline_en = "From 3D design to digital marketing, we transform your real estate projects into visual experiences capable of seducing, convincing and generating leads."
         settings.hero_subheadline_ar = "من التصميم ثلاثي الأبعاد إلى التسويق الرقمي، نحول مشاريعكم العقارية إلى تجارب بصرية قادرة على جذب وإقناع وجلب العملاء المحتملين."
         
+        # Hero CTA button translations
+        settings.hero_cta1_label_fr = "Nous contacter"
+        settings.hero_cta1_label_en = "Contact Us"
+        settings.hero_cta1_label_ar = "تواصل معنا"
+        settings.hero_cta1_link = "/contact/"
+        settings.hero_cta2_label_fr = "Découvrir nos solutions"
+        settings.hero_cta2_label_en = "Discover Our Solutions"
+        settings.hero_cta2_label_ar = "اكتشف حلولنا"
+        settings.hero_cta2_link = "#services"
+        
         settings.save()
         self.stdout.write('  [+] Paramètres du site')
 
