@@ -823,9 +823,11 @@ body.vr-mode .relative.overflow-hidden.py-20 video {
     }
 }
 
-/* VR Mode Custom Section Overrides */
+/* ============================================
+   VR MODE SECTION OVERRIDES
+   ============================================ */
 body.vr-mode .section-light {
-    background-color: #08090d !important;
+    background-color: #050608 !important;
     background-image: 
         linear-gradient(135deg, rgba(0, 240, 255, 0.025) 25%, transparent 25%),
         linear-gradient(225deg, rgba(0, 240, 255, 0.025) 25%, transparent 25%) !important;
@@ -835,9 +837,200 @@ body.vr-mode .section-tint {
     background-color: rgba(0, 240, 255, 0.04) !important;
 }
 
+body.vr-mode .section-tint::before {
+    background: radial-gradient(circle, rgba(0, 240, 255, 0.08) 0%, transparent 70%) !important;
+}
+
+body.vr-mode .section-wave {
+    background-color: #06070a !important;
+}
+
 body.vr-mode .section-gradient {
     background: linear-gradient(135deg, #030406 0%, rgba(0, 240, 255, 0.06) 50%, rgba(255, 0, 127, 0.06) 100%, #030406 100%) !important;
     background-size: 300% 300% !important;
+}
+
+/* VR Mode — General bg-white sections */
+body.vr-mode section.bg-white,
+body.vr-mode .section.bg-white {
+    background-color: #06070a !important;
+}
+
+/* Hero bottom fade — light mode default */
+.hero-bottom-fade {
+    background: linear-gradient(to top, #ffffff, transparent);
+}
+
+/* VR Mode — Hero bottom fade override */
+body.vr-mode .hero-bottom-fade {
+    background: linear-gradient(to top, #030406, transparent) !important;
+}
+
+/* VR Mode — Cards & White boxes */
+body.vr-mode .card,
+body.vr-mode .bg-white.rounded-xl,
+body.vr-mode .bg-white.rounded-2xl,
+body.vr-mode .bg-white.p-6,
+body.vr-mode .bg-white.p-8,
+body.vr-mode .bg-white.p-12,
+body.vr-mode [class*="bg-white"] {
+    background-color: #0d0f1a !important;
+    border-color: rgba(0, 240, 255, 0.12) !important;
+    color: #cbd5e1 !important;
+}
+
+/* VR Mode — Strategic success cards */
+body.vr-mode .group.relative.rounded-2xl.bg-white {
+    background-color: #0d0f1a !important;
+    border: 1px solid rgba(0, 240, 255, 0.12) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+body.vr-mode .group.relative.rounded-2xl.bg-white h3 {
+    color: #ffffff !important;
+}
+
+body.vr-mode .group.relative.rounded-2xl.bg-white p {
+    color: #94a3b8 !important;
+}
+
+body.vr-mode .group.relative.rounded-2xl.bg-white:hover {
+    border-color: rgba(0, 240, 255, 0.3) !important;
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.1), 0 8px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* VR Mode — Timeline cards */
+body.vr-mode .bg-white.p-6.rounded-xl,
+body.vr-mode .bg-white.p-6.rounded-2xl {
+    background-color: #0d0f1a !important;
+    border-left-color: #00f0ff !important;
+    color: #cbd5e1 !important;
+}
+
+body.vr-mode .bg-white.p-6.rounded-xl h4,
+body.vr-mode .bg-white.p-6.rounded-2xl h4 {
+    color: #ffffff !important;
+}
+
+/* VR Mode — Process step boxes (w-20 h-20) */
+body.vr-mode .w-20.h-20.rounded-2xl.bg-white {
+    background-color: #0d0f1a !important;
+    border-color: rgba(0, 240, 255, 0.15) !important;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.08) !important;
+}
+
+/* VR Mode — Pill badges */
+body.vr-mode .pill-badge {
+    background: linear-gradient(135deg, rgba(0, 240, 255, 0.08), rgba(0, 240, 255, 0.15)) !important;
+    color: #00f0ff !important;
+    border-color: rgba(0, 240, 255, 0.2) !important;
+}
+
+/* VR Mode — Section separator line */
+body.vr-mode .w-16.h-1.bg-primary,
+body.vr-mode .w-20.h-1.bg-primary {
+    background: linear-gradient(90deg, #00f0ff, #ff007f) !important;
+}
+
+/* VR Mode — Gray paragraph text */
+body.vr-mode .text-gray-600,
+body.vr-mode .text-gray-500,
+body.vr-mode .text-gray-700 {
+    color: #94a3b8 !important;
+}
+
+body.vr-mode .text-gray-300,
+body.vr-mode .text-gray-400 {
+    color: #64748b !important;
+}
+
+body.vr-mode footer .text-gray-300,
+body.vr-mode footer .text-gray-400,
+body.vr-mode .bg-slate-900 .text-gray-300,
+body.vr-mode .bg-slate-950 .text-gray-300,
+body.vr-mode .bg-slate-900 .text-gray-400,
+body.vr-mode .bg-slate-950 .text-gray-400,
+body.vr-mode .bg-gradient-to-br .text-gray-300,
+body.vr-mode .bg-gradient-to-br .text-gray-400,
+body.vr-mode .cta-section .text-gray-300,
+body.vr-mode .cta-section .text-gray-400 {
+    color: #cbd5e1 !important;
+}
+
+/* VR Mode — CTA dark card (it's already dark, just enhance) */
+body.vr-mode .rounded-\[32px\] {
+    border-color: rgba(0, 240, 255, 0.2) !important;
+    box-shadow: 0 0 60px rgba(0, 240, 255, 0.1) !important;
+}
+
+/* VR Mode — About blockquote card */
+body.vr-mode .bg-gradient-to-br.from-primary.to-primary-dark {
+    background: linear-gradient(135deg, rgba(0, 240, 255, 0.12), rgba(0, 216, 255, 0.08)) !important;
+    border: 1px solid rgba(0, 240, 255, 0.25) !important;
+    box-shadow: 0 0 40px rgba(0, 240, 255, 0.12) !important;
+}
+
+body.vr-mode .bg-gradient-to-br.from-primary.to-primary-dark blockquote {
+    color: #e2f6ff !important;
+    text-shadow: 0 0 20px rgba(0, 240, 255, 0.3) !important;
+}
+
+/* VR Mode — Dividers & horizontal rules */
+body.vr-mode .h-px,
+body.vr-mode .h-0\.5 {
+    background-color: rgba(0, 240, 255, 0.15) !important;
+}
+
+/* VR Mode — Nav links on white header */
+body.vr-mode .main-header {
+    background-color: rgba(3, 4, 6, 0.92) !important;
+    border-bottom: 1px solid rgba(0, 240, 255, 0.1) !important;
+}
+
+body.vr-mode .nav-link {
+    color: #cbd5e1 !important;
+}
+
+body.vr-mode .nav-link:hover,
+body.vr-mode .nav-link.active {
+    color: #00f0ff !important;
+}
+
+body.vr-mode .nav-link::after {
+    background: linear-gradient(90deg, #00f0ff, #ff007f) !important;
+}
+
+/* VR Mode — Back to Top button */
+body.vr-mode #back-to-top-btn {
+    background-color: #0d0f1a !important;
+    color: #00f0ff !important;
+    border: 1px solid rgba(0, 240, 255, 0.2) !important;
+}
+
+body.vr-mode #back-to-top-btn:hover {
+    background-color: rgba(0, 240, 255, 0.15) !important;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.3) !important;
+}
+
+/* VR Mode — section-title underline */
+body.vr-mode .section-title::after {
+    background: linear-gradient(90deg, #00f0ff, #ff007f) !important;
+}
+
+/* VR Mode — Footer stays dark, just enhance accent */
+body.vr-mode .main-footer {
+    background: linear-gradient(135deg, #06070a 0%, #0a0c12 50%, #060810 100%) !important;
+    border-top: 1px solid rgba(0, 240, 255, 0.1) !important;
+}
+
+body.vr-mode .main-footer a:hover {
+    color: #00f0ff !important;
+}
+
+/* VR Mode — Card border-left accent */
+body.vr-mode .card {
+    border-left-color: #00f0ff !important;
+    background: rgba(13, 15, 26, 0.9) !important;
 }
 
 /* Bulletproof VR Mode Global Text Color Overrides */
@@ -950,3 +1143,286 @@ body.vr-mode::before {
 .hero-slide.active img {
     transform: scale(1.08);
 }
+
+/* ============================================
+   VR MODE — HEADER LOGO & MOBILE MENU
+   ============================================ */
+
+/* VR Mode — Logo text */
+body.vr-mode .text-dark.font-sans.tracking-tight {
+    color: #ffffff !important;
+}
+
+/* VR Mode — Mobile menu background */
+body.vr-mode #mobile-menu {
+    background-color: #06070a !important;
+    border-top-color: rgba(0, 240, 255, 0.1) !important;
+}
+
+body.vr-mode #mobile-menu a,
+body.vr-mode #mobile-menu button {
+    color: #cbd5e1 !important;
+}
+
+body.vr-mode #mobile-menu a:hover,
+body.vr-mode #mobile-menu button:hover {
+    background-color: rgba(0, 240, 255, 0.06) !important;
+    color: #00f0ff !important;
+}
+
+/* VR Mode — Language dropdown */
+body.vr-mode .group .absolute.bg-white.rounded-xl {
+    background-color: #0d0f1a !important;
+    border-color: rgba(0, 240, 255, 0.12) !important;
+}
+
+body.vr-mode .group .absolute.bg-white.rounded-xl button {
+    color: #cbd5e1 !important;
+}
+
+body.vr-mode .group .absolute.bg-white.rounded-xl button:hover {
+    background-color: rgba(0, 240, 255, 0.08) !important;
+    color: #00f0ff !important;
+}
+
+/* VR Mode — VR Toggle button */
+body.vr-mode #vr-mode-toggle-btn {
+    background-color: rgba(0, 240, 255, 0.08) !important;
+    color: #00f0ff !important;
+    border: 1px solid rgba(0, 240, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.15);
+}
+
+/* ============================================
+   LIGHT MODE — IMPROVED CONSISTENCY
+   ============================================ */
+
+/* Ensure text colors are consistent on light bg */
+.section-light p,
+.section-tint p,
+section.bg-white p {
+    color: var(--gray-500);
+}
+
+.section-light h2,
+.section-light h3,
+.section-tint h2,
+.section-tint h3 {
+    color: var(--dark);
+}
+
+/* Strategic success card image placeholder */
+.strategic-success-placeholder {
+    background: linear-gradient(135deg, var(--gray-200), var(--primary-light));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-400);
+    width: 100%;
+    height: 100%;
+    min-height: 160px;
+}
+
+/* Services grid — uniform card height */
+#services .grid > a {
+    min-height: 220px;
+}
+
+/* Improved focus visible outline — more visible across themes */
+:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* VR Mode — ensure blockquote inside about isn't forced to #cbd5e1 */
+body.vr-mode .bg-gradient-to-br.from-primary.to-primary-dark blockquote,
+body.vr-mode .bg-gradient-to-br.from-primary.to-primary-dark blockquote * {
+    color: #e2f6ff !important;
+}
+
+/* VR Mode — fix pill badge text-dark class override */
+body.vr-mode .pill-badge,
+body.vr-mode .pill-badge span,
+body.vr-mode .pill-badge * {
+    color: #00f0ff !important;
+}
+
+/* Responsive: stack process steps on tablet */
+@media (max-width: 1024px) {
+    .grid.grid-cols-1.lg\:grid-cols-5 {
+        gap: 2rem;
+    }
+}
+
+/* ============================================
+   VR MODE — PORTFOLIO, CONTACT & MISC
+   ============================================ */
+
+/* VR Mode — Body background override (Tailwind bg-white on body) */
+body.vr-mode,
+body.vr-mode.bg-white {
+    background-color: #030406 !important;
+}
+
+/* VR Mode — Ensure main content area and all containers have dark bg */
+body.vr-mode #main-content {
+    background-color: #030406 !important;
+}
+
+/* VR Mode — Hero section itself (prevent white body bleed-through) */
+body.vr-mode .min-h-\[90vh\] {
+    background-color: #030406 !important;
+}
+
+/* VR Mode — Portfolio project cards */
+body.vr-mode .group.block.bg-white.rounded-xl {
+    background-color: #0d0f1a !important;
+    border-color: rgba(0, 240, 255, 0.12) !important;
+}
+
+body.vr-mode .group.block.bg-white.rounded-xl .p-6 {
+    border-left-color: #00f0ff !important;
+}
+
+body.vr-mode .group.block.bg-white.rounded-xl h3 {
+    color: #ffffff !important;
+}
+
+/* VR Mode — Contact form card */
+body.vr-mode .bg-white.p-8.rounded-xl.shadow-md {
+    background-color: #0d0f1a !important;
+    border-color: rgba(0, 240, 255, 0.12) !important;
+}
+
+/* VR Mode — Gray borders */
+body.vr-mode .border-gray-100,
+body.vr-mode .border-gray-200,
+body.vr-mode .border-gray-300 {
+    border-color: rgba(0, 240, 255, 0.1) !important;
+}
+
+/* VR Mode — Cookie banner */
+body.vr-mode .cookie-banner .bg-white\/95 {
+    background-color: rgba(6, 7, 10, 0.95) !important;
+    border-color: rgba(0, 240, 255, 0.15) !important;
+}
+
+/* VR Mode — btn-outline in normal context */
+body.vr-mode .btn-outline {
+    color: #00f0ff !important;
+    border-color: #00f0ff !important;
+}
+
+body.vr-mode .btn-outline:hover {
+    background-color: rgba(0, 240, 255, 0.15) !important;
+    color: #ffffff !important;
+}
+
+/* VR Mode — case study icons (white bg circles) */
+body.vr-mode .rounded-full.bg-white {
+    background-color: #0d0f1a !important;
+    border: 1px solid rgba(0, 240, 255, 0.15) !important;
+}
+
+/* VR Mode — section-dark gradient override for stronger neon feel */
+body.vr-mode .section-dark {
+    background: linear-gradient(135deg, #030406 0%, #06070a 50%, rgba(0, 240, 255, 0.04) 80%, #030406 100%) !important;
+}
+
+/* VR Mode — promotion page badge/label enhancements */
+body.vr-mode .bg-primary-light,
+body.vr-mode .bg-primary-light\/50 {
+    background-color: rgba(0, 240, 255, 0.06) !important;
+}
+
+/* VR Mode — Text rendering improvement */
+body.vr-mode {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   PROMOTIONS BUTTON — 3D MOVING ANIMATION
+   ============================================ */
+@keyframes float-glowing-3d {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+        box-shadow: 0 4px 12px rgba(61, 142, 185, 0.2), 0 0 0 1px rgba(61, 142, 185, 0.1);
+    }
+    50% {
+        transform: translateY(-4px) scale(1.04);
+        box-shadow: 0 12px 24px rgba(61, 142, 185, 0.45), 0 0 15px rgba(61, 142, 185, 0.3);
+    }
+}
+
+@keyframes float-glowing-3d-vr {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+        box-shadow: 0 4px 15px rgba(0, 240, 255, 0.4), 0 0 8px rgba(255, 0, 127, 0.3);
+    }
+    50% {
+        transform: translateY(-4px) scale(1.04);
+        box-shadow: 0 12px 28px rgba(0, 240, 255, 0.7), 0 0 20px rgba(255, 0, 127, 0.6);
+    }
+}
+
+.nav-promo-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1.25rem !important;
+    font-weight: 600 !important;
+    font-size: 0.85rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--primary) !important;
+    background: rgba(61, 142, 185, 0.06) !important;
+    border-radius: var(--radius-full) !important;
+    border: 1px solid rgba(61, 142, 185, 0.15) !important;
+    transition: all 0.25s ease !important;
+}
+
+.nav-promo-btn:hover {
+    color: var(--white) !important;
+    background: var(--primary) !important;
+    border-color: var(--primary) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(61, 142, 185, 0.15) !important;
+}
+
+/* Mobile promotions link */
+.nav-promo-btn-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary) !important;
+    background: rgba(61, 142, 185, 0.06) !important;
+    border: 1px solid rgba(61, 142, 185, 0.15) !important;
+    transition: all 0.25s ease !important;
+}
+
+.nav-promo-btn-mobile:hover {
+    color: var(--white) !important;
+    background: var(--primary) !important;
+}
+
+/* VR Mode Overrides for Promotions Button */
+body.vr-mode .nav-promo-btn {
+    background: rgba(255, 0, 127, 0.06) !important;
+    border-color: rgba(0, 240, 255, 0.3) !important;
+    color: #00f0ff !important;
+}
+
+body.vr-mode .nav-promo-btn:hover {
+    background: linear-gradient(135deg, #ff007f, #00f0ff) !important;
+    border-color: transparent !important;
+    color: var(--dark) !important;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.4) !important;
+}
+
+body.vr-mode .nav-promo-btn-mobile {
+    background: rgba(255, 0, 127, 0.06) !important;
+    border-color: rgba(0, 240, 255, 0.3) !important;
+    color: #00f0ff !important;
+}
+

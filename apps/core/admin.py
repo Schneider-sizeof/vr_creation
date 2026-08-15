@@ -4,9 +4,12 @@ Admin configuration for Core app.
 from django.contrib import admin
 from django.utils.html import format_html
 from django.utils.translation import gettext_lazy as _
-from modeltranslation.admin import TranslationAdmin
+from modeltranslation.admin import TranslationAdmin, TranslationTabularInline
 
-from .models import SiteSettings, TeamMember, Value, Strength, ProcessStep, HeroSlide
+from .models import (
+    SiteSettings, TeamMember, Value, Strength, ProcessStep, HeroSlide, StrategicSuccess,
+    Promotion, PromotionDeliverable, PromotionComparison, PromotionStep
+)
 
 
 @admin.register(SiteSettings)
@@ -20,9 +23,14 @@ class SiteSettingsAdmin(TranslationAdmin):
         (_('Coordonnées'), {
             'fields': ('email', 'phone', 'address', 'google_maps_embed_url')
         }),
-        (_('Images & Vidéo principales'), {
-            'fields': ('hero_image', 'hero_video', 'hero_video_poster', 'about_image'),
-            'description': 'La vidéo hero sera affichée en arrière-plan des bannières de toutes les pages (accueil, services, portfolio, blog, contact, etc.).',
+        (_('Hero page d’accueil'), {
+            'fields': ('hero_video', 'hero_video_poster', 'hero_headline',
+                       'hero_subheadline', 'hero_cta1_label', 'hero_cta1_link',
+                       'hero_cta2_label', 'hero_cta2_link'),
+            'description': 'Contenu du hero de la page d’accueil : vidéo de fond, titre, sous-titre et boutons d’action.',
+        }),
+        (_('Images principales'), {
+            'fields': ('hero_image', 'about_image'),
         }),
         (_('Réseaux sociaux'), {
             'fields': ('social_facebook', 'social_instagram', 'social_linkedin',
@@ -101,3 +109,71 @@ class HeroSlideAdmin(TranslationAdmin):
                 return '—'
         return '—'
     image_preview.short_description = _('Aperçu')
+
+
+@admin.register(StrategicSuccess)
+class StrategicSuccessAdmin(TranslationAdmin):
+    list_display = ('title', 'importance', 'image_preview', 'order', 'is_active')
+    list_editable = ('order', 'is_active')
+    search_fields = ('title', 'importance')
+
+    def image_preview(self, obj):
+        if obj.image:
+            try:
+                return format_html(
+                    '<img src="{}" style="width:60px;height:40px;object-fit:cover;border-radius:4px;">',
+                    obj.image.url
+                )
+            except Exception:
+                return '—'
+        return '—'
+    image_preview.short_description = _('Aperçu')
+
+
+class PromotionDeliverableInline(TranslationTabularInline):
+    model = PromotionDeliverable
+    extra = 1
+    classes = ('collapse',)
+
+
+class PromotionComparisonInline(TranslationTabularInline):
+    model = PromotionComparison
+    extra = 1
+    classes = ('collapse',)
+
+
+class PromotionStepInline(TranslationTabularInline):
+    model = PromotionStep
+    extra = 1
+    classes = ('collapse',)
+
+
+@admin.register(Promotion)
+class PromotionAdmin(TranslationAdmin):
+    list_display = ('title', 'slug', 'badge_text', 'offer_price', 'is_active', 'order')
+    list_editable = ('is_active', 'order')
+    prepopulated_fields = {'slug': ('title',)}
+    search_fields = ('title', 'headline', 'sub_headline')
+    inlines = [PromotionDeliverableInline, PromotionComparisonInline, PromotionStepInline]
+
+    fieldsets = (
+        (_('Identité de l\'offre'), {
+            'fields': ('title', 'slug', 'badge_text', 'featured_image', 'short_description')
+        }),
+        (_('Section Accroche / Hero'), {
+            'fields': ('headline', 'sub_headline')
+        }),
+        (_('Section Problème'), {
+            'fields': ('problem_title', 'problem_text')
+        }),
+        (_('Section Solution'), {
+            'fields': ('solution_title', 'solution_text', 'solution_quote')
+        }),
+        (_('Section Appel à l\'action (CTA)'), {
+            'fields': ('cta_title', 'cta_text', 'offer_price')
+        }),
+        (_('Paramètres'), {
+            'fields': ('is_active', 'order')
+        }),
+    )
+

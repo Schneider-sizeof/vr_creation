@@ -984,3 +984,460 @@ msgstr "Case Studies"
 
 msgid "Événementiel"
 msgstr "Events"
+
+msgid "Architecture, 3D & Digital réunis"
+msgstr "Architecture, 3D & Digital combined"
+
+msgid "Avant de construire, commencez déjà à le vendre. Présentez-nous votre projet et découvrons ensemble comment le transformer en une expérience commerciale complète."
+msgstr "Before building, start selling it. Present us your project and let's discover together how to transform it into a complete commercial experience."
+
+msgid "Bientôt disponible"
+msgstr "Coming soon"
+
+msgid "Branding cohérent et mémorable"
+msgstr "Consistent and memorable branding"
+
+msgid "Chaque projet mérite une expérience sur mesure"
+msgstr "Every project deserves a tailor-made experience"
+
+msgid "Collaborons ensemble"
+msgstr "Let's collaborate"
+
+msgid "Commercialisez avant la construction"
+msgstr "Market before construction"
+
+msgid "Convertir"
+msgstr "Convert"
+
+msgid "DE L'IDÉE À LA COMMERCIALISATION."
+msgstr "FROM IDEA TO MARKETING."
+
+msgid "Digitaliser"
+msgstr "Digitalize"
+
+msgid "Démarrer votre projet"
+msgstr "Start your project"
+
+msgid "Identifier"
+msgstr "Identify"
+
+msgid "Identité de marque"
+msgstr "Brand identity"
+
+msgid "Il se vend avec une vision. Nous combinons architecture, 3D, immersion, branding et technologie digitale pour permettre aux promoteurs de présenter leurs projets autrement — et surtout, plus tôt."
+msgstr "It sells with a vision. We combine architecture, 3D, immersion, branding and digital technology to allow developers to present their projects differently — and above all, earlier."
+
+msgid "Imaginer"
+msgstr "Imagine"
+
+msgid "Immersion totale"
+msgstr "Total immersion"
+
+msgid "Nos Solutions"
+msgstr "Our Solutions"
+
+msgid "Notre Différence"
+msgstr "Our Difference"
+
+msgid "Notre Engagement"
+msgstr "Our Commitment"
+
+msgid "Nous accompagnons les promoteurs immobiliers à chaque étape de leur projet : visualisation, valorisation, expérience immersive et communication digitale. L'objectif : transformer un projet architectural en un véritable outil de commercialisation."
+msgstr "We support real estate developers at every stage of their project: visualization, enhancement, immersive experience and digital communication. The goal: transform an architectural project into a real marketing tool."
+
+msgid "Nous construisons son identité et son univers de marque."
+msgstr "We build its identity and brand universe."
+
+msgid "Nous créons des contenus 3D et immersifs pour le présenter."
+msgstr "We create 3D and immersive content to present it."
+
+msgid "Nous créons des expériences visuelles adaptées à chaque secteur pour valoriser vos projets et accélérer vos ventes."
+msgstr "We create visual experiences tailored to each sector to enhance your projects and accelerate your sales."
+
+msgid "Nous créons son écosystème digital."
+msgstr "We create its digital ecosystem."
+
+msgid "Nous donnons forme au projet avant sa réalisation."
+msgstr "We give shape to the project before its realization."
+
+msgid "Nous préparons quelque chose d'exceptionnel pour vous. Revenez bientôt pour découvrir nos offres promotionnelles exclusives."
+msgstr "We are preparing something exceptional for you. Come back soon to discover our exclusive promotional offers."
+
+msgid "Nous transformons l'intérêt en prospects commerciaux."
+msgstr "We transform interest into business leads."
+
+msgid "Promotion"
+msgstr "Promotion"
+
+msgid "Synergie unique"
+msgstr "Unique synergy"
+
+msgid "UN PROJET IMMOBILIER NE SE VEND PAS UNIQUEMENT AVEC DES PLANS."
+msgstr "A REAL ESTATE PROJECT DOESN'T SELL WITH PLANS ALONE."
+
+msgid "UN PROJET. UNE VISION. UN SEUL PARTENAIRE."
+msgstr "ONE PROJECT. ONE VISION. ONE PARTNER."
+
+msgid "Un accompagnement structuré en 5 étapes pour transformer votre projet immobilier en succès commercial."
+msgstr "A structured support in 5 steps to transform your real estate project into a commercial success."
+
+msgid "VOUS AVEZ UN PROJET EN PRÉPARATION ?"
+msgstr "DO YOU HAVE A PROJECT IN PREPARATION?"
+
+msgid "Vente anticipée"
+msgstr "Early sales"
+
+msgid "Visites 360° et réalité virtuelle"
+msgstr "360° tours and virtual reality"
+
+msgid "Visualiser"
+msgstr "Visualize"
+
+msgid "Cas d'usage"
+msgstr "Use cases"
+
+msgid "Exemples de succès stratégiques"
+msgstr "Strategic success examples"
+
+msgid "Découvrez comment nos solutions transforment chaque type de projet en levier de croissance."
+msgstr "Discover how our solutions transform each type of project into a growth driver."
+
+msgid "Magasin ou concept-store"
+msgstr "Store or concept-store"
+
+msgid "Attirer les clients dès la phase de pré-lancement."
+msgstr "Attract customers from the pre-launch phase."
+
+msgid "Séduire et engager un public exigeant."
+msgstr "Attract and engage a demanding audience."
+
+msgid "Projet immobilier"
+msgstr "Real estate project"
+
+msgid "Les acheteurs veulent se projeter avant d'investir."
+msgstr "Buyers want to envision before investing."
+
+msgid "Villa en construction"
+msgstr "Villa under construction"
+
+msgid "Le client veut visualiser le résultat final pour s'engager."
+msgstr "The client wants to visualize the final result before committing."
+
+msgid "Qui sommes-nous ?"
+msgstr "About Us"
+
+msgid "VR CREATION COMPANY"
+msgstr "VR CREATION COMPANY"
+
+msgid "incarne l’alliance entre esthétique et technologie. Notre spécialité est de créer des visuels haut de gamme qui valorisent vos projets et reflètent votre niveau d’excellence."
+msgstr "embodies the alliance between aesthetics and technology. Our specialty is creating high-end visuals that enhance your projects and reflect your level of excellence."
+
+msgid "Notre équipe"
+msgstr "Our team"
+
+msgid "de designers, architectes, décorateurs, développeurs et chefs de projet mettent leur savoir-faire au service d’expériences visuelles uniques, conçues pour séduire vos clients et partenaires les plus exigeants."
+msgstr "of designers, architects, decorators, developers, and project managers put their expertise at the service of unique visual experiences, designed to appeal to your most demanding clients and partners."
+
+msgid "Chaque rendu est pensé comme une œuvre et une signature créative sur mesure."
+msgstr "Each render is thought of as a work of art and a custom creative signature."
+
+msgid "Promotions"
+msgstr "Promotions"
+
+msgid "Pack Spécial Promoteurs Débutants"
+msgstr "Special Package for Beginner Developers"
+
+msgid "Offre de Lancement"
+msgstr "Launch Offer"
+
+msgid "VENDEZ VOTRE PROJET IMMOBILIER AVANT MÊME DE POSER LA PREMIÈRE PIERRE"
+msgstr "SELL YOUR REAL ESTATE PROJECT BEFORE EVEN LAYING THE FIRST STONE"
+
+msgid "La solution 3D pensée pour les promoteurs débutants qui veulent commercialiser sur plan, sans budget d'agence."
+msgstr "The 3D solution designed for beginner developers who want to market off-plan, without an agency budget."
+
+msgid "🏗️ LE PROBLÈME QUE VOUS CONNAISSEZ DÉJÀ"
+msgstr "🏗️ THE PROBLEM YOU ALREADY KNOW"
+
+msgid "Vous avez un terrain. Vous avez un plan. Vous avez un permis en cours. Mais comment convaincre un client d'investir dans un appartement... qui n'existe pas encore ?"
+msgstr "You have land. You have a plan. You have a permit in progress. But how do you convince a client to invest in an apartment... that doesn't exist yet?"
+
+msgid "Plans 2D abstraits"
+msgstr "Abstract 2D plans"
+
+msgid "Les plans 2D ne parlent qu'aux architectes, pas aux acheteurs finaux."
+msgstr "2D plans only speak to architects, not to final buyers."
+
+msgid "Coûts de maquette physique élevés"
+msgstr "High physical model costs"
+
+msgid "Les maquettes physiques coûtent cher et prennent de nombreuses semaines à fabriquer."
+msgstr "Physical models are expensive and take many weeks to make."
+
+msgid "Hésitation et fuite des prospects"
+msgstr "Prospect hesitation and leakage"
+
+msgid "Sans visuel fort, vos prospects hésitent, comparent et partent chez la concurrence qui a déjà de belles images."
+msgstr "Without strong visuals, your prospects hesitate, compare, and leave for the competition which already has beautiful images."
+
+msgid "Résultat : des ventes sur plan qui traînent, et une trésorerie qui souffre avant même le début du chantier."
+msgstr "Result: slow off-plan sales, and cash flow that suffers even before the start of construction."
+
+msgid "💡 LA SOLUTION : VENDRE SUR PLAN AVEC UN IMPACT VISUEL PROFESSIONNEL"
+msgstr "💡 THE SOLUTION: SELL OFF-PLAN WITH A PROFESSIONAL VISUAL IMPACT"
+
+msgid "Avec VR Creation, transformez votre simple plan architectural en un outil de vente puissant, dès les premières semaines de votre projet — sans attendre la construction."
+msgstr "With VR Creation, transform your simple architectural plan into a powerful sales tool, starting from the first weeks of your project — without waiting for construction."
+
+msgid "Donnez à vos clients la possibilité de se projeter, littéralement, dans leur futur bien."
+msgstr "Give your clients the opportunity to project themselves, literally, into their future property."
+
+msgid "🎯 CE QUE VOUS OBTENEZ (Pack Spécial Promoteurs Débutants)"
+msgstr "🎯 WHAT YOU GET (Special Package for Beginner Developers)"
+
+msgid "1. Modélisation 3D photoréaliste"
+msgstr "1. Photorealistic 3D modeling"
+
+msgid "Votre plan devient un rendu 3D ultra-réaliste : façades, intérieurs, matériaux, lumières. Vos prospects visualisent le bien fini, pas des lignes techniques."
+msgstr "Your plan becomes an ultra-realistic 3D rendering: facades, interiors, materials, lighting. Your prospects visualize the finished property, not technical lines."
+
+msgid "2. Visite virtuelle interactive"
+msgstr "2. Interactive virtual tour"
+
+msgid "Une visite 100% navigable, accessible sur mobile, tablette ou ordinateur. Vos clients visitent l'appartement avant le premier coup de pelle."
+msgstr "A 100% navigable tour, accessible on mobile, tablet, or computer. Your clients visit the apartment before the first shovel blow."
+
+msgid "3. Animation & motion design"
+msgstr "3. Animation & motion design"
+
+msgid "Une vidéo de survol du projet (extérieur + intérieur), parfaite pour les réseaux sociaux et vos rendez-vous commerciaux. Capte l'attention en 10 secondes."
+msgstr "A flyover video of the project (exterior + interior), perfect for social networks and your commercial meetings. Captures attention in 10 seconds."
+
+msgid "4. Branding & supports"
+msgstr "4. Branding & commercial supports"
+
+msgid "Logo du projet, plaquette commerciale, brochure de vente, affiches de chantier. Une identité visuelle crédible, même pour un premier projet."
+msgstr "Project logo, commercial brochure, sales brochure, construction site posters. A credible visual identity, even for a first project."
+
+msgid "5. Photo & captures 360°"
+msgstr "5. Photography & 360° captures"
+
+msgid "Pour humaniser votre communication et rassurer vos prospects avec du contenu réel, une fois le showroom ou le terrain prêt."
+msgstr "To humanize your communication and reassure your prospects with real content, once the showroom or land is ready."
+
+msgid "🚀 POURQUOI C'EST FAIT POUR VOUS, PROMOTEUR DÉBUTANT"
+msgstr "🚀 WHY IT'S MADE FOR YOU, BEGINNER DEVELOPER"
+
+msgid "Sans VR Creation"
+msgstr "Without VR Creation"
+
+msgid "Avec VR Creation"
+msgstr "With VR Creation"
+
+msgid "Plans 2D difficiles à comprendre"
+msgstr "2D plans difficult to understand"
+
+msgid "Rendus 3D immédiatement parlants"
+msgstr "3D renderings immediately speaking"
+
+msgid "Prospects qui hésitent, faute de projection"
+msgstr "Prospects who hesitate due to lack of projection"
+
+msgid "Clients convaincus dès la première visite"
+msgstr "Convicted clients from the first visit"
+
+msgid "Maquette physique = coûteuse et lente"
+msgstr "Physical model = expensive and slow"
+
+msgid "Maquette numérique = rapide et modifiable"
+msgstr "Digital model = fast and editable"
+
+msgid "Communication amateur"
+msgstr "Amateur communication"
+
+msgid "Identité visuelle premium, dès le 1er projet"
+msgstr "Premium visual identity, from the 1st project"
+
+msgid "Ventes sur plan qui traînent"
+msgstr "Slow off-plan sales"
+
+msgid "Réservations accélérées, trésorerie sécurisée plus tôt"
+msgstr "Accelerated reservations, cash flow secured earlier"
+
+msgid "🛠️ COMMENT ÇA MARCHE (3 ÉTAPES SIMPLES)"
+msgstr "🛠️ HOW IT WORKS (3 SIMPLE STEPS)"
+
+msgid "Envoyez-nous votre plan"
+msgstr "Send us your plan"
+
+msgid "Plan architectural, esquisse ou permis de construire — peu importe le stade d'avancement."
+msgstr "Architectural plan, sketch, or building permit — no matter the stage of progress."
+
+msgid "Nous créons vos visuels"
+msgstr "We create your visuals"
+
+msgid "Rendus 3D, visite virtuelle et supports commerciaux réalisés sur mesure, dans les délais convenus."
+msgstr "3D renderings, virtual tour, and commercial materials made to measure, within the agreed deadlines."
+
+msgid "Vous vendez"
+msgstr "You sell"
+
+msgid "Utilisez ces outils en rendez-vous client, sur les réseaux sociaux, sur votre site ou lors de salons."
+msgstr "Use these tools in customer meetings, on social networks, on your website, or at trade shows."
+
+msgid "🎁 OFFRE DE LANCEMENT — SPÉCIAL PREMIERS PROJETS"
+msgstr "🎁 LAUNCH OFFER — SPECIAL FOR FIRST PROJECTS"
+
+msgid "Pour les promoteurs qui commercialisent leur premier ou deuxième projet immobilier, VR Creation propose un accompagnement dédié :"
+msgstr "For developers marketing their first or second real estate project, VR Creation offers a dedicated support:"
+
+msgid "Devis gratuit et personnalisé"
+msgstr "Free and personalized quote"
+
+msgid "Accompagnement sur-mesure à chaque étape"
+msgstr "Customized support at each stage"
+
+msgid "Délais rapides pour un lancement commercial immédiat"
+msgstr "Fast deadlines for an immediate commercial launch"
+
+msgid "📣 PRÊT À DONNER VIE À VOTRE PROJET — AVANT MÊME QU'IL EXISTE ?"
+msgstr "📣 READY TO BRING YOUR PROJECT TO LIFE — BEFORE IT EVEN EXISTS?"
+
+msgid "Demander mon devis gratuit"
+msgstr "Request my free quote"
+
+msgid "75 Avenue des Champs-Élysées, 75008 Paris"
+msgstr "75 Avenue des Champs-Elysees, 75008 Paris"
+
+msgid "Contactez-nous sur WhatsApp"
+msgstr "Contact us on WhatsApp"
+
+msgid "Offre Exclusive"
+msgstr "Exclusive Offer"
+
+msgid "Vous avez un projet immobilier en préparation ? Vendez sur plan avant de poser la première pierre grâce à notre pack visuel 3D et visite virtuelle tout-en-un — conçu sans budget d'agence."
+msgstr "Do you have a real estate project in preparation? Sell off-plan before laying the first stone thanks to our all-in-one 3D visual and virtual tour package — designed without an agency budget."
+
+msgid "Découvrir l'offre"
+msgstr "Discover the offer"
+
+msgid "Devis gratuit"
+msgstr "Free quote"
+
+msgid "Voir les détails de l'offre"
+msgstr "View offer details"
+
+msgid "Nos Offres & Promotions"
+msgstr "Our Offers & Promotions"
+
+msgid "Solutions Sur Mesure"
+msgstr "Tailored Solutions"
+
+msgid "Nos offres exclusives pour accélérer vos projets"
+msgstr "Our exclusive offers to accelerate your projects"
+
+msgid "Découvrez des packs de services conçus spécifiquement pour répondre à vos objectifs de commercialisation et de valorisation immobilière."
+msgstr "Discover service packages designed specifically to meet your marketing and property valuation objectives."
+
+msgid "Tarif"
+msgstr "Price"
+
+msgid "Aucune promotion active pour le moment. Revenez bientôt !"
+msgstr "No active promotion at the moment. Come back soon!"
+
+msgid "Pourquoi choisir notre solution"
+msgstr "Why choose our solution"
+
+msgid "Conditions de l'offre"
+msgstr "Offer conditions"
+
+msgid "Découvrir la solution"
+msgstr "Discover the solution"
+
+msgid "Fiche Technique"
+msgstr "Technical Sheet"
+
+msgid "Projet Similaire en vue ?"
+msgstr "Similar project in mind?"
+
+msgid "Confiez-nous vos plans 2D et laissez-nous les transformer en une expérience immersive."
+msgstr "Send us your 2D plans and let us transform them into an immersive experience."
+
+msgid "Estimer mon projet"
+msgstr "Estimate my project"
+
+msgid "Projets Connexes"
+msgstr "Related Projects"
+
+msgid "Agrandir l'image"
+msgstr "Enlarge image"
+
+msgid "360° Immersive"
+msgstr "Immersive 360°"
+
+msgid "Fermer"
+msgstr "Close"
+
+msgid "Présentation de la solution"
+msgstr "Solution Presentation"
+
+msgid "Galerie de Réalisations"
+msgstr "Gallery of Realizations"
+
+msgid "Besoin d'une démonstration ?"
+msgstr "Need a demonstration?"
+
+msgid "Contactez nos experts pour en savoir plus sur cette solution et obtenir un devis personnalisé."
+msgstr "Contact our experts to learn more about this solution and get a personalized quote."
+
+msgid "Galerie d'Images & Rendu 3D"
+msgstr "Image Gallery & 3D Render"
+
+msgid "Le Contenu"
+msgstr "The Package"
+
+msgid "🎯 Ce que vous obtenez avec cette offre"
+msgstr "🎯 What you get with this offer"
+
+msgid "Comparatif"
+msgstr "Comparison"
+
+msgid "Processus"
+msgstr "Process"
+
+msgid "Action Directe"
+msgstr "Direct Action"
+
+msgid "Nos Forces"
+msgstr "Our Strengths"
+
+msgid "Pourquoi Nous Choisir"
+msgstr "Why Choose Us"
+
+msgid "Des atouts majeurs pour garantir le succès de vos réalisations."
+msgstr "Key strengths to guarantee the success of your projects."
+
+
+msgid "Comment ça marche"
+msgstr "How It Works"
+
+msgid "La Solution"
+msgstr "The Solution"
+
+msgid "Notre Blog"
+msgstr "Our Blog"
+
+msgid "Visites Virtuelles 360°"
+msgstr "360° Virtual Tours"
+
+msgid "Visite Virtuelle Immersive 360°"
+msgstr "360° Immersive Virtual Tour"
+
+msgid "Application des matériaux réalistes et configuration de la lumière."
+msgstr "Application of realistic materials and light configuration."
+
+msgid "Génération des images haute résolution et retouches finales."
+msgstr "Generation of high-resolution images and final retouching."
+
+msgid "Aucun exemple disponible pour le moment."
+msgstr "No examples available at the moment."

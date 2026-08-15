@@ -97,26 +97,53 @@ class Command(BaseCommand):
         self.stdout.write('  [+] Valeurs')
 
     def _create_strengths(self):
+        # Clear existing strengths
+        Strength.objects.all().delete()
+        
         data = [
-            {'title_fr': 'Projets livrés', 'title_en': 'Projects Delivered', 'title_ar': 'مشاريع منجزة',
-             'stat_number_fr': '150+', 'stat_number_en': '150+', 'stat_number_ar': '+150',
-             'stat_label_fr': 'depuis notre création', 'stat_label_en': 'since our founding', 'stat_label_ar': 'منذ تأسيسنا',
-             'order': 1},
-            {'title_fr': 'Satisfaction client', 'title_en': 'Client Satisfaction', 'title_ar': 'رضا العملاء',
-             'stat_number_fr': '98%', 'stat_number_en': '98%', 'stat_number_ar': '٪98',
-             'stat_label_fr': 'de clients satisfaits', 'stat_label_en': 'satisfied clients', 'stat_label_ar': 'عملاء راضون',
-             'order': 2},
-            {'title_fr': 'Experts créatifs', 'title_en': 'Creative Experts', 'title_ar': 'خبراء مبدعون',
-             'stat_number_fr': '25+', 'stat_number_en': '25+', 'stat_number_ar': '+25',
-             'stat_label_fr': 'talents pluridisciplinaires', 'stat_label_en': 'multidisciplinary talents', 'stat_label_ar': 'مواهب متعددة التخصصات',
-             'order': 3},
-            {'title_fr': 'Années d\'expérience', 'title_en': 'Years of Experience', 'title_ar': 'سنوات من الخبرة',
-             'stat_number_fr': '10+', 'stat_number_en': '10+', 'stat_number_ar': '+10',
-             'stat_label_fr': 'd\'innovation continue', 'stat_label_en': 'of continuous innovation', 'stat_label_ar': 'من الابتكار المستمر',
-             'order': 4},
+            {
+                'title_fr': 'Créativité',
+                'title_en': 'Creativity',
+                'title_ar': 'الإبداع',
+                'description_fr': 'Sublimer vos projets par des approches visuelles innovantes et esthétiques.',
+                'description_en': 'Enhance your projects with innovative and aesthetic visual approaches.',
+                'description_ar': 'تحسين مشاريعك بأساليب بصرية مبتكرة وجمالية.',
+                'icon': 'fas fa-palette',
+                'order': 1
+            },
+            {
+                'title_fr': 'Précision',
+                'title_en': 'Precision',
+                'title_ar': 'الدقة',
+                'description_fr': 'Un souci du détail minutieux pour des rendus ultra-réalistes.',
+                'description_en': 'Meticulous attention to detail for ultra-realistic renders.',
+                'description_ar': 'اهتمام دقيق بالتفاصيل لتصييرات فائقة الواقعية.',
+                'icon': 'fas fa-crosshairs',
+                'order': 2
+            },
+            {
+                'title_fr': 'Professionnalisme',
+                'title_en': 'Professionalism',
+                'title_ar': 'الاحترافية',
+                'description_fr': 'Respect des délais et accompagnement sur-mesure à chaque étape.',
+                'description_en': 'On-time delivery and custom support at every stage.',
+                'description_ar': 'اللتزام بالمواعيد والمرافقة المخصصة في كل مرحلة.',
+                'icon': 'fas fa-briefcase',
+                'order': 3
+            },
+            {
+                'title_fr': 'Innovation',
+                'title_en': 'Innovation',
+                'title_ar': 'الابتكار',
+                'description_fr': 'Utilisation des dernières technologies pour accélérer vos ventes.',
+                'description_en': 'Using the latest technologies to accelerate your sales.',
+                'description_ar': 'استخدام أحدث التقنيات لتسريع مبيعاتك.',
+                'icon': 'fas fa-rocket',
+                'order': 4
+            },
         ]
         for d in data:
-            Strength.objects.get_or_create(title_fr=d['title_fr'], defaults=d)
+            Strength.objects.create(**d)
         self.stdout.write('  [+] Points forts')
 
     def _create_process_steps(self):

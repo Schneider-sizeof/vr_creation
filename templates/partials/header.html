@@ -15,7 +15,9 @@
             <a href="{% url 'core:about' %}" class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}">{% trans "À propos" %}</a>
             <a href="{% url 'services:list' %}" class="nav-link {% if 'service' in request.resolver_match.url_name %}active{% endif %}">{% trans "Services" %}</a>
             <a href="{% url 'portfolio:project_list' %}" class="nav-link {% if 'project' in request.resolver_match.url_name or 'casestudy' in request.resolver_match.url_name %}active{% endif %}">{% trans "Réalisations" %}</a>
-            <a href="{% url 'blog:list' %}" class="nav-link {% if request.resolver_match.app_name == 'blog' %}active{% endif %}">{% trans "Blog" %}</a>
+            <a href="{% url 'core:promotions' %}" class="nav-promo-btn {% if request.resolver_match.url_name == 'promotions' %}active{% endif %}">
+                <i class="fas fa-gift mr-1.5"></i> {% trans "Promotions" %}
+            </a>
             <a href="{% url 'contact:contact' %}" class="btn btn-primary">{% trans "Contact" %}</a>
             
             <!-- VR Immersive Mode Toggle -->
@@ -35,7 +37,7 @@
             
             <!-- Language Switcher with Real Flags -->
             {% get_current_language as CURRENT_LANG %}
-            <div class="relative group ml-2">
+            <div class="relative group ms-2">
                 <button class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors text-dark">
                     <img src="https://flagcdn.com/24x18/{% if CURRENT_LANG == 'fr' %}fr{% elif CURRENT_LANG == 'ar' %}ma{% else %}gb{% endif %}.png"
                          srcset="https://flagcdn.com/48x36/{% if CURRENT_LANG == 'fr' %}fr{% elif CURRENT_LANG == 'ar' %}ma{% else %}gb{% endif %}.png 2x"
@@ -43,7 +45,7 @@
                          class="rounded-sm shadow-sm">
                     <i class="fas fa-chevron-down text-xs text-gray-400"></i>
                 </button>
-                <div class="absolute right-0 mt-1 w-48 bg-white rounded-xl shadow-lg py-2 hidden group-hover:block border border-gray-100 z-50">
+                <div class="absolute right-0 rtl:right-auto rtl:left-0 mt-1 w-48 bg-white rounded-xl shadow-lg py-2 hidden group-hover:block border border-gray-100 z-50">
                     {% get_available_languages as LANGUAGES %}
                     {% get_language_info_list for LANGUAGES as languages %}
                     {% for language in languages %}
@@ -80,7 +82,9 @@
             <a href="{% url 'core:about' %}" class="text-dark font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors">{% trans "À propos" %}</a>
             <a href="{% url 'services:list' %}" class="text-dark font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors">{% trans "Services" %}</a>
             <a href="{% url 'portfolio:project_list' %}" class="text-dark font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors">{% trans "Réalisations" %}</a>
-            <a href="{% url 'blog:list' %}" class="text-dark font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors">{% trans "Blog" %}</a>
+            <a href="{% url 'core:promotions' %}" class="nav-promo-btn-mobile {% if request.resolver_match.url_name == 'promotions' %}active{% endif %} py-2 px-3 rounded-lg font-bold justify-center">
+                <i class="fas fa-gift mr-1.5"></i> {% trans "Promotions" %}
+            </a>
             <a href="{% url 'contact:contact' %}" class="text-primary font-bold py-2 px-3">{% trans "Contact" %}</a>
             
             <button id="mobile-vr-mode-toggle-btn" class="text-dark font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors flex items-center gap-3 text-left w-full cursor-pointer">

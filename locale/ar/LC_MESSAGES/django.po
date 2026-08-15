@@ -984,3 +984,460 @@ msgstr "دراسات الحالة"
 
 msgid "Événementiel"
 msgstr "فعاليات"
+
+msgid "Architecture, 3D & Digital réunis"
+msgstr "الهندسة المعمارية والثلاثي الأبعاد والرقمي معاً"
+
+msgid "Avant de construire, commencez déjà à le vendre. Présentez-nous votre projet et découvrons ensemble comment le transformer en une expérience commerciale complète."
+msgstr "قبل البناء، ابدأ ببيعه. قدّم لنا مشروعك ولنكتشف معاً كيف نحوّله إلى تجربة تجارية متكاملة."
+
+msgid "Bientôt disponible"
+msgstr "قريباً"
+
+msgid "Branding cohérent et mémorable"
+msgstr "علامة تجارية متسقة ولا تُنسى"
+
+msgid "Chaque projet mérite une expérience sur mesure"
+msgstr "كل مشروع يستحق تجربة مصممة خصيصاً له"
+
+msgid "Collaborons ensemble"
+msgstr "لنتعاون معاً"
+
+msgid "Commercialisez avant la construction"
+msgstr "سوّق قبل البناء"
+
+msgid "Convertir"
+msgstr "تحويل"
+
+msgid "DE L'IDÉE À LA COMMERCIALISATION."
+msgstr "من الفكرة إلى التسويق."
+
+msgid "Digitaliser"
+msgstr "رقمنة"
+
+msgid "Démarrer votre projet"
+msgstr "ابدأ مشروعك"
+
+msgid "Identifier"
+msgstr "تحديد الهوية"
+
+msgid "Identité de marque"
+msgstr "هوية العلامة التجارية"
+
+msgid "Il se vend avec une vision. Nous combinons architecture, 3D, immersion, branding et technologie digitale pour permettre aux promoteurs de présenter leurs projets autrement — et surtout, plus tôt."
+msgstr "يُباع برؤية. نجمع بين الهندسة المعمارية والثلاثي الأبعاد والغمر والعلامة التجارية والتكنولوجيا الرقمية لتمكين المطورين من تقديم مشاريعهم بشكل مختلف — والأهم من ذلك، في وقت أبكر."
+
+msgid "Imaginer"
+msgstr "تخيّل"
+
+msgid "Immersion totale"
+msgstr "غمر كامل"
+
+msgid "Nos Solutions"
+msgstr "حلولنا"
+
+msgid "Notre Différence"
+msgstr "ما يميزنا"
+
+msgid "Notre Engagement"
+msgstr "التزامنا"
+
+msgid "Nous accompagnons les promoteurs immobiliers à chaque étape de leur projet : visualisation, valorisation, expérience immersive et communication digitale. L'objectif : transformer un projet architectural en un véritable outil de commercialisation."
+msgstr "نرافق المطورين العقاريين في كل مرحلة من مشروعهم: التصور والتثمين والتجربة الغامرة والتواصل الرقمي. الهدف: تحويل مشروع معماري إلى أداة تسويق حقيقية."
+
+msgid "Nous construisons son identité et son univers de marque."
+msgstr "نبني هويته وعالم علامته التجارية."
+
+msgid "Nous créons des contenus 3D et immersifs pour le présenter."
+msgstr "نصنع محتوى ثلاثي الأبعاد وغامر لتقديمه."
+
+msgid "Nous créons des expériences visuelles adaptées à chaque secteur pour valoriser vos projets et accélérer vos ventes."
+msgstr "نصنع تجارب بصرية مخصصة لكل قطاع لتعزيز مشاريعكم وتسريع مبيعاتكم."
+
+msgid "Nous créons son écosystème digital."
+msgstr "نبني نظامه البيئي الرقمي."
+
+msgid "Nous donnons forme au projet avant sa réalisation."
+msgstr "نعطي شكلاً للمشروع قبل تنفيذه."
+
+msgid "Nous préparons quelque chose d'exceptionnel pour vous. Revenez bientôt pour découvrir nos offres promotionnelles exclusives."
+msgstr "نحضّر شيئاً استثنائياً لكم. عودوا قريباً لاكتشاف عروضنا الترويجية الحصرية."
+
+msgid "Nous transformons l'intérêt en prospects commerciaux."
+msgstr "نحوّل الاهتمام إلى عملاء محتملين."
+
+msgid "Promotion"
+msgstr "عروض"
+
+msgid "Synergie unique"
+msgstr "تكامل فريد"
+
+msgid "UN PROJET IMMOBILIER NE SE VEND PAS UNIQUEMENT AVEC DES PLANS."
+msgstr "المشروع العقاري لا يُباع بالمخططات وحدها."
+
+msgid "UN PROJET. UNE VISION. UN SEUL PARTENAIRE."
+msgstr "مشروع واحد. رؤية واحدة. شريك واحد."
+
+msgid "Un accompagnement structuré en 5 étapes pour transformer votre projet immobilier en succès commercial."
+msgstr "مرافقة منظمة في 5 مراحل لتحويل مشروعكم العقاري إلى نجاح تجاري."
+
+msgid "VOUS AVEZ UN PROJET EN PRÉPARATION ?"
+msgstr "هل لديك مشروع قيد التحضير؟"
+
+msgid "Vente anticipée"
+msgstr "البيع المبكر"
+
+msgid "Visites 360° et réalité virtuelle"
+msgstr "جولات 360° والواقع الافتراضي"
+
+msgid "Visualiser"
+msgstr "تصوّر"
+
+msgid "Cas d'usage"
+msgstr "حالات استخدام"
+
+msgid "Exemples de succès stratégiques"
+msgstr "أمثلة على النجاح الاستراتيجي"
+
+msgid "Découvrez comment nos solutions transforment chaque type de projet en levier de croissance."
+msgstr "اكتشف كيف تحوّل حلولنا كل نوع من المشاريع إلى رافعة نمو."
+
+msgid "Magasin ou concept-store"
+msgstr "متجر أو كونسبت ستور"
+
+msgid "Attirer les clients dès la phase de pré-lancement."
+msgstr "جذب العملاء منذ مرحلة ما قبل الإطلاق."
+
+msgid "Séduire et engager un public exigeant."
+msgstr "جذب وإشراك جمهور متطلب."
+
+msgid "Projet immobilier"
+msgstr "مشروع عقاري"
+
+msgid "Les acheteurs veulent se projeter avant d'investir."
+msgstr "يريد المشترون التصور قبل الاستثمار."
+
+msgid "Villa en construction"
+msgstr "فيلا قيد البناء"
+
+msgid "Le client veut visualiser le résultat final pour s'engager."
+msgstr "يريد العميل تصور النتيجة النهائية قبل الالتزام."
+
+msgid "Qui sommes-nous ?"
+msgstr "من نحن؟"
+
+msgid "VR CREATION COMPANY"
+msgstr "شركة في آر كرييشن"
+
+msgid "incarne l’alliance entre esthétique et technologie. Notre spécialité est de créer des visuels haut de gamme qui valorisent vos projets et reflètent votre niveau d’excellence."
+msgstr "تجسد التحالف بين الجمال والتكنولوجيا. تخصصنا هو إنشاء مرئيات راقية تثمن مشاريعكم وتعكس مستوى تميزكم."
+
+msgid "Notre équipe"
+msgstr "فريقنا"
+
+msgid "de designers, architectes, décorateurs, développeurs et chefs de projet mettent leur savoir-faire au service d’expériences visuelles uniques, conçues pour séduire vos clients et partenaires les plus exigeants."
+msgstr "من المصممين والمهندسين المعماريين ومصممي الديكور والمطورين ومديري المشاريع يضعون خبراتهم في خدمة تجارب بصرية فريدة، مصممة لجذب عملائكم وشركائكم الأكثر تطلبًا."
+
+msgid "Chaque rendu est pensé comme une œuvre et une signature créative sur mesure."
+msgstr "كل تصميم يُعتبر عملاً فنيًا وتوقيعًا إبداعيًا مخصصًا."
+
+msgid "Promotions"
+msgstr "العروض الترويجية"
+
+msgid "Pack Spécial Promoteurs Débutants"
+msgstr "باقة خاصة للمطورين المبتدئين"
+
+msgid "Offre de Lancement"
+msgstr "عرض الإطلاق"
+
+msgid "VENDEZ VOTRE PROJET IMMOBILIER AVANT MÊME DE POSER LA PREMIÈRE PIERRE"
+msgstr "بع مشروعك العقاري حتى قبل وضع حجر الأساس"
+
+msgid "La solution 3D pensée pour les promoteurs débutants qui veulent commercialiser sur plan, sans budget d'agence."
+msgstr "الحل ثلاثي الأبعاد المصمم للمطورين المبتدئين الذين يرغبون في التسويق على المخطط، بدون ميزانية وكالة."
+
+msgid "🏗️ LE PROBLÈME QUE VOUS CONNAISSEZ DÉJÀ"
+msgstr "🏗️ المشكلة التي تعرفها بالفعل"
+
+msgid "Vous avez un terrain. Vous avez un plan. Vous avez un permis en cours. Mais comment convaincre un client d'investir dans un appartement... qui n'existe pas encore ?"
+msgstr "لديك أرض. لديك مخطط. لديك ترخيص قيد المعالجة. ولكن كيف تقنع العميل بالاستثمار في شقة... لم توجد بعد؟"
+
+msgid "Plans 2D abstraits"
+msgstr "مخططات ثنائية الأبعاد مجردة"
+
+msgid "Les plans 2D ne parlent qu'aux architectes, pas aux acheteurs finaux."
+msgstr "المخططات ثنائية الأبعاد تتحدث فقط إلى المهندسين المعماريين، وليس إلى المشترين النهائيين."
+
+msgid "Coûts de maquette physique élevés"
+msgstr "تكاليف عالية للمجسمات الفيزيائية"
+
+msgid "Les maquettes physiques coûtent cher et prennent de nombreuses semaines à fabriquer."
+msgstr "المجسمات الفيزيائية مكلفة وتستغرق أسابيع عديدة للتصنيع."
+
+msgid "Hésitation et fuite des prospects"
+msgstr "تردد وضياع العملاء المحتملين"
+
+msgid "Sans visuel fort, vos prospects hésitent, comparent et partent chez la concurrence qui a déjà de belles images."
+msgstr "بدون رؤية بصرية قوية، يتردد عملاؤك المحتملون، ويقارنون، ويذهبون إلى المنافسة التي لديها بالفعل صور جميلة."
+
+msgid "Résultat : des ventes sur plan qui traînent, et une trésorerie qui souffre avant même le début du chantier."
+msgstr "النتيجة: مبيعات على المخطط متعثرة، وسيولة تعاني حتى قبل بدء البناء."
+
+msgid "💡 LA SOLUTION : VENDRE SUR PLAN AVEC UN IMPACT VISUEL PROFESSIONNEL"
+msgstr "💡 الحل: البيع على المخطط بتأثير بصري احترافي"
+
+msgid "Avec VR Creation, transformez votre simple plan architectural en un outil de vente puissant, dès les premières semaines de votre projet — sans attendre la construction."
+msgstr "مع VR Creation، حول مخططك المعماري البسيط إلى أداة مبيعات قوية، بدءًا من الأسابيع الأولى لمشروعك — دون انتظار البناء."
+
+msgid "Donnez à vos clients la possibilité de se projeter, littéralement, dans leur futur bien."
+msgstr "امنح عملائك فرصة تخيل أنفسهم، حرفيًا، في عقارهم المستقبلي."
+
+msgid "🎯 CE QUE VOUS OBTENEZ (Pack Spécial Promoteurs Débutants)"
+msgstr "🎯 ما ستحصل عليه (باقة خاصة للمطورين المبتدئين)"
+
+msgid "1. Modélisation 3D photoréaliste"
+msgstr "1. نمذجة ثلاثية الأبعاد واقعية"
+
+msgid "Votre plan devient un rendu 3D ultra-réaliste : façades, intérieurs, matériaux, lumières. Vos prospects visualisent le bien fini, pas des lignes techniques."
+msgstr "يصبح مخططك تصميمًا ثلاثي الأبعاد فائق الواقعية: واجهات، تصميم داخلي، مواد، إضاءة. يرى عملاؤك العقار منتهيًا، وليس خطوطًا تقنية."
+
+msgid "2. Visite virtuelle interactive"
+msgstr "2. جولة افتراضية تفاعلية"
+
+msgid "Une visite 100% navigable, accessible sur mobile, tablette ou ordinateur. Vos clients visitent l'appartement avant le premier coup de pelle."
+msgstr "جولة قابلة للتنقل بنسبة 100%، متاحة على الهاتف أو الجهاز اللوحي أو الكمبيوتر. يزور عملاؤك الشقة قبل أول ضربة فأس."
+
+msgid "3. Animation & motion design"
+msgstr "3. رسوم متحركة وتصميم الحركة"
+
+msgid "Une vidéo de survol du projet (extérieur + intérieur), parfaite pour les réseaux sociaux et vos rendez-vous commerciaux. Capte l'attention en 10 secondes."
+msgstr "فيديو تحليق فوق المشروع (خارجي + داخلي)، مثالي لشبكات التواصل الاجتماعي واجتماعاتك التجارية. يجذب الانتباه في 10 ثوانٍ."
+
+msgid "4. Branding & supports"
+msgstr "4. الهوية البصرية والدعم التجاري"
+
+msgid "Logo du projet, plaquette commerciale, brochure de vente, affiches de chantier. Une identité visuelle crédible, même pour un premier projet."
+msgstr "شعار المشروع، كتيب تجاري، كتيب المبيعات، ملصقات موقع البناء. هوية بصرية موثوقة، حتى لمشروعك الأول."
+
+msgid "5. Photo & captures 360°"
+msgstr "5. تصوير ولقطات 360 درجة"
+
+msgid "Pour humaniser votre communication et rassurer vos prospects avec du contenu réel, une fois le showroom ou le terrain prêt."
+msgstr "لإضفاء طابع إنساني على تواصلك وطمأنة عملائك المحتملين بمحتوى حقيقي، بمجرد جاهزية صالة العرض أو الأرض."
+
+msgid "🚀 POURQUOI C'EST FAIT POUR VOUS, PROMOTEUR DÉBUTANT"
+msgstr "🚀 لماذا هذا مصمم لك، كمطور عقاري مبتدئ"
+
+msgid "Sans VR Creation"
+msgstr "بدون VR Creation"
+
+msgid "Avec VR Creation"
+msgstr "مع VR Creation"
+
+msgid "Plans 2D difficiles à comprendre"
+msgstr "مخططات ثنائية الأبعاد يصعب فهمها"
+
+msgid "Rendus 3D immédiatement parlants"
+msgstr "تصاميم ثلاثية الأبعاد معبرة على الفور"
+
+msgid "Prospects qui hésitent, faute de projection"
+msgstr "عملاء يترددون لعدم قدرتهم على التخيل"
+
+msgid "Clients convaincus dès la première visite"
+msgstr "عملاء مقتنعون منذ الزيارة الأولى"
+
+msgid "Maquette physique = coûteuse et lente"
+msgstr "مجسم فيزيائي = مكلف وبطيء"
+
+msgid "Maquette numérique = rapide et modifiable"
+msgstr "مجسم رقمي = سريع وقابل للتعديل"
+
+msgid "Communication amateur"
+msgstr "تواصل غير احترافي"
+
+msgid "Identité visuelle premium, dès le 1er projet"
+msgstr "هوية بصرية مميزة، منذ المشروع الأول"
+
+msgid "Ventes sur plan qui traînent"
+msgstr "مبيعات على المخطط متعثرة وتستغرق وقتًا"
+
+msgid "Réservations accélérées, trésorerie sécurisée plus tôt"
+msgstr "حجوزات متسارعة، تأمين السيولة في وقت مبكر"
+
+msgid "🛠️ COMMENT ÇA MARCHE (3 ÉTAPES SIMPLES)"
+msgstr "🛠️ كيف يعمل هذا (3 خطوات بسيطة)"
+
+msgid "Envoyez-nous votre plan"
+msgstr "أرسل لنا مخططك"
+
+msgid "Plan architectural, esquisse ou permis de construire — peu importe le stade d'avancement."
+msgstr "مخطط معماري، مسودة أو رخصة بناء — بغض النظر عن مرحلة التقدم."
+
+msgid "Nous créons vos visuels"
+msgstr "نحن ننشئ مرئياتك"
+
+msgid "Rendus 3D, visite virtuelle et supports commerciaux réalisés sur mesure, dans les délais convenus."
+msgstr "تصاميم ثلاثية الأبعاد، جولة افتراضية ومواد تجارية مصنوعة حسب المقاس، في الآجال المتفق عليها."
+
+msgid "Vous vendez"
+msgstr "أنت تبيع"
+
+msgid "Utilisez ces outils en rendez-vous client, sur les réseaux sociaux, sur votre site ou lors de salons."
+msgstr "استخدم هذه الأدوات في اجتماعات العملاء، على شبكات التواصل الاجتماعي، على موقعك أو في المعارض."
+
+msgid "🎁 OFFRE DE LANCEMENT — SPÉCIAL PREMIERS PROJETS"
+msgstr "🎁 عرض الإطلاق — خاص بالمشاريع الأولى"
+
+msgid "Pour les promoteurs qui commercialisent leur premier ou deuxième projet immobilier, VR Creation propose un accompagnement dédié :"
+msgstr "للمطورين العقاريين الذين يسوقون مشروعهم الأول أو الثاني، يقدم VR Creation دعمًا مخصصًا:"
+
+msgid "Devis gratuit et personnalisé"
+msgstr "تسعيرة مجانية ومخصصة"
+
+msgid "Accompagnement sur-mesure à chaque étape"
+msgstr "دعم مخصص في كل خطوة"
+
+msgid "Délais rapides pour un lancement commercial immédiat"
+msgstr "مواعيد سريعة لإطلاق تجاري فوري"
+
+msgid "📣 PRÊT À DONNER VIE À VOTRE PROJET — AVANT MÊME QU'IL EXISTE ?"
+msgstr "📣 هل أنت مستعد لإحياء مشروعك — حتى قبل أن يوجد؟"
+
+msgid "Demander mon devis gratuit"
+msgstr "طلب تسعيرتي المجانية"
+
+msgid "75 Avenue des Champs-Élysées, 75008 Paris"
+msgstr "75 شارع الشانزليزيه، 75008 باريس"
+
+msgid "Contactez-nous sur WhatsApp"
+msgstr "تواصل معنا على واتساب"
+
+msgid "Offre Exclusive"
+msgstr "عرض حصري"
+
+msgid "Vous avez un projet immobilier en préparation ? Vendez sur plan avant de poser la première pierre grâce à notre pack visuel 3D et visite virtuelle tout-en-un — conçu sans budget d'agence."
+msgstr "هل لديك مشروع عقاري قيد التحضير؟ بع على المخطط قبل وضع حجر الأساس بفضل باقة المرئيات ثلاثية الأبعاد والجولة الافتراضية المتكاملة — المصممة بدون ميزانية وكالة."
+
+msgid "Découvrir l'offre"
+msgstr "اكتشف العرض"
+
+msgid "Devis gratuit"
+msgstr "طلب تسعيرة مجانية"
+
+msgid "Voir les détails de l'offre"
+msgstr "عرض تفاصيل العرض"
+
+msgid "Nos Offres & Promotions"
+msgstr "عروضنا وتخفيضاتنا"
+
+msgid "Solutions Sur Mesure"
+msgstr "حلول مخصصة"
+
+msgid "Nos offres exclusives pour accélérer vos projets"
+msgstr "عروضنا الحصرية لتسريع مشاريعكم"
+
+msgid "Découvrez des packs de services conçus spécifiquement pour répondre à vos objectifs de commercialisation et de valorisation immobilière."
+msgstr "اكتشف باقات الخدمات المصممة خصيصاً لتلبية أهدافكم في التسويق والتثمين العقاري."
+
+msgid "Tarif"
+msgstr "السعر"
+
+msgid "Aucune promotion active pour le moment. Revenez bientôt !"
+msgstr "لا يوجد أي عرض نشط حالياً. عد قريباً!"
+
+msgid "Pourquoi choisir notre solution"
+msgstr "لماذا تختار حلنا"
+
+msgid "Conditions de l'offre"
+msgstr "شروط العرض"
+
+msgid "Découvrir la solution"
+msgstr "اكتشف الحل"
+
+msgid "Fiche Technique"
+msgstr "البطاقة التقنية"
+
+msgid "Projet Similaire en vue ?"
+msgstr "هل لديك مشروع مماثل؟"
+
+msgid "Confiez-nous vos plans 2D et laissez-nous les transformer en une expérience immersive."
+msgstr "سلّمنا مخططاتك ثنائية الأبعاد ودعنا نحوّلها إلى تجربة غامرة."
+
+msgid "Estimer mon projet"
+msgstr "تقييم مشروعي"
+
+msgid "Projets Connexes"
+msgstr "مشاريع ذات صلة"
+
+msgid "Agrandir l'image"
+msgstr "توسيع الصورة"
+
+msgid "360° Immersive"
+msgstr "360 درجة غامرة"
+
+msgid "Fermer"
+msgstr "إغلاق"
+
+msgid "Présentation de la solution"
+msgstr "تقديم الحل"
+
+msgid "Galerie de Réalisations"
+msgstr "معرض الأعمال"
+
+msgid "Besoin d'une démonstration ?"
+msgstr "هل تحتاج إلى عرض توضيحي؟"
+
+msgid "Contactez nos experts pour en savoir plus sur cette solution et obtenir un devis personnalisé."
+msgstr "اتصل بخبرائنا لمعرفة المزيد عن هذا الحل والحصول على عرض سعر مخصص."
+
+msgid "Galerie d'Images & Rendu 3D"
+msgstr "معرض الصور والتصاميم ثلاثية الأبعاد"
+
+msgid "Le Contenu"
+msgstr "محتوى الباقة"
+
+msgid "🎯 Ce que vous obtenez avec cette offre"
+msgstr "🎯 ما ستحصل عليه مع هذا العرض"
+
+msgid "Comparatif"
+msgstr "مقارنة"
+
+msgid "Processus"
+msgstr "خطوات العمل"
+
+msgid "Action Directe"
+msgstr "اتخاذ قرار"
+
+msgid "Nos Forces"
+msgstr "نقاط قوتنا"
+
+msgid "Pourquoi Nous Choisir"
+msgstr "لماذا تختارنا"
+
+msgid "Des atouts majeurs pour garantir le succès de vos réalisations."
+msgstr "أصول رئيسية لضمان نجاح مشاريعكم."
+
+
+msgid "Comment ça marche"
+msgstr "كيف يعمل"
+
+msgid "La Solution"
+msgstr "الحل"
+
+msgid "Notre Blog"
+msgstr "مدونتنا"
+
+msgid "Visites Virtuelles 360°"
+msgstr "جولات افتراضية 360°"
+
+msgid "Visite Virtuelle Immersive 360°"
+msgstr "جولة افتراضية غامرة 360°"
+
+msgid "Application des matériaux réalistes et configuration de la lumière."
+msgstr "تطبيق المواد الواقعية وتكوين الإضاءة."
+
+msgid "Génération des images haute résolution et retouches finales."
+msgstr "إنشاء صور عالية الدقة والتعديلات النهائية."
+
+msgid "Aucun exemple disponible pour le moment."
+msgstr "لا توجد أمثلة متاحة حالياً."

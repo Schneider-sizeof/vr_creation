@@ -4,83 +4,312 @@
 {% block content %}
 {% include "partials/page_hero.html" with title=project.title breadcrumb_label=project.title %}
 
-<section class="section bg-white">
+<section class="section bg-white py-16">
     <div class="container mx-auto px-4">
         
-        <!-- Hero Image -->
-        <div class="mb-12">
+        <!-- Hero Image / Featured Banner -->
+        <div class="relative overflow-hidden rounded-3xl shadow-xl mb-16 aspect-[21/9] max-h-[60vh] bg-slate-900">
             {% if project.featured_image %}
-            <img src="{{ project.featured_image.url }}" alt="{{ project.title }}" class="w-full h-[60vh] object-cover rounded-2xl shadow-lg">
+            <img src="{{ project.featured_image.url }}" alt="{{ project.title }}" class="w-full h-full object-cover">
             {% else %}
-            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1920&q=80" alt="{{ project.title }}" class="w-full h-[60vh] object-cover rounded-2xl shadow-lg">
+            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1920&q=80" alt="{{ project.title }}" class="w-full h-full object-cover">
             {% endif %}
+            <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent"></div>
         </div>
         
-        <!-- Project Details -->
+        <!-- Project Details Grid -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            <div class="lg:col-span-2 prose max-w-none">
-                <h2 class="text-3xl font-bold mb-6">{% trans "À propos du projet" %}</h2>
-                <p class="text-lg text-gray-700 mb-8">{{ project.description }}</p>
-                
-                {% if project.challenge %}
-                <h3 class="text-2xl font-bold mt-8 mb-4">{% trans "Le Défi" %}</h3>
-                <p>{{ project.challenge }}</p>
-                {% endif %}
-                
-                {% if project.solution %}
-                <h3 class="text-2xl font-bold mt-8 mb-4">{% trans "Notre Solution" %}</h3>
-                <p>{{ project.solution }}</p>
-                {% endif %}
-                
-                {% if project.result %}
-                <h3 class="text-2xl font-bold mt-8 mb-4">{% trans "Le Résultat" %}</h3>
-                <p>{{ project.result }}</p>
-                {% endif %}
-                
+            <!-- Main Content Area -->
+            <div class="lg:col-span-2">
+                <div class="prose max-w-none text-gray-700">
+                    <h2 class="text-3xl font-black text-dark mb-6 tracking-tight">{% trans "À propos du projet" %}</h2>
+                    <p class="text-xl font-light text-gray-600 leading-relaxed mb-8 border-l-4 border-primary pl-6">
+                        {{ project.description }}
+                    </p>
+                    
+                    {% if project.challenge %}
+                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 mb-8">
+                        <h3 class="text-xl font-bold text-dark mb-3 flex items-center gap-2">
+                            <i class="fas fa-exclamation-triangle text-amber-500"></i>
+                            {% trans "Le Défi" %}
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed font-light">{{ project.challenge }}</p>
+                    </div>
+                    {% endif %}
+                    
+                    {% if project.solution %}
+                    <div class="bg-primary-light/35 p-6 rounded-2xl border border-primary-light mb-8">
+                        <h3 class="text-xl font-bold text-primary mb-3 flex items-center gap-2">
+                            <i class="fas fa-check-circle text-primary"></i>
+                            {% trans "Notre Solution" %}
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed font-light">{{ project.solution }}</p>
+                    </div>
+                    {% endif %}
+                    
+                    {% if project.result %}
+                    <div class="bg-emerald-50/50 p-6 rounded-2xl border border-emerald-100 mb-8">
+                        <h3 class="text-xl font-bold text-emerald-700 mb-3 flex items-center gap-2">
+                            <i class="fas fa-chart-line text-emerald-600"></i>
+                            {% trans "Le Résultat" %}
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed font-light">{{ project.result }}</p>
+                    </div>
+                    {% endif %}
+                </div>
+
+                <!-- Virtual Tour Iframe Embed -->
                 {% if project.has_virtual_tour and project.virtual_tour_url %}
-                <div class="mt-12 bg-gray-50 p-6 rounded-xl border-l-4 border-primary">
-                    <h3 class="text-xl font-bold mb-4 flex items-center gap-2"><i class="fas fa-vr-cardboard text-primary"></i> {% trans "Visite Virtuelle" %}</h3>
-                    <div class="aspect-video w-full rounded-lg overflow-hidden shadow-sm">
-                        <iframe src="{{ project.virtual_tour_url }}" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+                <div class="mt-12 bg-slate-900 p-6 rounded-2xl shadow-xl overflow-hidden border border-slate-800">
+                    <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                            <i class="fas fa-vr-cardboard text-sm"></i>
+                        </span>
+                        {% trans "Visite Virtuelle Immersive 360°" %}
+                    </h3>
+                    <div class="aspect-video w-full rounded-xl overflow-hidden bg-black shadow-inner relative">
+                        <iframe src="{{ project.virtual_tour_url }}" width="100%" height="100%" frameborder="0" allowfullscreen class="absolute inset-0"></iframe>
+                    </div>
+                </div>
+                {% endif %}
+
+                <!-- Gallery Section -->
+                {% if gallery %}
+                <div class="mt-16">
+                    <h3 class="text-2xl font-extrabold text-dark mb-8 uppercase tracking-wider relative inline-block">
+                        {% trans "Galerie d'Images & Rendu 3D" %}
+                        <span class="absolute bottom-0 left-0 w-12 h-1 bg-primary rounded"></span>
+                    </h3>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        {% for item in gallery %}
+                        <div class="group relative rounded-xl overflow-hidden shadow-sm hover:shadow-md cursor-pointer aspect-square transition-all duration-300 transform hover:-translate-y-1 js-gallery-item" 
+                             data-src="{{ item.image.url }}" 
+                             data-alt="{{ item.alt_text|default:project.title }}"
+                             data-is360="{{ item.is_360|yesno:'true,false' }}">
+                            <img src="{{ item.image.url }}" alt="{{ item.alt_text|default:project.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            
+                            <!-- 360 badge -->
+                            {% if item.is_360 %}
+                            <span class="absolute top-3 right-3 bg-accent text-dark text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider flex items-center gap-1.5 shadow-md">
+                                <i class="fas fa-vr-cardboard"></i> 360°
+                            </span>
+                            {% endif %}
+
+                            <!-- Overlay on hover -->
+                            <div class="absolute inset-0 bg-primary-dark/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white p-4">
+                                <i class="fas fa-search-plus text-2xl mb-2 transform scale-75 group-hover:scale-100 transition-transform"></i>
+                                {% if item.alt_text %}
+                                <span class="text-xs text-center font-medium">{{ item.alt_text }}</span>
+                                {% else %}
+                                <span class="text-xs text-center font-medium">{% trans "Agrandir l'image" %}</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                        {% endfor %}
                     </div>
                 </div>
                 {% endif %}
             </div>
             
+            <!-- Sidebar Details -->
             <div class="lg:col-span-1">
-                <div class="bg-gray-50 p-8 rounded-xl shadow-sm sticky top-24 border-t-4 border-primary">
-                    <h3 class="text-xl font-bold mb-6 border-b pb-4">{% trans "Détails" %}</h3>
+                <div class="bg-gray-50 p-8 rounded-3xl shadow-sm border border-gray-100 sticky top-24">
+                    <h3 class="text-xl font-extrabold text-dark mb-6 pb-4 border-b border-gray-200 uppercase tracking-wider">
+                        {% trans "Fiche Technique" %}
+                    </h3>
                     
                     <ul class="space-y-6">
                         {% if project.client %}
-                        <li>
-                            <span class="block text-sm text-gray-500 uppercase tracking-wider font-semibold mb-1">{% trans "Client" %}</span>
-                            <span class="font-medium text-dark">{{ project.client }}</span>
+                        <li class="flex items-start gap-4">
+                            <span class="w-10 h-10 rounded-xl bg-white border border-gray-200 flex items-center justify-center text-gray-400 text-sm flex-shrink-0">
+                                <i class="fas fa-user-tie"></i>
+                            </span>
+                            <div>
+                                <span class="block text-xs text-gray-400 uppercase tracking-wider font-semibold">{% trans "Client" %}</span>
+                                <span class="font-bold text-dark text-base">{{ project.client }}</span>
+                            </div>
                         </li>
                         {% endif %}
                         
                         {% if project.sector %}
-                        <li>
-                            <span class="block text-sm text-gray-500 uppercase tracking-wider font-semibold mb-1">{% trans "Secteur" %}</span>
-                            <span class="font-medium text-dark">{{ project.sector }}</span>
+                        <li class="flex items-start gap-4">
+                            <span class="w-10 h-10 rounded-xl bg-white border border-gray-200 flex items-center justify-center text-gray-400 text-sm flex-shrink-0">
+                                <i class="fas fa-building"></i>
+                            </span>
+                            <div>
+                                <span class="block text-xs text-gray-400 uppercase tracking-wider font-semibold">{% trans "Secteur" %}</span>
+                                <span class="font-bold text-dark text-base">{{ project.sector }}</span>
+                            </div>
                         </li>
                         {% endif %}
                         
                         {% if project.date %}
-                        <li>
-                            <span class="block text-sm text-gray-500 uppercase tracking-wider font-semibold mb-1">{% trans "Date" %}</span>
-                            <span class="font-medium text-dark">{{ project.date|date:"F Y" }}</span>
+                        <li class="flex items-start gap-4">
+                            <span class="w-10 h-10 rounded-xl bg-white border border-gray-200 flex items-center justify-center text-gray-400 text-sm flex-shrink-0">
+                                <i class="fas fa-calendar-alt"></i>
+                            </span>
+                            <div>
+                                <span class="block text-xs text-gray-400 uppercase tracking-wider font-semibold">{% trans "Date de réalisation" %}</span>
+                                <span class="font-bold text-dark text-base">{{ project.date|date:"F Y" }}</span>
+                            </div>
                         </li>
                         {% endif %}
                     </ul>
                     
-                    <div class="mt-8 pt-6 border-t">
-                        <a href="{% url 'contact:contact' %}" class="btn btn-outline w-full justify-center">{% trans "Projet Similaire ?" %}</a>
+                    <div class="mt-8 pt-8 border-t border-gray-200">
+                        <h4 class="font-bold text-dark mb-2">{% trans "Projet Similaire en vue ?" %}</h4>
+                        <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+                            {% trans "Confiez-nous vos plans 2D et laissez-nous les transformer en une expérience immersive." %}
+                        </p>
+                        <a href="{% url 'contact:contact' %}" class="btn btn-primary w-full py-3.5 text-center font-bold shadow-md hover:shadow-lg">
+                            {% trans "Estimer mon projet" %} <i class="fas fa-calculator ml-2"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
         
+        <!-- Related Projects Section -->
+        {% if related_projects %}
+        <div class="mt-24 border-t border-gray-100 pt-16">
+            <h3 class="text-2xl font-extrabold text-dark mb-10 text-center uppercase tracking-wider">
+                {% trans "Projets Connexes" %}
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {% for p in related_projects %}
+                <a href="{{ p.get_absolute_url }}" class="group block rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+                    <div class="relative aspect-video overflow-hidden bg-slate-900">
+                        {% if p.featured_image %}
+                        <img src="{{ p.featured_image.url }}" alt="{{ p.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        {% endif %}
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    </div>
+                    <div class="p-5 bg-white border border-t-0 border-gray-100 rounded-b-2xl">
+                        <span class="text-xs font-bold text-primary uppercase tracking-widest">{{ p.sector }}</span>
+                        <h4 class="text-lg font-bold text-dark mt-1 group-hover:text-primary transition-colors line-clamp-1">{{ p.title }}</h4>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+        
+        <!-- Promotion Banner -->
+        {% include "partials/promotion_banner.html" %}
     </div>
 </section>
+
+<!-- Lightbox Modal -->
+<div id="lightboxModal" class="fixed inset-0 z-50 hidden bg-black/95 backdrop-blur-md flex items-center justify-center p-4">
+    <!-- Close Button -->
+    <button id="lightboxClose" class="absolute top-6 right-6 text-white/70 hover:text-white text-3xl focus:outline-none transition-colors" aria-label="{% trans 'Fermer' %}">
+        <i class="fas fa-times"></i>
+    </button>
+    
+    <!-- Navigation Buttons -->
+    <button id="lightboxPrev" class="absolute left-6 top-1/2 -translate-y-1/2 text-white/50 hover:text-white text-4xl focus:outline-none transition-colors" aria-label="{% trans 'Précédent' %}">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+    <button id="lightboxNext" class="absolute right-6 top-1/2 -translate-y-1/2 text-white/50 hover:text-white text-4xl focus:outline-none transition-colors" aria-label="{% trans 'Suivant' %}">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+    
+    <!-- Image and Caption Container -->
+    <div class="max-w-5xl max-h-[85vh] flex flex-col items-center justify-center relative">
+        <!-- 360 indicator badge inside modal -->
+        <span id="lightbox360Badge" class="absolute top-4 right-4 bg-accent text-dark text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider hidden items-center gap-1.5 shadow-lg">
+            <i class="fas fa-vr-cardboard"></i> 360° Immersif
+        </span>
+        <img id="lightboxImg" src="" alt="" class="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl transition-all duration-300">
+        <p id="lightboxCaption" class="text-white/80 mt-4 text-sm tracking-wide font-light"></p>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const galleryItems = document.querySelectorAll('.js-gallery-item');
+        const modal = document.getElementById('lightboxModal');
+        const img = document.getElementById('lightboxImg');
+        const caption = document.getElementById('lightboxCaption');
+        const closeBtn = document.getElementById('lightboxClose');
+        const prevBtn = document.getElementById('lightboxPrev');
+        const nextBtn = document.getElementById('lightboxNext');
+        const badge360 = document.getElementById('lightbox360Badge');
+        
+        let currentIndex = 0;
+        const imagesList = Array.from(galleryItems).map(item => ({
+            src: item.getAttribute('data-src'),
+            alt: item.getAttribute('data-alt'),
+            is360: item.getAttribute('data-is360') === 'true'
+        }));
+        
+        if (galleryItems.length === 0) return;
+        
+        function openLightbox(index) {
+            currentIndex = index;
+            updateContent();
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeLightbox() {
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+        
+        function updateContent() {
+            const currentItem = imagesList[currentIndex];
+            img.src = currentItem.src;
+            caption.textContent = currentItem.alt;
+            
+            if (currentItem.is360) {
+                badge360.style.display = 'flex';
+            } else {
+                badge360.style.display = 'none';
+            }
+        }
+        
+        function showNext() {
+            currentIndex = (currentIndex + 1) % imagesList.length;
+            img.style.opacity = 0;
+            setTimeout(() => {
+                updateContent();
+                img.style.opacity = 1;
+            }, 150);
+        }
+        
+        function showPrev() {
+            currentIndex = (currentIndex - 1 + imagesList.length) % imagesList.length;
+            img.style.opacity = 0;
+            setTimeout(() => {
+                updateContent();
+                img.style.opacity = 1;
+            }, 150);
+        }
+        
+        galleryItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                openLightbox(index);
+            });
+        });
+        
+        closeBtn.addEventListener('click', closeLightbox);
+        nextBtn.addEventListener('click', showNext);
+        prevBtn.addEventListener('click', showPrev);
+        
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal || e.target === closeBtn || e.target.closest('#lightboxClose')) {
+                closeLightbox();
+            }
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (modal.classList.contains('hidden')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') showNext();
+            if (e.key === 'ArrowLeft') showPrev();
+        });
+    });
+</script>
 {% endblock %}

@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load i18n static %}
+
+{% block content %}
+{% trans "Nos Offres & Promotions" as page_title %}
+{% trans "Promotions" as page_breadcrumb %}
+{% include "partials/page_hero.html" with title=page_title breadcrumb_label=page_breadcrumb %}
+
+<section class="section bg-white py-20">
+    <div class="container mx-auto px-4 max-w-6xl">
+        <div class="text-center mb-16 max-w-2xl mx-auto animate-on-scroll slide-up">
+            <span class="pill-badge mb-4">{% trans "Solutions Sur Mesure" %}</span>
+            <h2 class="section-title uppercase tracking-wider">{% trans "Nos offres exclusives pour accélérer vos projets" %}</h2>
+            <p class="text-gray-600 font-light">{% trans "Découvrez des packs de services conçus spécifiquement pour répondre à vos objectifs de commercialisation et de valorisation immobilière." %}</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+            {% for promotion in promotions %}
+            <div class="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 bg-white flex flex-col h-full border border-gray-100 animate-on-scroll slide-up" style="transition-delay: {{ forloop.counter }}00ms;">
+                <!-- Promotion Badge & Image -->
+                <div class="relative aspect-video overflow-hidden bg-slate-900">
+                    {% if promotion.featured_image %}
+                    <img src="{{ promotion.featured_image.url }}" alt="{{ promotion.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    {% else %}
+                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&q=80" alt="{{ promotion.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    {% endif %}
+                    
+                    {% if promotion.badge_text %}
+                    <span class="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-md">
+                        {{ promotion.badge_text }}
+                    </span>
+                    {% endif %}
+                </div>
+
+                <!-- Content -->
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl font-extrabold text-dark mb-3 leading-snug group-hover:text-primary transition-colors">
+                        {{ promotion.title }}
+                    </h3>
+                    <p class="text-gray-600 text-sm leading-relaxed font-light mb-6 flex-grow">
+                        {{ promotion.short_description }}
+                    </p>
+                    
+                    <!-- Offer Details / Price & Button -->
+                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between mt-auto">
+                        <div>
+                            <span class="block text-[10px] uppercase tracking-wider text-gray-400 font-bold">{% trans "Tarif" %}</span>
+                            <span class="text-primary font-black text-lg">{{ promotion.offer_price|default:"Sur devis" }}</span>
+                        </div>
+                        <a href="{% url 'core:promotion_detail' promotion.slug %}" class="btn btn-primary py-2 px-5 text-sm font-bold shadow-sm">
+                            {% trans "Découvrir l'offre" %} <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-span-full text-center py-16">
+                <div class="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mx-auto mb-4 text-gray-400 text-2xl shadow-inner">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <p class="text-gray-500 text-lg font-light">{% trans "Aucune promotion active pour le moment. Revenez bientôt !" %}</p>
+                <a href="{% url 'core:home' %}" class="btn btn-outline mt-6">{% trans "Retour à l'accueil" %}</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

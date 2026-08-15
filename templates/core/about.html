@@ -7,22 +7,43 @@
 {% include "partials/page_hero.html" with title=page_title breadcrumb_label=page_breadcrumb %}
 
 <!-- Intro Section -->
-<section class="section bg-white">
+<section class="section bg-white py-24 relative overflow-hidden">
     <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div class="animate-on-scroll slide-left">
-                <span class="pill-badge mb-4">{% trans "Notre Histoire" %}</span>
-                <h2 class="text-3xl font-bold mb-6">{% trans "L'alliance entre" %} <span class="text-primary">{% trans "esthétique" %}</span> {% trans "et technologie." %}</h2>
-                <div class="prose max-w-none text-gray-600 space-y-4">
-                    <p>{% trans "VR CREATION COMPANY est une agence spécialisée dans la création de contenus 3D et de visites virtuelles interactives. Nous accompagnons les professionnels de l'immobilier, de l'architecture et de l'aménagement d'intérieur dans la mise en valeur de leurs projets." %}</p>
-                    <p>{% trans "Notre équipe d'experts passionnés met son savoir-faire technique et sa sensibilité artistique à votre service pour créer des expériences visuelles immersives et impactantes." %}</p>
-                </div>
+        <!-- Centered Intro Header & Paragraphs -->
+        <div class="max-w-3xl mx-auto text-center mb-16 animate-on-scroll slide-up">
+            <span class="pill-badge mb-4">{% trans "Qui sommes-nous ?" %}</span>
+            
+            <p class="text-xl md:text-2xl text-gray-700 font-light leading-relaxed mb-6">
+                <strong>{% trans "VR CREATION COMPANY" %}</strong> {% trans "incarne l’alliance entre esthétique et technologie. Notre spécialité est de créer des visuels haut de gamme qui valorisent vos projets et reflètent votre niveau d’excellence." %}
+            </p>
+            
+            <!-- Separator Icon (Meeting Table / Team) -->
+            <div class="flex items-center justify-center gap-4 my-8 text-gray-300">
+                <span class="h-px w-16 bg-gray-200"></span>
+                <span class="text-2xl opacity-40"><i class="fas fa-users"></i></span>
+                <span class="h-px w-16 bg-gray-200"></span>
             </div>
-            <div class="relative animate-on-scroll slide-right">
+            
+            <p class="text-base md:text-lg text-gray-600 font-light leading-relaxed">
+                <strong>{% trans "Notre équipe" %}</strong> {% trans "de designers, architectes, décorateurs, développeurs et chefs de projet mettent leur savoir-faire au service d’expériences visuelles uniques, conçues pour séduire vos clients et partenaires les plus exigeants." %}
+            </p>
+        </div>
+
+        <!-- Split Layout: Highlight Quote & Render Image -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mt-12">
+            <!-- Left Highlight Box (Blue box, serif font) -->
+            <div class="lg:col-span-5 bg-gradient-to-br from-primary to-primary-dark rounded-[28px] p-8 md:p-12 flex items-center justify-center text-center shadow-lg animate-on-scroll slide-left" style="box-shadow: 0 12px 40px rgba(61,142,185,0.15);">
+                <blockquote class="text-2xl md:text-3xl font-serif text-white italic leading-relaxed" style="text-shadow: 0 1px 4px rgba(0,0,0,0.1);">
+                    “{% trans "Chaque rendu est pensé comme une œuvre et une signature créative sur mesure." %}”
+                </blockquote>
+            </div>
+            
+            <!-- Right Render Image -->
+            <div class="lg:col-span-7 rounded-[28px] overflow-hidden shadow-xl relative min-h-[350px] animate-on-scroll slide-right" style="transition-delay: 150ms;">
                 {% if site_settings.about_image %}
-                <img src="{{ site_settings.about_image.url }}" alt="About VR Creation" class="rounded-[40px] shadow-lg border-8 border-primary-light object-cover aspect-[4/3] w-full">
+                <img src="{{ site_settings.about_image.url }}" alt="{% trans 'Qui sommes-nous ?' %}" class="absolute inset-0 w-full h-full object-cover">
                 {% else %}
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="About VR Creation" class="rounded-[40px] shadow-lg border-8 border-primary-light object-cover aspect-[4/3] w-full">
+                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1000&q=80" alt="{% trans 'Qui sommes-nous ?' %}" class="absolute inset-0 w-full h-full object-cover">
                 {% endif %}
             </div>
         </div>
@@ -91,6 +112,58 @@
                 <p class="text-gray-600 text-sm">{% trans "Génération des images haute résolution et retouches finales." %}</p>
             </div>
         </div>
+        </div>
     </div>
 </section>
+
+<!-- ═══════════════════════════════════════════════
+     SECTION 3b — PROMOTION EXCLUSIVE (Offre spéciale)
+     ═══════════════════════════════════════════════ -->
+{% if active_promotion %}
+<section class="section section-tint py-24 relative overflow-hidden">
+    <div class="light-orb light-orb-accent" style="width: 350px; height: 350px; bottom: -80px; left: 5%; opacity: 0.08;"></div>
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl border border-gray-100 p-8 md:p-12 overflow-hidden relative">
+            <!-- Decorative corner -->
+            <div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-bl-full pointer-events-none"></div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Left: content -->
+                <div class="lg:col-span-7 space-y-6 text-left animate-on-scroll slide-left">
+                    <span class="pill-badge bg-primary-light text-primary border-primary-light/50">
+                        {{ active_promotion.badge_text }}
+                    </span>
+                    <h2 class="text-2xl md:text-4xl font-extrabold text-dark uppercase tracking-tight leading-snug">
+                        {{ active_promotion.title }}
+                    </h2>
+                    <h3 class="text-lg md:text-xl font-bold text-primary font-serif italic">
+                        {{ active_promotion.headline }}
+                    </h3>
+                    <p class="text-gray-600 text-sm md:text-base leading-relaxed font-light">
+                        {{ active_promotion.short_description }}
+                    </p>
+                    <div class="pt-4 flex flex-wrap items-center gap-6">
+                        <div>
+                            <span class="block text-[10px] uppercase tracking-wider text-gray-400 font-bold">{% trans "Tarif" %}</span>
+                            <span class="text-primary font-black text-2xl">{{ active_promotion.offer_price|default:"Sur devis" }}</span>
+                        </div>
+                        <a href="{% url 'core:promotion_detail' active_promotion.slug %}" class="btn btn-primary px-8 py-3.5 text-sm font-bold shadow-md hover:shadow-lg">
+                            {% trans "Voir les détails de l'offre" %} <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: mock image -->
+                <div class="lg:col-span-5 relative rounded-2xl overflow-hidden aspect-[4/3] shadow-md animate-on-scroll slide-right" style="transition-delay: 150ms;">
+                    {% if active_promotion.featured_image %}
+                    <img src="{{ active_promotion.featured_image.url }}" alt="{{ active_promotion.title }}" class="w-full h-full object-cover">
+                    {% else %}
+                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&q=80" alt="{{ active_promotion.title }}" class="w-full h-full object-cover">
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
 {% endblock %}

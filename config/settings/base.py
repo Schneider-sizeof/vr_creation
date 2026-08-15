@@ -3,6 +3,22 @@ Django base settings for VR Creation Company.
 """
 import os
 from pathlib import Path
+from copy import copy
+
+# Python 3.14 / Django 5.1 context copy bug monkeypatch
+try:
+    from django.template.context import Context, BaseContext
+    def _clean_copy(self):
+        duplicate = self.__class__.__new__(self.__class__)
+        duplicate.__dict__ = copy(self.__dict__)
+        duplicate.dicts = self.dicts[:]
+        if hasattr(self, 'render_context'):
+            duplicate.render_context = copy(self.render_context)
+        return duplicate
+    Context.__copy__ = _clean_copy
+    BaseContext.__copy__ = _clean_copy
+except ImportError:
+    pass
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent

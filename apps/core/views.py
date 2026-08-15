@@ -1,11 +1,12 @@
 """
 Core views — Home, About, Legal pages, Error handlers.
 """
-from django.shortcuts import render
+from django.db.models import Q
+from django.shortcuts import render, get_object_or_404
 from django.utils.translation import gettext_lazy as _
 from django.views.decorators.cache import cache_page
 
-from .models import TeamMember, Value, Strength, ProcessStep, HeroSlide
+from .models import TeamMember, Value, Strength, ProcessStep, HeroSlide, StrategicSuccess, Promotion
 from apps.services.models import Service
 from apps.portfolio.models import Project, CaseStudy
 from apps.blog.models import Article
@@ -29,6 +30,10 @@ def home(request):
     values = Value.objects.all()[:4]
     process_steps = ProcessStep.objects.all()
     hero_slides = HeroSlide.objects.filter(active=True)
+    strategic_successes = StrategicSuccess.objects.filter(is_active=True)
+    
+    # Latest active promotion for display sections
+    active_promotion = Promotion.objects.filter(is_active=True).first()
 
     context = {
         'services': services,
@@ -38,6 +43,8 @@ def home(request):
         'values': values,
         'process_steps': process_steps,
         'hero_slides': hero_slides,
+        'strategic_successes': strategic_successes,
+        'active_promotion': active_promotion,
         'page_seo': get_page_seo('home'),
         'page_identifier': 'home',
     }
@@ -50,12 +57,16 @@ def about(request):
     values = Value.objects.all()
     process_steps = ProcessStep.objects.all()
     strengths = Strength.objects.all()
+    
+    # Latest active promotion for display sections
+    active_promotion = Promotion.objects.filter(is_active=True).first()
 
     context = {
         'team_members': team_members,
         'values': values,
         'process_steps': process_steps,
         'strengths': strengths,
+        'active_promotion': active_promotion,
         'page_seo': get_page_seo('about'),
         'page_identifier': 'about',
     }
@@ -83,6 +94,32 @@ def cookie_policy(request):
     return render(request, 'core/cookie_policy.html', {
         'page_seo': get_page_seo('cookies'),
         'page_identifier': 'cookies',
+    })
+
+
+def promotions(request):
+    """Promotions list/grid page."""
+    active_promotions = Promotion.objects.filter(is_active=True)
+    return render(request, 'core/promotions_list.html', {
+        'promotions': active_promotions,
+        'page_seo': get_page_seo('promotions'),
+        'page_identifier': 'promotions',
+    })
+
+
+def promotion_detail(request, slug):
+    """Promotion detail landing page."""
+    promotion = get_object_or_404(
+        Promotion,
+        Q(slug_fr=slug) | Q(slug_en=slug) | Q(slug_ar=slug),
+        is_active=True
+    )
+    return render(request, 'core/promotion_detail.html', {
+        'promotion': promotion,
+        'deliverables': promotion.deliverables.all(),
+        'comparisons': promotion.comparisons.all(),
+        'steps': promotion.steps.all(),
+        'page_identifier': 'promotion_detail',
     })
 
 
