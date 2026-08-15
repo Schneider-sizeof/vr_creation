@@ -111,7 +111,7 @@ def promotion_detail(request, slug):
     """Promotion detail landing page."""
     promotion = get_object_or_404(
         Promotion,
-        Q(slug_fr=slug) | Q(slug_en=slug) | Q(slug_ar=slug),
+        slug=slug,
         is_active=True
     )
     return render(request, 'core/promotion_detail.html', {
