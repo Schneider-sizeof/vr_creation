@@ -13,7 +13,7 @@ try:
 except ImportError:
     pass
 
-# Set up Django environment
+# Set up Django environment (supports both local dev and PythonAnywhere prod)
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings.dev')
 django.setup()
 

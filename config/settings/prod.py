@@ -15,7 +15,7 @@ CSRF_TRUSTED_ORIGINS = os.environ.get(
 ).split(',')
 
 # Ensure MEDIA_ROOT and subdirectories exist with proper permissions for uploads
-for _subfolder in ['', 'services', 'portfolio', 'blog', 'site', 'team']:
+for _subfolder in ['', 'services', 'services/gallery', 'portfolio', 'portfolio/gallery', 'blog', 'site', 'team', 'case_studies']:
     os.makedirs(MEDIA_ROOT / _subfolder, exist_ok=True)
 
 # File upload configuration
