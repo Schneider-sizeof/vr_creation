@@ -4,7 +4,7 @@ Admin configuration for Core app.
 from django.contrib import admin
 from django.utils.html import format_html
 from django.utils.translation import gettext_lazy as _
-from modeltranslation.admin import TranslationAdmin, TranslationTabularInline
+from modeltranslation.admin import TranslationAdmin, TranslationTabularInline, TranslationStackedInline
 
 from .models import (
     SiteSettings, TeamMember, Value, Strength, ProcessStep, HeroSlide, StrategicSuccess,
@@ -130,10 +130,11 @@ class StrategicSuccessAdmin(TranslationAdmin):
     image_preview.short_description = _('Aperçu')
 
 
-class PromotionDeliverableInline(TranslationTabularInline):
+class PromotionDeliverableInline(TranslationStackedInline):
     model = PromotionDeliverable
     extra = 1
     classes = ('collapse',)
+    fields = ('title', 'description', 'icon', 'image', 'order')
 
 
 class PromotionComparisonInline(TranslationTabularInline):

@@ -334,6 +334,10 @@ class PromotionDeliverable(models.Model):
     title = models.CharField(_('Titre de la prestation'), max_length=200)
     description = models.TextField(_('Description'))
     icon = models.CharField(_('Icône CSS'), max_length=100, default='fas fa-check')
+    image = models.ImageField(
+        _('Image / Illustration'), upload_to='promotions/deliverables/', blank=True, null=True,
+        help_text=_('Image optionnelle affichée sur la carte de cette prestation (400x300px recommandé)')
+    )
     order = models.PositiveIntegerField(_('Ordre'), default=0)
 
     class Meta:

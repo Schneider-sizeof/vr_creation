@@ -32,9 +32,6 @@ def home(request):
     hero_slides = HeroSlide.objects.filter(active=True)
     strategic_successes = StrategicSuccess.objects.filter(is_active=True)
     
-    # Featured promotion for display sections
-    featured_promotion = Promotion.objects.filter(is_active=True, is_featured=True).first()
-
     context = {
         'services': services,
         'strengths': strengths,
@@ -44,7 +41,6 @@ def home(request):
         'process_steps': process_steps,
         'hero_slides': hero_slides,
         'strategic_successes': strategic_successes,
-        'featured_promotion': featured_promotion,
         'page_seo': get_page_seo('home'),
         'page_identifier': 'home',
     }
@@ -58,15 +54,11 @@ def about(request):
     process_steps = ProcessStep.objects.all()
     strengths = Strength.objects.all()
     
-    # Featured promotion for display sections
-    featured_promotion = Promotion.objects.filter(is_active=True, is_featured=True).first()
-
     context = {
         'team_members': team_members,
         'values': values,
         'process_steps': process_steps,
         'strengths': strengths,
-        'featured_promotion': featured_promotion,
         'page_seo': get_page_seo('about'),
         'page_identifier': 'about',
     }
