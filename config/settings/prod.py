@@ -11,11 +11,11 @@ ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost,127.0.0.1,.pyt
 # CSRF Trusted Origins for HTTPS POST requests on PythonAnywhere and local
 CSRF_TRUSTED_ORIGINS = os.environ.get(
     'CSRF_TRUSTED_ORIGINS',
-    'https://*.pythonanywhere.com,https://vrcreation.pythonanywhere.com,http://localhost:8000,http://127.0.0.1:8000'
+    'https://*.pythonanywhere.com,https://vrcreationn.pythonanywhere.com,http://localhost:8000,http://127.0.0.1:8000'
 ).split(',')
 
 # Ensure MEDIA_ROOT and subdirectories exist with proper permissions for uploads
-for _subfolder in ['', 'services', 'services/gallery', 'portfolio', 'portfolio/gallery', 'blog', 'site', 'team', 'case_studies']:
+for _subfolder in ['', 'services', 'services/gallery', 'portfolio', 'portfolio/gallery', 'blog', 'site', 'team', 'case_studies', 'promotions', 'promotions/deliverables']:
     os.makedirs(MEDIA_ROOT / _subfolder, exist_ok=True)
 
 # File upload configuration
