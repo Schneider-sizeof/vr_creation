@@ -1450,3 +1450,93 @@ msgstr "From 3D design to digital marketing, we transform your real estate proje
 
 msgid "Découvrir nos solutions"
 msgstr "Discover Our Solutions"
+
+msgid "Présentation"
+msgstr "Presentation"
+
+msgid "Découvrez notre offre en vidéo"
+msgstr "Discover our offer in video"
+
+msgid "Votre navigateur ne supporte pas la lecture vidéo."
+msgstr "Your browser does not support video playback."
+
+msgid "Personnalisation"
+msgstr "Customization"
+
+msgid "🛠️ Personnalisez votre pack"
+msgstr "🛠️ Customize your pack"
+
+msgid "Sélectionnez ou désélectionnez les services selon vos besoins. Les services inclus dans le pack sont pré-cochés."
+msgstr "Select or deselect services according to your needs. Services included in the pack are pre-checked."
+
+msgid "Sélectionné"
+msgstr "Selected"
+
+msgid "Ajouter"
+msgstr "Add"
+
+msgid "Votre sélection"
+msgstr "Your selection"
+
+msgid "service(s) sélectionné(s)"
+msgstr "service(s) selected"
+
+msgid "Demander un devis personnalisé"
+msgstr "Request a personalized quote"
+
+msgid "Pack"
+msgstr "Pack"
+
+msgid "Services sélectionnés"
+msgstr "Selected services"
+
+msgid "Notre approche"
+msgstr "Our approach"
+
+msgid "🎯 Nous sélectionnons le meilleur pour vous"
+msgstr "🎯 We select the best for you"
+
+msgid "Nous analysons votre projet et mettons en place la stratégie la plus efficace. Vous ne payez rien — nous ne gagnons que si vous vendez."
+msgstr "We analyze your project and implement the most effective strategy. You pay nothing — we only earn if you sell."
+
+msgid "Site Web"
+msgstr "Website"
+
+msgid "Visites 3D"
+msgstr "3D Tours"
+
+msgid "Branding"
+msgstr "Branding"
+
+msgid "Service client"
+msgstr "Customer service"
+
+msgid "Dashboard"
+msgstr "Dashboard"
+
+msgid "Commission sur vente"
+msgstr "Sales commission"
+
+msgid "Vous ne payez que si vous vendez"
+msgstr "You only pay when you sell"
+
+msgid "Chaque prestation est conçue pour maximiser votre impact commercial et accélérer vos ventes."
+msgstr "Each service is designed to maximize your commercial impact and accelerate your sales."
+
+msgid "Prestation"
+msgstr "Service"
+
+msgid "Offre sur commission — Zéro investissement"
+msgstr "Commission-based offer — Zero investment"
+
+msgid "Ce site est hébergé par PythonAnywhere (PythonAnywhere LLP, Anaconda Inc.)"
+msgstr "This site is hosted by PythonAnywhere (PythonAnywhere LLP, Anaconda Inc.)"
+
+msgid "L'ensemble de ce site relève de la législation sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés."
+msgstr "This entire site is subject to copyright and intellectual property legislation. All reproduction rights are reserved."
+
+msgid "Nous collectons les données que vous nous fournissez via notre formulaire de contact (nom, email, téléphone, message)."
+msgstr "We collect the data you provide us via our contact form (name, email, phone, message)."
+
+msgid "Ces données sont utilisées uniquement pour répondre à vos demandes."
+msgstr "This data is used solely to respond to your requests."

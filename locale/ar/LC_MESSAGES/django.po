@@ -1450,3 +1450,93 @@ msgstr "من التصميم ثلاثي الأبعاد إلى التسويق ال
 
 msgid "Découvrir nos solutions"
 msgstr "اكتشف حلولنا"
+
+msgid "Présentation"
+msgstr "عرض تقديمي"
+
+msgid "Découvrez notre offre en vidéo"
+msgstr "اكتشف عرضنا بالفيديو"
+
+msgid "Votre navigateur ne supporte pas la lecture vidéo."
+msgstr "متصفحك لا يدعم تشغيل الفيديو."
+
+msgid "Personnalisation"
+msgstr "تخصيص"
+
+msgid "🛠️ Personnalisez votre pack"
+msgstr "🛠️ خصّص باقتك"
+
+msgid "Sélectionnez ou désélectionnez les services selon vos besoins. Les services inclus dans le pack sont pré-cochés."
+msgstr "حدد أو ألغِ تحديد الخدمات وفقاً لاحتياجاتك. الخدمات المدرجة في الباقة محددة مسبقاً."
+
+msgid "Sélectionné"
+msgstr "مُحدّد"
+
+msgid "Ajouter"
+msgstr "إضافة"
+
+msgid "Votre sélection"
+msgstr "اختيارك"
+
+msgid "service(s) sélectionné(s)"
+msgstr "خدمة(ات) محددة"
+
+msgid "Demander un devis personnalisé"
+msgstr "اطلب عرض أسعار مخصص"
+
+msgid "Pack"
+msgstr "الباقة"
+
+msgid "Services sélectionnés"
+msgstr "الخدمات المحددة"
+
+msgid "Notre approche"
+msgstr "نهجنا"
+
+msgid "🎯 Nous sélectionnons le meilleur pour vous"
+msgstr "🎯 نختار الأفضل لك"
+
+msgid "Nous analysons votre projet et mettons en place la stratégie la plus efficace. Vous ne payez rien — nous ne gagnons que si vous vendez."
+msgstr "نحلل مشروعك وننفذ الاستراتيجية الأكثر فعالية. لا تدفع شيئاً — نربح فقط إذا بعت."
+
+msgid "Site Web"
+msgstr "موقع إلكتروني"
+
+msgid "Visites 3D"
+msgstr "جولات ثلاثية الأبعاد"
+
+msgid "Branding"
+msgstr "هوية بصرية"
+
+msgid "Service client"
+msgstr "خدمة العملاء"
+
+msgid "Dashboard"
+msgstr "لوحة التحكم"
+
+msgid "Commission sur vente"
+msgstr "عمولة على المبيعات"
+
+msgid "Vous ne payez que si vous vendez"
+msgstr "تدفع فقط عندما تبيع"
+
+msgid "Chaque prestation est conçue pour maximiser votre impact commercial et accélérer vos ventes."
+msgstr "كل خدمة مصممة لتعظيم تأثيرك التجاري وتسريع مبيعاتك."
+
+msgid "Prestation"
+msgstr "خدمة"
+
+msgid "Offre sur commission — Zéro investissement"
+msgstr "عرض بالعمولة — صفر استثمار"
+
+msgid "Ce site est hébergé par PythonAnywhere (PythonAnywhere LLP, Anaconda Inc.)"
+msgstr "هذا الموقع مستضاف من طرف PythonAnywhere"
+
+msgid "L'ensemble de ce site relève de la législation sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés."
+msgstr "يخضع هذا الموقع بالكامل لتشريعات حقوق النشر والملكية الفكرية. جميع حقوق النسخ محفوظة."
+
+msgid "Nous collectons les données que vous nous fournissez via notre formulaire de contact (nom, email, téléphone, message)."
+msgstr "نجمع البيانات التي تقدمها لنا عبر نموذج الاتصال (الاسم، البريد الإلكتروني، الهاتف، الرسالة)."
+
+msgid "Ces données sont utilisées uniquement pour répondre à vos demandes."
+msgstr "تُستخدم هذه البيانات فقط للرد على طلباتك."

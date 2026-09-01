@@ -309,6 +309,10 @@ class Promotion(models.Model):
         _('Taux de commission'), max_length=50, blank=True,
         help_text=_('Ex: 10%, 15%, ou "Sur négociation". Affiché uniquement pour les offres sur commission.')
     )
+    video = models.FileField(
+        _('Vidéo explicative du pack'), upload_to='promotions/videos/', blank=True, null=True,
+        help_text=_('Vidéo MP4 expliquant le pack (max 50 Mo). Affichée sur la page du pack si présente.')
+    )
     order = models.PositiveIntegerField(_('Ordre'), default=0)
     created_at = models.DateTimeField(_('Créé le'), auto_now_add=True)
     updated_at = models.DateTimeField(_('Modifié le'), auto_now=True)

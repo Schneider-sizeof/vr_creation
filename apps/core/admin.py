@@ -173,7 +173,7 @@ class PromotionAdmin(TranslationAdmin):
             'fields': ('solution_title', 'solution_text', 'solution_quote')
         }),
         (_('Section Appel à l\'action (CTA)'), {
-            'fields': ('cta_title', 'cta_text', 'offer_price', 'commission_rate')
+            'fields': ('cta_title', 'cta_text', 'offer_price', 'commission_rate', 'video')
         }),
         (_('Services inclus dans le pack'), {
             'fields': ('included_services',),
