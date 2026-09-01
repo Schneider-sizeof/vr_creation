@@ -150,10 +150,12 @@ class PromotionStepInline(TranslationTabularInline):
 
 @admin.register(Promotion)
 class PromotionAdmin(TranslationAdmin):
-    list_display = ('title', 'slug', 'badge_text', 'offer_price', 'is_active', 'order')
-    list_editable = ('is_active', 'order')
+    list_display = ('title', 'slug', 'badge_text', 'offer_price', 'is_featured', 'is_customizable', 'is_active', 'order')
+    list_editable = ('is_featured', 'is_customizable', 'is_active', 'order')
+    list_filter = ('is_active', 'is_featured', 'is_customizable')
     prepopulated_fields = {'slug': ('title',)}
     search_fields = ('title', 'headline', 'sub_headline')
+    filter_horizontal = ('included_services',)
     inlines = [PromotionDeliverableInline, PromotionComparisonInline, PromotionStepInline]
 
     fieldsets = (
@@ -170,10 +172,18 @@ class PromotionAdmin(TranslationAdmin):
             'fields': ('solution_title', 'solution_text', 'solution_quote')
         }),
         (_('Section Appel à l\'action (CTA)'), {
-            'fields': ('cta_title', 'cta_text', 'offer_price')
+            'fields': ('cta_title', 'cta_text', 'offer_price', 'commission_rate')
         }),
-        (_('Paramètres'), {
-            'fields': ('is_active', 'order')
+        (_('Services inclus dans le pack'), {
+            'fields': ('included_services',),
+            'description': 'Sélectionnez les services inclus dans ce pack. Pour les packs personnalisables, le client pourra ajuster cette sélection.',
+        }),
+        (_('Paramètres du Pack'), {
+            'fields': ('is_featured', 'is_customizable', 'is_active', 'order'),
+            'description': '• Mise en avant : affiche ce pack en section vedette sur la page d\'accueil.\n'
+                           '• Personnalisable : le client peut modifier les services inclus.\n'
+                           '• Décocher "Personnalisable" pour les offres sur commission.',
         }),
     )
+
 

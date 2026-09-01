@@ -291,6 +291,24 @@ class Promotion(models.Model):
     offer_price = models.CharField(_('Tarif / Condition de l\'offre'), max_length=100, default='Sur devis')
     
     is_active = models.BooleanField(_('Actif'), default=True)
+    is_featured = models.BooleanField(
+        _('Mise en avant'), default=False,
+        help_text=_('Cocher pour afficher ce pack en section vedette sur la page d\'accueil et d\'autres pages.')
+    )
+    is_customizable = models.BooleanField(
+        _('Personnalisable'), default=True,
+        help_text=_('Si coché, le client peut personnaliser les services inclus. Décocher pour les offres sur commission où VR Creation décide de la stratégie.')
+    )
+    included_services = models.ManyToManyField(
+        'services.Service', blank=True,
+        related_name='promotions',
+        verbose_name=_('Services inclus'),
+        help_text=_('Services inclus dans ce pack. Pour les packs personnalisables, ces services sont pré-cochés.')
+    )
+    commission_rate = models.CharField(
+        _('Taux de commission'), max_length=50, blank=True,
+        help_text=_('Ex: 10%, 15%, ou "Sur négociation". Affiché uniquement pour les offres sur commission.')
+    )
     order = models.PositiveIntegerField(_('Ordre'), default=0)
     created_at = models.DateTimeField(_('Créé le'), auto_now_add=True)
     updated_at = models.DateTimeField(_('Modifié le'), auto_now=True)

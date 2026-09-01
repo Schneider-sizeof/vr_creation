@@ -140,6 +140,84 @@
 {% endif %}
 
 <!-- ═══════════════════════════════════════════════
+     SECTION 3b — SERVICES INCLUS / PERSONNALISATION
+     ═══════════════════════════════════════════════ -->
+{% if included_services or promotion.is_customizable %}
+<section class="section bg-white py-20 relative overflow-hidden">
+    <div class="light-orb light-orb-primary" style="width: 250px; height: 250px; top: -40px; right: 15%;"></div>
+    <div class="container mx-auto px-4 max-w-5xl relative z-10">
+        <div class="text-center mb-16 animate-on-scroll slide-up">
+            <span class="pill-badge">{% trans "Services" %}</span>
+            {% if promotion.is_customizable %}
+            <h2 class="section-title text-dark uppercase tracking-wider">{% trans "🛠️ Personnalisez votre pack" %}</h2>
+            <p class="text-gray-600 font-light max-w-2xl mx-auto">{% trans "Les services cochés sont inclus dans ce pack. Vous pouvez personnaliser votre sélection selon vos besoins — contactez-nous pour ajuster votre offre." %}</p>
+            {% else %}
+            <h2 class="section-title text-dark uppercase tracking-wider">{% trans "🎯 Nous sélectionnons le meilleur pour vous" %}</h2>
+            <p class="text-gray-600 font-light max-w-2xl mx-auto">{% trans "Nous analysons votre projet et mettons en place la stratégie la plus efficace. Vous ne payez rien — nous ne gagnons que si vous vendez." %}</p>
+            {% if promotion.commission_rate %}
+            <div class="mt-6 inline-flex items-center gap-3 bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-2xl px-6 py-3">
+                <i class="fas fa-handshake text-amber-500 text-xl"></i>
+                <div class="text-left">
+                    <span class="block text-[10px] uppercase tracking-wider text-amber-600 font-bold">{% trans "Commission" %}</span>
+                    <span class="text-amber-700 font-black text-lg">{{ promotion.commission_rate }}</span>
+                </div>
+            </div>
+            {% endif %}
+            {% endif %}
+        </div>
+
+        {% if promotion.is_customizable and all_services %}
+        <!-- Customizable: show all services, pre-check the included ones -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {% for service in all_services %}
+            {% if service in included_services.all %}
+            <div class="relative bg-primary-light/20 border-2 border-primary rounded-2xl p-6 flex items-start gap-4 animate-on-scroll slide-up" style="transition-delay: {{ forloop.counter }}00ms;">
+                <span class="w-10 h-10 rounded-xl bg-primary text-white flex items-center justify-center flex-shrink-0 shadow-md">
+                    <i class="fas fa-check text-sm"></i>
+                </span>
+                <div>
+                    <h4 class="font-bold text-dark text-base mb-1">{{ service.title }}</h4>
+                    <p class="text-gray-600 text-sm font-light">{{ service.short_description|truncatewords:20 }}</p>
+                    <span class="inline-block mt-2 text-[10px] uppercase tracking-wider text-primary font-bold bg-primary/10 px-2 py-0.5 rounded-full">{% trans "Inclus" %}</span>
+                </div>
+            </div>
+            {% else %}
+            <div class="relative bg-gray-50 border border-gray-200 border-dashed rounded-2xl p-6 flex items-start gap-4 opacity-70 hover:opacity-100 transition-opacity animate-on-scroll slide-up" style="transition-delay: {{ forloop.counter }}00ms;">
+                <span class="w-10 h-10 rounded-xl bg-gray-200 text-gray-400 flex items-center justify-center flex-shrink-0">
+                    <i class="fas fa-plus text-sm"></i>
+                </span>
+                <div>
+                    <h4 class="font-bold text-gray-500 text-base mb-1">{{ service.title }}</h4>
+                    <p class="text-gray-400 text-sm font-light">{{ service.short_description|truncatewords:20 }}</p>
+                    <span class="inline-block mt-2 text-[10px] uppercase tracking-wider text-gray-400 font-bold bg-gray-100 px-2 py-0.5 rounded-full">{% trans "Optionnel" %}</span>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+        <div class="text-center mt-10 animate-on-scroll slide-up">
+            <a href="{% url 'contact:contact' %}" class="btn btn-outline px-8 py-3 text-sm font-bold">
+                {% trans "Personnaliser mon pack" %} <i class="fas fa-sliders-h ml-2"></i>
+            </a>
+        </div>
+
+        {% elif included_services %}
+        <!-- Non-customizable (commission): just show included services -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {% for service in included_services %}
+            <div class="bg-white border border-gray-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow animate-on-scroll slide-up" style="transition-delay: {{ forloop.counter }}00ms;">
+                <span class="text-primary text-3xl mb-3 block"><i class="{{ service.icon|default:'fas fa-cog' }}"></i></span>
+                <h4 class="font-bold text-dark text-base mb-2">{{ service.title }}</h4>
+                <p class="text-gray-500 text-xs font-light">{{ service.short_description|truncatewords:15 }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endif %}
+
+<!-- ═══════════════════════════════════════════════
      SECTION 4 — COMPARATIVE TABLE
      ═══════════════════════════════════════════════ -->
 {% if comparisons %}

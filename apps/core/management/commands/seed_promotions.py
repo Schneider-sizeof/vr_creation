@@ -4,10 +4,11 @@ Usage: python manage.py seed_promotions
 """
 from django.core.management.base import BaseCommand
 from apps.core.models import Promotion, PromotionDeliverable, PromotionComparison, PromotionStep
+from apps.services.models import Service
 
 
 class Command(BaseCommand):
-    help = 'Seeds database with a default Promotion package (Pack Spécial Promoteurs Débutants) and its associated sections.'
+    help = 'Seeds database with Promotion packages and their associated sections.'
 
     def handle(self, *args, **options):
         self.stdout.write('— Seeding promotions —')
@@ -15,8 +16,10 @@ class Command(BaseCommand):
         # Clean existing promotions
         Promotion.objects.all().delete()
 
-        # Create main promotion
-        promo = Promotion(
+        # ═══════════════════════════════════════════
+        # PACK 1 — Pack Spécial Promoteurs Débutants
+        # ═══════════════════════════════════════════
+        promo1 = Promotion(
             title_fr="Pack Spécial Promoteurs Débutants",
             title_en="Special Pack for Beginner Developers",
             title_ar="باقة خاصة بالمطورين العقاريين المبتدئين",
@@ -71,12 +74,23 @@ class Command(BaseCommand):
             offer_price_ar="عند الطلب / عرض خاص",
             
             is_active=True,
-            order=1
+            is_featured=False,
+            is_customizable=True,
+            order=2
         )
-        promo.save()
+        promo1.save()
 
-        # Create deliverables
-        deliverables_data = [
+        # Link services to Pack 1
+        service_slugs_pack1 = ['modelisation-3d', 'visites-virtuelles', 'captures-360', 'branding-visuel', 'photographie']
+        for slug in service_slugs_pack1:
+            try:
+                svc = Service.objects.get(slug=slug)
+                promo1.included_services.add(svc)
+            except Service.DoesNotExist:
+                self.stdout.write(self.style.WARNING(f'  Service "{slug}" not found, skipping'))
+
+        # Deliverables for Pack 1
+        deliverables_data_1 = [
             {
                 'title_fr': "Modélisation 3D photoréaliste",
                 'title_en': "Photorealistic 3D Modeling",
@@ -99,153 +113,242 @@ class Command(BaseCommand):
                 'title_fr': "Vidéo 3D immersive",
                 'title_en': "Immersive 3D Video",
                 'title_ar': "فيديو ثلاثي الأبعاد غامر",
-                'description_fr': "Une vidéo de survol du projet (extérieur + intérieur), parfaite pour les réseaux sociaux et vos rendez-vous commerciaux. Capte l'attention en 10 secondes.",
-                'description_en': "A flyover video of the project (exterior + interior), perfect for social media and your sales meetings. Captures attention in 10 seconds.",
-                'description_ar': "فيديو تحليق فوق المشروع (خارجي + داخلي)، ممتاز لمواقع التواصل الاجتماعي واجتماعات المبيعات. يجذب الانتباه في 10 ثوانٍ.",
+                'description_fr': "Une vidéo de survol du projet (extérieur + intérieur), parfaite pour les réseaux sociaux et vos rendez-vous commerciaux.",
+                'description_en': "A flyover video of the project (exterior + interior), perfect for social media and your sales meetings.",
+                'description_ar': "فيديو تحليق فوق المشروع (خارجي + داخلي)، ممتاز لمواقع التواصل الاجتماعي واجتماعات المبيعات.",
                 'icon': 'fas fa-film'
             },
             {
                 'title_fr': "Branding & supports",
                 'title_en': "Branding & Marketing Assets",
                 'title_ar': "الهوية البصرية والدعائم الإعلانية",
-                'description_fr': "Logo du projet, plaquette commerciale, brochure de vente, affiches de chantier. Une identité visuelle crédible, même pour un premier projet.",
+                'description_fr': "Logo du projet, plaquette commerciale, brochure de vente, affiches de chantier. Une identité visuelle crédible.",
                 'description_en': "Project logo, sales brochure, site banners. A credible visual identity, even for a first project.",
-                'description_ar': "شعار المشروع، الكتيب التجاري، مطوية المبيعات، وملصقات الورشة. هوية بصرية موثوقة، حتى بالنسبة للمشروع الأول.",
+                'description_ar': "شعار المشروع، الكتيب التجاري، مطوية المبيعات، وملصقات الورشة. هوية بصرية موثوقة.",
                 'icon': 'fas fa-palette'
             },
             {
                 'title_fr': "Photo & captures 360°",
                 'title_en': "Photo & 360° Captures",
                 'title_ar': "صور ولقطات 360 درجة",
-                'description_fr': "Pour humaniser votre communication et rassurer vos prospects avec du contenu réel, une fois le showroom ou le terrain prêt.",
-                'description_en': "To humanize your communication and reassure your prospects with real content, once the showroom or site is ready.",
-                'description_ar': "لإضفاء طابع إنساني على تواصلكم وطمأنة عملائكم المحتملين بمحتوى حقيقي، بمجرد جاهزية صالة العرض أو الموقع.",
+                'description_fr': "Pour humaniser votre communication et rassurer vos prospects avec du contenu réel.",
+                'description_en': "To humanize your communication and reassure your prospects with real content.",
+                'description_ar': "لإضفاء طابع إنساني على تواصلكم وطمأنة عملائكم المحتملين بمحتوى حقيقي.",
                 'icon': 'fas fa-camera'
             }
         ]
-        for idx, item in enumerate(deliverables_data):
+        for idx, item in enumerate(deliverables_data_1):
             PromotionDeliverable.objects.create(
-                promotion=promo,
-                title_fr=item['title_fr'],
-                title_en=item['title_en'],
-                title_ar=item['title_ar'],
-                description_fr=item['description_fr'],
-                description_en=item['description_en'],
-                description_ar=item['description_ar'],
-                icon=item['icon'],
-                order=idx + 1
+                promotion=promo1, order=idx + 1, icon=item['icon'],
+                title_fr=item['title_fr'], title_en=item['title_en'], title_ar=item['title_ar'],
+                description_fr=item['description_fr'], description_en=item['description_en'], description_ar=item['description_ar'],
             )
 
-        # Create comparisons
-        comparisons_data = [
-            {
-                'feature_fr': "Visualisation",
-                'feature_en': "Visualization",
-                'feature_ar': "الرؤية البصرية",
-                'without_vr_fr': "Plans 2D difficiles à comprendre pour le client",
-                'without_vr_en': "Abstract 2D plans hard for client to understand",
-                'without_vr_ar': "مخططات ثنائية الأبعاد يصعب على العميل فهمها",
-                'with_vr_fr': "Rendus 3D immédiatement parlants",
-                'with_vr_en': "Immediately talking 3D renders",
-                'with_vr_ar': "رسوم ثلاثية الأبعاد واضحة على الفور",
-            },
-            {
-                'feature_fr': "Projection client",
-                'feature_en': "Client projection",
-                'feature_ar': "التخيل لدى العميل",
-                'without_vr_fr': "Prospects qui hésitent faute de projection",
-                'without_vr_en': "Prospects hesitating due to lack of projection",
-                'without_vr_ar': "عملاء محتملون يترددون لعدم قدرتهم على التخيل",
-                'with_vr_fr': "Clients convaincus dès la première visite",
-                'with_vr_en': "Clients convinced from the first visit",
-                'with_vr_ar': "عملاء مقتنعون منذ الزيارة الأولى",
-            },
-            {
-                'feature_fr': "Flexibilité",
-                'feature_en': "Flexibility",
-                'feature_ar': "المرونة",
-                'without_vr_fr': "Maquette physique coûteuse et lente à modifier",
-                'without_vr_en': "Physical model expensive and slow to modify",
-                'without_vr_ar': "مجسم مادي مكلف وبطيء التعديل",
-                'with_vr_fr': "Maquette numérique rapide et modifiable",
-                'with_vr_en': "Digital model fast and modifiable",
-                'with_vr_ar': "مجسم رقمي سريع وقابل للتعدil",
-            },
-            {
-                'feature_fr': "Image de marque",
-                'feature_en': "Brand image",
-                'feature_ar': "صورة العلامة التجارية",
-                'without_vr_fr': "Communication artisanale peu rassurante",
-                'without_vr_en': "Basic communication not very reassuring",
-                'without_vr_ar': "تواصل بسيط لا يبعث على الكثير من الطمأنينة",
-                'with_vr_fr': "Identité visuelle premium digne d'une agence",
-                'with_vr_en': "Premium visual identity matching top agencies",
-                'with_vr_ar': "هوية بصرية راقية تليق بأكبر الوكالات",
-            },
-            {
-                'feature_fr': "Ventes",
-                'feature_en': "Sales speed",
-                'feature_ar': "سرعة المبيعات",
-                'without_vr_fr': "Ventes sur plan lentes et laborieuses",
-                'without_vr_en': "Slow and tedious off-plan sales",
-                'without_vr_ar': "مبيعات على المخطط بطيئة ومتعبة",
-                'with_vr_fr': "Réservations accélérées, trésorerie sécurisée plus tôt",
-                'with_vr_en': "Accelerated reservations, cash secured earlier",
-                'with_vr_ar': "حجوزات متسارعة وتأمين السيولة في وقت مبكر",
-            }
+        # Comparisons for Pack 1
+        comparisons_data_1 = [
+            ('Visualisation', 'Visualization', 'الرؤية البصرية',
+             'Plans 2D difficiles à comprendre', 'Abstract 2D plans', 'مخططات ثنائية الأبعاد يصعب فهمها',
+             'Rendus 3D immédiatement parlants', 'Immediately clear 3D renders', 'رسوم ثلاثية الأبعاد واضحة على الفور'),
+            ('Projection client', 'Client projection', 'التخيل لدى العميل',
+             'Prospects qui hésitent', 'Prospects hesitating', 'عملاء محتملون يترددون',
+             'Clients convaincus dès la 1re visite', 'Clients convinced from first visit', 'عملاء مقتنعون منذ الزيارة الأولى'),
+            ('Image de marque', 'Brand image', 'صورة العلامة التجارية',
+             'Communication artisanale peu rassurante', 'Basic communication', 'تواصل بسيط لا يبعث على الطمأنينة',
+             'Identité visuelle premium', 'Premium visual identity', 'هوية بصرية راقية'),
+            ('Ventes', 'Sales speed', 'سرعة المبيعات',
+             'Ventes sur plan lentes', 'Slow off-plan sales', 'مبيعات على المخطط بطيئة',
+             'Réservations accélérées', 'Accelerated reservations', 'حجوزات متسارعة'),
         ]
-        for idx, item in enumerate(comparisons_data):
+        for idx, c in enumerate(comparisons_data_1):
             PromotionComparison.objects.create(
-                promotion=promo,
-                feature_fr=item['feature_fr'],
-                feature_en=item['feature_en'],
-                feature_ar=item['feature_ar'],
-                without_vr_fr=item['without_vr_fr'],
-                without_vr_en=item['without_vr_en'],
-                without_vr_ar=item['without_vr_ar'],
-                with_vr_fr=item['with_vr_fr'],
-                with_vr_en=item['with_vr_en'],
-                with_vr_ar=item['with_vr_ar'],
-                order=idx + 1
+                promotion=promo1, order=idx + 1,
+                feature_fr=c[0], feature_en=c[1], feature_ar=c[2],
+                without_vr_fr=c[3], without_vr_en=c[4], without_vr_ar=c[5],
+                with_vr_fr=c[6], with_vr_en=c[7], with_vr_ar=c[8],
             )
 
-        # Create steps
-        steps_data = [
-            {
-                'title_fr': "Envoyez-nous votre plan",
-                'title_en': "Send us your plan",
-                'title_ar': "أرسل لنا مخططك",
-                'description_fr': "Plan architectural, esquisse ou permis de construire — peu importe le stade d'avancement.",
-                'description_en': "Architectural plan, sketch or building permit — no matter the stage of advancement.",
-                'description_ar': "مخطط معماري، مسودة أو رخصة بناء — مهما كانت مرحلة تقدم المشروع."
-            },
-            {
-                'title_fr': "Nous créons vos visuels",
-                'title_en': "We build your visuals",
-                'title_ar': "نصمم لك مرئياتك",
-                'description_fr': "Rendus 3D, visite virtuelle et supports commerciaux réalisés sur mesure sous quelques jours.",
-                'description_en': "3D renders, virtual tour and marketing materials custom made in a few days.",
-                'description_ar': "عروض ثلاثية الأبعاد، جولة افتراضية ودعائم تسويقية مصممة خصيصاً في بضعة أيام."
-            },
-            {
-                'title_fr': "Vous vendez",
-                'title_en': "You start selling",
-                'title_ar': "تبدأ في البيع",
-                'description_fr': "Utilisez ces outils en rendez-vous client, sur les réseaux sociaux ou sur vos brochures pour réserver vos lots.",
-                'description_en': "Use these tools in client meetings, on social media or in your brochures to book your units.",
-                'description_ar': "استخدم هذه الأدوات في لقاءات عملائك، على شبكات التواصل الاجتماعي أو على مطوياتك لحجز وحداتك."
-            }
+        # Steps for Pack 1
+        steps_data_1 = [
+            ('Envoyez-nous votre plan', 'Send us your plan', 'أرسل لنا مخططك',
+             'Plan architectural, esquisse ou permis — peu importe le stade.', 'Architectural plan, sketch or permit.', 'مخطط معماري، مسودة أو رخصة بناء.'),
+            ('Nous créons vos visuels', 'We build your visuals', 'نصمم لك مرئياتك',
+             'Rendus 3D, visite virtuelle et supports commerciaux sur mesure.', '3D renders, virtual tour and marketing materials.', 'عروض ثلاثية الأبعاد، جولة افتراضية ودعائم تسويقية.'),
+            ('Vous vendez', 'You start selling', 'تبدأ في البيع',
+             'Utilisez ces outils pour réserver vos lots.', 'Use these tools to book your units.', 'استخدم هذه الأدوات لحجز وحداتك.'),
         ]
-        for idx, item in enumerate(steps_data):
+        for idx, s in enumerate(steps_data_1):
             PromotionStep.objects.create(
-                promotion=promo,
-                title_fr=item['title_fr'],
-                title_en=item['title_en'],
-                title_ar=item['title_ar'],
-                description_fr=item['description_fr'],
-                description_en=item['description_en'],
-                description_ar=item['description_ar'],
-                order=idx + 1
+                promotion=promo1, order=idx + 1,
+                title_fr=s[0], title_en=s[1], title_ar=s[2],
+                description_fr=s[3], description_en=s[4], description_ar=s[5],
             )
 
-        self.stdout.write(self.style.SUCCESS('  [OK] Promotion "pack-promoteurs-debutants" and details seeded successfully'))
+        self.stdout.write(self.style.SUCCESS('  [OK] Pack 1 "Pack Promoteurs Débutants" seeded'))
+
+        # ═══════════════════════════════════════════════════
+        # PACK 2 — Offre Performance (Commission-Based)
+        # ═══════════════════════════════════════════════════
+        promo2 = Promotion(
+            title_fr="Offre Performance — Zéro Risque, 100% Résultat",
+            title_en="Performance Offer — Zero Risk, 100% Results",
+            title_ar="عرض الأداء — صفر مخاطرة، نتائج 100%",
+            
+            slug="offre-performance-commission",
+            badge_text_fr="Exclusif",
+            badge_text_en="Exclusive",
+            badge_text_ar="حصري",
+            
+            headline_fr="VOUS NE PAYEZ RIEN. NOUS PRENONS TOUT EN CHARGE. VOUS NE PAYEZ QUE SI VOUS VENDEZ.",
+            headline_en="YOU PAY NOTHING. WE HANDLE EVERYTHING. YOU ONLY PAY WHEN YOU SELL.",
+            headline_ar="لا تدفع شيئاً. نتكفل بكل شيء. تدفع فقط عندما تبيع.",
+            
+            sub_headline_fr="VR Creation conçoit la meilleure stratégie marketing pour votre projet, déploie tous les outils nécessaires et gère même la relation avec vos acheteurs. Votre seul investissement : une commission sur chaque vente réussie.",
+            sub_headline_en="VR Creation designs the best marketing strategy for your project, deploys all necessary tools, and even manages buyer relationships. Your only investment: a commission on each successful sale.",
+            sub_headline_ar="VR Creation تصمم أفضل استراتيجية تسويق لمشروعك، تنشر جميع الأدوات اللازمة وتدير حتى العلاقة مع المشترين. استثمارك الوحيد: عمولة على كل عملية بيع ناجحة.",
+            
+            short_description_fr="Zéro investissement initial. Nous créons la stratégie, les visuels, le site, la gestion commerciale — et vous ne payez qu'une commission par vente réussie.",
+            short_description_en="Zero upfront investment. We create the strategy, visuals, website, sales management — and you only pay a commission per successful sale.",
+            short_description_ar="صفر استثمار مبدئي. نصمم الاستراتيجية، المرئيات، الموقع، إدارة المبيعات — ولا تدفع إلا عمولة عن كل بيع ناجح.",
+            
+            problem_title_fr="💰 LE DILEMME DU PROMOTEUR",
+            problem_title_en="💰 THE DEVELOPER'S DILEMMA",
+            problem_title_ar="💰 معضلة المطور العقاري",
+            
+            problem_text_fr="Investir dans le marketing avant même d'avoir vendu un seul lot ? C'est le risque qui freine la plupart des promoteurs. Budget limité, incertitude du marché, peur de l'échec commercial — autant de raisons de ne pas franchir le pas.",
+            problem_text_en="Investing in marketing before selling a single unit? That's the risk holding back most developers. Limited budget, market uncertainty, fear of commercial failure — all reasons not to take the leap.",
+            problem_text_ar="الاستثمار في التسويق قبل بيع وحدة واحدة؟ هذا هو الخطر الذي يعيق معظم المطورين. ميزانية محدودة، عدم يقين السوق، الخوف من الفشل التجاري — كلها أسباب للتردد.",
+            
+            solution_title_fr="🚀 NOTRE MODÈLE : ZÉRO RISQUE, RÉSULTAT GARANTI",
+            solution_title_en="🚀 OUR MODEL: ZERO RISK, GUARANTEED RESULTS",
+            solution_title_ar="🚀 نموذجنا: صفر مخاطرة، نتائج مضمونة",
+            
+            solution_text_fr="Nous ne vous vendons pas un pack de services. Nous investissons dans votre succès. Notre équipe analyse votre projet, conçoit la stratégie la plus efficace et déploie uniquement les outils qui feront la différence — site web, visites 3D, branding, réseaux sociaux, gestion des prospects et même la réponse aux acheteurs. Tout est piloté depuis notre dashboard en temps réel.",
+            solution_text_en="We don't sell you a services package. We invest in your success. Our team analyzes your project, designs the most effective strategy and deploys only the tools that will make a difference — website, 3D tours, branding, social media, lead management and even responding to buyers. Everything is tracked via our real-time dashboard.",
+            solution_text_ar="لا نبيعك حزمة خدمات. نستثمر في نجاحك. فريقنا يحلل مشروعك، يصمم أفضل استراتيجية وينشر فقط الأدوات التي ستحدث الفرق — موقع إلكتروني، جولات ثلاثية الأبعاد، هوية بصرية، وسائل التواصل الاجتماعي، إدارة العملاء المحتملين وحتى الرد على المشترين.",
+            
+            solution_quote_fr="Vous ne prenez aucun risque. Si vous ne vendez pas, vous ne payez pas. C'est aussi simple que ça.",
+            solution_quote_en="You take zero risk. If you don't sell, you don't pay. It's that simple.",
+            solution_quote_ar="لا تتحمل أي مخاطرة. إذا لم تبع، لا تدفع. الأمر بهذه البساطة.",
+            
+            cta_title_fr="🤝 PRÊT À VENDRE SANS RISQUE ?",
+            cta_title_en="🤝 READY TO SELL WITHOUT RISK?",
+            cta_title_ar="🤝 مستعد للبيع بدون مخاطرة؟",
+            
+            cta_text_fr="Contactez-nous pour une étude gratuite de votre projet. Nous évaluerons ensemble le potentiel commercial et vous proposerons une stratégie sur mesure — sans aucun engagement financier de votre part.",
+            cta_text_en="Contact us for a free project assessment. We'll evaluate the commercial potential together and propose a tailored strategy — with no financial commitment on your part.",
+            cta_text_ar="اتصل بنا لدراسة مجانية لمشروعك. سنقيم معاً الإمكانات التجارية ونقترح استراتيجية مصممة خصيصاً — بدون أي التزام مالي من جانبك.",
+            
+            offer_price_fr="0 DH — Commission sur vente uniquement",
+            offer_price_en="$0 — Commission on sale only",
+            offer_price_ar="0 درهم — عمولة على البيع فقط",
+            
+            commission_rate_fr="Sur négociation",
+            commission_rate_en="Negotiable",
+            commission_rate_ar="قابلة للتفاوض",
+            
+            is_active=True,
+            is_featured=True,
+            is_customizable=False,
+            order=1
+        )
+        promo2.save()
+
+        # Deliverables for Pack 2
+        deliverables_data_2 = [
+            {
+                'title_fr': "Stratégie marketing sur mesure",
+                'title_en': "Custom Marketing Strategy",
+                'title_ar': "استراتيجية تسويق مصممة خصيصاً",
+                'description_fr': "Analyse approfondie de votre projet, de votre marché cible et de la concurrence. Nous concevons un plan d'action précis pour maximiser vos ventes.",
+                'description_en': "In-depth analysis of your project, target market and competition. We design a precise action plan to maximize your sales.",
+                'description_ar': "تحليل معمق لمشروعك، والسوق المستهدف والمنافسة. نصمم خطة عمل دقيقة لتعظيم مبيعاتك.",
+                'icon': 'fas fa-chess-queen'
+            },
+            {
+                'title_fr': "Création de tous les supports visuels",
+                'title_en': "Full Visual Asset Creation",
+                'title_ar': "إنشاء جميع الدعائم البصرية",
+                'description_fr': "Site web, rendus 3D, visites virtuelles, vidéos, branding — nous déployons uniquement ce qui est nécessaire pour votre projet.",
+                'description_en': "Website, 3D renders, virtual tours, videos, branding — we deploy only what's necessary for your project.",
+                'description_ar': "موقع إلكتروني، عروض ثلاثية الأبعاد، جولات افتراضية، فيديوهات، هوية بصرية — ننشر فقط ما هو ضروري لمشروعك.",
+                'icon': 'fas fa-layer-group'
+            },
+            {
+                'title_fr': "Gestion des réseaux sociaux",
+                'title_en': "Social Media Management",
+                'title_ar': "إدارة وسائل التواصل الاجتماعي",
+                'description_fr': "Publication régulière, publicités ciblées, community management — nous gérons votre présence en ligne de A à Z.",
+                'description_en': "Regular posting, targeted ads, community management — we handle your online presence from A to Z.",
+                'description_ar': "نشر منتظم، إعلانات مستهدفة، إدارة المجتمع — ندير تواجدك الرقمي من الألف إلى الياء.",
+                'icon': 'fas fa-share-alt'
+            },
+            {
+                'title_fr': "Gestion commerciale & réponse aux acheteurs",
+                'title_en': "Sales Management & Buyer Response",
+                'title_ar': "إدارة المبيعات والرد على المشترين",
+                'description_fr': "Nous répondons à vos prospects, qualifions les leads et organisons les rendez-vous. Vous vous concentrez sur votre chantier.",
+                'description_en': "We respond to your prospects, qualify leads and arrange appointments. You focus on your construction.",
+                'description_ar': "نرد على عملائكم المحتملين، نقيّم العملاء المحتملين وننظم المواعيد. أنتم تركزون على البناء.",
+                'icon': 'fas fa-headset'
+            },
+            {
+                'title_fr': "Dashboard de suivi en temps réel",
+                'title_en': "Real-Time Tracking Dashboard",
+                'title_ar': "لوحة تحكم للمتابعة في الوقت الحقيقي",
+                'description_fr': "Visualisez vos leads, vos ventes, vos performances marketing et votre ROI depuis une interface simple et intuitive.",
+                'description_en': "View your leads, sales, marketing performance and ROI from a simple, intuitive interface.",
+                'description_ar': "تابع عملاءك المحتملين، مبيعاتك، أداء التسويق والعائد على الاستثمار من واجهة بسيطة وبديهية.",
+                'icon': 'fas fa-chart-line'
+            },
+        ]
+        for idx, item in enumerate(deliverables_data_2):
+            PromotionDeliverable.objects.create(
+                promotion=promo2, order=idx + 1, icon=item['icon'],
+                title_fr=item['title_fr'], title_en=item['title_en'], title_ar=item['title_ar'],
+                description_fr=item['description_fr'], description_en=item['description_en'], description_ar=item['description_ar'],
+            )
+
+        # Comparisons for Pack 2
+        comparisons_data_2 = [
+            ('Investissement initial', 'Initial investment', 'الاستثمار المبدئي',
+             'Budget marketing à avancer sans garantie', 'Marketing budget upfront with no guarantee', 'ميزانية تسويق مسبقة بدون ضمان',
+             'Zéro investissement — on avance pour vous', 'Zero investment — we invest for you', 'صفر استثمار — نستثمر من أجلك'),
+            ('Risque financier', 'Financial risk', 'المخاطرة المالية',
+             'Perte si le marketing ne fonctionne pas', 'Loss if marketing doesn\'t work', 'خسارة إذا لم ينجح التسويق',
+             'Zéro risque — paiement uniquement sur vente', 'Zero risk — pay only on sale', 'صفر مخاطرة — الدفع فقط عند البيع'),
+            ('Gestion commerciale', 'Sales management', 'الإدارة التجارية',
+             'Vous devez tout gérer vous-même', 'You must manage everything yourself', 'يجب عليك إدارة كل شيء بنفسك',
+             'Nous gérons leads, prospects et rendez-vous', 'We handle leads, prospects and appointments', 'ندير العملاء المحتملين والمواعيد'),
+            ('Stratégie', 'Strategy', 'الاستراتيجية',
+             'Approche au hasard, sans plan clair', 'Random approach without clear plan', 'نهج عشوائي بدون خطة واضحة',
+             'Stratégie sur mesure par nos experts', 'Custom strategy by our experts', 'استراتيجية مصممة من خبرائنا'),
+            ('Suivi', 'Tracking', 'المتابعة',
+             'Pas de visibilité sur les résultats', 'No visibility on results', 'عدم وضوح النتائج',
+             'Dashboard temps réel avec KPIs clairs', 'Real-time dashboard with clear KPIs', 'لوحة تحكم بمؤشرات أداء واضحة'),
+        ]
+        for idx, c in enumerate(comparisons_data_2):
+            PromotionComparison.objects.create(
+                promotion=promo2, order=idx + 1,
+                feature_fr=c[0], feature_en=c[1], feature_ar=c[2],
+                without_vr_fr=c[3], without_vr_en=c[4], without_vr_ar=c[5],
+                with_vr_fr=c[6], with_vr_en=c[7], with_vr_ar=c[8],
+            )
+
+        # Steps for Pack 2
+        steps_data_2 = [
+            ('Étude gratuite de votre projet', 'Free project assessment', 'دراسة مجانية لمشروعك',
+             'Nous analysons votre projet, votre marché et évaluons le potentiel commercial.', 'We analyze your project, market and evaluate commercial potential.', 'نحلل مشروعك، سوقك ونقيم الإمكانات التجارية.'),
+            ('Nous déployons la stratégie', 'We deploy the strategy', 'ننشر الاستراتيجية',
+             'Création des visuels, mise en ligne, lancement des campagnes marketing — sans que vous ne dépensiez un centime.', 'Visual creation, launch, marketing campaigns — without you spending a cent.', 'إنشاء المرئيات، الإطلاق، حملات التسويق — بدون أن تنفق سنتيماً واحداً.'),
+            ('Vous vendez, vous nous payez', 'You sell, you pay us', 'تبيع، تدفع لنا',
+             'Commission uniquement sur les ventes réussies. Si vous ne vendez pas, vous ne payez rien.', 'Commission only on successful sales. If you don\'t sell, you pay nothing.', 'عمولة فقط على المبيعات الناجحة. إذا لم تبع، لا تدفع شيئاً.'),
+        ]
+        for idx, s in enumerate(steps_data_2):
+            PromotionStep.objects.create(
+                promotion=promo2, order=idx + 1,
+                title_fr=s[0], title_en=s[1], title_ar=s[2],
+                description_fr=s[3], description_en=s[4], description_ar=s[5],
+            )
+
+        self.stdout.write(self.style.SUCCESS('  [OK] Pack 2 "Offre Performance — Commission" seeded (FEATURED)'))
+        self.stdout.write(self.style.SUCCESS('  [OK] All promotions seeded successfully'))

@@ -30,10 +30,26 @@
                         {{ promotion.badge_text }}
                     </span>
                     {% endif %}
+                    {% if promotion.is_featured %}
+                    <span class="absolute top-4 right-4 bg-amber-500 text-white text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-md">
+                        <i class="fas fa-star mr-1"></i>{% trans "Vedette" %}
+                    </span>
+                    {% endif %}
                 </div>
 
                 <!-- Content -->
                 <div class="p-6 flex flex-col flex-grow">
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        {% if not promotion.is_customizable %}
+                        <span class="text-[10px] uppercase tracking-wider font-bold text-amber-600 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded-full">
+                            <i class="fas fa-handshake mr-1"></i>{% trans "Sur commission" %}
+                        </span>
+                        {% else %}
+                        <span class="text-[10px] uppercase tracking-wider font-bold text-primary bg-primary/10 border border-primary/20 px-2 py-0.5 rounded-full">
+                            <i class="fas fa-sliders-h mr-1"></i>{% trans "Personnalisable" %}
+                        </span>
+                        {% endif %}
+                    </div>
                     <h3 class="text-xl font-extrabold text-dark mb-3 leading-snug group-hover:text-primary transition-colors">
                         {{ promotion.title }}
                     </h3>

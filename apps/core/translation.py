@@ -41,7 +41,7 @@ class StrategicSuccessTranslation(TranslationOptions):
 class PromotionTranslation(TranslationOptions):
     fields = ('title', 'badge_text', 'headline', 'sub_headline', 'short_description',
               'problem_title', 'problem_text', 'solution_title', 'solution_text',
-              'solution_quote', 'cta_title', 'cta_text', 'offer_price')
+              'solution_quote', 'cta_title', 'cta_text', 'offer_price', 'commission_rate')
 
 
 class PromotionDeliverableTranslation(TranslationOptions):

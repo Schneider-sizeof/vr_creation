@@ -32,8 +32,8 @@ def home(request):
     hero_slides = HeroSlide.objects.filter(active=True)
     strategic_successes = StrategicSuccess.objects.filter(is_active=True)
     
-    # Latest active promotion for display sections
-    active_promotion = Promotion.objects.filter(is_active=True).first()
+    # Featured promotion for display sections
+    featured_promotion = Promotion.objects.filter(is_active=True, is_featured=True).first()
 
     context = {
         'services': services,
@@ -44,7 +44,7 @@ def home(request):
         'process_steps': process_steps,
         'hero_slides': hero_slides,
         'strategic_successes': strategic_successes,
-        'active_promotion': active_promotion,
+        'featured_promotion': featured_promotion,
         'page_seo': get_page_seo('home'),
         'page_identifier': 'home',
     }
@@ -58,15 +58,15 @@ def about(request):
     process_steps = ProcessStep.objects.all()
     strengths = Strength.objects.all()
     
-    # Latest active promotion for display sections
-    active_promotion = Promotion.objects.filter(is_active=True).first()
+    # Featured promotion for display sections
+    featured_promotion = Promotion.objects.filter(is_active=True, is_featured=True).first()
 
     context = {
         'team_members': team_members,
         'values': values,
         'process_steps': process_steps,
         'strengths': strengths,
-        'active_promotion': active_promotion,
+        'featured_promotion': featured_promotion,
         'page_seo': get_page_seo('about'),
         'page_identifier': 'about',
     }
@@ -114,11 +114,15 @@ def promotion_detail(request, slug):
         slug=slug,
         is_active=True
     )
+    included_services = promotion.included_services.filter(is_active=True)
+    all_services = Service.objects.filter(is_active=True) if promotion.is_customizable else None
     return render(request, 'core/promotion_detail.html', {
         'promotion': promotion,
         'deliverables': promotion.deliverables.all(),
         'comparisons': promotion.comparisons.all(),
         'steps': promotion.steps.all(),
+        'included_services': included_services,
+        'all_services': all_services,
         'page_identifier': 'promotion_detail',
     })
 
