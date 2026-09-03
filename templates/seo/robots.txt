@@ -1,5 +1,9 @@
 User-agent: *
 Allow: /
+Allow: /static/
+Allow: /media/
 Disallow: /admin/
+Disallow: /accounts/
+Disallow: /*?*
 
 Sitemap: {{ site_protocol }}://{{ site_domain }}/sitemap.xml

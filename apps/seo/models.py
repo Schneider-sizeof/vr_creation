@@ -24,6 +24,10 @@ class PageSEO(models.Model):
         _('Ne pas indexer'), default=False,
         help_text=_('Ajouter noindex à cette page')
     )
+    keywords = models.TextField(
+        _('Mots-clés'), blank=True,
+        help_text=_('Mots-clés séparés par des virgules pour cette page (ex: modélisation 3D Tanger, visite virtuelle Maroc)')
+    )
 
     class Meta:
         verbose_name = _('SEO — Page statique')

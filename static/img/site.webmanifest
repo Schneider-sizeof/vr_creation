@@ -1,0 +1,20 @@
+{
+  "name": "VR Creation Company",
+  "short_name": "VR Creation",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3D8EB9",
+  "icons": [
+    {
+      "src": "/static/img/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/img/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

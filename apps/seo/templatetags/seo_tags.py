@@ -13,7 +13,7 @@ register = template.Library()
 
 @register.simple_tag(takes_context=True)
 def seo_meta_tags(context):
-    """Render <title>, meta description, canonical, Open Graph, Twitter Cards."""
+    """Render <title>, meta description, keywords, canonical, Open Graph, Twitter Cards."""
     request = context.get('request')
     page_seo = context.get('page_seo')
     site_settings = context.get('site_settings')
@@ -24,17 +24,19 @@ def seo_meta_tags(context):
     og_image = ''
     no_index = False
     canonical = ''
+    keywords = ''
 
     if page_seo:
         title = page_seo.meta_title or ''
         description = page_seo.meta_description or ''
+        keywords = getattr(page_seo, 'keywords', '') or ''
         if page_seo.og_image:
             og_image = page_seo.og_image.url
         no_index = page_seo.no_index
         canonical = page_seo.canonical_url or ''
 
     # Fallbacks for dynamic content
-    obj = context.get('service') or context.get('project') or context.get('article') or context.get('case_study')
+    obj = context.get('service') or context.get('project') or context.get('article') or context.get('case_study') or context.get('promotion')
     if obj and not title:
         title = getattr(obj, 'title', '')
     if obj and not description:
@@ -75,9 +77,11 @@ def seo_meta_tags(context):
     parts.append(f'<title>{full_title}</title>')
     if description:
         parts.append(f'<meta name="description" content="{description}">')
+    if keywords:
+        parts.append(f'<meta name="keywords" content="{keywords}">')
     parts.append(f'<link rel="canonical" href="{canonical}">')
     if no_index:
-        parts.append('<meta name="robots" content="noindex, nofollow">')
+        parts.append('<meta name="robots" content="noindex, follow">')
 
     # Google Search Console verification
     if site_settings and site_settings.google_search_console_id:
@@ -138,7 +142,7 @@ def hreflang_tags(context):
 
 @register.simple_tag(takes_context=True)
 def jsonld_organization(context):
-    """JSON-LD Organization schema."""
+    """JSON-LD Organization schema with Tangier/Morocco locality."""
     site_settings = context.get('site_settings')
     base_url = f"{settings.SITE_PROTOCOL}://{settings.SITE_DOMAIN}"
 
@@ -158,7 +162,7 @@ def jsonld_organization(context):
     social = []
     if site_settings:
         for field in ['social_facebook', 'social_instagram', 'social_linkedin',
-                       'social_youtube', 'social_twitter']:
+                       'social_youtube', 'social_twitter', 'social_tiktok', 'social_behance']:
             url = getattr(site_settings, field, '')
             if url:
                 social.append(url)
@@ -169,7 +173,19 @@ def jsonld_organization(context):
         data["address"] = {
             "@type": "PostalAddress",
             "streetAddress": site_settings.address,
+            "addressLocality": "Tangier",
+            "addressRegion": "Tanger-Tétouan-Al Hoceïma",
+            "addressCountry": "MA",
         }
+
+    data["areaServed"] = {
+        "@type": "City",
+        "name": "Tangier",
+        "containedInPlace": {
+            "@type": "Country",
+            "name": "Morocco",
+        }
+    }
 
     return mark_safe(f'<script type="application/ld+json">{json.dumps(data, ensure_ascii=False)}</script>')
 
@@ -223,6 +239,10 @@ def jsonld_service(context):
         "provider": {
             "@type": "Organization",
             "name": site_settings.site_name if site_settings else "VR Creation Company",
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Tangier",
         }
     }
 
@@ -260,7 +280,7 @@ def jsonld_article(context):
 
 @register.simple_tag(takes_context=True)
 def jsonld_local_business(context):
-    """JSON-LD LocalBusiness for contact page."""
+    """JSON-LD LocalBusiness for contact page — enhanced with Tangier/Morocco data."""
     site_settings = context.get('site_settings')
     base_url = f"{settings.SITE_PROTOCOL}://{settings.SITE_DOMAIN}"
 
@@ -271,15 +291,36 @@ def jsonld_local_business(context):
         "url": base_url,
         "email": site_settings.email if site_settings else "",
         "telephone": site_settings.phone if site_settings else "",
+        "priceRange": "$$",
     }
 
     if site_settings and site_settings.address:
         data["address"] = {
             "@type": "PostalAddress",
             "streetAddress": site_settings.address,
+            "addressLocality": "Tangier",
+            "addressRegion": "Tanger-Tétouan-Al Hoceïma",
+            "addressCountry": "MA",
+            "postalCode": "90000",
         }
+
+    data["geo"] = {
+        "@type": "GeoCoordinates",
+        "latitude": "35.7595",
+        "longitude": "-5.8340",
+    }
 
     if site_settings and site_settings.logo:
         data["image"] = base_url + site_settings.logo.url
+
+    social = []
+    if site_settings:
+        for field in ['social_facebook', 'social_instagram', 'social_linkedin',
+                       'social_youtube', 'social_twitter']:
+            url = getattr(site_settings, field, '')
+            if url:
+                social.append(url)
+    if social:
+        data["sameAs"] = social
 
     return mark_safe(f'<script type="application/ld+json">{json.dumps(data, ensure_ascii=False)}</script>')

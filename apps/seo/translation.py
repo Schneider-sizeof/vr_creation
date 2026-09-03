@@ -6,7 +6,7 @@ from .models import PageSEO, SEOMeta
 
 
 class PageSEOTranslation(TranslationOptions):
-    fields = ('meta_title', 'meta_description')
+    fields = ('meta_title', 'meta_description', 'keywords')
 
 
 class SEOMetaTranslation(TranslationOptions):

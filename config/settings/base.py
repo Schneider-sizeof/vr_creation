@@ -37,6 +37,10 @@ ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', '*').split(',')
 SITE_DOMAIN = os.environ.get('SITE_DOMAIN', 'vrcreation.com')
 SITE_PROTOCOL = os.environ.get('SITE_PROTOCOL', 'https')
 
+# Canonical domain redirect — set to True after migrating to vrcreation.com
+CANONICAL_DOMAIN = os.environ.get('CANONICAL_DOMAIN', 'vrcreation.com')
+CANONICAL_DOMAIN_REDIRECT_ENABLED = os.environ.get('CANONICAL_DOMAIN_REDIRECT_ENABLED', 'False').lower() in ('true', '1')
+
 # Application definition
 INSTALLED_APPS = [
     # Modeltranslation must be before django.contrib.admin
@@ -63,6 +67,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'apps.seo.middleware.CanonicalDomainMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

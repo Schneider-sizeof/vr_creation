@@ -18,12 +18,18 @@
     {# Page-specific JSON-LD #}
     {% block jsonld_extra %}{% endblock %}
 
-    {# Favicon #}
+    {# Favicon — Google requires 48x48 minimum, square, crawlable #}
     {% if site_settings.favicon %}
     <link rel="icon" href="{{ site_settings.favicon.url }}" type="image/x-icon">
+    <link rel="icon" href="{{ site_settings.favicon.url }}" type="image/png" sizes="96x96">
+    <link rel="apple-touch-icon" href="{{ site_settings.favicon.url }}" sizes="180x180">
     {% else %}
-    <link rel="icon" href="{% static 'img/favicon.jpg' %}" type="image/jpeg">
+    <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" sizes="16x16 32x32 48x48">
+    <link rel="icon" href="{% static 'img/favicon-96x96.png' %}" type="image/png" sizes="96x96">
+    <link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}" sizes="180x180">
     {% endif %}
+    <link rel="manifest" href="{% static 'img/site.webmanifest' %}">
+    <meta name="theme-color" content="#3D8EB9">
 
     {# Preconnect for performance #}
     <link rel="preconnect" href="https://fonts.googleapis.com">

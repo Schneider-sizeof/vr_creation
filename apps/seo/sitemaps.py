@@ -8,6 +8,7 @@ from django.urls import reverse
 from apps.services.models import Service
 from apps.portfolio.models import Project, CaseStudy
 from apps.blog.models import Article
+from apps.core.models import Promotion
 
 
 class StaticViewSitemap(Sitemap):
@@ -18,7 +19,8 @@ class StaticViewSitemap(Sitemap):
     def items(self):
         return ['core:home', 'core:about', 'services:list',
                 'portfolio:project_list', 'portfolio:casestudy_list',
-                'portfolio:virtual_tours', 'blog:list', 'contact:contact']
+                'portfolio:virtual_tours', 'blog:list', 'contact:contact',
+                'core:promotions']
 
     def location(self, item):
         return reverse(item)
@@ -76,10 +78,24 @@ class ArticleSitemap(Sitemap):
         return obj.updated_at
 
 
+class PromotionSitemap(Sitemap):
+    """Promotion/pack pages sitemap."""
+    changefreq = 'weekly'
+    priority = 0.8
+
+    def items(self):
+        return Promotion.objects.filter(is_active=True)
+
+    def lastmod(self, obj):
+        return obj.updated_at
+
+
 VR_SITEMAPS = {
     'static': StaticViewSitemap,
     'services': ServiceSitemap,
     'projects': ProjectSitemap,
     'case_studies': CaseStudySitemap,
     'articles': ArticleSitemap,
+    'promotions': PromotionSitemap,
 }
+

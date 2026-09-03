@@ -6,12 +6,12 @@ from .base import *  # noqa: F401, F403
 
 DEBUG = False
 
-ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost,127.0.0.1,.pythonanywhere.com,*').split(',')
+ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost,127.0.0.1,.pythonanywhere.com,vrcreation.com,www.vrcreation.com,*').split(',')
 
-# CSRF Trusted Origins for HTTPS POST requests on PythonAnywhere and local
+# CSRF Trusted Origins for HTTPS POST requests
 CSRF_TRUSTED_ORIGINS = os.environ.get(
     'CSRF_TRUSTED_ORIGINS',
-    'https://*.pythonanywhere.com,https://vrcreationn.pythonanywhere.com,http://localhost:8000,http://127.0.0.1:8000'
+    'https://*.pythonanywhere.com,https://vrcreationn.pythonanywhere.com,https://vrcreation.com,https://www.vrcreation.com,http://localhost:8000,http://127.0.0.1:8000'
 ).split(',')
 
 # Ensure MEDIA_ROOT and subdirectories exist with proper permissions for uploads
