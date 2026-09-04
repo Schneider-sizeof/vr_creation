@@ -150,40 +150,42 @@
         <!-- Cards Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {% for item in strengths %}
-            <div class="group relative rounded-2xl bg-white p-6 md:p-7 flex flex-col justify-between text-center transition-all duration-300 hover:-translate-y-2 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_16px_36px_rgba(61,142,185,0.14)] border border-slate-100 hover:border-primary/40 overflow-hidden min-h-[300px] animate-on-scroll slide-up" style="transition-delay: {{ forloop.counter }}00ms;">
-                <!-- Top Accent Gradient Stripe -->
-                <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-primary-400 to-primary-light group-hover:h-2 transition-all duration-300 z-10"></div>
-
+            <div class="group relative rounded-2xl p-6 md:p-7 flex flex-col justify-between text-center transition-all duration-300 hover:-translate-y-2 overflow-hidden min-h-[320px] animate-on-scroll slide-up {% if item.background_image %}shadow-xl hover:shadow-2xl border border-slate-700/60 hover:border-primary/60{% else %}bg-white shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_16px_36px_rgba(61,142,185,0.14)] border border-slate-100 hover:border-primary/40{% endif %}" style="transition-delay: {{ forloop.counter }}00ms;">
                 {% if item.background_image %}
-                <!-- Subtle Ambient Background Texture for Visual Depth -->
-                <img src="{{ item.background_image.url }}" alt="{{ item.title }}" class="absolute inset-0 w-full h-full object-cover opacity-8 group-hover:opacity-15 transition-opacity duration-500 z-0 pointer-events-none" onerror="this.style.display='none'">
+                <!-- Background Image & Deep Protective Overlay for 100% Instant Legibility -->
+                <img src="{{ item.background_image.url }}" alt="{{ item.title }}" class="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-700 ease-out group-hover:scale-105" onerror="this.style.display='none'">
+                <div class="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/88 to-slate-950/96 z-10"></div>
+                <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/15 pointer-events-none z-10"></div>
+                {% else %}
+                <!-- Top Accent Gradient Stripe for Clean Cards -->
+                <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-primary-400 to-primary-light group-hover:h-2 transition-all duration-300 z-10"></div>
                 {% endif %}
 
-                <!-- Content wrapper -->
-                <div class="relative z-10 flex flex-col items-center w-full h-full justify-between">
+                <!-- Content wrapper above absolute background elements -->
+                <div class="relative z-20 flex flex-col items-center w-full h-full justify-between">
                     <div class="flex flex-col items-center w-full">
                         <!-- Icon Badge -->
-                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/10 to-primary/20 border border-primary/20 text-primary flex items-center justify-center text-xl mb-4 group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm flex-shrink-0">
+                        <div class="w-14 h-14 rounded-2xl {% if item.background_image %}bg-white/20 border border-white/30 text-white backdrop-blur-md shadow-lg group-hover:scale-110 group-hover:bg-primary group-hover:border-primary{% else %}bg-gradient-to-br from-primary/10 to-primary/20 border border-primary/20 text-primary shadow-sm group-hover:scale-110 group-hover:bg-primary group-hover:text-white{% endif %} flex items-center justify-center text-xl mb-4 flex-shrink-0 transition-all duration-300">
                             <i class="{{ item.get_font_awesome_icon }}"></i>
                         </div>
 
                         <!-- Card Title -->
-                        <h3 class="text-base sm:text-lg font-bold text-slate-900 mb-2.5 leading-snug group-hover:text-primary transition-colors tracking-normal w-full" style="color: #0F172A !important; word-break: break-word; overflow-wrap: break-word;">
+                        <h3 class="text-base sm:text-lg font-bold mb-2.5 leading-snug tracking-normal w-full" {% if item.background_image %}style="color: #FFFFFF !important; text-shadow: 0 2px 10px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,0.9); word-break: break-word;"{% else %}style="color: #0F172A !important; word-break: break-word;"{% endif %}>
                             {{ item.title }}
                         </h3>
 
                         <!-- Card Description -->
-                        <p class="text-slate-600 text-sm font-normal leading-relaxed mb-4" style="color: #475569 !important;">
+                        <p class="text-sm font-normal leading-relaxed mb-4" {% if item.background_image %}style="color: #F1F5F9 !important; text-shadow: 0 1px 6px rgba(0,0,0,1), 0 0 10px rgba(0,0,0,0.8);"{% else %}style="color: #475569 !important;"{% endif %}>
                             {{ item.description }}
                         </p>
                     </div>
 
                     <!-- Optional Key Figure -->
                     {% if item.stat_number %}
-                    <div class="mt-auto pt-4 border-t border-slate-100 w-full">
-                        <span class="block text-2xl font-black text-primary" style="color: #3D8EB9 !important;">{{ item.stat_number }}</span>
+                    <div class="mt-auto pt-4 border-t {% if item.background_image %}border-white/20{% else %}border-slate-100{% endif %} w-full">
+                        <span class="block text-2xl font-black {% if item.background_image %}text-primary-light{% else %}text-primary{% endif %}" {% if item.background_image %}style="color: #72BDD5 !important; text-shadow: 0 2px 8px rgba(0,0,0,1);"{% else %}style="color: #3D8EB9 !important;"{% endif %}>{{ item.stat_number }}</span>
                         {% if item.stat_label %}
-                        <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mt-0.5" style="color: #64748B !important;">{{ item.stat_label }}</span>
+                        <span class="text-[11px] font-bold uppercase tracking-wider block mt-0.5 {% if item.background_image %}text-white{% else %}text-slate-400{% endif %}" {% if item.background_image %}style="color: #FFFFFF !important; text-shadow: 0 1px 4px rgba(0,0,0,1);"{% else %}style="color: #64748B !important;"{% endif %}>{{ item.stat_label }}</span>
                         {% endif %}
                     </div>
                     {% endif %}
