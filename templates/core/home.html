@@ -150,30 +150,30 @@
         <!-- Cards Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {% for item in strengths %}
-            <div class="group relative rounded-2xl bg-white p-6 flex flex-col justify-between text-center transition-all duration-300 hover:-translate-y-1.5 shadow-sm hover:shadow-xl border border-slate-100 hover:border-primary/40 overflow-hidden min-h-[320px] animate-on-scroll slide-up" style="transition-delay: {{ forloop.counter }}00ms;">
-                <!-- Top Accent Line -->
-                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-primary-400 to-primary-dark group-hover:h-1.5 transition-all duration-300 z-10"></div>
+            <div class="group relative rounded-2xl bg-white p-6 md:p-7 flex flex-col justify-between text-center transition-all duration-300 hover:-translate-y-2 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_16px_36px_rgba(61,142,185,0.14)] border border-slate-100 hover:border-primary/40 overflow-hidden min-h-[300px] animate-on-scroll slide-up" style="transition-delay: {{ forloop.counter }}00ms;">
+                <!-- Top Accent Gradient Stripe -->
+                <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-primary-400 to-primary-light group-hover:h-2 transition-all duration-300 z-10"></div>
 
                 {% if item.background_image %}
-                <!-- Subtle Ambient Background Texture for Harmony -->
-                <img src="{{ item.background_image.url }}" alt="{{ item.title }}" class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-20 transition-opacity duration-500 z-0 pointer-events-none" onerror="this.style.display='none'">
+                <!-- Subtle Ambient Background Texture for Visual Depth -->
+                <img src="{{ item.background_image.url }}" alt="{{ item.title }}" class="absolute inset-0 w-full h-full object-cover opacity-8 group-hover:opacity-15 transition-opacity duration-500 z-0 pointer-events-none" onerror="this.style.display='none'">
                 {% endif %}
 
                 <!-- Content wrapper -->
                 <div class="relative z-10 flex flex-col items-center w-full h-full justify-between">
                     <div class="flex flex-col items-center w-full">
                         <!-- Icon Badge -->
-                        <div class="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/20 text-primary flex items-center justify-center text-xl mb-4 group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm flex-shrink-0">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/10 to-primary/20 border border-primary/20 text-primary flex items-center justify-center text-xl mb-4 group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm flex-shrink-0">
                             <i class="{{ item.get_font_awesome_icon }}"></i>
                         </div>
 
                         <!-- Card Title -->
-                        <h3 class="text-base lg:text-lg font-black text-slate-900 uppercase tracking-wide mb-2.5 leading-snug group-hover:text-primary transition-colors break-words w-full" style="color: #0F172A !important;">
+                        <h3 class="text-base sm:text-lg font-bold text-slate-900 mb-2.5 leading-snug group-hover:text-primary transition-colors tracking-normal w-full" style="color: #0F172A !important; word-break: break-word; overflow-wrap: break-word;">
                             {{ item.title }}
                         </h3>
 
                         <!-- Card Description -->
-                        <p class="text-slate-600 text-xs md:text-sm font-normal leading-relaxed mb-4" style="color: #475569 !important;">
+                        <p class="text-slate-600 text-sm font-normal leading-relaxed mb-4" style="color: #475569 !important;">
                             {{ item.description }}
                         </p>
                     </div>
