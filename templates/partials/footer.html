@@ -8,9 +8,9 @@
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
             <!-- Brand & About -->
-            <div>
+            <div class="lg:col-span-1">
                 <div class="flex items-center gap-3 mb-4">
                     {% if site_settings.logo %}
                     <img src="{{ site_settings.logo.url }}" alt="{{ site_settings.site_name }}" class="h-10 w-auto brightness-0 invert">
@@ -50,6 +50,19 @@
                     <li><a href="{% url 'portfolio:project_list' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2"></i>{% trans "Réalisations" %}</a></li>
                     <li><a href="{% url 'core:promotions' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2"></i>{% trans "Promotions" %}</a></li>
                     <li><a href="{% url 'contact:contact' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2"></i>{% trans "Contact" %}</a></li>
+                </ul>
+            </div>
+
+            <!-- Solutions & Expertises (Rich Keywords Column) -->
+            <div>
+                <h4 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">{% trans "Solutions & Expertises" %}</h4>
+                <ul class="space-y-2">
+                    <li><a href="{% url 'services:detail' 'modelisation-3d' %}" class="footer-link"><i class="fas fa-cube text-xs text-primary mr-2"></i>{% trans "Rendu 3D promoteur immobilier" %}</a></li>
+                    <li><a href="{% url 'services:detail' 'visites-virtuelles' %}" class="footer-link"><i class="fas fa-vr-cardboard text-xs text-primary mr-2"></i>{% trans "Visite virtuelle 360° Tanger" %}</a></li>
+                    <li><a href="{% url 'services:detail' 'lead-generation' %}" class="footer-link"><i class="fas fa-bullseye text-xs text-primary mr-2"></i>{% trans "Marketing immobilier digital" %}</a></li>
+                    <li><a href="{% url 'services:detail' 'modelisation-3d' %}" class="footer-link"><i class="fas fa-drafting-compass text-xs text-primary mr-2"></i>{% trans "Plans 3D & Perspectives" %}</a></li>
+                    <li><a href="{% url 'services:detail' 'photographie' %}" class="footer-link"><i class="fas fa-drone text-xs text-primary mr-2"></i>{% trans "Captures aériennes par drone" %}</a></li>
+                    <li><a href="{% url 'core:promotions' %}" class="footer-link"><i class="fas fa-tags text-xs text-primary mr-2"></i>{% trans "Vente sur plan (VEFA)" %}</a></li>
                 </ul>
             </div>
             
@@ -100,8 +113,19 @@
                 </ul>
             </div>
         </div>
+
+        <!-- Popular Keywords Cloud -->
+        <div class="border-t border-white/10 mt-10 pt-6 flex flex-wrap items-center gap-2 text-xs text-gray-400">
+            <span class="font-semibold text-white/70 mr-1"><i class="fas fa-search text-accent mr-1"></i>{% trans "Recherches populaires :" %}</span>
+            <a href="{% url 'services:detail' 'modelisation-3d' %}" class="px-2.5 py-1 rounded bg-white/5 hover:bg-accent/20 hover:text-accent transition-colors">{% trans "Modélisation 3D Tanger" %}</a>
+            <a href="{% url 'services:detail' 'visites-virtuelles' %}" class="px-2.5 py-1 rounded bg-white/5 hover:bg-accent/20 hover:text-accent transition-colors">{% trans "Visite virtuelle Maroc" %}</a>
+            <a href="{% url 'services:detail' 'modelisation-3d' %}" class="px-2.5 py-1 rounded bg-white/5 hover:bg-accent/20 hover:text-accent transition-colors">{% trans "Rendu architectural 3D" %}</a>
+            <a href="{% url 'core:promotions' %}" class="px-2.5 py-1 rounded bg-white/5 hover:bg-accent/20 hover:text-accent transition-colors">{% trans "Promoteur immobilier Maroc" %}</a>
+            <a href="{% url 'services:detail' 'animation-motion-design' %}" class="px-2.5 py-1 rounded bg-white/5 hover:bg-accent/20 hover:text-accent transition-colors">{% trans "Vidéo 3D immersive" %}</a>
+            <a href="{% url 'core:about' %}" class="px-2.5 py-1 rounded bg-white/5 hover:bg-accent/20 hover:text-accent transition-colors">{% trans "Agence VR Tanger" %}</a>
+        </div>
         
-        <div class="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="border-t border-white/10 mt-6 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
             <p class="text-gray-400 text-sm">
                 &copy; {% now "Y" %} {{ site_settings.site_name|default:"VR Creation" }}. {% trans "Tous droits réservés." %}
             </p>

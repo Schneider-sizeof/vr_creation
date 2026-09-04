@@ -1848,3 +1848,45 @@ msgstr "Commission-based"
 
 msgid "Vedette"
 msgstr "Featured"
+
+msgid "Solutions & Expertises"
+msgstr "Solutions & Expertise"
+
+msgid "Rendu 3D promoteur immobilier"
+msgstr "3D Real Estate Developer Rendering"
+
+msgid "Visite virtuelle 360° Tanger"
+msgstr "360° Virtual Tour Tangier"
+
+msgid "Marketing immobilier digital"
+msgstr "Digital Real Estate Marketing"
+
+msgid "Plans 3D & Perspectives"
+msgstr "3D Floor Plans & Perspectives"
+
+msgid "Captures aériennes par drone"
+msgstr "Aerial Drone Captures"
+
+msgid "Vente sur plan (VEFA)"
+msgstr "Off-Plan Property Sales (VEFA)"
+
+msgid "Recherches populaires :"
+msgstr "Popular searches:"
+
+msgid "Modélisation 3D Tanger"
+msgstr "3D Modeling Tangier"
+
+msgid "Visite virtuelle Maroc"
+msgstr "Virtual Tour Morocco"
+
+msgid "Rendu architectural 3D"
+msgstr "3D Architectural Rendering"
+
+msgid "Promoteur immobilier Maroc"
+msgstr "Morocco Real Estate Developers"
+
+msgid "Vidéo 3D immersive"
+msgstr "Immersive 3D Video"
+
+msgid "Agence VR Tanger"
+msgstr "VR Agency Tangier"

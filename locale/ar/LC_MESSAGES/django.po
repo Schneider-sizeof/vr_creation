@@ -1809,3 +1809,45 @@ msgstr "على العمولة"
 
 msgid "Vedette"
 msgstr "مميز"
+
+msgid "Solutions & Expertises"
+msgstr "حلول وخبرات"
+
+msgid "Rendu 3D promoteur immobilier"
+msgstr "إظهار ثلاثي الأبعاد للمنعشين العقاريين"
+
+msgid "Visite virtuelle 360° Tanger"
+msgstr "جولة افتراضية 360° طنجة"
+
+msgid "Marketing immobilier digital"
+msgstr "تسويق عقاري رقمي"
+
+msgid "Plans 3D & Perspectives"
+msgstr "مخططات ثلاثية الأبعاد ومناظير معمارية"
+
+msgid "Captures aériennes par drone"
+msgstr "تصوير جوي بالدرون للمشاريع"
+
+msgid "Vente sur plan (VEFA)"
+msgstr "بيع العقارات على التصميم (VEFA)"
+
+msgid "Recherches populaires :"
+msgstr "عمليات البحث الشائعة:"
+
+msgid "Modélisation 3D Tanger"
+msgstr "نمذجة ثلاثية الأبعاد طنجة"
+
+msgid "Visite virtuelle Maroc"
+msgstr "جولة افتراضية المغرب"
+
+msgid "Rendu architectural 3D"
+msgstr "إظهار معماري ثلاثي الأبعاد"
+
+msgid "Promoteur immobilier Maroc"
+msgstr "منعش عقاري المغرب"
+
+msgid "Vidéo 3D immersive"
+msgstr "فيديو ثلاثي الأبعاد غامر"
+
+msgid "Agence VR Tanger"
+msgstr "وكالة واقع افتراضي طنجة"
