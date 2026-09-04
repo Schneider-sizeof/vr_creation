@@ -2,7 +2,7 @@
 <header id="mainHeader" class="main-header py-4 sticky top-0 z-50 transition-all duration-300">
     <div class="container mx-auto px-4 flex justify-between items-center">
         <!-- Logo -->
-        <a href="{% url 'core:home' %}" class="flex items-center gap-3">
+        <a href="{% url 'core:home' %}" class="flex items-center gap-3 shrink-0 mr-8 xl:mr-12 rtl:mr-0 rtl:ml-8 rtl:xl:ml-12">
             {% if site_settings.logo %}
             <img src="{{ site_settings.logo.url }}" alt="{{ site_settings.site_name }}" class="h-10 w-auto">
             {% endif %}
@@ -10,21 +10,21 @@
         </a>
         
         <!-- Desktop Nav -->
-        <nav class="hidden lg:flex items-center gap-6">
+        <nav class="hidden lg:flex items-center gap-3.5 xl:gap-6 text-sm xl:text-base">
             <a href="{% url 'core:home' %}" class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}">{% trans "Accueil" %}</a>
             <a href="{% url 'core:about' %}" class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}">{% trans "À propos" %}</a>
             <a href="{% url 'services:list' %}" class="nav-link {% if 'service' in request.resolver_match.url_name %}active{% endif %}">{% trans "Services" %}</a>
             <a href="{% url 'portfolio:project_list' %}" class="nav-link {% if 'project' in request.resolver_match.url_name or 'casestudy' in request.resolver_match.url_name %}active{% endif %}">{% trans "Réalisations" %}</a>
-            <a href="{% url 'core:promotions' %}" class="nav-promo-btn {% if request.resolver_match.url_name == 'promotions' %}active{% endif %}">
+            <a href="{% url 'core:promotions' %}" class="nav-promo-btn {% if request.resolver_match.url_name == 'promotions' %}active{% endif %} !px-3 xl:!px-4 !py-1.5 xl:!py-2 !text-xs xl:!text-sm">
                 <i class="fas fa-gift mr-1.5"></i> {% trans "Promotions" %}
             </a>
-            <a href="{% url 'contact:contact' %}" class="btn btn-primary">{% trans "Contact" %}</a>
+            <a href="{% url 'contact:contact' %}" class="btn btn-primary text-xs xl:text-sm px-3.5 xl:px-5 py-1.5 xl:py-2">{% trans "Contact" %}</a>
             
             <!-- VR Immersive Mode Toggle -->
-            <button id="vr-mode-toggle-btn" class="w-9 h-9 rounded-full bg-gray-100 hover:bg-primary-light flex items-center justify-center text-dark hover:text-primary transition-all duration-300 relative group cursor-pointer" aria-label="{% trans 'Mode Immersif VR' %}">
-                <i class="fas fa-vr-cardboard text-base"></i>
+            <button id="vr-mode-toggle-btn" class="w-8 h-8 xl:w-9 xl:h-9 rounded-full bg-gray-100 hover:bg-primary-light flex items-center justify-center text-dark hover:text-primary transition-all duration-300 relative group cursor-pointer shrink-0" aria-label="{% trans 'Mode Immersif VR' %}">
+                <i class="fas fa-vr-cardboard text-sm xl:text-base"></i>
                 <!-- Detailed Tooltip -->
-                <span class="absolute top-full mt-2 right-0 hidden group-hover:flex flex-col bg-dark/95 backdrop-blur-md text-white text-xs p-3 rounded-xl shadow-xl w-64 text-left border border-white/10 z-50 gap-1 transition-all duration-300">
+                <span class="absolute top-full mt-2 right-0 rtl:right-auto rtl:left-0 hidden group-hover:flex flex-col bg-dark/95 backdrop-blur-md text-white text-xs p-3 rounded-xl shadow-xl w-64 text-left rtl:text-right border border-white/10 z-50 gap-1 transition-all duration-300">
                     <span class="font-bold text-primary flex items-center gap-1.5">
                         <i class="fas fa-vr-cardboard"></i>
                         {% trans "Mode Cyber-VR" %}
@@ -37,13 +37,13 @@
             
             <!-- Language Switcher with Real Flags -->
             {% get_current_language as CURRENT_LANG %}
-            <div class="relative group ms-2">
-                <button class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors text-dark">
+            <div class="relative group ms-1 xl:ms-2 shrink-0">
+                <button class="flex items-center gap-1.5 xl:gap-2 px-2.5 xl:px-3 py-1.5 xl:py-2 rounded-lg hover:bg-gray-100 transition-colors text-dark">
                     <img src="https://flagcdn.com/24x18/{% if CURRENT_LANG == 'fr' %}fr{% elif CURRENT_LANG == 'ar' %}ma{% else %}gb{% endif %}.png"
                          srcset="https://flagcdn.com/48x36/{% if CURRENT_LANG == 'fr' %}fr{% elif CURRENT_LANG == 'ar' %}ma{% else %}gb{% endif %}.png 2x"
-                         width="24" height="18" alt=""
+                         width="22" height="16" alt=""
                          class="rounded-sm shadow-sm">
-                    <i class="fas fa-chevron-down text-xs text-gray-400"></i>
+                    <i class="fas fa-chevron-down text-xxs xl:text-xs text-gray-400"></i>
                 </button>
                 <div class="absolute right-0 rtl:right-auto rtl:left-0 mt-1 w-48 bg-white rounded-xl shadow-lg py-2 hidden group-hover:block border border-gray-100 z-50">
                     {% get_available_languages as LANGUAGES %}
@@ -53,14 +53,14 @@
                             {% csrf_token %}
                             <input name="next" type="hidden" value="/" class="lang-next-input">
                             <input name="language" type="hidden" value="{{ language.code }}">
-                            <button type="submit" class="w-full text-left px-4 py-2.5 hover:bg-primary-light transition-colors flex items-center gap-3 {% if language.code == CURRENT_LANG %}font-bold text-primary bg-primary-light/50{% else %}text-gray-700{% endif %}">
+                            <button type="submit" class="w-full text-left rtl:text-right px-4 py-2.5 hover:bg-primary-light transition-colors flex items-center gap-3 {% if language.code == CURRENT_LANG %}font-bold text-primary bg-primary-light/50{% else %}text-gray-700{% endif %}">
                                 <img src="https://flagcdn.com/24x18/{% if language.code == 'fr' %}fr{% elif language.code == 'ar' %}ma{% else %}gb{% endif %}.png"
                                      srcset="https://flagcdn.com/48x36/{% if language.code == 'fr' %}fr{% elif language.code == 'ar' %}ma{% else %}gb{% endif %}.png 2x"
                                      width="24" height="18" alt="{{ language.name_local }}"
                                      class="rounded-sm shadow-sm">
                                 <span>{{ language.name_local|capfirst }}</span>
                                 {% if language.code == CURRENT_LANG %}
-                                <i class="fas fa-check text-primary text-xs ml-auto"></i>
+                                <i class="fas fa-check text-primary text-xs ml-auto rtl:ml-0 rtl:mr-auto"></i>
                                 {% endif %}
                             </button>
                         </form>
