@@ -32,7 +32,7 @@ class SiteSettings(SingletonModel):
         _('Nom du site'), max_length=200, default='VR Creation Company'
     )
     tagline = models.CharField(
-        _('Slogan'), max_length=300, default="L'innovation en action"
+        _('Slogan'), max_length=300, blank=True, default=''
     )
     logo = models.ImageField(
         _('Logo'), upload_to='site/', blank=True, null=True
@@ -41,13 +41,13 @@ class SiteSettings(SingletonModel):
         _('Favicon'), upload_to='site/', blank=True, null=True
     )
     email = models.EmailField(
-        _('Email de contact'), default='contact@vrcreation.com'
+        _('Email de contact'), default='Vrcreation.company@gmail.com'
     )
     phone = models.CharField(
-        _('Téléphone'), max_length=30, blank=True, default='+33 1 23 45 67 89'
+        _('Téléphone'), max_length=30, blank=True, default='+212634017762'
     )
     address = models.TextField(
-        _('Adresse'), blank=True, default='Paris, France'
+        _('Adresse'), blank=True, default='Avenue Ibn Tachfine, bureaux Ibn Battouta, Tanger, Maroc'
     )
     google_analytics_id = models.CharField(
         _('Google Analytics ID'), max_length=30, blank=True,
@@ -76,18 +76,15 @@ class SiteSettings(SingletonModel):
         help_text=_('Image affichée pendant le chargement de la vidéo hero (1920x600 recommandé)')
     )
     hero_headline = models.CharField(
-        _('Titre hero accueil'), max_length=300, blank=True,
-        default="DONNEZ VIE À VOTRE PROJET IMMOBILIER, AVANT MÊME SA CONSTRUCTION.",
+        _('Titre hero accueil'), max_length=300, blank=True, default='',
         help_text=_('Titre principal affiché sur le hero de la page d\'accueil')
     )
     hero_subheadline = models.TextField(
-        _('Sous-titre hero accueil'), blank=True,
-        default="De la conception 3D à la commercialisation digitale, nous transformons vos projets immobiliers en expériences visuelles capables de séduire, convaincre et générer des prospects.",
+        _('Sous-titre hero accueil'), blank=True, default='',
         help_text=_('Texte affiché sous le titre du hero')
     )
     hero_cta1_label = models.CharField(
-        _('Bouton hero 1 — libellé'), max_length=100, blank=True,
-        default='Découvrir nos solutions'
+        _('Bouton hero 1 — libellé'), max_length=100, blank=True, default=''
     )
     hero_cta1_link = models.CharField(
         _('Bouton hero 1 — lien'), max_length=300, blank=True,
@@ -95,8 +92,7 @@ class SiteSettings(SingletonModel):
         help_text=_('URL ou ancre (ex: #services, /contact/)')
     )
     hero_cta2_label = models.CharField(
-        _('Bouton hero 2 — libellé'), max_length=100, blank=True,
-        default='Nous contacter'
+        _('Bouton hero 2 — libellé'), max_length=100, blank=True, default=''
     )
     hero_cta2_link = models.CharField(
         _('Bouton hero 2 — lien'), max_length=300, blank=True,
