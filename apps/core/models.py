@@ -199,6 +199,45 @@ class Strength(models.Model):
     def __str__(self):
         return self.title
 
+    @property
+    def get_font_awesome_icon(self):
+        """Return a reliable FontAwesome class string for the strength card."""
+        raw = (self.icon or '').strip()
+        if 'fa-' in raw:
+            if not (raw.startswith('fas ') or raw.startswith('far ') or raw.startswith('fab ') or raw.startswith('fa-solid ') or raw.startswith('fa-regular ') or raw.startswith('fa-brands ')):
+                return f'fas {raw}' if not raw.startswith('fa-') else f'fas {raw}'
+            return raw
+
+        title_lower = (self.title or '').lower()
+        if 'créativ' in title_lower or 'creativ' in title_lower or 'إبداع' in title_lower:
+            return 'fas fa-palette'
+        if 'précision' in title_lower or 'precision' in title_lower or 'دقة' in title_lower:
+            return 'fas fa-crosshairs'
+        if 'profession' in title_lower or 'احتراف' in title_lower:
+            return 'fas fa-briefcase'
+        if 'innovat' in title_lower or 'ابتكار' in title_lower:
+            return 'fas fa-rocket'
+        if 'qualité' in title_lower or 'quality' in title_lower or 'جودة' in title_lower:
+            return 'fas fa-award'
+        if 'délai' in title_lower or 'time' in title_lower or 'سرعة' in title_lower:
+            return 'fas fa-clock'
+
+        emoji_map = {
+            '🎨': 'fas fa-palette',
+            '🎯': 'fas fa-crosshairs',
+            '💼': 'fas fa-briefcase',
+            '🚀': 'fas fa-rocket',
+            '⭐': 'fas fa-star',
+            '🌟': 'fas fa-star',
+            '🏆': 'fas fa-award',
+            '⏱️': 'fas fa-clock',
+            '💡': 'fas fa-lightbulb',
+        }
+        if raw in emoji_map:
+            return emoji_map[raw]
+
+        return 'fas fa-star'
+
 
 class ProcessStep(models.Model):
     """Methodology timeline steps."""
@@ -214,6 +253,16 @@ class ProcessStep(models.Model):
 
     def __str__(self):
         return f"{self.order}. {self.title}"
+
+    @property
+    def get_font_awesome_icon(self):
+        """Return a reliable FontAwesome class string for the process step."""
+        raw = (self.icon or '').strip()
+        if 'fa-' in raw:
+            if not (raw.startswith('fas ') or raw.startswith('far ') or raw.startswith('fab ') or raw.startswith('fa-solid ') or raw.startswith('fa-regular ') or raw.startswith('fa-brands ')):
+                return f'fas {raw}' if not raw.startswith('fa-') else f'fas {raw}'
+            return raw
+        return 'fas fa-check'
 
 
 class HeroSlide(models.Model):
@@ -257,6 +306,16 @@ class StrategicSuccess(models.Model):
 
     def __str__(self):
         return self.title
+
+    @property
+    def get_font_awesome_icon(self):
+        """Return a reliable FontAwesome class string for the strategic success card."""
+        raw = (self.icon or '').strip()
+        if 'fa-' in raw:
+            if not (raw.startswith('fas ') or raw.startswith('far ') or raw.startswith('fab ') or raw.startswith('fa-solid ') or raw.startswith('fa-regular ') or raw.startswith('fa-brands ')):
+                return f'fas {raw}' if not raw.startswith('fa-') else f'fas {raw}'
+            return raw
+        return 'fas fa-cube'
 
 
 class Promotion(models.Model):

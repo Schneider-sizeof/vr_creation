@@ -71,7 +71,7 @@
                         <li>
                             <a href="{% url 'services:detail' s.slug %}" class="flex items-center justify-between p-3 rounded-xl bg-white hover:bg-primary hover:text-white transition-all duration-300 group shadow-sm text-gray-700">
                                 <span class="font-medium text-sm flex items-center gap-3">
-                                    <i class="{{ s.icon|default:'fas fa-cube' }} text-primary group-hover:text-white transition-colors"></i>
+                                    <i class="{{ s.get_font_awesome_icon }} text-primary group-hover:text-white transition-colors"></i>
                                     {{ s.title }}
                                 </span>
                                 <i class="fas fa-arrow-right text-xs opacity-0 group-hover:opacity-100 transition-all duration-300"></i>

@@ -223,7 +223,7 @@
                 <!-- Content -->
                 <div class="flex-1 min-w-0">
                     <div class="flex items-center gap-2 mb-1">
-                        <i class="{{ service.icon|default:'fas fa-cog' }} text-primary text-sm"></i>
+                        <i class="{{ service.get_font_awesome_icon }} text-primary text-sm"></i>
                         <h4 class="font-bold text-dark text-sm leading-tight">{{ service.title }}</h4>
                     </div>
                     <p class="text-gray-500 text-xs font-light leading-relaxed">{{ service.short_description|truncatewords:15 }}</p>
