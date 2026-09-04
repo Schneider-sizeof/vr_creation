@@ -405,33 +405,33 @@
         </div>
 
         <!-- Contact Info Details Grid below CTA -->
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-16 text-center animate-on-scroll slide-up">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-12 max-w-4xl mx-auto animate-on-scroll slide-up">
             {% if site_settings.address %}
-            <div class="p-6 rounded-2xl bg-white/50 border border-gray-100 shadow-sm flex flex-col items-center">
+            <div class="p-4 sm:p-6 rounded-2xl bg-white/50 border border-gray-100 shadow-sm flex flex-col items-center text-center overflow-hidden">
                 <span class="text-primary text-xl mb-3"><i class="fas fa-map-marker-alt"></i></span>
                 <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">{% trans "Adresse" %}</span>
-                <span class="text-sm font-medium text-dark">{{ site_settings.address }}</span>
+                <span class="text-xs sm:text-sm font-medium text-dark break-words w-full">{{ site_settings.address }}</span>
             </div>
             {% endif %}
             {% if site_settings.phone %}
-            <div class="p-6 rounded-2xl bg-white/50 border border-gray-100 shadow-sm flex flex-col items-center">
+            <div class="p-4 sm:p-6 rounded-2xl bg-white/50 border border-gray-100 shadow-sm flex flex-col items-center text-center overflow-hidden">
                 <span class="text-primary text-xl mb-3"><i class="fas fa-phone-alt"></i></span>
                 <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">{% trans "Téléphone" %}</span>
-                <a href="tel:{{ site_settings.phone }}" class="text-sm font-medium text-dark hover:text-primary transition-colors">{{ site_settings.phone }}</a>
+                <a href="tel:{{ site_settings.phone }}" class="text-xs sm:text-sm font-medium text-dark hover:text-primary transition-colors break-words w-full">{{ site_settings.phone }}</a>
             </div>
             {% endif %}
             {% if site_settings.social_whatsapp %}
-            <div class="p-6 rounded-2xl bg-white/50 border border-gray-100 shadow-sm flex flex-col items-center">
+            <div class="p-4 sm:p-6 rounded-2xl bg-white/50 border border-gray-100 shadow-sm flex flex-col items-center text-center overflow-hidden">
                 <span class="text-[#25D366] text-xl mb-3"><i class="fab fa-whatsapp"></i></span>
                 <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">{% trans "WhatsApp" %}</span>
-                <a href="https://wa.me/{{ site_settings.social_whatsapp }}" target="_blank" rel="noopener" class="text-sm font-medium text-dark hover:text-primary transition-colors">{% trans "WhatsApp" %}</a>
+                <a href="https://wa.me/{{ site_settings.social_whatsapp }}" target="_blank" rel="noopener" class="text-xs sm:text-sm font-medium text-dark hover:text-primary transition-colors break-words w-full">{% trans "WhatsApp" %}</a>
             </div>
             {% endif %}
             {% if site_settings.email %}
-            <div class="p-6 rounded-2xl bg-white/50 border border-gray-100 shadow-sm flex flex-col items-center">
+            <div class="p-4 sm:p-6 rounded-2xl bg-white/50 border border-gray-100 shadow-sm flex flex-col items-center text-center overflow-hidden">
                 <span class="text-primary text-xl mb-3"><i class="fas fa-envelope"></i></span>
                 <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">{% trans "Email" %}</span>
-                <a href="mailto:{{ site_settings.email }}" class="text-sm font-medium text-dark hover:text-primary transition-colors">{{ site_settings.email }}</a>
+                <a href="mailto:{{ site_settings.email }}" class="text-xs sm:text-sm font-medium text-dark hover:text-primary transition-colors break-all w-full leading-snug" title="{{ site_settings.email }}">{{ site_settings.email }}</a>
             </div>
             {% endif %}
         </div>
