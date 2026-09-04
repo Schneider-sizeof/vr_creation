@@ -1457,26 +1457,62 @@ body.vr-mode .nav-promo-btn-mobile {
 }
 
 .strength-card-light {
-    background-color: #FFFFFF !important;
-    border-color: #E2E8F0 !important;
+    background-color: #FFFFFF;
+    border-color: #E2E8F0;
 }
 
 .strength-card-light h3,
 .strength-card-light .card-title {
-    color: #0F172A !important; /* slate-900 */
+    color: #0F172A;
 }
 
 .strength-card-light p,
 .strength-card-light .card-desc {
-    color: #475569 !important; /* slate-600 */
+    color: #475569;
 }
 
 .strength-card-light .card-stat-number {
-    color: #3D8EB9 !important;
+    color: #3D8EB9;
 }
 
 .strength-card-light .card-stat-label {
-    color: #64748B !important;
+    color: #64748B;
 }
+
+/* VR / Dark Mode Overrides */
+body.vr-mode .strength-card-light {
+    background: rgba(6, 7, 10, 0.85) !important;
+    border-color: rgba(0, 240, 255, 0.18) !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 240, 255, 0.08) !important;
+}
+
+body.vr-mode .strength-card-light h3,
+body.vr-mode .strength-card-light .card-title {
+    color: #FFFFFF !important;
+}
+
+body.vr-mode .strength-card-light p,
+body.vr-mode .strength-card-light .card-desc {
+    color: #CBD5E1 !important;
+}
+
+body.vr-mode .strength-card-light .card-stat-number {
+    color: #00f0ff !important;
+}
+
+body.vr-mode .strength-card-light .card-stat-label {
+    color: #94a3b8 !important;
+}
+
+body.vr-mode .section-header-title,
+body.vr-mode .text-slate-900 {
+    color: #FFFFFF !important;
+}
+
+body.vr-mode .section-header-subtitle,
+body.vr-mode .text-slate-600 {
+    color: #CBD5E1 !important;
+}
+
 
 

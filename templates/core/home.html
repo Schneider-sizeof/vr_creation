@@ -85,11 +85,11 @@
                 <i class="fas fa-layer-group text-xs"></i>
                 {% trans "Nos Solutions" %}
             </span>
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight uppercase mb-4 leading-tight" style="color: #0F172A !important;">
+            <h2 class="section-header-title text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight uppercase mb-4 leading-tight">
                 {% trans "Chaque projet mérite une expérience sur mesure" %}
             </h2>
             <div class="w-16 h-1 bg-gradient-to-r from-primary to-primary-light mx-auto mb-5 rounded-full"></div>
-            <p class="text-slate-600 text-base md:text-lg font-normal leading-relaxed max-w-2xl mx-auto" style="color: #475569 !important;">
+            <p class="section-header-subtitle text-slate-600 text-base md:text-lg font-normal leading-relaxed max-w-2xl mx-auto">
                 {% trans "Nous créons des expériences visuelles adaptées à chaque secteur pour valoriser vos projets et accélérer vos ventes." %}
             </p>
         </div>
@@ -138,11 +138,11 @@
                 <i class="fas fa-gem text-xs"></i>
                 {% trans "Nos Forces" %}
             </span>
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight uppercase mb-4 leading-tight" style="color: #0F172A !important;">
+            <h2 class="section-header-title text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight uppercase mb-4 leading-tight">
                 {% trans "Pourquoi Nous Choisir" %}
             </h2>
             <div class="w-16 h-1 bg-gradient-to-r from-primary to-primary-light mx-auto mb-5 rounded-full"></div>
-            <p class="text-slate-600 text-base md:text-lg font-normal leading-relaxed max-w-2xl mx-auto" style="color: #475569 !important;">
+            <p class="section-header-subtitle text-slate-600 text-base md:text-lg font-normal leading-relaxed max-w-2xl mx-auto">
                 {% trans "Des atouts majeurs pour garantir le succès de vos réalisations." %}
             </p>
         </div>
@@ -150,7 +150,7 @@
         <!-- Cards Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {% for item in strengths %}
-            <div class="group relative rounded-2xl p-6 md:p-7 flex flex-col justify-between text-center transition-all duration-300 hover:-translate-y-2 overflow-hidden min-h-[320px] animate-on-scroll slide-up {% if item.background_image %}shadow-xl hover:shadow-2xl border border-slate-700/60 hover:border-primary/60{% else %}bg-white shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_16px_36px_rgba(61,142,185,0.14)] border border-slate-100 hover:border-primary/40{% endif %}" style="transition-delay: {{ forloop.counter }}00ms;">
+            <div class="group relative rounded-2xl p-6 md:p-7 flex flex-col justify-between text-center transition-all duration-300 hover:-translate-y-2 overflow-hidden min-h-[320px] animate-on-scroll slide-up {% if item.background_image %}shadow-xl hover:shadow-2xl border border-slate-700/60 hover:border-primary/60{% else %}strength-card-light bg-white shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_16px_36px_rgba(61,142,185,0.14)] border border-slate-100 hover:border-primary/40{% endif %}" style="transition-delay: {{ forloop.counter }}00ms;">
                 {% if item.background_image %}
                 <!-- Background Image & Deep Protective Overlay for 100% Instant Legibility -->
                 <img src="{{ item.background_image.url }}" alt="{{ item.title }}" class="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-700 ease-out group-hover:scale-105" onerror="this.style.display='none'">
@@ -170,12 +170,12 @@
                         </div>
 
                         <!-- Card Title -->
-                        <h3 class="text-base sm:text-lg font-bold mb-2.5 leading-snug tracking-normal w-full" {% if item.background_image %}style="color: #FFFFFF !important; text-shadow: 0 2px 10px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,0.9); word-break: break-word;"{% else %}style="color: #0F172A !important; word-break: break-word;"{% endif %}>
+                        <h3 class="card-title text-base sm:text-lg font-bold mb-2.5 leading-snug tracking-normal w-full" {% if item.background_image %}style="color: #FFFFFF !important; text-shadow: 0 2px 10px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,0.9); word-break: break-word;"{% else %}style="word-break: break-word;"{% endif %}>
                             {{ item.title }}
                         </h3>
 
                         <!-- Card Description -->
-                        <p class="text-sm font-normal leading-relaxed mb-4" {% if item.background_image %}style="color: #F1F5F9 !important; text-shadow: 0 1px 6px rgba(0,0,0,1), 0 0 10px rgba(0,0,0,0.8);"{% else %}style="color: #475569 !important;"{% endif %}>
+                        <p class="card-desc text-sm font-normal leading-relaxed mb-4" {% if item.background_image %}style="color: #F1F5F9 !important; text-shadow: 0 1px 6px rgba(0,0,0,1), 0 0 10px rgba(0,0,0,0.8);"{% endif %}>
                             {{ item.description }}
                         </p>
                     </div>
@@ -183,9 +183,9 @@
                     <!-- Optional Key Figure -->
                     {% if item.stat_number %}
                     <div class="mt-auto pt-4 border-t {% if item.background_image %}border-white/20{% else %}border-slate-100{% endif %} w-full">
-                        <span class="block text-2xl font-black {% if item.background_image %}text-primary-light{% else %}text-primary{% endif %}" {% if item.background_image %}style="color: #72BDD5 !important; text-shadow: 0 2px 8px rgba(0,0,0,1);"{% else %}style="color: #3D8EB9 !important;"{% endif %}>{{ item.stat_number }}</span>
+                        <span class="card-stat-number block text-2xl font-black {% if item.background_image %}text-primary-light{% else %}text-primary{% endif %}" {% if item.background_image %}style="color: #72BDD5 !important; text-shadow: 0 2px 8px rgba(0,0,0,1);"{% endif %}>{{ item.stat_number }}</span>
                         {% if item.stat_label %}
-                        <span class="text-[11px] font-bold uppercase tracking-wider block mt-0.5 {% if item.background_image %}text-white{% else %}text-slate-400{% endif %}" {% if item.background_image %}style="color: #FFFFFF !important; text-shadow: 0 1px 4px rgba(0,0,0,1);"{% else %}style="color: #64748B !important;"{% endif %}>{{ item.stat_label }}</span>
+                        <span class="card-stat-label text-[11px] font-bold uppercase tracking-wider block mt-0.5 {% if item.background_image %}text-white{% else %}text-slate-400{% endif %}" {% if item.background_image %}style="color: #FFFFFF !important; text-shadow: 0 1px 4px rgba(0,0,0,1);"{% endif %}>{{ item.stat_label }}</span>
                         {% endif %}
                     </div>
                     {% endif %}
@@ -208,11 +208,11 @@
                 <i class="fas fa-lightbulb text-xs"></i>
                 {% trans "Cas d'usage" %}
             </span>
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight uppercase mb-4 leading-tight" style="color: #0F172A !important;">
+            <h2 class="section-header-title text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight uppercase mb-4 leading-tight">
                 {% trans "Exemples de succès stratégiques" %}
             </h2>
             <div class="w-16 h-1 bg-gradient-to-r from-accent to-accent-dark mx-auto mb-5 rounded-full"></div>
-            <p class="text-slate-600 text-base md:text-lg font-normal leading-relaxed max-w-2xl mx-auto" style="color: #475569 !important;">
+            <p class="section-header-subtitle text-slate-600 text-base md:text-lg font-normal leading-relaxed max-w-2xl mx-auto">
                 {% trans "Découvrez comment nos solutions transforment chaque type de projet en levier de croissance." %}
             </p>
         </div>
