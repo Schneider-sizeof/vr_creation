@@ -6,7 +6,7 @@ from .models import Service, ServiceImage
 
 
 class ServiceTranslation(TranslationOptions):
-    fields = ('title', 'slug', 'short_description', 'full_description')
+    fields = ('title', 'slug', 'short_description', 'full_description', 'meta_title', 'meta_description')
 
 
 class ServiceImageTranslation(TranslationOptions):

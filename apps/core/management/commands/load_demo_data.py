@@ -41,28 +41,28 @@ class Command(BaseCommand):
         settings.tagline_fr = "L'innovation en action"
         settings.tagline_en = 'Innovation in Action'
         settings.tagline_ar = 'الابتكار في العمل'
-        settings.email = 'contact@vrcreation.com'
-        settings.phone = '+33 1 23 45 67 89'
-        settings.address_fr = '75 Avenue des Champs-Élysées, 75008 Paris, France'
-        settings.address_en = '75 Champs-Élysées Avenue, 75008 Paris, France'
-        settings.address_ar = '75 شارع الشانزليزيه، 75008 باريس، فرنسا'
+        settings.email = 'Vrcreation.company@gmail.com'
+        settings.phone = '+212634017762'
+        settings.address_fr = 'Avenue Ibn Tachfine, bureaux Ibn Battouta, Tanger, Maroc'
+        settings.address_en = 'Avenue Ibn Tachfine, Ibn Battouta offices, Tangier, Morocco'
+        settings.address_ar = 'شارع ابن تاشفين، مكاتب ابن بطوطة، طنجة، المغرب'
         settings.social_linkedin = 'https://linkedin.com/company/vrcreation'
         settings.social_instagram = 'https://instagram.com/vrcreation'
         settings.google_maps_embed_url = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916256937604!2d2.292292615674889!3d48.85837360866272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1234567890'
-        settings.footer_text_fr = "Nous allions esthetique et technologie de pointe pour transformer vos projets en experiences visuelles immersives et inoubliables."
-        settings.footer_text_en = "We combine aesthetics and cutting-edge technology to transform your projects into immersive and unforgettable visual experiences."
-        settings.footer_text_ar = "نجمع بين الجمالية والتكنولوجيا المتطورة لتحويل مشاريعك إلى تجارب بصرية غامرة لا تُنسى."
-        settings.copyright_text_fr = "(c) 2026 VR Creation Company. Tous droits reserves."
+        settings.footer_text_fr = "VR Creation Company — Agence de modélisation 3D et visites virtuelles à Tanger, Maroc. Nous allions esthétique et technologie de pointe pour transformer vos projets en expériences visuelles immersives et inoubliables."
+        settings.footer_text_en = "VR Creation Company — 3D modeling and virtual tour agency in Tangier, Morocco. We combine aesthetics and cutting-edge technology to transform your projects into immersive and unforgettable visual experiences."
+        settings.footer_text_ar = "شركة في آر كرييشن — وكالة متخصصة في النمذجة ثلاثية الأبعاد والجولات الافتراضية في طنجة، المغرب. نجمع بين الجمالية والتكنولوجيا المتطورة لتحويل مشاريعك إلى تجارب بصرية غامرة لا تُنسى."
+        settings.copyright_text_fr = "(c) 2026 VR Creation Company. Tous droits réservés."
         settings.copyright_text_en = "(c) 2026 VR Creation Company. All rights reserved."
         settings.copyright_text_ar = "(c) 2026 في آر كرييشن. جميع الحقوق محفوظة."
-        settings.social_whatsapp = '+33612345678'
+        settings.social_whatsapp = '+212634017762'
         settings.social_tiktok = 'https://tiktok.com/@vrcreation'
         settings.social_behance = 'https://behance.net/vrcreation'
         
         # Hero translations
-        settings.hero_headline_fr = "DONNEZ VIE À VOTRE PROJET IMMOBILIER, AVANT MÊME SA CONSTRUCTION."
-        settings.hero_headline_en = "BRING YOUR REAL ESTATE PROJECT TO LIFE, EVEN BEFORE ITS CONSTRUCTION."
-        settings.hero_headline_ar = "امنح الحياة لمشروعك العقاري، حتى قبل بنائه."
+        settings.hero_headline_fr = "Donnez vie à votre projet immobilier avant même sa construction — Modélisation 3D & Visites Virtuelles à Tanger"
+        settings.hero_headline_en = "Bring your real estate project to life before it's even built — 3D Modeling & Virtual Tours in Tangier"
+        settings.hero_headline_ar = "امنح مشروعك العقاري الحياة قبل حتى بنائه — نمذجة ثلاثية الأبعاد وجولات افتراضية في طنجة"
         settings.hero_subheadline_fr = "De la conception 3D à la commercialisation digitale, nous transformons vos projets immobiliers en expériences visuelles capables de séduire, convaincre et générer des prospects."
         settings.hero_subheadline_en = "From 3D design to digital marketing, we transform your real estate projects into visual experiences capable of seducing, convincing and generating leads."
         settings.hero_subheadline_ar = "من التصميم ثلاثي الأبعاد إلى التسويق الرقمي، نحول مشاريعكم العقارية إلى تجارب بصرية قادرة على جذب وإقناع وجلب العملاء المحتملين."

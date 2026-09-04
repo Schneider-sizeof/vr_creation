@@ -1,6 +1,13 @@
 {% load i18n static %}
 <footer class="main-footer">
     <div class="container mx-auto px-4">
+        <!-- SEO Keyword-rich Intro Paragraph -->
+        <div class="mb-10 pb-8 border-b border-white/10">
+            <p class="text-gray-300 text-sm leading-relaxed max-w-5xl">
+                {% blocktrans %}VR Creation Company — Agence de modélisation 3D et visites virtuelles à Tanger, Maroc. Spécialisée en rendu 3D immobilier, visite virtuelle 360°, branding immobilier et marketing digital pour promoteurs immobiliers. Nous accompagnons les projets immobiliers à Tanger, Rabat, Casablanca et dans tout le Maroc.{% endblocktrans %}
+            </p>
+        </div>
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- Brand & About -->
             <div>
@@ -50,11 +57,11 @@
             <div>
                 <h4 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">{% trans "Nos services" %}</h4>
                 <ul class="space-y-2">
-                    <li><a href="{% url 'services:list' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2"></i>{% trans "Modélisation 3D" %}</a></li>
-                    <li><a href="{% url 'portfolio:virtual_tours' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2"></i>{% trans "Visites virtuelles" %}</a></li>
-                    <li><a href="{% url 'services:list' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2"></i>{% trans "Captures 360°" %}</a></li>
-                    <li><a href="{% url 'services:list' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2"></i>{% trans "Animation 3D" %}</a></li>
-                    <li><a href="{% url 'services:list' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2"></i>{% trans "Branding visuel" %}</a></li>
+                    <li><a href="{% url 'services:detail' 'modelisation-3d' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2"></i>{% trans "Modélisation 3D" %}</a></li>
+                    <li><a href="{% url 'services:detail' 'visites-virtuelles' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2"></i>{% trans "Visites virtuelles" %}</a></li>
+                    <li><a href="{% url 'services:detail' 'captures-360' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2"></i>{% trans "Captures 360°" %}</a></li>
+                    <li><a href="{% url 'services:detail' 'animation-motion-design' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2"></i>{% trans "Animation 3D" %}</a></li>
+                    <li><a href="{% url 'services:detail' 'branding-visuel' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2"></i>{% trans "Branding visuel" %}</a></li>
                 </ul>
             </div>
             
@@ -68,6 +75,10 @@
                         <span class="text-gray-300 font-light text-sm">{{ site_settings.address }}</span>
                     </li>
                     {% endif %}
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-map-marked-alt text-accent mt-1 text-sm"></i>
+                        <span class="text-gray-300 font-light text-sm">{% trans "Zone d'intervention : Tanger, Tétouan, Rabat, Casablanca — Maroc" %}</span>
+                    </li>
                     {% if site_settings.phone %}
                     <li class="flex items-center gap-3">
                         <i class="fas fa-phone-alt text-accent text-sm"></i>

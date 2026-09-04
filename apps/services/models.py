@@ -22,6 +22,14 @@ class Service(models.Model):
     featured_image = models.ImageField(
         _('Image principale'), upload_to='services/', blank=True, null=True
     )
+    meta_title = models.CharField(
+        _('Titre SEO'), max_length=70, blank=True,
+        help_text=_('Titre pour les moteurs de recherche (max 70 caractères). Laisser vide pour utiliser le titre du service.')
+    )
+    meta_description = models.CharField(
+        _('Description SEO'), max_length=160, blank=True,
+        help_text=_('Description pour les moteurs de recherche (max 160 caractères). Laisser vide pour utiliser la description courte.')
+    )
     order = models.PositiveIntegerField(_('Ordre'), default=0)
     is_active = models.BooleanField(_('Actif'), default=True)
     created_at = models.DateTimeField(_('Créé le'), auto_now_add=True)

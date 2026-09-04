@@ -13,7 +13,7 @@
         <source src="{{ site_settings.hero_video.url }}" type="video/mp4">
     </video>
     {% elif site_settings.hero_video_poster %}
-    <img src="{{ site_settings.hero_video_poster.url }}" alt="" class="absolute inset-0 w-full h-full object-cover z-0">
+    <img src="{{ site_settings.hero_video_poster.url }}" alt="{% trans "Modélisation 3D et visites virtuelles immersives à Tanger" %}" class="absolute inset-0 w-full h-full object-cover z-0">
     {% else %}
     {# Fallback gradient when no video/poster is set #}
     <div class="absolute inset-0 z-0" style="background: linear-gradient(135deg, #0a1628 0%, #132742 40%, #1a3a5c 70%, #0d2137 100%);"></div>

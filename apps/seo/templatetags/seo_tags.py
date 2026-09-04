@@ -37,17 +37,20 @@ def seo_meta_tags(context):
 
     # Fallbacks for dynamic content
     obj = context.get('service') or context.get('project') or context.get('article') or context.get('case_study') or context.get('promotion')
-    if obj and not title:
-        title = getattr(obj, 'title', '')
-    if obj and not description:
-        description = getattr(obj, 'short_description', '') or getattr(obj, 'excerpt', '') or ''
+    if obj:
+        if not title:
+            title = getattr(obj, 'meta_title', None) or getattr(obj, 'title', '')
         if not description:
-            desc_field = getattr(obj, 'description', '') or getattr(obj, 'problem', '') or ''
-            description = desc_field[:160] if desc_field else ''
-    if obj and not og_image:
-        img = getattr(obj, 'featured_image', None)
-        if img:
-            og_image = img.url
+            description = getattr(obj, 'meta_description', None) or getattr(obj, 'short_description', '') or getattr(obj, 'excerpt', '') or ''
+            if not description:
+                desc_field = getattr(obj, 'description', '') or getattr(obj, 'problem', '') or ''
+                description = desc_field[:160] if desc_field else ''
+        if not keywords:
+            keywords = getattr(obj, 'keywords', '') or ''
+        if not og_image:
+            img = getattr(obj, 'featured_image', None)
+            if img:
+                og_image = img.url
 
     # Fallback to default OG image from site settings
     if not og_image and site_settings and site_settings.default_og_image:
@@ -280,47 +283,42 @@ def jsonld_article(context):
 
 @register.simple_tag(takes_context=True)
 def jsonld_local_business(context):
-    """JSON-LD LocalBusiness for contact page — enhanced with Tangier/Morocco data."""
+    """JSON-LD LocalBusiness structured data in <head> for all locales."""
     site_settings = context.get('site_settings')
     base_url = f"{settings.SITE_PROTOCOL}://{settings.SITE_DOMAIN}"
+
+    logo_url = (base_url + site_settings.logo.url) if (site_settings and site_settings.logo) else f"{base_url}/media/site/logo.png"
+
+    social = []
+    if site_settings:
+        for field in ['social_instagram', 'social_linkedin', 'social_tiktok', 'social_facebook', 'social_youtube']:
+            url = getattr(site_settings, field, '')
+            if url and url not in social:
+                social.append(url)
+    if not social:
+        social = [
+            "https://instagram.com/vrcreation",
+            "https://linkedin.com/company/vrcreation",
+            "https://tiktok.com/@vrcreation"
+        ]
 
     data = {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "name": site_settings.site_name if site_settings else "VR Creation Company",
-        "url": base_url,
-        "email": site_settings.email if site_settings else "",
-        "telephone": site_settings.phone if site_settings else "",
-        "priceRange": "$$",
-    }
-
-    if site_settings and site_settings.address:
-        data["address"] = {
+        "name": "VR Creation Company",
+        "image": logo_url,
+        "@id": f"{base_url}/",
+        "url": f"{base_url}/",
+        "telephone": site_settings.phone if (site_settings and site_settings.phone) else "+212634017762",
+        "address": {
             "@type": "PostalAddress",
-            "streetAddress": site_settings.address,
-            "addressLocality": "Tangier",
-            "addressRegion": "Tanger-Tétouan-Al Hoceïma",
-            "addressCountry": "MA",
+            "streetAddress": "Avenue Ibn Tachfine, bureaux Ibn Battouta",
+            "addressLocality": "Tanger",
             "postalCode": "90000",
-        }
-
-    data["geo"] = {
-        "@type": "GeoCoordinates",
-        "latitude": "35.7595",
-        "longitude": "-5.8340",
+            "addressCountry": "MA"
+        },
+        "sameAs": social
     }
 
-    if site_settings and site_settings.logo:
-        data["image"] = base_url + site_settings.logo.url
+    return mark_safe(f'<script type="application/ld+json">\n{json.dumps(data, ensure_ascii=False, indent=2)}\n</script>')
 
-    social = []
-    if site_settings:
-        for field in ['social_facebook', 'social_instagram', 'social_linkedin',
-                       'social_youtube', 'social_twitter']:
-            url = getattr(site_settings, field, '')
-            if url:
-                social.append(url)
-    if social:
-        data["sameAs"] = social
-
-    return mark_safe(f'<script type="application/ld+json">{json.dumps(data, ensure_ascii=False)}</script>')

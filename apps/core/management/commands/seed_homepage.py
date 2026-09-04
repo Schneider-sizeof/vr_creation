@@ -80,12 +80,12 @@ class Command(BaseCommand):
         # 1. Seed hero settings into SiteSettings
         self.stdout.write('\n— Seeding hero settings —')
         settings = SiteSettings.load()
-        settings.hero_headline_fr = "DONNEZ VIE À VOTRE PROJET IMMOBILIER, AVANT MÊME SA CONSTRUCTION."
-        settings.hero_headline_en = "BRING YOUR REAL ESTATE PROJECT TO LIFE, BEFORE IT'S EVEN BUILT."
-        settings.hero_headline_ar = "أعطِ الحياة لمشروعك العقاري، حتى قبل بنائه."
+        settings.hero_headline_fr = "Donnez vie à votre projet immobilier avant même sa construction — Modélisation 3D & Visites Virtuelles à Tanger"
+        settings.hero_headline_en = "Bring your real estate project to life before it's even built — 3D Modeling & Virtual Tours in Tangier"
+        settings.hero_headline_ar = "امنح مشروعك العقاري الحياة قبل حتى بنائه — نمذجة ثلاثية الأبعاد وجولات افتراضية في طنجة"
         settings.hero_subheadline_fr = "De la conception 3D à la commercialisation digitale, nous transformons vos projets immobiliers en expériences visuelles capables de séduire, convaincre et générer des prospects."
         settings.hero_subheadline_en = "From 3D design to digital marketing, we transform your real estate projects into visual experiences that attract, convince and generate leads."
-        settings.hero_subheadline_ar = "من التصميم ثلاثي الأبعاد إلى التسويق الرقمي, نحوّل مشاريعكم العقارية إلى تجارب بصرية قادرة على الإغراء والإقناع وتوليد العملاء المحتملين."
+        settings.hero_subheadline_ar = "من التصميم ثلاثي الأبعاد إلى التسويق الرقمي، نحول مشاريعكم العقارية إلى تجارب بصرية قادرة على جذب وإقناع وتوليد العملاء المحتملين."
         settings.hero_cta1_label_fr = "Découvrir nos services"
         settings.hero_cta1_label_en = "Discover our services"
         settings.hero_cta1_label_ar = "اكتشف خدماتنا"
@@ -94,6 +94,10 @@ class Command(BaseCommand):
         settings.hero_cta2_label_en = "Contact us"
         settings.hero_cta2_label_ar = "اتصل بنا"
         settings.hero_cta2_link = "/contact/"
+        settings.phone = "+212634017762"
+        settings.address_fr = "Avenue Ibn Tachfine, bureaux Ibn Battouta, Tanger, Maroc"
+        settings.address_en = "Avenue Ibn Tachfine, Ibn Battouta offices, Tangier, Morocco"
+        settings.address_ar = "شارع ابن تاشفين، مكاتب ابن بطوطة، طنجة، المغرب"
         settings.save()
         self.stdout.write(self.style.SUCCESS('  ✓ Hero settings seeded'))
 

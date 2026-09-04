@@ -1540,3 +1540,24 @@ msgstr "نجمع البيانات التي تقدمها لنا عبر نموذج
 
 msgid "Ces données sont utilisées uniquement pour répondre à vos demandes."
 msgstr "تُستخدم هذه البيانات فقط للرد على طلباتك."
+
+msgid "VR Creation Company — Agence de modélisation 3D et visites virtuelles à Tanger, Maroc. Spécialisée en rendu 3D immobilier, visite virtuelle 360°, branding immobilier et marketing digital pour promoteurs immobiliers. Nous accompagnons les projets immobiliers à Tanger, Rabat, Casablanca et dans tout le Maroc."
+msgstr "شركة في آر كرييشن (VR Creation Company) — وكالة متخصصة في النمذجة ثلاثية الأبعاد والجولات الافتراضية في طنجة، المغرب. متخصصة في الإظهار المعماري والرندرة ثلاثية الأبعاد للعقارات، الجولات الافتراضية 360 درجة، الهوية البصرية العقارية والتسويق الرقمي للمنعشين والمطورين العقاريين. نرافق وندعم المشاريع العقارية في طنجة، الرباط، الدار البيضاء وجميع أنحاء المغرب."
+
+msgid "Zone d'intervention : Tanger, Tétouan, Rabat, Casablanca — Maroc"
+msgstr "نطاق العمل والخدمات: طنجة، تطوان، الرباط، الدار البيضاء — المغرب"
+
+msgid "Donnez vie à votre projet immobilier avant même sa construction — Modélisation 3D & Visites Virtuelles à Tanger"
+msgstr "امنح مشروعك العقاري الحياة قبل حتى بنائه — نمذجة ثلاثية الأبعاد وجولات افتراضية في طنجة"
+
+msgid "Rendu 3D photoréaliste d'une villa en construction à Tanger"
+msgstr "عرض ثلاثي الأبعاد واقعي لفيلا قيد البناء في طنجة"
+
+msgid "Modélisation 3D et visites virtuelles immersives à Tanger"
+msgstr "نمذجة ثلاثية الأبعاد وجولات افتراضية غامرة في طنجة"
+
+msgid "Agrandissement du projet 3D"
+msgstr "تكبير عرض المشروع ثلاثي الأبعاد"
+
+msgid "Rendu 3D et visite virtuelle"
+msgstr "إظهار ثلاثي الأبعاد وجولة افتراضية"

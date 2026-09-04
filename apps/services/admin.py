@@ -31,6 +31,10 @@ class ServiceAdmin(TranslationAdmin):
         (_('Contenu'), {
             'fields': ('short_description', 'full_description', 'featured_image')
         }),
+        (_('Optimisation SEO'), {
+            'classes': ('collapse',),
+            'fields': ('meta_title', 'meta_description'),
+        }),
     )
 
     def image_preview(self, obj):
