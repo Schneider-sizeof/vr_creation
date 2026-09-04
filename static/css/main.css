@@ -1426,3 +1426,57 @@ body.vr-mode .nav-promo-btn-mobile {
     color: #00f0ff !important;
 }
 
+/* ============================================
+   STRENGTH / NOS POINTS FORTS CARDS
+   ============================================ */
+.strength-card-dark {
+    background-color: #090D16 !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.strength-card-dark h3,
+.strength-card-dark .card-title {
+    color: #FFFFFF !important;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 1), 0 0 25px rgba(0, 0, 0, 0.9) !important;
+}
+
+.strength-card-dark p,
+.strength-card-dark .card-desc {
+    color: #F8FAFC !important; /* pure legible slate-50 */
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.95), 0 0 12px rgba(0, 0, 0, 0.8) !important;
+}
+
+.strength-card-dark .card-stat-number {
+    color: #72BDD5 !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 1) !important;
+}
+
+.strength-card-dark .card-stat-label {
+    color: #FFFFFF !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 1) !important;
+}
+
+.strength-card-light {
+    background-color: #FFFFFF !important;
+    border-color: #E2E8F0 !important;
+}
+
+.strength-card-light h3,
+.strength-card-light .card-title {
+    color: #0F172A !important; /* slate-900 */
+}
+
+.strength-card-light p,
+.strength-card-light .card-desc {
+    color: #475569 !important; /* slate-600 */
+}
+
+.strength-card-light .card-stat-number {
+    color: #3D8EB9 !important;
+}
+
+.strength-card-light .card-stat-label {
+    color: #64748B !important;
+}
+
+
