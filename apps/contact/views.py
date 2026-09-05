@@ -4,10 +4,10 @@ Contact views with rate limiting and math captcha.
 import time
 import random
 from django.conf import settings
-from django.core.mail import send_mail
+from django.core.mail import EmailMessage
 from django.shortcuts import render, redirect
 from django.urls import reverse
-from django.utils.translation import gettext_lazy as _, gettext
+from django.utils.translation import gettext_lazy as _, gettext, get_language
 
 from .forms import ContactForm
 from apps.seo.models import PageSEO
@@ -45,55 +45,138 @@ def contact_view(request):
         elif form.is_valid():
             submission = form.save()
 
-            # Send email notification to Admin
+            # Send email notification to Admin (vrcreation.company@gmail.com)
             try:
-                admin_subject = f"[VR Creation] Nouveau message de contact : {submission.subject}"
+                admin_subject = f"[VR CREATION] Nouveau message de contact : {submission.subject}"
+                created_str = submission.created_at.strftime('%d/%m/%Y %H:%M') if submission.created_at else ''
                 admin_body = (
-                    f"Bonjour Admin,\n\n"
-                    f"Vous avez reçu une nouvelle demande de contact depuis le site web VR Creation :\n\n"
-                    f"• Nom / Prénom : {submission.name}\n"
-                    f"• Adresse Email : {submission.email}\n"
-                    f"• Téléphone : {submission.phone or 'Non renseigné'}\n"
-                    f"• Secteur d'activité : {submission.get_sector_display()}\n"
-                    f"• Sujet : {submission.subject}\n\n"
-                    f"Message :\n{submission.message}\n\n"
-                    f"---\nVR Creation Company — Système de notification automatique"
+                    f"VR CREATION — NOUVEAU MESSAGE DE CONTACT\n"
+                    f"============================================================\n\n"
+                    f"Une nouvelle demande de contact a été reçue via le site web :\n\n"
+                    f"• Nom / Prénom      : {submission.name}\n"
+                    f"• Adresse Email     : {submission.email}\n"
+                    f"• Téléphone         : {submission.phone or 'Non renseigné'}\n"
+                    f"• Secteur           : {submission.get_sector_display()}\n"
+                    f"• Sujet             : {submission.subject}\n"
+                    f"• Date d'envoi      : {created_str}\n\n"
+                    f"------------------------------------------------------------\n"
+                    f"MESSAGE DU CLIENT :\n"
+                    f"------------------------------------------------------------\n"
+                    f"{submission.message}\n\n"
+                    f"============================================================\n"
+                    f"VR CREATION — Studio de production digitale & 3D\n"
+                    f"Astuce : Cliquez simplement sur 'Répondre' dans votre boîte mail pour répondre directement au client ({submission.email}).\n"
                 )
-                send_mail(
-                    admin_subject,
-                    admin_body,
-                    settings.DEFAULT_FROM_EMAIL,
-                    [settings.CONTACT_EMAIL],
-                    fail_silently=True,
+                admin_msg = EmailMessage(
+                    subject=admin_subject,
+                    body=admin_body,
+                    from_email=settings.DEFAULT_FROM_EMAIL,
+                    to=[settings.CONTACT_EMAIL],
+                    reply_to=[submission.email],
                 )
+                admin_msg.send(fail_silently=True)
             except Exception:
                 pass
 
             # Send automatic confirmation email to Sender (User)
             try:
-                user_subject = f"Confirmation de votre message — VR Creation Company"
-                user_body = (
-                    f"Bonjour {submission.name},\n\n"
-                    f"Merci d'avoir contacté VR Creation Company !\n\n"
-                    f"Nous avons bien reçu votre message concernant \"{submission.subject}\" et notre équipe l'étudie avec la plus grande attention.\n\n"
-                    f"Récapitulatif de votre demande :\n"
-                    f"----------------------------------------\n"
-                    f"Sujet : {submission.subject}\n"
-                    f"Secteur : {submission.get_sector_display()}\n"
-                    f"Message :\n{submission.message}\n"
-                    f"----------------------------------------\n\n"
-                    f"Un conseiller spécialisé vous recontactera par email ({submission.email}) ou téléphone sous 24h ouvrées.\n\n"
-                    f"Cordialement,\n"
-                    f"L'équipe VR Creation Company\n"
-                    f"https://vrcreation.pythonanywhere.com"
+                lang = get_language() or 'fr'
+                if lang.startswith('ar'):
+                    user_subject = f"VR CREATION — تأكيد استلام رسالتكم"
+                    user_body = (
+                        f"VR CREATION\n"
+                        f"============================================================\n"
+                        f"تأكيد استلام رسالتكم\n"
+                        f"============================================================\n\n"
+                        f"مرحباً {submission.name}،\n\n"
+                        f"شكراً لتواصلكم مع VR CREATION.\n\n"
+                        f"لقد تم استلام رسالتكم بخصوص \"{submission.subject}\" بنجاح.\n"
+                        f"يقوم فريقنا بمراجعة طلبكم وسيقوم أحد مستشارينا بالرد عليكم في أقرب وقت ممكن (خلال 24 ساعة عمل).\n\n"
+                        f"------------------------------------------------------------\n"
+                        f"ملخص طلبكم :\n"
+                        f"------------------------------------------------------------\n"
+                        f"• الاسم : {submission.name}\n"
+                        f"• البريد الإلكتروني : {submission.email}\n"
+                        f"• الهاتف : {submission.phone or 'غير محدد'}\n"
+                        f"• المجال : {submission.get_sector_display()}\n"
+                        f"• الموضوع : {submission.subject}\n\n"
+                        f"نص الرسالة :\n"
+                        f"{submission.message}\n\n"
+                        f"------------------------------------------------------------\n"
+                        f"إذا كنتم ترغبون في إضافة أي تفاصيل أخرى، يمكنكم الرد مباشرة على هذه الرسالة.\n\n"
+                        f"مع أطيب التحيات،\n"
+                        f"فريق VR CREATION\n"
+                        f"البريد الإلكتروني : vrcreation.company@gmail.com\n"
+                        f"الموقع الإلكتروني : https://vrcreationn.pythonanywhere.com\n"
+                        f"============================================================\n"
+                    )
+                elif lang.startswith('en'):
+                    user_subject = f"VR CREATION — Confirmation of your message receipt"
+                    user_body = (
+                        f"VR CREATION\n"
+                        f"============================================================\n"
+                        f"Message Confirmation\n"
+                        f"============================================================\n\n"
+                        f"Hello {submission.name},\n\n"
+                        f"Thank you for contacting VR CREATION.\n\n"
+                        f"We have successfully received your inquiry regarding \"{submission.subject}\".\n"
+                        f"Our team is currently reviewing your request and a specialist will get back to you promptly (typically within 24 business hours).\n\n"
+                        f"------------------------------------------------------------\n"
+                        f"SUMMARY OF YOUR INQUIRY:\n"
+                        f"------------------------------------------------------------\n"
+                        f"• Name: {submission.name}\n"
+                        f"• Email: {submission.email}\n"
+                        f"• Phone: {submission.phone or 'Not provided'}\n"
+                        f"• Sector: {submission.get_sector_display()}\n"
+                        f"• Subject: {submission.subject}\n\n"
+                        f"Message:\n"
+                        f"{submission.message}\n\n"
+                        f"------------------------------------------------------------\n"
+                        f"If you have additional details or files to add, simply reply directly to this email.\n\n"
+                        f"Best regards,\n"
+                        f"The VR CREATION Team\n"
+                        f"Email: vrcreation.company@gmail.com\n"
+                        f"Website: https://vrcreationn.pythonanywhere.com\n"
+                        f"============================================================\n"
+                    )
+                else:  # Default French
+                    user_subject = f"VR CREATION — Confirmation de réception de votre message"
+                    user_body = (
+                        f"VR CREATION\n"
+                        f"============================================================\n"
+                        f"Confirmation de réception de votre message\n"
+                        f"============================================================\n\n"
+                        f"Bonjour {submission.name},\n\n"
+                        f"Nous vous remercions d'avoir contacté VR CREATION.\n\n"
+                        f"Nous avons bien reçu votre demande concernant : \"{submission.subject}\".\n"
+                        f"Notre équipe étudie actuellement votre message et un conseiller dédié vous répondra dans les plus brefs délais (généralement sous 24h ouvrées).\n\n"
+                        f"------------------------------------------------------------\n"
+                        f"RÉCAPITULATIF DE VOTRE DEMANDE :\n"
+                        f"------------------------------------------------------------\n"
+                        f"• Nom / Prénom : {submission.name}\n"
+                        f"• Email : {submission.email}\n"
+                        f"• Téléphone : {submission.phone or 'Non renseigné'}\n"
+                        f"• Secteur : {submission.get_sector_display()}\n"
+                        f"• Sujet : {submission.subject}\n\n"
+                        f"Message transmis :\n"
+                        f"{submission.message}\n\n"
+                        f"------------------------------------------------------------\n"
+                        f"Si vous souhaitez apporter des éléments complémentaires, vous pouvez répondre directement à cet email.\n\n"
+                        f"Bien cordialement,\n"
+                        f"L'équipe VR CREATION\n"
+                        f"Email : vrcreation.company@gmail.com\n"
+                        f"Site web : https://vrcreationn.pythonanywhere.com\n"
+                        f"============================================================\n"
+                    )
+
+                user_msg = EmailMessage(
+                    subject=user_subject,
+                    body=user_body,
+                    from_email=settings.DEFAULT_FROM_EMAIL,
+                    to=[submission.email],
+                    reply_to=[settings.CONTACT_EMAIL],
                 )
-                send_mail(
-                    user_subject,
-                    user_body,
-                    settings.DEFAULT_FROM_EMAIL,
-                    [submission.email],
-                    fail_silently=True,
-                )
+                user_msg.send(fail_silently=True)
             except Exception:
                 pass
 
