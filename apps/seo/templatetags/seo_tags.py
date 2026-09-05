@@ -144,6 +144,18 @@ def hreflang_tags(context):
 
 
 @register.simple_tag(takes_context=True)
+def get_translated_url(context, lang_code):
+    """Return the current page URL translated into the given language code."""
+    request = context.get('request')
+    if not request:
+        return f"/{lang_code}/"
+    path = request.get_full_path()
+    translated = translate_url(path, lang_code)
+    return translated or f"/{lang_code}/"
+
+
+
+@register.simple_tag(takes_context=True)
 def jsonld_organization(context):
     """JSON-LD Organization schema with Tangier/Morocco locality."""
     site_settings = context.get('site_settings')

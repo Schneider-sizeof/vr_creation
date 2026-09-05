@@ -991,19 +991,19 @@ msgid "YouTube"
 msgstr "يوتيوب"
 
 msgid "a-propos/"
-msgstr "a-propos/"
+msgstr "about/"
 
 msgid "blog/"
 msgstr "blog/"
 
 msgid "confidentialite/"
-msgstr "confidentialite/"
+msgstr "privacy-policy/"
 
 msgid "contact/"
 msgstr "contact/"
 
 msgid "contact/merci/"
-msgstr "contact/merci/"
+msgstr "contact/thank-you/"
 
 msgid "cookies/"
 msgstr "cookies/"
@@ -1015,19 +1015,22 @@ msgid "et technologie."
 msgstr "والتكنولوجيا."
 
 msgid "etudes-de-cas/"
-msgstr "etudes-de-cas/"
+msgstr "case-studies/"
 
 msgid "mentions-legales/"
-msgstr "mentions-legales/"
+msgstr "legal-notices/"
+
+msgid "promotions/"
+msgstr "promotions/"
 
 msgid "realisations/"
-msgstr "realisations/"
+msgstr "portfolio/"
 
 msgid "services/"
 msgstr "services/"
 
 msgid "visites-virtuelles/"
-msgstr "visites-virtuelles/"
+msgstr "virtual-tours/"
 
 msgid "votre@email.com"
 msgstr "بريدك@مثال.com"
