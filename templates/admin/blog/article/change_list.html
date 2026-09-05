@@ -1,0 +1,11 @@
+﻿{% extends "admin/change_list.html" %}
+{% load i18n %}
+
+{% block object-tools-items %}
+    <li>
+        <a href="{% url 'admin:blog_article_generate_ai' %}" class="btn-ai-generate" style="background: linear-gradient(135deg, #3d8eb9 0%, #1e4b6e 100%); color: #ffffff !important; font-weight: 600; padding: 6px 14px; border-radius: 6px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.18); text-decoration: none; border: 1px solid rgba(255,255,255,0.2); transition: all 0.2s ease;">
+            <span style="font-size: 15px;">✨</span> {% trans "Générer un article avec l'IA" %}
+        </a>
+    </li>
+    {{ block.super }}
+{% endblock %}

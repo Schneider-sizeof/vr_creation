@@ -225,3 +225,11 @@ CONTACT_RATE_LIMIT_MAX = int(os.environ.get('CONTACT_RATE_LIMIT_MAX', '5'))
 MAX_IMAGE_SIZE = (1920, 1080)
 THUMBNAIL_SIZE = (600, 400)
 OG_IMAGE_SIZE = (1200, 630)
+
+# =============================================================================
+# Google Gemini AI Blog Generator
+# =============================================================================
+GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY', '')
+GEMINI_MODEL = os.environ.get('GEMINI_MODEL', 'gemini-2.0-flash')
+GEMINI_TIMEOUT_SECONDS = int(os.environ.get('GEMINI_TIMEOUT_SECONDS', '25'))
+

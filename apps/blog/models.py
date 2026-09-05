@@ -23,6 +23,12 @@ class Category(models.Model):
 
 class Article(models.Model):
     """Blog article / actualité."""
+
+    STATUS_CHOICES = [
+        ('draft', _('Brouillon')),
+        ('published', _('Publié')),
+    ]
+
     title = models.CharField(_('Titre'), max_length=300)
     slug = models.SlugField(_('Slug'), max_length=300, unique=True)
     category = models.ForeignKey(
@@ -39,7 +45,11 @@ class Article(models.Model):
         _('Image principale'), upload_to='blog/', blank=True, null=True
     )
     published_date = models.DateTimeField(_('Date de publication'))
+    status = models.CharField(
+        _('Statut'), max_length=20, choices=STATUS_CHOICES, default='draft'
+    )
     is_published = models.BooleanField(_('Publié'), default=False)
+    ai_generated = models.BooleanField(_('Généré par IA'), default=False)
     reading_time = models.PositiveIntegerField(
         _('Temps de lecture (min)'), default=5
     )
@@ -53,6 +63,24 @@ class Article(models.Model):
 
     def __str__(self):
         return self.title
+
+    def save(self, *args, **kwargs):
+        # Synchronize status and is_published
+        if self.status == 'published':
+            self.is_published = True
+        elif self.status == 'draft':
+            self.is_published = False
+        elif self.is_published:
+            self.status = 'published'
+        else:
+            self.status = 'draft'
+
+        # Auto-calculate reading time if not provided or default
+        if self.content and (not self.reading_time or self.reading_time == 5):
+            word_count = len(self.content.split())
+            self.reading_time = max(1, round(word_count / 200))
+
+        super().save(*args, **kwargs)
 
     def get_absolute_url(self):
         return reverse('blog:detail', kwargs={'slug': self.slug})
