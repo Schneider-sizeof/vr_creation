@@ -18,13 +18,17 @@
     {# Page-specific JSON-LD #}
     {% block jsonld_extra %}{% endblock %}
 
-    {# Favicon — Google requires 48x48 minimum, square, crawlable #}
+    {# Favicon — High-resolution icons for all browser tabs, bookmarks & mobile devices #}
     {% if site_settings.favicon %}
+    <link rel="shortcut icon" href="{{ site_settings.favicon.url }}" type="image/x-icon">
     <link rel="icon" href="{{ site_settings.favicon.url }}" type="image/x-icon">
+    <link rel="icon" href="{{ site_settings.favicon.url }}" type="image/png" sizes="32x32">
     <link rel="icon" href="{{ site_settings.favicon.url }}" type="image/png" sizes="96x96">
     <link rel="apple-touch-icon" href="{{ site_settings.favicon.url }}" sizes="180x180">
     {% else %}
-    <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" sizes="16x16 32x32 48x48">
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'img/favicon.png' %}" type="image/png" sizes="32x32">
     <link rel="icon" href="{% static 'img/favicon-96x96.png' %}" type="image/png" sizes="96x96">
     <link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}" sizes="180x180">
     {% endif %}

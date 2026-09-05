@@ -16,6 +16,9 @@ from apps.seo.views import robots_txt
 
 # Non-i18n URLs
 urlpatterns = [
+    path('favicon.ico', RedirectView.as_view(url=settings.STATIC_URL + 'img/favicon.ico', permanent=True)),
+    path('vrcreation_dashboard/', RedirectView.as_view(url='/fr/vrcreation_dashboard/', permanent=False)),
+    path('vrcreation_dashboard', RedirectView.as_view(url='/fr/vrcreation_dashboard/', permanent=False)),
     path('sitemap.xml', sitemap, {'sitemaps': VR_SITEMAPS},
          name='django.contrib.sitemaps.views.sitemap'),
     path('robots.txt', robots_txt, name='robots_txt'),
@@ -24,7 +27,7 @@ urlpatterns = [
 
 # i18n URL patterns (prefixed by /fr/, /en/, /ar/)
 urlpatterns += i18n_patterns(
-    path('admin/', admin.site.urls),
+    path('vrcreation_dashboard/', admin.site.urls),
     path('', include('apps.core.urls')),
     path('', include('apps.services.urls')),
     path('', include('apps.portfolio.urls')),

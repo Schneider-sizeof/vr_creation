@@ -230,4 +230,89 @@ document.addEventListener('DOMContentLoaded', () => {
       container.appendChild(particle);
     }
   }
+
+  // 9. Content Protection & Anti-Theft Guard
+  (function initContentProtection() {
+    // Disable Right-Click Context Menu
+    document.addEventListener('contextmenu', (e) => {
+      e.preventDefault();
+      return false;
+    });
+
+    // Disable Copy, Cut, Select on non-input elements
+    document.addEventListener('copy', (e) => {
+      const tag = e.target ? e.target.tagName : '';
+      if (tag !== 'INPUT' && tag !== 'TEXTAREA') {
+        e.preventDefault();
+        return false;
+      }
+    });
+
+    document.addEventListener('cut', (e) => {
+      const tag = e.target ? e.target.tagName : '';
+      if (tag !== 'INPUT' && tag !== 'TEXTAREA') {
+        e.preventDefault();
+        return false;
+      }
+    });
+
+    document.addEventListener('dragstart', (e) => {
+      e.preventDefault();
+      return false;
+    });
+
+    document.addEventListener('selectstart', (e) => {
+      const tag = e.target ? e.target.tagName : '';
+      if (tag !== 'INPUT' && tag !== 'TEXTAREA') {
+        e.preventDefault();
+        return false;
+      }
+    });
+
+    // Disable Developer Tools & View Source Shortcuts
+    document.addEventListener('keydown', (e) => {
+      // F12
+      if (e.key === 'F12' || e.keyCode === 123) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+
+      const isCtrlOrCmd = e.ctrlKey || e.metaKey;
+
+      // Ctrl/Cmd + Shift + I/J/C/K (DevTools / Inspect / Console)
+      if (isCtrlOrCmd && e.shiftKey) {
+        const k = (e.key || '').toUpperCase();
+        if (k === 'I' || k === 'J' || k === 'C' || k === 'K' || e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67 || e.keyCode === 75) {
+          e.preventDefault();
+          e.stopPropagation();
+          return false;
+        }
+      }
+
+      // Ctrl/Cmd + U (View Source)
+      if (isCtrlOrCmd && ((e.key || '').toUpperCase() === 'U' || e.keyCode === 85)) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+
+      // Ctrl/Cmd + S (Save Page)
+      if (isCtrlOrCmd && ((e.key || '').toUpperCase() === 'S' || e.keyCode === 83)) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+    });
+
+    // Deter console inspection
+    try {
+      console.clear();
+      console.log(
+        "%cVR CREATION %c\nAll rights reserved. Unauthorized copying or inspection is restricted.",
+        "color: #3D8EB9; font-size: 20px; font-weight: bold; font-family: sans-serif;",
+        "color: #888; font-size: 12px;"
+      );
+    } catch(err) {}
+  })();
 });
