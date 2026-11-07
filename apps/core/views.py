@@ -61,6 +61,8 @@ def home(request):
             },
         ]
     
+    promotions = list(Promotion.objects.filter(is_active=True).order_by('order'))
+
     context = {
         'services': services,
         'strengths': strengths,
@@ -70,6 +72,7 @@ def home(request):
         'process_steps': process_steps,
         'hero_slides': hero_slides,
         'strategic_successes': strategic_successes,
+        'promotions': promotions,
         'page_seo': get_page_seo('home'),
         'page_identifier': 'home',
     }
@@ -120,7 +123,7 @@ def cookie_policy(request):
 
 def promotions(request):
     """Promotions list/grid page."""
-    active_promotions = Promotion.objects.filter(is_active=True)
+    active_promotions = Promotion.objects.filter(is_active=True).order_by('order')
     return render(request, 'core/promotions_list.html', {
         'promotions': active_promotions,
         'page_seo': get_page_seo('promotions'),

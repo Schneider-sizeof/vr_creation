@@ -322,7 +322,8 @@ class StrategicSuccess(models.Model):
         """Return image URL with robust static fallback."""
         if self.image:
             try:
-                return self.image.url
+                if self.image.storage.exists(self.image.name):
+                    return self.image.url
             except Exception:
                 pass
 
@@ -409,6 +410,24 @@ class Promotion(models.Model):
 
     def get_absolute_url(self):
         return reverse('core:promotion_detail', kwargs={'slug': self.slug})
+
+    @property
+    def get_image_url(self):
+        """Return promotion image URL with robust static fallback."""
+        if self.featured_image:
+            try:
+                if self.featured_image.storage.exists(self.featured_image.name):
+                    return self.featured_image.url
+            except Exception:
+                pass
+
+        slug_lower = (self.slug or '').lower()
+        if 'debutant' in slug_lower:
+            return '/static/img/promotions/pack-debutants.jpg'
+        if 'performance' in slug_lower or 'commission' in slug_lower:
+            return '/static/img/promotions/offre-performance.jpg'
+
+        return '/static/img/promotions/pack-debutants.jpg'
 
 
 class PromotionDeliverable(models.Model):

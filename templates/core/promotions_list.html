@@ -19,10 +19,12 @@
             <div class="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 bg-white flex flex-col h-full border border-gray-100 animate-on-scroll slide-up" style="transition-delay: {{ forloop.counter }}00ms;">
                 <!-- Promotion Badge & Image -->
                 <div class="relative aspect-video overflow-hidden bg-slate-900">
-                    {% if promotion.featured_image %}
-                    <img src="{{ promotion.featured_image.url }}" alt="{{ promotion.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    {% if promotion.get_image_url %}
+                    <img src="{{ promotion.get_image_url }}" alt="{{ promotion.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                    {% elif promotion.featured_image %}
+                    <img src="{{ promotion.featured_image.url }}" alt="{{ promotion.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                     {% else %}
-                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&q=80" alt="{{ promotion.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&q=80" alt="{{ promotion.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                     {% endif %}
                     
                     {% if promotion.badge_text %}

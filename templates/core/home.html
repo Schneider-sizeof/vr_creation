@@ -222,15 +222,7 @@
             <div class="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 bg-white flex flex-col h-full animate-on-scroll slide-up" style="transition-delay: {{ forloop.counter }}00ms;">
                 <!-- Card Image -->
                 <div class="relative aspect-video overflow-hidden bg-slate-900">
-                    {% if item.get_image_url %}
-                    <img src="{{ item.get_image_url }}" alt="{{ item.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                    {% elif item.image %}
-                    <img src="{{ item.image.url }}" alt="{{ item.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                    {% else %}
-                    <div class="w-full h-full flex items-center justify-center text-slate-500">
-                        <i class="far fa-image text-3xl animate-pulse"></i>
-                    </div>
-                    {% endif %}
+                    <img src="{{ item.get_image_url }}" alt="{{ item.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" onerror="this.onerror=null; this.src='/static/img/strategic/projet-immobilier.jpg';">
                 </div>
                 <!-- Card Body -->
                 <div class="p-6 flex flex-col flex-grow">
@@ -378,18 +370,92 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════
-     SECTION 5b — PROMOTION EXCLUSIVE (Offre spéciale)
+     SECTION 5b — PROMOTIONS & OFFRES STRATÉGIQUES
      ═══════════════════════════════════════════════ -->
-{% if featured_promotion %}
+{% if promotions %}
+<section class="section section-tint py-24 relative overflow-hidden">
+    <div class="light-orb light-orb-accent" style="width: 350px; height: 350px; bottom: -80px; left: 5%; opacity: 0.08;"></div>
+    <div class="container mx-auto px-4 relative z-10 max-w-6xl">
+        <div class="text-center mb-16 max-w-3xl mx-auto animate-on-scroll slide-up">
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-accent-light text-accent-dark border border-accent/20 mb-4 shadow-sm">
+                <i class="fas fa-gift text-xs"></i>
+                {% trans "Offres Stratégiques" %}
+            </span>
+            <h2 class="section-header-title text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight uppercase mb-4 leading-tight">
+                {% trans "Nos packs & offres exclusives" %}
+            </h2>
+            <div class="w-16 h-1 bg-gradient-to-r from-accent to-accent-dark mx-auto mb-5 rounded-full"></div>
+            <p class="section-header-subtitle text-slate-600 text-base md:text-lg font-normal leading-relaxed max-w-2xl mx-auto">
+                {% trans "Des formules adaptées à chaque étape de votre projet immobilier pour accélérer vos ventes et maximiser votre rentabilité." %}
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 {% if promotions|length == 1 %}max-w-4xl mx-auto{% else %}lg:grid-cols-2{% endif %} gap-8">
+            {% for promo in promotions %}
+            <div class="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 md:p-10 flex flex-col justify-between relative overflow-hidden group hover:shadow-2xl transition-all duration-300 animate-on-scroll slide-up" style="transition-delay: {{ forloop.counter }}00ms;">
+                <!-- Decorative Corner Pill -->
+                <div class="flex items-center justify-between mb-6 flex-wrap gap-2">
+                    <span class="pill-badge {% if promo.is_featured %}bg-amber-100 text-amber-800 border-amber-300 font-bold{% else %}bg-primary-light text-primary border-primary-light/50 font-bold{% endif %}">
+                        {% if promo.is_featured %}<i class="fas fa-star mr-1 text-amber-500"></i>{% endif %}{{ promo.badge_text }}
+                    </span>
+                    {% if not promo.is_customizable %}
+                    <span class="text-[11px] uppercase tracking-wider font-bold text-amber-700 bg-amber-50 border border-amber-200 px-3 py-1 rounded-full">
+                        <i class="fas fa-handshake mr-1"></i>{% trans "Sur commission" %}
+                    </span>
+                    {% else %}
+                    <span class="text-[11px] uppercase tracking-wider font-bold text-primary bg-primary/10 border border-primary/20 px-3 py-1 rounded-full">
+                        <i class="fas fa-sliders-h mr-1"></i>{% trans "Personnalisable" %}
+                    </span>
+                    {% endif %}
+                </div>
+
+                <!-- Image -->
+                <div class="relative rounded-2xl overflow-hidden aspect-[16/9] mb-6 shadow-md bg-slate-900">
+                    <img src="{{ promo.get_image_url }}" alt="{{ promo.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&q=80';">
+                </div>
+
+                <!-- Body -->
+                <div class="space-y-3 mb-6 flex-grow">
+                    <h3 class="text-xl md:text-2xl font-extrabold text-dark uppercase tracking-tight leading-snug group-hover:text-primary transition-colors">
+                        {{ promo.title }}
+                    </h3>
+                    <h4 class="text-sm md:text-base font-semibold text-primary font-serif italic">
+                        {{ promo.headline }}
+                    </h4>
+                    <p class="text-gray-600 text-sm leading-relaxed font-light">
+                        {{ promo.short_description }}
+                    </p>
+                </div>
+
+                <!-- Footer Price & CTA -->
+                <div class="pt-6 border-t border-gray-100 flex flex-wrap items-center justify-between gap-4 mt-auto">
+                    <div>
+                        <span class="block text-[10px] uppercase tracking-wider text-gray-400 font-bold">{% trans "Tarif" %}</span>
+                        <span class="text-primary font-black text-xl md:text-2xl">{{ promo.offer_price|default:"Sur devis" }}</span>
+                    </div>
+                    <a href="{% url 'core:promotion_detail' promo.slug %}" class="btn btn-primary px-6 py-3 text-sm font-bold shadow-md hover:shadow-lg transition-transform duration-200 group-hover:scale-105">
+                        {% trans "Découvrir l'offre" %} <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="text-center mt-12 animate-on-scroll slide-up">
+            <a href="{% url 'core:promotions' %}" class="inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-primary-dark transition-colors">
+                {% trans "Voir toutes les promotions et packs" %} <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+{% elif featured_promotion %}
 <section class="section section-tint py-24 relative overflow-hidden">
     <div class="light-orb light-orb-accent" style="width: 350px; height: 350px; bottom: -80px; left: 5%; opacity: 0.08;"></div>
     <div class="container mx-auto px-4 relative z-10">
         <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl border border-gray-100 p-8 md:p-12 overflow-hidden relative">
-            <!-- Decorative corner -->
             <div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-bl-full pointer-events-none"></div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                <!-- Left: content -->
                 <div class="lg:col-span-7 space-y-6 text-left animate-on-scroll slide-left">
                     <span class="pill-badge bg-primary-light text-primary border-primary-light/50">
                         {{ featured_promotion.badge_text }}
@@ -414,13 +480,8 @@
                     </div>
                 </div>
 
-                <!-- Right: mock image -->
                 <div class="lg:col-span-5 relative rounded-2xl overflow-hidden aspect-[4/3] shadow-md animate-on-scroll slide-right" style="transition-delay: 150ms;">
-                    {% if featured_promotion.featured_image %}
-                    <img src="{{ featured_promotion.featured_image.url }}" alt="{{ featured_promotion.title }}" class="w-full h-full object-cover">
-                    {% else %}
-                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&q=80" alt="{{ featured_promotion.title }}" class="w-full h-full object-cover">
-                    {% endif %}
+                    <img src="{{ featured_promotion.get_image_url }}" alt="{{ featured_promotion.title }}" class="w-full h-full object-cover">
                 </div>
             </div>
         </div>
