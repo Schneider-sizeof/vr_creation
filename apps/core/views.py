@@ -30,7 +30,36 @@ def home(request):
     values = Value.objects.all()[:4]
     process_steps = ProcessStep.objects.all()
     hero_slides = HeroSlide.objects.filter(active=True)
-    strategic_successes = StrategicSuccess.objects.filter(is_active=True)
+    strategic_successes = list(StrategicSuccess.objects.filter(is_active=True))
+    if not strategic_successes:
+        from django.utils.translation import get_language
+        lang = (get_language() or 'fr')[:2]
+        strategic_successes = [
+            {
+                'title': {'fr': 'Projet immobilier', 'en': 'Real estate project', 'ar': 'مشروع عقاري'}.get(lang, 'Projet immobilier'),
+                'importance': {'fr': "Les acheteurs veulent se projeter avant d'investir.", 'en': 'Buyers want to envision before investing.', 'ar': 'يريد المشترون التصور قبل الاستثمار.'}.get(lang, "Les acheteurs veulent se projeter avant d'investir."),
+                'get_font_awesome_icon': 'fas fa-building',
+                'get_image_url': '/static/img/strategic/projet-immobilier.jpg',
+            },
+            {
+                'title': {'fr': 'Villa en construction', 'en': 'Villa under construction', 'ar': 'فيلا قيد الإنشاء'}.get(lang, 'Villa en construction'),
+                'importance': {'fr': "Le client veut visualiser le résultat final pour s'engager.", 'en': 'The client wants to visualize the final result before committing.', 'ar': 'يرغب العميل في معاينة النتيجة النهائية بكل ثقة قبل الالتزام.'}.get(lang, "Le client veut visualiser le résultat final pour s'engager."),
+                'get_font_awesome_icon': 'fas fa-home',
+                'get_image_url': '/static/img/strategic/villa-en-construction.jpg',
+            },
+            {
+                'title': {'fr': 'Magasin ou concept-store', 'en': 'Store or concept store', 'ar': 'متجر أو مساحة تجارية'}.get(lang, 'Magasin ou concept-store'),
+                'importance': {'fr': 'Attirer les clients dès la phase de pré-lancement.', 'en': 'Attract customers from the pre-launch phase.', 'ar': 'جذب الزوار وبناء الترقب منذ مرحلة ما قبل الافتتاح.'}.get(lang, 'Attirer les clients dès la phase de pré-lancement.'),
+                'get_font_awesome_icon': 'fas fa-store',
+                'get_image_url': '/static/img/strategic/magasin-concept-store.jpg',
+            },
+            {
+                'title': {'fr': 'Événementiel & Salons', 'en': 'Events & Exhibitions', 'ar': 'فعاليات ومعارض'}.get(lang, 'Événementiel & Salons'),
+                'importance': {'fr': 'Séduire et engager un public exigeant.', 'en': 'Captivate and engage a demanding audience.', 'ar': 'إبهار الجمهور واستقطاب اهتمام الشركاء بتجارب ثلاثية الأبعاد تفاعلية.'}.get(lang, 'Séduire et engager un public exigeant.'),
+                'get_font_awesome_icon': 'fas fa-calendar-star',
+                'get_image_url': '/static/img/strategic/evenementiel.jpg',
+            },
+        ]
     
     context = {
         'services': services,

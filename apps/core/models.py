@@ -317,6 +317,33 @@ class StrategicSuccess(models.Model):
             return raw
         return 'fas fa-cube'
 
+    @property
+    def get_image_url(self):
+        """Return image URL with robust static fallback."""
+        if self.image:
+            try:
+                return self.image.url
+            except Exception:
+                pass
+
+        lower = (self.title or '').lower()
+        if any(k in lower for k in ['magasin', 'store', 'boutique', 'commerce', 'retail', 'متجر']):
+            return '/static/img/strategic/magasin-concept-store.jpg'
+        if any(k in lower for k in ['event', 'evenement', 'salon', 'stand', 'فعاليات']):
+            return '/static/img/strategic/evenementiel.jpg'
+        if any(k in lower for k in ['projet', 'immobilier', 'immeuble', 'building', 'عقاري']):
+            return '/static/img/strategic/projet-immobilier.jpg'
+        if any(k in lower for k in ['villa', 'maison', 'construction', 'فيلا']):
+            return '/static/img/strategic/villa-en-construction.jpg'
+
+        order_map = {
+            1: '/static/img/strategic/projet-immobilier.jpg',
+            2: '/static/img/strategic/villa-en-construction.jpg',
+            3: '/static/img/strategic/magasin-concept-store.jpg',
+            4: '/static/img/strategic/evenementiel.jpg',
+        }
+        return order_map.get(self.order, '/static/img/strategic/projet-immobilier.jpg')
+
 
 class Promotion(models.Model):
     """Dynamic promotions/offers page models."""

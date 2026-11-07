@@ -6,7 +6,7 @@ from datetime import date
 from django.core.management.base import BaseCommand
 from django.utils import timezone
 
-from apps.core.models import SiteSettings, TeamMember, Value, Strength, ProcessStep
+from apps.core.models import SiteSettings, TeamMember, Value, Strength, ProcessStep, StrategicSuccess
 from apps.services.models import Service
 from apps.portfolio.models import Sector, Project, CaseStudy
 from apps.blog.models import Category, Article
@@ -23,6 +23,7 @@ class Command(BaseCommand):
         self._create_values()
         self._create_strengths()
         self._create_process_steps()
+        self._create_strategic_successes()
         self._create_team()
         self._create_sectors()
         self._create_services()
@@ -624,3 +625,57 @@ class Command(BaseCommand):
             pid = p.pop('page_identifier')
             PageSEO.objects.get_or_create(page_identifier=pid, defaults={**p, 'page_identifier': pid})
         self.stdout.write('  [+] SEO des pages')
+
+    def _create_strategic_successes(self):
+        items = [
+            {
+                'title_fr': 'Projet immobilier',
+                'title_en': 'Real estate project',
+                'title_ar': 'مشروع عقاري',
+                'importance_fr': "Les acheteurs veulent se projeter avant d'investir.",
+                'importance_en': 'Buyers want to envision before investing.',
+                'importance_ar': 'يريد المشترون التصور قبل الاستثمار.',
+                'icon': 'fas fa-building',
+                'order': 1,
+                'image': 'services/projet-immobilier.jpg',
+            },
+            {
+                'title_fr': 'Villa en construction',
+                'title_en': 'Villa under construction',
+                'title_ar': 'فيلا قيد الإنشاء',
+                'importance_fr': "Le client veut visualiser le résultat final pour s'engager.",
+                'importance_en': 'The client wants to visualize the final result before committing.',
+                'importance_ar': 'يرغب العميل في معاينة النتيجة النهائية بكل ثقة قبل الالتزام.',
+                'icon': 'fas fa-home',
+                'order': 2,
+                'image': 'services/villa-en-construction.jpg',
+            },
+            {
+                'title_fr': 'Magasin ou concept-store',
+                'title_en': 'Store or concept store',
+                'title_ar': 'متجر أو مساحة تجارية',
+                'importance_fr': 'Attirer les clients dès la phase de pré-lancement.',
+                'importance_en': 'Attract customers from the pre-launch phase.',
+                'importance_ar': 'جذب الزوار وبناء الترقب منذ مرحلة ما قبل الافتتاح.',
+                'icon': 'fas fa-store',
+                'order': 3,
+                'image': 'services/magasin-concept-store.jpg',
+            },
+            {
+                'title_fr': 'Événementiel & Salons',
+                'title_en': 'Events & Exhibitions',
+                'title_ar': 'فعاليات ومعارض',
+                'importance_fr': 'Séduire et engager un public exigeant.',
+                'importance_en': 'Captivate and engage a demanding audience.',
+                'importance_ar': 'إبهار الجمهور واستقطاب اهتمام الشركاء بتجارب ثلاثية الأبعاد تفاعلية.',
+                'icon': 'fas fa-calendar-star',
+                'order': 4,
+                'image': 'services/evenementiel.jpg',
+            },
+        ]
+        for data in items:
+            obj, _ = StrategicSuccess.objects.get_or_create(order=data['order'])
+            for k, v in data.items():
+                setattr(obj, k, v)
+            obj.is_active = True
+            obj.save()
