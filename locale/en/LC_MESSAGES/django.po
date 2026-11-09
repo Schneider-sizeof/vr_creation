@@ -2145,3 +2145,111 @@ msgstr "Information collected via the contact form is intended exclusively for V
 
 msgid "Site web"
 msgstr "Website"
+
+msgid "VR Creation — Agence de production visuelle à Tanger"
+msgstr "VR Creation — Visual Production Agency in Tangier"
+
+msgid "Annuler et retourner aux articles"
+msgstr "Cancel and return to articles"
+
+msgid "Brouillon"
+msgstr "Draft"
+
+msgid "Chaque prestation est conçue pour maximiser votre impact commercial et accélérer vos ventes."
+msgstr "Each service is designed to maximize your commercial impact and accelerate your sales."
+
+msgid "Confiez-nous vos plans 2D et laissez-nous les transformer en une expérience immersive."
+msgstr "Entrust us with your 2D plans and let us transform them into an immersive experience."
+
+msgid "Les maquettes physiques coûtent cher et prennent de nombreuses semaines à fabriquer."
+msgstr "Physical mockups are expensive and take many weeks to build."
+
+msgid "Merci de nous avoir contactés. Nous avons bien reçu votre message et nous vous répondrons dans les plus brefs délais."
+msgstr "Thank you for contacting us. We have received your message and will respond as soon as possible."
+
+msgid "Nous analysons votre projet et mettons en place la stratégie la plus efficace. Vous ne payez rien à cette étape."
+msgstr "We analyze your project and implement the most effective strategy. You pay nothing at this stage."
+
+msgid "Nous collectons les données que vous nous fournissez via notre formulaire de contact (nom, email, téléphone, message). Ces données sont utilisées exclusivement pour répondre à votre demande. Elles ne sont ni vendues, ni cédées à des tiers."
+msgstr "We collect the data you provide via our contact form (name, email, phone, message). This data is used exclusively to respond to your request. It is neither sold nor shared with third parties."
+
+msgid "Sans visuel fort, vos prospects hésitent, comparent et partent chez la concurrence qui a déjà de belles images."
+msgstr "Without strong visuals, your prospects hesitate, compare and go to competitors who already have beautiful images."
+
+msgid "Veuillez corriger les erreurs ci-dessous."
+msgstr "Please correct the errors below."
+
+msgid "Vous avez un projet immobilier en préparation ? Vendez sur plan avant de poser la première pierre grâce à nos solutions visuelles."
+msgstr "Have a real estate project in preparation? Sell off-plan before laying the first stone thanks to our visual solutions."
+
+msgid "non publié"
+msgstr "unpublished"
+
+msgid "Découvrez des packs de services conçus spécifiquement pour répondre à vos objectifs de commercialisation."
+msgstr "Discover service packages designed specifically to meet your marketing objectives."
+
+msgid "Sélectionnez ou désélectionnez les services selon vos besoins. Les services inclus dans le pack sont pré-sélectionnés."
+msgstr "Select or deselect services according to your needs. Services included in the pack are pre-selected."
+
+msgid "En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de cookies pour améliorer votre expérience."
+msgstr "By continuing to browse this site, you accept the use of cookies to improve your experience."
+
+msgid "Un cookie est un petit fichier texte déposé sur votre terminal (ordinateur, tablette ou smartphone) lors de votre visite sur notre site."
+msgstr "A cookie is a small text file placed on your device (computer, tablet or smartphone) when you visit our site."
+
+msgid "Ces cookies sont essentiels au fonctionnement du site et ne peuvent pas être désactivés dans nos systèmes."
+msgstr "These cookies are essential for the site to function and cannot be disabled."
+
+msgid "Ces cookies nous aident à mesurer l’audience de notre site, à analyser la navigation et à identifier les contenus les plus populaires."
+msgstr "These cookies help us measure our site's audience, analyze navigation and identify the most popular content."
+
+msgid "Ces cookies sont liés au partage sur les réseaux sociaux et peuvent être installés pour suivre l’activité de navigation sur notre site."
+msgstr "These cookies are related to social media sharing and may be set to track browsing activity on our site."
+
+msgid "Conformément à la réglementation RGPD, le consentement donné pour le dépôt de cookies a une durée de validité de 13 mois maximum."
+msgstr "In accordance with GDPR regulations, consent for cookies has a maximum validity of 13 months."
+
+msgid "Permettent de mesurer l’audience et d’analyser l’utilisation du site pour l’améliorer."
+msgstr "Allow measuring audience and analyzing site usage to improve it."
+
+msgid "Permettent de vous proposer des publicités personnalisées et de partager du contenu."
+msgstr "Allow offering personalized ads and sharing content."
+
+msgid "Vous pouvez à tout moment modifier vos préférences de cookies, accepter ou refuser le chargement des cookies non essentiels."
+msgstr "You can modify your cookie preferences at any time, accept or reject non-essential cookies."
+
+msgid "Générateur d’articles IA"
+msgstr "AI Article Generator"
+
+msgid "Générateur d’articles de blog par IA"
+msgstr "AI Blog Article Generator"
+
+msgid "Génération en cours..."
+msgstr "Generating..."
+
+msgid "Générer l’article maintenant"
+msgstr "Generate the article now"
+
+msgid "Générer un article avec l’IA"
+msgstr "Generate an article with AI"
+
+msgid "Indiquez votre sujet ou vos mots-clés pour que l’IA rédige un article complet, structuré et optimisé SEO pour votre blog."
+msgstr "Enter your topic or keywords for the AI to write a complete, structured and SEO-optimized article for your blog."
+
+msgid "L’IA Gemini rédige le titre, l’extrait et l’article structuré en Markdown. Veuillez patienter 5 à 15 secondes."
+msgstr "Gemini AI writes the title, excerpt and article structured in Markdown. Please wait 5 to 15 seconds."
+
+msgid "L’article sera automatiquement enregistré au statut"
+msgstr "The article will be automatically saved with status"
+
+msgid "Rédaction par IA en cours..."
+msgstr "AI writing in progress..."
+
+msgid "Sécurité & Contrôle éditorial :"
+msgstr "Security & Editorial Control:"
+
+msgid "Vous pourrez le relire, ajuster le texte, ajouter une image et le publier manuellement."
+msgstr "You can review it, adjust the text, add an image and publish it manually."
+
+msgid "Simule un espace virtuel 3D en transformant le site avec un design néon et des particules cosmiques pour une immersion totale dans l’univers de VR Creation."
+msgstr "Simulates a 3D virtual space by transforming the site with neon design and cosmic particles for total immersion in the VR Creation universe."

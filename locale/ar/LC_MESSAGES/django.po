@@ -2106,3 +2106,111 @@ msgstr "المعلومات المجمعة عبر نموذج الاتصال مخ�
 
 msgid "Site web"
 msgstr "الموقع الإلكتروني"
+
+msgid "VR Creation — Agence de production visuelle à Tanger"
+msgstr "VR Creation — وكالة إنتاج بصري في طنجة"
+
+msgid "Annuler et retourner aux articles"
+msgstr "إلغاء والعودة إلى المقالات"
+
+msgid "Brouillon"
+msgstr "مسودة"
+
+msgid "Chaque prestation est conçue pour maximiser votre impact commercial et accélérer vos ventes."
+msgstr "كل خدمة مصممة لتعظيم تأثيركم التجاري وتسريع مبيعاتكم."
+
+msgid "Confiez-nous vos plans 2D et laissez-nous les transformer en une expérience immersive."
+msgstr "سلمونا مخططاتكم ثنائية الأبعاد ودعونا نحولها إلى تجربة غامرة."
+
+msgid "Les maquettes physiques coûtent cher et prennent de nombreuses semaines à fabriquer."
+msgstr "المجسمات المادية مكلفة وتستغرق أسابيع عديدة للتصنيع."
+
+msgid "Merci de nous avoir contactés. Nous avons bien reçu votre message et nous vous répondrons dans les plus brefs délais."
+msgstr "شكرًا لتواصلكم. لقد تلقينا رسالتكم وسنرد عليكم في أقرب وقت."
+
+msgid "Nous analysons votre projet et mettons en place la stratégie la plus efficace. Vous ne payez rien à cette étape."
+msgstr "نحلل مشروعكم ونضع الاستراتيجية الأكثر فعالية. لا تدفعون شيئًا في هذه المرحلة."
+
+msgid "Nous collectons les données que vous nous fournissez via notre formulaire de contact (nom, email, téléphone, message). Ces données sont utilisées exclusivement pour répondre à votre demande. Elles ne sont ni vendues, ni cédées à des tiers."
+msgstr "نجمع البيانات التي تقدمونها عبر نموذج الاتصال (الاسم، البريد الإلكتروني، الهاتف، الرسالة). تُستخدم هذه البيانات حصريًا للرد على طلبكم. لا يتم بيعها أو تسليمها لأطراف ثالثة."
+
+msgid "Sans visuel fort, vos prospects hésitent, comparent et partent chez la concurrence qui a déjà de belles images."
+msgstr "بدون مرئيات قوية، يتردد عملاؤكم ويقارنون ويذهبون إلى المنافسين الذين يملكون صورًا جميلة."
+
+msgid "Veuillez corriger les erreurs ci-dessous."
+msgstr "يرجى تصحيح الأخطاء أدناه."
+
+msgid "Vous avez un projet immobilier en préparation ? Vendez sur plan avant de poser la première pierre grâce à nos solutions visuelles."
+msgstr "هل لديكم مشروع عقاري قيد الإعداد؟ بيعوا على الخريطة قبل وضع الحجر الأول بفضل حلولنا البصرية."
+
+msgid "non publié"
+msgstr "غير منشور"
+
+msgid "Découvrez des packs de services conçus spécifiquement pour répondre à vos objectifs de commercialisation."
+msgstr "اكتشفوا باقات خدمات مصممة خصيصًا لتلبية أهدافكم التسويقية."
+
+msgid "Sélectionnez ou désélectionnez les services selon vos besoins. Les services inclus dans le pack sont pré-sélectionnés."
+msgstr "حددوا أو ألغوا تحديد الخدمات حسب احتياجاتكم. الخدمات المدرجة في الباقة مختارة مسبقًا."
+
+msgid "En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de cookies pour améliorer votre expérience."
+msgstr "باستمراركم في تصفح هذا الموقع، فإنكم توافقون على استخدام ملفات تعريف الارتباط لتحسين تجربتكم."
+
+msgid "Un cookie est un petit fichier texte déposé sur votre terminal (ordinateur, tablette ou smartphone) lors de votre visite sur notre site."
+msgstr "ملف تعريف الارتباط هو ملف نصي صغير يتم وضعه على جهازكم (كمبيوتر، لوحة أو هاتف) عند زيارة موقعنا."
+
+msgid "Ces cookies sont essentiels au fonctionnement du site et ne peuvent pas être désactivés dans nos systèmes."
+msgstr "هذه الملفات ضرورية لعمل الموقع ولا يمكن تعطيلها."
+
+msgid "Ces cookies nous aident à mesurer l’audience de notre site, à analyser la navigation et à identifier les contenus les plus populaires."
+msgstr "تساعدنا هذه الملفات في قياس جمهور موقعنا وتحليل التصفح وتحديد المحتوى الأكثر شعبية."
+
+msgid "Ces cookies sont liés au partage sur les réseaux sociaux et peuvent être installés pour suivre l’activité de navigation sur notre site."
+msgstr "ترتبط هذه الملفات بالمشاركة على الشبكات الاجتماعية ويمكن تثبيتها لتتبع نشاط التصفح."
+
+msgid "Conformément à la réglementation RGPD, le consentement donné pour le dépôt de cookies a une durée de validité de 13 mois maximum."
+msgstr "وفقًا للائحة العامة لحماية البيانات، مدة صلاحية الموافقة على ملفات تعريف الارتباط 13 شهرًا كحد أقصى."
+
+msgid "Permettent de mesurer l’audience et d’analyser l’utilisation du site pour l’améliorer."
+msgstr "تسمح بقياس الجمهور وتحليل استخدام الموقع لتحسينه."
+
+msgid "Permettent de vous proposer des publicités personnalisées et de partager du contenu."
+msgstr "تسمح بتقديم إعلانات مخصصة ومشاركة المحتوى."
+
+msgid "Vous pouvez à tout moment modifier vos préférences de cookies, accepter ou refuser le chargement des cookies non essentiels."
+msgstr "يمكنكم في أي وقت تعديل تفضيلات ملفات تعريف الارتباط أو قبول أو رفض الملفات غير الضرورية."
+
+msgid "Générateur d’articles IA"
+msgstr "مولد مقالات بالذكاء الاصطناعي"
+
+msgid "Générateur d’articles de blog par IA"
+msgstr "مولد مقالات المدونة بالذكاء الاصطناعي"
+
+msgid "Génération en cours..."
+msgstr "جاري التوليد..."
+
+msgid "Générer l’article maintenant"
+msgstr "توليد المقال الآن"
+
+msgid "Générer un article avec l’IA"
+msgstr "توليد مقال بالذكاء الاصطناعي"
+
+msgid "Indiquez votre sujet ou vos mots-clés pour que l’IA rédige un article complet, structuré et optimisé SEO pour votre blog."
+msgstr "حددوا موضوعكم أو كلماتكم المفتاحية ليقوم الذكاء الاصطناعي بكتابة مقال كامل ومنظم ومحسن لمحركات البحث."
+
+msgid "L’IA Gemini rédige le titre, l’extrait et l’article structuré en Markdown. Veuillez patienter 5 à 15 secondes."
+msgstr "يكتب Gemini AI العنوان والمقتطف والمقال المنظم بتنسيق Markdown. يرجى الانتظار 5 إلى 15 ثانية."
+
+msgid "L’article sera automatiquement enregistré au statut"
+msgstr "سيتم حفظ المقال تلقائيًا بحالة"
+
+msgid "Rédaction par IA en cours..."
+msgstr "جاري الكتابة بالذكاء الاصطناعي..."
+
+msgid "Sécurité & Contrôle éditorial :"
+msgstr "الأمان والرقابة التحريرية:"
+
+msgid "Vous pourrez le relire, ajuster le texte, ajouter une image et le publier manuellement."
+msgstr "يمكنكم مراجعته وتعديل النص وإضافة صورة ونشره يدويًا."
+
+msgid "Simule un espace virtuel 3D en transformant le site avec un design néon et des particules cosmiques pour une immersion totale dans l’univers de VR Creation."
+msgstr "يحاكي فضاء افتراضيًا ثلاثي الأبعاد مع تصميم نيون وجزيئات كونية لغمر كامل في عالم VR Creation."
