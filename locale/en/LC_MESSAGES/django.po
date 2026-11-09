@@ -1893,3 +1893,255 @@ msgstr "Immersive 3D Video"
 
 msgid "Agence VR Tanger"
 msgstr "VR Agency Tangier"
+
+msgid "VR Creation Company — Production visuelle haut de gamme à Tanger"
+msgstr "VR Creation Company — Premium Visual Production in Tangier"
+
+msgid "est une agence de production visuelle basée à Tanger, au cœur du Nord du Maroc. Nous accompagnons les entreprises, promoteurs, commerces et institutions dans la création de contenus visuels qui valorisent leur image et accélèrent leur croissance."
+msgstr "is a visual production agency based in Tangier, in the heart of Northern Morocco. We support businesses, developers, retailers and institutions in creating visual content that enhances their image and accelerates their growth."
+
+msgid "Notre mission : allier créativité, technologie et rigueur pour transformer chaque projet en une expérience visuelle mémorable. De la modélisation 3D à la photographie professionnelle, du branding à l’animation, nous offrons une palette complète de services adaptés aux besoins du marché local et régional."
+msgstr "Our mission: combining creativity, technology and rigor to transform every project into a memorable visual experience. From 3D modeling to professional photography, from branding to animation, we offer a complete range of services tailored to local and regional market needs."
+
+msgid "Chaque création est pensée comme une signature visuelle sur mesure, au service de votre réussite."
+msgstr "Every creation is designed as a bespoke visual signature, in service of your success."
+
+msgid "Nos valeurs"
+msgstr "Our Values"
+
+msgid "Les piliers de notre engagement"
+msgstr "The pillars of our commitment"
+
+msgid "Notre expertise"
+msgstr "Our Expertise"
+
+msgid "Des compétences complètes pour vos projets visuels"
+msgstr "Complete skills for your visual projects"
+
+msgid "Rendus photoréalistes, maquettes interactives, perspectives architecturales."
+msgstr "Photorealistic renders, interactive mockups, architectural perspectives."
+
+msgid "Photographie professionnelle"
+msgstr "Professional Photography"
+
+msgid "Architecture, produits, corporate, événementiel, drone."
+msgstr "Architecture, products, corporate, events, drone."
+
+msgid "Visites virtuelles 360°"
+msgstr "360° Virtual Tours"
+
+msgid "Immersion totale pour vos clients, navigable sur tous les appareils."
+msgstr "Total immersion for your clients, browsable on all devices."
+
+msgid "Branding & communication visuelle"
+msgstr "Branding & Visual Communication"
+
+msgid "Logo, charte graphique, supports print et digitaux."
+msgstr "Logo, brand guidelines, print and digital materials."
+
+msgid "Animation & motion design"
+msgstr "Animation & Motion Design"
+
+msgid "Vidéos 3D, survols architecturaux, teasers percutants."
+msgstr "3D videos, architectural flyovers, impactful teasers."
+
+msgid "Marketing digital"
+msgstr "Digital Marketing"
+
+msgid "Stratégie de contenu, lead generation, présence digitale."
+msgstr "Content strategy, lead generation, digital presence."
+
+msgid "Pourquoi nous choisir ?"
+msgstr "Why Choose Us?"
+
+msgid "Ce qui fait la différence VR Creation"
+msgstr "What makes VR Creation different"
+
+msgid "Équipe locale et réactive"
+msgstr "Local and responsive team"
+
+msgid "Basés à Tanger, nous intervenons rapidement sur tout le Nord du Maroc : Tétouan, Asilah, Larache, Chefchaouen, Al Hoceima."
+msgstr "Based in Tangier, we operate quickly across all of Northern Morocco: Tetouan, Asilah, Larache, Chefchaouen, Al Hoceima."
+
+msgid "Qualité premium, tarifs compétitifs"
+msgstr "Premium quality, competitive prices"
+
+msgid "Des livrables de qualité internationale à des prix adaptés au marché local."
+msgstr "International quality deliverables at prices adapted to the local market."
+
+msgid "Accompagnement personnalisé"
+msgstr "Personalized support"
+
+msgid "Un interlocuteur dédié du premier rendez-vous à la livraison finale."
+msgstr "A dedicated contact from the first meeting to final delivery."
+
+msgid "Technologies de pointe"
+msgstr "Cutting-edge technology"
+
+msgid "Outils professionnels en 3D, photo, vidéo et design pour des résultats optimaux."
+msgstr "Professional tools in 3D, photo, video and design for optimal results."
+
+msgid "Zone d'intervention"
+msgstr "Coverage Area"
+
+msgid "Nous couvrons Tanger et le Nord du Maroc"
+msgstr "We cover Tangier and Northern Morocco"
+
+msgid "Depuis nos bureaux de Tanger, nous accompagnons les entreprises et institutions de toute la région nord."
+msgstr "From our offices in Tangier, we support businesses and institutions throughout the northern region."
+
+msgid "Des experts passionnés à votre service"
+msgstr "Passionate experts at your service"
+
+msgid "Questions fréquentes"
+msgstr "Frequently Asked Questions"
+
+msgid "FAQ — à propos de VR Creation"
+msgstr "FAQ — About VR Creation"
+
+msgid "Où se trouvent vos bureaux ?"
+msgstr "Where are your offices located?"
+
+msgid "Nos bureaux se situent à Ibn Batouta bureaux, Avenue Youssef Ibn Tachfine, Tanger 90000, Maroc. Nous recevons sur rendez-vous."
+msgstr "Our offices are located at Ibn Batouta bureaux, Avenue Youssef Ibn Tachfine, Tangier 90000, Morocco. We receive by appointment."
+
+msgid "Intervenez-vous en dehors de Tanger ?"
+msgstr "Do you operate outside Tangier?"
+
+msgid "Oui, nous couvrons l’ensemble du Nord du Maroc : Tétouan, Asilah, Larache, Chefchaouen, Al Hoceima et les villes environnantes. Pour la modélisation 3D, le branding et l’animation, nous travaillons également à distance pour tout le Maroc."
+msgstr "Yes, we cover all of Northern Morocco: Tetouan, Asilah, Larache, Chefchaouen, Al Hoceima and surrounding cities. For 3D modeling, branding and animation, we also work remotely across Morocco."
+
+msgid "Comment demander un devis ?"
+msgstr "How to request a quote?"
+
+msgid "Contactez-nous par téléphone au +212 625 07 1498, par WhatsApp, ou via notre formulaire de contact en ligne. Le devis est gratuit et personnalisé."
+msgstr "Contact us by phone at +212 625 07 1498, via WhatsApp, or through our online contact form. The quote is free and personalized."
+
+msgid "Quels sont vos délais de livraison ?"
+msgstr "What are your delivery times?"
+
+msgid "Les délais varient selon le projet : quelques jours pour un shooting photo, 1 à 3 semaines pour un branding complet, 2 à 6 semaines pour la modélisation 3D. Nous nous engageons sur un planning précis dès la validation du devis."
+msgstr "Timelines vary by project: a few days for a photo shoot, 1 to 3 weeks for complete branding, 2 to 6 weeks for 3D modeling. We commit to a precise schedule upon quote approval."
+
+msgid "Travaillez-vous avec les particuliers ?"
+msgstr "Do you work with individuals?"
+
+msgid "Oui, nous travaillons aussi bien avec les entreprises (promoteurs, commerces, restaurants, agences) qu’avec les particuliers (projets de villa, événements privés)."
+msgstr "Yes, we work with businesses (developers, retailers, restaurants, agencies) as well as individuals (villa projects, private events)."
+
+msgid "Prêt à donner vie à votre projet ?"
+msgstr "Ready to bring your project to life?"
+
+msgid "Contactez notre équipe à Tanger pour un premier échange gratuit et sans engagement."
+msgstr "Contact our team in Tangier for a free, no-obligation consultation."
+
+msgid "Demander un devis gratuit"
+msgstr "Request a free quote"
+
+msgid "Présentation du service"
+msgstr "Service Overview"
+
+msgid "Galerie de réalisations"
+msgstr "Gallery"
+
+msgid "Notre méthode de travail"
+msgstr "Our Working Method"
+
+msgid "Intéressé par ce service ?"
+msgstr "Interested in this service?"
+
+msgid "Contactez-nous pour un devis gratuit et personnalisé. Notre équipe à Tanger est à votre écoute."
+msgstr "Contact us for a free, personalized quote. Our team in Tangier is at your service."
+
+msgid "Demander un devis"
+msgstr "Request a quote"
+
+msgid "Besoin d’informations ?"
+msgstr "Need information?"
+
+msgid "Contactez nos experts à Tanger pour en savoir plus et obtenir un devis personnalisé."
+msgstr "Contact our experts in Tangier to learn more and get a personalized quote."
+
+msgid "Modélisation 3D à Tanger"
+msgstr "3D Modeling in Tangier"
+
+msgid "Marketing digital Tanger"
+msgstr "Digital Marketing Tangier"
+
+msgid "Zone d’intervention : Tanger, Tétouan, Asilah, Chefchaouen — Nord du Maroc"
+msgstr "Coverage area: Tangier, Tetouan, Asilah, Chefchaouen — Northern Morocco"
+
+msgid "Visite virtuelle Nord Maroc"
+msgstr "Virtual Tour Northern Morocco"
+
+msgid "Photographe professionnel Tanger"
+msgstr "Professional Photographer Tangier"
+
+msgid "Branding visuel Tanger"
+msgstr "Visual Branding Tangier"
+
+msgid "Agence créative Tanger"
+msgstr "Creative Agency Tangier"
+
+msgid "Politique de confidentialité"
+msgstr "Privacy Policy"
+
+msgid "Notre méthode"
+msgstr "Our Method"
+
+msgid "Un processus éprouvé pour garantir des résultats exceptionnels à chaque projet, du premier échange à la livraison finale."
+msgstr "A proven process to guarantee exceptional results on every project, from first contact to final delivery."
+
+msgid "Sublimez votre image de marque avec la production visuelle haut de gamme — VR Creation à Tanger"
+msgstr "Elevate your brand image with premium visual production — VR Creation in Tangier"
+
+msgid "Modélisation 3D, photographie, visites virtuelles, branding et communication visuelle — nous transformons vos projets en expériences visuelles qui séduisent et convertissent."
+msgstr "3D modeling, photography, virtual tours, branding and visual communication — we transform your projects into visual experiences that attract and convert."
+
+msgid "Nous accompagnons les entreprises à chaque étape de leur projet : visualisation, valorisation, expérience immersive et communication digitale. L’objectif : transformer votre vision en un véritable outil de croissance."
+msgstr "We support businesses at every stage of their project: visualization, enhancement, immersive experience and digital communication. The goal: transforming your vision into a real growth tool."
+
+msgid "Nous créons des expériences visuelles adaptées à chaque secteur pour valoriser vos projets et accélérer vos ventes."
+msgstr "We create visual experiences adapted to each sector to enhance your projects and accelerate your sales."
+
+msgid "Découvrez comment nos solutions transforment chaque type de projet en levier de croissance."
+msgstr "Discover how our solutions transform every type of project into a growth lever."
+
+msgid "Un accompagnement structuré en 5 étapes pour transformer votre projet en succès."
+msgstr "A structured 5-step support to transform your project into success."
+
+msgid "UN PROJET NE SE VEND PAS UNIQUEMENT AVEC DES MOTS."
+msgstr "A PROJECT IS NOT SOLD WITH WORDS ALONE."
+
+msgid "Il se vend avec une vision. Nous combinons architecture, 3D, immersion, branding et technologie digitale pour permettre aux promoteurs de présenter leurs projets autrement — et surtout, plus tôt."
+msgstr "It is sold with a vision. We combine architecture, 3D, immersion, branding and digital technology to enable developers to present their projects differently — and above all, earlier."
+
+msgid "Offres Stratégiques"
+msgstr "Strategic Offers"
+
+msgid "Nos packs & offres exclusives"
+msgstr "Our packs & exclusive offers"
+
+msgid "Des formules adaptées à chaque étape de votre projet pour accélérer votre croissance et maximiser votre visibilité."
+msgstr "Formulas adapted to each stage of your project to accelerate your growth and maximize your visibility."
+
+msgid "Voir toutes les promotions et packs"
+msgstr "View all promotions and packs"
+
+msgid "Avant de construire, commencez déjà à le vendre. Présentez-nous votre projet et découvrons ensemble comment le transformer en une expérience commerciale complète."
+msgstr "Before building, start selling. Present your project to us and let's discover together how to transform it into a complete commercial experience."
+
+msgid "Données personnelles"
+msgstr "Personal Data"
+
+msgid "Ce site est hébergé par PythonAnywhere (PythonAnywhere LLP, Anaconda Inc.)"
+msgstr "This site is hosted by PythonAnywhere (PythonAnywhere LLP, Anaconda Inc.)"
+
+msgid "L’ensemble de ce site relève de la législation sur le droit d’auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés."
+msgstr "This entire site is subject to copyright and intellectual property legislation. All reproduction rights are reserved."
+
+msgid "Les informations collectées via le formulaire de contact sont destinées exclusivement à VR Creation Company. Conformément à la loi marocaine n° 09-08, vous disposez d’un droit d’accès, de rectification et de suppression de vos données personnelles."
+msgstr "Information collected via the contact form is intended exclusively for VR Creation Company. In accordance with Moroccan law n° 09-08, you have the right to access, rectify and delete your personal data."
+
+msgid "Site web"
+msgstr "Website"

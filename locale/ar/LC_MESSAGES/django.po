@@ -1854,3 +1854,255 @@ msgstr "فيديو ثلاثي الأبعاد غامر"
 
 msgid "Agence VR Tanger"
 msgstr "وكالة واقع افتراضي طنجة"
+
+msgid "VR Creation Company — Production visuelle haut de gamme à Tanger"
+msgstr "VR Creation Company — إنتاج بصري راقي في طنجة"
+
+msgid "est une agence de production visuelle basée à Tanger, au cœur du Nord du Maroc. Nous accompagnons les entreprises, promoteurs, commerces et institutions dans la création de contenus visuels qui valorisent leur image et accélèrent leur croissance."
+msgstr "هي وكالة إنتاج بصري مقرها في طنجة، في قلب شمال المغرب. نرافق الشركات والمطورين والتجار والمؤسسات في إنشاء محتوى بصري يعزز صورتهم ويسرّع نموهم."
+
+msgid "Notre mission : allier créativité, technologie et rigueur pour transformer chaque projet en une expérience visuelle mémorable. De la modélisation 3D à la photographie professionnelle, du branding à l’animation, nous offrons une palette complète de services adaptés aux besoins du marché local et régional."
+msgstr "مهمتنا: الجمع بين الإبداع والتكنولوجيا والدقة لتحويل كل مشروع إلى تجربة بصرية لا تُنسى. من النمذجة ثلاثية الأبعاد إلى التصوير الاحترافي، ومن البراندينغ إلى الرسوم المتحركة، نقدم مجموعة كاملة من الخدمات المكيفة لاحتياجات السوق المحلي والجهوي."
+
+msgid "Chaque création est pensée comme une signature visuelle sur mesure, au service de votre réussite."
+msgstr "كل إبداع مصمم كبصمة بصرية فريدة، في خدمة نجاحكم."
+
+msgid "Nos valeurs"
+msgstr "قيمنا"
+
+msgid "Les piliers de notre engagement"
+msgstr "ركائز التزامنا"
+
+msgid "Notre expertise"
+msgstr "خبرتنا"
+
+msgid "Des compétences complètes pour vos projets visuels"
+msgstr "مهارات شاملة لمشاريعكم البصرية"
+
+msgid "Rendus photoréalistes, maquettes interactives, perspectives architecturales."
+msgstr "عروض واقعية، مجسمات تفاعلية، منظورات معمارية."
+
+msgid "Photographie professionnelle"
+msgstr "التصوير الاحترافي"
+
+msgid "Architecture, produits, corporate, événementiel, drone."
+msgstr "عمارة، منتجات، شركات، فعاليات، درون."
+
+msgid "Visites virtuelles 360°"
+msgstr "جولات افتراضية 360°"
+
+msgid "Immersion totale pour vos clients, navigable sur tous les appareils."
+msgstr "غمر كامل لعملائكم، قابل للتصفح على جميع الأجهزة."
+
+msgid "Branding & communication visuelle"
+msgstr "البراندينغ والتواصل البصري"
+
+msgid "Logo, charte graphique, supports print et digitaux."
+msgstr "شعار، هوية بصرية، مواد مطبوعة ورقمية."
+
+msgid "Animation & motion design"
+msgstr "الرسوم المتحركة والموشن ديزاين"
+
+msgid "Vidéos 3D, survols architecturaux, teasers percutants."
+msgstr "فيديوهات 3D، تحليقات معمارية، إعلانات مؤثرة."
+
+msgid "Marketing digital"
+msgstr "التسويق الرقمي"
+
+msgid "Stratégie de contenu, lead generation, présence digitale."
+msgstr "استراتيجية المحتوى، توليد العملاء المحتملين، الحضور الرقمي."
+
+msgid "Pourquoi nous choisir ?"
+msgstr "لماذا تختاروننا؟"
+
+msgid "Ce qui fait la différence VR Creation"
+msgstr "ما يميز VR Creation"
+
+msgid "Équipe locale et réactive"
+msgstr "فريق محلي وسريع الاستجابة"
+
+msgid "Basés à Tanger, nous intervenons rapidement sur tout le Nord du Maroc : Tétouan, Asilah, Larache, Chefchaouen, Al Hoceima."
+msgstr "مقرنا في طنجة، نتدخل بسرعة في جميع أنحاء شمال المغرب: تطوان، أصيلة، العرائش، شفشاون، الحسيمة."
+
+msgid "Qualité premium, tarifs compétitifs"
+msgstr "جودة عالية، أسعار تنافسية"
+
+msgid "Des livrables de qualité internationale à des prix adaptés au marché local."
+msgstr "مخرجات بجودة دولية بأسعار ملائمة للسوق المحلي."
+
+msgid "Accompagnement personnalisé"
+msgstr "مرافقة شخصية"
+
+msgid "Un interlocuteur dédié du premier rendez-vous à la livraison finale."
+msgstr "محاور مخصص من اللقاء الأول حتى التسليم النهائي."
+
+msgid "Technologies de pointe"
+msgstr "تكنولوجيا متطورة"
+
+msgid "Outils professionnels en 3D, photo, vidéo et design pour des résultats optimaux."
+msgstr "أدوات احترافية في 3D والتصوير والفيديو والتصميم لنتائج مثالية."
+
+msgid "Zone d'intervention"
+msgstr "منطقة التدخل"
+
+msgid "Nous couvrons Tanger et le Nord du Maroc"
+msgstr "نغطي طنجة وشمال المغرب"
+
+msgid "Depuis nos bureaux de Tanger, nous accompagnons les entreprises et institutions de toute la région nord."
+msgstr "من مكاتبنا في طنجة، نرافق الشركات والمؤسسات في جميع أنحاء المنطقة الشمالية."
+
+msgid "Des experts passionnés à votre service"
+msgstr "خبراء متحمسون في خدمتكم"
+
+msgid "Questions fréquentes"
+msgstr "الأسئلة الشائعة"
+
+msgid "FAQ — à propos de VR Creation"
+msgstr "FAQ — حول VR Creation"
+
+msgid "Où se trouvent vos bureaux ?"
+msgstr "أين تقع مكاتبكم؟"
+
+msgid "Nos bureaux se situent à Ibn Batouta bureaux, Avenue Youssef Ibn Tachfine, Tanger 90000, Maroc. Nous recevons sur rendez-vous."
+msgstr "تقع مكاتبنا في Ibn Batouta bureaux، شارع يوسف بن تاشفين، طنجة 90000، المغرب. نستقبل بموعد مسبق."
+
+msgid "Intervenez-vous en dehors de Tanger ?"
+msgstr "هل تعملون خارج طنجة؟"
+
+msgid "Oui, nous couvrons l’ensemble du Nord du Maroc : Tétouan, Asilah, Larache, Chefchaouen, Al Hoceima et les villes environnantes. Pour la modélisation 3D, le branding et l’animation, nous travaillons également à distance pour tout le Maroc."
+msgstr "نعم، نغطي جميع أنحاء شمال المغرب: تطوان، أصيلة، العرائش، شفشاون، الحسيمة والمدن المحيطة. بالنسبة للنمذجة 3D والبراندينغ والرسوم المتحركة، نعمل أيضًا عن بُعد لجميع أنحاء المغرب."
+
+msgid "Comment demander un devis ?"
+msgstr "كيف أطلب عرض أسعار؟"
+
+msgid "Contactez-nous par téléphone au +212 625 07 1498, par WhatsApp, ou via notre formulaire de contact en ligne. Le devis est gratuit et personnalisé."
+msgstr "اتصلوا بنا هاتفيًا على 1498 07 625 212+، عبر واتساب، أو عبر نموذج الاتصال عبر الإنترنت. عرض الأسعار مجاني ومخصص."
+
+msgid "Quels sont vos délais de livraison ?"
+msgstr "ما هي مواعيد التسليم؟"
+
+msgid "Les délais varient selon le projet : quelques jours pour un shooting photo, 1 à 3 semaines pour un branding complet, 2 à 6 semaines pour la modélisation 3D. Nous nous engageons sur un planning précis dès la validation du devis."
+msgstr "تختلف المواعيد حسب المشروع: بضعة أيام لجلسة تصوير، 1 إلى 3 أسابيع لبراندينغ كامل، 2 إلى 6 أسابيع للنمذجة 3D. نلتزم بجدول زمني دقيق منذ الموافقة على عرض الأسعار."
+
+msgid "Travaillez-vous avec les particuliers ?"
+msgstr "هل تعملون مع الأفراد؟"
+
+msgid "Oui, nous travaillons aussi bien avec les entreprises (promoteurs, commerces, restaurants, agences) qu’avec les particuliers (projets de villa, événements privés)."
+msgstr "نعم، نعمل مع الشركات (مطورين، تجار، مطاعم، وكالات) وكذلك مع الأفراد (مشاريع فيلا، فعاليات خاصة)."
+
+msgid "Prêt à donner vie à votre projet ?"
+msgstr "مستعد لإحياء مشروعك؟"
+
+msgid "Contactez notre équipe à Tanger pour un premier échange gratuit et sans engagement."
+msgstr "تواصلوا مع فريقنا في طنجة للحصول على استشارة مجانية بدون التزام."
+
+msgid "Demander un devis gratuit"
+msgstr "طلب عرض أسعار مجاني"
+
+msgid "Présentation du service"
+msgstr "تقديم الخدمة"
+
+msgid "Galerie de réalisations"
+msgstr "معرض الأعمال"
+
+msgid "Notre méthode de travail"
+msgstr "منهجية عملنا"
+
+msgid "Intéressé par ce service ?"
+msgstr "مهتم بهذه الخدمة؟"
+
+msgid "Contactez-nous pour un devis gratuit et personnalisé. Notre équipe à Tanger est à votre écoute."
+msgstr "تواصلوا معنا للحصول على عرض أسعار مجاني ومخصص. فريقنا في طنجة في خدمتكم."
+
+msgid "Demander un devis"
+msgstr "طلب عرض أسعار"
+
+msgid "Besoin d’informations ?"
+msgstr "هل تحتاج معلومات؟"
+
+msgid "Contactez nos experts à Tanger pour en savoir plus et obtenir un devis personnalisé."
+msgstr "تواصلوا مع خبرائنا في طنجة لمزيد من المعلومات والحصول على عرض أسعار مخصص."
+
+msgid "Modélisation 3D à Tanger"
+msgstr "النمذجة ثلاثية الأبعاد في طنجة"
+
+msgid "Marketing digital Tanger"
+msgstr "التسويق الرقمي في طنجة"
+
+msgid "Zone d’intervention : Tanger, Tétouan, Asilah, Chefchaouen — Nord du Maroc"
+msgstr "منطقة التدخل: طنجة، تطوان، أصيلة، شفشاون — شمال المغرب"
+
+msgid "Visite virtuelle Nord Maroc"
+msgstr "جولة افتراضية شمال المغرب"
+
+msgid "Photographe professionnel Tanger"
+msgstr "مصور احترافي في طنجة"
+
+msgid "Branding visuel Tanger"
+msgstr "براندينغ بصري في طنجة"
+
+msgid "Agence créative Tanger"
+msgstr "وكالة إبداعية في طنجة"
+
+msgid "Politique de confidentialité"
+msgstr "سياسة الخصوصية"
+
+msgid "Notre méthode"
+msgstr "منهجيتنا"
+
+msgid "Un processus éprouvé pour garantir des résultats exceptionnels à chaque projet, du premier échange à la livraison finale."
+msgstr "عملية مجربة لضمان نتائج استثنائية في كل مشروع، من التواصل الأول حتى التسليم النهائي."
+
+msgid "Sublimez votre image de marque avec la production visuelle haut de gamme — VR Creation à Tanger"
+msgstr "عززوا صورة علامتكم التجارية مع الإنتاج البصري الراقي — VR Creation في طنجة"
+
+msgid "Modélisation 3D, photographie, visites virtuelles, branding et communication visuelle — nous transformons vos projets en expériences visuelles qui séduisent et convertissent."
+msgstr "نمذجة 3D، تصوير، جولات افتراضية، براندينغ وتواصل بصري — نحول مشاريعكم إلى تجارب بصرية تجذب وتقنع."
+
+msgid "Nous accompagnons les entreprises à chaque étape de leur projet : visualisation, valorisation, expérience immersive et communication digitale. L’objectif : transformer votre vision en un véritable outil de croissance."
+msgstr "نرافق الشركات في كل مرحلة من مشروعها: التصور، التثمين، التجربة الغامرة والتواصل الرقمي. الهدف: تحويل رؤيتكم إلى أداة نمو حقيقية."
+
+msgid "Nous créons des expériences visuelles adaptées à chaque secteur pour valoriser vos projets et accélérer vos ventes."
+msgstr "نبتكر تجارب بصرية مكيفة لكل قطاع لتعزيز مشاريعكم وتسريع مبيعاتكم."
+
+msgid "Découvrez comment nos solutions transforment chaque type de projet en levier de croissance."
+msgstr "اكتشفوا كيف تحول حلولنا كل نوع مشروع إلى رافعة نمو."
+
+msgid "Un accompagnement structuré en 5 étapes pour transformer votre projet en succès."
+msgstr "مرافقة منظمة في 5 خطوات لتحويل مشروعكم إلى نجاح."
+
+msgid "UN PROJET NE SE VEND PAS UNIQUEMENT AVEC DES MOTS."
+msgstr "المشروع لا يُباع بالكلمات فقط."
+
+msgid "Il se vend avec une vision. Nous combinons architecture, 3D, immersion, branding et technologie digitale pour permettre aux promoteurs de présenter leurs projets autrement — et surtout, plus tôt."
+msgstr "يُباع برؤية. نجمع بين الهندسة المعمارية والثلاثي الأبعاد والغمر والبراندينغ والتكنولوجيا الرقمية لتمكين المطورين من تقديم مشاريعهم بشكل مختلف — والأهم، في وقت أبكر."
+
+msgid "Offres Stratégiques"
+msgstr "عروض استراتيجية"
+
+msgid "Nos packs & offres exclusives"
+msgstr "باقاتنا وعروضنا الحصرية"
+
+msgid "Des formules adaptées à chaque étape de votre projet pour accélérer votre croissance et maximiser votre visibilité."
+msgstr "صيغ مكيفة لكل مرحلة من مشروعكم لتسريع نموكم وتعظيم ظهوركم."
+
+msgid "Voir toutes les promotions et packs"
+msgstr "عرض جميع العروض والباقات"
+
+msgid "Avant de construire, commencez déjà à le vendre. Présentez-nous votre projet et découvrons ensemble comment le transformer en une expérience commerciale complète."
+msgstr "قبل البناء، ابدأوا بالبيع. قدموا لنا مشروعكم ولنكتشف معًا كيف نحوله إلى تجربة تجارية كاملة."
+
+msgid "Données personnelles"
+msgstr "البيانات الشخصية"
+
+msgid "Ce site est hébergé par PythonAnywhere (PythonAnywhere LLP, Anaconda Inc.)"
+msgstr "تتم استضافة هذا الموقع بواسطة PythonAnywhere (PythonAnywhere LLP, Anaconda Inc.)"
+
+msgid "L’ensemble de ce site relève de la législation sur le droit d’auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés."
+msgstr "يخضع هذا الموقع بالكامل لتشريعات حقوق المؤلف والملكية الفكرية. جميع حقوق النسخ محفوظة."
+
+msgid "Les informations collectées via le formulaire de contact sont destinées exclusivement à VR Creation Company. Conformément à la loi marocaine n° 09-08, vous disposez d’un droit d’accès, de rectification et de suppression de vos données personnelles."
+msgstr "المعلومات المجمعة عبر نموذج الاتصال مخصصة حصريًا لـ VR Creation Company. وفقًا للقانون المغربي رقم 09-08، يحق لكم الوصول إلى بياناتكم الشخصية وتصحيحها وحذفها."
+
+msgid "Site web"
+msgstr "الموقع الإلكتروني"
