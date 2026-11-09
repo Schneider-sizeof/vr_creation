@@ -22,47 +22,47 @@ TINY_JPEG = (
 
 STRATEGIC_EXAMPLES = [
     {
-        'title_fr': 'Magasin ou concept-store',
-        'title_en': 'Store or concept-store',
-        'title_ar': 'متجر أو كونسبت ستور',
-        'importance_fr': 'Attirer les clients dès la phase de pré-lancement.',
-        'importance_en': 'Attract customers from the pre-launch phase.',
-        'importance_ar': 'جذب العملاء منذ مرحلة ما قبل الإطلاق.',
-        'slug': 'magasin-concept-store',
-        'icon': 'fas fa-store',
+        'title_fr': 'Entreprise & startup',
+        'title_en': 'Business & startup',
+        'title_ar': 'شركة ومشروع ناشئ',
+        'importance_fr': 'Construire une image de marque forte pour se lancer avec impact.',
+        'importance_en': 'Build a strong brand image to launch with impact.',
+        'importance_ar': 'بناء صورة علامة تجارية قوية للانطلاق بتأثير.',
+        'slug': 'entreprise-startup',
+        'icon': 'fas fa-briefcase',
         'order': 1,
     },
     {
-        'title_fr': 'Événementiel',
-        'title_en': 'Events',
-        'title_ar': 'فعاليات',
-        'importance_fr': 'Séduire et engager un public exigeant.',
-        'importance_en': 'Attract and engage a demanding audience.',
-        'importance_ar': 'جذب وإشراك جمهور متطلب.',
-        'slug': 'evenementiel',
-        'icon': 'fas fa-calendar-star',
+        'title_fr': 'Restaurant & commerce',
+        'title_en': 'Restaurant & retail',
+        'title_ar': 'مطعم وتجارة',
+        'importance_fr': 'Attirer les clients avec un visuel professionnel et engageant.',
+        'importance_en': 'Attract customers with professional and engaging visuals.',
+        'importance_ar': 'جذب العملاء بمرئيات احترافية وجذابة.',
+        'slug': 'restaurant-commerce',
+        'icon': 'fas fa-store',
         'order': 2,
     },
     {
-        'title_fr': 'Projet immobilier',
-        'title_en': 'Real estate project',
-        'title_ar': 'مشروع عقاري',
-        'importance_fr': 'Les acheteurs veulent se projeter avant d\'investir.',
-        'importance_en': 'Buyers want to envision before investing.',
-        'importance_ar': 'يريد المشترون التصور قبل الاستثمار.',
-        'slug': 'projet-immobilier',
-        'icon': 'fas fa-building',
+        'title_fr': 'Professionnel & freelance',
+        'title_en': 'Professional & freelancer',
+        'title_ar': 'مهني ومستقل',
+        'importance_fr': 'Se démarquer avec un portfolio et une présence digitale unique.',
+        'importance_en': 'Stand out with a unique portfolio and digital presence.',
+        'importance_ar': 'التميز بملف أعمال وحضور رقمي فريد.',
+        'slug': 'professionnel-freelance',
+        'icon': 'fas fa-user-tie',
         'order': 3,
     },
     {
-        'title_fr': 'Villa en construction',
-        'title_en': 'Villa under construction',
-        'title_ar': 'فيلا قيد البناء',
-        'importance_fr': 'Le client veut visualiser le résultat final pour s\'engager.',
-        'importance_en': 'The client wants to visualize the final result before committing.',
-        'importance_ar': 'يريد العميل تصور النتيجة النهائية قبل الالتزام.',
-        'slug': 'villa-en-construction',
-        'icon': 'fas fa-home',
+        'title_fr': 'Événementiel & salons',
+        'title_en': 'Events & exhibitions',
+        'title_ar': 'فعاليات ومعارض',
+        'importance_fr': 'Captiver votre audience avec des visuels et vidéos percutants.',
+        'importance_en': 'Captivate your audience with striking visuals and videos.',
+        'importance_ar': 'إبهار الجمهور بمرئيات وفيديوهات مؤثرة.',
+        'slug': 'evenementiel-salons',
+        'icon': 'fas fa-calendar-star',
         'order': 4,
     },
 ]
@@ -80,12 +80,12 @@ class Command(BaseCommand):
         # 1. Seed hero settings into SiteSettings
         self.stdout.write('\n— Seeding hero settings —')
         settings = SiteSettings.load()
-        settings.hero_headline_fr = "Donnez vie à votre projet immobilier avant même sa construction — Modélisation 3D & Visites Virtuelles à Tanger"
-        settings.hero_headline_en = "Bring your real estate project to life before it's even built — 3D Modeling & Virtual Tours in Tangier"
-        settings.hero_headline_ar = "امنح مشروعك العقاري الحياة قبل حتى بنائه — نمذجة ثلاثية الأبعاد وجولات افتراضية في طنجة"
-        settings.hero_subheadline_fr = "De la conception 3D à la commercialisation digitale, nous transformons vos projets immobiliers en expériences visuelles capables de séduire, convaincre et générer des prospects."
-        settings.hero_subheadline_en = "From 3D design to digital marketing, we transform your real estate projects into visual experiences that attract, convince and generate leads."
-        settings.hero_subheadline_ar = "من التصميم ثلاثي الأبعاد إلى التسويق الرقمي، نحول مشاريعكم العقارية إلى تجارب بصرية قادرة على جذب وإقناع وتوليد العملاء المحتملين."
+        settings.hero_headline_fr = "Création visuelle professionnelle à Tanger — Photo, Vidéo, Branding & Web"
+        settings.hero_headline_en = "Professional visual creation in Tangier — Photo, Video, Branding & Web"
+        settings.hero_headline_ar = "إبداع بصري احترافي في طنجة — تصوير، فيديو، براندينغ وويب"
+        settings.hero_subheadline_fr = "Nous accompagnons les entreprises de Tanger et du Nord du Maroc avec des solutions créatives sur mesure : photographie, vidéo, branding et développement web."
+        settings.hero_subheadline_en = "We support businesses in Tangier and Northern Morocco with tailored creative solutions: photography, video, branding and web development."
+        settings.hero_subheadline_ar = "نرافق الشركات في طنجة وشمال المغرب بحلول إبداعية مخصصة: تصوير، فيديو، براندينغ وتطوير ويب."
         settings.hero_cta1_label_fr = "Découvrir nos services"
         settings.hero_cta1_label_en = "Discover our services"
         settings.hero_cta1_label_ar = "اكتشف خدماتنا"

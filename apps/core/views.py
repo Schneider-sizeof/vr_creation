@@ -36,26 +36,26 @@ def home(request):
         lang = (get_language() or 'fr')[:2]
         strategic_successes = [
             {
-                'title': {'fr': 'Projet immobilier', 'en': 'Real estate project', 'ar': 'مشروع عقاري'}.get(lang, 'Projet immobilier'),
-                'importance': {'fr': "Les acheteurs veulent se projeter avant d'investir.", 'en': 'Buyers want to envision before investing.', 'ar': 'يريد المشترون التصور قبل الاستثمار.'}.get(lang, "Les acheteurs veulent se projeter avant d'investir."),
-                'get_font_awesome_icon': 'fas fa-building',
-                'get_image_url': '/static/img/strategic/projet-immobilier.jpg',
+                'title': {'fr': 'Entreprise & startup', 'en': 'Business & startup', 'ar': 'شركة ومشروع ناشئ'}.get(lang, 'Entreprise & startup'),
+                'importance': {'fr': "Construire une image de marque forte pour se lancer avec impact.", 'en': 'Build a strong brand image to launch with impact.', 'ar': 'بناء صورة علامة تجارية قوية للانطلاق بتأثير.'}.get(lang, "Construire une image de marque forte pour se lancer avec impact."),
+                'get_font_awesome_icon': 'fas fa-briefcase',
+                'get_image_url': '/static/img/strategic/entreprise-startup.jpg',
             },
             {
-                'title': {'fr': 'Villa en construction', 'en': 'Villa under construction', 'ar': 'فيلا قيد الإنشاء'}.get(lang, 'Villa en construction'),
-                'importance': {'fr': "Le client veut visualiser le résultat final pour s'engager.", 'en': 'The client wants to visualize the final result before committing.', 'ar': 'يرغب العميل في معاينة النتيجة النهائية بكل ثقة قبل الالتزام.'}.get(lang, "Le client veut visualiser le résultat final pour s'engager."),
-                'get_font_awesome_icon': 'fas fa-home',
-                'get_image_url': '/static/img/strategic/villa-en-construction.jpg',
-            },
-            {
-                'title': {'fr': 'Magasin ou concept-store', 'en': 'Store or concept store', 'ar': 'متجر أو مساحة تجارية'}.get(lang, 'Magasin ou concept-store'),
-                'importance': {'fr': 'Attirer les clients dès la phase de pré-lancement.', 'en': 'Attract customers from the pre-launch phase.', 'ar': 'جذب الزوار وبناء الترقب منذ مرحلة ما قبل الافتتاح.'}.get(lang, 'Attirer les clients dès la phase de pré-lancement.'),
+                'title': {'fr': 'Restaurant & commerce', 'en': 'Restaurant & retail', 'ar': 'مطعم وتجارة'}.get(lang, 'Restaurant & commerce'),
+                'importance': {'fr': "Attirer les clients avec un visuel professionnel et engageant.", 'en': 'Attract customers with professional and engaging visuals.', 'ar': 'جذب العملاء بمرئيات احترافية وجذابة.'}.get(lang, "Attirer les clients avec un visuel professionnel et engageant."),
                 'get_font_awesome_icon': 'fas fa-store',
-                'get_image_url': '/static/img/strategic/magasin-concept-store.jpg',
+                'get_image_url': '/static/img/strategic/restaurant-commerce.jpg',
             },
             {
-                'title': {'fr': 'Événementiel & Salons', 'en': 'Events & Exhibitions', 'ar': 'فعاليات ومعارض'}.get(lang, 'Événementiel & Salons'),
-                'importance': {'fr': 'Séduire et engager un public exigeant.', 'en': 'Captivate and engage a demanding audience.', 'ar': 'إبهار الجمهور واستقطاب اهتمام الشركاء بتجارب ثلاثية الأبعاد تفاعلية.'}.get(lang, 'Séduire et engager un public exigeant.'),
+                'title': {'fr': 'Professionnel & freelance', 'en': 'Professional & freelancer', 'ar': 'مهني ومستقل'}.get(lang, 'Professionnel & freelance'),
+                'importance': {'fr': 'Se démarquer avec un portfolio et une présence digitale unique.', 'en': 'Stand out with a unique portfolio and digital presence.', 'ar': 'التميز بملف أعمال وحضور رقمي فريد.'}.get(lang, 'Se démarquer avec un portfolio et une présence digitale unique.'),
+                'get_font_awesome_icon': 'fas fa-user-tie',
+                'get_image_url': '/static/img/strategic/professionnel-freelance.jpg',
+            },
+            {
+                'title': {'fr': 'Événementiel & salons', 'en': 'Events & exhibitions', 'ar': 'فعاليات ومعارض'}.get(lang, 'Événementiel & salons'),
+                'importance': {'fr': 'Captiver votre audience avec des visuels et vidéos percutants.', 'en': 'Captivate your audience with striking visuals and videos.', 'ar': 'إبهار الجمهور بمرئيات وفيديوهات مؤثرة.'}.get(lang, 'Captiver votre audience avec des visuels et vidéos percutants.'),
                 'get_font_awesome_icon': 'fas fa-calendar-star',
                 'get_image_url': '/static/img/strategic/evenementiel.jpg',
             },
