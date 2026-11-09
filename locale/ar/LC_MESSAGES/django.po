@@ -1247,9 +1247,9 @@ msgid "VR CREATION COMPANY"
 msgstr "شركة في آر كرييشن"
 
 msgid ""
-"incarne l’alliance entre esthétique et technologie. Notre spécialité est de "
+"incarne l'alliance entre esthétique et technologie. Notre spécialité est de "
 "créer des visuels haut de gamme qui valorisent vos projets et reflètent "
-"votre niveau d’excellence."
+"votre niveau d'excellence."
 msgstr ""
 "تجسد التحالف بين الجمال والتكنولوجيا. تخصصنا هو إنشاء مرئيات راقية تثمن "
 "مشاريعكم وتعكس مستوى تميزكم."
@@ -1259,7 +1259,7 @@ msgstr "فريقنا"
 
 msgid ""
 "de designers, architectes, décorateurs, développeurs et chefs de projet "
-"mettent leur savoir-faire au service d’expériences visuelles uniques, "
+"mettent leur savoir-faire au service d'expériences visuelles uniques, "
 "conçues pour séduire vos clients et partenaires les plus exigeants."
 msgstr ""
 "من المصممين والمهندسين المعماريين ومصممي الديكور والمطورين ومديري المشاريع "
@@ -1861,7 +1861,7 @@ msgstr "VR Creation Company — إنتاج بصري راقي في طنجة"
 msgid "est une agence de production visuelle basée à Tanger, au cœur du Nord du Maroc. Nous accompagnons les entreprises, promoteurs, commerces et institutions dans la création de contenus visuels qui valorisent leur image et accélèrent leur croissance."
 msgstr "هي وكالة إنتاج بصري مقرها في طنجة، في قلب شمال المغرب. نرافق الشركات والمطورين والتجار والمؤسسات في إنشاء محتوى بصري يعزز صورتهم ويسرّع نموهم."
 
-msgid "Notre mission : allier créativité, technologie et rigueur pour transformer chaque projet en une expérience visuelle mémorable. De la modélisation 3D à la photographie professionnelle, du branding à l’animation, nous offrons une palette complète de services adaptés aux besoins du marché local et régional."
+msgid "Notre mission : allier créativité, technologie et rigueur pour transformer chaque projet en une expérience visuelle mémorable. De la modélisation 3D à la photographie professionnelle, du branding à l'animation, nous offrons une palette complète de services adaptés aux besoins du marché local et régional."
 msgstr "مهمتنا: الجمع بين الإبداع والتكنولوجيا والدقة لتحويل كل مشروع إلى تجربة بصرية لا تُنسى. من النمذجة ثلاثية الأبعاد إلى التصوير الاحترافي، ومن البراندينغ إلى الرسوم المتحركة، نقدم مجموعة كاملة من الخدمات المكيفة لاحتياجات السوق المحلي والجهوي."
 
 msgid "Chaque création est pensée comme une signature visuelle sur mesure, au service de votre réussite."
@@ -1957,7 +1957,7 @@ msgstr "خبراء متحمسون في خدمتكم"
 msgid "Questions fréquentes"
 msgstr "الأسئلة الشائعة"
 
-msgid "FAQ — à propos de VR Creation"
+msgid "FAQ — À propos de VR Creation"
 msgstr "FAQ — حول VR Creation"
 
 msgid "Où se trouvent vos bureaux ?"
@@ -1969,7 +1969,7 @@ msgstr "تقع مكاتبنا في Ibn Batouta bureaux، شارع يوسف بن 
 msgid "Intervenez-vous en dehors de Tanger ?"
 msgstr "هل تعملون خارج طنجة؟"
 
-msgid "Oui, nous couvrons l’ensemble du Nord du Maroc : Tétouan, Asilah, Larache, Chefchaouen, Al Hoceima et les villes environnantes. Pour la modélisation 3D, le branding et l’animation, nous travaillons également à distance pour tout le Maroc."
+msgid "Oui, nous couvrons l'ensemble du Nord du Maroc : Tétouan, Asilah, Larache, Chefchaouen, Al Hoceima et les villes environnantes. Pour la modélisation 3D, le branding et l'animation, nous travaillons également à distance pour tout le Maroc."
 msgstr "نعم، نغطي جميع أنحاء شمال المغرب: تطوان، أصيلة، العرائش، شفشاون، الحسيمة والمدن المحيطة. بالنسبة للنمذجة 3D والبراندينغ والرسوم المتحركة، نعمل أيضًا عن بُعد لجميع أنحاء المغرب."
 
 msgid "Comment demander un devis ?"
@@ -1987,7 +1987,7 @@ msgstr "تختلف المواعيد حسب المشروع: بضعة أيام ل�
 msgid "Travaillez-vous avec les particuliers ?"
 msgstr "هل تعملون مع الأفراد؟"
 
-msgid "Oui, nous travaillons aussi bien avec les entreprises (promoteurs, commerces, restaurants, agences) qu’avec les particuliers (projets de villa, événements privés)."
+msgid "Oui, nous travaillons aussi bien avec les entreprises (promoteurs, commerces, restaurants, agences) qu'avec les particuliers (projets de villa, événements privés)."
 msgstr "نعم، نعمل مع الشركات (مطورين، تجار، مطاعم، وكالات) وكذلك مع الأفراد (مشاريع فيلا، فعاليات خاصة)."
 
 msgid "Prêt à donner vie à votre projet ?"
@@ -2017,7 +2017,7 @@ msgstr "تواصلوا معنا للحصول على عرض أسعار مجاني
 msgid "Demander un devis"
 msgstr "طلب عرض أسعار"
 
-msgid "Besoin d’informations ?"
+msgid "Besoin d'informations ?"
 msgstr "هل تحتاج معلومات؟"
 
 msgid "Contactez nos experts à Tanger pour en savoir plus et obtenir un devis personnalisé."
@@ -2029,7 +2029,7 @@ msgstr "النمذجة ثلاثية الأبعاد في طنجة"
 msgid "Marketing digital Tanger"
 msgstr "التسويق الرقمي في طنجة"
 
-msgid "Zone d’intervention : Tanger, Tétouan, Asilah, Chefchaouen — Nord du Maroc"
+msgid "Zone d'intervention : Tanger, Tétouan, Asilah, Chefchaouen — Nord du Maroc"
 msgstr "منطقة التدخل: طنجة، تطوان، أصيلة، شفشاون — شمال المغرب"
 
 msgid "Visite virtuelle Nord Maroc"
@@ -2059,7 +2059,7 @@ msgstr "عززوا صورة علامتكم التجارية مع الإنتاج 
 msgid "Modélisation 3D, photographie, visites virtuelles, branding et communication visuelle — nous transformons vos projets en expériences visuelles qui séduisent et convertissent."
 msgstr "نمذجة 3D، تصوير، جولات افتراضية، براندينغ وتواصل بصري — نحول مشاريعكم إلى تجارب بصرية تجذب وتقنع."
 
-msgid "Nous accompagnons les entreprises à chaque étape de leur projet : visualisation, valorisation, expérience immersive et communication digitale. L’objectif : transformer votre vision en un véritable outil de croissance."
+msgid "Nous accompagnons les entreprises à chaque étape de leur projet : visualisation, valorisation, expérience immersive et communication digitale. L'objectif : transformer votre vision en un véritable outil de croissance."
 msgstr "نرافق الشركات في كل مرحلة من مشروعها: التصور، التثمين، التجربة الغامرة والتواصل الرقمي. الهدف: تحويل رؤيتكم إلى أداة نمو حقيقية."
 
 msgid "Nous créons des expériences visuelles adaptées à chaque secteur pour valoriser vos projets et accélérer vos ventes."
@@ -2098,10 +2098,10 @@ msgstr "البيانات الشخصية"
 msgid "Ce site est hébergé par PythonAnywhere (PythonAnywhere LLP, Anaconda Inc.)"
 msgstr "تتم استضافة هذا الموقع بواسطة PythonAnywhere (PythonAnywhere LLP, Anaconda Inc.)"
 
-msgid "L’ensemble de ce site relève de la législation sur le droit d’auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés."
+msgid "L'ensemble de ce site relève de la législation sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés."
 msgstr "يخضع هذا الموقع بالكامل لتشريعات حقوق المؤلف والملكية الفكرية. جميع حقوق النسخ محفوظة."
 
-msgid "Les informations collectées via le formulaire de contact sont destinées exclusivement à VR Creation Company. Conformément à la loi marocaine n° 09-08, vous disposez d’un droit d’accès, de rectification et de suppression de vos données personnelles."
+msgid "Les informations collectées via le formulaire de contact sont destinées exclusivement à VR Creation Company. Conformément à la loi marocaine n° 09-08, vous disposez d'un droit d'accès, de rectification et de suppression de vos données personnelles."
 msgstr "المعلومات المجمعة عبر نموذج الاتصال مخصصة حصريًا لـ VR Creation Company. وفقًا للقانون المغربي رقم 09-08، يحق لكم الوصول إلى بياناتكم الشخصية وتصحيحها وحذفها."
 
 msgid "Site web"
@@ -2152,7 +2152,7 @@ msgstr "اكتشفوا باقات خدمات مصممة خصيصًا لتلبي�
 msgid "Sélectionnez ou désélectionnez les services selon vos besoins. Les services inclus dans le pack sont pré-sélectionnés."
 msgstr "حددوا أو ألغوا تحديد الخدمات حسب احتياجاتكم. الخدمات المدرجة في الباقة مختارة مسبقًا."
 
-msgid "En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de cookies pour améliorer votre expérience."
+msgid "En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de cookies pour améliorer votre expérience."
 msgstr "باستمراركم في تصفح هذا الموقع، فإنكم توافقون على استخدام ملفات تعريف الارتباط لتحسين تجربتكم."
 
 msgid "Un cookie est un petit fichier texte déposé sur votre terminal (ordinateur, tablette ou smartphone) lors de votre visite sur notre site."
@@ -2161,16 +2161,16 @@ msgstr "ملف تعريف الارتباط هو ملف نصي صغير يتم و
 msgid "Ces cookies sont essentiels au fonctionnement du site et ne peuvent pas être désactivés dans nos systèmes."
 msgstr "هذه الملفات ضرورية لعمل الموقع ولا يمكن تعطيلها."
 
-msgid "Ces cookies nous aident à mesurer l’audience de notre site, à analyser la navigation et à identifier les contenus les plus populaires."
+msgid "Ces cookies nous aident à mesurer l'audience de notre site, à analyser la navigation et à identifier les contenus les plus populaires."
 msgstr "تساعدنا هذه الملفات في قياس جمهور موقعنا وتحليل التصفح وتحديد المحتوى الأكثر شعبية."
 
-msgid "Ces cookies sont liés au partage sur les réseaux sociaux et peuvent être installés pour suivre l’activité de navigation sur notre site."
+msgid "Ces cookies sont liés au partage sur les réseaux sociaux et peuvent être installés pour suivre l'activité de navigation sur notre site."
 msgstr "ترتبط هذه الملفات بالمشاركة على الشبكات الاجتماعية ويمكن تثبيتها لتتبع نشاط التصفح."
 
 msgid "Conformément à la réglementation RGPD, le consentement donné pour le dépôt de cookies a une durée de validité de 13 mois maximum."
 msgstr "وفقًا للائحة العامة لحماية البيانات، مدة صلاحية الموافقة على ملفات تعريف الارتباط 13 شهرًا كحد أقصى."
 
-msgid "Permettent de mesurer l’audience et d’analyser l’utilisation du site pour l’améliorer."
+msgid "Permettent de mesurer l'audience et d'analyser l'utilisation du site pour l'améliorer."
 msgstr "تسمح بقياس الجمهور وتحليل استخدام الموقع لتحسينه."
 
 msgid "Permettent de vous proposer des publicités personnalisées et de partager du contenu."
@@ -2179,28 +2179,28 @@ msgstr "تسمح بتقديم إعلانات مخصصة ومشاركة المح�
 msgid "Vous pouvez à tout moment modifier vos préférences de cookies, accepter ou refuser le chargement des cookies non essentiels."
 msgstr "يمكنكم في أي وقت تعديل تفضيلات ملفات تعريف الارتباط أو قبول أو رفض الملفات غير الضرورية."
 
-msgid "Générateur d’articles IA"
+msgid "Générateur d'articles IA"
 msgstr "مولد مقالات بالذكاء الاصطناعي"
 
-msgid "Générateur d’articles de blog par IA"
+msgid "Générateur d'articles de blog par IA"
 msgstr "مولد مقالات المدونة بالذكاء الاصطناعي"
 
 msgid "Génération en cours..."
 msgstr "جاري التوليد..."
 
-msgid "Générer l’article maintenant"
+msgid "Générer l'article maintenant"
 msgstr "توليد المقال الآن"
 
-msgid "Générer un article avec l’IA"
+msgid "Générer un article avec l'IA"
 msgstr "توليد مقال بالذكاء الاصطناعي"
 
-msgid "Indiquez votre sujet ou vos mots-clés pour que l’IA rédige un article complet, structuré et optimisé SEO pour votre blog."
+msgid "Indiquez votre sujet ou vos mots-clés pour que l'IA rédige un article complet, structuré et optimisé SEO pour votre blog."
 msgstr "حددوا موضوعكم أو كلماتكم المفتاحية ليقوم الذكاء الاصطناعي بكتابة مقال كامل ومنظم ومحسن لمحركات البحث."
 
-msgid "L’IA Gemini rédige le titre, l’extrait et l’article structuré en Markdown. Veuillez patienter 5 à 15 secondes."
+msgid "L'IA Gemini rédige le titre, l'extrait et l'article structuré en Markdown. Veuillez patienter 5 à 15 secondes."
 msgstr "يكتب Gemini AI العنوان والمقتطف والمقال المنظم بتنسيق Markdown. يرجى الانتظار 5 إلى 15 ثانية."
 
-msgid "L’article sera automatiquement enregistré au statut"
+msgid "L'article sera automatiquement enregistré au statut"
 msgstr "سيتم حفظ المقال تلقائيًا بحالة"
 
 msgid "Rédaction par IA en cours..."
@@ -2212,5 +2212,41 @@ msgstr "الأمان والرقابة التحريرية:"
 msgid "Vous pourrez le relire, ajuster le texte, ajouter une image et le publier manuellement."
 msgstr "يمكنكم مراجعته وتعديل النص وإضافة صورة ونشره يدويًا."
 
-msgid "Simule un espace virtuel 3D en transformant le site avec un design néon et des particules cosmiques pour une immersion totale dans l’univers de VR Creation."
+msgid "Simule un espace virtuel 3D en transformant le site avec un design néon et des particules cosmiques pour une immersion totale dans l'univers de VR Creation."
 msgstr "يحاكي فضاء افتراضيًا ثلاثي الأبعاد مع تصميم نيون وجزيئات كونية لغمر كامل في عالم VR Creation."
+
+msgid "Tanger"
+msgstr "طنجة"
+
+msgid "Tétouan"
+msgstr "تطوان"
+
+msgid "Asilah"
+msgstr "أصيلة"
+
+msgid "Larache"
+msgstr "العرائش"
+
+msgid "Chefchaouen"
+msgstr "شفشاون"
+
+msgid "Al Hoceima"
+msgstr "الحسيمة"
+
+msgid "Fnideq"
+msgstr "الفنيدق"
+
+msgid "M'diq"
+msgstr "المضيق"
+
+msgid "Ksar El Kébir"
+msgstr "القصر الكبير"
+
+msgid "Équipe VR Creation à Tanger"
+msgstr "فريق VR Creation في طنجة"
+
+msgid "Localisation VR Creation — Tanger, Maroc"
+msgstr "موقع VR Creation — طنجة، المغرب"
+
+msgid "Galerie VR Creation"
+msgstr "معرض VR Creation"

@@ -180,48 +180,20 @@
             <p class="text-gray-600 max-w-2xl mx-auto mt-4">{% trans "Depuis nos bureaux de Tanger, nous accompagnons les entreprises et institutions de toute la région nord." %}</p>
         </div>
         <div class="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
-            <span class="px-5 py-2.5 bg-primary/5 text-primary rounded-full text-sm font-medium border border-primary/10"><i class="fas fa-map-marker-alt mr-1.5 text-xs"></i>Tanger</span>
-            <span class="px-5 py-2.5 bg-primary/5 text-primary rounded-full text-sm font-medium border border-primary/10"><i class="fas fa-map-marker-alt mr-1.5 text-xs"></i>Tétouan</span>
-            <span class="px-5 py-2.5 bg-primary/5 text-primary rounded-full text-sm font-medium border border-primary/10"><i class="fas fa-map-marker-alt mr-1.5 text-xs"></i>Asilah</span>
-            <span class="px-5 py-2.5 bg-primary/5 text-primary rounded-full text-sm font-medium border border-primary/10"><i class="fas fa-map-marker-alt mr-1.5 text-xs"></i>Larache</span>
-            <span class="px-5 py-2.5 bg-primary/5 text-primary rounded-full text-sm font-medium border border-primary/10"><i class="fas fa-map-marker-alt mr-1.5 text-xs"></i>Chefchaouen</span>
-            <span class="px-5 py-2.5 bg-primary/5 text-primary rounded-full text-sm font-medium border border-primary/10"><i class="fas fa-map-marker-alt mr-1.5 text-xs"></i>Al Hoceima</span>
-            <span class="px-5 py-2.5 bg-primary/5 text-primary rounded-full text-sm font-medium border border-primary/10"><i class="fas fa-map-marker-alt mr-1.5 text-xs"></i>Fnideq</span>
-            <span class="px-5 py-2.5 bg-primary/5 text-primary rounded-full text-sm font-medium border border-primary/10"><i class="fas fa-map-marker-alt mr-1.5 text-xs"></i>M'diq</span>
-            <span class="px-5 py-2.5 bg-primary/5 text-primary rounded-full text-sm font-medium border border-primary/10"><i class="fas fa-map-marker-alt mr-1.5 text-xs"></i>Ksar El Kébir</span>
+            <span class="px-5 py-2.5 bg-primary/5 text-primary rounded-full text-sm font-medium border border-primary/10"><i class="fas fa-map-marker-alt mr-1.5 text-xs"></i>{% trans "Tanger" %}</span>
+            <span class="px-5 py-2.5 bg-primary/5 text-primary rounded-full text-sm font-medium border border-primary/10"><i class="fas fa-map-marker-alt mr-1.5 text-xs"></i>{% trans "Tétouan" %}</span>
+            <span class="px-5 py-2.5 bg-primary/5 text-primary rounded-full text-sm font-medium border border-primary/10"><i class="fas fa-map-marker-alt mr-1.5 text-xs"></i>{% trans "Asilah" %}</span>
+            <span class="px-5 py-2.5 bg-primary/5 text-primary rounded-full text-sm font-medium border border-primary/10"><i class="fas fa-map-marker-alt mr-1.5 text-xs"></i>{% trans "Larache" %}</span>
+            <span class="px-5 py-2.5 bg-primary/5 text-primary rounded-full text-sm font-medium border border-primary/10"><i class="fas fa-map-marker-alt mr-1.5 text-xs"></i>{% trans "Chefchaouen" %}</span>
+            <span class="px-5 py-2.5 bg-primary/5 text-primary rounded-full text-sm font-medium border border-primary/10"><i class="fas fa-map-marker-alt mr-1.5 text-xs"></i>{% trans "Al Hoceima" %}</span>
+            <span class="px-5 py-2.5 bg-primary/5 text-primary rounded-full text-sm font-medium border border-primary/10"><i class="fas fa-map-marker-alt mr-1.5 text-xs"></i>{% trans "Fnideq" %}</span>
+            <span class="px-5 py-2.5 bg-primary/5 text-primary rounded-full text-sm font-medium border border-primary/10"><i class="fas fa-map-marker-alt mr-1.5 text-xs"></i>{% trans "M'diq" %}</span>
+            <span class="px-5 py-2.5 bg-primary/5 text-primary rounded-full text-sm font-medium border border-primary/10"><i class="fas fa-map-marker-alt mr-1.5 text-xs"></i>{% trans "Ksar El Kébir" %}</span>
         </div>
     </div>
 </section>
 
-<!-- Team -->
-{% if team_members %}
-<section class="section section-tint py-20">
-    <div class="container mx-auto px-4">
-        <div class="text-center mb-16 animate-on-scroll slide-up">
-            <span class="pill-badge">{% trans "Notre équipe" %}</span>
-            <h2 class="section-title">{% trans "Des experts passionnés à votre service" %}</h2>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            {% for member in team_members %}
-            <div class="text-center animate-on-scroll slide-up" style="transition-delay: {{ forloop.counter0 }}00ms;">
-                <div class="w-28 h-28 mx-auto mb-4 rounded-full overflow-hidden bg-gray-200 shadow-md">
-                    {% if member.photo %}
-                    <img src="{{ member.photo.url }}" alt="{{ member.name }}" class="w-full h-full object-cover" loading="lazy">
-                    {% else %}
-                    <div class="w-full h-full flex items-center justify-center bg-primary/10 text-primary text-3xl"><i class="fas fa-user"></i></div>
-                    {% endif %}
-                </div>
-                <h3 class="font-bold text-dark">{{ member.name }}</h3>
-                <p class="text-primary text-sm font-medium">{{ member.role }}</p>
-                {% if member.bio %}
-                <p class="text-gray-600 text-xs mt-2">{{ member.bio }}</p>
-                {% endif %}
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</section>
-{% endif %}
+
 
 <!-- FAQ -->
 <section class="section bg-white py-20">
