@@ -5,6 +5,7 @@ from django.db.models import Q
 from django.shortcuts import render, get_object_or_404
 
 from .models import Service
+from apps.core.models import ProcessStep
 from apps.seo.models import PageSEO
 
 
@@ -32,10 +33,21 @@ def service_detail(request, slug):
     )
     gallery = service.gallery_images.all()
     other_services = Service.objects.filter(is_active=True).exclude(pk=service.pk)[:4]
+    process_steps = ProcessStep.objects.all()
 
     return render(request, 'services/service_detail.html', {
         'service': service,
         'gallery': gallery,
         'other_services': other_services,
+        'process_steps': process_steps,
         'page_identifier': 'service_detail',
     })
+
+
+def redirect_old_branding_slug(request):
+    """301 redirect from old branding-immobilier slug to branding-communication-visuelle."""
+    from django.http import HttpResponsePermanentRedirect
+    from django.urls import reverse
+    return HttpResponsePermanentRedirect(
+        reverse('services:detail', kwargs={'slug': 'branding-communication-visuelle'})
+    )

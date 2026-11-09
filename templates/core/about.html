@@ -1,23 +1,26 @@
 {% extends "base.html" %}
-{% load i18n static %}
+{% load i18n static seo_tags %}
+
+{% block jsonld_extra %}
+{% jsonld_breadcrumb "À propos" "" %}
+{% endblock %}
 
 {% block content %}
-{% trans "À Propos de Nous" as page_title %}
+{% trans "VR Creation — Agence de production visuelle à Tanger" as page_title %}
 {% trans "À propos" as page_breadcrumb %}
 {% include "partials/page_hero.html" with title=page_title breadcrumb_label=page_breadcrumb %}
 
-<!-- Intro Section -->
+<!-- Company Story & Mission -->
 <section class="section bg-white py-24 relative overflow-hidden">
     <div class="container mx-auto px-4">
-        <!-- Centered Intro Header & Paragraphs -->
         <div class="max-w-3xl mx-auto text-center mb-16 animate-on-scroll slide-up">
             <span class="pill-badge mb-4">{% trans "Qui sommes-nous ?" %}</span>
+            <h1 class="text-3xl md:text-4xl font-black text-dark mb-6 tracking-tight">{% trans "VR Creation Company — Production visuelle haut de gamme à Tanger" %}</h1>
             
             <p class="text-xl md:text-2xl text-gray-700 font-light leading-relaxed mb-6">
-                <strong>{% trans "VR CREATION COMPANY" %}</strong> {% trans "incarne l’alliance entre esthétique et technologie. Notre spécialité est de créer des visuels haut de gamme qui valorisent vos projets et reflètent votre niveau d’excellence." %}
+                <strong>{% trans "VR CREATION COMPANY" %}</strong> {% trans "est une agence de production visuelle basée à Tanger, au cœur du Nord du Maroc. Nous accompagnons les entreprises, promoteurs, commerces et institutions dans la création de contenus visuels qui valorisent leur image et accélèrent leur croissance." %}
             </p>
             
-            <!-- Separator Icon (Meeting Table / Team) -->
             <div class="flex items-center justify-center gap-4 my-8 text-gray-300">
                 <span class="h-px w-16 bg-gray-200"></span>
                 <span class="text-2xl opacity-40"><i class="fas fa-users"></i></span>
@@ -25,145 +28,277 @@
             </div>
             
             <p class="text-base md:text-lg text-gray-600 font-light leading-relaxed">
-                <strong>{% trans "Notre équipe" %}</strong> {% trans "de designers, architectes, décorateurs, développeurs et chefs de projet mettent leur savoir-faire au service d’expériences visuelles uniques, conçues pour séduire vos clients et partenaires les plus exigeants." %}
+                {% trans "Notre mission : allier créativité, technologie et rigueur pour transformer chaque projet en une expérience visuelle mémorable. De la modélisation 3D à la photographie professionnelle, du branding à l'animation, nous offrons une palette complète de services adaptés aux besoins du marché local et régional." %}
             </p>
         </div>
 
-        <!-- Split Layout: Highlight Quote & Render Image -->
+        <!-- Split Layout -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mt-12">
-            <!-- Left Highlight Box (Blue box, serif font) -->
             <div class="lg:col-span-5 bg-gradient-to-br from-primary to-primary-dark rounded-[28px] p-8 md:p-12 flex items-center justify-center text-center shadow-lg animate-on-scroll slide-left" style="box-shadow: 0 12px 40px rgba(61,142,185,0.15);">
                 <blockquote class="text-2xl md:text-3xl font-serif text-white italic leading-relaxed" style="text-shadow: 0 1px 4px rgba(0,0,0,0.1);">
-                    “{% trans "Chaque rendu est pensé comme une œuvre et une signature créative sur mesure." %}”
+                    "{% trans "Chaque création est pensée comme une signature visuelle sur mesure, au service de votre réussite." %}"
                 </blockquote>
             </div>
             
-            <!-- Right Render Image -->
             <div class="lg:col-span-7 rounded-[28px] overflow-hidden shadow-xl relative min-h-[350px] animate-on-scroll slide-right" style="transition-delay: 150ms;">
                 {% if site_settings.about_image %}
-                <img src="{{ site_settings.about_image.url }}" alt="{% trans 'Qui sommes-nous ?' %}" class="absolute inset-0 w-full h-full object-cover">
+                <img src="{{ site_settings.about_image.url }}" alt="{% trans 'Équipe VR Creation à Tanger' %}" class="absolute inset-0 w-full h-full object-cover" loading="lazy" width="800" height="500">
                 {% else %}
-                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1000&q=80" alt="{% trans 'Qui sommes-nous ?' %}" class="absolute inset-0 w-full h-full object-cover">
+                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1000&q=80" alt="{% trans 'Équipe VR Creation à Tanger' %}" class="absolute inset-0 w-full h-full object-cover" loading="lazy" width="800" height="500">
                 {% endif %}
             </div>
         </div>
     </div>
 </section>
 
-<!-- Timeline / Process -->
-<section class="section section-light">
+<!-- Values -->
+{% if values %}
+<section class="section section-tint py-20">
     <div class="container mx-auto px-4">
         <div class="text-center mb-16 animate-on-scroll slide-up">
-            <span class="pill-badge">{% trans "Notre Processus" %}</span>
-            <h2 class="section-title">{% trans "Comment nous travaillons" %}</h2>
+            <span class="pill-badge">{% trans "Nos valeurs" %}</span>
+            <h2 class="section-title">{% trans "Les piliers de notre engagement" %}</h2>
         </div>
-        
-        <div class="timeline mt-12 hidden md:block">
-            <div class="timeline-item animate-on-scroll slide-left">
-                <div class="timeline-number">01</div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-primary">
-                    <h4 class="text-lg font-bold mb-2">{% trans "Analyse et Conseil" %}</h4>
-                    <p class="text-gray-600 text-sm">{% trans "Étude de vos besoins, récupération de vos plans et brief créatif pour définir l'ambiance." %}</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {% for value in values %}
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center hover:shadow-md transition-all duration-300 animate-on-scroll slide-up" style="transition-delay: {{ forloop.counter0 }}50ms;">
+                <div class="w-14 h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center text-2xl mb-5 mx-auto">
+                    {{ value.icon }}
                 </div>
+                <h3 class="text-lg font-bold text-dark mb-3">{{ value.title }}</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">{{ value.description }}</p>
             </div>
-            <div class="timeline-item animate-on-scroll slide-right" style="transition-delay: 150ms;">
-                <div class="timeline-number">02</div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-primary">
-                    <h4 class="text-lg font-bold mb-2">{% trans "Modélisation 3D" %}</h4>
-                    <p class="text-gray-600 text-sm">{% trans "Création de l'architecture, du mobilier et des éléments décoratifs en 3D avec une grande précision." %}</p>
-                </div>
-            </div>
-            <div class="timeline-item animate-on-scroll slide-left" style="transition-delay: 300ms;">
-                <div class="timeline-number">03</div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-primary">
-                    <h4 class="text-lg font-bold mb-2">{% trans "Éclairage et Textures" %}</h4>
-                    <p class="text-gray-600 text-sm">{% trans "Application des matériaux réalistes et configuration de la lumière pour une atmosphère parfaite." %}</p>
-                </div>
-            </div>
-            <div class="timeline-item animate-on-scroll slide-right" style="transition-delay: 450ms;">
-                <div class="timeline-number">04</div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-primary">
-                    <h4 class="text-lg font-bold mb-2">{% trans "Rendu et Post-production" %}</h4>
-                    <p class="text-gray-600 text-sm">{% trans "Génération des images haute résolution et retouches finales pour un résultat optimal." %}</p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Mobile Timeline -->
-        <div class="space-y-6 md:hidden">
-            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-primary relative pl-12 animate-on-scroll slide-up">
-                <div class="absolute top-6 left-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold -ml-4">1</div>
-                <h4 class="text-lg font-bold mb-2">{% trans "Analyse et Conseil" %}</h4>
-                <p class="text-gray-600 text-sm">{% trans "Étude de vos besoins, récupération de vos plans et brief créatif." %}</p>
-            </div>
-            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-primary relative pl-12 animate-on-scroll slide-up" style="transition-delay: 150ms;">
-                <div class="absolute top-6 left-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold -ml-4">2</div>
-                <h4 class="text-lg font-bold mb-2">{% trans "Modélisation 3D" %}</h4>
-                <p class="text-gray-600 text-sm">{% trans "Création de l'architecture et du mobilier en 3D." %}</p>
-            </div>
-            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-primary relative pl-12 animate-on-scroll slide-up" style="transition-delay: 300ms;">
-                <div class="absolute top-6 left-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold -ml-4">3</div>
-                <h4 class="text-lg font-bold mb-2">{% trans "Éclairage et Textures" %}</h4>
-                <p class="text-gray-600 text-sm">{% trans "Application des matériaux réalistes et configuration de la lumière." %}</p>
-            </div>
-            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-primary relative pl-12 animate-on-scroll slide-up" style="transition-delay: 450ms;">
-                <div class="absolute top-6 left-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold -ml-4">4</div>
-                <h4 class="text-lg font-bold mb-2">{% trans "Rendu et Post-production" %}</h4>
-                <p class="text-gray-600 text-sm">{% trans "Génération des images haute résolution et retouches finales." %}</p>
-            </div>
-        </div>
-        </div>
-    </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════
-     SECTION 3b — PROMOTION EXCLUSIVE (Offre spéciale)
-     ═══════════════════════════════════════════════ -->
-{% if featured_promotion %}
-<section class="section section-tint py-24 relative overflow-hidden">
-    <div class="light-orb light-orb-accent" style="width: 350px; height: 350px; bottom: -80px; left: 5%; opacity: 0.08;"></div>
-    <div class="container mx-auto px-4 relative z-10">
-        <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl border border-gray-100 p-8 md:p-12 overflow-hidden relative">
-            <!-- Decorative corner -->
-            <div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-bl-full pointer-events-none"></div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                <!-- Left: content -->
-                <div class="lg:col-span-7 space-y-6 text-left animate-on-scroll slide-left">
-                    <span class="pill-badge bg-primary-light text-primary border-primary-light/50">
-                        {{ featured_promotion.badge_text }}
-                    </span>
-                    <h2 class="text-2xl md:text-4xl font-extrabold text-dark uppercase tracking-tight leading-snug">
-                        {{ featured_promotion.title }}
-                    </h2>
-                    <h3 class="text-lg md:text-xl font-bold text-primary font-serif italic">
-                        {{ featured_promotion.headline }}
-                    </h3>
-                    <p class="text-gray-600 text-sm md:text-base leading-relaxed font-light">
-                        {{ featured_promotion.short_description }}
-                    </p>
-                    <div class="pt-4 flex flex-wrap items-center gap-6">
-                        <div>
-                            <span class="block text-[10px] uppercase tracking-wider text-gray-400 font-bold">{% trans "Tarif" %}</span>
-                            <span class="text-primary font-black text-2xl">{{ featured_promotion.offer_price|default:"Sur devis" }}</span>
-                        </div>
-                        <a href="{% url 'core:promotion_detail' featured_promotion.slug %}" class="btn btn-primary px-8 py-3.5 text-sm font-bold shadow-md hover:shadow-lg">
-                            {% trans "Voir les détails de l'offre" %} <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Right: mock image -->
-                <div class="lg:col-span-5 relative rounded-2xl overflow-hidden aspect-[4/3] shadow-md animate-on-scroll slide-right" style="transition-delay: 150ms;">
-                    {% if featured_promotion.featured_image %}
-                    <img src="{{ featured_promotion.featured_image.url }}" alt="{{ featured_promotion.title }}" class="w-full h-full object-cover">
-                    {% else %}
-                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&q=80" alt="{{ featured_promotion.title }}" class="w-full h-full object-cover">
-                    {% endif %}
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
 {% endif %}
+
+<!-- Expertise by Service -->
+<section class="section bg-white py-20">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16 animate-on-scroll slide-up">
+            <span class="pill-badge">{% trans "Notre expertise" %}</span>
+            <h2 class="section-title">{% trans "Des compétences complètes pour vos projets visuels" %}</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div class="flex items-start gap-4 p-6 rounded-xl border border-gray-100 hover:shadow-sm transition-all">
+                <div class="w-10 h-10 bg-primary/10 text-primary rounded-lg flex items-center justify-center shrink-0"><i class="fas fa-cube"></i></div>
+                <div>
+                    <h3 class="font-bold text-dark mb-1">{% trans "Modélisation 3D" %}</h3>
+                    <p class="text-gray-600 text-sm">{% trans "Rendus photoréalistes, maquettes interactives, perspectives architecturales." %}</p>
+                </div>
+            </div>
+            <div class="flex items-start gap-4 p-6 rounded-xl border border-gray-100 hover:shadow-sm transition-all">
+                <div class="w-10 h-10 bg-primary/10 text-primary rounded-lg flex items-center justify-center shrink-0"><i class="fas fa-camera"></i></div>
+                <div>
+                    <h3 class="font-bold text-dark mb-1">{% trans "Photographie professionnelle" %}</h3>
+                    <p class="text-gray-600 text-sm">{% trans "Architecture, produits, corporate, événementiel, drone." %}</p>
+                </div>
+            </div>
+            <div class="flex items-start gap-4 p-6 rounded-xl border border-gray-100 hover:shadow-sm transition-all">
+                <div class="w-10 h-10 bg-primary/10 text-primary rounded-lg flex items-center justify-center shrink-0"><i class="fas fa-vr-cardboard"></i></div>
+                <div>
+                    <h3 class="font-bold text-dark mb-1">{% trans "Visites virtuelles 360°" %}</h3>
+                    <p class="text-gray-600 text-sm">{% trans "Immersion totale pour vos clients, navigable sur tous les appareils." %}</p>
+                </div>
+            </div>
+            <div class="flex items-start gap-4 p-6 rounded-xl border border-gray-100 hover:shadow-sm transition-all">
+                <div class="w-10 h-10 bg-primary/10 text-primary rounded-lg flex items-center justify-center shrink-0"><i class="fas fa-palette"></i></div>
+                <div>
+                    <h3 class="font-bold text-dark mb-1">{% trans "Branding & communication visuelle" %}</h3>
+                    <p class="text-gray-600 text-sm">{% trans "Logo, charte graphique, supports print et digitaux." %}</p>
+                </div>
+            </div>
+            <div class="flex items-start gap-4 p-6 rounded-xl border border-gray-100 hover:shadow-sm transition-all">
+                <div class="w-10 h-10 bg-primary/10 text-primary rounded-lg flex items-center justify-center shrink-0"><i class="fas fa-film"></i></div>
+                <div>
+                    <h3 class="font-bold text-dark mb-1">{% trans "Animation & motion design" %}</h3>
+                    <p class="text-gray-600 text-sm">{% trans "Vidéos 3D, survols architecturaux, teasers percutants." %}</p>
+                </div>
+            </div>
+            <div class="flex items-start gap-4 p-6 rounded-xl border border-gray-100 hover:shadow-sm transition-all">
+                <div class="w-10 h-10 bg-primary/10 text-primary rounded-lg flex items-center justify-center shrink-0"><i class="fas fa-bullseye"></i></div>
+                <div>
+                    <h3 class="font-bold text-dark mb-1">{% trans "Marketing digital" %}</h3>
+                    <p class="text-gray-600 text-sm">{% trans "Stratégie de contenu, lead generation, présence digitale." %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="section section-tint py-20">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16 animate-on-scroll slide-up">
+            <span class="pill-badge">{% trans "Pourquoi nous choisir ?" %}</span>
+            <h2 class="section-title">{% trans "Ce qui fait la différence VR Creation" %}</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div class="flex items-start gap-4 animate-on-scroll slide-left">
+                <div class="w-10 h-10 bg-green-100 text-green-600 rounded-full flex items-center justify-center shrink-0"><i class="fas fa-check"></i></div>
+                <div>
+                    <h3 class="font-bold text-dark mb-1">{% trans "Équipe locale et réactive" %}</h3>
+                    <p class="text-gray-600 text-sm">{% trans "Basés à Tanger, nous intervenons rapidement sur tout le Nord du Maroc : Tétouan, Asilah, Larache, Chefchaouen, Al Hoceima." %}</p>
+                </div>
+            </div>
+            <div class="flex items-start gap-4 animate-on-scroll slide-right">
+                <div class="w-10 h-10 bg-green-100 text-green-600 rounded-full flex items-center justify-center shrink-0"><i class="fas fa-check"></i></div>
+                <div>
+                    <h3 class="font-bold text-dark mb-1">{% trans "Qualité premium, tarifs compétitifs" %}</h3>
+                    <p class="text-gray-600 text-sm">{% trans "Des livrables de qualité internationale à des prix adaptés au marché local." %}</p>
+                </div>
+            </div>
+            <div class="flex items-start gap-4 animate-on-scroll slide-left">
+                <div class="w-10 h-10 bg-green-100 text-green-600 rounded-full flex items-center justify-center shrink-0"><i class="fas fa-check"></i></div>
+                <div>
+                    <h3 class="font-bold text-dark mb-1">{% trans "Accompagnement personnalisé" %}</h3>
+                    <p class="text-gray-600 text-sm">{% trans "Un interlocuteur dédié du premier rendez-vous à la livraison finale." %}</p>
+                </div>
+            </div>
+            <div class="flex items-start gap-4 animate-on-scroll slide-right">
+                <div class="w-10 h-10 bg-green-100 text-green-600 rounded-full flex items-center justify-center shrink-0"><i class="fas fa-check"></i></div>
+                <div>
+                    <h3 class="font-bold text-dark mb-1">{% trans "Technologies de pointe" %}</h3>
+                    <p class="text-gray-600 text-sm">{% trans "Outils professionnels en 3D, photo, vidéo et design pour des résultats optimaux." %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Process Steps (reusable partial) -->
+{% include "partials/process_steps.html" %}
+
+<!-- Coverage Area -->
+<section class="section bg-white py-20">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16 animate-on-scroll slide-up">
+            <span class="pill-badge">{% trans "Zone d'intervention" %}</span>
+            <h2 class="section-title">{% trans "Nous couvrons Tanger et le Nord du Maroc" %}</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mt-4">{% trans "Depuis nos bureaux de Tanger, nous accompagnons les entreprises et institutions de toute la région nord." %}</p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
+            {% for city in "Tanger,Tétouan,Asilah,Larache,Chefchaouen,Al Hoceima,Fnideq,M'diq,Ksar El Kébir"|split:"," %}
+            <span class="px-5 py-2.5 bg-primary/5 text-primary rounded-full text-sm font-medium border border-primary/10">
+                <i class="fas fa-map-marker-alt mr-1.5 text-xs"></i>{{ city }}
+            </span>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Team -->
+{% if team_members %}
+<section class="section section-tint py-20">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16 animate-on-scroll slide-up">
+            <span class="pill-badge">{% trans "Notre équipe" %}</span>
+            <h2 class="section-title">{% trans "Des experts passionnés à votre service" %}</h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+            {% for member in team_members %}
+            <div class="text-center animate-on-scroll slide-up" style="transition-delay: {{ forloop.counter0 }}00ms;">
+                <div class="w-28 h-28 mx-auto mb-4 rounded-full overflow-hidden bg-gray-200 shadow-md">
+                    {% if member.photo %}
+                    <img src="{{ member.photo.url }}" alt="{{ member.name }}" class="w-full h-full object-cover" loading="lazy">
+                    {% else %}
+                    <div class="w-full h-full flex items-center justify-center bg-primary/10 text-primary text-3xl"><i class="fas fa-user"></i></div>
+                    {% endif %}
+                </div>
+                <h3 class="font-bold text-dark">{{ member.name }}</h3>
+                <p class="text-primary text-sm font-medium">{{ member.role }}</p>
+                {% if member.bio %}
+                <p class="text-gray-600 text-xs mt-2">{{ member.bio }}</p>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- FAQ -->
+<section class="section bg-white py-20">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16 animate-on-scroll slide-up">
+            <span class="pill-badge">{% trans "Questions fréquentes" %}</span>
+            <h2 class="section-title">{% trans "FAQ — À propos de VR Creation" %}</h2>
+        </div>
+        <div class="max-w-3xl mx-auto space-y-4">
+            <details class="group bg-gray-50 rounded-xl border border-gray-100 p-5 cursor-pointer">
+                <summary class="font-bold text-dark flex justify-between items-center">
+                    {% trans "Où se trouvent vos bureaux ?" %}
+                    <i class="fas fa-chevron-down text-primary text-sm transition-transform group-open:rotate-180"></i>
+                </summary>
+                <p class="text-gray-600 text-sm mt-3 leading-relaxed">{% trans "Nos bureaux se situent à Ibn Batouta bureaux, Avenue Youssef Ibn Tachfine, Tanger 90000, Maroc. Nous recevons sur rendez-vous." %}</p>
+            </details>
+            <details class="group bg-gray-50 rounded-xl border border-gray-100 p-5 cursor-pointer">
+                <summary class="font-bold text-dark flex justify-between items-center">
+                    {% trans "Intervenez-vous en dehors de Tanger ?" %}
+                    <i class="fas fa-chevron-down text-primary text-sm transition-transform group-open:rotate-180"></i>
+                </summary>
+                <p class="text-gray-600 text-sm mt-3 leading-relaxed">{% trans "Oui, nous couvrons l'ensemble du Nord du Maroc : Tétouan, Asilah, Larache, Chefchaouen, Al Hoceima et les villes environnantes. Pour la modélisation 3D, le branding et l'animation, nous travaillons également à distance pour tout le Maroc." %}</p>
+            </details>
+            <details class="group bg-gray-50 rounded-xl border border-gray-100 p-5 cursor-pointer">
+                <summary class="font-bold text-dark flex justify-between items-center">
+                    {% trans "Comment demander un devis ?" %}
+                    <i class="fas fa-chevron-down text-primary text-sm transition-transform group-open:rotate-180"></i>
+                </summary>
+                <p class="text-gray-600 text-sm mt-3 leading-relaxed">{% trans "Contactez-nous par téléphone au +212 625 07 1498, par WhatsApp, ou via notre formulaire de contact en ligne. Le devis est gratuit et personnalisé." %}</p>
+            </details>
+            <details class="group bg-gray-50 rounded-xl border border-gray-100 p-5 cursor-pointer">
+                <summary class="font-bold text-dark flex justify-between items-center">
+                    {% trans "Quels sont vos délais de livraison ?" %}
+                    <i class="fas fa-chevron-down text-primary text-sm transition-transform group-open:rotate-180"></i>
+                </summary>
+                <p class="text-gray-600 text-sm mt-3 leading-relaxed">{% trans "Les délais varient selon le projet : quelques jours pour un shooting photo, 1 à 3 semaines pour un branding complet, 2 à 6 semaines pour la modélisation 3D. Nous nous engageons sur un planning précis dès la validation du devis." %}</p>
+            </details>
+            <details class="group bg-gray-50 rounded-xl border border-gray-100 p-5 cursor-pointer">
+                <summary class="font-bold text-dark flex justify-between items-center">
+                    {% trans "Travaillez-vous avec les particuliers ?" %}
+                    <i class="fas fa-chevron-down text-primary text-sm transition-transform group-open:rotate-180"></i>
+                </summary>
+                <p class="text-gray-600 text-sm mt-3 leading-relaxed">{% trans "Oui, nous travaillons aussi bien avec les entreprises (promoteurs, commerces, restaurants, agences) qu'avec les particuliers (projets de villa, événements privés)." %}</p>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- CTA & Contact Block -->
+<section class="section section-tint py-20">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center animate-on-scroll slide-up">
+            <h2 class="text-3xl font-black text-dark mb-4">{% trans "Prêt à donner vie à votre projet ?" %}</h2>
+            <p class="text-gray-600 mb-8 text-lg">{% trans "Contactez notre équipe à Tanger pour un premier échange gratuit et sans engagement." %}</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="{% url 'contact:contact' %}" class="btn btn-primary px-8 py-4 text-base font-bold shadow-md hover:shadow-lg">
+                    <i class="fas fa-paper-plane mr-2"></i>{% trans "Demander un devis gratuit" %}
+                </a>
+                <a href="tel:+212625071498" class="btn bg-white text-dark border border-gray-200 px-8 py-4 text-base font-bold hover:bg-gray-50">
+                    <i class="fas fa-phone-alt mr-2 text-primary"></i>+212 625 07 1498
+                </a>
+                <a href="https://wa.me/212625071498" target="_blank" rel="noopener" class="btn bg-[#25D366] text-white px-8 py-4 text-base font-bold hover:bg-[#20bd5a]">
+                    <i class="fab fa-whatsapp mr-2"></i>WhatsApp
+                </a>
+            </div>
+        </div>
+
+        <!-- Map -->
+        <div class="mt-16 max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-lg">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.2!2d-5.834!3d35.7595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDQ1JzM0LjIiTiA1wrA1MCcwMi40Ilc!5e0!3m2!1sfr!2sma!4v1"
+                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                title="{% trans 'Localisation VR Creation — Tanger, Maroc' %}">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<!-- Promotion Banner -->
+{% if featured_promotion %}
+{% include "partials/featured_pack_banner.html" %}
+{% endif %}
+
 {% endblock %}

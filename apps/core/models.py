@@ -41,13 +41,13 @@ class SiteSettings(SingletonModel):
         _('Favicon'), upload_to='site/', blank=True, null=True
     )
     email = models.EmailField(
-        _('Email de contact'), default='Vrcreation.company@gmail.com'
+        _('Email de contact'), default='contact@vrcreationcompany.com'
     )
     phone = models.CharField(
-        _('Téléphone'), max_length=30, blank=True, default='+212634017762'
+        _('Téléphone'), max_length=30, blank=True, default='+212 625 07 1498'
     )
     address = models.TextField(
-        _('Adresse'), blank=True, default='Avenue Ibn Tachfine, bureaux Ibn Battouta, Tanger, Maroc'
+        _('Adresse'), blank=True, default='Ibn Batouta bureaux, Av. Youssef Ibn Tachfine, Tangier 90000'
     )
     google_analytics_id = models.CharField(
         _('Google Analytics ID'), max_length=30, blank=True,

@@ -94,7 +94,7 @@ class Command(BaseCommand):
         settings.hero_cta2_label_en = "Contact us"
         settings.hero_cta2_label_ar = "اتصل بنا"
         settings.hero_cta2_link = "/contact/"
-        settings.phone = "+212634017762"
+        settings.phone = "+212 625 07 1498"
         settings.address_fr = "Avenue Ibn Tachfine, bureaux Ibn Battouta, Tanger, Maroc"
         settings.address_en = "Avenue Ibn Tachfine, Ibn Battouta offices, Tangier, Morocco"
         settings.address_ar = "شارع ابن تاشفين، مكاتب ابن بطوطة، طنجة، المغرب"

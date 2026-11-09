@@ -42,10 +42,10 @@ class Command(BaseCommand):
         settings.tagline_fr = "L'innovation en action"
         settings.tagline_en = 'Innovation in Action'
         settings.tagline_ar = 'الابتكار في العمل'
-        settings.email = 'Vrcreation.company@gmail.com'
-        settings.phone = '+212634017762'
-        settings.address_fr = 'Avenue Ibn Tachfine, bureaux Ibn Battouta, Tanger, Maroc'
-        settings.address_en = 'Avenue Ibn Tachfine, Ibn Battouta offices, Tangier, Morocco'
+        settings.email = 'contact@vrcreationcompany.com'
+        settings.phone = '+212 625 07 1498'
+        settings.address_fr = 'Ibn Batouta bureaux, Av. Youssef Ibn Tachfine, Tangier 90000'
+        settings.address_en = 'Ibn Batouta offices, Av. Youssef Ibn Tachfine, Tangier 90000'
         settings.address_ar = 'شارع ابن تاشفين، مكاتب ابن بطوطة، طنجة، المغرب'
         settings.social_linkedin = 'https://linkedin.com/company/vrcreation'
         settings.social_instagram = 'https://instagram.com/vrcreation'
@@ -56,7 +56,7 @@ class Command(BaseCommand):
         settings.copyright_text_fr = "(c) 2026 VR Creation Company. Tous droits réservés."
         settings.copyright_text_en = "(c) 2026 VR Creation Company. All rights reserved."
         settings.copyright_text_ar = "(c) 2026 في آر كرييشن. جميع الحقوق محفوظة."
-        settings.social_whatsapp = '+212634017762'
+        settings.social_whatsapp = '+212 625 07 1498'
         settings.social_tiktok = 'https://tiktok.com/@vrcreation'
         settings.social_behance = 'https://behance.net/vrcreation'
         

@@ -2,7 +2,7 @@
 Canonical domain redirect middleware.
 301-redirects non-canonical requests to the canonical domain.
 Controlled by settings:
-    CANONICAL_DOMAIN = 'vrcreation.com'
+    CANONICAL_DOMAIN = 'vrcreationcompany.com'
     CANONICAL_DOMAIN_REDIRECT_ENABLED = False  # Enable after domain migration
 """
 from django.conf import settings
@@ -26,7 +26,7 @@ class CanonicalDomainMiddleware:
         if not getattr(settings, 'CANONICAL_DOMAIN_REDIRECT_ENABLED', False):
             return self.get_response(request)
 
-        canonical_domain = getattr(settings, 'CANONICAL_DOMAIN', 'vrcreation.com')
+        canonical_domain = getattr(settings, 'CANONICAL_DOMAIN', 'vrcreationcompany.com')
         canonical_protocol = getattr(settings, 'SITE_PROTOCOL', 'https')
         host = request.get_host().split(':')[0].lower()
 

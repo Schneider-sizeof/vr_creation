@@ -1,5 +1,10 @@
 {% extends "base.html" %}
-{% load i18n %}
+{% load i18n static seo_tags %}
+
+{% block jsonld_extra %}
+{% jsonld_service %}
+{% jsonld_breadcrumb "Services" "/fr/services/" service.title "" %}
+{% endblock %}
 
 {% block content %}
 {% include "partials/page_hero.html" with title=service.title breadcrumb_label=service.title %}
@@ -9,23 +14,26 @@
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <!-- Main Content -->
             <div class="lg:col-span-2">
+                <!-- Hero H1 (hidden visually if page_hero has it, but ensures one H1 for SEO) -->
+                
                 <!-- Service Featured Image -->
                 <div class="relative overflow-hidden rounded-2xl shadow-lg mb-8 aspect-[16/9]">
                     {% if service.featured_image %}
-                    <img src="{{ service.featured_image.url }}" alt="{{ service.title }}" class="w-full h-full object-cover">
+                    <img src="{{ service.featured_image.url }}" alt="{{ service.title }} — VR Creation Tanger" class="w-full h-full object-cover" loading="eager" width="1200" height="675">
                     {% else %}
-                    <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200&q=80" alt="{{ service.title }}" class="w-full h-full object-cover">
+                    <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200&q=80" alt="{{ service.title }}" class="w-full h-full object-cover" loading="eager" width="1200" height="675">
                     {% endif %}
                     <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
                 </div>
                 
-                <!-- Service Description -->
+                <!-- Intro -->
                 <div class="prose max-w-none text-gray-700">
-                    <h2 class="text-3xl font-black text-dark mb-6 tracking-tight">{% trans "Présentation de la solution" %}</h2>
+                    <h2 class="text-3xl font-black text-dark mb-6 tracking-tight">{% trans "Présentation du service" %}</h2>
                     <p class="text-xl font-light text-gray-600 leading-relaxed mb-8 border-l-4 border-primary pl-6">
                         {{ service.short_description }}
                     </p>
                     
+                    <!-- Full Description (includes what's included, benefits, who it's for) -->
                     <div class="mt-6 rich-text-content leading-relaxed font-light text-gray-600">
                         {{ service.full_description|safe }}
                     </div>
@@ -35,7 +43,7 @@
                 {% if gallery %}
                 <div class="mt-16">
                     <h3 class="text-2xl font-extrabold text-dark mb-8 uppercase tracking-wider relative inline-block">
-                        {% trans "Galerie de Réalisations" %}
+                        {% trans "Galerie de réalisations" %}
                         <span class="absolute bottom-0 left-0 w-12 h-1 bg-primary rounded"></span>
                     </h3>
                     
@@ -44,8 +52,7 @@
                         <div class="group relative rounded-xl overflow-hidden shadow-sm hover:shadow-md cursor-pointer aspect-square transition-all duration-300 transform hover:-translate-y-1 js-gallery-item" 
                              data-src="{{ item.image.url }}" 
                              data-alt="{{ item.alt_text|default:service.title }}">
-                            <img src="{{ item.image.url }}" alt="{{ item.alt_text|default:service.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <!-- Overlay on hover -->
+                            <img src="{{ item.image.url }}" alt="{{ item.alt_text|default:service.title }} — VR Creation Tanger" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute inset-0 bg-primary-dark/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white p-4">
                                 <i class="fas fa-search-plus text-2xl mb-2 transform scale-75 group-hover:scale-100 transition-transform"></i>
                                 {% if item.alt_text %}
@@ -56,7 +63,44 @@
                         {% endfor %}
                     </div>
                 </div>
+                {% elif not gallery %}
+                <!-- Empty state for gallery — admin can add images -->
                 {% endif %}
+
+                <!-- Process Steps -->
+                <div class="mt-16">
+                    <h3 class="text-2xl font-extrabold text-dark mb-8 uppercase tracking-wider">{% trans "Notre méthode de travail" %}</h3>
+                    {% if process_steps %}
+                    <div class="space-y-4">
+                        {% for step in process_steps %}
+                        <div class="flex items-start gap-4 p-5 rounded-xl bg-gray-50 border border-gray-100">
+                            <div class="w-10 h-10 bg-primary text-white rounded-xl flex items-center justify-center text-sm font-bold shrink-0">{{ forloop.counter }}</div>
+                            <div>
+                                <h4 class="font-bold text-dark mb-1">{{ step.title }}</h4>
+                                <p class="text-gray-600 text-sm">{{ step.description }}</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+
+                <!-- CTA -->
+                <div class="mt-16 bg-gradient-to-r from-primary to-primary-dark rounded-2xl p-8 md:p-12 text-white text-center">
+                    <h3 class="text-2xl font-black mb-4">{% trans "Intéressé par ce service ?" %}</h3>
+                    <p class="text-white/80 mb-6">{% trans "Contactez-nous pour un devis gratuit et personnalisé. Notre équipe à Tanger est à votre écoute." %}</p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="{% url 'contact:contact' %}" class="btn bg-white text-primary px-8 py-3 font-bold hover:bg-gray-100 shadow-md">
+                            <i class="fas fa-paper-plane mr-2"></i>{% trans "Demander un devis" %}
+                        </a>
+                        <a href="tel:+212625071498" class="btn border-2 border-white text-white px-8 py-3 font-bold hover:bg-white/10">
+                            <i class="fas fa-phone-alt mr-2"></i>+212 625 07 1498
+                        </a>
+                        <a href="https://wa.me/212625071498" target="_blank" rel="noopener" class="btn bg-[#25D366] text-white px-8 py-3 font-bold hover:bg-[#20bd5a]">
+                            <i class="fab fa-whatsapp mr-2"></i>WhatsApp
+                        </a>
+                    </div>
+                </div>
             </div>
             
             <!-- Sidebar -->
@@ -81,9 +125,9 @@
                     </ul>
                     
                     <div class="mt-8 pt-6 border-t border-gray-200">
-                        <h4 class="font-bold text-dark text-lg mb-2">{% trans "Besoin d'une démonstration ?" %}</h4>
+                        <h4 class="font-bold text-dark text-lg mb-2">{% trans "Besoin d'informations ?" %}</h4>
                         <p class="text-sm text-gray-600 mb-6 leading-relaxed">
-                            {% trans "Contactez nos experts pour en savoir plus sur cette solution et obtenir un devis personnalisé." %}
+                            {% trans "Contactez nos experts à Tanger pour en savoir plus et obtenir un devis personnalisé." %}
                         </p>
                         <a href="{% url 'contact:contact' %}" class="btn btn-primary w-full py-3.5 text-center font-bold shadow-md hover:shadow-lg">
                             {% trans "Nous Contacter" %} <i class="fas fa-paper-plane ml-2"></i>
@@ -97,22 +141,17 @@
 
 <!-- Lightbox Modal -->
 <div id="lightboxModal" class="fixed inset-0 z-50 hidden bg-black/95 backdrop-blur-md flex items-center justify-center p-4">
-    <!-- Close Button -->
     <button id="lightboxClose" class="absolute top-6 right-6 text-white/70 hover:text-white text-3xl focus:outline-none transition-colors" aria-label="{% trans 'Fermer' %}">
         <i class="fas fa-times"></i>
     </button>
-    
-    <!-- Navigation Buttons -->
     <button id="lightboxPrev" class="absolute left-6 top-1/2 -translate-y-1/2 text-white/50 hover:text-white text-4xl focus:outline-none transition-colors" aria-label="{% trans 'Précédent' %}">
         <i class="fas fa-chevron-left"></i>
     </button>
     <button id="lightboxNext" class="absolute right-6 top-1/2 -translate-y-1/2 text-white/50 hover:text-white text-4xl focus:outline-none transition-colors" aria-label="{% trans 'Suivant' %}">
         <i class="fas fa-chevron-right"></i>
     </button>
-    
-    <!-- Image and Caption Container -->
     <div class="max-w-5xl max-h-[85vh] flex flex-col items-center justify-center">
-        <img id="lightboxImg" src="" alt="{% trans "Rendu 3D et visite virtuelle" %}" class="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl transition-all duration-300">
+        <img id="lightboxImg" src="" alt="{% trans 'Galerie VR Creation' %}" class="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl transition-all duration-300">
         <p id="lightboxCaption" class="text-white/80 mt-4 text-sm tracking-wide font-light"></p>
     </div>
 </div>
@@ -140,7 +179,7 @@
             img.src = imagesList[currentIndex].src;
             caption.textContent = imagesList[currentIndex].alt;
             modal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden'; // Stop background scrolling
+            document.body.style.overflow = 'hidden';
         }
         
         function closeLightbox() {
@@ -169,23 +208,19 @@
         }
         
         galleryItems.forEach((item, index) => {
-            item.addEventListener('click', () => {
-                openLightbox(index);
-            });
+            item.addEventListener('click', () => { openLightbox(index); });
         });
         
         closeBtn.addEventListener('click', closeLightbox);
         nextBtn.addEventListener('click', showNext);
         prevBtn.addEventListener('click', showPrev);
         
-        // Close on clicking backdrop (not image)
         modal.addEventListener('click', function(e) {
             if (e.target === modal || e.target === closeBtn || e.target.closest('#lightboxClose')) {
                 closeLightbox();
             }
         });
         
-        // Keyboard navigation
         document.addEventListener('keydown', function(e) {
             if (modal.classList.contains('hidden')) return;
             if (e.key === 'Escape') closeLightbox();

@@ -45,7 +45,7 @@ def contact_view(request):
         elif form.is_valid():
             submission = form.save()
 
-            # Send email notification to Admin (vrcreation.company@gmail.com)
+            # Send email notification to Admin (contact@vrcreationcompany.com)
             try:
                 admin_subject = f"[VR CREATION] Nouveau message de contact : {submission.subject}"
                 created_str = submission.created_at.strftime('%d/%m/%Y %H:%M') if submission.created_at else ''
@@ -106,8 +106,8 @@ def contact_view(request):
                         f"إذا كنتم ترغبون في إضافة أي تفاصيل أخرى، يمكنكم الرد مباشرة على هذه الرسالة.\n\n"
                         f"مع أطيب التحيات،\n"
                         f"فريق VR CREATION\n"
-                        f"البريد الإلكتروني : vrcreation.company@gmail.com\n"
-                        f"الموقع الإلكتروني : https://vrcreationn.pythonanywhere.com\n"
+                        f"البريد الإلكتروني : contact@vrcreationcompany.com\n"
+                        f"الموقع الإلكتروني : https://vrcreationcompany.com\n"
                         f"============================================================\n"
                     )
                 elif lang.startswith('en'):
@@ -135,8 +135,8 @@ def contact_view(request):
                         f"If you have additional details or files to add, simply reply directly to this email.\n\n"
                         f"Best regards,\n"
                         f"The VR CREATION Team\n"
-                        f"Email: vrcreation.company@gmail.com\n"
-                        f"Website: https://vrcreationn.pythonanywhere.com\n"
+                        f"Email: contact@vrcreationcompany.com\n"
+                        f"Website: https://vrcreationcompany.com\n"
                         f"============================================================\n"
                     )
                 else:  # Default French
@@ -164,8 +164,8 @@ def contact_view(request):
                         f"Si vous souhaitez apporter des éléments complémentaires, vous pouvez répondre directement à cet email.\n\n"
                         f"Bien cordialement,\n"
                         f"L'équipe VR CREATION\n"
-                        f"Email : vrcreation.company@gmail.com\n"
-                        f"Site web : https://vrcreationn.pythonanywhere.com\n"
+                        f"Email : contact@vrcreationcompany.com\n"
+                        f"Site web : https://vrcreationcompany.com\n"
                         f"============================================================\n"
                     )
 

@@ -73,7 +73,7 @@ def seo_meta_tags(context):
         og_image = base_url + og_image
 
     lang = get_language() or 'fr'
-    locale_map = {'fr': 'fr_FR', 'en': 'en_US', 'ar': 'ar_SA'}
+    locale_map = {'fr': 'fr_MA', 'en': 'en_US', 'ar': 'ar_MA'}
     og_locale = locale_map.get(lang, 'fr_FR')
 
     parts = []
@@ -321,15 +321,28 @@ def jsonld_local_business(context):
         "image": logo_url,
         "@id": f"{base_url}/",
         "url": f"{base_url}/",
-        "telephone": site_settings.phone if (site_settings and site_settings.phone) else "+212634017762",
+        "telephone": site_settings.phone if (site_settings and site_settings.phone) else "+212 625 07 1498",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Avenue Ibn Tachfine, bureaux Ibn Battouta",
+            "streetAddress": "Ibn Batouta bureaux, Av. Youssef Ibn Tachfine",
             "addressLocality": "Tanger",
             "postalCode": "90000",
             "addressCountry": "MA"
         },
-        "sameAs": social
+        "email": (site_settings.email if site_settings else "contact@vrcreationcompany.com"),
+        "priceRange": "$$",
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 35.7595,
+            "longitude": -5.8340
+        },
+        "areaServed": [
+            {"@type": "City", "name": "Tangier"},
+            {"@type": "City", "name": "Tetouan"},
+            {"@type": "City", "name": "Chefchaouen"},
+            {"@type": "AdministrativeArea", "name": "Northern Morocco"}
+        ],
+        "sameAs": social + ["https://share.google/CEh7vvvHw6o1atT6d"]
     }
 
     return mark_safe(f'<script type="application/ld+json">\n{json.dumps(data, ensure_ascii=False, indent=2)}\n</script>')

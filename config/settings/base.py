@@ -34,11 +34,12 @@ DEBUG = os.environ.get('DJANGO_DEBUG', 'True').lower() in ('true', '1', 'yes')
 
 ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', '*').split(',')
 
-SITE_DOMAIN = os.environ.get('SITE_DOMAIN', 'vrcreation.com')
+SITE_DOMAIN = os.environ.get('SITE_DOMAIN', 'vrcreationcompany.com')
 SITE_PROTOCOL = os.environ.get('SITE_PROTOCOL', 'https')
+SITE_URL = f'{SITE_PROTOCOL}://{SITE_DOMAIN}'
 
 # Canonical domain redirect — set to True after migrating to vrcreation.com
-CANONICAL_DOMAIN = os.environ.get('CANONICAL_DOMAIN', 'vrcreation.com')
+CANONICAL_DOMAIN = os.environ.get('CANONICAL_DOMAIN', 'vrcreationcompany.com')
 CANONICAL_DOMAIN_REDIRECT_ENABLED = os.environ.get('CANONICAL_DOMAIN_REDIRECT_ENABLED', 'False').lower() in ('true', '1')
 
 # Application definition
@@ -186,9 +187,9 @@ EMAIL_PORT = int(os.environ.get('EMAIL_PORT', '587'))
 EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS', 'True').lower() in ('true', '1')
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
-DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', 'VR Creation <vrcreation.company@gmail.com>')
-SERVER_EMAIL = os.environ.get('SERVER_EMAIL', 'vrcreation.company@gmail.com')
-CONTACT_EMAIL = os.environ.get('CONTACT_EMAIL', 'vrcreation.company@gmail.com')
+DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', 'VR Creation <contact@vrcreationcompany.com>')
+SERVER_EMAIL = os.environ.get('SERVER_EMAIL', 'contact@vrcreationcompany.com')
+CONTACT_EMAIL = os.environ.get('CONTACT_EMAIL', 'contact@vrcreationcompany.com')
 
 # =============================================================================
 # Cache (file-based, good for SQLite deployments)
