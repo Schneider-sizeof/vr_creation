@@ -120,7 +120,7 @@
     {# Floating Quick Controls (WhatsApp & Scroll to Top) #}
     <div id="floating-quick-controls" class="fixed bottom-6 right-6 z-[9999] flex flex-col gap-4 pointer-events-none">
         {% if site_settings.social_whatsapp %}
-        <a href="https://api.whatsapp.com/send?phone={{ site_settings.social_whatsapp|cut:'+'|cut:' '|cut:'-' }}" target="_blank" rel="noopener" class="w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 hover:shadow-[#25D366]/50 pointer-events-auto cursor-pointer relative" aria-label="WhatsApp" style="box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);">
+        <a href="https://api.whatsapp.com/send?phone={{ site_settings.social_whatsapp|cut:'+'|cut:' '|cut:'-' }}&text=Bonjour%20VR%20Creation%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20vos%20services.%20Pouvez-vous%20me%20donner%20plus%20d%27informations%20%3F" target="_blank" rel="noopener" class="w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 hover:shadow-[#25D366]/50 pointer-events-auto cursor-pointer relative" aria-label="WhatsApp" style="box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);">
             <i class="fab fa-whatsapp text-3xl"></i>
             <!-- Glowing radar pulse -->
             <span class="absolute inset-0 rounded-full border-4 border-[#25D366] animate-ping opacity-75 pointer-events-none"></span>
