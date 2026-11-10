@@ -40,6 +40,13 @@
     {% endif %}
     <link rel="manifest" href="{% static 'img/site.webmanifest' %}">
     <meta name="theme-color" content="#3D8EB9">
+    {# Google Tag Manager #}
+    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5XMMF7G5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    </script>
 
     {# Preconnect for performance #}
     <link rel="preconnect" href="https://fonts.googleapis.com">
