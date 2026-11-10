@@ -25,7 +25,7 @@ DATA_UPLOAD_MAX_MEMORY_SIZE = 52428800  # 50MB — needed for hero video uploads
 FILE_UPLOAD_MAX_MEMORY_SIZE = 52428800  # 50MB
 
 # Email — use SMTP in production
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = os.environ.get('EMAIL_BACKEND', 'django.core.mail.backends.smtp.EmailBackend')
 
 # Security settings
 SECURE_SSL_REDIRECT = os.environ.get('SECURE_SSL_REDIRECT', 'False').lower() in ('true', '1')

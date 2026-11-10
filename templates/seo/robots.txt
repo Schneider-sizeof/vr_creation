@@ -5,6 +5,5 @@ Allow: /media/
 Disallow: /vrcreation_dashboard/
 Disallow: /admin/
 Disallow: /accounts/
-Disallow: /*?*
 
 Sitemap: {{ site_protocol }}://{{ site_domain }}/sitemap.xml

@@ -3,6 +3,9 @@ Contact views with rate limiting and math captcha.
 """
 import time
 import random
+import logging
+
+logger = logging.getLogger(__name__)
 from django.conf import settings
 from django.core.mail import EmailMessage
 from django.shortcuts import render, redirect
@@ -74,9 +77,10 @@ def contact_view(request):
                     to=[settings.CONTACT_EMAIL],
                     reply_to=[submission.email],
                 )
-                admin_msg.send(fail_silently=True)
-            except Exception:
-                pass
+                admin_msg.send(fail_silently=False)
+                logger.info("Admin notification email sent successfully for contact submission #%s", getattr(submission, 'pk', '?'))
+            except Exception as e:
+                logger.error("Failed to send admin notification email for contact submission #%s: %s", getattr(submission, 'pk', '?'), e, exc_info=True)
 
             # Send automatic confirmation email to Sender (User)
             try:
@@ -176,9 +180,10 @@ def contact_view(request):
                     to=[submission.email],
                     reply_to=[settings.CONTACT_EMAIL],
                 )
-                user_msg.send(fail_silently=True)
-            except Exception:
-                pass
+                user_msg.send(fail_silently=False)
+                logger.info("Confirmation email sent successfully to %s for contact submission #%s", getattr(submission, 'email', '?'), getattr(submission, 'pk', '?'))
+            except Exception as e:
+                logger.error("Failed to send user confirmation email to %s: %s", getattr(submission, 'email', '?'), e, exc_info=True)
 
             # Clear captcha from session
             request.session.pop('captcha_num1', None)

@@ -87,8 +87,13 @@ def seo_meta_tags(context):
         parts.append('<meta name="robots" content="noindex, follow">')
 
     # Google Search Console verification
+    gsc_id = ''
     if site_settings and site_settings.google_search_console_id:
-        parts.append(f'<meta name="google-site-verification" content="{site_settings.google_search_console_id}">')
+        gsc_id = site_settings.google_search_console_id
+    if not gsc_id:
+        gsc_id = getattr(settings, 'GOOGLE_SEARCH_CONSOLE_ID', '')
+    if gsc_id:
+        parts.append(f'<meta name="google-site-verification" content="{gsc_id}">')
 
     # Open Graph
     parts.append(f'<meta property="og:title" content="{full_title}">')
