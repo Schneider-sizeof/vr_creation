@@ -8,9 +8,9 @@
             </p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
-            <!-- Brand & About -->
-            <div class="lg:col-span-1">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Col 1: Brand & About -->
+            <div>
                 <div class="flex items-center gap-3 mb-4">
                     {% if site_settings.logo %}
                     <img src="{{ site_settings.logo.url }}" alt="{{ site_settings.site_name }}" class="h-10 w-auto brightness-0 invert">
@@ -20,6 +20,10 @@
                 {% if site_settings.footer_text %}
                 <p class="text-gray-300 mb-6 font-light leading-relaxed text-sm">
                     {{ site_settings.footer_text }}
+                </p>
+                {% else %}
+                <p class="text-gray-300 mb-6 font-light leading-relaxed text-sm">
+                    {% trans "Studio de création 3D, visites virtuelles immersives et production visuelle haut de gamme pour l'immobilier et l'architecture à Tanger et dans le Nord du Maroc." %}
                 </p>
                 {% endif %}
                 <div class="flex space-x-3">
@@ -38,61 +42,53 @@
                     {% if site_settings.social_tiktok %}
                     <a href="{{ site_settings.social_tiktok }}" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent hover:text-dark transition-all text-white text-sm" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                     {% endif %}
-                    <a href="https://share.google/CEh7vvvHw6o1atT6d" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent hover:text-dark transition-all text-white text-sm" aria-label="Google Business"><i class="fab fa-google"></i></a>
+                    <a href="https://share.google/CEh7vvvHw6o1atT6d" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent hover:text-dark transition-all text-white text-sm" aria-label="Google Business Profile"><i class="fab fa-google"></i></a>
                 </div>
             </div>
             
-            <!-- Navigation -->
+            <!-- Col 2: Navigation -->
             <div>
                 <h4 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">{% trans "Navigation" %}</h4>
-                <ul class="space-y-2">
-                    <li><a href="{% url 'core:home' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2"></i>{% trans "Accueil" %}</a></li>
-                    <li><a href="{% url 'core:about' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2"></i>{% trans "À propos" %}</a></li>
-                    <li><a href="{% url 'portfolio:project_list' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2"></i>{% trans "Réalisations" %}</a></li>
-                    <li><a href="{% url 'core:promotions' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2"></i>{% trans "Promotions" %}</a></li>
-                    <li><a href="{% url 'contact:contact' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2"></i>{% trans "Contact" %}</a></li>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="{% url 'core:home' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2 rtl:mr-0 rtl:ml-2"></i>{% trans "Accueil" %}</a></li>
+                    <li><a href="{% url 'core:about' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2 rtl:mr-0 rtl:ml-2"></i>{% trans "À propos" %}</a></li>
+                    <li><a href="{% url 'portfolio:project_list' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2 rtl:mr-0 rtl:ml-2"></i>{% trans "Réalisations" %}</a></li>
+                    <li><a href="{% url 'portfolio:casestudy_list' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2 rtl:mr-0 rtl:ml-2"></i>{% trans "Études de cas" %}</a></li>
+                    <li><a href="{% url 'portfolio:virtual_tours' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2 rtl:mr-0 rtl:ml-2"></i>{% trans "Démos 360°" %}</a></li>
+                    <li><a href="{% url 'core:promotions' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2 rtl:mr-0 rtl:ml-2"></i>{% trans "Promotions" %}</a></li>
+                    <li><a href="{% url 'contact:contact' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2 rtl:mr-0 rtl:ml-2"></i>{% trans "Contact & Devis" %}</a></li>
+                    <li><a href="{% url 'core:html_sitemap' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2 rtl:mr-0 rtl:ml-2"></i>{% trans "Plan du site" %}</a></li>
                 </ul>
             </div>
 
-            <!-- Solutions & Expertises (Rich Keywords Column) -->
+            <!-- Col 3: Solutions 3D & Digitales (Clean, single set of services) -->
             <div>
-                <h4 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">{% trans "Solutions & Expertises" %}</h4>
-                <ul class="space-y-2">
-                    <li><a href="{% url 'services:detail' 'modelisation-3d' %}" class="footer-link"><i class="fas fa-cube text-xs text-primary mr-2"></i>{% trans "Modélisation 3D à Tanger" %}</a></li>
-                    <li><a href="{% url 'services:detail' 'visites-virtuelles' %}" class="footer-link"><i class="fas fa-vr-cardboard text-xs text-primary mr-2"></i>{% trans "Visite virtuelle 360° Tanger" %}</a></li>
-                    <li><a href="{% url 'services:detail' 'branding-visuel' %}" class="footer-link"><i class="fas fa-palette text-xs text-primary mr-2"></i>{% trans "Branding & communication visuelle" %}</a></li>
-                    <li><a href="{% url 'services:detail' 'photographie' %}" class="footer-link"><i class="fas fa-camera text-xs text-primary mr-2"></i>{% trans "Photographie professionnelle" %}</a></li>
-                    <li><a href="{% url 'services:detail' 'animation-motion-design' %}" class="footer-link"><i class="fas fa-film text-xs text-primary mr-2"></i>{% trans "Animation & motion design" %}</a></li>
-                    <li><a href="{% url 'services:detail' 'lead-generation' %}" class="footer-link"><i class="fas fa-bullseye text-xs text-primary mr-2"></i>{% trans "Marketing digital Tanger" %}</a></li>
+                <h4 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">{% trans "Solutions 3D & Digitales" %}</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="{% url 'services:detail' 'modelisation-3d' %}" class="footer-link"><i class="fas fa-cube text-xs text-primary mr-2 rtl:mr-0 rtl:ml-2"></i>{% trans "Modélisation 3D architecturale" %}</a></li>
+                    <li><a href="{% url 'services:detail' 'visites-virtuelles' %}" class="footer-link"><i class="fas fa-vr-cardboard text-xs text-primary mr-2 rtl:mr-0 rtl:ml-2"></i>{% trans "Visites virtuelles 360°" %}</a></li>
+                    <li><a href="{% url 'services:detail' 'captures-360' %}" class="footer-link"><i class="fas fa-camera-retro text-xs text-primary mr-2 rtl:mr-0 rtl:ml-2"></i>{% trans "Captures 360° d'espaces" %}</a></li>
+                    <li><a href="{% url 'services:detail' 'photographie' %}" class="footer-link"><i class="fas fa-camera text-xs text-primary mr-2 rtl:mr-0 rtl:ml-2"></i>{% trans "Photographie & drone" %}</a></li>
+                    <li><a href="{% url 'services:detail' 'animation-motion-design' %}" class="footer-link"><i class="fas fa-film text-xs text-primary mr-2 rtl:mr-0 rtl:ml-2"></i>{% trans "Animation 3D & motion" %}</a></li>
+                    <li><a href="{% url 'services:detail' 'branding-visuel' %}" class="footer-link"><i class="fas fa-palette text-xs text-primary mr-2 rtl:mr-0 rtl:ml-2"></i>{% trans "Branding & communication" %}</a></li>
+                    <li><a href="{% url 'services:detail' 'lead-generation' %}" class="footer-link"><i class="fas fa-bullseye text-xs text-primary mr-2 rtl:mr-0 rtl:ml-2"></i>{% trans "Marketing digital & leads" %}</a></li>
                 </ul>
             </div>
             
-            <!-- Services -->
-            <div>
-                <h4 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">{% trans "Nos services" %}</h4>
-                <ul class="space-y-2">
-                    <li><a href="{% url 'services:detail' 'modelisation-3d' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2"></i>{% trans "Modélisation 3D" %}</a></li>
-                    <li><a href="{% url 'services:detail' 'visites-virtuelles' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2"></i>{% trans "Visites virtuelles" %}</a></li>
-                    <li><a href="{% url 'services:detail' 'captures-360' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2"></i>{% trans "Captures 360°" %}</a></li>
-                    <li><a href="{% url 'services:detail' 'animation-motion-design' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2"></i>{% trans "Animation 3D" %}</a></li>
-                    <li><a href="{% url 'services:detail' 'branding-visuel' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2"></i>{% trans "Branding & communication visuelle" %}</a></li>
-                </ul>
-            </div>
-            
-            <!-- Contact Info -->
+            <!-- Col 4: Contact Info & Address -->
             <div>
                 <h4 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">{% trans "Contact" %}</h4>
                 <ul class="space-y-4">
                     <li class="flex items-start gap-3">
-                        <i class="fas fa-map-marker-alt text-accent mt-1 text-sm"></i>
-                        <span class="text-gray-300 font-light text-sm">Ibn Batouta bureaux, Av. Youssef Ibn Tachfine, Tangier 90000</span>
+                        <i class="fas fa-map-marker-alt text-accent mt-1 text-sm shrink-0"></i>
+                        <span class="text-gray-300 font-light text-sm">Ibn Batouta bureaux, Av. Youssef Ibn Tachfine, Tanger 90000, Maroc</span>
                     </li>
                     <li class="flex items-start gap-3">
-                        <i class="fas fa-map-marked-alt text-accent mt-1 text-sm"></i>
+                        <i class="fas fa-map-marked-alt text-accent mt-1 text-sm shrink-0"></i>
                         <span class="text-gray-300 font-light text-sm">{% trans "Zone d'intervention : Tanger, Tétouan, Asilah, Chefchaouen — Nord du Maroc" %}</span>
                     </li>
                     <li class="flex items-center gap-3">
-                        <i class="fas fa-phone-alt text-accent text-sm"></i>
+                        <i class="fas fa-phone-alt text-accent text-sm shrink-0"></i>
                         <a href="tel:+212625071498" class="text-gray-300 hover:text-accent transition-colors text-sm">+212 625 07 1498</a>
                     </li>
                     <li class="flex items-center gap-3 min-w-0">
@@ -100,28 +96,17 @@
                         <a href="mailto:contact@vrcreationcompany.com" class="text-gray-300 hover:text-accent transition-colors text-sm break-all">contact@vrcreationcompany.com</a>
                     </li>
                     <li class="flex items-center gap-3">
-                        <i class="fab fa-whatsapp text-green-400 text-sm"></i>
-                        <a href="https://wa.me/212625071498?text=Bonjour%20VR%20Creation%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20vos%20services.%20Pouvez-vous%20me%20donner%20plus%20d%27informations%20%3F" target="_blank" rel="noopener" class="text-gray-300 hover:text-green-400 transition-colors text-sm">WhatsApp</a>
+                        <i class="fab fa-whatsapp text-green-400 text-sm shrink-0"></i>
+                        <a href="https://wa.me/212625071498?text=Bonjour%20VR%20Creation%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20vos%20services.%20Pouvez-vous%20me%20donner%20plus%20d%27informations%20%3F" target="_blank" rel="noopener" class="text-gray-300 hover:text-green-400 transition-colors text-sm">WhatsApp Direct</a>
                     </li>
                 </ul>
             </div>
         </div>
 
-        <!-- Quick Links -->
-        <div class="border-t border-white/10 mt-10 pt-6 flex flex-wrap items-center gap-2 text-xs text-gray-400">
-            <span class="font-semibold text-white/70 mr-1"><i class="fas fa-compass text-accent mr-1"></i>{% trans "Accès rapides :" %}</span>
-            <a href="{% url 'services:detail' 'modelisation-3d' %}" class="px-2.5 py-1 rounded bg-white/5 hover:bg-accent/20 hover:text-accent transition-colors">{% trans "Modélisation 3D" %}</a>
-            <a href="{% url 'services:detail' 'visites-virtuelles' %}" class="px-2.5 py-1 rounded bg-white/5 hover:bg-accent/20 hover:text-accent transition-colors">{% trans "Visites virtuelles 360°" %}</a>
-            <a href="{% url 'services:detail' 'captures-360' %}" class="px-2.5 py-1 rounded bg-white/5 hover:bg-accent/20 hover:text-accent transition-colors">{% trans "Captures 360° d'espaces" %}</a>
-            <a href="{% url 'services:detail' 'photographie' %}" class="px-2.5 py-1 rounded bg-white/5 hover:bg-accent/20 hover:text-accent transition-colors">{% trans "Photographie & drone" %}</a>
-            <a href="{% url 'services:detail' 'branding-visuel' %}" class="px-2.5 py-1 rounded bg-white/5 hover:bg-accent/20 hover:text-accent transition-colors">{% trans "Branding visuel" %}</a>
-            <a href="{% url 'services:detail' 'lead-generation' %}" class="px-2.5 py-1 rounded bg-white/5 hover:bg-accent/20 hover:text-accent transition-colors">{% trans "Lead generation" %}</a>
-            <a href="{% url 'core:about' %}" class="px-2.5 py-1 rounded bg-white/5 hover:bg-accent/20 hover:text-accent transition-colors">{% trans "Agence à Tanger" %}</a>
-        </div>
-        
-        <div class="border-t border-white/10 mt-6 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+        <!-- Clean Footer Bottom Bar -->
+        <div class="border-t border-white/10 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
             <p class="text-gray-400 text-sm">
-                &copy; {% now "Y" %} {{ site_settings.site_name|default:"VR Creation" }}. {% trans "Tous droits réservés." %}
+                &copy; {% now "Y" %} {{ site_settings.site_name|default:"VR Creation Company" }}. {% trans "Tous droits réservés." %}
             </p>
             <div class="flex flex-wrap gap-4 text-xs text-gray-500">
                 <a href="{% url 'core:legal_notices' %}" class="hover:text-accent transition-colors">{% trans "Mentions légales" %}</a>

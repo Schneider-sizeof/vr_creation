@@ -1,32 +1,83 @@
 {% extends "base.html" %}
-{% load i18n static %}
+{% load i18n static seo_tags %}
+
+{% block extra_head %}
+<!-- Pannellum 360 Viewer CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+<style>
+    .pnlm-load-button {
+        background-color: var(--primary, #3D8EB9) !important;
+        border-radius: 9999px !important;
+    }
+    .pnlm-load-box {
+        background-color: rgba(15, 23, 42, 0.85) !important;
+        border-radius: 1rem !important;
+    }
+</style>
+{% endblock %}
+
+{% block jsonld_extra %}
+{% jsonld_breadcrumb "Visites 360°" "" %}
+{% endblock %}
 
 {% block content %}
-{% trans "Visites Virtuelles 360°" as page_title %}
-{% trans "Visites virtuelles" as page_breadcrumb %}
+{% trans "Démonstrations de Visites 360°" as page_title %}
+{% trans "Réalisations 360°" as page_breadcrumb %}
 {% include "partials/page_hero.html" with title=page_title breadcrumb_label=page_breadcrumb %}
 
-<section class="section bg-white">
+<!-- Section Intro — Differentiated from Service Page -->
+<section class="section bg-white pt-16 pb-8 border-b border-gray-100">
+    <div class="container mx-auto px-4 max-w-4xl text-center animate-on-scroll slide-up">
+        <span class="pill-badge mb-4">{% trans "Portfolio Immersif" %}</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-dark uppercase tracking-tight mb-4">
+            {% trans "Explorez nos démonstrations de visites 360° interactives" %}
+        </h2>
+        <p class="text-lg text-gray-600 leading-relaxed font-light mb-6">
+            {% blocktrans %}Testez directement ci-dessous l'expérience immersive proposée à vos futurs acquéreurs. Faites pivoter la vue à 360°, zoomez sur les détails architecturaux et découvrez le niveau de finition de nos modélisations 3D et captures d'espaces réels à Tanger.{% endblocktrans %}
+        </p>
+        <div class="inline-flex items-center gap-3 bg-primary-light/40 border border-primary/20 rounded-full px-5 py-2 text-xs font-semibold text-primary">
+            <i class="fas fa-hand-pointer animate-bounce"></i>
+            {% trans "Cliquez et glissez sur les fenêtres pour explorer à 360°" %}
+        </div>
+    </div>
+</section>
+
+<!-- 360 Tours Grid -->
+<section class="section bg-white py-16">
     <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {% for project in projects %}
             {% if project.has_virtual_tour and project.virtual_tour_url %}
-            <div class="card p-6 border-t-4 border-primary border-l-0">
-                <h3 class="text-2xl font-bold mb-2">{{ project.title }}</h3>
-                <p class="text-sm text-gray-500 mb-6 uppercase tracking-wider">{{ project.sector }}</p>
+            <div class="card p-6 border-t-4 border-primary rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white">
+                <div class="flex items-center justify-between mb-4">
+                    <div>
+                        <h3 class="text-2xl font-bold text-dark">{{ project.title }}</h3>
+                        <p class="text-xs text-primary font-bold uppercase tracking-wider mt-1">{{ project.sector.name|default:"Immobilier & Architecture" }}</p>
+                    </div>
+                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-primary/10 text-primary border border-primary/20">
+                        <i class="fas fa-vr-cardboard mr-1"></i>360° WebGL
+                    </span>
+                </div>
                 
-                <div class="aspect-video w-full rounded-xl overflow-hidden shadow-md relative group">
-                    <iframe src="{{ project.virtual_tour_url }}" width="100%" height="100%" frameborder="0" allowfullscreen class="relative z-10"></iframe>
-                    
-                    <!-- Overlay fallback if iframe takes time to load -->
-                    <div class="absolute inset-0 bg-gray-200 flex items-center justify-center z-0">
-                        <i class="fas fa-spinner fa-spin text-3xl text-primary"></i>
+                <!-- Interactive 360 Panorama Container -->
+                <div class="aspect-video w-full rounded-xl overflow-hidden shadow-inner relative group bg-slate-900">
+                    <div id="panorama-{{ project.id }}" 
+                         class="w-full h-full js-panorama"
+                         data-src="{{ project.virtual_tour_url }}"
+                         data-title="{{ project.title }}">
                     </div>
                 </div>
                 
-                <div class="mt-6 flex justify-between items-center">
-                    <a href="{% url 'portfolio:project_detail' project.slug %}" class="text-primary hover:text-primary-dark font-medium inline-flex items-center">
-                        {% trans "Voir les détails du projet" %} <i class="fas fa-arrow-right ml-2"></i>
+                <p class="text-gray-600 text-sm mt-4 font-light leading-relaxed line-clamp-2">
+                    {{ project.description }}
+                </p>
+
+                <div class="mt-6 pt-4 border-t border-gray-100 flex flex-wrap justify-between items-center gap-3">
+                    <a href="{% url 'portfolio:project_detail' project.slug %}" class="btn btn-outline py-2 px-4 text-xs font-bold inline-flex items-center">
+                        {% trans "Fiche complète du projet" %} <i class="fas fa-arrow-right ml-2 text-primary"></i>
+                    </a>
+                    <a href="{% url 'contact:contact' %}" class="text-xs text-primary font-bold hover:underline inline-flex items-center">
+                        {% trans "Commander un projet similaire" %} <i class="fas fa-chevron-right ml-1 text-xs"></i>
                     </a>
                 </div>
             </div>
@@ -37,6 +88,54 @@
             </div>
             {% endfor %}
         </div>
+
+        <!-- Cross-Link to Commercial Service Page (Fixes Keyword Cannibalization) -->
+        <div class="mt-16 bg-gradient-to-r from-slate-900 to-primary-dark rounded-3xl p-8 md:p-12 text-white text-center shadow-xl">
+            <span class="pill-badge mb-3 bg-white/10 text-white border-white/20">{% trans "Service Professionnel" %}</span>
+            <h3 class="text-2xl md:text-3xl font-bold mb-4 text-white">{% trans "Vous souhaitez intégrer une visite virtuelle à votre programme immobilier ?" %}</h3>
+            <p class="text-gray-300 max-w-2xl mx-auto mb-8 font-light text-base md:text-lg">
+                {% trans "Découvrez les spécifications techniques, tarifs et options de notre prestation de visite virtuelle 3D sur plan (VEFA) et capture d'espaces à Tanger." %}
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="{% url 'services:detail' 'visites-virtuelles' %}" class="btn bg-white text-dark hover:bg-gray-100 px-8 py-3.5 font-bold shadow-md">
+                    <i class="fas fa-info-circle mr-2 text-primary"></i>{% trans "Découvrir le service Visites 3D" %}
+                </a>
+                <a href="{% url 'contact:contact' %}" class="btn btn-primary px-8 py-3.5 font-bold shadow-md">
+                    <i class="fas fa-paper-plane mr-2"></i>{% trans "Demander un devis personnalisé" %}
+                </a>
+            </div>
+        </div>
     </div>
 </section>
+
+<!-- Pannellum 360 Viewer Script -->
+<script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const viewers = document.querySelectorAll('.js-panorama');
+        viewers.forEach(function(el) {
+            const src = el.getAttribute('data-src');
+            const title = el.getAttribute('data-title');
+            if (src && window.pannellum) {
+                try {
+                    pannellum.viewer(el.id, {
+                        "type": "equirectangular",
+                        "panorama": src,
+                        "title": title,
+                        "autoLoad": true,
+                        "autoRotate": -1.5,
+                        "compass": true,
+                        "showZoomCtrl": true,
+                        "showFullscreenCtrl": true,
+                        "hfov": 100,
+                        "minHfov": 50,
+                        "maxHfov": 120
+                    });
+                } catch(e) {
+                    console.warn("Pannellum init error on " + el.id, e);
+                }
+            }
+        });
+    });
+</script>
 {% endblock %}

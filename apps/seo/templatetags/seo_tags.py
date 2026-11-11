@@ -53,9 +53,13 @@ def seo_meta_tags(context):
             if img:
                 og_image = img.url
 
-    # Fallback to default OG image from site settings
+    base_url = getattr(settings, 'SITE_URL', 'https://vrcreationcompany.com')
+
+    # Fallback to default OG image from site settings or branded fallback banner
     if not og_image and site_settings and site_settings.default_og_image:
         og_image = site_settings.default_og_image.url
+    if not og_image:
+        og_image = f"{base_url}/static/img/strategic/projet-immobilier.jpg"
 
     # Smart description trimming at word boundary (≤ 155 chars)
     if description:
@@ -64,7 +68,7 @@ def seo_meta_tags(context):
             trimmed = description[:152].rsplit(' ', 1)[0]
             description = f"{trimmed}..."
 
-    site_name = site_settings.site_name if site_settings else 'VR Creation'
+    site_name = site_settings.site_name if site_settings else 'VR Creation Company Tanger'
     if title and site_name not in title:
         candidate = f"{title} | {site_name}"
         full_title = candidate if len(candidate) <= 65 else title
@@ -73,7 +77,6 @@ def seo_meta_tags(context):
     else:
         full_title = title
 
-    base_url = getattr(settings, 'SITE_URL', 'https://vrcreationcompany.com')
     current_url = base_url + request.path if request else base_url
     if not canonical:
         canonical = current_url
@@ -91,8 +94,6 @@ def seo_meta_tags(context):
     parts.append(f'<title>{full_title}</title>')
     if description:
         parts.append(f'<meta name="description" content="{description}">')
-    if keywords:
-        parts.append(f'<meta name="keywords" content="{keywords}">')
     parts.append(f'<link rel="canonical" href="{canonical}">')
     if no_index:
         parts.append('<meta name="robots" content="noindex, follow">')

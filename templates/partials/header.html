@@ -2,7 +2,7 @@
 <header id="mainHeader" class="main-header py-4 sticky top-0 z-50 transition-all duration-300">
     <div class="container mx-auto px-4 flex justify-between items-center">
         <!-- Logo -->
-        <a href="{% url 'core:home' %}" class="flex items-center gap-3 shrink-0 mr-8 xl:mr-12 rtl:mr-0 rtl:ml-8 rtl:xl:ml-12">
+        <a href="{% url 'core:home' %}" class="flex items-center gap-3 shrink-0 mr-6 xl:mr-10 rtl:mr-0 rtl:ml-6 rtl:xl:ml-10">
             {% if site_settings.logo %}
             <img src="{{ site_settings.logo.url }}" alt="{{ site_settings.site_name }}" class="h-10 w-auto">
             {% endif %}
@@ -10,11 +10,12 @@
         </a>
         
         <!-- Desktop Nav -->
-        <nav class="hidden lg:flex items-center gap-3.5 xl:gap-6 text-sm xl:text-base">
+        <nav class="hidden lg:flex items-center gap-3 xl:gap-5 text-sm xl:text-base">
             <a href="{% url 'core:home' %}" class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}">{% trans "Accueil" %}</a>
             <a href="{% url 'core:about' %}" class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}">{% trans "À propos" %}</a>
             <a href="{% url 'services:list' %}" class="nav-link {% if 'service' in request.resolver_match.url_name %}active{% endif %}">{% trans "Services" %}</a>
-            <a href="{% url 'portfolio:project_list' %}" class="nav-link {% if 'project' in request.resolver_match.url_name or 'casestudy' in request.resolver_match.url_name %}active{% endif %}">{% trans "Réalisations" %}</a>
+            <a href="{% url 'portfolio:project_list' %}" class="nav-link {% if request.resolver_match.url_name == 'project_list' or request.resolver_match.url_name == 'project_detail' or request.resolver_match.url_name == 'virtual_tours' %}active{% endif %}">{% trans "Réalisations" %}</a>
+            <a href="{% url 'portfolio:casestudy_list' %}" class="nav-link {% if 'casestudy' in request.resolver_match.url_name %}active{% endif %}">{% trans "Études de cas" %}</a>
             <a href="{% url 'core:promotions' %}" class="nav-promo-btn {% if request.resolver_match.url_name == 'promotions' %}active{% endif %} !px-3 xl:!px-4 !py-1.5 xl:!py-2 !text-xs xl:!text-sm">
                 <i class="fas fa-gift mr-1.5"></i> {% trans "Promotions" %}
             </a>
@@ -35,17 +36,18 @@
                 </span>
             </button>
             
-            <!-- Language Switcher with Real Flags -->
+            <!-- Language Switcher with Text Labels & Flags -->
             {% get_current_language as CURRENT_LANG %}
             <div class="relative group ms-1 xl:ms-2 shrink-0">
-                <button class="flex items-center gap-1.5 xl:gap-2 px-2.5 xl:px-3 py-1.5 xl:py-2 rounded-lg hover:bg-gray-100 transition-colors text-dark">
+                <button class="flex items-center gap-1.5 xl:gap-2 px-2.5 xl:px-3 py-1.5 xl:py-2 rounded-lg hover:bg-gray-100 transition-colors text-dark font-semibold text-xs xl:text-sm" aria-label="{% trans 'Changer de langue' %}">
                     <img src="https://flagcdn.com/24x18/{% if CURRENT_LANG == 'fr' %}fr{% elif CURRENT_LANG == 'ar' %}ma{% else %}gb{% endif %}.png"
                          srcset="https://flagcdn.com/48x36/{% if CURRENT_LANG == 'fr' %}fr{% elif CURRENT_LANG == 'ar' %}ma{% else %}gb{% endif %}.png 2x"
-                         width="22" height="16" alt=""
+                         width="18" height="13" alt=""
                          class="rounded-sm shadow-sm">
+                    <span class="uppercase tracking-wider font-bold">{{ CURRENT_LANG }}</span>
                     <i class="fas fa-chevron-down text-xxs xl:text-xs text-gray-400"></i>
                 </button>
-                <div class="absolute right-0 rtl:right-auto rtl:left-0 mt-1 w-48 bg-white rounded-xl shadow-lg py-2 hidden group-hover:block border border-gray-100 z-50">
+                <div class="absolute right-0 rtl:right-auto rtl:left-0 mt-1 w-44 bg-white rounded-xl shadow-xl py-2 hidden group-hover:block border border-gray-100 z-50">
                     {% get_available_languages as LANGUAGES %}
                     {% get_language_info_list for LANGUAGES as languages %}
                     {% for language in languages %}
@@ -54,14 +56,15 @@
                             {% csrf_token %}
                             <input name="next" type="hidden" value="{{ translated_url }}">
                             <input name="language" type="hidden" value="{{ language.code }}">
-                            <button type="submit" class="w-full text-left rtl:text-right px-4 py-2.5 hover:bg-primary-light transition-colors flex items-center gap-3 {% if language.code == CURRENT_LANG %}font-bold text-primary bg-primary-light/50{% else %}text-gray-700{% endif %}">
+                            <button type="submit" class="w-full text-left rtl:text-right px-3.5 py-2 hover:bg-primary-light transition-colors flex items-center gap-2.5 text-xs {% if language.code == CURRENT_LANG %}font-bold text-primary bg-primary-light/50{% else %}text-gray-700{% endif %}">
                                 <img src="https://flagcdn.com/24x18/{% if language.code == 'fr' %}fr{% elif language.code == 'ar' %}ma{% else %}gb{% endif %}.png"
                                      srcset="https://flagcdn.com/48x36/{% if language.code == 'fr' %}fr{% elif language.code == 'ar' %}ma{% else %}gb{% endif %}.png 2x"
-                                     width="24" height="18" alt="{{ language.name_local }}"
+                                     width="18" height="13" alt=""
                                      class="rounded-sm shadow-sm">
-                                <span>{{ language.name_local|capfirst }}</span>
+                                <span class="font-medium">{{ language.name_local|capfirst }}</span>
+                                <span class="text-gray-400 text-xxs uppercase ml-auto rtl:ml-0 rtl:mr-auto">({{ language.code }})</span>
                                 {% if language.code == CURRENT_LANG %}
-                                <i class="fas fa-check text-primary text-xs ml-auto rtl:ml-0 rtl:mr-auto"></i>
+                                <i class="fas fa-check text-primary text-xs ml-1 rtl:ml-0 rtl:mr-1"></i>
                                 {% endif %}
                             </button>
                         </form>
@@ -71,7 +74,7 @@
         </nav>
         
         <!-- Mobile Menu Button -->
-        <button id="mobile-menu-btn" class="lg:hidden text-dark focus:outline-none">
+        <button id="mobile-menu-btn" class="lg:hidden text-dark focus:outline-none" aria-label="Menu">
             <i class="fas fa-bars text-2xl"></i>
         </button>
     </div>
@@ -83,6 +86,7 @@
             <a href="{% url 'core:about' %}" class="text-dark font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors">{% trans "À propos" %}</a>
             <a href="{% url 'services:list' %}" class="text-dark font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors">{% trans "Services" %}</a>
             <a href="{% url 'portfolio:project_list' %}" class="text-dark font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors">{% trans "Réalisations" %}</a>
+            <a href="{% url 'portfolio:casestudy_list' %}" class="text-dark font-medium py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors">{% trans "Études de cas" %}</a>
             <a href="{% url 'core:promotions' %}" class="nav-promo-btn-mobile {% if request.resolver_match.url_name == 'promotions' %}active{% endif %} py-2 px-3 rounded-lg font-bold justify-center">
                 <i class="fas fa-gift mr-1.5"></i> {% trans "Promotions" %}
             </a>
@@ -96,7 +100,7 @@
                 </div>
             </button>
             
-            <!-- Mobile Language Switcher with Real Flags -->
+            <!-- Mobile Language Switcher with Text & Real Flags -->
             <div class="border-t border-gray-100 pt-3 flex gap-2 flex-wrap">
                 {% get_current_language as CURRENT_LANG %}
                 {% get_available_languages as LANGUAGES %}
@@ -107,12 +111,13 @@
                         {% csrf_token %}
                         <input name="next" type="hidden" value="{{ translated_url }}">
                         <input name="language" type="hidden" value="{{ language.code }}">
-                        <button type="submit" class="px-3 py-2 rounded-lg text-sm flex items-center gap-2 {% if language.code == CURRENT_LANG %}bg-primary text-white font-bold shadow-md{% else %}bg-gray-100 text-gray-700 hover:bg-gray-200{% endif %} transition-all">
+                        <button type="submit" class="px-3 py-2 rounded-lg text-xs font-semibold flex items-center gap-2 {% if language.code == CURRENT_LANG %}bg-primary text-white shadow-md{% else %}bg-gray-100 text-gray-700 hover:bg-gray-200{% endif %} transition-all">
                             <img src="https://flagcdn.com/20x15/{% if language.code == 'fr' %}fr{% elif language.code == 'ar' %}ma{% else %}gb{% endif %}.png"
                                  srcset="https://flagcdn.com/40x30/{% if language.code == 'fr' %}fr{% elif language.code == 'ar' %}ma{% else %}gb{% endif %}.png 2x"
-                                 width="20" height="15" alt=""
+                                 width="18" height="13" alt=""
                                  class="rounded-sm">
-                            {{ language.name_local|capfirst }}
+                            <span class="uppercase tracking-wider font-bold">{{ language.code }}</span>
+                            <span class="font-normal">({{ language.name_local|capfirst }})</span>
                         </button>
                     </form>
                 {% endfor %}

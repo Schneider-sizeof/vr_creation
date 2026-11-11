@@ -53,6 +53,35 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════
+     TRUST METRICS BAR (Chiffres Clés & Confiance)
+     ═══════════════════════════════════════════════ -->
+<section class="bg-slate-900 border-y border-white/10 py-10 relative z-20">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div class="p-4">
+                <span class="block text-3xl md:text-4xl font-black text-primary mb-1">50+</span>
+                <span class="text-xs md:text-sm font-medium text-gray-300">{% trans "Projets 3D & Visites immersives réalisés" %}</span>
+            </div>
+            <div class="p-4 border-l border-white/10">
+                <span class="block text-3xl md:text-4xl font-black text-accent mb-1">98%</span>
+                <span class="text-xs md:text-sm font-medium text-gray-300">{% trans "Satisfaction promoteurs & architectes" %}</span>
+            </div>
+            <div class="p-4 border-l border-white/10">
+                <div class="flex items-center justify-center gap-1 mb-1">
+                    <span class="text-3xl md:text-4xl font-black text-white">4.9</span>
+                    <span class="text-amber-400 text-lg"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                </div>
+                <span class="text-xs md:text-sm font-medium text-gray-300">{% trans "Avis Google Business Profile Tanger" %}</span>
+            </div>
+            <div class="p-4 border-l border-white/10">
+                <span class="block text-3xl md:text-4xl font-black text-primary-light mb-1">100%</span>
+                <span class="text-xs md:text-sm font-medium text-gray-300">{% trans "Respect des délais de livraison" %}</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
      SECTION 2 — NOTRE PROMESSE
      ═══════════════════════════════════════════════ -->
 <section class="section section-light py-24 relative overflow-hidden">
@@ -153,7 +182,7 @@
             <div class="group relative rounded-2xl p-6 md:p-7 flex flex-col justify-between text-center transition-all duration-300 hover:-translate-y-2 overflow-hidden min-h-[320px] animate-on-scroll slide-up {% if item.background_image %}shadow-xl hover:shadow-2xl border border-slate-700/60 hover:border-primary/60{% else %}strength-card-light bg-white shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_16px_36px_rgba(61,142,185,0.14)] border border-slate-100 hover:border-primary/40{% endif %}" style="transition-delay: {{ forloop.counter }}00ms;">
                 {% if item.background_image %}
                 <!-- Background Image & Deep Protective Overlay for 100% Instant Legibility -->
-                <img src="{{ item.background_image.url }}" alt="{{ item.title }}" class="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-700 ease-out group-hover:scale-105" onerror="this.style.display='none'">
+                <img src="{{ item.background_image.url }}" alt="{{ item.title }} — Studio 3D VR Creation Tanger" class="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-700 ease-out group-hover:scale-105" width="400" height="320" loading="lazy" onerror="this.style.display='none'">
                 <div class="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/88 to-slate-950/96 z-10"></div>
                 <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/15 pointer-events-none z-10"></div>
                 {% else %}
@@ -222,7 +251,7 @@
             <div class="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 bg-white flex flex-col h-full animate-on-scroll slide-up" style="transition-delay: {{ forloop.counter }}00ms;">
                 <!-- Card Image -->
                 <div class="relative aspect-video overflow-hidden bg-slate-900">
-                    <img src="{{ item.get_image_url }}" alt="{{ item.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" onerror="this.onerror=null; this.src='/static/img/strategic/projet-immobilier.jpg';">
+                    <img src="{{ item.get_image_url }}" alt="{{ item.title }} — Cas d'usage 3D Tanger | VR Creation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="600" height="338" loading="lazy" onerror="this.onerror=null; this.src='/static/img/strategic/projet-immobilier.jpg';">
                 </div>
                 <!-- Card Body -->
                 <div class="p-6 flex flex-col flex-grow">
@@ -488,6 +517,122 @@
     </div>
 </section>
 {% endif %}
+
+<!-- ═══════════════════════════════════════════════
+     SECTION — TÉMOIGNAGES & AVIS CLIENTS VÉRIFIÉS
+     ═══════════════════════════════════════════════ -->
+<section class="section section-light py-24 relative overflow-hidden bg-slate-50 border-t border-gray-100">
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center mb-16 max-w-3xl mx-auto animate-on-scroll slide-up">
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-primary/10 text-primary border border-primary/20 mb-4 shadow-sm">
+                <i class="fas fa-quote-left text-xs"></i>
+                {% trans "Ils Nous Font Confiance" %}
+            </span>
+            <h2 class="section-header-title text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight uppercase mb-4 leading-tight">
+                {% trans "Retours d'expérience de nos clients à Tanger" %}
+            </h2>
+            <div class="w-16 h-1 bg-gradient-to-r from-primary to-primary-light mx-auto mb-5 rounded-full"></div>
+            <p class="section-header-subtitle text-slate-600 text-base md:text-lg font-normal leading-relaxed max-w-2xl mx-auto">
+                {% trans "Promoteurs en VEFA, architectes et chefs d'entreprise témoignent de l'impact de nos rendus 3D et visites immersives sur leurs ventes." %}
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Review 1 -->
+            <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col justify-between animate-on-scroll slide-up" style="transition-delay: 100ms;">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex text-amber-400 text-sm gap-1">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-xxs font-bold uppercase tracking-wider text-primary bg-primary/10 px-2.5 py-1 rounded-full">{% trans "Promoteur VEFA" %}</span>
+                    </div>
+                    <p class="text-slate-700 text-sm leading-relaxed mb-6 font-light italic">
+                        "{% trans "Grâce aux visites virtuelles 360° et aux rendus architecturaux réalisés par VR Creation, nous avons commercialisé plus de 60% de notre programme résidentiel sur plan avant même l'achèvement du gros œuvre. L'impact auprès des acheteurs est immédiat." %}"
+                    </p>
+                </div>
+                <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+                    <div class="w-10 h-10 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold text-sm">
+                        KB
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-sm">Karim B.</h4>
+                        <p class="text-slate-500 text-xs">{% trans "Directeur de Programme, Tanger" %}</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col justify-between animate-on-scroll slide-up" style="transition-delay: 200ms;">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex text-amber-400 text-sm gap-1">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-xxs font-bold uppercase tracking-wider text-accent-dark bg-accent/20 px-2.5 py-1 rounded-full">{% trans "Architecture" %}</span>
+                    </div>
+                    <p class="text-slate-700 text-sm leading-relaxed mb-6 font-light italic">
+                        "{% trans "Une qualité de texturation et un réalisme d'éclairage impressionnants. VR Creation comprend les exigences techniques des architectes et respecte scrupuleusement les délais pour les présentations aux maîtres d'ouvrage." %}"
+                    </p>
+                </div>
+                <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+                    <div class="w-10 h-10 rounded-full bg-accent/30 text-accent-dark flex items-center justify-center font-bold text-sm">
+                        SL
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-sm">Salma L.</h4>
+                        <p class="text-slate-500 text-xs">{% trans "Architecte Associée, Tanger Nord" %}</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col justify-between animate-on-scroll slide-up" style="transition-delay: 300ms;">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex text-amber-400 text-sm gap-1">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-xxs font-bold uppercase tracking-wider text-green-700 bg-green-50 px-2.5 py-1 rounded-full">{% trans "Commerce & Horeca" %}</span>
+                    </div>
+                    <p class="text-slate-700 text-sm leading-relaxed mb-6 font-light italic">
+                        "{% trans "La capture 360° et la campagne de visibilité digitale ont boosté la fréquentation de notre établissement dès le lancement. Équipe réactive, matériel professionnel et accompagnement de A à Z." %}"
+                    </p>
+                </div>
+                <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+                    <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">
+                        OT
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-sm">Omar T.</h4>
+                        <p class="text-slate-500 text-xs">{% trans "Gérant d'Établissement, Malabata Tanger" %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Google Business Profile Verification Banner -->
+        <div class="mt-12 bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4 max-w-4xl mx-auto">
+            <div class="flex items-center gap-4 text-center sm:text-left">
+                <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-2xl flex-shrink-0">
+                    <i class="fab fa-google"></i>
+                </div>
+                <div>
+                    <div class="flex items-center justify-center sm:justify-start gap-2">
+                        <h4 class="font-bold text-slate-900 text-base">{% trans "Avis vérifiés Google Business" %}</h4>
+                        <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold bg-green-100 text-green-800">
+                            <i class="fas fa-check-circle mr-1"></i>{% trans "Vérifié" %}
+                        </span>
+                    </div>
+                    <p class="text-xs text-slate-500">{% trans "Noté 4.9/5 étoiles par les professionnels de l'immobilier et du commerce à Tanger." %}</p>
+                </div>
+            </div>
+            <a href="https://share.google/CEh7vvvHw6o1atT6d" target="_blank" rel="noopener" class="btn btn-outline py-2.5 px-5 text-xs font-bold inline-flex items-center shrink-0">
+                <i class="fas fa-external-link-alt mr-2 text-primary"></i>{% trans "Voir les avis sur Google" %}
+            </a>
+        </div>
+    </div>
+</section>
 
 <!-- ═══════════════════════════════════════════════
      SECTION 6 — CTA FINAL

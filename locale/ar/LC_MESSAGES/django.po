@@ -7,8 +7,29 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+msgid "1. Responsable du traitement des données"
+msgstr "1. Responsable du traitement des données"
+
+msgid "2. Données personnelles collectées"
+msgstr "2. Données personnelles collectées"
+
+msgid "3. Finalité de la collecte"
+msgstr "3. Finalité de la collecte"
+
+msgid "4. Durée de conservation des données"
+msgstr "4. Durée de conservation des données"
+
+msgid "5. Sécurité et confidentialité"
+msgstr "5. Sécurité et confidentialité"
+
+msgid "6. Vos droits (Loi marocaine n° 09-08)"
+msgstr "6. Vos droits (Loi marocaine n° 09-08)"
+
 msgid "Accepter"
 msgstr "قبول"
+
+msgid "Accompagnement personnalisé"
+msgstr "Accompagnement personnalisé"
 
 msgid "Accueil"
 msgstr "الرئيسية"
@@ -16,37 +37,59 @@ msgstr "الرئيسية"
 msgid "Actif"
 msgstr "Actif"
 
-msgid "Actualités & Blog"
-msgstr "الأخبار والمدونة"
+msgid "Action Directe"
+msgstr "Action Directe"
 
 msgid "Adresse"
 msgstr "العنوان"
 
-msgid "Agence de Réalité Virtuelle"
-msgstr "وكالة الواقع الافتراضي"
+msgid "Adresse IP anonymisée, type de navigateur, pages consultées et durée de navigation (via cookies analytiques avec votre consentement)."
+msgstr "Adresse IP anonymisée, type de navigateur, pages consultées et durée de navigation (via cookies analytiques avec votre consentement)."
+
+msgid "Agrandir l'image"
+msgstr "Agrandir l'image"
+
+msgid "Agrandissement du projet 3D"
+msgstr "Agrandissement du projet 3D"
+
+msgid "Ajouter"
+msgstr "Ajouter"
 
 msgid "Ajouter noindex à cette page"
 msgstr "إضافة noindex لهذه الصفحة"
 
-msgid "Analyse et Conseil"
-msgstr "التحليل والاستشارة"
+msgid "Al Hoceima"
+msgstr "Al Hoceima"
 
-msgid "Animation 3D"
-msgstr "الرسوم المتحركة 3D"
+msgid "Animation & motion design"
+msgstr "Animation & motion design"
+
+msgid "Animation 3D & motion"
+msgstr "Animation 3D & motion"
+
+msgid "Annuler et retourner aux articles"
+msgstr "Annuler et retourner aux articles"
 
 msgid "Aperçu"
 msgstr "معاينة"
 
-msgid "Aperçu du Service"
-msgstr "نظرة عامة على الخدمة"
+msgid "Approfondi (~800 à 1200 mots)"
+msgstr "Approfondi (~800 à 1200 mots)"
 
-msgid ""
-"Application des matériaux réalistes et configuration de la lumière pour une "
-"atmosphère parfaite."
-msgstr "تطبيق المواد الواقعية وإعداد الإضاءة لأجواء مثالي."
+msgid "Architecte Associée, Tanger Nord"
+msgstr "Architecte Associée, Tanger Nord"
 
 msgid "Architecture"
 msgstr "هندسة معمارية"
+
+msgid "Architecture & Accès Rapides"
+msgstr "Architecture & Accès Rapides"
+
+msgid "Architecture, 3D & Digital réunis"
+msgstr "Architecture, 3D & Digital réunis"
+
+msgid "Architecture, produits, corporate, événementiel, drone."
+msgstr "Architecture, produits, corporate, événementiel, drone."
 
 msgid "Article"
 msgstr "مقال"
@@ -54,14 +97,26 @@ msgstr "مقال"
 msgid "Articles"
 msgstr "مقالات"
 
+msgid "Asilah"
+msgstr "Asilah"
+
 msgid "Aucun article publié pour le moment."
 msgstr "لا توجد مقالات منشورة حالياً."
+
+msgid "Aucun exemple disponible pour le moment."
+msgstr "Aucun exemple disponible pour le moment."
 
 msgid "Aucun projet disponible pour le moment."
 msgstr "لا توجد مشاريع متاحة حالياً."
 
 msgid "Aucun service disponible pour le moment."
 msgstr "لا توجد خدمات متاحة حالياً."
+
+msgid "Aucune application n'est requise. Un simple lien web ou QR code permet de visiter depuis n'importe quel smartphone, tablette, ordinateur ou casque VR."
+msgstr "Aucune application n'est requise. Un simple lien web ou QR code permet de visiter depuis n'importe quel smartphone, tablette, ordinateur ou casque VR."
+
+msgid "Aucune promotion active pour le moment. Revenez bientôt !"
+msgstr "Aucune promotion active pour le moment. Revenez bientôt !"
 
 msgid "Aucune visite virtuelle disponible pour le moment."
 msgstr "لا توجد جولات افتراضية متاحة حالياً."
@@ -75,29 +130,65 @@ msgstr "الكاتب"
 msgid "Autre"
 msgstr "أخرى"
 
-msgid "Autres Services"
-msgstr "خدمات أخرى"
+msgid "Avant de construire, commencez déjà à le vendre. Présentez-nous votre projet et découvrons ensemble comment le transformer en une expérience commerciale complète."
+msgstr "Avant de construire, commencez déjà à le vendre. Présentez-nous votre projet et découvrons ensemble comment le transformer en une expérience commerciale complète."
 
-msgid "Avantages"
-msgstr "المزايا"
+msgid "Avec VR Creation"
+msgstr "Avec VR Creation"
+
+msgid "Avis Google Business Profile Tanger"
+msgstr "Avis Google Business Profile Tanger"
+
+msgid "Avis vérifiés Google Business"
+msgstr "Avis vérifiés Google Business"
+
+msgid "Basés à Tanger, nous intervenons rapidement sur tout le Nord du Maroc : Tétouan, Asilah, Larache, Chefchaouen, Al Hoceima."
+msgstr "Basés à Tanger, nous intervenons rapidement sur tout le Nord du Maroc : Tétouan, Asilah, Larache, Chefchaouen, Al Hoceima."
 
 msgid "Behance"
 msgstr "Behance"
 
-msgid "Besoin d'un devis ?"
-msgstr "تحتاج عرض أسعار؟"
+msgid "Besoin d'informations ?"
+msgstr "Besoin d'informations ?"
 
 msgid "Biographie"
 msgstr "السيرة الذاتية"
 
-msgid "Blog"
-msgstr "المدونة"
+msgid "Blog & Actualités"
+msgstr "Blog & Actualités"
 
-msgid "Branding visuel"
-msgstr "العلامة التجارية البصرية"
+msgid "Bouton hero 1 — libellé"
+msgstr "Bouton hero 1 — libellé"
 
-msgid "Captures 360°"
-msgstr "تصوير 360°"
+msgid "Bouton hero 1 — lien"
+msgstr "Bouton hero 1 — lien"
+
+msgid "Bouton hero 2 — libellé"
+msgstr "Bouton hero 2 — libellé"
+
+msgid "Bouton hero 2 — lien"
+msgstr "Bouton hero 2 — lien"
+
+msgid "Branding"
+msgstr "Branding"
+
+msgid "Branding & communication"
+msgstr "Branding & communication"
+
+msgid "Branding & communication visuelle"
+msgstr "Branding & communication visuelle"
+
+msgid "Branding cohérent et mémorable"
+msgstr "Branding cohérent et mémorable"
+
+msgid "Brouillon"
+msgstr "Brouillon"
+
+msgid "Captures 360° d'espaces"
+msgstr "Captures 360° d'espaces"
+
+msgid "Cas d'usage"
+msgstr "Cas d'usage"
 
 msgid "Catégorie"
 msgstr "الفئة"
@@ -105,33 +196,47 @@ msgstr "الفئة"
 msgid "Catégories"
 msgstr "الفئات"
 
-msgid ""
-"Ces cookies nous aident à mesurer l'audience de notre site, à analyser la "
-"navigation et à identifier d'éventuels dysfonctionnements pour améliorer "
-"votre expérience utilisateur."
-msgstr ""
-"تساعدنا ملفات تعريف الارتباط هذه في قياس جمهور موقعنا، وتحليل التصفح وتحديد "
-"أي أعطال لتحسين تجربة المستخدم الخاصة بك."
+msgid "Ce que vous obtenez avec cette offre"
+msgstr "Ce que vous obtenez avec cette offre"
 
-msgid ""
-"Ces cookies sont essentiels au fonctionnement du site et ne peuvent pas être"
-" désactivés dans nos systèmes."
-msgstr ""
-"ملفات تعريف الارتباط هذه ضرورية لتشغيل الموقع ولا يمكن إلغاء تفعيلها في "
-"أنظمتنا."
+msgid "Ce qui fait la différence VR Creation"
+msgstr "Ce qui fait la différence VR Creation"
 
-msgid ""
-"Ces cookies sont liés au partage sur les réseaux sociaux et peuvent être "
-"installés pour suivre l'activité sur d'autres sites."
-msgstr ""
-"ترتبط ملفات تعريف الارتباط هذه بالمشاركة على الشبكات الاجتماعية ويمكن "
-"تثبيتها لتتبع النشاط على مواقع أخرى."
+msgid "Ces cookies nous aident à mesurer l'audience de notre site, à analyser la navigation et à identifier d'éventuels dysfonctionnements pour améliorer votre expérience utilisateur."
+msgstr "تساعدنا ملفات تعريف الارتباط هذه في قياس جمهور موقعنا، وتحليل التصفح وتحديد أي أعطال لتحسين تجربة المستخدم الخاصة بك."
+
+msgid "Ces cookies sont essentiels au fonctionnement du site et ne peuvent pas être désactivés dans nos systèmes."
+msgstr "ملفات تعريف الارتباط هذه ضرورية لتشغيل الموقع ولا يمكن إلغاء تفعيلها في أنظمتنا."
+
+msgid "Ces cookies sont liés au partage sur les réseaux sociaux et peuvent être installés pour suivre l'activité sur d'autres sites."
+msgstr "ترتبط ملفات تعريف الارتباط هذه بالمشاركة على الشبكات الاجتماعية ويمكن تثبيتها لتتبع النشاط على مواقع أخرى."
+
+msgid "Changer de langue"
+msgstr "Changer de langue"
+
+msgid "Chaque création est pensée comme une signature visuelle sur mesure, au service de votre réussite."
+msgstr "Chaque création est pensée comme une signature visuelle sur mesure, au service de votre réussite."
+
+msgid "Chaque prestation est conçue pour maximiser votre impact commercial et accélérer vos ventes."
+msgstr "Chaque prestation est conçue pour maximiser votre impact commercial et accélérer vos ventes."
+
+msgid "Chaque projet mérite une expérience sur mesure"
+msgstr "Chaque projet mérite une expérience sur mesure"
+
+msgid "Chefchaouen"
+msgstr "Chefchaouen"
 
 msgid "Chiffre clé"
 msgstr "رقم رئيسي"
 
+msgid "Citation de la Solution"
+msgstr "Citation de la Solution"
+
 msgid "Classe d\\'icône (ex: fas fa-lightbulb) ou emoji"
 msgstr "Classe d\\'icône (ex: fas fa-lightbulb) ou emoji"
+
+msgid "Classe d\\'icône CSS (ex: fas fa-store)"
+msgstr "Classe d\\'icône CSS (ex: fas fa-store)"
 
 msgid "Classe d\\'icône ou emoji"
 msgstr "Classe d\\'icône ou emoji"
@@ -139,48 +244,104 @@ msgstr "Classe d\\'icône ou emoji"
 msgid "Client"
 msgstr "العميل"
 
+msgid "Cliquez et glissez sur les fenêtres pour explorer à 360°"
+msgstr "Cliquez et glissez sur les fenêtres pour explorer à 360°"
+
+msgid "Cocher pour afficher ce pack en section vedette sur la page d\\'accueil et d\\'autres pages."
+msgstr "Cocher pour afficher ce pack en section vedette sur la page d\\'accueil et d\\'autres pages."
+
 msgid "Code de vérification Google Search Console (contenu de la balise meta)"
 msgstr "رمز التحقق من Google Search Console (محتوى علامة meta)"
 
-msgid "Collecte des données"
-msgstr "جمع البيانات"
+msgid "Collaborons ensemble"
+msgstr "Collaborons ensemble"
 
-msgid "Combien font %(num1)d + %(num2)d ?"
-msgstr "كم يساوي %(num1)d + %(num2)d؟"
+msgid "Combien de temps dure le tournage sur place ?"
+msgstr "Combien de temps dure le tournage sur place ?"
+
+msgid "Commander un projet similaire"
+msgstr "Commander un projet similaire"
+
+msgid "Comment demander un devis ?"
+msgstr "Comment demander un devis ?"
+
+msgid "Comment garantissez-vous la qualité des prospects générés ?"
+msgstr "Comment garantissez-vous la qualité des prospects générés ?"
+
+msgid "Comment les clients accèdent-ils à la visite virtuelle ?"
+msgstr "Comment les clients accèdent-ils à la visite virtuelle ?"
 
 msgid "Comment nous travaillons"
 msgstr "كيف نعمل"
 
-msgid "Confidentialité"
-msgstr "الخصوصية"
+msgid "Comment obtenir un devis personnalisé ?"
+msgstr "Comment obtenir un devis personnalisé ?"
 
-msgid ""
-"Conformément à la réglementation RGPD, le consentement donné pour le dépôt "
-"de cookies a une durée de validité de 13 mois maximum. À l'issue de cette "
-"période, votre consentement sera à nouveau demandé."
-msgstr ""
-"وفقًا للوائح العامة لحماية البيانات (GDPR)، فإن صلاحية الموافقة الممنوحة "
-"لملفات تعريف الارتباط هي 13 شهرًا كحد أقصى. وفي نهاية هذه الفترة، سيتم طلب "
-"موافقتك مرة أخرى."
+msgid "Comment ça marche"
+msgstr "Comment ça marche"
+
+msgid "Commerce & Horeca"
+msgstr "Commerce & Horeca"
+
+msgid "Commercialisez avant la construction"
+msgstr "Commercialisez avant la construction"
+
+msgid "Commission sur vente"
+msgstr "Commission sur vente"
+
+msgid "Comparatif"
+msgstr "Comparatif"
+
+msgid "Comptez environ 5 à 7 jours pour la création de la page de destination, la configuration des publicités et le paramétrage du suivi."
+msgstr "Comptez environ 5 à 7 jours pour la création de la page de destination, la configuration des publicités et le paramétrage du suivi."
+
+msgid "Conditions de l'offre"
+msgstr "Conditions de l'offre"
+
+msgid "Confiez-nous vos plans 2D et laissez-nous les transformer en une expérience immersive."
+msgstr "Confiez-nous vos plans 2D et laissez-nous les transformer en une expérience immersive."
+
+msgid "Configuration requise : %(msg)s"
+msgstr "Configuration requise : %(msg)s"
+
+msgid "Conformément à la réglementation RGPD, le consentement donné pour le dépôt de cookies a une durée de validité de 13 mois maximum. À l'issue de cette période, votre consentement sera à nouveau demandé."
+msgstr "وفقًا للوائح العامة لحماية البيانات (GDPR)، فإن صلاحية الموافقة الممنوحة لملفات تعريف الارتباط هي 13 شهرًا كحد أقصى. وفي نهاية هذه الفترة، سيتم طلب موافقتك مرة أخرى."
+
+msgid "Consultez nos réalisations récentes pour promoteurs et architectes à Tanger."
+msgstr "Consultez nos réalisations récentes pour promoteurs et architectes à Tanger."
+
+msgid "Consultez notre page offres."
+msgstr "Consultez notre page offres."
 
 msgid "Contact"
 msgstr "اتصل بنا"
 
-msgid "Contactez-nous"
-msgstr "اتصل بنا"
+msgid "Contact & Devis"
+msgstr "Contact & Devis"
 
-msgid ""
-"Contactez-nous pour discuter de vos besoins et obtenir un devis "
-"personnalisé."
-msgstr "تواصل معنا لمناقشة احتياجاتك والحصول على عرض أسعار مخصص."
+msgid "Contact & Devis gratuit"
+msgstr "Contact & Devis gratuit"
 
-msgid ""
-"Contactez-nous pour discuter de votre projet et obtenir une estimation "
-"gratuite."
-msgstr "تواصل معنا لمناقشة مشروعك والحصول على تقدير مجاني."
+msgid "Contactez nos experts à Tanger pour en savoir plus et obtenir un devis personnalisé."
+msgstr "Contactez nos experts à Tanger pour en savoir plus et obtenir un devis personnalisé."
+
+msgid "Contactez notre équipe via le formulaire de devis ou par téléphone. Nous étudions votre projet sous 24h et vous remettons une proposition détaillée."
+msgstr "Contactez notre équipe via le formulaire de devis ou par téléphone. Nous étudions votre projet sous 24h et vous remettons une proposition détaillée."
+
+msgid "Contactez notre équipe à Tanger pour un premier échange gratuit et sans engagement."
+msgstr "Contactez notre équipe à Tanger pour un premier échange gratuit et sans engagement."
+
+msgid "Contactez-nous par téléphone au +212 625 07 1498, par WhatsApp, ou via notre formulaire de contact en ligne. Le devis est gratuit et personnalisé."
+msgstr "Contactez-nous par téléphone au +212 625 07 1498, par WhatsApp, ou via notre formulaire de contact en ligne. Le devis est gratuit et personnalisé."
+
+msgid "Contactez-nous pour un devis gratuit et personnalisé. Notre équipe à Tanger est à votre écoute."
+msgstr "Contactez-nous pour un devis gratuit et personnalisé. Notre équipe à Tanger est à votre écoute."
 
 msgid "Contenu"
 msgstr "المحتوى"
+
+msgid "Convertir"
+msgstr "Convertir"
 
 msgid "Cookies"
 msgstr "ملفات تعريف الارتباط"
@@ -206,20 +367,20 @@ msgstr "ملفات تعريف الارتباط الضرورية"
 msgid "Coordonnées"
 msgstr "معلومات الاتصال"
 
-msgid "Création de l'architecture et du mobilier en 3D."
-msgstr "إنشاء الهندسة والأثاث بتقنية 3D."
+msgid "Court (~400 à 600 mots)"
+msgstr "Court (~400 à 600 mots)"
 
-msgid ""
-"Création de l'architecture, du mobilier et des éléments décoratifs en 3D "
-"avec une grande précision."
-msgstr ""
-"إنشاء الهندسة المعمارية والأثاث والعناصر الزخرفية بدقة عالية بتقنية 3D."
-
-msgid "Créativité"
-msgstr "الإبداع"
+msgid "Coûts de maquette physique élevés"
+msgstr "Coûts de maquette physique élevés"
 
 msgid "Créé le"
 msgstr "أنشئ في"
+
+msgid "DE L'IDÉE À LA COMMERCIALISATION."
+msgstr "DE L'IDÉE À LA COMMERCIALISATION."
+
+msgid "Dashboard"
+msgstr "Dashboard"
 
 msgid "Date"
 msgstr "التاريخ"
@@ -229,6 +390,36 @@ msgstr "تاريخ النشر"
 
 msgid "Date de réalisation"
 msgstr "تاريخ الإنجاز"
+
+msgid "Dates système"
+msgstr "Dates système"
+
+msgid "Demander mon devis gratuit"
+msgstr "Demander mon devis gratuit"
+
+msgid "Demander un devis"
+msgstr "Demander un devis"
+
+msgid "Demander un devis gratuit"
+msgstr "Demander un devis gratuit"
+
+msgid "Demander un devis personnalisé"
+msgstr "Demander un devis personnalisé"
+
+msgid "Depuis nos bureaux de Tanger, nous accompagnons les entreprises et institutions de toute la région nord."
+msgstr "Depuis nos bureaux de Tanger, nous accompagnons les entreprises et institutions de toute la région nord."
+
+msgid "Des atouts majeurs pour garantir le succès de vos réalisations."
+msgstr "Des atouts majeurs pour garantir le succès de vos réalisations."
+
+msgid "Des compétences complètes pour vos projets visuels"
+msgstr "Des compétences complètes pour vos projets visuels"
+
+msgid "Des formules adaptées à chaque étape de votre projet pour accélérer votre croissance et maximiser votre visibilité."
+msgstr "Des formules adaptées à chaque étape de votre projet pour accélérer votre croissance et maximiser votre visibilité."
+
+msgid "Des livrables de qualité internationale à des prix adaptés au marché local."
+msgstr "Des livrables de qualité internationale à des prix adaptés au marché local."
 
 msgid "Description"
 msgstr "الوصف"
@@ -242,35 +433,68 @@ msgstr "الوصف الكامل"
 msgid "Description courte"
 msgstr "وصف مختصر"
 
+msgid "Description pour les moteurs de recherche (max 160 caractères). Laisser vide pour utiliser la description courte."
+msgstr "Description pour les moteurs de recherche (max 160 caractères). Laisser vide pour utiliser la description courte."
+
+msgid "Devis gratuit"
+msgstr "Devis gratuit"
+
 msgid "Diapositive Hero"
 msgstr "شريحة البانر الرئيسي"
 
 msgid "Diapositives Hero"
 msgstr "شرائح البانر الرئيسي"
 
-msgid "Différenciation"
-msgstr "التميز"
+msgid "Digitaliser"
+msgstr "Digitaliser"
+
+msgid "Directeur de Programme, Tanger"
+msgstr "Directeur de Programme, Tanger"
+
+msgid "Directeur de la publication"
+msgstr "Directeur de la publication"
+
+msgid "Direction de la communication — VR Creation Company SARL-AU."
+msgstr "Direction de la communication — VR Creation Company SARL-AU."
+
+msgid "Données de navigation & mesure d'audience :"
+msgstr "Données de navigation & mesure d'audience :"
 
 msgid "Durée de conservation"
 msgstr "مدة الاحتفاظ بها"
 
-msgid ""
-"Découvrez comment nos solutions de réalité virtuelle apportent une valeur "
-"mesurable à nos clients."
-msgstr ""
-"اكتشف كيف توفر حلول الواقع الافتراضي لدينا قيمة قابلة للقياس لعملائنا."
+msgid "Dynamique & Engageant"
+msgstr "Dynamique & Engageant"
 
-msgid ""
-"Découvrez nos derniers articles, conseils et tendances sur la réalité "
-"virtuelle et l'immobilier."
-msgstr ""
-"اكتشف أحدث مقالاتنا ونصائحنا واتجاهاتنا حول الواقع الافتراضي والعقارات."
+msgid "Découvrez comment nos solutions transforment chaque type de projet en levier de croissance."
+msgstr "Découvrez comment nos solutions transforment chaque type de projet en levier de croissance."
+
+msgid "Découvrez des packs de services conçus spécifiquement pour répondre à vos objectifs de commercialisation et de valorisation immobilière."
+msgstr "Découvrez des packs de services conçus spécifiquement pour répondre à vos objectifs de commercialisation et de valorisation immobilière."
+
+msgid "Découvrez les spécifications techniques, tarifs et options de notre prestation de visite virtuelle 3D sur plan (VEFA) et capture d'espaces à Tanger."
+msgstr "Découvrez les spécifications techniques, tarifs et options de notre prestation de visite virtuelle 3D sur plan (VEFA) et capture d'espaces à Tanger."
+
+msgid "Découvrez nos projets concrets"
+msgstr "Découvrez nos projets concrets"
+
+msgid "Découvrez notre offre en vidéo"
+msgstr "Découvrez notre offre en vidéo"
 
 msgid "Découvrir ce service"
 msgstr "اكتشف هذه الخدمة"
 
-msgid "Découvrir nos projets"
-msgstr "اكتشف مشاريعنا"
+msgid "Découvrir l'offre"
+msgstr "Découvrir l'offre"
+
+msgid "Découvrir le service Visites 3D"
+msgstr "Découvrir le service Visites 3D"
+
+msgid "Découvrir nos services"
+msgstr "Découvrir nos services"
+
+msgid "Découvrir nos solutions"
+msgstr "Découvrir nos solutions"
 
 msgid "Décrivez votre projet..."
 msgstr "صف مشروعك..."
@@ -278,14 +502,14 @@ msgstr "صف مشروعك..."
 msgid "Défi / Problématique"
 msgstr "التحدي / الإشكالية"
 
-msgid "Démarrer un projet"
-msgstr "ابدأ مشروعاً"
+msgid "Délai d'attente dépassé : %(msg)s"
+msgstr "Délai d'attente dépassé : %(msg)s"
 
-msgid "Désolé, la page que vous recherchez n'existe pas ou a été déplacée."
-msgstr "عذراً، الصفحة التي تبحث عنها غير موجودة أو تم نقلها."
+msgid "Démarrer votre projet"
+msgstr "Démarrer votre projet"
 
-msgid "Détails"
-msgstr "التفاصيل"
+msgid "Démos 360°"
+msgstr "Démos 360°"
 
 msgid "Efficacité"
 msgstr "الكفاءة"
@@ -293,22 +517,26 @@ msgstr "الكفاءة"
 msgid "Efficacité / Impact"
 msgstr "الكفاءة / التأثير"
 
+msgid "Elle est idéale pour les espaces déjà construits : showrooms, magasins, restaurants, hôtels, résidences témoins achevées et le suivi technique de chantiers à Tanger et dans le Nord."
+msgstr "Elle est idéale pour les espaces déjà construits : showrooms, magasins, restaurants, hôtels, résidences témoins achevées et le suivi technique de chantiers à Tanger et dans le Nord."
+
 msgid "Email"
 msgstr "البريد الإلكتروني"
 
 msgid "Email de contact"
 msgstr "بريد الاتصال"
 
-msgid ""
-"En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de "
-"cookies pour améliorer votre expérience utilisateur et réaliser des "
-"statistiques de visites."
-msgstr ""
-"بمتابعة تصفح هذا الموقع، فإنك توافق على استخدام ملفات تعريف الارتباط لتحسين "
-"تجربة المستخدم وإنشاء إحصائيات الزيارات."
+msgid "En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de cookies pour améliorer votre expérience utilisateur et réaliser des statistiques de visites."
+msgstr "بمتابعة تصفح هذا الموقع، فإنك توافق على استخدام ملفات تعريف الارتباط لتحسين تجربة المستخدم وإنشاء إحصائيات الزيارات."
+
+msgid "En règle générale, un pack de rendus intérieurs ou extérieurs est livré sous 5 à 10 jours ouvrés avec un cycle de validation intermédiaire pour les ajustements."
+msgstr "En règle générale, un pack de rendus intérieurs ou extérieurs est livré sous 5 à 10 jours ouvrés avec un cycle de validation intermédiaire pour les ajustements."
 
 msgid "En savoir plus"
 msgstr "اعرف المزيد"
+
+msgid "English"
+msgstr "English"
 
 msgid "Enregistrer mes choix"
 msgstr "حفظ خياراتي"
@@ -322,27 +550,53 @@ msgstr "أرسل لنا رسالة"
 msgid "Envoyé le"
 msgstr "أُرسل في"
 
-msgid "Erreur Serveur"
-msgstr "خطأ في الخادم"
+msgid "Erreur 404"
+msgstr "Erreur 404"
+
+msgid "Erreur 500"
+msgstr "Erreur 500"
+
+msgid "Erreur IA Gemini : %(msg)s"
+msgstr "Erreur IA Gemini : %(msg)s"
+
+msgid "Erreur Serveur (500) | VR Creation"
+msgstr "Erreur Serveur (500) | VR Creation"
+
+msgid "Estimer mon projet"
+msgstr "Estimer mon projet"
+
+msgid "Ex: 10%, 15%, ou \"Sur négociation\". Affiché uniquement pour les offres sur commission."
+msgstr "Ex: 10%, 15%, ou \"Sur négociation\". Affiché uniquement pour les offres sur commission."
 
 msgid "Ex: 150+, 98%, 10 ans"
 msgstr "مثال: +150، 98%، 10 سنوات"
 
 msgid "Ex: G-XXXXXXXXXX. Chargé uniquement après consentement cookies."
-msgstr ""
-"مثال: G-XXXXXXXXXX. يتم تحميله فقط بعد الموافقة على ملفات تعريف الارتباط."
+msgstr "مثال: G-XXXXXXXXXX. يتم تحميله فقط بعد الموافقة على ملفات تعريف الارتباط."
 
-msgid "Expertise"
-msgstr "خبرة"
+msgid "Ex: Les acheteurs veulent se projeter avant d\\'investir."
+msgstr "Ex: Les acheteurs veulent se projeter avant d\\'investir."
+
+msgid "Ex: Les avantages de la modélisation 3D et des rendus photoréalistes pour l'architecture et l'immobilier haut de gamme..."
+msgstr "Ex: Les avantages de la modélisation 3D et des rendus photoréalistes pour l'architecture et l'immobilier haut de gamme..."
+
+msgid "Exemples de succès stratégiques"
+msgstr "Exemples de succès stratégiques"
+
+msgid "Expertise 360°"
+msgstr "Expertise 360°"
+
+msgid "Explorez nos démonstrations de visites 360° interactives"
+msgstr "Explorez nos démonstrations de visites 360° interactives"
 
 msgid "Expéditeur"
 msgstr "المُرسل"
 
-msgid "Expérience immersive"
-msgstr "تجربة غامرة"
-
 msgid "Extrait"
 msgstr "مقتطف"
+
+msgid "FAQ — À propos de VR Creation"
+msgstr "FAQ — À propos de VR Creation"
 
 msgid "Facebook"
 msgstr "فيسبوك"
@@ -350,11 +604,38 @@ msgstr "فيسبوك"
 msgid "Favicon"
 msgstr "Favicon"
 
-msgid "Flexibilité"
-msgstr "المرونة"
+msgid "Fermer"
+msgstr "Fermer"
 
-msgid "Gain de temps"
-msgstr "توفير الوقت"
+msgid "Fiche Technique"
+msgstr "Fiche Technique"
+
+msgid "Fiche complète du projet"
+msgstr "Fiche complète du projet"
+
+msgid "Fnideq"
+msgstr "Fnideq"
+
+msgid "Fonctionnalité / Critère"
+msgstr "Fonctionnalité / Critère"
+
+msgid "Formulaire de contact & devis :"
+msgstr "Formulaire de contact & devis :"
+
+msgid "Formulaire soumis trop rapidement. Veuillez patienter un instant."
+msgstr "Formulaire soumis trop rapidement. Veuillez patienter un instant."
+
+msgid "Français"
+msgstr "Français"
+
+msgid "Galerie VR Creation"
+msgstr "Galerie VR Creation"
+
+msgid "Galerie d'Images & Rendu 3D"
+msgstr "Galerie d'Images & Rendu 3D"
+
+msgid "Galerie de réalisations"
+msgstr "Galerie de réalisations"
 
 msgid "Gestion des cookies"
 msgstr "إدارة ملفات تعريف الارتباط"
@@ -368,16 +649,50 @@ msgstr "معرف Google Analytics"
 msgid "Google Search Console"
 msgstr "Google Search Console"
 
-msgid ""
-"Génération des images haute résolution et retouches finales pour un résultat"
-" optimal."
-msgstr "إنشاء صور عالية الدقة ولمسات نهائية لنتيجة مثالية."
+msgid "Grande phrase d’accroche"
+msgstr "Grande phrase d’accroche"
+
+msgid "Grâce aux visites virtuelles 360° et aux rendus architecturaux réalisés par VR Creation, nous avons commercialisé plus de 60% de notre programme résidentiel sur plan avant même l'achèvement du gros œuvre. L'impact auprès des acheteurs est immédiat."
+msgstr "Grâce aux visites virtuelles 360° et aux rendus architecturaux réalisés par VR Creation, nous avons commercialisé plus de 60% de notre programme résidentiel sur plan avant même l'achèvement du gros œuvre. L'impact auprès des acheteurs est immédiat."
+
+msgid "Guides & Articles"
+msgstr "Guides & Articles"
+
+msgid "Générateur d'articles IA"
+msgstr "Générateur d'articles IA"
+
+msgid "Générateur d'articles de blog par IA"
+msgstr "Générateur d'articles de blog par IA"
+
+msgid "Génération en cours..."
+msgstr "Génération en cours..."
+
+msgid "Générer l'article maintenant"
+msgstr "Générer l'article maintenant"
+
+msgid "Générer un article avec l'IA"
+msgstr "Générer un article avec l'IA"
+
+msgid "Généré par IA"
+msgstr "Généré par IA"
+
+msgid "Gérant d'Établissement, Malabata Tanger"
+msgstr "Gérant d'Établissement, Malabata Tanger"
 
 msgid "Gérer mes choix"
 msgstr "إدارة خياراتي"
 
-msgid "Hébergement"
-msgstr "الاستضافة"
+msgid "Hero page d’accueil"
+msgstr "Hero page d’accueil"
+
+msgid "Hébergement du site"
+msgstr "Hébergement du site"
+
+msgid "Hésitation et fuite des prospects"
+msgstr "Hésitation et fuite des prospects"
+
+msgid "IA"
+msgstr "IA"
 
 msgid "ID objet"
 msgstr "معرف الكائن"
@@ -388,18 +703,41 @@ msgstr "أيقونة"
 msgid "Icône CSS"
 msgstr "أيقونة CSS"
 
+msgid "Identifiant Commun de l'Entreprise (ICE)"
+msgstr "Identifiant Commun de l'Entreprise (ICE)"
+
+msgid "Identifiant Fiscal (IF)"
+msgstr "Identifiant Fiscal (IF)"
+
 msgid "Identifiant de page"
 msgstr "معرف الصفحة"
 
-msgid ""
-"Identifiant unique : home, about, services, portfolio, contact, blog, etc."
+msgid "Identifiant unique : home, about, services, portfolio, contact, blog, etc."
 msgstr "معرف فريد: home, about, services, portfolio, contact, blog, إلخ."
+
+msgid "Identifier"
+msgstr "Identifier"
+
+msgid "Identité de l\\'offre"
+msgstr "Identité de l\\'offre"
+
+msgid "Identité de marque"
+msgstr "Identité de marque"
 
 msgid "Identité du site"
 msgstr "هوية الموقع"
 
+msgid "Il se vend avec une vision. Nous combinons architecture, 3D, immersion, branding et technologie digitale pour permettre aux promoteurs de présenter leurs projets autrement — et surtout, plus tôt."
+msgstr "Il se vend avec une vision. Nous combinons architecture, 3D, immersion, branding et technologie digitale pour permettre aux promoteurs de présenter leurs projets autrement — et surtout, plus tôt."
+
+msgid "Ils Nous Font Confiance"
+msgstr "Ils Nous Font Confiance"
+
 msgid "Image"
 msgstr "صورة"
+
+msgid "Image / Illustration"
+msgstr "Image / Illustration"
 
 msgid "Image 1200x630px recommandée"
 msgstr "صورة 1200x630 بكسل موصى بها"
@@ -413,6 +751,15 @@ msgstr "صورة OG الافتراضية"
 msgid "Image Open Graph"
 msgstr "صورة Open Graph"
 
+msgid "Image affichée pendant le chargement de la vidéo hero (1920x600 recommandé)"
+msgstr "Image affichée pendant le chargement de la vidéo hero (1920x600 recommandé)"
+
+msgid "Image affichée sur la carte. Stockée dans le dossier media/services/"
+msgstr "Image affichée sur la carte. Stockée dans le dossier media/services/"
+
+msgid "Image de fond"
+msgstr "Image de fond"
+
 msgid "Image de fond du hero de la page d\\'accueil"
 msgstr "Image de fond du hero de la page d\\'accueil"
 
@@ -425,11 +772,17 @@ msgstr "صورة الخدمة"
 msgid "Image hero accueil"
 msgstr "صورة البانر الرئيسي"
 
+msgid "Image optionnelle affichée sur la carte de cette prestation (400x300px recommandé)"
+msgstr "Image optionnelle affichée sur la carte de cette prestation (400x300px recommandé)"
+
 msgid "Image page À propos"
 msgstr "صورة صفحة من نحن"
 
 msgid "Image par défaut pour le partage social (1200x630px recommandé)"
 msgstr "صورة افتراضية للمشاركة الاجتماعية (1200x630 بكسل موصى بها)"
+
+msgid "Image poster vidéo hero"
+msgstr "Image poster vidéo hero"
 
 msgid "Image principale"
 msgstr "الصورة الرئيسية"
@@ -443,10 +796,14 @@ msgstr "صور الخدمة"
 msgid "Images principales"
 msgstr "الصور الرئيسية"
 
-msgid ""
-"Immergez-vous dans nos réalisations interactives et découvrez nos projets "
-"sous tous les angles."
-msgstr "انغمس في أعمالنا التفاعلية واكتشف مشاريعنا من كل الزوايا."
+msgid "Imaginer"
+msgstr "Imaginer"
+
+msgid "Immersion totale"
+msgstr "Immersion totale"
+
+msgid "Immersion totale pour vos clients, navigable sur tous les appareils."
+msgstr "Immersion totale pour vos clients, navigable sur tous les appareils."
 
 msgid "Immobilier"
 msgstr "عقارات"
@@ -457,17 +814,68 @@ msgstr "أهمية الخدمة"
 msgid "Importance du service"
 msgstr "أهمية الخدمة"
 
-msgid "Innovation"
-msgstr "الابتكار"
+msgid "Index du site"
+msgstr "Index du site"
+
+msgid "Indiquez le sujet principal, les axes clés ou les mots-clés que l'article doit aborder."
+msgstr "Indiquez le sujet principal, les axes clés ou les mots-clés que l'article doit aborder."
+
+msgid "Indiquez votre sujet ou vos mots-clés pour que l'IA rédige un article complet, structuré et optimisé SEO pour VR Creation."
+msgstr "Indiquez votre sujet ou vos mots-clés pour que l'IA rédige un article complet, structuré et optimisé SEO pour VR Creation."
 
 msgid "Instagram"
 msgstr "إنستغرام"
 
-msgid "L'alliance entre"
-msgstr "التحالف بين"
+msgid "Intervenez-vous en dehors de Tanger ?"
+msgstr "Intervenez-vous en dehors de Tanger ?"
+
+msgid "Intéressé par ce service ?"
+msgstr "Intéressé par ce service ?"
+
+msgid "Ksar El Kébir"
+msgstr "Ksar El Kébir"
+
+msgid "L'IA Gemini rédige le titre, l'extrait et l'article structuré en Markdown. Veuillez patienter 5 à 15 secondes..."
+msgstr "L'IA Gemini rédige le titre, l'extrait et l'article structuré en Markdown. Veuillez patienter 5 à 15 secondes..."
+
+msgid "L'adresse que vous avez saisie n'existe plus ou a été déplacée. Nous vous invitons à poursuivre votre visite via les accès ci-dessous :"
+msgstr "L'adresse que vous avez saisie n'existe plus ou a été déplacée. Nous vous invitons à poursuivre votre visite via les accès ci-dessous :"
+
+msgid "L'amélioration continue des fonctionnalités et de l'expérience utilisateur de notre site internet."
+msgstr "L'amélioration continue des fonctionnalités et de l'expérience utilisateur de notre site internet."
+
+msgid "L'article sera automatiquement enregistré au statut"
+msgstr "L'article sera automatiquement enregistré au statut"
+
+msgid "L'ensemble de ce site (textes, rendus 3D, vidéos, photographies, visites virtuelles, logos, éléments graphiques) est la propriété exclusive de VR CREATION COMPANY SARL-AU ou de ses partenaires ayant autorisé son utilisation. Toute reproduction, représentation, modification ou diffusion, intégrale ou partielle, est strictement interdite sans autorisation écrite préalable."
+msgstr "L'ensemble de ce site (textes, rendus 3D, vidéos, photographies, visites virtuelles, logos, éléments graphiques) est la propriété exclusive de VR CREATION COMPANY SARL-AU ou de ses partenaires ayant autorisé son utilisation. Toute reproduction, représentation, modification ou diffusion, intégrale ou partielle, est strictement interdite sans autorisation écrite préalable."
+
+msgid "L'établissement et la transmission de devis personnalisés pour vos projets 3D, visites virtuelles ou branding."
+msgstr "L'établissement et la transmission de devis personnalisés pour vos projets 3D, visites virtuelles ou branding."
+
+msgid "La Solution"
+msgstr "La Solution"
+
+msgid "La capture 360° et la campagne de visibilité digitale ont boosté la fréquentation de notre établissement dès le lancement. Équipe réactive, matériel professionnel et accompagnement de A à Z."
+msgstr "La capture 360° et la campagne de visibilité digitale ont boosté la fréquentation de notre établissement dès le lancement. Équipe réactive, matériel professionnel et accompagnement de A à Z."
+
+msgid "La gestion de la relation commerciale, des rendez-vous et du suivi de vos projets."
+msgstr "La gestion de la relation commerciale, des rendez-vous et du suivi de vos projets."
+
+msgid "La visite virtuelle 3D est créée avant même le début du chantier à partir des plans architecturaux. Elle permet à vos acheteurs en VEFA d'explorer les futurs appartements, duplex ou villas pièce par pièce et de se projeter immédiatement."
+msgstr "La visite virtuelle 3D est créée avant même le début du chantier à partir des plans architecturaux. Elle permet à vos acheteurs en VEFA d'explorer les futurs appartements, duplex ou villas pièce par pièce et de se projeter immédiatement."
 
 msgid "Label du chiffre"
 msgstr "علامة الرقم"
+
+msgid "Langue de l'article"
+msgstr "Langue de l'article"
+
+msgid "Larache"
+msgstr "Larache"
+
+msgid "Le Contenu"
+msgstr "Le Contenu"
 
 msgid "Le Défi"
 msgstr "التحدي"
@@ -478,6 +886,33 @@ msgstr "المشكلة"
 msgid "Le Résultat"
 msgstr "النتيجة"
 
+msgid "Le scan 360° nécessite généralement 1 à 2 heures pour un espace de 100 à 250 m², sans perturber votre activité commerciale."
+msgstr "Le scan 360° nécessite généralement 1 à 2 heures pour un espace de 100 à 250 m², sans perturber votre activité commerciale."
+
+msgid "Le site est hébergé sur des serveurs haute performance administrés via cPanel & LiteSpeed Web Server, garantissant sécurité, haute disponibilité et chiffrement SSL."
+msgstr "Le site est hébergé sur des serveurs haute performance administrés via cPanel & LiteSpeed Web Server, garantissant sécurité, haute disponibilité et chiffrement SSL."
+
+msgid "Les données relatives aux prospects sont conservées pendant une durée maximale de 3 ans à compter du dernier contact émanant du prospect. Les données relatives aux clients sont conservées pendant la durée de la relation contractuelle augmentée des délais légaux de prescription."
+msgstr "Les données relatives aux prospects sont conservées pendant une durée maximale de 3 ans à compter du dernier contact émanant du prospect. Les données relatives aux clients sont conservées pendant la durée de la relation contractuelle augmentée des délais légaux de prescription."
+
+msgid "Les délais varient selon le projet : quelques jours pour un shooting photo, 1 à 3 semaines pour un branding complet, 2 à 6 semaines pour la modélisation 3D. Nous nous engageons sur un planning précis dès la validation du devis."
+msgstr "Les délais varient selon le projet : quelques jours pour un shooting photo, 1 à 3 semaines pour un branding complet, 2 à 6 semaines pour la modélisation 3D. Nous nous engageons sur un planning précis dès la validation du devis."
+
+msgid "Les informations recueillies via le formulaire de contact sont destinées exclusivement à VR Creation Company pour répondre à vos demandes de devis et d'informations. Conformément à la loi marocaine n° 09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel, vous disposez d'un droit d'accès, de rectification et d'opposition aux données vous concernant en nous contactant par email à"
+msgstr "Les informations recueillies via le formulaire de contact sont destinées exclusivement à VR Creation Company pour répondre à vos demandes de devis et d'informations. Conformément à la loi marocaine n° 09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel, vous disposez d'un droit d'accès, de rectification et d'opposition aux données vous concernant en nous contactant par email à"
+
+msgid "Les maquettes physiques coûtent cher et prennent de nombreuses semaines à fabriquer."
+msgstr "Les maquettes physiques coûtent cher et prennent de nombreuses semaines à fabriquer."
+
+msgid "Les piliers de notre engagement"
+msgstr "Les piliers de notre engagement"
+
+msgid "Les plans 2D ne parlent qu'aux architectes, pas aux acheteurs finaux."
+msgstr "Les plans 2D ne parlent qu'aux architectes, pas aux acheteurs finaux."
+
+msgid "Limite de requêtes : %(msg)s"
+msgstr "Limite de requêtes : %(msg)s"
+
 msgid "LinkedIn"
 msgstr "لينكد إن"
 
@@ -487,11 +922,32 @@ msgstr "قراءة الدراسة"
 msgid "Lire la suite"
 msgstr "اقرأ المزيد"
 
+msgid "Localisation VR Creation — Tanger, Maroc"
+msgstr "Localisation VR Creation — Tanger, Maroc"
+
 msgid "Logo"
 msgstr "شعار"
 
+msgid "Logo, charte graphique, supports print et digitaux."
+msgstr "Logo, charte graphique, supports print et digitaux."
+
+msgid "Longueur cible"
+msgstr "Longueur cible"
+
 msgid "Lu"
 msgstr "مقروء"
+
+msgid "Légal & Sécurité"
+msgstr "Légal & Sécurité"
+
+msgid "M'diq"
+msgstr "M'diq"
+
+msgid "Marketing digital"
+msgstr "Marketing digital"
+
+msgid "Marketing digital & leads"
+msgstr "Marketing digital & leads"
 
 msgid "Membre de l\\'équipe"
 msgstr "Membre de l\\'équipe"
@@ -499,15 +955,10 @@ msgstr "Membre de l\\'équipe"
 msgid "Membres de l\\'équipe"
 msgstr "Membres de l\\'équipe"
 
-msgid "Mentions Légales"
-msgstr "إشعارات قانونية"
-
 msgid "Mentions légales"
 msgstr "إشعارات قانونية"
 
-msgid ""
-"Merci de nous avoir contactés. Nous avons bien reçu votre message et nous "
-"vous répondrons dans les plus brefs délais."
+msgid "Merci de nous avoir contactés. Nous avons bien reçu votre message et nous vous répondrons dans les plus brefs délais."
 msgstr "شكراً لتواصلكم معنا. لقد تلقينا رسالتكم وسنرد عليكم في أقرب وقت ممكن."
 
 msgid "Message"
@@ -525,6 +976,9 @@ msgstr "رسائل الاتصال"
 msgid "Mis en avant"
 msgstr "مميز"
 
+msgid "Mise en avant"
+msgstr "Mise en avant"
+
 msgid "Mode Cyber-VR"
 msgstr "وضع الواقع الافتراضي السيبراني"
 
@@ -536,6 +990,24 @@ msgstr "عُدل في"
 
 msgid "Modélisation 3D"
 msgstr "النمذجة ثلاثية الأبعاد"
+
+msgid "Modélisation 3D & visites virtuelles à Tanger — VR Creation"
+msgstr "Modélisation 3D & visites virtuelles à Tanger — VR Creation"
+
+msgid "Modélisation 3D architecturale"
+msgstr "Modélisation 3D architecturale"
+
+msgid "Modélisation 3D et visites virtuelles immersives à Tanger"
+msgstr "Modélisation 3D et visites virtuelles immersives à Tanger"
+
+msgid "Modélisation 3D, photographie, visites virtuelles, branding et communication visuelle — nous transformons vos projets en expériences visuelles qui séduisent et convertissent."
+msgstr "Modélisation 3D, photographie, visites virtuelles, branding et communication visuelle — nous transformons vos projets en expériences visuelles qui séduisent et convertissent."
+
+msgid "Mots-clés"
+msgstr "Mots-clés"
+
+msgid "Mots-clés séparés par des virgules pour cette page (ex: modélisation 3D Tanger, visite virtuelle Maroc)"
+msgstr "Mots-clés séparés par des virgules pour cette page (ex: modélisation 3D Tanger, visite virtuelle Maroc)"
 
 msgid "Métadonnées"
 msgstr "البيانات الوصفية"
@@ -552,32 +1024,44 @@ msgstr "اللقب"
 msgid "Nom complet"
 msgstr "الاسم الكامل"
 
+msgid "Nom complet, adresse email professionnelle ou personnelle, numéro de téléphone, secteur d'activité, objet de la demande et descriptif du projet."
+msgstr "Nom complet, adresse email professionnelle ou personnelle, numéro de téléphone, secteur d'activité, objet de la demande et descriptif du projet."
+
+msgid "Nom de l\\'auteur"
+msgstr "Nom de l\\'auteur"
+
 msgid "Nom du site"
 msgstr "اسم الموقع"
 
 msgid "Nos Coordonnées"
 msgstr "معلومات الاتصال"
 
-msgid "Nos Points Forts"
-msgstr "نقاط قوتنا"
+msgid "Nos Forces"
+msgstr "Nos Forces"
 
-msgid "Nos Services"
-msgstr "خدماتنا"
+msgid "Nos Solutions"
+msgstr "Nos Solutions"
 
-msgid "Nos services"
-msgstr "خدماتنا"
+msgid "Nos bureaux se situent à Ibn Batouta bureaux, Avenue Youssef Ibn Tachfine, Tanger 90000, Maroc. Nous recevons sur rendez-vous."
+msgstr "Nos bureaux se situent à Ibn Batouta bureaux, Avenue Youssef Ibn Tachfine, Tanger 90000, Maroc. Nous recevons sur rendez-vous."
 
-msgid "Notre Expertise"
-msgstr "خبراتنا"
+msgid "Nos campagnes intègrent des critères de ciblage stricts (revenus, intention d'achat, localisation Maroc & MRE) et des formulaires avec pré-qualification budgétaire avant transmission à votre équipe."
+msgstr "Nos campagnes intègrent des critères de ciblage stricts (revenus, intention d'achat, localisation Maroc & MRE) et des formulaires avec pré-qualification budgétaire avant transmission à votre équipe."
 
-msgid "Notre Histoire"
-msgstr "تاريخنا"
+msgid "Nos offres exclusives pour accélérer vos projets"
+msgstr "Nos offres exclusives pour accélérer vos projets"
 
-msgid "Notre Mission"
-msgstr "مهمتنا"
+msgid "Nos packs & offres exclusives"
+msgstr "Nos packs & offres exclusives"
 
-msgid "Notre Portfolio"
-msgstr "معرض أعمالنا"
+msgid "Nos valeurs"
+msgstr "Nos valeurs"
+
+msgid "Notre Différence"
+msgstr "Notre Différence"
+
+msgid "Notre Engagement"
+msgstr "Notre Engagement"
 
 msgid "Notre Processus"
 msgstr "عمليتنا"
@@ -585,24 +1069,68 @@ msgstr "عمليتنا"
 msgid "Notre Solution"
 msgstr "حلنا"
 
-msgid ""
-"Notre équipe d'experts passionnés met son savoir-faire technique et sa "
-"sensibilité artistique à votre service pour créer des expériences visuelles "
-"immersives et impactantes."
-msgstr ""
-"فريقنا من الخبراء الشغوفين يضع خبرته التقنية وحسه الفني في خدمتك لإنشاء "
-"تجارب بصرية غامرة ومؤثرة."
+msgid "Notre approche"
+msgstr "Notre approche"
+
+msgid "Notre expertise"
+msgstr "Notre expertise"
+
+msgid "Notre mission : allier créativité, technologie et rigueur pour transformer chaque projet en une expérience visuelle mémorable. De la modélisation 3D à la photographie professionnelle, du branding à l'animation, nous offrons une palette complète de services adaptés aux besoins du marché local et régional."
+msgstr "Notre mission : allier créativité, technologie et rigueur pour transformer chaque projet en une expérience visuelle mémorable. De la modélisation 3D à la photographie professionnelle, du branding à l'animation, nous offrons une palette complète de services adaptés aux besoins du marché local et régional."
+
+msgid "Notre méthode"
+msgstr "Notre méthode"
+
+msgid "Notre méthode de travail"
+msgstr "Notre méthode de travail"
+
+msgid "Notre équipe technique a été informée et résout le problème. Veuillez recharger la page dans un instant ou revenir à l'accueil."
+msgstr "Notre équipe technique a été informée et résout le problème. Veuillez recharger la page dans un instant ou revenir à l'accueil."
+
+msgid "Noté 4.9/5 étoiles par les professionnels de l'immobilier et du commerce à Tanger."
+msgstr "Noté 4.9/5 étoiles par les professionnels de l'immobilier et du commerce à Tanger."
 
 msgid "Nous Contacter"
 msgstr "اتصل بنا"
 
+msgid "Nous accompagnons les entreprises à chaque étape de leur projet : visualisation, valorisation, expérience immersive et communication digitale. L'objectif : transformer votre vision en un véritable outil de croissance."
+msgstr "Nous accompagnons les entreprises à chaque étape de leur projet : visualisation, valorisation, expérience immersive et communication digitale. L'objectif : transformer votre vision en un véritable outil de croissance."
+
+msgid "Nous analysons votre projet et mettons en place la stratégie la plus efficace. Vous ne payez rien — nous ne gagnons que si vous vendez."
+msgstr "Nous analysons votre projet et mettons en place la stratégie la plus efficace. Vous ne payez rien — nous ne gagnons que si vous vendez."
+
+msgid "Nous collectons uniquement les données strictement nécessaires à l'exercice de notre activité professionnelle et au traitement de vos demandes :"
+msgstr "Nous collectons uniquement les données strictement nécessaires à l'exercice de notre activité professionnelle et au traitement de vos demandes :"
+
+msgid "Nous construisons son identité et son univers de marque."
+msgstr "Nous construisons son identité et son univers de marque."
+
 msgid "Nous contacter"
 msgstr "اتصل بنا"
 
-msgid ""
-"Nous transformons vos visions en réalités immersives avec une approche "
-"centrée sur l'excellence."
-msgstr "نحول رؤاك إلى واقع غامر بنهج يركز على التميز."
+msgid "Nous couvrons Tanger et le Nord du Maroc"
+msgstr "Nous couvrons Tanger et le Nord du Maroc"
+
+msgid "Nous créons des contenus 3D et immersifs pour le présenter."
+msgstr "Nous créons des contenus 3D et immersifs pour le présenter."
+
+msgid "Nous créons des expériences visuelles adaptées à chaque secteur pour valoriser vos projets et accélérer vos ventes."
+msgstr "Nous créons des expériences visuelles adaptées à chaque secteur pour valoriser vos projets et accélérer vos ventes."
+
+msgid "Nous créons son écosystème digital."
+msgstr "Nous créons son écosystème digital."
+
+msgid "Nous donnons forme au projet avant sa réalisation."
+msgstr "Nous donnons forme au projet avant sa réalisation."
+
+msgid "Nous signaler un problème"
+msgstr "Nous signaler un problème"
+
+msgid "Nous sélectionnons le meilleur pour vous"
+msgstr "Nous sélectionnons le meilleur pour vous"
+
+msgid "Nous transformons l'intérêt en prospects commerciaux."
+msgstr "Nous transformons l'intérêt en prospects commerciaux."
 
 msgid "Nous trouver"
 msgstr "موقعنا"
@@ -610,11 +1138,65 @@ msgstr "موقعنا"
 msgid "Numéro WhatsApp au format international (ex: +33612345678)"
 msgstr "رقم واتساب بالصيغة الدولية (مثال: +33612345678)"
 
+msgid "Offre Exclusive"
+msgstr "Offre Exclusive"
+
+msgid "Offre sur commission — Zéro investissement"
+msgstr "Offre sur commission — Zéro investissement"
+
+msgid "Offres Promotionnelles"
+msgstr "Offres Promotionnelles"
+
+msgid "Offres Stratégiques"
+msgstr "Offres Stratégiques"
+
+msgid "Optimisation SEO"
+msgstr "Optimisation SEO"
+
 msgid "Ordre"
 msgstr "الترتيب"
 
-msgid "Page introuvable"
-msgstr "الصفحة غير موجودة"
+msgid "Oui, nos devis incluent toujours un cycle de retouches pour affiner les textures, éclairages, mobilier et végétations selon vos exigences."
+msgstr "Oui, nos devis incluent toujours un cycle de retouches pour affiner les textures, éclairages, mobilier et végétations selon vos exigences."
+
+msgid "Oui, nous couvrons l'ensemble du Nord du Maroc : Tétouan, Asilah, Larache, Chefchaouen, Al Hoceima et les villes environnantes. Pour la modélisation 3D, le branding et l'animation, nous travaillons également à distance pour tout le Maroc."
+msgstr "Oui, nous couvrons l'ensemble du Nord du Maroc : Tétouan, Asilah, Larache, Chefchaouen, Al Hoceima et les villes environnantes. Pour la modélisation 3D, le branding et l'animation, nous travaillons également à distance pour tout le Maroc."
+
+msgid "Oui, nous intervenons dans tout le Nord du Maroc (Tétouan, Chefchaouen, Asilah, Larache, Al Hoceima) et à distance pour les projets de modélisation 3D."
+msgstr "Oui, nous intervenons dans tout le Nord du Maroc (Tétouan, Chefchaouen, Asilah, Larache, Al Hoceima) et à distance pour les projets de modélisation 3D."
+
+msgid "Oui, nous travaillons aussi bien avec les entreprises (promoteurs, commerces, restaurants, agences) qu'avec les particuliers (projets de villa, événements privés)."
+msgstr "Oui, nous travaillons aussi bien avec les entreprises (promoteurs, commerces, restaurants, agences) qu'avec les particuliers (projets de villa, événements privés)."
+
+msgid "Oui, nous vous fournissons le code d'intégration iframe prêt à l'emploi et compatible avec tous les gestionnaires de contenu (WordPress, Django, etc.)."
+msgstr "Oui, nous vous fournissons le code d'intégration iframe prêt à l'emploi et compatible avec tous les gestionnaires de contenu (WordPress, Django, etc.)."
+
+msgid "Oups ! Cette page est introuvable."
+msgstr "Oups ! Cette page est introuvable."
+
+msgid "Outils professionnels en 3D, photo, vidéo et design pour des résultats optimaux."
+msgstr "Outils professionnels en 3D, photo, vidéo et design pour des résultats optimaux."
+
+msgid "Où se trouvent vos bureaux ?"
+msgstr "Où se trouvent vos bureaux ?"
+
+msgid "Pack"
+msgstr "Pack"
+
+msgid "Pack Spécial Promoteurs Débutants"
+msgstr "Pack Spécial Promoteurs Débutants"
+
+msgid "Packs & Offres"
+msgstr "Packs & Offres"
+
+msgid "Page introuvable (404) | VR Creation"
+msgstr "Page introuvable (404) | VR Creation"
+
+msgid "Pages Principales"
+msgstr "Pages Principales"
+
+msgid "Paramètres du Pack"
+msgstr "Paramètres du Pack"
 
 msgid "Paramètres du site"
 msgstr "إعدادات الموقع"
@@ -622,15 +1204,17 @@ msgstr "إعدادات الموقع"
 msgid "Partager :"
 msgstr "مشاركة:"
 
-msgid ""
-"Permettent de mesurer l'audience et d'analyser l'utilisation du site pour "
-"l'améliorer."
+msgid "Permettent de mesurer l'audience et d'analyser l'utilisation du site pour l'améliorer."
 msgstr "تتيح قياس الجمهور وتحليل استخدام الموقع لتحسينه."
 
-msgid ""
-"Permettent de vous proposer des publicités personnalisées et de partager du "
-"contenu."
+msgid "Permettent de vous proposer des publicités personnalisées et de partager du contenu."
 msgstr "تتيح تقديم إعلانات مخصصة ومشاركة المحتوى."
+
+msgid "Personnalisable"
+msgstr "Personnalisable"
+
+msgid "Personnalisation"
+msgstr "Personnalisation"
 
 msgid "Personnaliser"
 msgstr "تخصيص"
@@ -638,41 +1222,101 @@ msgstr "تخصيص"
 msgid "Personnaliser mes choix"
 msgstr "تخصيص خياراتي"
 
+msgid "Personnalisez votre pack"
+msgstr "Personnalisez votre pack"
+
+msgid "Persuasif & Commercial"
+msgstr "Persuasif & Commercial"
+
+msgid "Peut-on commander des modifications après la première version ?"
+msgstr "Peut-on commander des modifications après la première version ?"
+
+msgid "Peut-on intégrer la visite sur notre site web ?"
+msgstr "Peut-on intégrer la visite sur notre site web ?"
+
 msgid "Photo"
 msgstr "صورة"
+
+msgid "Photographie & drone"
+msgstr "Photographie & drone"
+
+msgid "Photographie professionnelle"
+msgstr "Photographie professionnelle"
 
 msgid "Pied de page"
 msgstr "تذييل الصفحة"
 
+msgid "Plan du site"
+msgstr "Plan du site"
+
+msgid "Plans 2D abstraits"
+msgstr "Plans 2D abstraits"
+
+msgid "Point de comparaison"
+msgstr "Point de comparaison"
+
 msgid "Point fort"
 msgstr "نقطة قوة"
+
+msgid "Points de comparaison"
+msgstr "Points de comparaison"
 
 msgid "Points forts"
 msgstr "نقاط القوة"
 
-msgid "Politique de Confidentialité"
-msgstr "سياسة الخصوصية"
+msgid "Politique de confidentialité"
+msgstr "Politique de confidentialité"
 
-msgid "Politique de Cookies"
-msgstr "سياسة ملفات تعريف الارتباط"
+msgid "Politique de confidentialité (Loi 09-08)"
+msgstr "Politique de confidentialité (Loi 09-08)"
 
-msgid "Portfolio"
-msgstr "الأعمال"
+msgid "Portfolio & Réalisations"
+msgstr "Portfolio & Réalisations"
 
-msgid "Pourquoi choisir VR Creation ?"
-msgstr "لماذا تختار VR Creation؟"
+msgid "Portfolio Immersif"
+msgstr "Portfolio Immersif"
+
+msgid "Pour exercer ces droits, vous pouvez nous adresser une demande accompagnée d'une preuve d'identité par email à :"
+msgstr "Pour exercer ces droits, vous pouvez nous adresser une demande accompagnée d'une preuve d'identité par email à :"
+
+msgid "Pour modéliser votre projet avec précision, nous avons besoin des plans architecturaux 2D (fichiers DWG ou PDF vectoriels), des façades, coupes et idéalement du plan de masse avec les intentions de matériaux."
+msgstr "Pour modéliser votre projet avec précision, nous avons besoin des plans architecturaux 2D (fichiers DWG ou PDF vectoriels), des façades, coupes et idéalement du plan de masse avec les intentions de matériaux."
+
+msgid "Pour quels espaces recommandez-vous la capture 360° réelle ?"
+msgstr "Pour quels espaces recommandez-vous la capture 360° réelle ?"
+
+msgid "Pourquoi Nous Choisir"
+msgstr "Pourquoi Nous Choisir"
+
+msgid "Pourquoi choisir notre solution"
+msgstr "Pourquoi choisir notre solution"
+
+msgid "Pourquoi nous choisir ?"
+msgstr "Pourquoi nous choisir ?"
+
+msgid "Prestation"
+msgstr "Prestation"
+
+msgid "Prestation incluse"
+msgstr "Prestation incluse"
+
+msgid "Prestations incluses"
+msgstr "Prestations incluses"
 
 msgid "Problème / Contexte"
 msgstr "المشكلة / السياق"
 
-msgid "Professionnalisme"
-msgstr "الاحترافية"
+msgid "Processus"
+msgstr "Processus"
+
+msgid "Professionnel & Expert"
+msgstr "Professionnel & Expert"
 
 msgid "Projet"
 msgstr "مشروع"
 
-msgid "Projet Similaire ?"
-msgstr "مشروع مماثل؟"
+msgid "Projet Similaire en vue ?"
+msgstr "Projet Similaire en vue ?"
 
 msgid "Projet lié"
 msgstr "مشروع مرتبط"
@@ -680,11 +1324,32 @@ msgstr "مشروع مرتبط"
 msgid "Projets"
 msgstr "مشاريع"
 
+msgid "Projets 3D & Visites immersives réalisés"
+msgstr "Projets 3D & Visites immersives réalisés"
+
+msgid "Projets Connexes"
+msgstr "Projets Connexes"
+
+msgid "Projets Récents"
+msgstr "Projets Récents"
+
+msgid "Promoteur VEFA"
+msgstr "Promoteur VEFA"
+
+msgid "Promoteurs en VEFA, architectes et chefs d'entreprise témoignent de l'impact de nos rendus 3D et visites immersives sur leurs ventes."
+msgstr "Promoteurs en VEFA, architectes et chefs d'entreprise témoignent de l'impact de nos rendus 3D et visites immersives sur leurs ventes."
+
+msgid "Promotion"
+msgstr "Promotion"
+
+msgid "Promotions"
+msgstr "Promotions"
+
 msgid "Propriété intellectuelle"
 msgstr "الملكية الفكرية"
 
-msgid "Précision"
-msgstr "الدقة"
+msgid "Protection des données personnelles (Loi 09-08)"
+msgstr "Protection des données personnelles (Loi 09-08)"
 
 msgid "Précédent"
 msgstr "السابق"
@@ -692,38 +1357,71 @@ msgstr "السابق"
 msgid "Préférences de cookies"
 msgstr "تفضيلات ملفات تعريف الارتباط"
 
-msgid "Prêt à sublimer votre prochain projet ?"
-msgstr "مستعد للارتقاء بمشروعك القادم؟"
+msgid "Présentation"
+msgstr "Présentation"
+
+msgid "Présentation du service"
+msgstr "Présentation du service"
+
+msgid "Prêt à donner vie à votre projet ?"
+msgstr "Prêt à donner vie à votre projet ?"
 
 msgid "Publié"
 msgstr "منشور"
 
+msgid "Pédagogique & Informatif"
+msgstr "Pédagogique & Informatif"
+
 msgid "Qu'est-ce qu'un cookie ?"
 msgstr "ما هو ملف تعريف الارتباط؟"
+
+msgid "Qualité premium, tarifs compétitifs"
+msgstr "Qualité premium, tarifs compétitifs"
+
+msgid "Quel est le délai pour lancer une première campagne ?"
+msgstr "Quel est le délai pour lancer une première campagne ?"
+
+msgid "Quelle est la spécificité d'une visite virtuelle 3D sur plan ?"
+msgstr "Quelle est la spécificité d'une visite virtuelle 3D sur plan ?"
 
 msgid "Quels cookies utilisons-nous ?"
 msgstr "ما هي ملفات تعريف الارتباط التي نستخدمها؟"
 
-msgid "Question de sécurité"
-msgstr "سؤال أمان"
+msgid "Quels documents sont nécessaires pour démarrer un projet 3D ?"
+msgstr "Quels documents sont nécessaires pour démarrer un projet 3D ?"
 
-msgid "Reconnue"
-msgstr "معترف بها"
+msgid "Quels sont les délais de livraison des rendus 3D à Tanger ?"
+msgstr "Quels sont les délais de livraison des rendus 3D à Tanger ?"
+
+msgid "Quels sont vos délais de livraison ?"
+msgstr "Quels sont vos délais de livraison ?"
+
+msgid "Questions fréquentes"
+msgstr "Questions fréquentes"
+
+msgid "Questions fréquentes sur ce service"
+msgstr "Questions fréquentes sur ce service"
+
+msgid "Qui sommes-nous ?"
+msgstr "Qui sommes-nous ?"
 
 msgid "Refuser"
 msgstr "رفض"
 
-msgid "Rendu et Post-production"
-msgstr "التصيير وما بعد الإنتاج"
+msgid "Registre du Commerce (RC)"
+msgstr "Registre du Commerce (RC)"
 
-msgid "Rentabilité"
-msgstr "الربحية"
+msgid "Rendu 3D photoréaliste d'une villa en construction à Tanger"
+msgstr "Rendu 3D photoréaliste d'une villa en construction à Tanger"
+
+msgid "Rendus photoréalistes, maquettes interactives, perspectives architecturales."
+msgstr "Rendus photoréalistes, maquettes interactives, perspectives architecturales."
 
 msgid "Requis pour le bon fonctionnement et la sécurité du site."
 msgstr "مطلوبة للتشغيل السليم للموقع وأمانه."
 
-msgid "Respect des délais et accompagnement sur-mesure à chaque étape."
-msgstr "الالتزام بالمواعيد والمرافقة المخصصة في كل مرحلة."
+msgid "Respect des délais de livraison"
+msgstr "Respect des délais de livraison"
 
 msgid "Retail / Commerce"
 msgstr "تجارة التجزئة"
@@ -740,14 +1438,20 @@ msgstr "العودة للأعلى"
 msgid "Retour à l'accueil"
 msgstr "العودة للرئيسية"
 
+msgid "Retours d'expérience de nos clients à Tanger"
+msgstr "Retours d'expérience de nos clients à Tanger"
+
+msgid "Retrouvez l'ensemble des pages, services et ressources du site VR Creation Company à Tanger."
+msgstr "Retrouvez l'ensemble des pages, services et ressources du site VR Creation Company à Tanger."
+
 msgid "Réalisations"
 msgstr "الأعمال"
 
-msgid "Réalité Virtuelle"
-msgstr "الواقع الافتراضي"
+msgid "Réalisations (Portfolio)"
+msgstr "Réalisations (Portfolio)"
 
-msgid "Réponse incorrecte. Veuillez réessayer."
-msgstr "إجابة خاطئة. يرجى المحاولة مرة أخرى."
+msgid "Rédaction par IA en cours..."
+msgstr "Rédaction par IA en cours..."
 
 msgid "Réseaux sociaux"
 msgstr "شبكات التواصل الاجتماعي"
@@ -757,6 +1461,9 @@ msgstr "النتيجة"
 
 msgid "Résultat obtenu"
 msgstr "النتيجة المحققة"
+
+msgid "Résumé affiché dans la grille des promotions"
+msgstr "Résumé affiché dans la grille des promotions"
 
 msgid "Résumé affiché dans les cartes (max 300 caractères)"
 msgstr "ملخص يظهر في البطاقات (حد أقصى 300 حرف)"
@@ -779,6 +1486,15 @@ msgstr "SEO — صفحة ثابتة"
 msgid "SEO — Pages statiques"
 msgstr "SEO — صفحات ثابتة"
 
+msgid "Sans VR Creation"
+msgstr "Sans VR Creation"
+
+msgid "Sans visuel fort, vos prospects hésitent, comparent et partent chez la concurrence qui a déjà de belles images."
+msgstr "Sans visuel fort, vos prospects hésitent, comparent et partent chez la concurrence qui a déjà de belles images."
+
+msgid "Satisfaction promoteurs & architectes"
+msgstr "Satisfaction promoteurs & architectes"
+
 msgid "Secteur"
 msgstr "القطاع"
 
@@ -788,21 +1504,62 @@ msgstr "Secteur d\\'activité"
 msgid "Secteurs"
 msgstr "القطاعات"
 
+msgid "Section Accroche / Hero"
+msgstr "Section Accroche / Hero"
+
+msgid "Section Appel à l\\'action (CTA)"
+msgstr "Section Appel à l\\'action (CTA)"
+
+msgid "Section Problème"
+msgstr "Section Problème"
+
+msgid "Section Solution"
+msgstr "Section Solution"
+
 msgid "Service"
 msgstr "خدمة"
+
+msgid "Service Professionnel"
+msgstr "Service Professionnel"
+
+msgid "Service client"
+msgstr "Service client"
 
 msgid "Services"
 msgstr "الخدمات"
 
+msgid "Services & Solutions"
+msgstr "Services & Solutions"
+
+msgid "Services inclus"
+msgstr "Services inclus"
+
+msgid "Services inclus dans ce pack. Pour les packs personnalisables, ces services sont pré-cochés."
+msgstr "Services inclus dans ce pack. Pour les packs personnalisables, ces services sont pré-cochés."
+
+msgid "Services inclus dans le pack"
+msgstr "Services inclus dans le pack"
+
+msgid "Services sélectionnés"
+msgstr "Services sélectionnés"
+
+msgid "Si coché, le client peut personnaliser les services inclus. Décocher pour les offres sur commission où VR Creation décide de la stratégie."
+msgstr "Si coché, le client peut personnaliser les services inclus. Décocher pour les offres sur commission où VR Creation décide de la stratégie."
+
 msgid "Simule un espace virtuel 3D (ambiance néon et particules cosmiques)."
 msgstr "يحاكي مساحة ثلاثية الأبعاد تفاعلية (تصميم نيون وجزيئات كونية)."
 
-msgid ""
-"Simule un espace virtuel 3D en transformant le site avec un design néon et "
-"des particules cosmiques flottantes !"
-msgstr ""
-"يحاكي مساحة ثلاثية الأبعاد تفاعلية عن طريق تحويل الموقع بتصميم نيون وجزيئات "
-"كونية عائمة!"
+msgid "Simule un espace virtuel 3D en transformant le site avec un design néon et des particules cosmiques flottantes !"
+msgstr "يحاكي مساحة ثلاثية الأبعاد تفاعلية عن طريق تحويل الموقع بتصميم نيون وجزيئات كونية عائمة!"
+
+msgid "Site Web"
+msgstr "Site Web"
+
+msgid "Site web officiel"
+msgstr "Site web officiel"
+
+msgid "Siège social"
+msgstr "Siège social"
 
 msgid "Slogan"
 msgstr "شعار"
@@ -810,21 +1567,53 @@ msgstr "شعار"
 msgid "Slug"
 msgstr "Slug"
 
+msgid "Société à Responsabilité Limitée d'Associé Unique au capital social enregistré à Tanger."
+msgstr "Société à Responsabilité Limitée d'Associé Unique au capital social enregistré à Tanger."
+
 msgid "Solution apportée"
 msgstr "الحل المقدم"
+
+msgid "Solutions 3D & Digitales"
+msgstr "Solutions 3D & Digitales"
+
+msgid "Solutions Sur Mesure"
+msgstr "Solutions Sur Mesure"
+
+msgid "Solutions visuelles & technologiques pour valoriser vos projets à Tanger"
+msgstr "Solutions visuelles & technologiques pour valoriser vos projets à Tanger"
+
+msgid "Sous-titre / Explication courte"
+msgstr "Sous-titre / Explication courte"
+
+msgid "Sous-titre hero accueil"
+msgstr "Sous-titre hero accueil"
 
 msgid "Spam detected."
 msgstr "تم اكتشاف رسائل غير مرغوب فيها."
 
+msgid "Standard (~600 à 800 mots)"
+msgstr "Standard (~600 à 800 mots)"
+
 msgid "Statut"
 msgstr "الحالة"
 
-msgid ""
-"Sublimer vos projets par des approches visuelles innovantes et esthétiques."
-msgstr "تحسين مشاريعك بأساليب بصرية مبتكرة وجمالية."
+msgid "Storytelling & Inspirant"
+msgstr "Storytelling & Inspirant"
 
-msgid "Sublimez vos projets avec la"
-msgstr "ارتقِ بمشاريعك مع"
+msgid "Stratégie de contenu, lead generation, présence digitale."
+msgstr "Stratégie de contenu, lead generation, présence digitale."
+
+msgid "Studio de création 3D et audiovisuel VR Creation à Tanger"
+msgstr "Studio de création 3D et audiovisuel VR Creation à Tanger"
+
+msgid "Studio de création 3D, visites virtuelles immersives et production visuelle haut de gamme pour l'immobilier et l'architecture à Tanger et dans le Nord du Maroc."
+msgstr "Studio de création 3D, visites virtuelles immersives et production visuelle haut de gamme pour l'immobilier et l'architecture à Tanger et dans le Nord du Maroc."
+
+msgid "Succès stratégique"
+msgstr "Succès stratégique"
+
+msgid "Succès stratégiques"
+msgstr "Succès stratégiques"
 
 msgid "Suivant"
 msgstr "التالي"
@@ -838,8 +1627,56 @@ msgstr "الموضوع"
 msgid "Sujet de votre message"
 msgstr "موضوع رسالتك"
 
+msgid "Sujet principal / Mots-clés"
+msgstr "Sujet principal / Mots-clés"
+
+msgid "Sur commission"
+msgstr "Sur commission"
+
+msgid "Synergie unique"
+msgstr "Synergie unique"
+
+msgid "Sécurité & Contrôle éditorial :"
+msgstr "Sécurité & Contrôle éditorial :"
+
+msgid "Sélectionnez ou désélectionnez les services selon vos besoins. Les services inclus dans le pack sont pré-cochés."
+msgstr "Sélectionnez ou désélectionnez les services selon vos besoins. Les services inclus dans le pack sont pré-cochés."
+
+msgid "Sélectionné"
+msgstr "Sélectionné"
+
+msgid "Tanger"
+msgstr "Tanger"
+
+msgid "Tarif"
+msgstr "Tarif"
+
+msgid "Tarif / Condition de l\\'offre"
+msgstr "Tarif / Condition de l\\'offre"
+
+msgid "Taux de commission"
+msgstr "Taux de commission"
+
+msgid "Taxe Professionnelle / Patente"
+msgstr "Taxe Professionnelle / Patente"
+
+msgid "Technique & Spécialisé 3D/VR"
+msgstr "Technique & Spécialisé 3D/VR"
+
+msgid "Technologies de pointe"
+msgstr "Technologies de pointe"
+
 msgid "Temps de lecture (min)"
 msgstr "وقت القراءة (دقيقة)"
+
+msgid "Texte CTA"
+msgstr "Texte CTA"
+
+msgid "Texte Solution"
+msgstr "Texte Solution"
+
+msgid "Texte affiché sous le titre du hero"
+msgstr "Texte affiché sous le titre du hero"
 
 msgid "Texte alternatif"
 msgstr "نص بديل"
@@ -847,8 +1684,14 @@ msgstr "نص بديل"
 msgid "Texte copyright"
 msgstr "نص حقوق النشر"
 
+msgid "Texte du Badge"
+msgstr "Texte du Badge"
+
 msgid "Texte du pied de page"
 msgstr "نص التذييل"
+
+msgid "Texte introduction Problème"
+msgstr "Texte introduction Problème"
 
 msgid "TikTok"
 msgstr "تيك توك"
@@ -856,8 +1699,35 @@ msgstr "تيك توك"
 msgid "Titre"
 msgstr "عنوان"
 
+msgid "Titre CTA"
+msgstr "Titre CTA"
+
+msgid "Titre Problème"
+msgstr "Titre Problème"
+
 msgid "Titre SEO"
 msgstr "عنوان SEO"
+
+msgid "Titre Solution"
+msgstr "Titre Solution"
+
+msgid "Titre de la prestation"
+msgstr "Titre de la prestation"
+
+msgid "Titre de l’étape"
+msgstr "Titre de l’étape"
+
+msgid "Titre hero accueil"
+msgstr "Titre hero accueil"
+
+msgid "Titre pour les moteurs de recherche (max 70 caractères). Laisser vide pour utiliser le titre du service."
+msgstr "Titre pour les moteurs de recherche (max 70 caractères). Laisser vide pour utiliser le titre du service."
+
+msgid "Titre principal affiché sur le hero de la page d\\'accueil"
+msgstr "Titre principal affiché sur le hero de la page d\\'accueil"
+
+msgid "Ton de rédaction"
+msgstr "Ton de rédaction"
 
 msgid "Toujours actif"
 msgstr "نشط دائماً"
@@ -868,6 +1738,12 @@ msgstr "سياحة"
 msgid "Tous droits réservés."
 msgstr "جميع الحقوق محفوظة."
 
+msgid "Tous nos services"
+msgstr "Tous nos services"
+
+msgid "Travaillez-vous avec les particuliers ?"
+msgstr "Travaillez-vous avec les particuliers ?"
+
 msgid "Twitter / X"
 msgstr "تويتر / X"
 
@@ -876,6 +1752,15 @@ msgstr "نوع المحتوى"
 
 msgid "Téléphone"
 msgstr "الهاتف"
+
+msgid "Tétouan"
+msgstr "Tétouan"
+
+msgid "UN PROJET NE SE VEND PAS UNIQUEMENT AVEC DES MOTS."
+msgstr "UN PROJET NE SE VEND PAS UNIQUEMENT AVEC DES MOTS."
+
+msgid "UN PROJET. UNE VISION. UN SEUL PARTENAIRE."
+msgstr "UN PROJET. UNE VISION. UN SEUL PARTENAIRE."
 
 msgid "URL Google Maps (embed)"
 msgstr "رابط خرائط جوجل (مضمن)"
@@ -889,47 +1774,47 @@ msgstr "رابط iframe خرائط جوجل لصفحة الاتصال"
 msgid "URL iframe de la visite virtuelle 360° (Pannellum, Matterport, etc.)"
 msgstr "رابط iframe للجولة الافتراضية 360°"
 
+msgid "URL ou ancre (ex: #services, /contact/)"
+msgstr "URL ou ancre (ex: #services, /contact/)"
+
+msgid "URL ou ancre (ex: /contact/)"
+msgstr "URL ou ancre (ex: /contact/)"
+
 msgid "URL visite virtuelle"
 msgstr "رابط الجولة الافتراضية"
 
-msgid ""
-"Un cookie est un petit fichier texte déposé sur votre terminal (ordinateur, "
-"tablette ou smartphone) lors de la visite d'un site internet. Il permet de "
-"conserver des données utilisateur afin de faciliter la navigation et de "
-"permettre certaines fonctionnalités."
-msgstr ""
-"ملف تعريف الارتباط (الكوكيز) هو ملف نصي صغير يتم حفظه على جهازك (كمبيوتر، "
-"جهاز لوحي أو هاتف ذكي) عند زيارة موقع ويب. وهو يسمح بحفظ بيانات المستخدم "
-"لتسهيل التصفح وتفعيل ميزات معينة."
+msgid "Un accompagnement structuré en 5 étapes pour transformer votre projet en succès."
+msgstr "Un accompagnement structuré en 5 étapes pour transformer votre projet en succès."
 
-msgid "Un souci du détail minutieux pour des rendus ultra-réalistes."
-msgstr "اهتمام دقيق بالتفاصيل لتصييرات فائقة الواقعية."
+msgid "Un cookie est un petit fichier texte déposé sur votre terminal (ordinateur, tablette ou smartphone) lors de la visite d'un site internet. Il permet de conserver des données utilisateur afin de faciliter la navigation et de permettre certaines fonctionnalités."
+msgstr "ملف تعريف الارتباط (الكوكيز) هو ملف نصي صغير يتم حفظه على جهازك (كمبيوتر، جهاز لوحي أو هاتف ذكي) عند زيارة موقع ويب. وهو يسمح بحفظ بيانات المستخدم لتسهيل التصفح وتفعيل ميزات معينة."
 
-msgid "Une erreur inattendue s'est produite. Nos équipes ont été alertées."
-msgstr "حدث خطأ غير متوقع. تم تنبيه فرقنا."
+msgid "Un interlocuteur dédié du premier rendez-vous à la livraison finale."
+msgstr "Un interlocuteur dédié du premier rendez-vous à la livraison finale."
 
-msgid "Utilisation des dernières technologies pour accélérer vos ventes."
-msgstr "استخدام أحدث التقنيات لتسريع مبيعاتك."
+msgid "Un processus éprouvé pour garantir des résultats exceptionnels à chaque projet, du premier échange à la livraison finale."
+msgstr "Un processus éprouvé pour garantir des résultats exceptionnels à chaque projet, du premier échange à la livraison finale."
 
-msgid "Utilisation des données"
-msgstr "استخدام البيانات"
+msgid "Une erreur inattendue est survenue : %(msg)s"
+msgstr "Une erreur inattendue est survenue : %(msg)s"
 
-msgid ""
-"VR CREATION COMPANY est une agence spécialisée dans la création de contenus "
-"3D et de visites virtuelles interactives. Nous accompagnons les "
-"professionnels de l'immobilier, de l'architecture et de l'aménagement "
-"d'intérieur dans la mise en valeur de leurs projets."
-msgstr ""
-"شركة VR CREATION هي وكالة متخصصة في إنشاء محتوى ثلاثي الأبعاد وجولات "
-"افتراضية تفاعلية. نرافق المهنيين في العقارات والهندسة المعمارية والتصميم "
-"الداخلي لإبراز مشاريعهم."
+msgid "Une erreur inattendue s'est produite."
+msgstr "Une erreur inattendue s'est produite."
 
-msgid ""
-"VR CREATION COMPANY incarne l'alliance entre esthétique et technologie pour "
-"donner vie à vos concepts avant même leur réalisation."
-msgstr ""
-"شركة VR CREATION تجسد التحالف بين الجمال والتكنولوجيا لإحياء مفاهيمك قبل "
-"تحقيقها."
+msgid "Une qualité de texturation et un réalisme d'éclairage impressionnants. VR Creation comprend les exigences techniques des architectes et respecte scrupuleusement les délais pour les présentations aux maîtres d'ouvrage."
+msgstr "Une qualité de texturation et un réalisme d'éclairage impressionnants. VR Creation comprend les exigences techniques des architectes et respecte scrupuleusement les délais pour les présentations aux maîtres d'ouvrage."
+
+msgid "VOUS AVEZ UN PROJET EN PRÉPARATION ?"
+msgstr "VOUS AVEZ UN PROJET EN PRÉPARATION ?"
+
+msgid "VR CREATION COMPANY"
+msgstr "VR CREATION COMPANY"
+
+msgid "VR Creation Company — Production visuelle haut de gamme à Tanger"
+msgstr "VR Creation Company — Production visuelle haut de gamme à Tanger"
+
+msgid "VR Creation met en œuvre toutes les mesures techniques et organisationnelles appropriées (chiffrement SSL/TLS HTTPS, restriction d'accès aux serveurs, pare-feu applicatif) afin de garantir la sécurité et la confidentialité de vos données personnelles et d'empêcher leur altération, perte ou divulgation non autorisée."
+msgstr "VR Creation met en œuvre toutes les mesures techniques et organisationnelles appropriées (chiffrement SSL/TLS HTTPS, restriction d'accès aux serveurs, pare-feu applicatif) afin de garantir la sécurité et la confidentialité de vos données personnelles et d'empêcher leur altération, perte ou divulgation non autorisée."
 
 msgid "Valeur"
 msgstr "قيمة"
@@ -937,17 +1822,47 @@ msgstr "قيمة"
 msgid "Valeurs"
 msgstr "القيم"
 
-msgid "Visite Virtuelle"
-msgstr "جولة افتراضية"
+msgid "Vedette"
+msgstr "Vedette"
+
+msgid "Vente anticipée"
+msgstr "Vente anticipée"
+
+msgid "Veuillez corriger les erreurs ci-dessous."
+msgstr "Veuillez corriger les erreurs ci-dessous."
+
+msgid "Vidéo / 3D hero (toutes les pages)"
+msgstr "Vidéo / 3D hero (toutes les pages)"
+
+msgid "Vidéo MP4 expliquant le pack (max 50 Mo). Affichée sur la page du pack si présente."
+msgstr "Vidéo MP4 expliquant le pack (max 50 Mo). Affichée sur la page du pack si présente."
+
+msgid "Vidéo de fond (MP4, WebM) ou fichier 3D affichée derrière les titres de toutes les pages. Recommandé : MP4, max 15 Mo, 1920x1080."
+msgstr "Vidéo de fond (MP4, WebM) ou fichier 3D affichée derrière les titres de toutes les pages. Recommandé : MP4, max 15 Mo, 1920x1080."
+
+msgid "Vidéo explicative du pack"
+msgstr "Vidéo explicative du pack"
+
+msgid "Vidéos 3D, survols architecturaux, teasers percutants."
+msgstr "Vidéos 3D, survols architecturaux, teasers percutants."
+
+msgid "Visite Virtuelle Immersive 360°"
+msgstr "Visite Virtuelle Immersive 360°"
 
 msgid "Visite virtuelle"
 msgstr "جولة افتراضية"
 
-msgid "Visites Virtuelles"
-msgstr "الجولات الافتراضية"
+msgid "Visites 360° et réalité virtuelle"
+msgstr "Visites 360° et réalité virtuelle"
 
-msgid "Visites virtuelles"
-msgstr "الجولات الافتراضية"
+msgid "Visites 3D"
+msgstr "Visites 3D"
+
+msgid "Visites virtuelles 360°"
+msgstr "Visites virtuelles 360°"
+
+msgid "Visualiser"
+msgstr "Visualiser"
 
 msgid "Voir le projet"
 msgstr "عرض المشروع"
@@ -955,11 +1870,23 @@ msgstr "عرض المشروع"
 msgid "Voir le projet détaillé"
 msgstr "عرض المشروع بالتفصيل"
 
-msgid "Voir les détails du projet"
-msgstr "عرض تفاصيل المشروع"
+msgid "Voir les avis sur Google"
+msgstr "Voir les avis sur Google"
 
-msgid "Voir tous les services"
-msgstr "عرض جميع الخدمات"
+msgid "Voir les détails de l'offre"
+msgstr "Voir les détails de l'offre"
+
+msgid "Voir les réalisations"
+msgstr "Voir les réalisations"
+
+msgid "Voir toutes les promotions et packs"
+msgstr "Voir toutes les promotions et packs"
+
+msgid "Vos données sont traitées pour les finalités suivantes :"
+msgstr "Vos données sont traitées pour les finalités suivantes :"
+
+msgid "Votre navigateur ne supporte pas la lecture vidéo."
+msgstr "Votre navigateur ne supporte pas la lecture vidéo."
 
 msgid "Votre nom complet"
 msgstr "اسمك الكامل"
@@ -967,22 +1894,29 @@ msgstr "اسمك الكامل"
 msgid "Votre numéro de téléphone"
 msgstr "رقم هاتفك"
 
-msgid "Votre réponse"
-msgstr "إجابتك"
+msgid "Votre sélection"
+msgstr "Votre sélection"
 
-msgid ""
-"Vous avez envoyé trop de messages. Veuillez réessayer dans quelques minutes."
+msgid "Vous avez envoyé trop de messages. Veuillez réessayer dans quelques minutes."
 msgstr "لقد أرسلت رسائل كثيرة. يرجى المحاولة بعد بضع دقائق."
 
-msgid "Vous avez un projet ? Discutons-en et donnons vie à vos idées."
-msgstr "لديك مشروع؟ دعنا نناقشه ونحقق أفكارك."
+msgid "Vous avez un projet immobilier en préparation ? Vendez sur plan avant de poser la première pierre grâce à notre pack visuel 3D et visite virtuelle tout-en-un — conçu sans budget d'agence."
+msgstr "Vous avez un projet immobilier en préparation ? Vendez sur plan avant de poser la première pierre grâce à notre pack visuel 3D et visite virtuelle tout-en-un — conçu sans budget d'agence."
 
-msgid ""
-"Vous pouvez à tout moment modifier vos préférences de cookies, accepter ou "
-"refuser le chargement des scripts analytiques ou marketing."
-msgstr ""
-"يمكنك تعديل تفضيلات ملفات تعريف الارتباط الخاصة بك في أي وقت، وقبول أو رفض "
-"تحميل نصوص التحليل أو التسويق."
+msgid "Vous ne payez que si vous vendez"
+msgstr "Vous ne payez que si vous vendez"
+
+msgid "Vous pourrez le relire, ajuster le texte, ajouter une image et le publier manuellement."
+msgstr "Vous pourrez le relire, ajuster le texte, ajouter une image et le publier manuellement."
+
+msgid "Vous pouvez à tout moment modifier vos préférences de cookies, accepter ou refuser le chargement des scripts analytiques ou marketing."
+msgstr "يمكنك تعديل تفضيلات ملفات تعريف الارتباط الخاصة بك في أي وقت، وقبول أو رفض تحميل نصوص التحليل أو التسويق."
+
+msgid "Vous souhaitez intégrer une visite virtuelle à votre programme immobilier ?"
+msgstr "Vous souhaitez intégrer une visite virtuelle à votre programme immobilier ?"
+
+msgid "Vérifié"
+msgstr "Vérifié"
 
 msgid "WhatsApp"
 msgstr "واتساب"
@@ -990,68 +1924,86 @@ msgstr "واتساب"
 msgid "YouTube"
 msgstr "يوتيوب"
 
+msgid "Zone d'intervention"
+msgstr "Zone d'intervention"
+
+msgid "Zone d'intervention : Tanger, Tétouan, Asilah, Chefchaouen — Nord du Maroc"
+msgstr "Zone d'intervention : Tanger, Tétouan, Asilah, Chefchaouen — Nord du Maroc"
+
 msgid "a-propos/"
-msgstr "about/"
+msgstr "a-propos/"
 
 msgid "blog/"
 msgstr "blog/"
 
 msgid "confidentialite/"
-msgstr "privacy-policy/"
+msgstr "confidentialite/"
 
 msgid "contact/"
 msgstr "contact/"
 
 msgid "contact/merci/"
-msgstr "contact/thank-you/"
+msgstr "contact/merci/"
 
 msgid "cookies/"
 msgstr "cookies/"
 
-msgid "esthétique"
-msgstr "الجمال"
-
-msgid "et technologie."
-msgstr "والتكنولوجيا."
+msgid "est une agence de production visuelle basée à Tanger, au cœur du Nord du Maroc. Nous accompagnons les entreprises, promoteurs, commerces et institutions dans la création de contenus visuels qui valorisent leur image et accélèrent leur croissance."
+msgstr "est une agence de production visuelle basée à Tanger, au cœur du Nord du Maroc. Nous accompagnons les entreprises, promoteurs, commerces et institutions dans la création de contenus visuels qui valorisent leur image et accélèrent leur croissance."
 
 msgid "etudes-de-cas/"
-msgstr "case-studies/"
+msgstr "etudes-de-cas/"
 
 msgid "mentions-legales/"
-msgstr "legal-notices/"
+msgstr "mentions-legales/"
+
+msgid "non publié"
+msgstr "non publié"
+
+msgid "plan-du-site/"
+msgstr "plan-du-site/"
 
 msgid "promotions/"
 msgstr "promotions/"
 
 msgid "realisations/"
-msgstr "portfolio/"
+msgstr "realisations/"
+
+msgid "service(s) sélectionné(s)"
+msgstr "service(s) sélectionné(s)"
 
 msgid "services/"
 msgstr "services/"
 
 msgid "visites-virtuelles/"
-msgstr "virtual-tours/"
+msgstr "visites-virtuelles/"
 
 msgid "votre@email.com"
 msgstr "بريدك@مثال.com"
 
-msgid "À Propos de Nous"
-msgstr "عنّا"
-
 msgid "À propos"
 msgstr "من نحن"
+
+msgid "À propos de l'agence"
+msgstr "À propos de l'agence"
 
 msgid "À propos du projet"
 msgstr "عن المشروع"
 
-msgid "Éclairage et Textures"
-msgstr "الإضاءة والقوام"
-
 msgid "Éditeur du site"
 msgstr "محرر الموقع"
 
+msgid "Équipe locale et réactive"
+msgstr "Équipe locale et réactive"
+
+msgid "Étape de l’offre"
+msgstr "Étape de l’offre"
+
 msgid "Étape du processus"
 msgstr "خطوة العملية"
+
+msgid "Étapes de l’offre"
+msgstr "Étapes de l’offre"
 
 msgid "Étapes du processus"
 msgstr "خطوات العملية"
@@ -1059,1207 +2011,20 @@ msgstr "خطوات العملية"
 msgid "Étude de cas"
 msgstr "دراسة حالة"
 
-msgid ""
-"Étude de vos besoins, récupération de vos plans et brief créatif pour "
-"définir l'ambiance."
-msgstr "دراسة احتياجاتك، استلام المخططات وملخص إبداعي لتحديد الأجواء."
-
-msgid "Étude de vos besoins, récupération de vos plans et brief créatif."
-msgstr "دراسة احتياجاتك واستلام المخططات."
-
-msgid "Études de Cas"
-msgstr "دراسات الحالة"
-
 msgid "Études de cas"
 msgstr "دراسات الحالة"
+
+msgid "Études de cas & ROI"
+msgstr "Études de cas & ROI"
 
 msgid "Événementiel"
 msgstr "فعاليات"
 
-msgid "Architecture, 3D & Digital réunis"
-msgstr "الهندسة المعمارية والثلاثي الأبعاد والرقمي معاً"
+msgid "العربية"
+msgstr "العربية"
 
-msgid ""
-"Avant de construire, commencez déjà à le vendre. Présentez-nous votre projet"
-" et découvrons ensemble comment le transformer en une expérience commerciale"
-" complète."
-msgstr ""
-"قبل البناء، ابدأ ببيعه. قدّم لنا مشروعك ولنكتشف معاً كيف نحوّله إلى تجربة "
-"تجارية متكاملة."
+msgid "— Aucune catégorie (Général) —"
+msgstr "— Aucune catégorie (Général) —"
 
-msgid "Bientôt disponible"
-msgstr "قريباً"
-
-msgid "Branding cohérent et mémorable"
-msgstr "علامة تجارية متسقة ولا تُنسى"
-
-msgid "Chaque projet mérite une expérience sur mesure"
-msgstr "كل مشروع يستحق تجربة مصممة خصيصاً له"
-
-msgid "Collaborons ensemble"
-msgstr "لنتعاون معاً"
-
-msgid "Commercialisez avant la construction"
-msgstr "سوّق قبل البناء"
-
-msgid "Convertir"
-msgstr "تحويل"
-
-msgid "DE L'IDÉE À LA COMMERCIALISATION."
-msgstr "من الفكرة إلى التسويق."
-
-msgid "Digitaliser"
-msgstr "رقمنة"
-
-msgid "Démarrer votre projet"
-msgstr "ابدأ مشروعك"
-
-msgid "Identifier"
-msgstr "تحديد الهوية"
-
-msgid "Identité de marque"
-msgstr "هوية العلامة التجارية"
-
-msgid ""
-"Il se vend avec une vision. Nous combinons architecture, 3D, immersion, "
-"branding et technologie digitale pour permettre aux promoteurs de présenter "
-"leurs projets autrement — et surtout, plus tôt."
-msgstr ""
-"يُباع برؤية. نجمع بين الهندسة المعمارية والثلاثي الأبعاد والغمر والعلامة "
-"التجارية والتكنولوجيا الرقمية لتمكين المطورين من تقديم مشاريعهم بشكل مختلف —"
-" والأهم من ذلك، في وقت أبكر."
-
-msgid "Imaginer"
-msgstr "تخيّل"
-
-msgid "Immersion totale"
-msgstr "غمر كامل"
-
-msgid "Nos Solutions"
-msgstr "حلولنا"
-
-msgid "Notre Différence"
-msgstr "ما يميزنا"
-
-msgid "Notre Engagement"
-msgstr "التزامنا"
-
-msgid ""
-"Nous accompagnons les promoteurs immobiliers à chaque étape de leur projet :"
-" visualisation, valorisation, expérience immersive et communication "
-"digitale. L'objectif : transformer un projet architectural en un véritable "
-"outil de commercialisation."
-msgstr ""
-"نرافق المطورين العقاريين في كل مرحلة من مشروعهم: التصور والتثمين والتجربة "
-"الغامرة والتواصل الرقمي. الهدف: تحويل مشروع معماري إلى أداة تسويق حقيقية."
-
-msgid "Nous construisons son identité et son univers de marque."
-msgstr "نبني هويته وعالم علامته التجارية."
-
-msgid "Nous créons des contenus 3D et immersifs pour le présenter."
-msgstr "نصنع محتوى ثلاثي الأبعاد وغامر لتقديمه."
-
-msgid ""
-"Nous créons des expériences visuelles adaptées à chaque secteur pour "
-"valoriser vos projets et accélérer vos ventes."
-msgstr "نصنع تجارب بصرية مخصصة لكل قطاع لتعزيز مشاريعكم وتسريع مبيعاتكم."
-
-msgid "Nous créons son écosystème digital."
-msgstr "نبني نظامه البيئي الرقمي."
-
-msgid "Nous donnons forme au projet avant sa réalisation."
-msgstr "نعطي شكلاً للمشروع قبل تنفيذه."
-
-msgid ""
-"Nous préparons quelque chose d'exceptionnel pour vous. Revenez bientôt pour "
-"découvrir nos offres promotionnelles exclusives."
-msgstr ""
-"نحضّر شيئاً استثنائياً لكم. عودوا قريباً لاكتشاف عروضنا الترويجية الحصرية."
-
-msgid "Nous transformons l'intérêt en prospects commerciaux."
-msgstr "نحوّل الاهتمام إلى عملاء محتملين."
-
-msgid "Promotion"
-msgstr "عروض"
-
-msgid "Synergie unique"
-msgstr "تكامل فريد"
-
-msgid "UN PROJET IMMOBILIER NE SE VEND PAS UNIQUEMENT AVEC DES PLANS."
-msgstr "المشروع العقاري لا يُباع بالمخططات وحدها."
-
-msgid "UN PROJET. UNE VISION. UN SEUL PARTENAIRE."
-msgstr "مشروع واحد. رؤية واحدة. شريك واحد."
-
-msgid ""
-"Un accompagnement structuré en 5 étapes pour transformer votre projet "
-"immobilier en succès commercial."
-msgstr "مرافقة منظمة في 5 مراحل لتحويل مشروعكم العقاري إلى نجاح تجاري."
-
-msgid "VOUS AVEZ UN PROJET EN PRÉPARATION ?"
-msgstr "هل لديك مشروع قيد التحضير؟"
-
-msgid "Vente anticipée"
-msgstr "البيع المبكر"
-
-msgid "Visites 360° et réalité virtuelle"
-msgstr "جولات 360° والواقع الافتراضي"
-
-msgid "Visualiser"
-msgstr "تصوّر"
-
-msgid "Cas d'usage"
-msgstr "حالات استخدام"
-
-msgid "Exemples de succès stratégiques"
-msgstr "أمثلة على النجاح الاستراتيجي"
-
-msgid ""
-"Découvrez comment nos solutions transforment chaque type de projet en levier"
-" de croissance."
-msgstr "اكتشف كيف تحوّل حلولنا كل نوع من المشاريع إلى رافعة نمو."
-
-msgid "Magasin ou concept-store"
-msgstr "متجر أو كونسبت ستور"
-
-msgid "Attirer les clients dès la phase de pré-lancement."
-msgstr "جذب العملاء منذ مرحلة ما قبل الإطلاق."
-
-msgid "Séduire et engager un public exigeant."
-msgstr "جذب وإشراك جمهور متطلب."
-
-msgid "Projet immobilier"
-msgstr "مشروع عقاري"
-
-msgid "Les acheteurs veulent se projeter avant d'investir."
-msgstr "يريد المشترون التصور قبل الاستثمار."
-
-msgid "Villa en construction"
-msgstr "فيلا قيد البناء"
-
-msgid "Le client veut visualiser le résultat final pour s'engager."
-msgstr "يريد العميل تصور النتيجة النهائية قبل الالتزام."
-
-msgid "Qui sommes-nous ?"
-msgstr "من نحن؟"
-
-msgid "VR CREATION COMPANY"
-msgstr "شركة في آر كرييشن"
-
-msgid ""
-"incarne l'alliance entre esthétique et technologie. Notre spécialité est de "
-"créer des visuels haut de gamme qui valorisent vos projets et reflètent "
-"votre niveau d'excellence."
-msgstr ""
-"تجسد التحالف بين الجمال والتكنولوجيا. تخصصنا هو إنشاء مرئيات راقية تثمن "
-"مشاريعكم وتعكس مستوى تميزكم."
-
-msgid "Notre équipe"
-msgstr "فريقنا"
-
-msgid ""
-"de designers, architectes, décorateurs, développeurs et chefs de projet "
-"mettent leur savoir-faire au service d'expériences visuelles uniques, "
-"conçues pour séduire vos clients et partenaires les plus exigeants."
-msgstr ""
-"من المصممين والمهندسين المعماريين ومصممي الديكور والمطورين ومديري المشاريع "
-"يضعون خبراتهم في خدمة تجارب بصرية فريدة، مصممة لجذب عملائكم وشركائكم الأكثر "
-"تطلبًا."
-
-msgid ""
-"Chaque rendu est pensé comme une œuvre et une signature créative sur mesure."
-msgstr "كل تصميم يُعتبر عملاً فنيًا وتوقيعًا إبداعيًا مخصصًا."
-
-msgid "Promotions"
-msgstr "العروض الترويجية"
-
-msgid "Pack Spécial Promoteurs Débutants"
-msgstr "باقة خاصة للمطورين المبتدئين"
-
-msgid "Offre de Lancement"
-msgstr "عرض الإطلاق"
-
-msgid "VENDEZ VOTRE PROJET IMMOBILIER AVANT MÊME DE POSER LA PREMIÈRE PIERRE"
-msgstr "بع مشروعك العقاري حتى قبل وضع حجر الأساس"
-
-msgid ""
-"La solution 3D pensée pour les promoteurs débutants qui veulent "
-"commercialiser sur plan, sans budget d'agence."
-msgstr ""
-"الحل ثلاثي الأبعاد المصمم للمطورين المبتدئين الذين يرغبون في التسويق على "
-"المخطط، بدون ميزانية وكالة."
-
-msgid "🏗️ LE PROBLÈME QUE VOUS CONNAISSEZ DÉJÀ"
-msgstr "🏗️ المشكلة التي تعرفها بالفعل"
-
-msgid ""
-"Vous avez un terrain. Vous avez un plan. Vous avez un permis en cours. Mais "
-"comment convaincre un client d'investir dans un appartement... qui n'existe "
-"pas encore ?"
-msgstr ""
-"لديك أرض. لديك مخطط. لديك ترخيص قيد المعالجة. ولكن كيف تقنع العميل "
-"بالاستثمار في شقة... لم توجد بعد؟"
-
-msgid "Plans 2D abstraits"
-msgstr "مخططات ثنائية الأبعاد مجردة"
-
-msgid "Les plans 2D ne parlent qu'aux architectes, pas aux acheteurs finaux."
-msgstr ""
-"المخططات ثنائية الأبعاد تتحدث فقط إلى المهندسين المعماريين، وليس إلى "
-"المشترين النهائيين."
-
-msgid "Coûts de maquette physique élevés"
-msgstr "تكاليف عالية للمجسمات الفيزيائية"
-
-msgid ""
-"Les maquettes physiques coûtent cher et prennent de nombreuses semaines à "
-"fabriquer."
-msgstr "المجسمات الفيزيائية مكلفة وتستغرق أسابيع عديدة للتصنيع."
-
-msgid "Hésitation et fuite des prospects"
-msgstr "تردد وضياع العملاء المحتملين"
-
-msgid ""
-"Sans visuel fort, vos prospects hésitent, comparent et partent chez la "
-"concurrence qui a déjà de belles images."
-msgstr ""
-"بدون رؤية بصرية قوية، يتردد عملاؤك المحتملون، ويقارنون، ويذهبون إلى المنافسة"
-" التي لديها بالفعل صور جميلة."
-
-msgid ""
-"Résultat : des ventes sur plan qui traînent, et une trésorerie qui souffre "
-"avant même le début du chantier."
-msgstr "النتيجة: مبيعات على المخطط متعثرة، وسيولة تعاني حتى قبل بدء البناء."
-
-msgid "💡 LA SOLUTION : VENDRE SUR PLAN AVEC UN IMPACT VISUEL PROFESSIONNEL"
-msgstr "💡 الحل: البيع على المخطط بتأثير بصري احترافي"
-
-msgid ""
-"Avec VR Creation, transformez votre simple plan architectural en un outil de"
-" vente puissant, dès les premières semaines de votre projet — sans attendre "
-"la construction."
-msgstr ""
-"مع VR Creation، حول مخططك المعماري البسيط إلى أداة مبيعات قوية، بدءًا من "
-"الأسابيع الأولى لمشروعك — دون انتظار البناء."
-
-msgid ""
-"Donnez à vos clients la possibilité de se projeter, littéralement, dans leur"
-" futur bien."
-msgstr "امنح عملائك فرصة تخيل أنفسهم، حرفيًا، في عقارهم المستقبلي."
-
-msgid "🎯 CE QUE VOUS OBTENEZ (Pack Spécial Promoteurs Débutants)"
-msgstr "🎯 ما ستحصل عليه (باقة خاصة للمطورين المبتدئين)"
-
-msgid "1. Modélisation 3D photoréaliste"
-msgstr "1. نمذجة ثلاثية الأبعاد واقعية"
-
-msgid ""
-"Votre plan devient un rendu 3D ultra-réaliste : façades, intérieurs, "
-"matériaux, lumières. Vos prospects visualisent le bien fini, pas des lignes "
-"techniques."
-msgstr ""
-"يصبح مخططك تصميمًا ثلاثي الأبعاد فائق الواقعية: واجهات، تصميم داخلي، مواد، "
-"إضاءة. يرى عملاؤك العقار منتهيًا، وليس خطوطًا تقنية."
-
-msgid "2. Visite virtuelle interactive"
-msgstr "2. جولة افتراضية تفاعلية"
-
-msgid ""
-"Une visite 100% navigable, accessible sur mobile, tablette ou ordinateur. "
-"Vos clients visitent l'appartement avant le premier coup de pelle."
-msgstr ""
-"جولة قابلة للتنقل بنسبة 100%، متاحة على الهاتف أو الجهاز اللوحي أو "
-"الكمبيوتر. يزور عملاؤك الشقة قبل أول ضربة فأس."
-
-msgid "3. Animation & motion design"
-msgstr "3. رسوم متحركة وتصميم الحركة"
-
-msgid ""
-"Une vidéo de survol du projet (extérieur + intérieur), parfaite pour les "
-"réseaux sociaux et vos rendez-vous commerciaux. Capte l'attention en 10 "
-"secondes."
-msgstr ""
-"فيديو تحليق فوق المشروع (خارجي + داخلي)، مثالي لشبكات التواصل الاجتماعي "
-"واجتماعاتك التجارية. يجذب الانتباه في 10 ثوانٍ."
-
-msgid "4. Branding & supports"
-msgstr "4. الهوية البصرية والدعم التجاري"
-
-msgid ""
-"Logo du projet, plaquette commerciale, brochure de vente, affiches de "
-"chantier. Une identité visuelle crédible, même pour un premier projet."
-msgstr ""
-"شعار المشروع، كتيب تجاري، كتيب المبيعات، ملصقات موقع البناء. هوية بصرية "
-"موثوقة، حتى لمشروعك الأول."
-
-msgid "5. Photo & captures 360°"
-msgstr "5. تصوير ولقطات 360 درجة"
-
-msgid ""
-"Pour humaniser votre communication et rassurer vos prospects avec du contenu"
-" réel, une fois le showroom ou le terrain prêt."
-msgstr ""
-"لإضفاء طابع إنساني على تواصلك وطمأنة عملائك المحتملين بمحتوى حقيقي، بمجرد "
-"جاهزية صالة العرض أو الأرض."
-
-msgid "🚀 POURQUOI C'EST FAIT POUR VOUS, PROMOTEUR DÉBUTANT"
-msgstr "🚀 لماذا هذا مصمم لك، كمطور عقاري مبتدئ"
-
-msgid "Sans VR Creation"
-msgstr "بدون VR Creation"
-
-msgid "Avec VR Creation"
-msgstr "مع VR Creation"
-
-msgid "Plans 2D difficiles à comprendre"
-msgstr "مخططات ثنائية الأبعاد يصعب فهمها"
-
-msgid "Rendus 3D immédiatement parlants"
-msgstr "تصاميم ثلاثية الأبعاد معبرة على الفور"
-
-msgid "Prospects qui hésitent, faute de projection"
-msgstr "عملاء يترددون لعدم قدرتهم على التخيل"
-
-msgid "Clients convaincus dès la première visite"
-msgstr "عملاء مقتنعون منذ الزيارة الأولى"
-
-msgid "Maquette physique = coûteuse et lente"
-msgstr "مجسم فيزيائي = مكلف وبطيء"
-
-msgid "Maquette numérique = rapide et modifiable"
-msgstr "مجسم رقمي = سريع وقابل للتعديل"
-
-msgid "Communication amateur"
-msgstr "تواصل غير احترافي"
-
-msgid "Identité visuelle premium, dès le 1er projet"
-msgstr "هوية بصرية مميزة، منذ المشروع الأول"
-
-msgid "Ventes sur plan qui traînent"
-msgstr "مبيعات على المخطط متعثرة وتستغرق وقتًا"
-
-msgid "Réservations accélérées, trésorerie sécurisée plus tôt"
-msgstr "حجوزات متسارعة، تأمين السيولة في وقت مبكر"
-
-msgid "🛠️ COMMENT ÇA MARCHE (3 ÉTAPES SIMPLES)"
-msgstr "🛠️ كيف يعمل هذا (3 خطوات بسيطة)"
-
-msgid "Envoyez-nous votre plan"
-msgstr "أرسل لنا مخططك"
-
-msgid ""
-"Plan architectural, esquisse ou permis de construire — peu importe le stade "
-"d'avancement."
-msgstr "مخطط معماري، مسودة أو رخصة بناء — بغض النظر عن مرحلة التقدم."
-
-msgid "Nous créons vos visuels"
-msgstr "نحن ننشئ مرئياتك"
-
-msgid ""
-"Rendus 3D, visite virtuelle et supports commerciaux réalisés sur mesure, "
-"dans les délais convenus."
-msgstr ""
-"تصاميم ثلاثية الأبعاد، جولة افتراضية ومواد تجارية مصنوعة حسب المقاس، في "
-"الآجال المتفق عليها."
-
-msgid "Vous vendez"
-msgstr "أنت تبيع"
-
-msgid ""
-"Utilisez ces outils en rendez-vous client, sur les réseaux sociaux, sur "
-"votre site ou lors de salons."
-msgstr ""
-"استخدم هذه الأدوات في اجتماعات العملاء، على شبكات التواصل الاجتماعي، على "
-"موقعك أو في المعارض."
-
-msgid "🎁 OFFRE DE LANCEMENT — SPÉCIAL PREMIERS PROJETS"
-msgstr "🎁 عرض الإطلاق — خاص بالمشاريع الأولى"
-
-msgid ""
-"Pour les promoteurs qui commercialisent leur premier ou deuxième projet "
-"immobilier, VR Creation propose un accompagnement dédié :"
-msgstr ""
-"للمطورين العقاريين الذين يسوقون مشروعهم الأول أو الثاني، يقدم VR Creation "
-"دعمًا مخصصًا:"
-
-msgid "Devis gratuit et personnalisé"
-msgstr "تسعيرة مجانية ومخصصة"
-
-msgid "Accompagnement sur-mesure à chaque étape"
-msgstr "دعم مخصص في كل خطوة"
-
-msgid "Délais rapides pour un lancement commercial immédiat"
-msgstr "مواعيد سريعة لإطلاق تجاري فوري"
-
-msgid "📣 PRÊT À DONNER VIE À VOTRE PROJET — AVANT MÊME QU'IL EXISTE ?"
-msgstr "📣 هل أنت مستعد لإحياء مشروعك — حتى قبل أن يوجد؟"
-
-msgid "Demander mon devis gratuit"
-msgstr "طلب تسعيرتي المجانية"
-
-msgid "75 Avenue des Champs-Élysées, 75008 Paris"
-msgstr "75 شارع الشانزليزيه، 75008 باريس"
-
-msgid "Contactez-nous sur WhatsApp"
-msgstr "تواصل معنا على واتساب"
-
-msgid "Offre Exclusive"
-msgstr "عرض حصري"
-
-msgid ""
-"Vous avez un projet immobilier en préparation ? Vendez sur plan avant de "
-"poser la première pierre grâce à notre pack visuel 3D et visite virtuelle "
-"tout-en-un — conçu sans budget d'agence."
-msgstr ""
-"هل لديك مشروع عقاري قيد التحضير؟ بع على المخطط قبل وضع حجر الأساس بفضل باقة "
-"المرئيات ثلاثية الأبعاد والجولة الافتراضية المتكاملة — المصممة بدون ميزانية "
-"وكالة."
-
-msgid "Découvrir l'offre"
-msgstr "اكتشف العرض"
-
-msgid "Devis gratuit"
-msgstr "طلب تسعيرة مجانية"
-
-msgid "Voir les détails de l'offre"
-msgstr "عرض تفاصيل العرض"
-
-msgid "Nos Offres & Promotions"
-msgstr "عروضنا وتخفيضاتنا"
-
-msgid "Solutions Sur Mesure"
-msgstr "حلول مخصصة"
-
-msgid "Nos offres exclusives pour accélérer vos projets"
-msgstr "عروضنا الحصرية لتسريع مشاريعكم"
-
-msgid ""
-"Découvrez des packs de services conçus spécifiquement pour répondre à vos "
-"objectifs de commercialisation et de valorisation immobilière."
-msgstr ""
-"اكتشف باقات الخدمات المصممة خصيصاً لتلبية أهدافكم في التسويق والتثمين "
-"العقاري."
-
-msgid "Tarif"
-msgstr "السعر"
-
-msgid "Aucune promotion active pour le moment. Revenez bientôt !"
-msgstr "لا يوجد أي عرض نشط حالياً. عد قريباً!"
-
-msgid "Pourquoi choisir notre solution"
-msgstr "لماذا تختار حلنا"
-
-msgid "Conditions de l'offre"
-msgstr "شروط العرض"
-
-msgid "Découvrir la solution"
-msgstr "اكتشف الحل"
-
-msgid "Fiche Technique"
-msgstr "البطاقة التقنية"
-
-msgid "Projet Similaire en vue ?"
-msgstr "هل لديك مشروع مماثل؟"
-
-msgid ""
-"Confiez-nous vos plans 2D et laissez-nous les transformer en une expérience "
-"immersive."
-msgstr "سلّمنا مخططاتك ثنائية الأبعاد ودعنا نحوّلها إلى تجربة غامرة."
-
-msgid "Estimer mon projet"
-msgstr "تقييم مشروعي"
-
-msgid "Projets Connexes"
-msgstr "مشاريع ذات صلة"
-
-msgid "Agrandir l'image"
-msgstr "توسيع الصورة"
-
-msgid "360° Immersive"
-msgstr "360 درجة غامرة"
-
-msgid "Fermer"
-msgstr "إغلاق"
-
-msgid "Présentation de la solution"
-msgstr "تقديم الحل"
-
-msgid "Galerie de Réalisations"
-msgstr "معرض الأعمال"
-
-msgid "Besoin d'une démonstration ?"
-msgstr "هل تحتاج إلى عرض توضيحي؟"
-
-msgid ""
-"Contactez nos experts pour en savoir plus sur cette solution et obtenir un "
-"devis personnalisé."
-msgstr "اتصل بخبرائنا لمعرفة المزيد عن هذا الحل والحصول على عرض سعر مخصص."
-
-msgid "Galerie d'Images & Rendu 3D"
-msgstr "معرض الصور والتصاميم ثلاثية الأبعاد"
-
-msgid "Le Contenu"
-msgstr "محتوى الباقة"
-
-msgid "🎯 Ce que vous obtenez avec cette offre"
-msgstr "🎯 ما ستحصل عليه مع هذا العرض"
-
-msgid "Comparatif"
-msgstr "مقارنة"
-
-msgid "Processus"
-msgstr "خطوات العمل"
-
-msgid "Action Directe"
-msgstr "اتخاذ قرار"
-
-msgid "Nos Forces"
-msgstr "نقاط قوتنا"
-
-msgid "Pourquoi Nous Choisir"
-msgstr "لماذا تختارنا"
-
-msgid "Des atouts majeurs pour garantir le succès de vos réalisations."
-msgstr "أصول رئيسية لضمان نجاح مشاريعكم."
-
-msgid "Comment ça marche"
-msgstr "كيف يعمل"
-
-msgid "La Solution"
-msgstr "الحل"
-
-msgid "Notre Blog"
-msgstr "مدونتنا"
-
-msgid "Visites Virtuelles 360°"
-msgstr "جولات افتراضية 360°"
-
-msgid "Visite Virtuelle Immersive 360°"
-msgstr "جولة افتراضية غامرة 360°"
-
-msgid "Application des matériaux réalistes et configuration de la lumière."
-msgstr "تطبيق المواد الواقعية وتكوين الإضاءة."
-
-msgid "Génération des images haute résolution et retouches finales."
-msgstr "إنشاء صور عالية الدقة والتعديلات النهائية."
-
-msgid "Aucun exemple disponible pour le moment."
-msgstr "لا توجد أمثلة متاحة حالياً."
-
-msgid "DONNEZ VIE À VOTRE PROJET IMMOBILIER, AVANT MÊME SA CONSTRUCTION."
-msgstr "امنح الحياة لمشروعك العقاري، حتى قبل بنائه."
-
-msgid ""
-"De la conception 3D à la commercialisation digitale, nous transformons vos "
-"projets immobiliers en expériences visuelles capables de séduire, convaincre"
-" et générer des prospects."
-msgstr ""
-"من التصميم ثلاثي الأبعاد إلى التسويق الرقمي، نحول مشاريعكم العقارية إلى "
-"تجارب بصرية قادرة على جذب وإقناع وتوليد العملاء المحتملين."
-
-msgid "Découvrir nos solutions"
-msgstr "اكتشف حلولنا"
-
-msgid "Présentation"
-msgstr "عرض تقديمي"
-
-msgid "Découvrez notre offre en vidéo"
-msgstr "اكتشف عرضنا بالفيديو"
-
-msgid "Votre navigateur ne supporte pas la lecture vidéo."
-msgstr "متصفحك لا يدعم تشغيل الفيديو."
-
-msgid "Personnalisation"
-msgstr "تخصيص"
-
-msgid "🛠️ Personnalisez votre pack"
-msgstr "🛠️ خصّص باقتك"
-
-msgid ""
-"Sélectionnez ou désélectionnez les services selon vos besoins. Les services "
-"inclus dans le pack sont pré-cochés."
-msgstr ""
-"حدد أو ألغِ تحديد الخدمات وفقاً لاحتياجاتك. الخدمات المدرجة في الباقة محددة "
-"مسبقاً."
-
-msgid "Sélectionné"
-msgstr "مُحدّد"
-
-msgid "Ajouter"
-msgstr "إضافة"
-
-msgid "Votre sélection"
-msgstr "اختيارك"
-
-msgid "service(s) sélectionné(s)"
-msgstr "خدمة(ات) محددة"
-
-msgid "Demander un devis personnalisé"
-msgstr "اطلب عرض أسعار مخصص"
-
-msgid "Pack"
-msgstr "الباقة"
-
-msgid "Services sélectionnés"
-msgstr "الخدمات المحددة"
-
-msgid "Notre approche"
-msgstr "نهجنا"
-
-msgid "🎯 Nous sélectionnons le meilleur pour vous"
-msgstr "🎯 نختار الأفضل لك"
-
-msgid ""
-"Nous analysons votre projet et mettons en place la stratégie la plus "
-"efficace. Vous ne payez rien — nous ne gagnons que si vous vendez."
-msgstr ""
-"نحلل مشروعك وننفذ الاستراتيجية الأكثر فعالية. لا تدفع شيئاً — نربح فقط إذا "
-"بعت."
-
-msgid "Site Web"
-msgstr "موقع إلكتروني"
-
-msgid "Visites 3D"
-msgstr "جولات ثلاثية الأبعاد"
-
-msgid "Branding"
-msgstr "هوية بصرية"
-
-msgid "Service client"
-msgstr "خدمة العملاء"
-
-msgid "Dashboard"
-msgstr "لوحة التحكم"
-
-msgid "Commission sur vente"
-msgstr "عمولة على المبيعات"
-
-msgid "Vous ne payez que si vous vendez"
-msgstr "تدفع فقط عندما تبيع"
-
-msgid ""
-"Chaque prestation est conçue pour maximiser votre impact commercial et "
-"accélérer vos ventes."
-msgstr "كل خدمة مصممة لتعظيم تأثيرك التجاري وتسريع مبيعاتك."
-
-msgid "Prestation"
-msgstr "خدمة"
-
-msgid "Offre sur commission — Zéro investissement"
-msgstr "عرض بالعمولة — صفر استثمار"
-
-msgid ""
-"Ce site est hébergé par PythonAnywhere (PythonAnywhere LLP, Anaconda Inc.)"
-msgstr "هذا الموقع مستضاف من طرف PythonAnywhere"
-
-msgid ""
-"L'ensemble de ce site relève de la législation sur le droit d'auteur et la "
-"propriété intellectuelle. Tous les droits de reproduction sont réservés."
-msgstr ""
-"يخضع هذا الموقع بالكامل لتشريعات حقوق النشر والملكية الفكرية. جميع حقوق "
-"النسخ محفوظة."
-
-msgid ""
-"Nous collectons les données que vous nous fournissez via notre formulaire de"
-" contact (nom, email, téléphone, message)."
-msgstr ""
-"نجمع البيانات التي تقدمها لنا عبر نموذج الاتصال (الاسم، البريد الإلكتروني، "
-"الهاتف، الرسالة)."
-
-msgid "Ces données sont utilisées uniquement pour répondre à vos demandes."
-msgstr "تُستخدم هذه البيانات فقط للرد على طلباتك."
-
-msgid ""
-"VR Creation Company — Agence de modélisation 3D et visites virtuelles à "
-"Tanger, Maroc. Spécialisée en rendu 3D immobilier, visite virtuelle 360°, "
-"branding immobilier et marketing digital pour promoteurs immobiliers. Nous "
-"accompagnons les projets immobiliers à Tanger, Rabat, Casablanca et dans "
-"tout le Maroc."
-msgstr ""
-"شركة في آر كرييشن (VR Creation Company) — وكالة متخصصة في النمذجة ثلاثية "
-"الأبعاد والجولات الافتراضية في طنجة، المغرب. متخصصة في الإظهار المعماري "
-"والرندرة ثلاثية الأبعاد للعقارات، الجولات الافتراضية 360 درجة، الهوية "
-"البصرية العقارية والتسويق الرقمي للمنعشين والمطورين العقاريين. نرافق وندعم "
-"المشاريع العقارية في طنجة، الرباط، الدار البيضاء وجميع أنحاء المغرب."
-
-msgid "Zone d'intervention : Tanger, Tétouan, Rabat, Casablanca — Maroc"
-msgstr "نطاق العمل والخدمات: طنجة، تطوان، الرباط، الدار البيضاء — المغرب"
-
-msgid ""
-"Donnez vie à votre projet immobilier avant même sa construction — "
-"Modélisation 3D & Visites Virtuelles à Tanger"
-msgstr ""
-"امنح مشروعك العقاري الحياة قبل حتى بنائه — نمذجة ثلاثية الأبعاد وجولات "
-"افتراضية في طنجة"
-
-msgid "Rendu 3D photoréaliste d'une villa en construction à Tanger"
-msgstr "عرض ثلاثي الأبعاد واقعي لفيلا قيد البناء في طنجة"
-
-msgid "Modélisation 3D et visites virtuelles immersives à Tanger"
-msgstr "نمذجة ثلاثية الأبعاد وجولات افتراضية غامرة في طنجة"
-
-msgid "Agrandissement du projet 3D"
-msgstr "تكبير عرض المشروع ثلاثي الأبعاد"
-
-msgid "Rendu 3D et visite virtuelle"
-msgstr "إظهار ثلاثي الأبعاد وجولة افتراضية"
-
-msgid "Personnalisable"
-msgstr "قابل للتخصيص"
-
-msgid "Sur commission"
-msgstr "على العمولة"
-
-msgid "Vedette"
-msgstr "مميز"
-
-msgid "Solutions & Expertises"
-msgstr "حلول وخبرات"
-
-msgid "Rendu 3D promoteur immobilier"
-msgstr "إظهار ثلاثي الأبعاد للمنعشين العقاريين"
-
-msgid "Visite virtuelle 360° Tanger"
-msgstr "جولة افتراضية 360° طنجة"
-
-msgid "Marketing immobilier digital"
-msgstr "تسويق عقاري رقمي"
-
-msgid "Plans 3D & Perspectives"
-msgstr "مخططات ثلاثية الأبعاد ومناظير معمارية"
-
-msgid "Captures aériennes par drone"
-msgstr "تصوير جوي بالدرون للمشاريع"
-
-msgid "Vente sur plan (VEFA)"
-msgstr "بيع العقارات على التصميم (VEFA)"
-
-msgid "Recherches populaires :"
-msgstr "عمليات البحث الشائعة:"
-
-msgid "Modélisation 3D Tanger"
-msgstr "نمذجة ثلاثية الأبعاد طنجة"
-
-msgid "Visite virtuelle Maroc"
-msgstr "جولة افتراضية المغرب"
-
-msgid "Rendu architectural 3D"
-msgstr "إظهار معماري ثلاثي الأبعاد"
-
-msgid "Promoteur immobilier Maroc"
-msgstr "منعش عقاري المغرب"
-
-msgid "Vidéo 3D immersive"
-msgstr "فيديو ثلاثي الأبعاد غامر"
-
-msgid "Agence VR Tanger"
-msgstr "وكالة واقع افتراضي طنجة"
-
-msgid "VR Creation Company — Production visuelle haut de gamme à Tanger"
-msgstr "VR Creation Company — إنتاج بصري راقي في طنجة"
-
-msgid "est une agence de production visuelle basée à Tanger, au cœur du Nord du Maroc. Nous accompagnons les entreprises, promoteurs, commerces et institutions dans la création de contenus visuels qui valorisent leur image et accélèrent leur croissance."
-msgstr "هي وكالة إنتاج بصري مقرها في طنجة، في قلب شمال المغرب. نرافق الشركات والمطورين والتجار والمؤسسات في إنشاء محتوى بصري يعزز صورتهم ويسرّع نموهم."
-
-msgid "Notre mission : allier créativité, technologie et rigueur pour transformer chaque projet en une expérience visuelle mémorable. De la modélisation 3D à la photographie professionnelle, du branding à l'animation, nous offrons une palette complète de services adaptés aux besoins du marché local et régional."
-msgstr "مهمتنا: الجمع بين الإبداع والتكنولوجيا والدقة لتحويل كل مشروع إلى تجربة بصرية لا تُنسى. من النمذجة ثلاثية الأبعاد إلى التصوير الاحترافي، ومن البراندينغ إلى الرسوم المتحركة، نقدم مجموعة كاملة من الخدمات المكيفة لاحتياجات السوق المحلي والجهوي."
-
-msgid "Chaque création est pensée comme une signature visuelle sur mesure, au service de votre réussite."
-msgstr "كل إبداع مصمم كبصمة بصرية فريدة، في خدمة نجاحكم."
-
-msgid "Nos valeurs"
-msgstr "قيمنا"
-
-msgid "Les piliers de notre engagement"
-msgstr "ركائز التزامنا"
-
-msgid "Notre expertise"
-msgstr "خبرتنا"
-
-msgid "Des compétences complètes pour vos projets visuels"
-msgstr "مهارات شاملة لمشاريعكم البصرية"
-
-msgid "Rendus photoréalistes, maquettes interactives, perspectives architecturales."
-msgstr "عروض واقعية، مجسمات تفاعلية، منظورات معمارية."
-
-msgid "Photographie professionnelle"
-msgstr "التصوير الاحترافي"
-
-msgid "Architecture, produits, corporate, événementiel, drone."
-msgstr "عمارة، منتجات، شركات، فعاليات، درون."
-
-msgid "Visites virtuelles 360°"
-msgstr "جولات افتراضية 360°"
-
-msgid "Immersion totale pour vos clients, navigable sur tous les appareils."
-msgstr "غمر كامل لعملائكم، قابل للتصفح على جميع الأجهزة."
-
-msgid "Branding & communication visuelle"
-msgstr "البراندينغ والتواصل البصري"
-
-msgid "Logo, charte graphique, supports print et digitaux."
-msgstr "شعار، هوية بصرية، مواد مطبوعة ورقمية."
-
-msgid "Animation & motion design"
-msgstr "الرسوم المتحركة والموشن ديزاين"
-
-msgid "Vidéos 3D, survols architecturaux, teasers percutants."
-msgstr "فيديوهات 3D، تحليقات معمارية، إعلانات مؤثرة."
-
-msgid "Marketing digital"
-msgstr "التسويق الرقمي"
-
-msgid "Stratégie de contenu, lead generation, présence digitale."
-msgstr "استراتيجية المحتوى، توليد العملاء المحتملين، الحضور الرقمي."
-
-msgid "Pourquoi nous choisir ?"
-msgstr "لماذا تختاروننا؟"
-
-msgid "Ce qui fait la différence VR Creation"
-msgstr "ما يميز VR Creation"
-
-msgid "Équipe locale et réactive"
-msgstr "فريق محلي وسريع الاستجابة"
-
-msgid "Basés à Tanger, nous intervenons rapidement sur tout le Nord du Maroc : Tétouan, Asilah, Larache, Chefchaouen, Al Hoceima."
-msgstr "مقرنا في طنجة، نتدخل بسرعة في جميع أنحاء شمال المغرب: تطوان، أصيلة، العرائش، شفشاون، الحسيمة."
-
-msgid "Qualité premium, tarifs compétitifs"
-msgstr "جودة عالية، أسعار تنافسية"
-
-msgid "Des livrables de qualité internationale à des prix adaptés au marché local."
-msgstr "مخرجات بجودة دولية بأسعار ملائمة للسوق المحلي."
-
-msgid "Accompagnement personnalisé"
-msgstr "مرافقة شخصية"
-
-msgid "Un interlocuteur dédié du premier rendez-vous à la livraison finale."
-msgstr "محاور مخصص من اللقاء الأول حتى التسليم النهائي."
-
-msgid "Technologies de pointe"
-msgstr "تكنولوجيا متطورة"
-
-msgid "Outils professionnels en 3D, photo, vidéo et design pour des résultats optimaux."
-msgstr "أدوات احترافية في 3D والتصوير والفيديو والتصميم لنتائج مثالية."
-
-msgid "Zone d'intervention"
-msgstr "منطقة التدخل"
-
-msgid "Nous couvrons Tanger et le Nord du Maroc"
-msgstr "نغطي طنجة وشمال المغرب"
-
-msgid "Depuis nos bureaux de Tanger, nous accompagnons les entreprises et institutions de toute la région nord."
-msgstr "من مكاتبنا في طنجة، نرافق الشركات والمؤسسات في جميع أنحاء المنطقة الشمالية."
-
-msgid "Des experts passionnés à votre service"
-msgstr "خبراء متحمسون في خدمتكم"
-
-msgid "Questions fréquentes"
-msgstr "الأسئلة الشائعة"
-
-msgid "FAQ — À propos de VR Creation"
-msgstr "FAQ — حول VR Creation"
-
-msgid "Où se trouvent vos bureaux ?"
-msgstr "أين تقع مكاتبكم؟"
-
-msgid "Nos bureaux se situent à Ibn Batouta bureaux, Avenue Youssef Ibn Tachfine, Tanger 90000, Maroc. Nous recevons sur rendez-vous."
-msgstr "تقع مكاتبنا في Ibn Batouta bureaux، شارع يوسف بن تاشفين، طنجة 90000، المغرب. نستقبل بموعد مسبق."
-
-msgid "Intervenez-vous en dehors de Tanger ?"
-msgstr "هل تعملون خارج طنجة؟"
-
-msgid "Oui, nous couvrons l'ensemble du Nord du Maroc : Tétouan, Asilah, Larache, Chefchaouen, Al Hoceima et les villes environnantes. Pour la modélisation 3D, le branding et l'animation, nous travaillons également à distance pour tout le Maroc."
-msgstr "نعم، نغطي جميع أنحاء شمال المغرب: تطوان، أصيلة، العرائش، شفشاون، الحسيمة والمدن المحيطة. بالنسبة للنمذجة 3D والبراندينغ والرسوم المتحركة، نعمل أيضًا عن بُعد لجميع أنحاء المغرب."
-
-msgid "Comment demander un devis ?"
-msgstr "كيف أطلب عرض أسعار؟"
-
-msgid "Contactez-nous par téléphone au +212 625 07 1498, par WhatsApp, ou via notre formulaire de contact en ligne. Le devis est gratuit et personnalisé."
-msgstr "اتصلوا بنا هاتفيًا على 1498 07 625 212+، عبر واتساب، أو عبر نموذج الاتصال عبر الإنترنت. عرض الأسعار مجاني ومخصص."
-
-msgid "Quels sont vos délais de livraison ?"
-msgstr "ما هي مواعيد التسليم؟"
-
-msgid "Les délais varient selon le projet : quelques jours pour un shooting photo, 1 à 3 semaines pour un branding complet, 2 à 6 semaines pour la modélisation 3D. Nous nous engageons sur un planning précis dès la validation du devis."
-msgstr "تختلف المواعيد حسب المشروع: بضعة أيام لجلسة تصوير، 1 إلى 3 أسابيع لبراندينغ كامل، 2 إلى 6 أسابيع للنمذجة 3D. نلتزم بجدول زمني دقيق منذ الموافقة على عرض الأسعار."
-
-msgid "Travaillez-vous avec les particuliers ?"
-msgstr "هل تعملون مع الأفراد؟"
-
-msgid "Oui, nous travaillons aussi bien avec les entreprises (promoteurs, commerces, restaurants, agences) qu'avec les particuliers (projets de villa, événements privés)."
-msgstr "نعم، نعمل مع الشركات (مطورين، تجار، مطاعم، وكالات) وكذلك مع الأفراد (مشاريع فيلا، فعاليات خاصة)."
-
-msgid "Prêt à donner vie à votre projet ?"
-msgstr "مستعد لإحياء مشروعك؟"
-
-msgid "Contactez notre équipe à Tanger pour un premier échange gratuit et sans engagement."
-msgstr "تواصلوا مع فريقنا في طنجة للحصول على استشارة مجانية بدون التزام."
-
-msgid "Demander un devis gratuit"
-msgstr "طلب عرض أسعار مجاني"
-
-msgid "Présentation du service"
-msgstr "تقديم الخدمة"
-
-msgid "Galerie de réalisations"
-msgstr "معرض الأعمال"
-
-msgid "Notre méthode de travail"
-msgstr "منهجية عملنا"
-
-msgid "Intéressé par ce service ?"
-msgstr "مهتم بهذه الخدمة؟"
-
-msgid "Contactez-nous pour un devis gratuit et personnalisé. Notre équipe à Tanger est à votre écoute."
-msgstr "تواصلوا معنا للحصول على عرض أسعار مجاني ومخصص. فريقنا في طنجة في خدمتكم."
-
-msgid "Demander un devis"
-msgstr "طلب عرض أسعار"
-
-msgid "Besoin d'informations ?"
-msgstr "هل تحتاج معلومات؟"
-
-msgid "Contactez nos experts à Tanger pour en savoir plus et obtenir un devis personnalisé."
-msgstr "تواصلوا مع خبرائنا في طنجة لمزيد من المعلومات والحصول على عرض أسعار مخصص."
-
-msgid "Modélisation 3D à Tanger"
-msgstr "النمذجة ثلاثية الأبعاد في طنجة"
-
-msgid "Marketing digital Tanger"
-msgstr "التسويق الرقمي في طنجة"
-
-msgid "Zone d'intervention : Tanger, Tétouan, Asilah, Chefchaouen — Nord du Maroc"
-msgstr "منطقة التدخل: طنجة، تطوان، أصيلة، شفشاون — شمال المغرب"
-
-msgid "Visite virtuelle Nord Maroc"
-msgstr "جولة افتراضية شمال المغرب"
-
-msgid "Photographe professionnel Tanger"
-msgstr "مصور احترافي في طنجة"
-
-msgid "Branding visuel Tanger"
-msgstr "براندينغ بصري في طنجة"
-
-msgid "Agence créative Tanger"
-msgstr "وكالة إبداعية في طنجة"
-
-msgid "Politique de confidentialité"
-msgstr "سياسة الخصوصية"
-
-msgid "Notre méthode"
-msgstr "منهجيتنا"
-
-msgid "Un processus éprouvé pour garantir des résultats exceptionnels à chaque projet, du premier échange à la livraison finale."
-msgstr "عملية مجربة لضمان نتائج استثنائية في كل مشروع، من التواصل الأول حتى التسليم النهائي."
-
-msgid "Sublimez votre image de marque avec la production visuelle haut de gamme — VR Creation à Tanger"
-msgstr "عززوا صورة علامتكم التجارية مع الإنتاج البصري الراقي — VR Creation في طنجة"
-
-msgid "Modélisation 3D, photographie, visites virtuelles, branding et communication visuelle — nous transformons vos projets en expériences visuelles qui séduisent et convertissent."
-msgstr "نمذجة 3D، تصوير، جولات افتراضية، براندينغ وتواصل بصري — نحول مشاريعكم إلى تجارب بصرية تجذب وتقنع."
-
-msgid "Nous accompagnons les entreprises à chaque étape de leur projet : visualisation, valorisation, expérience immersive et communication digitale. L'objectif : transformer votre vision en un véritable outil de croissance."
-msgstr "نرافق الشركات في كل مرحلة من مشروعها: التصور، التثمين، التجربة الغامرة والتواصل الرقمي. الهدف: تحويل رؤيتكم إلى أداة نمو حقيقية."
-
-msgid "Nous créons des expériences visuelles adaptées à chaque secteur pour valoriser vos projets et accélérer vos ventes."
-msgstr "نبتكر تجارب بصرية مكيفة لكل قطاع لتعزيز مشاريعكم وتسريع مبيعاتكم."
-
-msgid "Découvrez comment nos solutions transforment chaque type de projet en levier de croissance."
-msgstr "اكتشفوا كيف تحول حلولنا كل نوع مشروع إلى رافعة نمو."
-
-msgid "Un accompagnement structuré en 5 étapes pour transformer votre projet en succès."
-msgstr "مرافقة منظمة في 5 خطوات لتحويل مشروعكم إلى نجاح."
-
-msgid "UN PROJET NE SE VEND PAS UNIQUEMENT AVEC DES MOTS."
-msgstr "المشروع لا يُباع بالكلمات فقط."
-
-msgid "Il se vend avec une vision. Nous combinons architecture, 3D, immersion, branding et technologie digitale pour permettre aux promoteurs de présenter leurs projets autrement — et surtout, plus tôt."
-msgstr "يُباع برؤية. نجمع بين الهندسة المعمارية والثلاثي الأبعاد والغمر والبراندينغ والتكنولوجيا الرقمية لتمكين المطورين من تقديم مشاريعهم بشكل مختلف — والأهم، في وقت أبكر."
-
-msgid "Offres Stratégiques"
-msgstr "عروض استراتيجية"
-
-msgid "Nos packs & offres exclusives"
-msgstr "باقاتنا وعروضنا الحصرية"
-
-msgid "Des formules adaptées à chaque étape de votre projet pour accélérer votre croissance et maximiser votre visibilité."
-msgstr "صيغ مكيفة لكل مرحلة من مشروعكم لتسريع نموكم وتعظيم ظهوركم."
-
-msgid "Voir toutes les promotions et packs"
-msgstr "عرض جميع العروض والباقات"
-
-msgid "Avant de construire, commencez déjà à le vendre. Présentez-nous votre projet et découvrons ensemble comment le transformer en une expérience commerciale complète."
-msgstr "قبل البناء، ابدأوا بالبيع. قدموا لنا مشروعكم ولنكتشف معًا كيف نحوله إلى تجربة تجارية كاملة."
-
-msgid "Données personnelles"
-msgstr "البيانات الشخصية"
-
-msgid "Ce site est hébergé par PythonAnywhere (PythonAnywhere LLP, Anaconda Inc.)"
-msgstr "تتم استضافة هذا الموقع بواسطة PythonAnywhere (PythonAnywhere LLP, Anaconda Inc.)"
-
-msgid "L'ensemble de ce site relève de la législation sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés."
-msgstr "يخضع هذا الموقع بالكامل لتشريعات حقوق المؤلف والملكية الفكرية. جميع حقوق النسخ محفوظة."
-
-msgid "Les informations collectées via le formulaire de contact sont destinées exclusivement à VR Creation Company. Conformément à la loi marocaine n° 09-08, vous disposez d'un droit d'accès, de rectification et de suppression de vos données personnelles."
-msgstr "المعلومات المجمعة عبر نموذج الاتصال مخصصة حصريًا لـ VR Creation Company. وفقًا للقانون المغربي رقم 09-08، يحق لكم الوصول إلى بياناتكم الشخصية وتصحيحها وحذفها."
-
-msgid "Site web"
-msgstr "الموقع الإلكتروني"
-
-msgid "VR Creation — Agence de production visuelle à Tanger"
-msgstr "VR Creation — وكالة إنتاج بصري في طنجة"
-
-msgid "Annuler et retourner aux articles"
-msgstr "إلغاء والعودة إلى المقالات"
-
-msgid "Brouillon"
-msgstr "مسودة"
-
-msgid "Chaque prestation est conçue pour maximiser votre impact commercial et accélérer vos ventes."
-msgstr "كل خدمة مصممة لتعظيم تأثيركم التجاري وتسريع مبيعاتكم."
-
-msgid "Confiez-nous vos plans 2D et laissez-nous les transformer en une expérience immersive."
-msgstr "سلمونا مخططاتكم ثنائية الأبعاد ودعونا نحولها إلى تجربة غامرة."
-
-msgid "Les maquettes physiques coûtent cher et prennent de nombreuses semaines à fabriquer."
-msgstr "المجسمات المادية مكلفة وتستغرق أسابيع عديدة للتصنيع."
-
-msgid "Merci de nous avoir contactés. Nous avons bien reçu votre message et nous vous répondrons dans les plus brefs délais."
-msgstr "شكرًا لتواصلكم. لقد تلقينا رسالتكم وسنرد عليكم في أقرب وقت."
-
-msgid "Nous analysons votre projet et mettons en place la stratégie la plus efficace. Vous ne payez rien à cette étape."
-msgstr "نحلل مشروعكم ونضع الاستراتيجية الأكثر فعالية. لا تدفعون شيئًا في هذه المرحلة."
-
-msgid "Nous collectons les données que vous nous fournissez via notre formulaire de contact (nom, email, téléphone, message). Ces données sont utilisées exclusivement pour répondre à votre demande. Elles ne sont ni vendues, ni cédées à des tiers."
-msgstr "نجمع البيانات التي تقدمونها عبر نموذج الاتصال (الاسم، البريد الإلكتروني، الهاتف، الرسالة). تُستخدم هذه البيانات حصريًا للرد على طلبكم. لا يتم بيعها أو تسليمها لأطراف ثالثة."
-
-msgid "Sans visuel fort, vos prospects hésitent, comparent et partent chez la concurrence qui a déjà de belles images."
-msgstr "بدون مرئيات قوية، يتردد عملاؤكم ويقارنون ويذهبون إلى المنافسين الذين يملكون صورًا جميلة."
-
-msgid "Veuillez corriger les erreurs ci-dessous."
-msgstr "يرجى تصحيح الأخطاء أدناه."
-
-msgid "Vous avez un projet immobilier en préparation ? Vendez sur plan avant de poser la première pierre grâce à nos solutions visuelles."
-msgstr "هل لديكم مشروع عقاري قيد الإعداد؟ بيعوا على الخريطة قبل وضع الحجر الأول بفضل حلولنا البصرية."
-
-msgid "non publié"
-msgstr "غير منشور"
-
-msgid "Découvrez des packs de services conçus spécifiquement pour répondre à vos objectifs de commercialisation."
-msgstr "اكتشفوا باقات خدمات مصممة خصيصًا لتلبية أهدافكم التسويقية."
-
-msgid "Sélectionnez ou désélectionnez les services selon vos besoins. Les services inclus dans le pack sont pré-sélectionnés."
-msgstr "حددوا أو ألغوا تحديد الخدمات حسب احتياجاتكم. الخدمات المدرجة في الباقة مختارة مسبقًا."
-
-msgid "En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de cookies pour améliorer votre expérience."
-msgstr "باستمراركم في تصفح هذا الموقع، فإنكم توافقون على استخدام ملفات تعريف الارتباط لتحسين تجربتكم."
-
-msgid "Un cookie est un petit fichier texte déposé sur votre terminal (ordinateur, tablette ou smartphone) lors de votre visite sur notre site."
-msgstr "ملف تعريف الارتباط هو ملف نصي صغير يتم وضعه على جهازكم (كمبيوتر، لوحة أو هاتف) عند زيارة موقعنا."
-
-msgid "Ces cookies sont essentiels au fonctionnement du site et ne peuvent pas être désactivés dans nos systèmes."
-msgstr "هذه الملفات ضرورية لعمل الموقع ولا يمكن تعطيلها."
-
-msgid "Ces cookies nous aident à mesurer l'audience de notre site, à analyser la navigation et à identifier les contenus les plus populaires."
-msgstr "تساعدنا هذه الملفات في قياس جمهور موقعنا وتحليل التصفح وتحديد المحتوى الأكثر شعبية."
-
-msgid "Ces cookies sont liés au partage sur les réseaux sociaux et peuvent être installés pour suivre l'activité de navigation sur notre site."
-msgstr "ترتبط هذه الملفات بالمشاركة على الشبكات الاجتماعية ويمكن تثبيتها لتتبع نشاط التصفح."
-
-msgid "Conformément à la réglementation RGPD, le consentement donné pour le dépôt de cookies a une durée de validité de 13 mois maximum."
-msgstr "وفقًا للائحة العامة لحماية البيانات، مدة صلاحية الموافقة على ملفات تعريف الارتباط 13 شهرًا كحد أقصى."
-
-msgid "Permettent de mesurer l'audience et d'analyser l'utilisation du site pour l'améliorer."
-msgstr "تسمح بقياس الجمهور وتحليل استخدام الموقع لتحسينه."
-
-msgid "Permettent de vous proposer des publicités personnalisées et de partager du contenu."
-msgstr "تسمح بتقديم إعلانات مخصصة ومشاركة المحتوى."
-
-msgid "Vous pouvez à tout moment modifier vos préférences de cookies, accepter ou refuser le chargement des cookies non essentiels."
-msgstr "يمكنكم في أي وقت تعديل تفضيلات ملفات تعريف الارتباط أو قبول أو رفض الملفات غير الضرورية."
-
-msgid "Générateur d'articles IA"
-msgstr "مولد مقالات بالذكاء الاصطناعي"
-
-msgid "Générateur d'articles de blog par IA"
-msgstr "مولد مقالات المدونة بالذكاء الاصطناعي"
-
-msgid "Génération en cours..."
-msgstr "جاري التوليد..."
-
-msgid "Générer l'article maintenant"
-msgstr "توليد المقال الآن"
-
-msgid "Générer un article avec l'IA"
-msgstr "توليد مقال بالذكاء الاصطناعي"
-
-msgid "Indiquez votre sujet ou vos mots-clés pour que l'IA rédige un article complet, structuré et optimisé SEO pour votre blog."
-msgstr "حددوا موضوعكم أو كلماتكم المفتاحية ليقوم الذكاء الاصطناعي بكتابة مقال كامل ومنظم ومحسن لمحركات البحث."
-
-msgid "L'IA Gemini rédige le titre, l'extrait et l'article structuré en Markdown. Veuillez patienter 5 à 15 secondes."
-msgstr "يكتب Gemini AI العنوان والمقتطف والمقال المنظم بتنسيق Markdown. يرجى الانتظار 5 إلى 15 ثانية."
-
-msgid "L'article sera automatiquement enregistré au statut"
-msgstr "سيتم حفظ المقال تلقائيًا بحالة"
-
-msgid "Rédaction par IA en cours..."
-msgstr "جاري الكتابة بالذكاء الاصطناعي..."
-
-msgid "Sécurité & Contrôle éditorial :"
-msgstr "الأمان والرقابة التحريرية:"
-
-msgid "Vous pourrez le relire, ajuster le texte, ajouter une image et le publier manuellement."
-msgstr "يمكنكم مراجعته وتعديل النص وإضافة صورة ونشره يدويًا."
-
-msgid "Simule un espace virtuel 3D en transformant le site avec un design néon et des particules cosmiques pour une immersion totale dans l'univers de VR Creation."
-msgstr "يحاكي فضاء افتراضيًا ثلاثي الأبعاد مع تصميم نيون وجزيئات كونية لغمر كامل في عالم VR Creation."
-
-msgid "Tanger"
-msgstr "طنجة"
-
-msgid "Tétouan"
-msgstr "تطوان"
-
-msgid "Asilah"
-msgstr "أصيلة"
-
-msgid "Larache"
-msgstr "العرائش"
-
-msgid "Chefchaouen"
-msgstr "شفشاون"
-
-msgid "Al Hoceima"
-msgstr "الحسيمة"
-
-msgid "Fnideq"
-msgstr "الفنيدق"
-
-msgid "M'diq"
-msgstr "المضيق"
-
-msgid "Ksar El Kébir"
-msgstr "القصر الكبير"
-
-msgid "Équipe VR Creation à Tanger"
-msgstr "فريق VR Creation في طنجة"
-
-msgid "Localisation VR Creation — Tanger, Maroc"
-msgstr "موقع VR Creation — طنجة، المغرب"
-
-msgid "Galerie VR Creation"
-msgstr "معرض VR Creation"
-
-msgid ""
-"VR Creation Company — Agence de production visuelle, modélisation 3D, "
-"photographie professionnelle et branding à Tanger, Maroc. Spécialisée "
-"en visites virtuelles 360°, communication visuelle et marketing "
-"digital pour les entreprises du Nord du Maroc : Tanger, Tétouan, "
-"Asilah, Larache, Chefchaouen, Al Hoceima."
-msgstr ""
-"VR Creation Company — وكالة إنتاج بصري، نمذجة ثلاثية "
-"الأبعاد، تصوير احترافي وبراندينغ في طنجة، المغرب. متخصصة في "
-"الجولات الافتراضية 360°، التواصل البصري والتسويق الرقمي "
-"لشركات شمال المغرب: طنجة، تطوان، أصيلة، العرائش، شفشاون، "
-"الحسيمة."
+msgid "✨ L'article IA <strong>« %(title)s »</strong> a été généré avec succès en mode <strong>Brouillon</strong>. Vous pouvez maintenant le relire et l'éditer."
+msgstr "✨ L'article IA <strong>« %(title)s »</strong> a été généré avec succès en mode <strong>Brouillon</strong>. Vous pouvez maintenant le relire et l'éditer."
