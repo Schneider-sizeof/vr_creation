@@ -22,17 +22,30 @@
          width="1920" height="1080">
     {% endif %}
 
-    <!-- Desktop (md+): Cinematic Background Video -->
+    <!-- Desktop (md+): Background Video loaded ONLY on desktop (window.innerWidth >= 768) -->
     {% if site_settings.hero_video %}
     <video
+        id="hero-desktop-video"
         class="hidden md:block absolute inset-0 w-full h-full object-cover z-0"
-        autoplay muted loop playsinline preload="none"
+        data-src="{{ site_settings.hero_video.url }}"
+        muted loop playsinline preload="none"
         {% if site_settings.hero_video_poster %}poster="{{ site_settings.hero_video_poster.url }}"{% endif %}
         aria-hidden="true"
     >
-        <source src="{{ site_settings.hero_video.url }}" type="video/mp4">
         <track kind="captions" srclang="fr" label="Vidéo d'ambiance 3D sans dialogue">
     </video>
+    <script>
+        (function() {
+            if (window.innerWidth >= 768) {
+                var v = document.getElementById('hero-desktop-video');
+                if (v && v.dataset.src) {
+                    v.src = v.dataset.src;
+                    v.autoplay = true;
+                    v.play().catch(function(){});
+                }
+            }
+        })();
+    </script>
     {% elif site_settings.hero_video_poster and not site_settings.hero_video %}
     <img src="{{ site_settings.hero_video_poster.url }}" alt="{% trans "VR Creation — Modélisation 3D et visites virtuelles à Tanger" %}" class="hidden md:block absolute inset-0 w-full h-full object-cover z-0" width="1920" height="1080">
     {% else %}
@@ -118,7 +131,7 @@
             <a href="{% url 'services:detail' service.slug %}" class="group relative block rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 aspect-[4/3] animate-on-scroll slide-up" style="transition-delay: {{ forloop.counter }}00ms;">
                 <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-primary-dark to-slate-950"></div>
                 {% if service.featured_image %}
-                <img src="{{ service.featured_image.url }}" alt="{{ service.title }}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out z-0" onerror="this.style.display='none'">
+                <img src="{{ service.featured_image.url }}" alt="{{ service.title }} — Studio 3D Tanger" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out z-0" width="600" height="450" loading="lazy" decoding="async" onerror="this.style.display='none'">
                 {% endif %}
                 <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/75 to-black/50 group-hover:via-black/80 transition-all duration-500 z-10"></div>
                 <div class="absolute inset-0 p-6 flex flex-col justify-end text-white z-20">
