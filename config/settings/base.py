@@ -32,15 +32,16 @@ SECRET_KEY = os.environ.get(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DJANGO_DEBUG', 'True').lower() in ('true', '1', 'yes')
 
-ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', '*').split(',')
+SITE_DOMAIN = 'vrcreationcompany.com'
+SITE_PROTOCOL = 'https'
+SITE_URL = 'https://vrcreationcompany.com'
+CANONICAL_DOMAIN = 'vrcreationcompany.com'
+CANONICAL_DOMAIN_REDIRECT_ENABLED = True
 
-SITE_DOMAIN = os.environ.get('SITE_DOMAIN', 'vrcreationcompany.com')
-SITE_PROTOCOL = os.environ.get('SITE_PROTOCOL', 'https')
-SITE_URL = f'{SITE_PROTOCOL}://{SITE_DOMAIN}'
-
-# Canonical domain redirect — set to True after migrating to vrcreation.com
-CANONICAL_DOMAIN = os.environ.get('CANONICAL_DOMAIN', 'vrcreationcompany.com')
-CANONICAL_DOMAIN_REDIRECT_ENABLED = os.environ.get('CANONICAL_DOMAIN_REDIRECT_ENABLED', 'False').lower() in ('true', '1')
+if DEBUG:
+    ALLOWED_HOSTS = ['vrcreationcompany.com', 'www.vrcreationcompany.com', 'localhost', '127.0.0.1', 'testserver']
+else:
+    ALLOWED_HOSTS = ['vrcreationcompany.com', 'www.vrcreationcompany.com']
 
 # Application definition
 INSTALLED_APPS = [

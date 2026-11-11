@@ -1,48 +1,51 @@
 """
-Canonical domain redirect middleware.
-301-redirects non-canonical requests to the canonical domain.
-Controlled by settings:
-    CANONICAL_DOMAIN = 'vrcreationcompany.com'
-    CANONICAL_DOMAIN_REDIRECT_ENABLED = False  # Enable after domain migration
+Canonical domain redirect & host shield middleware.
+- 301-redirects www.vrcreationcompany.com to https://vrcreationcompany.com
+- 301-redirects http to https
+- returns a plain 404 (not a redirect, not the site) for any other Host header
 """
 from django.conf import settings
-from django.http import HttpResponsePermanentRedirect
+from django.http import HttpResponseNotFound, HttpResponsePermanentRedirect
 
 
 class CanonicalDomainMiddleware:
     """
-    Middleware that enforces canonical domain:
-    - Redirects www to non-www
-    - Redirects http to https
-    - Redirects old PythonAnywhere subdomain to new domain
-    
-    Only active when CANONICAL_DOMAIN_REDIRECT_ENABLED = True in settings.
+    Middleware that enforces canonical domain and shields against host leakage:
+    - Rejects foreign host headers (e.g. medicentersperformance.com, raw IP) with a plain 404
+    - 301 redirects www.vrcreationcompany.com to https://vrcreationcompany.com
+    - 301 redirects http to https
     """
 
     def __init__(self, get_response):
         self.get_response = get_response
 
     def __call__(self, request):
-        if not getattr(settings, 'CANONICAL_DOMAIN_REDIRECT_ENABLED', False):
-            return self.get_response(request)
-
         canonical_domain = getattr(settings, 'CANONICAL_DOMAIN', 'vrcreationcompany.com')
         canonical_protocol = getattr(settings, 'SITE_PROTOCOL', 'https')
-        host = request.get_host().split(':')[0].lower()
 
-        needs_redirect = False
+        # Read host directly from META to intercept before DisallowedHost validation
+        raw_host = (request.META.get('HTTP_HOST') or '').split(':')[0].strip().lower()
 
-        # Check if host is not the canonical domain
-        if host != canonical_domain:
-            needs_redirect = True
+        # In dev mode (DEBUG=True), allow localhost / 127.0.0.1 / testserver
+        is_debug = getattr(settings, 'DEBUG', False)
+        valid_dev_hosts = {'localhost', '127.0.0.1', 'testserver'}
 
-        # Check protocol (via X-Forwarded-Proto header)
-        protocol = request.META.get('HTTP_X_FORWARDED_PROTO', 'http')
-        if protocol != canonical_protocol:
-            needs_redirect = True
+        # Allowed host set
+        valid_hosts = {canonical_domain, f"www.{canonical_domain}"}
+        if is_debug:
+            valid_hosts.update(valid_dev_hosts)
 
-        if needs_redirect:
-            new_url = f"{canonical_protocol}://{canonical_domain}{request.get_full_path()}"
-            return HttpResponsePermanentRedirect(new_url)
+        # Host shield: any host outside valid_hosts returns plain 404 text response
+        if not raw_host or raw_host not in valid_hosts:
+            return HttpResponseNotFound("Not Found", content_type="text/plain")
+
+        # 301 redirect www to canonical apex domain
+        if raw_host == f"www.{canonical_domain}":
+            return HttpResponsePermanentRedirect(f"{canonical_protocol}://{canonical_domain}{request.get_full_path()}")
+
+        # 301 redirect HTTP to HTTPS in production
+        proto = request.META.get('HTTP_X_FORWARDED_PROTO', request.scheme or 'http').lower()
+        if not is_debug and proto != 'https':
+            return HttpResponsePermanentRedirect(f"https://{canonical_domain}{request.get_full_path()}")
 
         return self.get_response(request)

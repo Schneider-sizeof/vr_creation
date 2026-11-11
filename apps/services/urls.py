@@ -11,5 +11,6 @@ app_name = 'services'
 urlpatterns = [
     path(_('services/'), views.service_list, name='list'),
     path(_('services/') + 'branding-immobilier/', views.redirect_old_branding_slug, name='branding_redirect'),
+    path(_('services/') + 'branding-communication-visuelle/', views.redirect_old_branding_slug, name='branding_comm_redirect'),
     path(_('services/') + '<slug:slug>/', views.service_detail, name='detail'),
 ]

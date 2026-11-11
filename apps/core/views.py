@@ -121,6 +121,25 @@ def cookie_policy(request):
     })
 
 
+def html_sitemap(request):
+    """HTML Sitemap page for visitors and search engines."""
+    services = Service.objects.filter(is_active=True)
+    projects = Project.objects.all()[:12]
+    case_studies = CaseStudy.objects.all()
+    active_promotions = Promotion.objects.filter(is_active=True)
+    articles = Article.objects.filter(is_published=True)[:10]
+
+    return render(request, 'core/html_sitemap.html', {
+        'services': services,
+        'projects': projects,
+        'case_studies': case_studies,
+        'promotions': active_promotions,
+        'articles': articles,
+        'page_seo': get_page_seo('sitemap'),
+        'page_identifier': 'html_sitemap',
+    })
+
+
 def promotions(request):
     """Promotions list/grid page."""
     active_promotions = Promotion.objects.filter(is_active=True).order_by('order')

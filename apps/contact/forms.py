@@ -1,7 +1,7 @@
 """
-Contact form with honeypot and math captcha anti-spam.
+Contact form with honeypot and time-based anti-spam protection.
 """
-import random
+import time
 from django import forms
 from django.utils.translation import gettext_lazy as _
 
@@ -9,24 +9,28 @@ from .models import ContactSubmission
 
 
 class ContactForm(forms.ModelForm):
-    """Contact form with honeypot + math captcha for spam protection."""
+    """
+    Contact form protected by:
+    1. Honeypot field (website_url) — hidden from human users via CSS
+    2. Submission timestamp (form_time) — rejects automated bots submitting in < 3s
+    """
 
-    # Honeypot field — hidden, should remain empty
-    website = forms.CharField(
+    # Honeypot field — invisible to users, bots fill it in
+    website_url = forms.CharField(
         required=False,
-        widget=forms.HiddenInput(attrs={'tabindex': '-1', 'autocomplete': 'off'}),
+        widget=forms.TextInput(attrs={
+            'tabindex': '-1',
+            'autocomplete': 'off',
+            'aria-hidden': 'true',
+            'style': 'opacity: 0; position: absolute; top: 0; left: 0; height: 0; width: 0; z-index: -1;',
+        }),
         label='',
     )
 
-    # Math captcha
-    captcha_answer = forms.IntegerField(
-        label=_('Question de sécurité'),
-        widget=forms.NumberInput(attrs={
-            'class': 'form-input',
-            'placeholder': _('Votre réponse'),
-            'id': 'contact-captcha',
-            'autocomplete': 'off',
-        }),
+    # Submission timestamp — minimum elapsed time validation
+    form_time = forms.IntegerField(
+        widget=forms.HiddenInput(),
+        required=False,
     )
 
     class Meta:
@@ -66,24 +70,27 @@ class ContactForm(forms.ModelForm):
         }
 
     def __init__(self, *args, **kwargs):
-        self.captcha_num1 = kwargs.pop('captcha_num1', random.randint(1, 9))
-        self.captcha_num2 = kwargs.pop('captcha_num2', random.randint(1, 9))
         super().__init__(*args, **kwargs)
-        self.fields['captcha_answer'].label = _('Combien font %(num1)d + %(num2)d ?') % {
-            'num1': self.captcha_num1, 'num2': self.captcha_num2
-        }
+        if not self.is_bound:
+            self.initial['form_time'] = int(time.time())
 
-    def clean_website(self):
+    def clean_website_url(self):
         """Honeypot validation — if filled, it's a bot."""
-        value = self.cleaned_data.get('website')
+        value = self.cleaned_data.get('website_url')
         if value:
             raise forms.ValidationError(_('Spam detected.'))
         return value
 
-    def clean_captcha_answer(self):
-        """Validate math captcha answer."""
-        answer = self.cleaned_data.get('captcha_answer')
-        expected = self.captcha_num1 + self.captcha_num2
-        if answer != expected:
-            raise forms.ValidationError(_('Réponse incorrecte. Veuillez réessayer.'))
-        return answer
+    def clean_form_time(self):
+        """Validate submission duration: minimum 3 seconds for human entry."""
+        raw_val = self.cleaned_data.get('form_time')
+        if raw_val:
+            try:
+                elapsed = time.time() - int(raw_val)
+                if elapsed < 3.0:
+                    raise forms.ValidationError(
+                        _('Formulaire soumis trop rapidement. Veuillez patienter un instant.')
+                    )
+            except (ValueError, TypeError):
+                pass
+        return raw_val

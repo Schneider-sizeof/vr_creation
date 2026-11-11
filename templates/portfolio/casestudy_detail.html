@@ -1,5 +1,9 @@
 {% extends "base.html" %}
-{% load i18n static %}
+{% load i18n static seo_tags %}
+
+{% block jsonld_extra %}
+{% jsonld_breadcrumb "Études de cas" "/fr/etudes-de-cas/" case_study.title "" %}
+{% endblock %}
 
 {% block content %}
 {% include "partials/page_hero.html" with title=case_study.title breadcrumb_label=case_study.title %}

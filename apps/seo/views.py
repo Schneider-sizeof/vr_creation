@@ -6,8 +6,9 @@ from django.shortcuts import render
 
 
 def robots_txt(request):
-    """Dynamic robots.txt."""
+    """Dynamic robots.txt with absolute sitemap URL."""
     return render(request, 'seo/robots.txt', {
-        'site_domain': settings.SITE_DOMAIN,
-        'site_protocol': settings.SITE_PROTOCOL,
+        'site_domain': 'vrcreationcompany.com',
+        'site_protocol': 'https',
+        'site_url': 'https://vrcreationcompany.com',
     }, content_type='text/plain')

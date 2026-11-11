@@ -1,5 +1,6 @@
 """
 SEO template tags for meta tags, JSON-LD, hreflang, breadcrumbs.
+Strictly canonicalized to https://vrcreationcompany.com.
 """
 import json
 from django import template
@@ -44,7 +45,7 @@ def seo_meta_tags(context):
             description = getattr(obj, 'meta_description', None) or getattr(obj, 'short_description', '') or getattr(obj, 'excerpt', '') or ''
             if not description:
                 desc_field = getattr(obj, 'description', '') or getattr(obj, 'problem', '') or ''
-                description = desc_field[:160] if desc_field else ''
+                description = desc_field if desc_field else ''
         if not keywords:
             keywords = getattr(obj, 'keywords', '') or ''
         if not og_image:
@@ -56,18 +57,28 @@ def seo_meta_tags(context):
     if not og_image and site_settings and site_settings.default_og_image:
         og_image = site_settings.default_og_image.url
 
+    # Smart description trimming at word boundary (≤ 155 chars)
+    if description:
+        description = description.strip().replace('\r', ' ').replace('\n', ' ')
+        if len(description) > 155:
+            trimmed = description[:152].rsplit(' ', 1)[0]
+            description = f"{trimmed}..."
+
     site_name = site_settings.site_name if site_settings else 'VR Creation'
     if title and site_name not in title:
-        full_title = f"{title} | {site_name}"
+        candidate = f"{title} | {site_name}"
+        full_title = candidate if len(candidate) <= 65 else title
     elif not title:
         full_title = site_name
     else:
         full_title = title
 
-    base_url = f"{settings.SITE_PROTOCOL}://{settings.SITE_DOMAIN}"
+    base_url = getattr(settings, 'SITE_URL', 'https://vrcreationcompany.com')
     current_url = base_url + request.path if request else base_url
     if not canonical:
         canonical = current_url
+    elif not canonical.startswith('http'):
+        canonical = base_url + canonical
 
     if og_image and not og_image.startswith('http'):
         og_image = base_url + og_image
@@ -97,7 +108,7 @@ def seo_meta_tags(context):
 
     # Open Graph
     parts.append(f'<meta property="og:title" content="{full_title}">')
-    parts.append(f'<meta property="og:type" content="website">')
+    parts.append('<meta property="og:type" content="website">')
     parts.append(f'<meta property="og:url" content="{current_url}">')
     parts.append(f'<meta property="og:site_name" content="{site_name}">')
     parts.append(f'<meta property="og:locale" content="{og_locale}">')
@@ -126,20 +137,30 @@ def seo_meta_tags(context):
 
 @register.simple_tag(takes_context=True)
 def hreflang_tags(context):
-    """Generate hreflang alternate links for all languages."""
+    """
+    Generate hreflang alternate links:
+    fr-MA, en, ar-MA, and x-default pointing to French translation.
+    """
     request = context.get('request')
     if not request:
         return ''
 
-    base_url = f"{settings.SITE_PROTOCOL}://{settings.SITE_DOMAIN}"
+    base_url = getattr(settings, 'SITE_URL', 'https://vrcreationcompany.com')
     current_path = request.path
 
+    hreflang_map = {
+        'fr': 'fr-MA',
+        'en': 'en',
+        'ar': 'ar-MA',
+    }
+
     parts = []
-    for lang_code, lang_name in settings.LANGUAGES:
+    for lang_code, _lang_name in settings.LANGUAGES:
         translated = translate_url(current_path, lang_code)
         if translated:
             full_url = base_url + translated
-            parts.append(f'<link rel="alternate" hreflang="{lang_code}" href="{full_url}">')
+            hl_code = hreflang_map.get(lang_code, lang_code)
+            parts.append(f'<link rel="alternate" hreflang="{hl_code}" href="{full_url}">')
 
     # x-default points to French (default language)
     default_url = base_url + translate_url(current_path, 'fr')
@@ -159,12 +180,11 @@ def get_translated_url(context, lang_code):
     return translated or f"/{lang_code}/"
 
 
-
 @register.simple_tag(takes_context=True)
 def jsonld_organization(context):
     """JSON-LD Organization schema with Tangier/Morocco locality."""
     site_settings = context.get('site_settings')
-    base_url = f"{settings.SITE_PROTOCOL}://{settings.SITE_DOMAIN}"
+    base_url = getattr(settings, 'SITE_URL', 'https://vrcreationcompany.com')
 
     data = {
         "@context": "https://schema.org",
@@ -172,8 +192,8 @@ def jsonld_organization(context):
         "name": site_settings.site_name if site_settings else "VR Creation Company",
         "url": base_url,
         "description": site_settings.tagline if site_settings else "L'innovation en action",
-        "email": site_settings.email if site_settings else "",
-        "telephone": site_settings.phone if site_settings else "",
+        "email": site_settings.email if site_settings else "contact@vrcreationcompany.com",
+        "telephone": site_settings.phone if site_settings else "+212625071498",
     }
 
     if site_settings and site_settings.logo:
@@ -195,6 +215,7 @@ def jsonld_organization(context):
             "streetAddress": site_settings.address,
             "addressLocality": "Tangier",
             "addressRegion": "Tanger-Tétouan-Al Hoceïma",
+            "postalCode": "90000",
             "addressCountry": "MA",
         }
 
@@ -218,7 +239,7 @@ def jsonld_breadcrumb(context, *breadcrumbs):
     Pairs of (name, url). Empty url = current page.
     """
     request = context.get('request')
-    base_url = f"{settings.SITE_PROTOCOL}://{settings.SITE_DOMAIN}"
+    base_url = getattr(settings, 'SITE_URL', 'https://vrcreationcompany.com')
 
     items = [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": base_url + "/fr/"}]
 
@@ -247,23 +268,25 @@ def jsonld_service(context):
     if not service:
         return ''
 
-    base_url = f"{settings.SITE_PROTOCOL}://{settings.SITE_DOMAIN}"
+    base_url = getattr(settings, 'SITE_URL', 'https://vrcreationcompany.com')
     site_settings = context.get('site_settings')
 
     data = {
         "@context": "https://schema.org",
         "@type": "Service",
         "name": service.title,
-        "description": service.short_description or service.full_description[:200],
+        "description": service.short_description or (service.full_description[:200] if service.full_description else ""),
         "url": base_url + service.get_absolute_url(),
         "provider": {
             "@type": "Organization",
             "name": site_settings.site_name if site_settings else "VR Creation Company",
+            "url": base_url,
         },
-        "areaServed": {
-            "@type": "City",
-            "name": "Tangier",
-        }
+        "areaServed": [
+            {"@type": "City", "name": "Tangier"},
+            {"@type": "City", "name": "Tetouan"},
+            {"@type": "AdministrativeArea", "name": "Northern Morocco"}
+        ]
     }
 
     if service.featured_image:
@@ -279,7 +302,7 @@ def jsonld_article(context):
     if not article:
         return ''
 
-    base_url = f"{settings.SITE_PROTOCOL}://{settings.SITE_DOMAIN}"
+    base_url = getattr(settings, 'SITE_URL', 'https://vrcreationcompany.com')
 
     data = {
         "@context": "https://schema.org",
@@ -299,10 +322,76 @@ def jsonld_article(context):
 
 
 @register.simple_tag(takes_context=True)
-def jsonld_local_business(context):
-    """JSON-LD LocalBusiness structured data in <head> for all locales."""
+def jsonld_project(context):
+    """JSON-LD CreativeWork schema for portfolio project detail pages."""
+    project = context.get('project')
+    if not project:
+        return ''
+
+    base_url = getattr(settings, 'SITE_URL', 'https://vrcreationcompany.com')
     site_settings = context.get('site_settings')
-    base_url = f"{settings.SITE_PROTOCOL}://{settings.SITE_DOMAIN}"
+
+    data = {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": project.title,
+        "description": (project.description[:160] if project.description else ""),
+        "url": base_url + project.get_absolute_url(),
+        "creator": {
+            "@type": "Organization",
+            "name": site_settings.site_name if site_settings else "VR Creation Company",
+            "url": base_url
+        }
+    }
+
+    if project.featured_image:
+        data["image"] = base_url + project.featured_image.url
+
+    return mark_safe(f'<script type="application/ld+json">{json.dumps(data, ensure_ascii=False)}</script>')
+
+
+@register.simple_tag(takes_context=True)
+def jsonld_faq(context, faqs=None):
+    """Generate JSON-LD FAQPage structured data from a list of (question, answer) dicts or tuples."""
+    if not faqs:
+        return ''
+
+    main_entities = []
+    for item in faqs:
+        if isinstance(item, dict):
+            q = item.get('question') or item.get('q')
+            a = item.get('answer') or item.get('a')
+        elif isinstance(item, (list, tuple)) and len(item) >= 2:
+            q, a = item[0], item[1]
+        else:
+            continue
+
+        if q and a:
+            main_entities.append({
+                "@type": "Question",
+                "name": str(q),
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": str(a)
+                }
+            })
+
+    if not main_entities:
+        return ''
+
+    data = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": main_entities
+    }
+    return mark_safe(f'<script type="application/ld+json">\n{json.dumps(data, ensure_ascii=False, indent=2)}\n</script>')
+
+
+@register.simple_tag(takes_context=True)
+def jsonld_local_business(context):
+    """JSON-LD Organization + ProfessionalService / LocalBusiness structured data."""
+    site_settings = context.get('site_settings')
+    base_url = getattr(settings, 'SITE_URL', 'https://vrcreationcompany.com')
 
     logo_url = (base_url + site_settings.logo.url) if (site_settings and site_settings.logo) else f"{base_url}/media/site/logo.png"
 
@@ -321,34 +410,34 @@ def jsonld_local_business(context):
 
     data = {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
+        "@type": ["Organization", "ProfessionalService"],
         "name": "VR Creation Company",
         "image": logo_url,
-        "@id": f"{base_url}/",
+        "@id": f"{base_url}/#organization",
         "url": f"{base_url}/",
-        "telephone": site_settings.phone if (site_settings and site_settings.phone) else "+212 625 07 1498",
+        "telephone": site_settings.phone if (site_settings and site_settings.phone) else "+212625071498",
+        "email": (site_settings.email if site_settings else "contact@vrcreationcompany.com"),
+        "priceRange": "$$",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Ibn Batouta bureaux, Av. Youssef Ibn Tachfine",
             "addressLocality": "Tanger",
+            "addressRegion": "Tanger-Tétouan-Al Hoceïma",
             "postalCode": "90000",
             "addressCountry": "MA"
         },
-        "email": (site_settings.email if site_settings else "contact@vrcreationcompany.com"),
-        "priceRange": "$$",
         "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 35.7595,
-            "longitude": -5.8340
+            "latitude": 35.7772,
+            "longitude": -5.8047
         },
         "areaServed": [
-            {"@type": "City", "name": "Tangier"},
-            {"@type": "City", "name": "Tetouan"},
+            {"@type": "City", "name": "Tanger"},
+            {"@type": "City", "name": "Tétouan"},
             {"@type": "City", "name": "Chefchaouen"},
-            {"@type": "AdministrativeArea", "name": "Northern Morocco"}
+            {"@type": "AdministrativeArea", "name": "Nord du Maroc"}
         ],
         "sameAs": social + ["https://share.google/CEh7vvvHw6o1atT6d"]
     }
 
     return mark_safe(f'<script type="application/ld+json">\n{json.dumps(data, ensure_ascii=False, indent=2)}\n</script>')
-

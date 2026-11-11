@@ -1,16 +1,14 @@
 """
-Contact views with rate limiting and math captcha.
+Contact views with rate limiting, honeypot and time-based anti-spam protection.
 """
 import time
-import random
 import logging
 
 logger = logging.getLogger(__name__)
 from django.conf import settings
-from django.core.mail import EmailMessage
 from django.shortcuts import render, redirect
 from django.urls import reverse
-from django.utils.translation import gettext_lazy as _, gettext, get_language
+from django.utils.translation import gettext_lazy as _
 
 from .forms import ContactForm
 from .emails import send_contact_submission_emails
@@ -35,12 +33,9 @@ def _check_rate_limit(request):
 
 
 def contact_view(request):
-    """Contact form page with honeypot, math captcha and rate limiting."""
+    """Contact form page with honeypot, timestamp verification and rate limiting."""
     if request.method == 'POST':
-        # Retrieve the captcha numbers from the session
-        num1 = request.session.get('captcha_num1', 0)
-        num2 = request.session.get('captcha_num2', 0)
-        form = ContactForm(request.POST, captcha_num1=num1, captcha_num2=num2)
+        form = ContactForm(request.POST)
 
         if not _check_rate_limit(request):
             form.add_error(None, _(
@@ -50,22 +45,14 @@ def contact_view(request):
             submission = form.save()
 
             # Send both Admin Notification and Client Confirmation emails (Modern, text-only HTML + plain-text)
-            send_contact_submission_emails(submission)
-
-            # Clear captcha from session
-            request.session.pop('captcha_num1', None)
-            request.session.pop('captcha_num2', None)
+            try:
+                send_contact_submission_emails(submission)
+            except Exception as e:
+                logger.error("Failed to send contact emails: %s", e)
 
             return redirect(reverse('contact:confirmation'))
     else:
-        # Generate new captcha numbers for GET request
-        num1 = random.randint(2, 9)
-        num2 = random.randint(1, 9)
-        form = ContactForm(captcha_num1=num1, captcha_num2=num2)
-
-    # Store captcha numbers in session
-    request.session['captcha_num1'] = form.captcha_num1
-    request.session['captcha_num2'] = form.captcha_num2
+        form = ContactForm()
 
     try:
         page_seo = PageSEO.objects.get(page_identifier='contact')

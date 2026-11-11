@@ -1,5 +1,10 @@
 {% extends "base.html" %}
-{% load i18n static %}
+{% load i18n static seo_tags %}
+
+{% block jsonld_extra %}
+{% jsonld_project %}
+{% jsonld_breadcrumb "Réalisations" "/fr/realisations/" project.title "" %}
+{% endblock %}
 
 {% block content %}
 {% include "partials/page_hero.html" with title=project.title breadcrumb_label=project.title %}

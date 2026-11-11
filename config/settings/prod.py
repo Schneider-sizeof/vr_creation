@@ -6,13 +6,18 @@ from .base import *  # noqa: F401, F403
 
 DEBUG = False
 
-ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost,127.0.0.1,.pythonanywhere.com,vrcreationcompany.com,www.vrcreationcompany.com,*').split(',')
+# Strict production allowed hosts — no wildcards, no foreign domains
+_raw_hosts = os.environ.get('DJANGO_ALLOWED_HOSTS', 'vrcreationcompany.com,www.vrcreationcompany.com').split(',')
+ALLOWED_HOSTS = [h.strip() for h in _raw_hosts if h.strip() and h.strip() != '*']
+for _canonical_host in ('vrcreationcompany.com', 'www.vrcreationcompany.com'):
+    if _canonical_host not in ALLOWED_HOSTS:
+        ALLOWED_HOSTS.append(_canonical_host)
 
 # CSRF Trusted Origins for HTTPS POST requests
-CSRF_TRUSTED_ORIGINS = os.environ.get(
-    'CSRF_TRUSTED_ORIGINS',
-    'https://*.pythonanywhere.com,https://vrcreationn.pythonanywhere.com,https://vrcreationcompany.com,https://www.vrcreationcompany.com,http://localhost:8000,http://127.0.0.1:8000'
-).split(',')
+CSRF_TRUSTED_ORIGINS = [
+    'https://vrcreationcompany.com',
+    'https://www.vrcreationcompany.com',
+]
 
 # Ensure MEDIA_ROOT and subdirectories exist with proper permissions for uploads
 for _subfolder in ['', 'services', 'services/gallery', 'portfolio', 'portfolio/gallery', 'blog', 'site', 'team', 'case_studies', 'promotions', 'promotions/deliverables', 'promotions/videos']:

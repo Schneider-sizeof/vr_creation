@@ -15,7 +15,7 @@
     <div class="container mx-auto px-4">
         <div class="max-w-3xl mx-auto text-center mb-16 animate-on-scroll slide-up">
             <span class="pill-badge mb-4">{% trans "Qui sommes-nous ?" %}</span>
-            <h1 class="text-3xl md:text-4xl font-black text-dark mb-6 tracking-tight">{% trans "VR Creation Company — Production visuelle haut de gamme à Tanger" %}</h1>
+            <h2 class="text-3xl md:text-4xl font-black text-dark mb-6 tracking-tight">{% trans "VR Creation Company — Production visuelle haut de gamme à Tanger" %}</h2>
             
             <p class="text-xl md:text-2xl text-gray-700 font-light leading-relaxed mb-6">
                 <strong>{% trans "VR CREATION COMPANY" %}</strong> {% trans "est une agence de production visuelle basée à Tanger, au cœur du Nord du Maroc. Nous accompagnons les entreprises, promoteurs, commerces et institutions dans la création de contenus visuels qui valorisent leur image et accélèrent leur croissance." %}
@@ -42,9 +42,9 @@
             
             <div class="lg:col-span-7 rounded-[28px] overflow-hidden shadow-xl relative min-h-[350px] animate-on-scroll slide-right" style="transition-delay: 150ms;">
                 {% if site_settings.about_image %}
-                <img src="{{ site_settings.about_image.url }}" alt="{% trans 'Équipe VR Creation à Tanger' %}" class="absolute inset-0 w-full h-full object-cover" loading="lazy" width="800" height="500">
+                <img src="{{ site_settings.about_image.url }}" alt="{% trans 'Studio de création 3D et audiovisuel VR Creation à Tanger' %}" class="absolute inset-0 w-full h-full object-cover" loading="lazy" width="800" height="500">
                 {% else %}
-                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1000&q=80" alt="{% trans 'Équipe VR Creation à Tanger' %}" class="absolute inset-0 w-full h-full object-cover" loading="lazy" width="800" height="500">
+                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1000&q=80" alt="{% trans 'Studio de création 3D et audiovisuel VR Creation à Tanger' %}" class="absolute inset-0 w-full h-full object-cover" loading="lazy" width="800" height="500">
                 {% endif %}
             </div>
         </div>

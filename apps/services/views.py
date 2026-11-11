@@ -3,6 +3,8 @@ Services views.
 """
 from django.db.models import Q
 from django.shortcuts import render, get_object_or_404
+from django.http import HttpResponsePermanentRedirect
+from django.urls import reverse
 
 from .models import Service
 from apps.core.models import ProcessStep
@@ -32,7 +34,7 @@ def service_detail(request, slug):
         is_active=True
     )
     gallery = service.gallery_images.all()
-    other_services = Service.objects.filter(is_active=True).exclude(pk=service.pk)[:4]
+    other_services = Service.objects.filter(is_active=True).exclude(pk=service.pk)
     process_steps = ProcessStep.objects.all()
 
     return render(request, 'services/service_detail.html', {
@@ -45,9 +47,7 @@ def service_detail(request, slug):
 
 
 def redirect_old_branding_slug(request):
-    """301 redirect from old branding-immobilier slug to branding-communication-visuelle."""
-    from django.http import HttpResponsePermanentRedirect
-    from django.urls import reverse
+    """301 redirect from old branding slugs to canonical branding-visuel."""
     return HttpResponsePermanentRedirect(
-        reverse('services:detail', kwargs={'slug': 'branding-communication-visuelle'})
+        reverse('services:detail', kwargs={'slug': 'branding-visuel'})
     )

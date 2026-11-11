@@ -14,14 +14,12 @@
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <!-- Main Content -->
             <div class="lg:col-span-2">
-                <!-- Hero H1 (hidden visually if page_hero has it, but ensures one H1 for SEO) -->
-                
                 <!-- Service Featured Image -->
                 <div class="relative overflow-hidden rounded-2xl shadow-lg mb-8 aspect-[16/9]">
                     {% if service.featured_image %}
                     <img src="{{ service.featured_image.url }}" alt="{{ service.title }} — VR Creation Tanger" class="w-full h-full object-cover" loading="eager" width="1200" height="675">
                     {% else %}
-                    <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200&q=80" alt="{{ service.title }}" class="w-full h-full object-cover" loading="eager" width="1200" height="675">
+                    <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200&q=80" alt="{{ service.title }} — VR Creation Tanger" class="w-full h-full object-cover" loading="eager" width="1200" height="675">
                     {% endif %}
                     <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
                 </div>
@@ -33,7 +31,7 @@
                         {{ service.short_description }}
                     </p>
                     
-                    <!-- Full Description (includes what's included, benefits, who it's for) -->
+                    <!-- Full Description -->
                     <div class="mt-6 rich-text-content leading-relaxed font-light text-gray-600">
                         {{ service.full_description|safe }}
                     </div>
@@ -52,7 +50,7 @@
                         <div class="group relative rounded-xl overflow-hidden shadow-sm hover:shadow-md cursor-pointer aspect-square transition-all duration-300 transform hover:-translate-y-1 js-gallery-item" 
                              data-src="{{ item.image.url }}" 
                              data-alt="{{ item.alt_text|default:service.title }}">
-                            <img src="{{ item.image.url }}" alt="{{ item.alt_text|default:service.title }} — VR Creation Tanger" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <img src="{{ item.image.url }}" alt="{{ item.alt_text|default:service.title }} — VR Creation Tanger" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width="400" height="400">
                             <div class="absolute inset-0 bg-primary-dark/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white p-4">
                                 <i class="fas fa-search-plus text-2xl mb-2 transform scale-75 group-hover:scale-100 transition-transform"></i>
                                 {% if item.alt_text %}
@@ -63,9 +61,19 @@
                         {% endfor %}
                     </div>
                 </div>
-                {% elif not gallery %}
-                <!-- Empty state for gallery — admin can add images -->
                 {% endif %}
+
+                <!-- Related Projects Callout -->
+                <div class="mt-12 p-6 rounded-2xl bg-gradient-to-r from-slate-900 to-primary-dark text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-md">
+                    <div>
+                        <span class="text-xs uppercase tracking-widest text-primary-light font-bold">{% trans "Portfolio & Réalisations" %}</span>
+                        <h4 class="text-xl font-bold mt-1 text-white">{% trans "Découvrez nos projets concrets" %}</h4>
+                        <p class="text-gray-300 text-sm mt-1">{% trans "Consultez nos réalisations récentes pour promoteurs et architectes à Tanger." %}</p>
+                    </div>
+                    <a href="{% url 'portfolio:project_list' %}" class="btn bg-white text-dark hover:bg-gray-100 px-6 py-3 text-sm font-bold whitespace-nowrap shadow">
+                        {% trans "Voir les réalisations" %} <i class="fas fa-arrow-right ml-2 text-primary"></i>
+                    </a>
+                </div>
 
                 <!-- Process Steps -->
                 <div class="mt-16">
@@ -83,6 +91,134 @@
                         {% endfor %}
                     </div>
                     {% endif %}
+                </div>
+
+                <!-- Service FAQ (SEO Structured Content) -->
+                <div class="mt-16">
+                    <h3 class="text-2xl font-extrabold text-dark mb-6 uppercase tracking-wider">
+                        {% trans "Questions fréquentes sur ce service" %}
+                    </h3>
+
+                    <div class="space-y-4">
+                        {% if service.slug == 'modelisation-3d' %}
+                        <details class="group p-5 rounded-xl bg-gray-50 border border-gray-100 transition-all cursor-pointer" open>
+                            <summary class="font-bold text-dark text-base list-none flex items-center justify-between">
+                                <span>{% trans "Quels documents sont nécessaires pour démarrer un projet 3D ?" %}</span>
+                                <i class="fas fa-chevron-down text-primary group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                                {% trans "Pour modéliser votre projet avec précision, nous avons besoin des plans architecturaux 2D (fichiers DWG ou PDF vectoriels), des façades, coupes et idéalement du plan de masse avec les intentions de matériaux." %}
+                            </p>
+                        </details>
+                        <details class="group p-5 rounded-xl bg-gray-50 border border-gray-100 transition-all cursor-pointer">
+                            <summary class="font-bold text-dark text-base list-none flex items-center justify-between">
+                                <span>{% trans "Quels sont les délais de livraison des rendus 3D à Tanger ?" %}</span>
+                                <i class="fas fa-chevron-down text-primary group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                                {% trans "En règle générale, un pack de rendus intérieurs ou extérieurs est livré sous 5 à 10 jours ouvrés avec un cycle de validation intermédiaire pour les ajustements." %}
+                            </p>
+                        </details>
+                        <details class="group p-5 rounded-xl bg-gray-50 border border-gray-100 transition-all cursor-pointer">
+                            <summary class="font-bold text-dark text-base list-none flex items-center justify-between">
+                                <span>{% trans "Peut-on commander des modifications après la première version ?" %}</span>
+                                <i class="fas fa-chevron-down text-primary group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                                {% trans "Oui, nos devis incluent toujours un cycle de retouches pour affiner les textures, éclairages, mobilier et végétations selon vos exigences." %}
+                            </p>
+                        </details>
+
+                        {% elif service.slug == 'visites-virtuelles' %}
+                        <details class="group p-5 rounded-xl bg-gray-50 border border-gray-100 transition-all cursor-pointer" open>
+                            <summary class="font-bold text-dark text-base list-none flex items-center justify-between">
+                                <span>{% trans "Quelle est la spécificité d'une visite virtuelle 3D sur plan ?" %}</span>
+                                <i class="fas fa-chevron-down text-primary group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                                {% trans "La visite virtuelle 3D est créée avant même le début du chantier à partir des plans architecturaux. Elle permet à vos acheteurs en VEFA d'explorer les futurs appartements, duplex ou villas pièce par pièce et de se projeter immédiatement." %}
+                            </p>
+                        </details>
+                        <details class="group p-5 rounded-xl bg-gray-50 border border-gray-100 transition-all cursor-pointer">
+                            <summary class="font-bold text-dark text-base list-none flex items-center justify-between">
+                                <span>{% trans "Comment les clients accèdent-ils à la visite virtuelle ?" %}</span>
+                                <i class="fas fa-chevron-down text-primary group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                                {% trans "Aucune application n'est requise. Un simple lien web ou QR code permet de visiter depuis n'importe quel smartphone, tablette, ordinateur ou casque VR." %}
+                            </p>
+                        </details>
+                        <details class="group p-5 rounded-xl bg-gray-50 border border-gray-100 transition-all cursor-pointer">
+                            <summary class="font-bold text-dark text-base list-none flex items-center justify-between">
+                                <span>{% trans "Peut-on intégrer la visite sur notre site web ?" %}</span>
+                                <i class="fas fa-chevron-down text-primary group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                                {% trans "Oui, nous vous fournissons le code d'intégration iframe prêt à l'emploi et compatible avec tous les gestionnaires de contenu (WordPress, Django, etc.)." %}
+                            </p>
+                        </details>
+
+                        {% elif service.slug == 'captures-360' %}
+                        <details class="group p-5 rounded-xl bg-gray-50 border border-gray-100 transition-all cursor-pointer" open>
+                            <summary class="font-bold text-dark text-base list-none flex items-center justify-between">
+                                <span>{% trans "Pour quels espaces recommandez-vous la capture 360° réelle ?" %}</span>
+                                <i class="fas fa-chevron-down text-primary group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                                {% trans "Elle est idéale pour les espaces déjà construits : showrooms, magasins, restaurants, hôtels, résidences témoins achevées et le suivi technique de chantiers à Tanger et dans le Nord." %}
+                            </p>
+                        </details>
+                        <details class="group p-5 rounded-xl bg-gray-50 border border-gray-100 transition-all cursor-pointer">
+                            <summary class="font-bold text-dark text-base list-none flex items-center justify-between">
+                                <span>{% trans "Combien de temps dure le tournage sur place ?" %}</span>
+                                <i class="fas fa-chevron-down text-primary group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                                {% trans "Le scan 360° nécessite généralement 1 à 2 heures pour un espace de 100 à 250 m², sans perturber votre activité commerciale." %}
+                            </p>
+                        </details>
+
+                        {% elif service.slug == 'lead-generation' %}
+                        <details class="group p-5 rounded-xl bg-gray-50 border border-gray-100 transition-all cursor-pointer" open>
+                            <summary class="font-bold text-dark text-base list-none flex items-center justify-between">
+                                <span>{% trans "Comment garantissez-vous la qualité des prospects générés ?" %}</span>
+                                <i class="fas fa-chevron-down text-primary group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                                {% trans "Nos campagnes intègrent des critères de ciblage stricts (revenus, intention d'achat, localisation Maroc & MRE) et des formulaires avec pré-qualification budgétaire avant transmission à votre équipe." %}
+                            </p>
+                        </details>
+                        <details class="group p-5 rounded-xl bg-gray-50 border border-gray-100 transition-all cursor-pointer">
+                            <summary class="font-bold text-dark text-base list-none flex items-center justify-between">
+                                <span>{% trans "Quel est le délai pour lancer une première campagne ?" %}</span>
+                                <i class="fas fa-chevron-down text-primary group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                                {% trans "Comptez environ 5 à 7 jours pour la création de la page de destination, la configuration des publicités et le paramétrage du suivi." %}
+                            </p>
+                        </details>
+
+                        {% else %}
+                        <details class="group p-5 rounded-xl bg-gray-50 border border-gray-100 transition-all cursor-pointer" open>
+                            <summary class="font-bold text-dark text-base list-none flex items-center justify-between">
+                                <span>{% trans "Comment obtenir un devis personnalisé ?" %}</span>
+                                <i class="fas fa-chevron-down text-primary group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                                {% trans "Contactez notre équipe via le formulaire de devis ou par téléphone. Nous étudions votre projet sous 24h et vous remettons une proposition détaillée." %}
+                            </p>
+                        </details>
+                        <details class="group p-5 rounded-xl bg-gray-50 border border-gray-100 transition-all cursor-pointer">
+                            <summary class="font-bold text-dark text-base list-none flex items-center justify-between">
+                                <span>{% trans "Intervenez-vous en dehors de Tanger ?" %}</span>
+                                <i class="fas fa-chevron-down text-primary group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                                {% trans "Oui, nous intervenons dans tout le Nord du Maroc (Tétouan, Chefchaouen, Asilah, Larache, Al Hoceima) et à distance pour les projets de modélisation 3D." %}
+                            </p>
+                        </details>
+                        {% endif %}
+                    </div>
                 </div>
 
                 <!-- CTA -->

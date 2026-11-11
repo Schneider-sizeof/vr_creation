@@ -14,6 +14,7 @@ urlpatterns = [
     path(_('mentions-legales/'), views.legal_notices, name='legal_notices'),
     path(_('confidentialite/'), views.privacy_policy, name='privacy_policy'),
     path(_('cookies/'), views.cookie_policy, name='cookie_policy'),
+    path(_('plan-du-site/'), views.html_sitemap, name='html_sitemap'),
     path(_('promotions/'), views.promotions, name='promotions'),
     path(_('promotions/') + '<slug:slug>/', views.promotion_detail, name='promotion_detail'),
 ]

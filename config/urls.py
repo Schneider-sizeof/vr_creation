@@ -23,6 +23,26 @@ urlpatterns = [
          name='django.contrib.sitemaps.views.sitemap'),
     path('robots.txt', robots_txt, name='robots_txt'),
     path('i18n/', include('django.conf.urls.i18n')),
+
+    # 301 Permanent redirects for legacy non-prefixed paths to French defaults
+    path('contact/', RedirectView.as_view(url='/fr/contact/', permanent=True)),
+    path('contact', RedirectView.as_view(url='/fr/contact/', permanent=True)),
+    path('about/', RedirectView.as_view(url='/fr/a-propos/', permanent=True)),
+    path('about', RedirectView.as_view(url='/fr/a-propos/', permanent=True)),
+    path('a-propos/', RedirectView.as_view(url='/fr/a-propos/', permanent=True)),
+    path('a-propos', RedirectView.as_view(url='/fr/a-propos/', permanent=True)),
+    path('services/', RedirectView.as_view(url='/fr/services/', permanent=True)),
+    path('services', RedirectView.as_view(url='/fr/services/', permanent=True)),
+    path('portfolio/', RedirectView.as_view(url='/fr/realisations/', permanent=True)),
+    path('portfolio', RedirectView.as_view(url='/fr/realisations/', permanent=True)),
+    path('realisations/', RedirectView.as_view(url='/fr/realisations/', permanent=True)),
+    path('realisations', RedirectView.as_view(url='/fr/realisations/', permanent=True)),
+    path('blog/', RedirectView.as_view(url='/fr/blog/', permanent=True)),
+    path('blog', RedirectView.as_view(url='/fr/blog/', permanent=True)),
+    path('promotions/', RedirectView.as_view(url='/fr/promotions/', permanent=True)),
+    path('promotions', RedirectView.as_view(url='/fr/promotions/', permanent=True)),
+    path('plan-du-site/', RedirectView.as_view(url='/fr/plan-du-site/', permanent=True)),
+    path('plan-du-site', RedirectView.as_view(url='/fr/plan-du-site/', permanent=True)),
 ]
 
 # i18n URL patterns (prefixed by /fr/, /en/, /ar/)

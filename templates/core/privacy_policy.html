@@ -6,13 +6,46 @@
 {% trans "Confidentialité" as page_breadcrumb %}
 {% include "partials/page_hero.html" with title=page_title breadcrumb_label=page_breadcrumb %}
 
-<section class="section bg-white">
+<section class="section bg-white py-16">
     <div class="container mx-auto px-4 max-w-4xl prose prose-lg text-gray-700">
-        <h2>{% trans "Collecte des données" %}</h2>
-        <p>{% trans "Nous collectons les données que vous nous fournissez via notre formulaire de contact (nom, email, téléphone, message)." %}</p>
-        
-        <h2>{% trans "Utilisation des données" %}</h2>
-        <p>{% trans "Ces données sont utilisées uniquement pour répondre à vos demandes." %}</p>
+        <h2>{% trans "1. Responsable du traitement des données" %}</h2>
+        <p>
+            {% blocktrans %}Le responsable du traitement des données à caractère personnel collectées sur ce site est <strong>VR CREATION COMPANY SARL-AU</strong>, société enregistrée à Tanger, sise à Ibn Batouta bureaux, Av. Youssef Ibn Tachfine, Tanger 90000, Maroc.{% endblocktrans %}
+        </p>
+
+        <h2>{% trans "2. Données personnelles collectées" %}</h2>
+        <p>{% trans "Nous collectons uniquement les données strictement nécessaires à l'exercice de notre activité professionnelle et au traitement de vos demandes :" %}</p>
+        <ul>
+            <li><strong>{% trans "Formulaire de contact & devis :" %}</strong> {% trans "Nom complet, adresse email professionnelle ou personnelle, numéro de téléphone, secteur d'activité, objet de la demande et descriptif du projet." %}</li>
+            <li><strong>{% trans "Données de navigation & mesure d'audience :" %}</strong> {% trans "Adresse IP anonymisée, type de navigateur, pages consultées et durée de navigation (via cookies analytiques avec votre consentement)." %}</li>
+        </ul>
+
+        <h2>{% trans "3. Finalité de la collecte" %}</h2>
+        <p>{% trans "Vos données sont traitées pour les finalités suivantes :" %}</p>
+        <ul>
+            <li>{% trans "L'établissement et la transmission de devis personnalisés pour vos projets 3D, visites virtuelles ou branding." %}</li>
+            <li>{% trans "La gestion de la relation commerciale, des rendez-vous et du suivi de vos projets." %}</li>
+            <li>{% trans "L'amélioration continue des fonctionnalités et de l'expérience utilisateur de notre site internet." %}</li>
+        </ul>
+
+        <h2>{% trans "4. Durée de conservation des données" %}</h2>
+        <p>
+            {% trans "Les données relatives aux prospects sont conservées pendant une durée maximale de 3 ans à compter du dernier contact émanant du prospect. Les données relatives aux clients sont conservées pendant la durée de la relation contractuelle augmentée des délais légaux de prescription." %}
+        </p>
+
+        <h2>{% trans "5. Sécurité et confidentialité" %}</h2>
+        <p>
+            {% trans "VR Creation met en œuvre toutes les mesures techniques et organisationnelles appropriées (chiffrement SSL/TLS HTTPS, restriction d'accès aux serveurs, pare-feu applicatif) afin de garantir la sécurité et la confidentialité de vos données personnelles et d'empêcher leur altération, perte ou divulgation non autorisée." %}
+        </p>
+
+        <h2>{% trans "6. Vos droits (Loi marocaine n° 09-08)" %}</h2>
+        <p>
+            {% blocktrans %}Conformément à la loi marocaine n° 09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel, vous disposez d'un droit d'accès, d'information, de rectification et d'opposition concernant vos données.{% endblocktrans %}
+        </p>
+        <p>
+            {% trans "Pour exercer ces droits, vous pouvez nous adresser une demande accompagnée d'une preuve d'identité par email à :" %}
+            <a href="mailto:contact@vrcreationcompany.com" class="text-primary font-bold">contact@vrcreationcompany.com</a>.
+        </p>
     </div>
 </section>
 {% endblock %}

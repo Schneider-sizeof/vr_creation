@@ -13,10 +13,13 @@ from apps.core.models import Promotion
 
 
 class BaseVRSitemap(Sitemap):
-    """Base sitemap with HTTPS and multilingual hreflang enabled."""
+    """Base sitemap with HTTPS, strict canonical domain and multilingual hreflang enabled."""
     protocol = 'https'
     i18n = True
     alternates = True
+
+    def get_domain(self, site=None):
+        return 'vrcreationcompany.com'
 
 
 class StaticViewSitemap(BaseVRSitemap):
@@ -35,6 +38,7 @@ class StaticViewSitemap(BaseVRSitemap):
             'blog:list',
             'contact:contact',
             'core:promotions',
+            'core:html_sitemap',
         ]
 
     def location(self, item):

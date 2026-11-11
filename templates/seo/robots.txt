@@ -6,4 +6,4 @@ Disallow: /vrcreation_dashboard/
 Disallow: /admin/
 Disallow: /accounts/
 
-Sitemap: {{ site_protocol }}://{{ site_domain }}/sitemap.xml
+Sitemap: https://vrcreationcompany.com/sitemap.xml
