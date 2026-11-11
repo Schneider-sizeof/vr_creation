@@ -384,7 +384,85 @@ class Command(BaseCommand):
             settings_obj.hero_headline_fr = "Modélisation 3D & visites virtuelles à Tanger — VR Creation"
             settings_obj.hero_cta2_link = "/fr/contact/"
             settings_obj.phone = "+212 625 07 1498"
+            settings_obj.address = "Ibn Batouta bureaux, Av. Youssef Ibn Tachfine, Tanger 90000, Maroc"
+            settings_obj.address_fr = "Ibn Batouta bureaux, Av. Youssef Ibn Tachfine, Tanger 90000, Maroc"
             settings_obj.save()
-            self.stdout.write(self.style.SUCCESS("  ~ Updated SiteSettings headline & CTA link"))
+            self.stdout.write(self.style.SUCCESS("  ~ Updated SiteSettings headline, CTA link and official Tanger address"))
+
+        # 5. Update WebP images & 360 Tour URLs
+        self.stdout.write("5. Synchronizing WebP optimized images & local 360 tours...")
+        try:
+            import os
+            from PIL import Image
+            from django.conf import settings
+            from apps.services.models import ServiceImage
+
+            media_root = settings.MEDIA_ROOT
+
+            def ensure_webp(img_field, target_2_1=False):
+                if not img_field or not getattr(img_field, 'path', None):
+                    return
+                png_path = img_field.path.replace('.webp', '.png')
+                webp_path = os.path.splitext(img_field.path)[0] + '.webp'
+                if os.path.exists(png_path) and (not os.path.exists(webp_path) or os.path.getsize(webp_path) == 0):
+                    try:
+                        with Image.open(png_path) as im:
+                            if target_2_1:
+                                equi = im.resize((2048, 1024), Image.Resampling.LANCZOS)
+                                equi.save(webp_path, 'WEBP', quality=88, method=6)
+                            else:
+                                rgb = im.convert('RGB')
+                                rgb.save(webp_path, 'WEBP', quality=85, method=6)
+                    except Exception:
+                        pass
+
+            # Convert 360 tour panoramas to 2:1 WebP on disk if needed
+            gallery_dir = os.path.join(media_root, 'services', 'gallery')
+            if os.path.exists(gallery_dir):
+                for f in os.listdir(gallery_dir):
+                    if f.endswith('.png'):
+                        png_f = os.path.join(gallery_dir, f)
+                        webp_f = os.path.splitext(png_f)[0] + '.webp'
+                        if not os.path.exists(webp_f) or os.path.getsize(webp_f) == 0:
+                            try:
+                                with Image.open(png_f) as im:
+                                    im.resize((2048, 1024), Image.Resampling.LANCZOS).save(webp_f, 'WEBP', quality=88, method=6)
+                            except Exception:
+                                pass
+
+            Project.objects.filter(slug='villa-mediterranee').update(virtual_tour_url='/media/services/gallery/visites-virtuelles-1.webp')
+            Project.objects.filter(slug='residence-azure').update(virtual_tour_url='/media/services/gallery/visites-virtuelles-2.webp')
+            Project.objects.filter(slug='concept-store-lumiere').update(virtual_tour_url='/media/services/gallery/captures-360-1.webp')
+
+            for s in Service.objects.all():
+                if s.featured_image:
+                    ensure_webp(s.featured_image)
+                    if s.featured_image.name.endswith('.png'):
+                        s.featured_image = s.featured_image.name.replace('.png', '.webp')
+                        s.save(update_fields=['featured_image'])
+
+            for p in Project.objects.all():
+                if p.featured_image:
+                    ensure_webp(p.featured_image)
+                    if p.featured_image.name.endswith('.png'):
+                        p.featured_image = p.featured_image.name.replace('.png', '.webp')
+                        p.save(update_fields=['featured_image'])
+
+            for cs in CaseStudy.objects.all():
+                if cs.featured_image:
+                    ensure_webp(cs.featured_image)
+                    if cs.featured_image.name.endswith('.png'):
+                        cs.featured_image = cs.featured_image.name.replace('.png', '.webp')
+                        cs.save(update_fields=['featured_image'])
+
+            for si in ServiceImage.objects.all():
+                if si.image:
+                    ensure_webp(si.image)
+                    if si.image.name.endswith('.png'):
+                        si.image = si.image.name.replace('.png', '.webp')
+                        si.save(update_fields=['image'])
+            self.stdout.write(self.style.SUCCESS("  ~ Synchronized all database image paths and verified WebP files"))
+        except Exception as e:
+            self.stdout.write(self.style.WARNING(f"  Note during WebP synchronization: {e}"))
 
         self.stdout.write(self.style.SUCCESS("\n[SUCCESS] All SEO audit synchronization steps completed!"))

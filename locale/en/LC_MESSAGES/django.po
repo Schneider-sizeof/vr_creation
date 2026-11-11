@@ -76,9 +76,6 @@ msgstr "Preview"
 msgid "Approfondi (~800 à 1200 mots)"
 msgstr "Approfondi (~800 à 1200 mots)"
 
-msgid "Architecte Associée, Tanger Nord"
-msgstr "Architecte Associée, Tanger Nord"
-
 msgid "Architecture"
 msgstr "Architecture"
 
@@ -118,8 +115,8 @@ msgstr "Aucune application n'est requise. Un simple lien web ou QR code permet d
 msgid "Aucune promotion active pour le moment. Revenez bientôt !"
 msgstr "Aucune promotion active pour le moment. Revenez bientôt !"
 
-msgid "Aucune visite virtuelle disponible pour le moment."
-msgstr "No virtual tours available at the moment."
+msgid "Aucune visite virtuelle 360° disponible pour le moment."
+msgstr "Aucune visite virtuelle 360° disponible pour le moment."
 
 msgid "Aucune étude de cas disponible."
 msgstr "No case studies available."
@@ -135,12 +132,6 @@ msgstr "Avant de construire, commencez déjà à le vendre. Présentez-nous votr
 
 msgid "Avec VR Creation"
 msgstr "Avec VR Creation"
-
-msgid "Avis Google Business Profile Tanger"
-msgstr "Avis Google Business Profile Tanger"
-
-msgid "Avis vérifiés Google Business"
-msgstr "Avis vérifiés Google Business"
 
 msgid "Basés à Tanger, nous intervenons rapidement sur tout le Nord du Maroc : Tétouan, Asilah, Larache, Chefchaouen, Al Hoceima."
 msgstr "Basés à Tanger, nous intervenons rapidement sur tout le Nord du Maroc : Tétouan, Asilah, Larache, Chefchaouen, Al Hoceima."
@@ -280,9 +271,6 @@ msgstr "Comment obtenir un devis personnalisé ?"
 msgid "Comment ça marche"
 msgstr "Comment ça marche"
 
-msgid "Commerce & Horeca"
-msgstr "Commerce & Horeca"
-
 msgid "Commercialisez avant la construction"
 msgstr "Commercialisez avant la construction"
 
@@ -315,9 +303,6 @@ msgstr "Consultez notre page offres."
 
 msgid "Contact"
 msgstr "Contact"
-
-msgid "Contact & Devis"
-msgstr "Contact & Devis"
 
 msgid "Contact & Devis gratuit"
 msgstr "Contact & Devis gratuit"
@@ -447,9 +432,6 @@ msgstr "Hero Slides"
 
 msgid "Digitaliser"
 msgstr "Digitaliser"
-
-msgid "Directeur de Programme, Tanger"
-msgstr "Directeur de Programme, Tanger"
 
 msgid "Directeur de la publication"
 msgstr "Directeur de la publication"
@@ -652,9 +634,6 @@ msgstr "Google Search Console"
 msgid "Grande phrase d’accroche"
 msgstr "Grande phrase d’accroche"
 
-msgid "Grâce aux visites virtuelles 360° et aux rendus architecturaux réalisés par VR Creation, nous avons commercialisé plus de 60% de notre programme résidentiel sur plan avant même l'achèvement du gros œuvre. L'impact auprès des acheteurs est immédiat."
-msgstr "Grâce aux visites virtuelles 360° et aux rendus architecturaux réalisés par VR Creation, nous avons commercialisé plus de 60% de notre programme résidentiel sur plan avant même l'achèvement du gros œuvre. L'impact auprès des acheteurs est immédiat."
-
 msgid "Guides & Articles"
 msgstr "Guides & Articles"
 
@@ -675,9 +654,6 @@ msgstr "Générer un article avec l'IA"
 
 msgid "Généré par IA"
 msgstr "Généré par IA"
-
-msgid "Gérant d'Établissement, Malabata Tanger"
-msgstr "Gérant d'Établissement, Malabata Tanger"
 
 msgid "Gérer mes choix"
 msgstr "Manage my choices"
@@ -729,9 +705,6 @@ msgstr "Site Identity"
 
 msgid "Il se vend avec une vision. Nous combinons architecture, 3D, immersion, branding et technologie digitale pour permettre aux promoteurs de présenter leurs projets autrement — et surtout, plus tôt."
 msgstr "Il se vend avec une vision. Nous combinons architecture, 3D, immersion, branding et technologie digitale pour permettre aux promoteurs de présenter leurs projets autrement — et surtout, plus tôt."
-
-msgid "Ils Nous Font Confiance"
-msgstr "Ils Nous Font Confiance"
 
 msgid "Image"
 msgstr "Image"
@@ -855,9 +828,6 @@ msgstr "L'établissement et la transmission de devis personnalisés pour vos pro
 
 msgid "La Solution"
 msgstr "La Solution"
-
-msgid "La capture 360° et la campagne de visibilité digitale ont boosté la fréquentation de notre établissement dès le lancement. Équipe réactive, matériel professionnel et accompagnement de A à Z."
-msgstr "La capture 360° et la campagne de visibilité digitale ont boosté la fréquentation de notre établissement dès le lancement. Équipe réactive, matériel professionnel et accompagnement de A à Z."
 
 msgid "La gestion de la relation commerciale, des rendez-vous et du suivi de vos projets."
 msgstr "La gestion de la relation commerciale, des rendez-vous et du suivi de vos projets."
@@ -1086,9 +1056,6 @@ msgstr "Notre méthode de travail"
 
 msgid "Notre équipe technique a été informée et résout le problème. Veuillez recharger la page dans un instant ou revenir à l'accueil."
 msgstr "Notre équipe technique a été informée et résout le problème. Veuillez recharger la page dans un instant ou revenir à l'accueil."
-
-msgid "Noté 4.9/5 étoiles par les professionnels de l'immobilier et du commerce à Tanger."
-msgstr "Noté 4.9/5 étoiles par les professionnels de l'immobilier et du commerce à Tanger."
 
 msgid "Nous Contacter"
 msgstr "Contact Us"
@@ -1324,20 +1291,11 @@ msgstr "Related Project"
 msgid "Projets"
 msgstr "Projects"
 
-msgid "Projets 3D & Visites immersives réalisés"
-msgstr "Projets 3D & Visites immersives réalisés"
-
 msgid "Projets Connexes"
 msgstr "Projets Connexes"
 
 msgid "Projets Récents"
 msgstr "Projets Récents"
-
-msgid "Promoteur VEFA"
-msgstr "Promoteur VEFA"
-
-msgid "Promoteurs en VEFA, architectes et chefs d'entreprise témoignent de l'impact de nos rendus 3D et visites immersives sur leurs ventes."
-msgstr "Promoteurs en VEFA, architectes et chefs d'entreprise témoignent de l'impact de nos rendus 3D et visites immersives sur leurs ventes."
 
 msgid "Promotion"
 msgstr "Promotion"
@@ -1420,9 +1378,6 @@ msgstr "Rendus photoréalistes, maquettes interactives, perspectives architectur
 msgid "Requis pour le bon fonctionnement et la sécurité du site."
 msgstr "Required for the proper functioning and security of the site."
 
-msgid "Respect des délais de livraison"
-msgstr "Respect des délais de livraison"
-
 msgid "Retail / Commerce"
 msgstr "Retail / Commerce"
 
@@ -1437,9 +1392,6 @@ msgstr "Back to top"
 
 msgid "Retour à l'accueil"
 msgstr "Back to Home"
-
-msgid "Retours d'expérience de nos clients à Tanger"
-msgstr "Retours d'expérience de nos clients à Tanger"
 
 msgid "Retrouvez l'ensemble des pages, services et ressources du site VR Creation Company à Tanger."
 msgstr "Retrouvez l'ensemble des pages, services et ressources du site VR Creation Company à Tanger."
@@ -1491,9 +1443,6 @@ msgstr "Sans VR Creation"
 
 msgid "Sans visuel fort, vos prospects hésitent, comparent et partent chez la concurrence qui a déjà de belles images."
 msgstr "Sans visuel fort, vos prospects hésitent, comparent et partent chez la concurrence qui a déjà de belles images."
-
-msgid "Satisfaction promoteurs & architectes"
-msgstr "Satisfaction promoteurs & architectes"
 
 msgid "Secteur"
 msgstr "Sector"
@@ -1605,9 +1554,6 @@ msgstr "Stratégie de contenu, lead generation, présence digitale."
 
 msgid "Studio de création 3D et audiovisuel VR Creation à Tanger"
 msgstr "Studio de création 3D et audiovisuel VR Creation à Tanger"
-
-msgid "Studio de création 3D, visites virtuelles immersives et production visuelle haut de gamme pour l'immobilier et l'architecture à Tanger et dans le Nord du Maroc."
-msgstr "Studio de création 3D, visites virtuelles immersives et production visuelle haut de gamme pour l'immobilier et l'architecture à Tanger et dans le Nord du Maroc."
 
 msgid "Succès stratégique"
 msgstr "Succès stratégique"
@@ -1801,9 +1747,6 @@ msgstr "Une erreur inattendue est survenue : %(msg)s"
 msgid "Une erreur inattendue s'est produite."
 msgstr "Une erreur inattendue s'est produite."
 
-msgid "Une qualité de texturation et un réalisme d'éclairage impressionnants. VR Creation comprend les exigences techniques des architectes et respecte scrupuleusement les délais pour les présentations aux maîtres d'ouvrage."
-msgstr "Une qualité de texturation et un réalisme d'éclairage impressionnants. VR Creation comprend les exigences techniques des architectes et respecte scrupuleusement les délais pour les présentations aux maîtres d'ouvrage."
-
 msgid "VOUS AVEZ UN PROJET EN PRÉPARATION ?"
 msgstr "VOUS AVEZ UN PROJET EN PRÉPARATION ?"
 
@@ -1870,9 +1813,6 @@ msgstr "View Project"
 msgid "Voir le projet détaillé"
 msgstr "View Detailed Project"
 
-msgid "Voir les avis sur Google"
-msgstr "Voir les avis sur Google"
-
 msgid "Voir les détails de l'offre"
 msgstr "Voir les détails de l'offre"
 
@@ -1914,9 +1854,6 @@ msgstr "You can modify your cookie preferences at any time, accepting or declini
 
 msgid "Vous souhaitez intégrer une visite virtuelle à votre programme immobilier ?"
 msgstr "Vous souhaitez intégrer une visite virtuelle à votre programme immobilier ?"
-
-msgid "Vérifié"
-msgstr "Vérifié"
 
 msgid "WhatsApp"
 msgstr "WhatsApp"

@@ -59,23 +59,30 @@ def seo_meta_tags(context):
     if not og_image and site_settings and site_settings.default_og_image:
         og_image = site_settings.default_og_image.url
     if not og_image:
-        og_image = f"{base_url}/static/img/strategic/projet-immobilier.jpg"
+        og_image = "/static/img/strategic/projet-immobilier.jpg"
 
-    # Smart description trimming at word boundary (≤ 155 chars)
+    # Strict description trimming at word boundary (≤ 155 chars)
     if description:
         description = description.strip().replace('\r', ' ').replace('\n', ' ')
         if len(description) > 155:
             trimmed = description[:152].rsplit(' ', 1)[0]
             description = f"{trimmed}..."
 
-    site_name = site_settings.site_name if site_settings else 'VR Creation Company Tanger'
-    if title and site_name not in title:
-        candidate = f"{title} | {site_name}"
-        full_title = candidate if len(candidate) <= 65 else title
-    elif not title:
-        full_title = site_name
+    # Strict title enforcement: <= 60 characters
+    site_name = site_settings.site_name if site_settings else 'VR Creation Tanger'
+    brand_suffix = ' | VR Creation'
+    if title:
+        title = title.strip()
+        if 'VR Creation' in title:
+            full_title = title
+        elif len(title) + len(brand_suffix) <= 60:
+            full_title = f"{title}{brand_suffix}"
+        else:
+            full_title = title
+        if len(full_title) > 60:
+            full_title = full_title[:57].rsplit(' ', 1)[0] + '...'
     else:
-        full_title = title
+        full_title = 'VR Creation | Studio 3D Tanger'
 
     current_url = base_url + request.path if request else base_url
     if not canonical:

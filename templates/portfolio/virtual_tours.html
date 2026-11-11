@@ -2,8 +2,8 @@
 {% load i18n static seo_tags %}
 
 {% block extra_head %}
-<!-- Pannellum 360 Viewer CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+<!-- Pannellum 360 Viewer CSS (Self-hosted, loaded ONLY on 360 tours page) -->
+<link rel="stylesheet" href="{% static 'vendor/pannellum/pannellum.css' %}">
 <style>
     .pnlm-load-button {
         background-color: var(--primary, #3D8EB9) !important;
@@ -48,15 +48,10 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {% for project in projects %}
             {% if project.has_virtual_tour and project.virtual_tour_url %}
-            <div class="card p-6 border-t-4 border-primary rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white">
-                <div class="flex items-center justify-between mb-4">
-                    <div>
-                        <h3 class="text-2xl font-bold text-dark">{{ project.title }}</h3>
-                        <p class="text-xs text-primary font-bold uppercase tracking-wider mt-1">{{ project.sector.name|default:"Immobilier & Architecture" }}</p>
-                    </div>
-                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-primary/10 text-primary border border-primary/20">
-                        <i class="fas fa-vr-cardboard mr-1"></i>360° WebGL
-                    </span>
+            <div class="bg-gray-50 rounded-2xl p-6 shadow-sm border border-gray-100 flex flex-col justify-between">
+                <div>
+                    <span class="text-xs font-bold text-primary uppercase tracking-wider block mb-2">{{ project.sector.name|default:_("Visite 360°") }}</span>
+                    <h3 class="text-2xl font-bold text-dark mb-4">{{ project.title }}</h3>
                 </div>
                 
                 <!-- Interactive 360 Panorama Container -->
@@ -83,8 +78,8 @@
             </div>
             {% endif %}
             {% empty %}
-            <div class="col-span-full text-center py-12">
-                <p class="text-gray-500 text-lg">{% trans "Aucune visite virtuelle disponible pour le moment." %}</p>
+            <div class="col-span-2 text-center py-12 text-gray-500">
+                {% trans "Aucune visite virtuelle 360° disponible pour le moment." %}
             </div>
             {% endfor %}
         </div>
@@ -107,35 +102,44 @@
         </div>
     </div>
 </section>
+{% endblock %}
 
-<!-- Pannellum 360 Viewer Script -->
-<script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+{% block extra_js %}
+<!-- Self-hosted Pannellum 360 Viewer JS with defer -->
+<script src="{% static 'vendor/pannellum/pannellum.js' %}" defer></script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const viewers = document.querySelectorAll('.js-panorama');
-        viewers.forEach(function(el) {
-            const src = el.getAttribute('data-src');
-            const title = el.getAttribute('data-title');
-            if (src && window.pannellum) {
-                try {
-                    pannellum.viewer(el.id, {
-                        "type": "equirectangular",
-                        "panorama": src,
-                        "title": title,
-                        "autoLoad": true,
-                        "autoRotate": -1.5,
-                        "compass": true,
-                        "showZoomCtrl": true,
-                        "showFullscreenCtrl": true,
-                        "hfov": 100,
-                        "minHfov": 50,
-                        "maxHfov": 120
-                    });
-                } catch(e) {
-                    console.warn("Pannellum init error on " + el.id, e);
-                }
+        function initPanoramas() {
+            if (!window.pannellum) {
+                setTimeout(initPanoramas, 50);
+                return;
             }
-        });
+            viewers.forEach(function(el) {
+                const src = el.getAttribute('data-src');
+                const title = el.getAttribute('data-title');
+                if (src) {
+                    try {
+                        pannellum.viewer(el.id, {
+                            "type": "equirectangular",
+                            "panorama": src,
+                            "title": title,
+                            "autoLoad": true,
+                            "autoRotate": -1.5,
+                            "compass": true,
+                            "showZoomCtrl": true,
+                            "showFullscreenCtrl": true,
+                            "hfov": 100,
+                            "minHfov": 50,
+                            "maxHfov": 120
+                        });
+                    } catch(e) {
+                        console.warn("Pannellum init error on " + el.id, e);
+                    }
+                }
+            });
+        }
+        initPanoramas();
     });
 </script>
 {% endblock %}

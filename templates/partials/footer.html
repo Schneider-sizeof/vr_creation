@@ -1,31 +1,19 @@
 {% load i18n static %}
 <footer class="main-footer">
-    <div class="container mx-auto px-4">
-        <!-- SEO Keyword-rich Intro Paragraph -->
-        <div class="mb-10 pb-8 border-b border-white/10">
-            <p class="text-gray-300 text-sm leading-relaxed max-w-5xl">
-                {% blocktrans %}VR Creation Company — Agence de production visuelle, modélisation 3D, photographie professionnelle et branding à Tanger, Maroc. Spécialisée en visites virtuelles 360°, communication visuelle et marketing digital pour les entreprises du Nord du Maroc : Tanger, Tétouan, Asilah, Larache, Chefchaouen, Al Hoceima.{% endblocktrans %}
-            </p>
-        </div>
-
+    <div class="container mx-auto px-4 py-12">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Col 1: Brand & About -->
+            <!-- Col 1: À propos -->
             <div>
+                <h4 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">{% trans "À propos" %}</h4>
                 <div class="flex items-center gap-3 mb-4">
                     {% if site_settings.logo %}
-                    <img src="{{ site_settings.logo.url }}" alt="{{ site_settings.site_name }}" class="h-10 w-auto brightness-0 invert">
+                    <img src="{{ site_settings.logo.url }}" alt="{{ site_settings.site_name|default:'VR Creation' }}" class="h-9 w-auto brightness-0 invert" width="140" height="36" loading="lazy">
                     {% endif %}
                     <span class="text-2xl font-bold text-white tracking-tight">VR<span class="text-accent">CREATION</span></span>
                 </div>
-                {% if site_settings.footer_text %}
                 <p class="text-gray-300 mb-6 font-light leading-relaxed text-sm">
-                    {{ site_settings.footer_text }}
+                    {{ site_settings.footer_text|default:_("Studio de création 3D, visites virtuelles immersives et production visuelle haut de gamme pour l'immobilier et l'architecture à Tanger et dans le Nord du Maroc.") }}
                 </p>
-                {% else %}
-                <p class="text-gray-300 mb-6 font-light leading-relaxed text-sm">
-                    {% trans "Studio de création 3D, visites virtuelles immersives et production visuelle haut de gamme pour l'immobilier et l'architecture à Tanger et dans le Nord du Maroc." %}
-                </p>
-                {% endif %}
                 <div class="flex space-x-3">
                     {% if site_settings.social_facebook %}
                     <a href="{{ site_settings.social_facebook }}" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent hover:text-dark transition-all text-white text-sm" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -52,16 +40,17 @@
                 <ul class="space-y-2 text-sm">
                     <li><a href="{% url 'core:home' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2 rtl:mr-0 rtl:ml-2"></i>{% trans "Accueil" %}</a></li>
                     <li><a href="{% url 'core:about' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2 rtl:mr-0 rtl:ml-2"></i>{% trans "À propos" %}</a></li>
+                    <li><a href="{% url 'services:list' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2 rtl:mr-0 rtl:ml-2"></i>{% trans "Services" %}</a></li>
                     <li><a href="{% url 'portfolio:project_list' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2 rtl:mr-0 rtl:ml-2"></i>{% trans "Réalisations" %}</a></li>
                     <li><a href="{% url 'portfolio:casestudy_list' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2 rtl:mr-0 rtl:ml-2"></i>{% trans "Études de cas" %}</a></li>
                     <li><a href="{% url 'portfolio:virtual_tours' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2 rtl:mr-0 rtl:ml-2"></i>{% trans "Démos 360°" %}</a></li>
                     <li><a href="{% url 'core:promotions' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2 rtl:mr-0 rtl:ml-2"></i>{% trans "Promotions" %}</a></li>
-                    <li><a href="{% url 'contact:contact' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2 rtl:mr-0 rtl:ml-2"></i>{% trans "Contact & Devis" %}</a></li>
+                    <li><a href="{% url 'contact:contact' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2 rtl:mr-0 rtl:ml-2"></i>{% trans "Contact" %}</a></li>
                     <li><a href="{% url 'core:html_sitemap' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2 rtl:mr-0 rtl:ml-2"></i>{% trans "Plan du site" %}</a></li>
                 </ul>
             </div>
 
-            <!-- Col 3: Solutions 3D & Digitales (Clean, single set of services) -->
+            <!-- Col 3: Solutions 3D & Digitales -->
             <div>
                 <h4 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">{% trans "Solutions 3D & Digitales" %}</h4>
                 <ul class="space-y-2 text-sm">
@@ -75,9 +64,9 @@
                 </ul>
             </div>
             
-            <!-- Col 4: Contact Info & Address -->
+            <!-- Col 4: Coordonnées -->
             <div>
-                <h4 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">{% trans "Contact" %}</h4>
+                <h4 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">{% trans "Coordonnées" %}</h4>
                 <ul class="space-y-4">
                     <li class="flex items-start gap-3">
                         <i class="fas fa-map-marker-alt text-accent mt-1 text-sm shrink-0"></i>
