@@ -7,22 +7,30 @@ APPS_DIR = r'c:\Users\Athen\Desktop\vr_creation\apps'
 LOCALE_DIR = r'c:\Users\Athen\Desktop\vr_creation\locale'
 
 trans_strings = set()
-pattern = re.compile(r"""\{%\s*trans\s+['"](.+?)['"]\s*%\}""")
-py_pattern = re.compile(r"""_\(\s*['"](.+?)['"]\s*\)""")
-py_pattern2 = re.compile(r"""_\(\s*'(.+?)'\s*\)""")
+pattern = re.compile(r'{%\s*trans\s+(?:"([^"\\]*(?:\\.[^"\\]*)*)"|\'([^\'\\]*(?:\\.[^\'\\]*)*)\')(?:\s+as\s+\w+)?\s*%}')
+blocktrans_pattern = re.compile(r'{%\s*blocktrans\s*(?:trimmed)?\s*%}(.*?){%\s*endblocktrans\s*%}', re.DOTALL)
+py_pattern = re.compile(r'_\((?:"([^"\\]*(?:\\.[^"\\]*)*)"|\'([^\'\\]*(?:\\.[^\'\\]*)*)\')\)')
 
 for root, dirs, files in os.walk(TEMPLATES_DIR):
     for f in files:
         if f.endswith('.html'):
             with open(os.path.join(root, f), 'r', encoding='utf-8') as fh:
-                trans_strings.update(pattern.findall(fh.read()))
+                c = fh.read()
+            for m in pattern.finditer(c):
+                s = m.group(1) if m.group(1) is not None else m.group(2)
+                trans_strings.add(s.replace(r'\"', '"').replace(r"\'", "'"))
+            for m in blocktrans_pattern.finditer(c):
+                trans_strings.add(m.group(1).strip())
 
-for root, dirs, files in os.walk(APPS_DIR):
-    for f in files:
-        if f.endswith('.py'):
-            with open(os.path.join(root, f), 'r', encoding='utf-8') as fh:
-                content = fh.read()
-                trans_strings.update(py_pattern.findall(content))
+for scan_dir in [APPS_DIR, r'c:\Users\Athen\Desktop\vr_creation\config']:
+    for root, dirs, files in os.walk(scan_dir):
+        for f in files:
+            if f.endswith('.py'):
+                with open(os.path.join(root, f), 'r', encoding='utf-8') as fh:
+                    c = fh.read()
+                for m in py_pattern.finditer(c):
+                    s = m.group(1) if m.group(1) is not None else m.group(2)
+                    trans_strings.add(s.replace(r'\"', '"').replace(r"\'", "'"))
 
 print(f'Extracted {len(trans_strings)} unique strings\n')
 
@@ -782,6 +790,18 @@ EN = {
     "العربية": "Arabic",
     "— Aucune catégorie (Général) —": "— No category (General) —",
     "✨ L'article IA <strong>« %(title)s »</strong> a été généré avec succès en mode <strong>Brouillon</strong>. Vous pouvez maintenant le relire et l'éditer.": "✨ The AI article <strong>\"%(title)s\"</strong> has been successfully generated in <strong>Draft</strong> mode. You can now review and edit it.",
+    "Chez <strong>VR Creation</strong>, nous accompagnons les promoteurs immobiliers, architectes, hôteliers et chefs d'entreprise à Tanger et dans le Nord du Maroc à chaque phase de leur développement commercial. De la première esquisse architecturale avec nos rendus 3D photoréalistes jusqu'à la commercialisation sur plan via nos visites virtuelles 360° interactives, nous concevons des outils immersifs pensés pour séduire vos prospects et accélérer vos ventes.": "At <strong>VR Creation</strong>, we support real estate developers, architects, hoteliers, and business owners in Tanger and Northern Morocco at every stage of their commercial development. From initial architectural concepts with photorealistic 3D renderings to off-plan sales through interactive 360° virtual tours, we design immersive tools crafted to captivate prospects and accelerate sales.",
+    "Conformément à la loi marocaine n° 09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel, vous disposez d'un droit d'accès, d'information, de rectification et d'opposition concernant vos données.": "In accordance with Moroccan Law No. 09-08 on the protection of individuals with regard to the processing of personal data, you have the right to access, obtain information about, rectify, and object to your personal data.",
+    "Démonstrations de Visites 360°": "360° Virtual Tour Demos",
+    "Le responsable du traitement des données à caractère personnel collectées sur ce site est <strong>VR CREATION COMPANY SARL-AU</strong>, société enregistrée à Tanger, sise à Ibn Batouta bureaux, Av. Youssef Ibn Tachfine, Tanger 90000, Maroc.": "The data controller for personal data collected on this site is <strong>VR CREATION COMPANY SARL-AU</strong>, a company registered in Tanger, located at Ibn Batouta bureaux, Av. Youssef Ibn Tachfine, Tanger 90000, Morocco.",
+    "Nos Offres & Promotions": "Our Offers & Promotions",
+    "Notre Blog": "Our Blog",
+    "Notre studio réunit sous un même toit les compétences clés de la production visuelle moderne : modélisation 3D, scans et captures 360° réelles, photographie d'architecture et prises de vues aériennes par drone, identité de marque et génération de prospects qualifiés.": "Our studio brings together under one roof the core disciplines of modern visual production: 3D modeling, real 360° scans and captures, architectural photography, aerial drone cinematography, brand identity, and qualified lead generation.",
+    "Plan du Site": "Sitemap",
+    "Réalisations 360°": "360° Projects",
+    "Tanger [Enregistrement en cours / N° RC]": "Tanger [Registration in progress / RC No.]",
+    "Testez directement ci-dessous l'expérience immersive proposée à vos futurs acquéreurs. Faites pivoter la vue à 360°, zoomez sur les détails architecturaux et découvrez le niveau de finition de nos modélisations 3D et captures d'espaces réels à Tanger.": "Test directly below the immersive experience offered to your future buyers. Rotate the 360° view, zoom in on architectural details, and discover the quality level of our 3D models and real space captures in Tanger.",
+    "VR Creation — Agence de production visuelle à Tanger": "VR Creation — Visual Production Agency in Tanger",
 }
 
 # === COMPLETE AR TRANSLATIONS ===
@@ -1538,6 +1558,18 @@ AR = {
     "العربية": "العربية",
     "— Aucune catégorie (Général) —": "— بدون تصنيف (عام) —",
     "✨ L'article IA <strong>« %(title)s »</strong> a été généré avec succès en mode <strong>Brouillon</strong>. Vous pouvez maintenant le relire et l'éditer.": "✨ تم توليد مقال الذكاء الاصطناعي <strong>« %(title)s »</strong> بنجاح في وضع <strong>المسودة</strong>. يمكنكم الآن مراجعته وتعديله.",
+    "Chez <strong>VR Creation</strong>, nous accompagnons les promoteurs immobiliers, architectes, hôteliers et chefs d'entreprise à Tanger et dans le Nord du Maroc à chaque phase de leur développement commercial. De la première esquisse architecturale avec nos rendus 3D photoréalistes jusqu'à la commercialisation sur plan via nos visites virtuelles 360° interactives, nous concevons des outils immersifs pensés pour séduire vos prospects et accélérer vos ventes.": "في <strong>VR Creation</strong>، نرافق المطورين العقاريين والمهندسين المعماريين وأصحاب الفنادق ومديري الشركات في طنجة وشمال المغرب في كل مرحلة من مراحل نموهم التجاري. بدءاً من المخططات المعمارية الأولى مع الرندرات ثلاثية الأبعاد فائقة الواقعية وحتى البيع على الخارطة عبر جولاتنا الافتراضية 360° التفاعلية، نصمم أدوات غامرة تستهدف جذب عملائكم المحتملين وتسريع مبيعاتكم.",
+    "Conformément à la loi marocaine n° 09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel, vous disposez d'un droit d'accès, d'information, de rectification et d'opposition concernant vos données.": "وفقاً للقانون المغربي رقم 09-08 المتعلق بحماية الأشخاص الذاتيين تجاه معالجة المعطيات ذات الطابع الشخصي، يحق لكم الولوج، والاستعلام، والتصحيح، والتعرض بخصوص معطياتكم.",
+    "Démonstrations de Visites 360°": "عروض توضيحية للجولات الافتراضية 360°",
+    "Le responsable du traitement des données à caractère personnel collectées sur ce site est <strong>VR CREATION COMPANY SARL-AU</strong>, société enregistrée à Tanger, sise à Ibn Batouta bureaux, Av. Youssef Ibn Tachfine, Tanger 90000, Maroc.": "المسؤول عن معالجة البيانات ذات الطابع الشخصي التي يتم جمعها على هذا الموقع هو <strong>VR CREATION COMPANY SARL-AU</strong>، شركة مسجلة في طنجة، ومقرها في مكاتب ابن بطوطة، شارع يوسف بن تاشفين، طنجة 90000، المغرب.",
+    "Nos Offres & Promotions": "عروضنا وحزمنا الترويجية",
+    "Notre Blog": "مدونتنا",
+    "Notre studio réunit sous un même toit les compétences clés de la production visuelle moderne : modélisation 3D, scans et captures 360° réelles, photographie d'architecture et prises de vues aériennes par drone, identité de marque et génération de prospects qualifiés.": "يجمع استوديونا تحت سقف واحد المهارات الأساسية للإنتاج البصري الحديث: النمذجة ثلاثية الأبعاد، والمسح والتصوير الحقيقي 360 درجة، والتصوير الفوتوغرافي المعماري، والتصوير الجوي بالدرون، وتطوير الهوية البصرية، وتوليد العملاء المؤهلين.",
+    "Plan du Site": "خريطة الموقع",
+    "Réalisations 360°": "إنجازات 360°",
+    "Tanger [Enregistrement en cours / N° RC]": "طنجة [قيد التسجيل / رقم السجل التجاري]",
+    "Testez directement ci-dessous l'expérience immersive proposée à vos futurs acquéreurs. Faites pivoter la vue à 360°, zoomez sur les détails architecturaux et découvrez le niveau de finition de nos modélisations 3D et captures d'espaces réels à Tanger.": "جربوا مباشرة أدناه التجربة الغامرة المقدمة لمشتريكم المستقبليين. قوموا بتدوير المنظر بزاوية 360 درجة، وقربوا التفاصيل المعمارية واكتشفوا مستوى الدقة والتشطيب في نماذجنا ثلاثية الأبعاد والتصوير الواقعي للمساحات في طنجة.",
+    "VR Creation — Agence de production visuelle à Tanger": "VR Creation — وكالة إنتاج بصري في طنجة",
 }
 
 # FR just maps to itself

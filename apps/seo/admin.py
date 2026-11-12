@@ -3,13 +3,13 @@ Admin for SEO app.
 """
 from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
-from modeltranslation.admin import TranslationAdmin
+from modeltranslation.admin import TabbedTranslationAdmin
 
 from .models import PageSEO, SEOMeta
 
 
 @admin.register(PageSEO)
-class PageSEOAdmin(TranslationAdmin):
+class PageSEOAdmin(TabbedTranslationAdmin):
     list_display = ('page_identifier', 'meta_title', 'keywords_preview', 'no_index')
     search_fields = ('page_identifier', 'meta_title', 'keywords')
     list_filter = ('no_index',)
@@ -31,7 +31,7 @@ class PageSEOAdmin(TranslationAdmin):
 
 
 @admin.register(SEOMeta)
-class SEOMetaAdmin(TranslationAdmin):
+class SEOMetaAdmin(TabbedTranslationAdmin):
     list_display = ('content_type', 'object_id', 'meta_title', 'no_index')
     list_filter = ('content_type', 'no_index')
     search_fields = ('meta_title',)

@@ -4,7 +4,7 @@ Admin configuration for Services app.
 from django.contrib import admin
 from django.utils.html import format_html
 from django.utils.translation import gettext_lazy as _
-from modeltranslation.admin import TranslationAdmin, TranslationTabularInline
+from modeltranslation.admin import TabbedTranslationAdmin, TranslationTabularInline
 
 from .models import Service, ServiceImage
 
@@ -16,7 +16,7 @@ class ServiceImageInline(TranslationTabularInline):
 
 
 @admin.register(Service)
-class ServiceAdmin(TranslationAdmin):
+class ServiceAdmin(TabbedTranslationAdmin):
     list_display = ('title', 'slug', 'is_active', 'order', 'image_preview')
     list_editable = ('is_active', 'order')
     list_filter = ('is_active',)

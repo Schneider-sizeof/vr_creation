@@ -12,7 +12,7 @@ from django.utils import timezone
 from django.utils.html import format_html
 from django.utils.text import slugify
 from django.utils.translation import gettext_lazy as _, gettext
-from modeltranslation.admin import TranslationAdmin
+from modeltranslation.admin import TabbedTranslationAdmin
 
 from .models import Category, Article
 from .forms import AIGeneratePostForm
@@ -41,13 +41,13 @@ def _generate_unique_slug(base_text: str) -> str:
 
 
 @admin.register(Category)
-class CategoryAdmin(TranslationAdmin):
+class CategoryAdmin(TabbedTranslationAdmin):
     list_display = ('name', 'slug')
     prepopulated_fields = {'slug': ('name',)}
 
 
 @admin.register(Article)
-class ArticleAdmin(TranslationAdmin):
+class ArticleAdmin(TabbedTranslationAdmin):
     change_list_template = 'admin/blog/article/change_list.html'
 
     list_display = (

@@ -145,6 +145,9 @@ msgstr "Need information?"
 msgid "Biographie"
 msgstr "Biography"
 
+msgid "Blog"
+msgstr "Blog"
+
 msgid "Blog & Actualités"
 msgstr "Blog & News"
 
@@ -217,19 +220,22 @@ msgstr "Every project deserves a tailor-made experience"
 msgid "Chefchaouen"
 msgstr "Chefchaouen"
 
+msgid "Chez <strong>VR Creation</strong>, nous accompagnons les promoteurs immobiliers, architectes, hôteliers et chefs d'entreprise à Tanger et dans le Nord du Maroc à chaque phase de leur développement commercial. De la première esquisse architecturale avec nos rendus 3D photoréalistes jusqu'à la commercialisation sur plan via nos visites virtuelles 360° interactives, nous concevons des outils immersifs pensés pour séduire vos prospects et accélérer vos ventes."
+msgstr "At <strong>VR Creation</strong>, we support real estate developers, architects, hoteliers, and business owners in Tanger and Northern Morocco at every stage of their commercial development. From initial architectural concepts with photorealistic 3D renderings to off-plan sales through interactive 360° virtual tours, we design immersive tools crafted to captivate prospects and accelerate sales."
+
 msgid "Chiffre clé"
 msgstr "Key Figure"
 
 msgid "Citation de la Solution"
 msgstr "Solution Quote"
 
-msgid "Classe d\\'icône (ex: fas fa-lightbulb) ou emoji"
-msgstr "Icon class (e.g. fas fa-lightbulb) or emoji"
+msgid "Classe d'icône (ex: fas fa-lightbulb) ou emoji"
+msgstr "Icon class (e.g.: fas fa-lightbulb) or emoji"
 
-msgid "Classe d\\'icône CSS (ex: fas fa-store)"
-msgstr "CSS icon class (e.g. fas fa-store)"
+msgid "Classe d'icône CSS (ex: fas fa-store)"
+msgstr "CSS icon class (e.g.: fas fa-store)"
 
-msgid "Classe d\\'icône ou emoji"
+msgid "Classe d'icône ou emoji"
 msgstr "Icon class or emoji"
 
 msgid "Client"
@@ -238,8 +244,8 @@ msgstr "Client"
 msgid "Cliquez et glissez sur les fenêtres pour explorer à 360°"
 msgstr "Click and drag on the windows to explore in 360°"
 
-msgid "Cocher pour afficher ce pack en section vedette sur la page d\\'accueil et d\\'autres pages."
-msgstr "Check to display this pack as featured on the homepage and other pages."
+msgid "Cocher pour afficher ce pack en section vedette sur la page d'accueil et d'autres pages."
+msgstr "Check to display this pack in the featured section on the homepage and other pages."
 
 msgid "Code de vérification Google Search Console (contenu de la balise meta)"
 msgstr "Google Search Console verification code (meta tag content)"
@@ -286,11 +292,17 @@ msgstr "Allow approximately 5 to 7 days for landing page creation, ad setup and 
 msgid "Conditions de l'offre"
 msgstr "Offer conditions"
 
+msgid "Confidentialité"
+msgstr "Privacy"
+
 msgid "Confiez-nous vos plans 2D et laissez-nous les transformer en une expérience immersive."
 msgstr "Entrust us with your 2D plans and let us transform them into an immersive experience."
 
 msgid "Configuration requise : %(msg)s"
 msgstr "Required configuration: %(msg)s"
+
+msgid "Conformément à la loi marocaine n° 09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel, vous disposez d'un droit d'accès, d'information, de rectification et d'opposition concernant vos données."
+msgstr "In accordance with Moroccan Law No. 09-08 on the protection of individuals with regard to the processing of personal data, you have the right to access, obtain information about, rectify, and object to your personal data."
 
 msgid "Conformément à la réglementation RGPD, le consentement donné pour le dépôt de cookies a une durée de validité de 13 mois maximum. À l'issue de cette période, votre consentement sera à nouveau demandé."
 msgstr "In accordance with GDPR regulations, consent given for cookies has a maximum validity of 13 months. At the end of this period, your consent will be requested again."
@@ -315,6 +327,9 @@ msgstr "Contact our team via the quote form or by phone. We review your project 
 
 msgid "Contactez notre équipe à Tanger pour un premier échange gratuit et sans engagement."
 msgstr "Contact our team in Tanger for a free, no-obligation initial consultation."
+
+msgid "Contactez-nous"
+msgstr "Contact Us"
 
 msgid "Contactez-nous par téléphone au +212 625 07 1498, par WhatsApp, ou via notre formulaire de contact en ligne. Le devis est gratuit et personnalisé."
 msgstr "Contact us by phone at +212 625 07 1498, by WhatsApp, or via our online contact form. The quote is free and personalized."
@@ -490,6 +505,9 @@ msgstr "Timeout exceeded: %(msg)s"
 msgid "Démarrer votre projet"
 msgstr "Start your project"
 
+msgid "Démonstrations de Visites 360°"
+msgstr "360° Virtual Tour Demos"
+
 msgid "Démos 360°"
 msgstr "360° Demos"
 
@@ -556,8 +574,8 @@ msgstr "E.g.: 150+, 98%, 10 years"
 msgid "Ex: G-XXXXXXXXXX. Chargé uniquement après consentement cookies."
 msgstr "E.g.: G-XXXXXXXXXX. Loaded only after cookie consent."
 
-msgid "Ex: Les acheteurs veulent se projeter avant d\\'investir."
-msgstr "E.g.: Buyers want to envision the property before investing."
+msgid "Ex: Les acheteurs veulent se projeter avant d'investir."
+msgstr "E.g.: Buyers want to envision before investing."
 
 msgid "Ex: Les avantages de la modélisation 3D et des rendus photoréalistes pour l'architecture et l'immobilier haut de gamme..."
 msgstr "E.g.: The benefits of 3D modeling and photorealistic renders for architecture and high-end real estate..."
@@ -694,8 +712,8 @@ msgstr "Unique identifier: home, about, services, portfolio, contact, blog, etc.
 msgid "Identifier"
 msgstr "Identify"
 
-msgid "Identité de l\\'offre"
-msgstr "Offer Identity"
+msgid "Identité de l'offre"
+msgstr "Offer identity"
 
 msgid "Identité de marque"
 msgstr "Brand identity"
@@ -733,7 +751,7 @@ msgstr "Image displayed on the card. Stored in the media/services/ folder"
 msgid "Image de fond"
 msgstr "Background image"
 
-msgid "Image de fond du hero de la page d\\'accueil"
+msgid "Image de fond du hero de la page d'accueil"
 msgstr "Homepage hero background image"
 
 msgid "Image du projet"
@@ -856,6 +874,9 @@ msgstr "The Problem"
 msgid "Le Résultat"
 msgstr "The Result"
 
+msgid "Le responsable du traitement des données à caractère personnel collectées sur ce site est <strong>VR CREATION COMPANY SARL-AU</strong>, société enregistrée à Tanger, sise à Ibn Batouta bureaux, Av. Youssef Ibn Tachfine, Tanger 90000, Maroc."
+msgstr "The data controller for personal data collected on this site is <strong>VR CREATION COMPANY SARL-AU</strong>, a company registered in Tanger, located at Ibn Batouta bureaux, Av. Youssef Ibn Tachfine, Tanger 90000, Morocco."
+
 msgid "Le scan 360° nécessite généralement 1 à 2 heures pour un espace de 100 à 250 m², sans perturber votre activité commerciale."
 msgstr "The 360° scan generally takes 1 to 2 hours for a space of 100 to 250 m², without disrupting your business operations."
 
@@ -919,11 +940,14 @@ msgstr "Digital marketing"
 msgid "Marketing digital & leads"
 msgstr "Digital marketing & leads"
 
-msgid "Membre de l\\'équipe"
-msgstr "Team Member"
+msgid "Membre de l'équipe"
+msgstr "Team member"
 
-msgid "Membres de l\\'équipe"
-msgstr "Team Members"
+msgid "Membres de l'équipe"
+msgstr "Team members"
+
+msgid "Mentions Légales"
+msgstr "Legal Notices"
 
 msgid "Mentions légales"
 msgstr "Legal Notices"
@@ -997,8 +1021,8 @@ msgstr "Full Name"
 msgid "Nom complet, adresse email professionnelle ou personnelle, numéro de téléphone, secteur d'activité, objet de la demande et descriptif du projet."
 msgstr "Full name, professional or personal email address, phone number, industry, subject of the request and project description."
 
-msgid "Nom de l\\'auteur"
-msgstr "Author Name"
+msgid "Nom de l'auteur"
+msgstr "Author name"
 
 msgid "Nom du site"
 msgstr "Site Name"
@@ -1008,6 +1032,12 @@ msgstr "Our Contact Info"
 
 msgid "Nos Forces"
 msgstr "Our Strengths"
+
+msgid "Nos Offres & Promotions"
+msgstr "Our Offers & Promotions"
+
+msgid "Nos Services"
+msgstr "Our Services"
 
 msgid "Nos Solutions"
 msgstr "Our Solutions"
@@ -1027,11 +1057,17 @@ msgstr "Our packs & exclusive offers"
 msgid "Nos valeurs"
 msgstr "Our values"
 
+msgid "Notre Blog"
+msgstr "Our Blog"
+
 msgid "Notre Différence"
 msgstr "Our Difference"
 
 msgid "Notre Engagement"
 msgstr "Our Commitment"
+
+msgid "Notre Portfolio"
+msgstr "Our Portfolio"
 
 msgid "Notre Processus"
 msgstr "Our Process"
@@ -1053,6 +1089,9 @@ msgstr "Our method"
 
 msgid "Notre méthode de travail"
 msgstr "Our working method"
+
+msgid "Notre studio réunit sous un même toit les compétences clés de la production visuelle moderne : modélisation 3D, scans et captures 360° réelles, photographie d'architecture et prises de vues aériennes par drone, identité de marque et génération de prospects qualifiés."
+msgstr "Our studio brings together under one roof the core disciplines of modern visual production: 3D modeling, real 360° scans and captures, architectural photography, aerial drone cinematography, brand identity, and qualified lead generation."
 
 msgid "Notre équipe technique a été informée et résout le problème. Veuillez recharger la page dans un instant ou revenir à l'accueil."
 msgstr "Our technical team has been notified and is resolving the issue. Please reload the page in a moment or return to the homepage."
@@ -1213,6 +1252,9 @@ msgstr "Professional photography"
 msgid "Pied de page"
 msgstr "Footer"
 
+msgid "Plan du Site"
+msgstr "Sitemap"
+
 msgid "Plan du site"
 msgstr "Site map"
 
@@ -1231,11 +1273,20 @@ msgstr "Comparison points"
 msgid "Points forts"
 msgstr "Strengths"
 
+msgid "Politique de Confidentialité"
+msgstr "Privacy Policy"
+
+msgid "Politique de Cookies"
+msgstr "Cookie Policy"
+
 msgid "Politique de confidentialité"
 msgstr "Privacy Policy"
 
 msgid "Politique de confidentialité (Loi 09-08)"
 msgstr "Privacy Policy (Law 09-08)"
+
+msgid "Portfolio"
+msgstr "Portfolio"
 
 msgid "Portfolio & Réalisations"
 msgstr "Portfolio & Projects"
@@ -1399,6 +1450,9 @@ msgstr "Portfolio"
 msgid "Réalisations (Portfolio)"
 msgstr "Projects (Portfolio)"
 
+msgid "Réalisations 360°"
+msgstr "360° Projects"
+
 msgid "Rédaction par IA en cours..."
 msgstr "AI writing in progress..."
 
@@ -1417,7 +1471,7 @@ msgstr "Summary displayed in the promotions grid"
 msgid "Résumé affiché dans les cartes (max 300 caractères)"
 msgstr "Summary displayed in cards (max 300 characters)"
 
-msgid "Résumé de l\\'article (max 500 caractères)"
+msgid "Résumé de l'article (max 500 caractères)"
 msgstr "Article summary (max 500 characters)"
 
 msgid "Rôle"
@@ -1444,8 +1498,8 @@ msgstr "Without strong visuals, your prospects hesitate, compare and go to compe
 msgid "Secteur"
 msgstr "Sector"
 
-msgid "Secteur d\\'activité"
-msgstr "Business Sector"
+msgid "Secteur d'activité"
+msgstr "Industry"
 
 msgid "Secteurs"
 msgstr "Sectors"
@@ -1453,8 +1507,8 @@ msgstr "Sectors"
 msgid "Section Accroche / Hero"
 msgstr "Hook / Hero Section"
 
-msgid "Section Appel à l\\'action (CTA)"
-msgstr "Call to Action Section (CTA)"
+msgid "Section Appel à l'action (CTA)"
+msgstr "Call to Action (CTA) Section"
 
 msgid "Section Problème"
 msgstr "Problem Section"
@@ -1591,11 +1645,14 @@ msgstr "Selected"
 msgid "Tanger"
 msgstr "Tanger"
 
+msgid "Tanger [Enregistrement en cours / N° RC]"
+msgstr "Tanger [Registration in progress / RC No.]"
+
 msgid "Tarif"
 msgstr "Price"
 
-msgid "Tarif / Condition de l\\'offre"
-msgstr "Price / Offer Condition"
+msgid "Tarif / Condition de l'offre"
+msgstr "Price / Offer condition"
 
 msgid "Taux de commission"
 msgstr "Commission rate"
@@ -1611,6 +1668,9 @@ msgstr "Cutting-edge technologies"
 
 msgid "Temps de lecture (min)"
 msgstr "Reading Time (min)"
+
+msgid "Testez directement ci-dessous l'expérience immersive proposée à vos futurs acquéreurs. Faites pivoter la vue à 360°, zoomez sur les détails architecturaux et découvrez le niveau de finition de nos modélisations 3D et captures d'espaces réels à Tanger."
+msgstr "Test directly below the immersive experience offered to your future buyers. Rotate the 360° view, zoom in on architectural details, and discover the quality level of our 3D models and real space captures in Tanger."
 
 msgid "Texte CTA"
 msgstr "CTA Text"
@@ -1666,7 +1726,7 @@ msgstr "Homepage hero title"
 msgid "Titre pour les moteurs de recherche (max 70 caractères). Laisser vide pour utiliser le titre du service."
 msgstr "Title for search engines (max 70 characters). Leave empty to use the service title."
 
-msgid "Titre principal affiché sur le hero de la page d\\'accueil"
+msgid "Titre principal affiché sur le hero de la page d'accueil"
 msgstr "Main title displayed on the homepage hero"
 
 msgid "Ton de rédaction"
@@ -1756,6 +1816,9 @@ msgstr "VR Creation Company — High-end visual production in Tanger"
 msgid "VR Creation met en œuvre toutes les mesures techniques et organisationnelles appropriées (chiffrement SSL/TLS HTTPS, restriction d'accès aux serveurs, pare-feu applicatif) afin de garantir la sécurité et la confidentialité de vos données personnelles et d'empêcher leur altération, perte ou divulgation non autorisée."
 msgstr "VR Creation implements all appropriate technical and organizational measures (SSL/TLS HTTPS encryption, server access restriction, application firewall) to ensure the security and confidentiality of your personal data and to prevent its alteration, loss or unauthorized disclosure."
 
+msgid "VR Creation — Agence de production visuelle à Tanger"
+msgstr "VR Creation — Visual Production Agency in Tanger"
+
 msgid "VR Creation — Modélisation 3D et visites virtuelles à Tanger"
 msgstr "VR Creation — 3D Modeling and Virtual Tours in Tanger"
 
@@ -1836,9 +1899,6 @@ msgstr "Your phone number"
 
 msgid "Votre sélection"
 msgstr "Your selection"
-
-msgid "Vous avez envoyé trop de messages. Veuillez réessayer dans quelques minutes."
-msgstr "You have sent too many messages. Please try again in a few minutes."
 
 msgid "Vous avez un projet immobilier en préparation ? Vendez sur plan avant de poser la première pierre grâce à notre pack visuel 3D et visite virtuelle tout-en-un — conçu sans budget d'agence."
 msgstr "Do you have a real estate project in preparation? Sell off-plan before laying the first stone with our all-in-one 3D visual and virtual tour pack — designed without an agency budget."
@@ -1947,6 +2007,9 @@ msgstr "Process Steps"
 
 msgid "Étude de cas"
 msgstr "Case Study"
+
+msgid "Études de Cas"
+msgstr "Case Studies"
 
 msgid "Études de cas"
 msgstr "Case Studies"

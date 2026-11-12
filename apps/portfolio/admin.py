@@ -4,13 +4,13 @@ Admin configuration for Portfolio app.
 from django.contrib import admin
 from django.utils.html import format_html
 from django.utils.translation import gettext_lazy as _
-from modeltranslation.admin import TranslationAdmin, TranslationTabularInline
+from modeltranslation.admin import TabbedTranslationAdmin, TranslationTabularInline
 
 from .models import Sector, Project, ProjectImage, CaseStudy
 
 
 @admin.register(Sector)
-class SectorAdmin(TranslationAdmin):
+class SectorAdmin(TabbedTranslationAdmin):
     list_display = ('name', 'slug', 'order')
     list_editable = ('order',)
     prepopulated_fields = {'slug': ('name',)}
@@ -23,7 +23,7 @@ class ProjectImageInline(TranslationTabularInline):
 
 
 @admin.register(Project)
-class ProjectAdmin(TranslationAdmin):
+class ProjectAdmin(TabbedTranslationAdmin):
     list_display = ('title', 'sector', 'client', 'is_featured', 'has_virtual_tour', 'date', 'image_preview')
     list_filter = ('sector', 'is_featured', 'has_virtual_tour')
     list_editable = ('is_featured',)
@@ -60,7 +60,7 @@ class ProjectAdmin(TranslationAdmin):
 
 
 @admin.register(CaseStudy)
-class CaseStudyAdmin(TranslationAdmin):
+class CaseStudyAdmin(TabbedTranslationAdmin):
     list_display = ('title', 'sector', 'project', 'date', 'image_preview')
     list_filter = ('sector',)
     search_fields = ('title', 'problem', 'result')

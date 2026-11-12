@@ -12,8 +12,8 @@
         <p><strong>VR CREATION COMPANY SARL-AU</strong></p>
         <p>{% trans "Société à Responsabilité Limitée d'Associé Unique au capital social enregistré à Tanger." %}</p>
         <ul>
-            <li><strong>{% trans "Siège social" %} :</strong> Ibn Batouta bureaux, Av. Youssef Ibn Tachfine, Tanger 90000, Maroc</li>
-            <li><strong>{% trans "Registre du Commerce (RC)" %} :</strong> Tanger [Enregistrement en cours / N° RC]</li>
+            <li><strong>{% trans "Siège social" %} :</strong> {{ site_settings.address }}</li>
+            <li><strong>{% trans "Registre du Commerce (RC)" %} :</strong> {% trans "Tanger [Enregistrement en cours / N° RC]" %}</li>
             <li><strong>{% trans "Identifiant Commun de l'Entreprise (ICE)" %} :</strong> [Identifiant ICE]</li>
             <li><strong>{% trans "Identifiant Fiscal (IF)" %} :</strong> [Identifiant IF]</li>
             <li><strong>{% trans "Taxe Professionnelle / Patente" %} :</strong> [N° Patente]</li>

@@ -4,7 +4,7 @@ Admin configuration for Core app.
 from django.contrib import admin
 from django.utils.html import format_html
 from django.utils.translation import gettext_lazy as _
-from modeltranslation.admin import TranslationAdmin, TranslationTabularInline, TranslationStackedInline
+from modeltranslation.admin import TabbedTranslationAdmin, TranslationTabularInline, TranslationStackedInline
 
 from .models import (
     SiteSettings, TeamMember, Value, Strength, ProcessStep, HeroSlide, StrategicSuccess,
@@ -13,7 +13,7 @@ from .models import (
 
 
 @admin.register(SiteSettings)
-class SiteSettingsAdmin(TranslationAdmin):
+class SiteSettingsAdmin(TabbedTranslationAdmin):
     """Singleton site settings — only one instance."""
 
     fieldsets = (
@@ -56,7 +56,7 @@ class SiteSettingsAdmin(TranslationAdmin):
 
 
 @admin.register(TeamMember)
-class TeamMemberAdmin(TranslationAdmin):
+class TeamMemberAdmin(TabbedTranslationAdmin):
     list_display = ('name', 'role', 'photo_preview', 'order')
     list_editable = ('order',)
     search_fields = ('name', 'role')
@@ -75,25 +75,25 @@ class TeamMemberAdmin(TranslationAdmin):
 
 
 @admin.register(Value)
-class ValueAdmin(TranslationAdmin):
+class ValueAdmin(TabbedTranslationAdmin):
     list_display = ('title', 'icon', 'order')
     list_editable = ('order',)
 
 
 @admin.register(Strength)
-class StrengthAdmin(TranslationAdmin):
+class StrengthAdmin(TabbedTranslationAdmin):
     list_display = ('title', 'stat_number', 'stat_label', 'order')
     list_editable = ('order',)
 
 
 @admin.register(ProcessStep)
-class ProcessStepAdmin(TranslationAdmin):
+class ProcessStepAdmin(TabbedTranslationAdmin):
     list_display = ('title', 'order')
     list_editable = ('order',)
 
 
 @admin.register(HeroSlide)
-class HeroSlideAdmin(TranslationAdmin):
+class HeroSlideAdmin(TabbedTranslationAdmin):
     list_display = ('title', 'image_preview', 'order', 'active')
     list_editable = ('order', 'active')
     search_fields = ('title',)
@@ -112,7 +112,7 @@ class HeroSlideAdmin(TranslationAdmin):
 
 
 @admin.register(StrategicSuccess)
-class StrategicSuccessAdmin(TranslationAdmin):
+class StrategicSuccessAdmin(TabbedTranslationAdmin):
     list_display = ('title', 'importance', 'image_preview', 'order', 'is_active')
     list_editable = ('order', 'is_active')
     search_fields = ('title', 'importance')
@@ -150,7 +150,7 @@ class PromotionStepInline(TranslationTabularInline):
 
 
 @admin.register(Promotion)
-class PromotionAdmin(TranslationAdmin):
+class PromotionAdmin(TabbedTranslationAdmin):
     list_display = ('title', 'slug', 'badge_text', 'offer_price', 'is_featured', 'is_customizable', 'is_active', 'order')
     list_editable = ('is_featured', 'is_customizable', 'is_active', 'order')
     list_filter = ('is_active', 'is_featured', 'is_customizable')

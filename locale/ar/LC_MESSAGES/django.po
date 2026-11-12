@@ -145,6 +145,9 @@ msgstr "هل تحتاجون إلى معلومات؟"
 msgid "Biographie"
 msgstr "السيرة الذاتية"
 
+msgid "Blog"
+msgstr "المدونة"
+
 msgid "Blog & Actualités"
 msgstr "المدوّنة والأخبار"
 
@@ -217,20 +220,23 @@ msgstr "كل مشروع يستحق تجربة مصمّمة خصيصًا"
 msgid "Chefchaouen"
 msgstr "شفشاون"
 
+msgid "Chez <strong>VR Creation</strong>, nous accompagnons les promoteurs immobiliers, architectes, hôteliers et chefs d'entreprise à Tanger et dans le Nord du Maroc à chaque phase de leur développement commercial. De la première esquisse architecturale avec nos rendus 3D photoréalistes jusqu'à la commercialisation sur plan via nos visites virtuelles 360° interactives, nous concevons des outils immersifs pensés pour séduire vos prospects et accélérer vos ventes."
+msgstr "في <strong>VR Creation</strong>، نرافق المطورين العقاريين والمهندسين المعماريين وأصحاب الفنادق ومديري الشركات في طنجة وشمال المغرب في كل مرحلة من مراحل نموهم التجاري. بدءاً من المخططات المعمارية الأولى مع الرندرات ثلاثية الأبعاد فائقة الواقعية وحتى البيع على الخارطة عبر جولاتنا الافتراضية 360° التفاعلية، نصمم أدوات غامرة تستهدف جذب عملائكم المحتملين وتسريع مبيعاتكم."
+
 msgid "Chiffre clé"
 msgstr "رقم رئيسي"
 
 msgid "Citation de la Solution"
 msgstr "اقتباس الحل"
 
-msgid "Classe d\\'icône (ex: fas fa-lightbulb) ou emoji"
-msgstr "فئة الأيقونة (مثال: fas fa-lightbulb) أو إيموجي"
+msgid "Classe d'icône (ex: fas fa-lightbulb) ou emoji"
+msgstr "فئة الأيقونة (مثال: fas fa-lightbulb) أو رمز تعبيري"
 
-msgid "Classe d\\'icône CSS (ex: fas fa-store)"
+msgid "Classe d'icône CSS (ex: fas fa-store)"
 msgstr "فئة أيقونة CSS (مثال: fas fa-store)"
 
-msgid "Classe d\\'icône ou emoji"
-msgstr "فئة الأيقونة أو إيموجي"
+msgid "Classe d'icône ou emoji"
+msgstr "فئة الأيقونة أو رمز تعبيري"
 
 msgid "Client"
 msgstr "العميل"
@@ -238,8 +244,8 @@ msgstr "العميل"
 msgid "Cliquez et glissez sur les fenêtres pour explorer à 360°"
 msgstr "انقروا واسحبوا على النوافذ للاستكشاف بزاوية 360°"
 
-msgid "Cocher pour afficher ce pack en section vedette sur la page d\\'accueil et d\\'autres pages."
-msgstr "حدد لعرض هذه الباقة في القسم المميز على الصفحة الرئيسية والصفحات الأخرى."
+msgid "Cocher pour afficher ce pack en section vedette sur la page d'accueil et d'autres pages."
+msgstr "حدّدوا لعرض هذا الباقة في قسم مميز على الصفحة الرئيسية والصفحات الأخرى."
 
 msgid "Code de vérification Google Search Console (contenu de la balise meta)"
 msgstr "رمز التحقق من Google Search Console (محتوى علامة meta)"
@@ -286,11 +292,17 @@ msgstr "احسبوا حوالي 5 إلى 7 أيام لإنشاء صفحة اله
 msgid "Conditions de l'offre"
 msgstr "شروط العرض"
 
+msgid "Confidentialité"
+msgstr "الخصوصية"
+
 msgid "Confiez-nous vos plans 2D et laissez-nous les transformer en une expérience immersive."
 msgstr "سلّمونا مخططاتكم ثنائية الأبعاد ودعونا نحوّلها إلى تجربة غامرة."
 
 msgid "Configuration requise : %(msg)s"
 msgstr "الإعدادات المطلوبة: %(msg)s"
+
+msgid "Conformément à la loi marocaine n° 09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel, vous disposez d'un droit d'accès, d'information, de rectification et d'opposition concernant vos données."
+msgstr "وفقاً للقانون المغربي رقم 09-08 المتعلق بحماية الأشخاص الذاتيين تجاه معالجة المعطيات ذات الطابع الشخصي، يحق لكم الولوج، والاستعلام، والتصحيح، والتعرض بخصوص معطياتكم."
 
 msgid "Conformément à la réglementation RGPD, le consentement donné pour le dépôt de cookies a une durée de validité de 13 mois maximum. À l'issue de cette période, votre consentement sera à nouveau demandé."
 msgstr "وفقًا للوائح العامة لحماية البيانات (GDPR)، فإن صلاحية الموافقة الممنوحة لملفات تعريف الارتباط هي 13 شهرًا كحد أقصى. وفي نهاية هذه الفترة، سيتم طلب موافقتك مرة أخرى."
@@ -315,6 +327,9 @@ msgstr "تواصلوا مع فريقنا عبر نموذج طلب عرض الأ�
 
 msgid "Contactez notre équipe à Tanger pour un premier échange gratuit et sans engagement."
 msgstr "تواصلوا مع فريقنا في طنجة لاستشارة أولى مجانية وبدون التزام."
+
+msgid "Contactez-nous"
+msgstr "اتصل بنا"
 
 msgid "Contactez-nous par téléphone au +212 625 07 1498, par WhatsApp, ou via notre formulaire de contact en ligne. Le devis est gratuit et personnalisé."
 msgstr "تواصلوا معنا عبر الهاتف على الرقم +212 625 07 1498، أو عبر واتساب، أو من خلال نموذج الاتصال عبر الإنترنت. عرض الأسعار مجاني ومخصص."
@@ -490,6 +505,9 @@ msgstr "تم تجاوز مهلة الانتظار: %(msg)s"
 msgid "Démarrer votre projet"
 msgstr "ابدأوا مشروعكم"
 
+msgid "Démonstrations de Visites 360°"
+msgstr "عروض توضيحية للجولات الافتراضية 360°"
+
 msgid "Démos 360°"
 msgstr "عروض توضيحية 360°"
 
@@ -556,8 +574,8 @@ msgstr "مثال: +150، 98%، 10 سنوات"
 msgid "Ex: G-XXXXXXXXXX. Chargé uniquement après consentement cookies."
 msgstr "مثال: G-XXXXXXXXXX. يتم تحميله فقط بعد الموافقة على ملفات تعريف الارتباط."
 
-msgid "Ex: Les acheteurs veulent se projeter avant d\\'investir."
-msgstr "مثال: يريد المشترون تصور المشروع قبل الاستثمار."
+msgid "Ex: Les acheteurs veulent se projeter avant d'investir."
+msgstr "مثال: يرغب المشترون في تصوّر المشروع قبل الاستثمار."
 
 msgid "Ex: Les avantages de la modélisation 3D et des rendus photoréalistes pour l'architecture et l'immobilier haut de gamme..."
 msgstr "مثال: مزايا النمذجة ثلاثية الأبعاد والتصورات الواقعية للهندسة المعمارية والعقارات الفاخرة..."
@@ -694,7 +712,7 @@ msgstr "معرف فريد: home, about, services, portfolio, contact, blog, إل
 msgid "Identifier"
 msgstr "تحديد"
 
-msgid "Identité de l\\'offre"
+msgid "Identité de l'offre"
 msgstr "هوية العرض"
 
 msgid "Identité de marque"
@@ -733,8 +751,8 @@ msgstr "الصورة المعروضة على البطاقة. مخزّنة في �
 msgid "Image de fond"
 msgstr "صورة الخلفية"
 
-msgid "Image de fond du hero de la page d\\'accueil"
-msgstr "صورة خلفية بانر الصفحة الرئيسية"
+msgid "Image de fond du hero de la page d'accueil"
+msgstr "صورة خلفية قسم البطل في الصفحة الرئيسية"
 
 msgid "Image du projet"
 msgstr "صورة المشروع"
@@ -856,6 +874,9 @@ msgstr "المشكلة"
 msgid "Le Résultat"
 msgstr "النتيجة"
 
+msgid "Le responsable du traitement des données à caractère personnel collectées sur ce site est <strong>VR CREATION COMPANY SARL-AU</strong>, société enregistrée à Tanger, sise à Ibn Batouta bureaux, Av. Youssef Ibn Tachfine, Tanger 90000, Maroc."
+msgstr "المسؤول عن معالجة البيانات ذات الطابع الشخصي التي يتم جمعها على هذا الموقع هو <strong>VR CREATION COMPANY SARL-AU</strong>، شركة مسجلة في طنجة، ومقرها في مكاتب ابن بطوطة، شارع يوسف بن تاشفين، طنجة 90000، المغرب."
+
 msgid "Le scan 360° nécessite généralement 1 à 2 heures pour un espace de 100 à 250 m², sans perturber votre activité commerciale."
 msgstr "يستغرق المسح 360° عادةً من ساعة إلى ساعتين لمساحة تتراوح بين 100 و250 م²، دون تعطيل نشاطكم التجاري."
 
@@ -919,11 +940,14 @@ msgstr "التسويق الرقمي"
 msgid "Marketing digital & leads"
 msgstr "التسويق الرقمي وتوليد العملاء المحتملين"
 
-msgid "Membre de l\\'équipe"
+msgid "Membre de l'équipe"
 msgstr "عضو الفريق"
 
-msgid "Membres de l\\'équipe"
+msgid "Membres de l'équipe"
 msgstr "أعضاء الفريق"
+
+msgid "Mentions Légales"
+msgstr "إشعارات قانونية"
 
 msgid "Mentions légales"
 msgstr "إشعارات قانونية"
@@ -997,7 +1021,7 @@ msgstr "الاسم الكامل"
 msgid "Nom complet, adresse email professionnelle ou personnelle, numéro de téléphone, secteur d'activité, objet de la demande et descriptif du projet."
 msgstr "الاسم الكامل، البريد الإلكتروني المهني أو الشخصي، رقم الهاتف، قطاع النشاط، موضوع الطلب ووصف المشروع."
 
-msgid "Nom de l\\'auteur"
+msgid "Nom de l'auteur"
 msgstr "اسم الكاتب"
 
 msgid "Nom du site"
@@ -1008,6 +1032,12 @@ msgstr "معلومات الاتصال"
 
 msgid "Nos Forces"
 msgstr "نقاط قوتنا"
+
+msgid "Nos Offres & Promotions"
+msgstr "عروضنا وحزمنا الترويجية"
+
+msgid "Nos Services"
+msgstr "خدماتنا"
 
 msgid "Nos Solutions"
 msgstr "حلولنا"
@@ -1027,11 +1057,17 @@ msgstr "باقاتنا وعروضنا الحصرية"
 msgid "Nos valeurs"
 msgstr "قيمنا"
 
+msgid "Notre Blog"
+msgstr "مدونتنا"
+
 msgid "Notre Différence"
 msgstr "ما يميّزنا"
 
 msgid "Notre Engagement"
 msgstr "التزامنا"
+
+msgid "Notre Portfolio"
+msgstr "معرض أعمالنا"
 
 msgid "Notre Processus"
 msgstr "عمليتنا"
@@ -1053,6 +1089,9 @@ msgstr "منهجيتنا"
 
 msgid "Notre méthode de travail"
 msgstr "منهجية عملنا"
+
+msgid "Notre studio réunit sous un même toit les compétences clés de la production visuelle moderne : modélisation 3D, scans et captures 360° réelles, photographie d'architecture et prises de vues aériennes par drone, identité de marque et génération de prospects qualifiés."
+msgstr "يجمع استوديونا تحت سقف واحد المهارات الأساسية للإنتاج البصري الحديث: النمذجة ثلاثية الأبعاد، والمسح والتصوير الحقيقي 360 درجة، والتصوير الفوتوغرافي المعماري، والتصوير الجوي بالدرون، وتطوير الهوية البصرية، وتوليد العملاء المؤهلين."
 
 msgid "Notre équipe technique a été informée et résout le problème. Veuillez recharger la page dans un instant ou revenir à l'accueil."
 msgstr "تم إبلاغ فريقنا التقني وهو يعمل على حل المشكلة. يرجى إعادة تحميل الصفحة بعد لحظات أو العودة إلى الصفحة الرئيسية."
@@ -1213,6 +1252,9 @@ msgstr "التصوير الفوتوغرافي الاحترافي"
 msgid "Pied de page"
 msgstr "تذييل الصفحة"
 
+msgid "Plan du Site"
+msgstr "خريطة الموقع"
+
 msgid "Plan du site"
 msgstr "خريطة الموقع"
 
@@ -1231,11 +1273,20 @@ msgstr "نقاط المقارنة"
 msgid "Points forts"
 msgstr "نقاط القوة"
 
+msgid "Politique de Confidentialité"
+msgstr "سياسة الخصوصية"
+
+msgid "Politique de Cookies"
+msgstr "سياسة ملفات تعريف الارتباط"
+
 msgid "Politique de confidentialité"
 msgstr "سياسة الخصوصية"
 
 msgid "Politique de confidentialité (Loi 09-08)"
 msgstr "سياسة الخصوصية (القانون 09-08)"
+
+msgid "Portfolio"
+msgstr "الأعمال"
 
 msgid "Portfolio & Réalisations"
 msgstr "معرض الأعمال والإنجازات"
@@ -1399,6 +1450,9 @@ msgstr "الأعمال"
 msgid "Réalisations (Portfolio)"
 msgstr "الإنجازات (معرض الأعمال)"
 
+msgid "Réalisations 360°"
+msgstr "إنجازات 360°"
+
 msgid "Rédaction par IA en cours..."
 msgstr "جارٍ الكتابة بالذكاء الاصطناعي..."
 
@@ -1417,8 +1471,8 @@ msgstr "الملخص المعروض في شبكة العروض الترويجي�
 msgid "Résumé affiché dans les cartes (max 300 caractères)"
 msgstr "ملخص يظهر في البطاقات (حد أقصى 300 حرف)"
 
-msgid "Résumé de l\\'article (max 500 caractères)"
-msgstr "ملخص المقال (حد أقصى 500 حرف)"
+msgid "Résumé de l'article (max 500 caractères)"
+msgstr "ملخص المقال (500 حرف كحد أقصى)"
 
 msgid "Rôle"
 msgstr "الدور"
@@ -1444,7 +1498,7 @@ msgstr "بدون صور قوية، يتردد عملاؤكم المحتملون 
 msgid "Secteur"
 msgstr "القطاع"
 
-msgid "Secteur d\\'activité"
+msgid "Secteur d'activité"
 msgstr "قطاع النشاط"
 
 msgid "Secteurs"
@@ -1453,8 +1507,8 @@ msgstr "القطاعات"
 msgid "Section Accroche / Hero"
 msgstr "قسم العبارة الترويجية / البطل"
 
-msgid "Section Appel à l\\'action (CTA)"
-msgstr "قسم الدعوة للإجراء (CTA)"
+msgid "Section Appel à l'action (CTA)"
+msgstr "قسم الدعوة إلى الإجراء (CTA)"
 
 msgid "Section Problème"
 msgstr "قسم المشكلة"
@@ -1591,11 +1645,14 @@ msgstr "محدد"
 msgid "Tanger"
 msgstr "طنجة"
 
+msgid "Tanger [Enregistrement en cours / N° RC]"
+msgstr "طنجة [قيد التسجيل / رقم السجل التجاري]"
+
 msgid "Tarif"
 msgstr "السعر"
 
-msgid "Tarif / Condition de l\\'offre"
-msgstr "التعريفة / شرط العرض"
+msgid "Tarif / Condition de l'offre"
+msgstr "السعر / شروط العرض"
 
 msgid "Taux de commission"
 msgstr "نسبة العمولة"
@@ -1611,6 +1668,9 @@ msgstr "تقنيات متطورة"
 
 msgid "Temps de lecture (min)"
 msgstr "وقت القراءة (دقيقة)"
+
+msgid "Testez directement ci-dessous l'expérience immersive proposée à vos futurs acquéreurs. Faites pivoter la vue à 360°, zoomez sur les détails architecturaux et découvrez le niveau de finition de nos modélisations 3D et captures d'espaces réels à Tanger."
+msgstr "جربوا مباشرة أدناه التجربة الغامرة المقدمة لمشتريكم المستقبليين. قوموا بتدوير المنظر بزاوية 360 درجة، وقربوا التفاصيل المعمارية واكتشفوا مستوى الدقة والتشطيب في نماذجنا ثلاثية الأبعاد والتصوير الواقعي للمساحات في طنجة."
 
 msgid "Texte CTA"
 msgstr "نص الدعوة إلى الإجراء"
@@ -1666,8 +1726,8 @@ msgstr "عنوان البطل في الصفحة الرئيسية"
 msgid "Titre pour les moteurs de recherche (max 70 caractères). Laisser vide pour utiliser le titre du service."
 msgstr "عنوان لمحركات البحث (70 حرفًا كحد أقصى). اتركوه فارغًا لاستخدام عنوان الخدمة."
 
-msgid "Titre principal affiché sur le hero de la page d\\'accueil"
-msgstr "العنوان الرئيسي المعروض على بانر الصفحة الرئيسية"
+msgid "Titre principal affiché sur le hero de la page d'accueil"
+msgstr "العنوان الرئيسي المعروض على قسم البطل في الصفحة الرئيسية"
 
 msgid "Ton de rédaction"
 msgstr "أسلوب الكتابة"
@@ -1756,6 +1816,9 @@ msgstr "VR Creation Company — إنتاج بصري راقٍ في طنجة"
 msgid "VR Creation met en œuvre toutes les mesures techniques et organisationnelles appropriées (chiffrement SSL/TLS HTTPS, restriction d'accès aux serveurs, pare-feu applicatif) afin de garantir la sécurité et la confidentialité de vos données personnelles et d'empêcher leur altération, perte ou divulgation non autorisée."
 msgstr "تطبّق VR Creation جميع التدابير التقنية والتنظيمية المناسبة (تشفير SSL/TLS HTTPS، تقييد الوصول إلى الخوادم، جدار حماية تطبيقي) لضمان أمان وسرية بياناتكم الشخصية ومنع تغييرها أو فقدانها أو إفشائها بشكل غير مصرح به."
 
+msgid "VR Creation — Agence de production visuelle à Tanger"
+msgstr "VR Creation — وكالة إنتاج بصري في طنجة"
+
 msgid "VR Creation — Modélisation 3D et visites virtuelles à Tanger"
 msgstr "VR Creation — النمذجة ثلاثية الأبعاد والجولات الافتراضية في طنجة"
 
@@ -1836,9 +1899,6 @@ msgstr "رقم هاتفك"
 
 msgid "Votre sélection"
 msgstr "اختياركم"
-
-msgid "Vous avez envoyé trop de messages. Veuillez réessayer dans quelques minutes."
-msgstr "لقد أرسلت رسائل كثيرة. يرجى المحاولة بعد بضع دقائق."
 
 msgid "Vous avez un projet immobilier en préparation ? Vendez sur plan avant de poser la première pierre grâce à notre pack visuel 3D et visite virtuelle tout-en-un — conçu sans budget d'agence."
 msgstr "هل لديكم مشروع عقاري قيد التحضير؟ بيعوا على المخطط قبل وضع الحجر الأول بفضل باقتنا المتكاملة للتصور ثلاثي الأبعاد والجولة الافتراضية — مصمّمة بدون ميزانية وكالة."
@@ -1947,6 +2007,9 @@ msgstr "خطوات العملية"
 
 msgid "Étude de cas"
 msgstr "دراسة حالة"
+
+msgid "Études de Cas"
+msgstr "دراسات الحالة"
 
 msgid "Études de cas"
 msgstr "دراسات الحالة"

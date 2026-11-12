@@ -2,7 +2,7 @@
 
 > **Site Officiel en Production :** [https://vrcreationcompany.com](https://vrcreationcompany.com)  
 > 🔐 **Panneau d'administration sécurisé :** `https://vrcreationcompany.com/vrcreation_dashboard/`  
-> 📍 **Siège & Coordonnées :** Ibn Batouta bureaux, Av. Youssef Ibn Tachfine, Tangier 90000, Maroc  
+> 📍 **Siège & Coordonnées :** Ibn Batouta bureaux, Av. Youssef Ibn Tachfine, Tanger 90000, Maroc  
 > 📞 **Téléphone / WhatsApp :** `+212 625 07 1498` | ✉️ **Email :** `contact@vrcreationcompany.com`  
 
 ---
