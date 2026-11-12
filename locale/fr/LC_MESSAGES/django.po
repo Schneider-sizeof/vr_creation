@@ -1369,9 +1369,6 @@ msgstr "Refuser"
 msgid "Registre du Commerce (RC)"
 msgstr "Registre du Commerce (RC)"
 
-msgid "Rendu 3D photoréaliste d'une villa en construction à Tanger"
-msgstr "Rendu 3D photoréaliste d'une villa en construction à Tanger"
-
 msgid "Rendus photoréalistes, maquettes interactives, perspectives architecturales."
 msgstr "Rendus photoréalistes, maquettes interactives, perspectives architecturales."
 
@@ -1758,6 +1755,9 @@ msgstr "VR Creation Company — Production visuelle haut de gamme à Tanger"
 
 msgid "VR Creation met en œuvre toutes les mesures techniques et organisationnelles appropriées (chiffrement SSL/TLS HTTPS, restriction d'accès aux serveurs, pare-feu applicatif) afin de garantir la sécurité et la confidentialité de vos données personnelles et d'empêcher leur altération, perte ou divulgation non autorisée."
 msgstr "VR Creation met en œuvre toutes les mesures techniques et organisationnelles appropriées (chiffrement SSL/TLS HTTPS, restriction d'accès aux serveurs, pare-feu applicatif) afin de garantir la sécurité et la confidentialité de vos données personnelles et d'empêcher leur altération, perte ou divulgation non autorisée."
+
+msgid "VR Creation — Modélisation 3D et visites virtuelles à Tanger"
+msgstr "VR Creation — Modélisation 3D et visites virtuelles à Tanger"
 
 msgid "Valeur"
 msgstr "Valeur"

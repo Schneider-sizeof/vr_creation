@@ -8,85 +8,85 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "1. Responsable du traitement des données"
-msgstr "1. Responsable du traitement des données"
+msgstr "1. المسؤول عن معالجة البيانات"
 
 msgid "2. Données personnelles collectées"
-msgstr "2. Données personnelles collectées"
+msgstr "2. البيانات الشخصية المجمّعة"
 
 msgid "3. Finalité de la collecte"
-msgstr "3. Finalité de la collecte"
+msgstr "3. الغرض من جمع البيانات"
 
 msgid "4. Durée de conservation des données"
-msgstr "4. Durée de conservation des données"
+msgstr "4. مدة الاحتفاظ بالبيانات"
 
 msgid "5. Sécurité et confidentialité"
-msgstr "5. Sécurité et confidentialité"
+msgstr "5. الأمان والسرية"
 
 msgid "6. Vos droits (Loi marocaine n° 09-08)"
-msgstr "6. Vos droits (Loi marocaine n° 09-08)"
+msgstr "6. حقوقكم (القانون المغربي رقم 09-08)"
 
 msgid "Accepter"
 msgstr "قبول"
 
 msgid "Accompagnement personnalisé"
-msgstr "Accompagnement personnalisé"
+msgstr "مرافقة شخصية"
 
 msgid "Accueil"
 msgstr "الرئيسية"
 
 msgid "Actif"
-msgstr "Actif"
+msgstr "نشط"
 
 msgid "Action Directe"
-msgstr "Action Directe"
+msgstr "إجراء مباشر"
 
 msgid "Adresse"
 msgstr "العنوان"
 
 msgid "Adresse IP anonymisée, type de navigateur, pages consultées et durée de navigation (via cookies analytiques avec votre consentement)."
-msgstr "Adresse IP anonymisée, type de navigateur, pages consultées et durée de navigation (via cookies analytiques avec votre consentement)."
+msgstr "عنوان IP مجهول الهوية، نوع المتصفح، الصفحات التي تمت زيارتها ومدة التصفح (عبر ملفات تعريف الارتباط التحليلية بموافقتكم)."
 
 msgid "Agrandir l'image"
-msgstr "Agrandir l'image"
+msgstr "تكبير الصورة"
 
 msgid "Agrandissement du projet 3D"
-msgstr "Agrandissement du projet 3D"
+msgstr "تكبير المشروع ثلاثي الأبعاد"
 
 msgid "Ajouter"
-msgstr "Ajouter"
+msgstr "إضافة"
 
 msgid "Ajouter noindex à cette page"
 msgstr "إضافة noindex لهذه الصفحة"
 
 msgid "Al Hoceima"
-msgstr "Al Hoceima"
+msgstr "الحسيمة"
 
 msgid "Animation & motion design"
-msgstr "Animation & motion design"
+msgstr "الرسوم المتحركة وتصميم الحركة"
 
 msgid "Animation 3D & motion"
-msgstr "Animation 3D & motion"
+msgstr "الرسوم المتحركة ثلاثية الأبعاد والحركة"
 
 msgid "Annuler et retourner aux articles"
-msgstr "Annuler et retourner aux articles"
+msgstr "إلغاء والعودة إلى المقالات"
 
 msgid "Aperçu"
 msgstr "معاينة"
 
 msgid "Approfondi (~800 à 1200 mots)"
-msgstr "Approfondi (~800 à 1200 mots)"
+msgstr "معمّق (من 800 إلى 1200 كلمة تقريبًا)"
 
 msgid "Architecture"
 msgstr "هندسة معمارية"
 
 msgid "Architecture & Accès Rapides"
-msgstr "Architecture & Accès Rapides"
+msgstr "الهندسة المعمارية والوصول السريع"
 
 msgid "Architecture, 3D & Digital réunis"
-msgstr "Architecture, 3D & Digital réunis"
+msgstr "الهندسة المعمارية والتصميم ثلاثي الأبعاد والرقمي في مكان واحد"
 
 msgid "Architecture, produits, corporate, événementiel, drone."
-msgstr "Architecture, produits, corporate, événementiel, drone."
+msgstr "الهندسة المعمارية، المنتجات، المؤسسات، الفعاليات، التصوير بالطائرات المسيّرة."
 
 msgid "Article"
 msgstr "مقال"
@@ -95,13 +95,13 @@ msgid "Articles"
 msgstr "مقالات"
 
 msgid "Asilah"
-msgstr "Asilah"
+msgstr "أصيلة"
 
 msgid "Aucun article publié pour le moment."
 msgstr "لا توجد مقالات منشورة حالياً."
 
 msgid "Aucun exemple disponible pour le moment."
-msgstr "Aucun exemple disponible pour le moment."
+msgstr "لا توجد أمثلة متاحة حاليًا."
 
 msgid "Aucun projet disponible pour le moment."
 msgstr "لا توجد مشاريع متاحة حالياً."
@@ -110,13 +110,13 @@ msgid "Aucun service disponible pour le moment."
 msgstr "لا توجد خدمات متاحة حالياً."
 
 msgid "Aucune application n'est requise. Un simple lien web ou QR code permet de visiter depuis n'importe quel smartphone, tablette, ordinateur ou casque VR."
-msgstr "Aucune application n'est requise. Un simple lien web ou QR code permet de visiter depuis n'importe quel smartphone, tablette, ordinateur ou casque VR."
+msgstr "لا حاجة لأي تطبيق. رابط ويب بسيط أو رمز QR يتيح الزيارة من أي هاتف ذكي أو جهاز لوحي أو حاسوب أو نظارة واقع افتراضي."
 
 msgid "Aucune promotion active pour le moment. Revenez bientôt !"
-msgstr "Aucune promotion active pour le moment. Revenez bientôt !"
+msgstr "لا توجد عروض ترويجية نشطة حاليًا. عودوا قريبًا!"
 
 msgid "Aucune visite virtuelle 360° disponible pour le moment."
-msgstr "Aucune visite virtuelle 360° disponible pour le moment."
+msgstr "لا توجد جولات افتراضية 360° متاحة حاليًا."
 
 msgid "Aucune étude de cas disponible."
 msgstr "لا توجد دراسات حالة متاحة."
@@ -128,58 +128,58 @@ msgid "Autre"
 msgstr "أخرى"
 
 msgid "Avant de construire, commencez déjà à le vendre. Présentez-nous votre projet et découvrons ensemble comment le transformer en une expérience commerciale complète."
-msgstr "Avant de construire, commencez déjà à le vendre. Présentez-nous votre projet et découvrons ensemble comment le transformer en une expérience commerciale complète."
+msgstr "قبل البناء، ابدأوا ببيعه. قدّموا لنا مشروعكم ولنكتشف معًا كيف نحوّله إلى تجربة تجارية متكاملة."
 
 msgid "Avec VR Creation"
-msgstr "Avec VR Creation"
+msgstr "مع VR Creation"
 
 msgid "Basés à Tanger, nous intervenons rapidement sur tout le Nord du Maroc : Tétouan, Asilah, Larache, Chefchaouen, Al Hoceima."
-msgstr "Basés à Tanger, nous intervenons rapidement sur tout le Nord du Maroc : Tétouan, Asilah, Larache, Chefchaouen, Al Hoceima."
+msgstr "من مقرنا في طنجة، نتدخل بسرعة في جميع أنحاء شمال المغرب: تطوان، أصيلة، العرائش، شفشاون، الحسيمة."
 
 msgid "Behance"
 msgstr "Behance"
 
 msgid "Besoin d'informations ?"
-msgstr "Besoin d'informations ?"
+msgstr "هل تحتاجون إلى معلومات؟"
 
 msgid "Biographie"
 msgstr "السيرة الذاتية"
 
 msgid "Blog & Actualités"
-msgstr "Blog & Actualités"
+msgstr "المدوّنة والأخبار"
 
 msgid "Bouton hero 1 — libellé"
-msgstr "Bouton hero 1 — libellé"
+msgstr "زر البطل 1 — النص"
 
 msgid "Bouton hero 1 — lien"
-msgstr "Bouton hero 1 — lien"
+msgstr "زر البطل 1 — الرابط"
 
 msgid "Bouton hero 2 — libellé"
-msgstr "Bouton hero 2 — libellé"
+msgstr "زر البطل 2 — النص"
 
 msgid "Bouton hero 2 — lien"
-msgstr "Bouton hero 2 — lien"
+msgstr "زر البطل 2 — الرابط"
 
 msgid "Branding"
-msgstr "Branding"
+msgstr "هوية العلامة التجارية"
 
 msgid "Branding & communication"
-msgstr "Branding & communication"
+msgstr "العلامة التجارية والتواصل"
 
 msgid "Branding & communication visuelle"
-msgstr "Branding & communication visuelle"
+msgstr "العلامة التجارية والتواصل البصري"
 
 msgid "Branding cohérent et mémorable"
-msgstr "Branding cohérent et mémorable"
+msgstr "علامة تجارية متناسقة ولا تُنسى"
 
 msgid "Brouillon"
-msgstr "Brouillon"
+msgstr "مسودة"
 
 msgid "Captures 360° d'espaces"
-msgstr "Captures 360° d'espaces"
+msgstr "التقاط 360° للمساحات"
 
 msgid "Cas d'usage"
-msgstr "Cas d'usage"
+msgstr "حالات الاستخدام"
 
 msgid "Catégorie"
 msgstr "الفئة"
@@ -188,10 +188,10 @@ msgid "Catégories"
 msgstr "الفئات"
 
 msgid "Ce que vous obtenez avec cette offre"
-msgstr "Ce que vous obtenez avec cette offre"
+msgstr "ما تحصلون عليه مع هذا العرض"
 
 msgid "Ce qui fait la différence VR Creation"
-msgstr "Ce qui fait la différence VR Creation"
+msgstr "ما يميّز VR Creation"
 
 msgid "Ces cookies nous aident à mesurer l'audience de notre site, à analyser la navigation et à identifier d'éventuels dysfonctionnements pour améliorer votre expérience utilisateur."
 msgstr "تساعدنا ملفات تعريف الارتباط هذه في قياس جمهور موقعنا، وتحليل التصفح وتحديد أي أعطال لتحسين تجربة المستخدم الخاصة بك."
@@ -203,130 +203,130 @@ msgid "Ces cookies sont liés au partage sur les réseaux sociaux et peuvent êt
 msgstr "ترتبط ملفات تعريف الارتباط هذه بالمشاركة على الشبكات الاجتماعية ويمكن تثبيتها لتتبع النشاط على مواقع أخرى."
 
 msgid "Changer de langue"
-msgstr "Changer de langue"
+msgstr "تغيير اللغة"
 
 msgid "Chaque création est pensée comme une signature visuelle sur mesure, au service de votre réussite."
-msgstr "Chaque création est pensée comme une signature visuelle sur mesure, au service de votre réussite."
+msgstr "كل إبداع مصمّم كبصمة بصرية فريدة في خدمة نجاحكم."
 
 msgid "Chaque prestation est conçue pour maximiser votre impact commercial et accélérer vos ventes."
-msgstr "Chaque prestation est conçue pour maximiser votre impact commercial et accélérer vos ventes."
+msgstr "كل خدمة مصمّمة لتعظيم تأثيركم التجاري وتسريع مبيعاتكم."
 
 msgid "Chaque projet mérite une expérience sur mesure"
-msgstr "Chaque projet mérite une expérience sur mesure"
+msgstr "كل مشروع يستحق تجربة مصمّمة خصيصًا"
 
 msgid "Chefchaouen"
-msgstr "Chefchaouen"
+msgstr "شفشاون"
 
 msgid "Chiffre clé"
 msgstr "رقم رئيسي"
 
 msgid "Citation de la Solution"
-msgstr "Citation de la Solution"
+msgstr "اقتباس الحل"
 
 msgid "Classe d\\'icône (ex: fas fa-lightbulb) ou emoji"
-msgstr "Classe d\\'icône (ex: fas fa-lightbulb) ou emoji"
+msgstr "فئة الأيقونة (مثال: fas fa-lightbulb) أو إيموجي"
 
 msgid "Classe d\\'icône CSS (ex: fas fa-store)"
-msgstr "Classe d\\'icône CSS (ex: fas fa-store)"
+msgstr "فئة أيقونة CSS (مثال: fas fa-store)"
 
 msgid "Classe d\\'icône ou emoji"
-msgstr "Classe d\\'icône ou emoji"
+msgstr "فئة الأيقونة أو إيموجي"
 
 msgid "Client"
 msgstr "العميل"
 
 msgid "Cliquez et glissez sur les fenêtres pour explorer à 360°"
-msgstr "Cliquez et glissez sur les fenêtres pour explorer à 360°"
+msgstr "انقروا واسحبوا على النوافذ للاستكشاف بزاوية 360°"
 
 msgid "Cocher pour afficher ce pack en section vedette sur la page d\\'accueil et d\\'autres pages."
-msgstr "Cocher pour afficher ce pack en section vedette sur la page d\\'accueil et d\\'autres pages."
+msgstr "حدد لعرض هذه الباقة في القسم المميز على الصفحة الرئيسية والصفحات الأخرى."
 
 msgid "Code de vérification Google Search Console (contenu de la balise meta)"
 msgstr "رمز التحقق من Google Search Console (محتوى علامة meta)"
 
 msgid "Collaborons ensemble"
-msgstr "Collaborons ensemble"
+msgstr "لنتعاون معًا"
 
 msgid "Combien de temps dure le tournage sur place ?"
-msgstr "Combien de temps dure le tournage sur place ?"
+msgstr "كم يستغرق التصوير في الموقع؟"
 
 msgid "Commander un projet similaire"
-msgstr "Commander un projet similaire"
+msgstr "طلب مشروع مماثل"
 
 msgid "Comment demander un devis ?"
-msgstr "Comment demander un devis ?"
+msgstr "كيف أطلب عرض أسعار؟"
 
 msgid "Comment garantissez-vous la qualité des prospects générés ?"
-msgstr "Comment garantissez-vous la qualité des prospects générés ?"
+msgstr "كيف تضمنون جودة العملاء المحتملين المُولَّدين؟"
 
 msgid "Comment les clients accèdent-ils à la visite virtuelle ?"
-msgstr "Comment les clients accèdent-ils à la visite virtuelle ?"
+msgstr "كيف يصل العملاء إلى الجولة الافتراضية؟"
 
 msgid "Comment nous travaillons"
 msgstr "كيف نعمل"
 
 msgid "Comment obtenir un devis personnalisé ?"
-msgstr "Comment obtenir un devis personnalisé ?"
+msgstr "كيف أحصل على عرض أسعار مخصص؟"
 
 msgid "Comment ça marche"
-msgstr "Comment ça marche"
+msgstr "كيف يعمل"
 
 msgid "Commercialisez avant la construction"
-msgstr "Commercialisez avant la construction"
+msgstr "سوّقوا قبل البناء"
 
 msgid "Commission sur vente"
-msgstr "Commission sur vente"
+msgstr "عمولة على البيع"
 
 msgid "Comparatif"
-msgstr "Comparatif"
+msgstr "مقارنة"
 
 msgid "Comptez environ 5 à 7 jours pour la création de la page de destination, la configuration des publicités et le paramétrage du suivi."
-msgstr "Comptez environ 5 à 7 jours pour la création de la page de destination, la configuration des publicités et le paramétrage du suivi."
+msgstr "احسبوا حوالي 5 إلى 7 أيام لإنشاء صفحة الهبوط وإعداد الإعلانات وضبط التتبع."
 
 msgid "Conditions de l'offre"
-msgstr "Conditions de l'offre"
+msgstr "شروط العرض"
 
 msgid "Confiez-nous vos plans 2D et laissez-nous les transformer en une expérience immersive."
-msgstr "Confiez-nous vos plans 2D et laissez-nous les transformer en une expérience immersive."
+msgstr "سلّمونا مخططاتكم ثنائية الأبعاد ودعونا نحوّلها إلى تجربة غامرة."
 
 msgid "Configuration requise : %(msg)s"
-msgstr "Configuration requise : %(msg)s"
+msgstr "الإعدادات المطلوبة: %(msg)s"
 
 msgid "Conformément à la réglementation RGPD, le consentement donné pour le dépôt de cookies a une durée de validité de 13 mois maximum. À l'issue de cette période, votre consentement sera à nouveau demandé."
 msgstr "وفقًا للوائح العامة لحماية البيانات (GDPR)، فإن صلاحية الموافقة الممنوحة لملفات تعريف الارتباط هي 13 شهرًا كحد أقصى. وفي نهاية هذه الفترة، سيتم طلب موافقتك مرة أخرى."
 
 msgid "Consultez nos réalisations récentes pour promoteurs et architectes à Tanger."
-msgstr "Consultez nos réalisations récentes pour promoteurs et architectes à Tanger."
+msgstr "اطّلعوا على أحدث إنجازاتنا للمطورين العقاريين والمهندسين المعماريين في طنجة."
 
 msgid "Consultez notre page offres."
-msgstr "Consultez notre page offres."
+msgstr "اطّلعوا على صفحة العروض."
 
 msgid "Contact"
 msgstr "اتصل بنا"
 
 msgid "Contact & Devis gratuit"
-msgstr "Contact & Devis gratuit"
+msgstr "اتصل بنا وعرض أسعار مجاني"
 
 msgid "Contactez nos experts à Tanger pour en savoir plus et obtenir un devis personnalisé."
-msgstr "Contactez nos experts à Tanger pour en savoir plus et obtenir un devis personnalisé."
+msgstr "تواصلوا مع خبرائنا في طنجة لمعرفة المزيد والحصول على عرض أسعار مخصص."
 
 msgid "Contactez notre équipe via le formulaire de devis ou par téléphone. Nous étudions votre projet sous 24h et vous remettons une proposition détaillée."
-msgstr "Contactez notre équipe via le formulaire de devis ou par téléphone. Nous étudions votre projet sous 24h et vous remettons une proposition détaillée."
+msgstr "تواصلوا مع فريقنا عبر نموذج طلب عرض الأسعار أو عبر الهاتف. ندرس مشروعكم خلال 24 ساعة ونقدم لكم عرضًا مفصلًا."
 
 msgid "Contactez notre équipe à Tanger pour un premier échange gratuit et sans engagement."
-msgstr "Contactez notre équipe à Tanger pour un premier échange gratuit et sans engagement."
+msgstr "تواصلوا مع فريقنا في طنجة لاستشارة أولى مجانية وبدون التزام."
 
 msgid "Contactez-nous par téléphone au +212 625 07 1498, par WhatsApp, ou via notre formulaire de contact en ligne. Le devis est gratuit et personnalisé."
-msgstr "Contactez-nous par téléphone au +212 625 07 1498, par WhatsApp, ou via notre formulaire de contact en ligne. Le devis est gratuit et personnalisé."
+msgstr "تواصلوا معنا عبر الهاتف على الرقم +212 625 07 1498، أو عبر واتساب، أو من خلال نموذج الاتصال عبر الإنترنت. عرض الأسعار مجاني ومخصص."
 
 msgid "Contactez-nous pour un devis gratuit et personnalisé. Notre équipe à Tanger est à votre écoute."
-msgstr "Contactez-nous pour un devis gratuit et personnalisé. Notre équipe à Tanger est à votre écoute."
+msgstr "تواصلوا معنا للحصول على عرض أسعار مجاني ومخصص. فريقنا في طنجة في خدمتكم."
 
 msgid "Contenu"
 msgstr "المحتوى"
 
 msgid "Convertir"
-msgstr "Convertir"
+msgstr "تحويل"
 
 msgid "Cookies"
 msgstr "ملفات تعريف الارتباط"
@@ -353,19 +353,19 @@ msgid "Coordonnées"
 msgstr "معلومات الاتصال"
 
 msgid "Court (~400 à 600 mots)"
-msgstr "Court (~400 à 600 mots)"
+msgstr "قصير (من 400 إلى 600 كلمة تقريبًا)"
 
 msgid "Coûts de maquette physique élevés"
-msgstr "Coûts de maquette physique élevés"
+msgstr "تكاليف مرتفعة للمجسمات المادية"
 
 msgid "Créé le"
 msgstr "أنشئ في"
 
 msgid "DE L'IDÉE À LA COMMERCIALISATION."
-msgstr "DE L'IDÉE À LA COMMERCIALISATION."
+msgstr "من الفكرة إلى التسويق."
 
 msgid "Dashboard"
-msgstr "Dashboard"
+msgstr "لوحة التحكم"
 
 msgid "Date"
 msgstr "التاريخ"
@@ -377,34 +377,34 @@ msgid "Date de réalisation"
 msgstr "تاريخ الإنجاز"
 
 msgid "Dates système"
-msgstr "Dates système"
+msgstr "تواريخ النظام"
 
 msgid "Demander mon devis gratuit"
-msgstr "Demander mon devis gratuit"
+msgstr "اطلبوا عرض أسعاري المجاني"
 
 msgid "Demander un devis"
-msgstr "Demander un devis"
+msgstr "طلب عرض أسعار"
 
 msgid "Demander un devis gratuit"
-msgstr "Demander un devis gratuit"
+msgstr "طلب عرض أسعار مجاني"
 
 msgid "Demander un devis personnalisé"
-msgstr "Demander un devis personnalisé"
+msgstr "طلب عرض أسعار مخصص"
 
 msgid "Depuis nos bureaux de Tanger, nous accompagnons les entreprises et institutions de toute la région nord."
-msgstr "Depuis nos bureaux de Tanger, nous accompagnons les entreprises et institutions de toute la région nord."
+msgstr "من مكاتبنا في طنجة، نرافق الشركات والمؤسسات في جميع أنحاء المنطقة الشمالية."
 
 msgid "Des atouts majeurs pour garantir le succès de vos réalisations."
-msgstr "Des atouts majeurs pour garantir le succès de vos réalisations."
+msgstr "مزايا رئيسية لضمان نجاح إنجازاتكم."
 
 msgid "Des compétences complètes pour vos projets visuels"
-msgstr "Des compétences complètes pour vos projets visuels"
+msgstr "كفاءات شاملة لمشاريعكم البصرية"
 
 msgid "Des formules adaptées à chaque étape de votre projet pour accélérer votre croissance et maximiser votre visibilité."
-msgstr "Des formules adaptées à chaque étape de votre projet pour accélérer votre croissance et maximiser votre visibilité."
+msgstr "صيغ ملائمة لكل مرحلة من مشروعكم لتسريع نموكم وتعظيم ظهوركم."
 
 msgid "Des livrables de qualité internationale à des prix adaptés au marché local."
-msgstr "Des livrables de qualité internationale à des prix adaptés au marché local."
+msgstr "مخرجات بجودة دولية وبأسعار تناسب السوق المحلي."
 
 msgid "Description"
 msgstr "الوصف"
@@ -419,10 +419,10 @@ msgid "Description courte"
 msgstr "وصف مختصر"
 
 msgid "Description pour les moteurs de recherche (max 160 caractères). Laisser vide pour utiliser la description courte."
-msgstr "Description pour les moteurs de recherche (max 160 caractères). Laisser vide pour utiliser la description courte."
+msgstr "وصف لمحركات البحث (160 حرفًا كحد أقصى). اتركوه فارغًا لاستخدام الوصف المختصر."
 
 msgid "Devis gratuit"
-msgstr "Devis gratuit"
+msgstr "عرض أسعار مجاني"
 
 msgid "Diapositive Hero"
 msgstr "شريحة البانر الرئيسي"
@@ -431,52 +431,52 @@ msgid "Diapositives Hero"
 msgstr "شرائح البانر الرئيسي"
 
 msgid "Digitaliser"
-msgstr "Digitaliser"
+msgstr "رقمنة"
 
 msgid "Directeur de la publication"
-msgstr "Directeur de la publication"
+msgstr "مدير النشر"
 
 msgid "Direction de la communication — VR Creation Company SARL-AU."
-msgstr "Direction de la communication — VR Creation Company SARL-AU."
+msgstr "إدارة التواصل — VR Creation Company SARL-AU."
 
 msgid "Données de navigation & mesure d'audience :"
-msgstr "Données de navigation & mesure d'audience :"
+msgstr "بيانات التصفح وقياس الجمهور:"
 
 msgid "Durée de conservation"
 msgstr "مدة الاحتفاظ بها"
 
 msgid "Dynamique & Engageant"
-msgstr "Dynamique & Engageant"
+msgstr "ديناميكي وجذاب"
 
 msgid "Découvrez comment nos solutions transforment chaque type de projet en levier de croissance."
-msgstr "Découvrez comment nos solutions transforment chaque type de projet en levier de croissance."
+msgstr "اكتشفوا كيف تحوّل حلولنا كل نوع من المشاريع إلى رافعة للنمو."
 
 msgid "Découvrez des packs de services conçus spécifiquement pour répondre à vos objectifs de commercialisation et de valorisation immobilière."
-msgstr "Découvrez des packs de services conçus spécifiquement pour répondre à vos objectifs de commercialisation et de valorisation immobilière."
+msgstr "اكتشفوا باقات خدمات مصمّمة خصيصًا لتلبية أهدافكم في التسويق والتثمين العقاري."
 
 msgid "Découvrez les spécifications techniques, tarifs et options de notre prestation de visite virtuelle 3D sur plan (VEFA) et capture d'espaces à Tanger."
-msgstr "Découvrez les spécifications techniques, tarifs et options de notre prestation de visite virtuelle 3D sur plan (VEFA) et capture d'espaces à Tanger."
+msgstr "اكتشفوا المواصفات التقنية والأسعار وخيارات خدمة الجولة الافتراضية ثلاثية الأبعاد على المخطط (البيع على التصاميم) والتقاط المساحات في طنجة."
 
 msgid "Découvrez nos projets concrets"
-msgstr "Découvrez nos projets concrets"
+msgstr "اكتشفوا مشاريعنا الفعلية"
 
 msgid "Découvrez notre offre en vidéo"
-msgstr "Découvrez notre offre en vidéo"
+msgstr "اكتشفوا عرضنا بالفيديو"
 
 msgid "Découvrir ce service"
 msgstr "اكتشف هذه الخدمة"
 
 msgid "Découvrir l'offre"
-msgstr "Découvrir l'offre"
+msgstr "اكتشفوا العرض"
 
 msgid "Découvrir le service Visites 3D"
-msgstr "Découvrir le service Visites 3D"
+msgstr "اكتشفوا خدمة الجولات ثلاثية الأبعاد"
 
 msgid "Découvrir nos services"
-msgstr "Découvrir nos services"
+msgstr "اكتشفوا خدماتنا"
 
 msgid "Découvrir nos solutions"
-msgstr "Découvrir nos solutions"
+msgstr "اكتشفوا حلولنا"
 
 msgid "Décrivez votre projet..."
 msgstr "صف مشروعك..."
@@ -485,13 +485,13 @@ msgid "Défi / Problématique"
 msgstr "التحدي / الإشكالية"
 
 msgid "Délai d'attente dépassé : %(msg)s"
-msgstr "Délai d'attente dépassé : %(msg)s"
+msgstr "تم تجاوز مهلة الانتظار: %(msg)s"
 
 msgid "Démarrer votre projet"
-msgstr "Démarrer votre projet"
+msgstr "ابدأوا مشروعكم"
 
 msgid "Démos 360°"
-msgstr "Démos 360°"
+msgstr "عروض توضيحية 360°"
 
 msgid "Efficacité"
 msgstr "الكفاءة"
@@ -500,7 +500,7 @@ msgid "Efficacité / Impact"
 msgstr "الكفاءة / التأثير"
 
 msgid "Elle est idéale pour les espaces déjà construits : showrooms, magasins, restaurants, hôtels, résidences témoins achevées et le suivi technique de chantiers à Tanger et dans le Nord."
-msgstr "Elle est idéale pour les espaces déjà construits : showrooms, magasins, restaurants, hôtels, résidences témoins achevées et le suivi technique de chantiers à Tanger et dans le Nord."
+msgstr "إنها مثالية للمساحات المبنية بالفعل: صالات العرض، المتاجر، المطاعم، الفنادق، الشقق النموذجية المكتملة ومتابعة أوراش البناء تقنيًا في طنجة وشمال المغرب."
 
 msgid "Email"
 msgstr "البريد الإلكتروني"
@@ -512,13 +512,13 @@ msgid "En poursuivant votre navigation sur ce site, vous acceptez l'utilisation 
 msgstr "بمتابعة تصفح هذا الموقع، فإنك توافق على استخدام ملفات تعريف الارتباط لتحسين تجربة المستخدم وإنشاء إحصائيات الزيارات."
 
 msgid "En règle générale, un pack de rendus intérieurs ou extérieurs est livré sous 5 à 10 jours ouvrés avec un cycle de validation intermédiaire pour les ajustements."
-msgstr "En règle générale, un pack de rendus intérieurs ou extérieurs est livré sous 5 à 10 jours ouvrés avec un cycle de validation intermédiaire pour les ajustements."
+msgstr "كقاعدة عامة، يتم تسليم باقة التصورات الداخلية أو الخارجية خلال 5 إلى 10 أيام عمل مع دورة مراجعة وسيطة للتعديلات."
 
 msgid "En savoir plus"
 msgstr "اعرف المزيد"
 
 msgid "English"
-msgstr "English"
+msgstr "الإنجليزية"
 
 msgid "Enregistrer mes choix"
 msgstr "حفظ خياراتي"
@@ -533,22 +533,22 @@ msgid "Envoyé le"
 msgstr "أُرسل في"
 
 msgid "Erreur 404"
-msgstr "Erreur 404"
+msgstr "خطأ 404"
 
 msgid "Erreur 500"
-msgstr "Erreur 500"
+msgstr "خطأ 500"
 
 msgid "Erreur IA Gemini : %(msg)s"
-msgstr "Erreur IA Gemini : %(msg)s"
+msgstr "خطأ في الذكاء الاصطناعي Gemini: %(msg)s"
 
 msgid "Erreur Serveur (500) | VR Creation"
-msgstr "Erreur Serveur (500) | VR Creation"
+msgstr "خطأ في الخادم (500) | VR Creation"
 
 msgid "Estimer mon projet"
-msgstr "Estimer mon projet"
+msgstr "تقدير مشروعي"
 
 msgid "Ex: 10%, 15%, ou \"Sur négociation\". Affiché uniquement pour les offres sur commission."
-msgstr "Ex: 10%, 15%, ou \"Sur négociation\". Affiché uniquement pour les offres sur commission."
+msgstr "مثال: 10%، 15%، أو \"حسب التفاوض\". يُعرض فقط لعروض العمولة."
 
 msgid "Ex: 150+, 98%, 10 ans"
 msgstr "مثال: +150، 98%، 10 سنوات"
@@ -557,19 +557,19 @@ msgid "Ex: G-XXXXXXXXXX. Chargé uniquement après consentement cookies."
 msgstr "مثال: G-XXXXXXXXXX. يتم تحميله فقط بعد الموافقة على ملفات تعريف الارتباط."
 
 msgid "Ex: Les acheteurs veulent se projeter avant d\\'investir."
-msgstr "Ex: Les acheteurs veulent se projeter avant d\\'investir."
+msgstr "مثال: يريد المشترون تصور المشروع قبل الاستثمار."
 
 msgid "Ex: Les avantages de la modélisation 3D et des rendus photoréalistes pour l'architecture et l'immobilier haut de gamme..."
-msgstr "Ex: Les avantages de la modélisation 3D et des rendus photoréalistes pour l'architecture et l'immobilier haut de gamme..."
+msgstr "مثال: مزايا النمذجة ثلاثية الأبعاد والتصورات الواقعية للهندسة المعمارية والعقارات الفاخرة..."
 
 msgid "Exemples de succès stratégiques"
-msgstr "Exemples de succès stratégiques"
+msgstr "أمثلة على نجاحات استراتيجية"
 
 msgid "Expertise 360°"
-msgstr "Expertise 360°"
+msgstr "خبرة 360°"
 
 msgid "Explorez nos démonstrations de visites 360° interactives"
-msgstr "Explorez nos démonstrations de visites 360° interactives"
+msgstr "استكشفوا عروضنا التوضيحية للجولات التفاعلية 360°"
 
 msgid "Expéditeur"
 msgstr "المُرسل"
@@ -578,7 +578,7 @@ msgid "Extrait"
 msgstr "مقتطف"
 
 msgid "FAQ — À propos de VR Creation"
-msgstr "FAQ — À propos de VR Creation"
+msgstr "الأسئلة الشائعة — حول VR Creation"
 
 msgid "Facebook"
 msgstr "فيسبوك"
@@ -587,37 +587,37 @@ msgid "Favicon"
 msgstr "Favicon"
 
 msgid "Fermer"
-msgstr "Fermer"
+msgstr "إغلاق"
 
 msgid "Fiche Technique"
-msgstr "Fiche Technique"
+msgstr "بطاقة تقنية"
 
 msgid "Fiche complète du projet"
-msgstr "Fiche complète du projet"
+msgstr "بطاقة المشروع الكاملة"
 
 msgid "Fnideq"
-msgstr "Fnideq"
+msgstr "الفنيدق"
 
 msgid "Fonctionnalité / Critère"
-msgstr "Fonctionnalité / Critère"
+msgstr "الميزة / المعيار"
 
 msgid "Formulaire de contact & devis :"
-msgstr "Formulaire de contact & devis :"
+msgstr "نموذج الاتصال وطلب عرض الأسعار:"
 
 msgid "Formulaire soumis trop rapidement. Veuillez patienter un instant."
-msgstr "Formulaire soumis trop rapidement. Veuillez patienter un instant."
+msgstr "تم إرسال النموذج بسرعة كبيرة. يرجى الانتظار لحظة."
 
 msgid "Français"
-msgstr "Français"
+msgstr "الفرنسية"
 
 msgid "Galerie VR Creation"
-msgstr "Galerie VR Creation"
+msgstr "معرض VR Creation"
 
 msgid "Galerie d'Images & Rendu 3D"
-msgstr "Galerie d'Images & Rendu 3D"
+msgstr "معرض الصور والتصورات ثلاثية الأبعاد"
 
 msgid "Galerie de réalisations"
-msgstr "Galerie de réalisations"
+msgstr "معرض الإنجازات"
 
 msgid "Gestion des cookies"
 msgstr "إدارة ملفات تعريف الارتباط"
@@ -632,43 +632,43 @@ msgid "Google Search Console"
 msgstr "Google Search Console"
 
 msgid "Grande phrase d’accroche"
-msgstr "Grande phrase d’accroche"
+msgstr "العبارة الرئيسية الجاذبة"
 
 msgid "Guides & Articles"
-msgstr "Guides & Articles"
+msgstr "أدلة ومقالات"
 
 msgid "Générateur d'articles IA"
-msgstr "Générateur d'articles IA"
+msgstr "مولّد مقالات بالذكاء الاصطناعي"
 
 msgid "Générateur d'articles de blog par IA"
-msgstr "Générateur d'articles de blog par IA"
+msgstr "مولّد مقالات المدوّنة بالذكاء الاصطناعي"
 
 msgid "Génération en cours..."
-msgstr "Génération en cours..."
+msgstr "جارٍ التوليد..."
 
 msgid "Générer l'article maintenant"
-msgstr "Générer l'article maintenant"
+msgstr "توليد المقال الآن"
 
 msgid "Générer un article avec l'IA"
-msgstr "Générer un article avec l'IA"
+msgstr "توليد مقال بالذكاء الاصطناعي"
 
 msgid "Généré par IA"
-msgstr "Généré par IA"
+msgstr "تم التوليد بالذكاء الاصطناعي"
 
 msgid "Gérer mes choix"
 msgstr "إدارة خياراتي"
 
 msgid "Hero page d’accueil"
-msgstr "Hero page d’accueil"
+msgstr "بانر الصفحة الرئيسية"
 
 msgid "Hébergement du site"
-msgstr "Hébergement du site"
+msgstr "استضافة الموقع"
 
 msgid "Hésitation et fuite des prospects"
-msgstr "Hésitation et fuite des prospects"
+msgstr "تردد العملاء المحتملين وفقدانهم"
 
 msgid "IA"
-msgstr "IA"
+msgstr "ذكاء اصطناعي"
 
 msgid "ID objet"
 msgstr "معرف الكائن"
@@ -680,10 +680,10 @@ msgid "Icône CSS"
 msgstr "أيقونة CSS"
 
 msgid "Identifiant Commun de l'Entreprise (ICE)"
-msgstr "Identifiant Commun de l'Entreprise (ICE)"
+msgstr "المعرّف المشترك للمقاولة (ICE)"
 
 msgid "Identifiant Fiscal (IF)"
-msgstr "Identifiant Fiscal (IF)"
+msgstr "المعرّف الضريبي (IF)"
 
 msgid "Identifiant de page"
 msgstr "معرف الصفحة"
@@ -692,25 +692,25 @@ msgid "Identifiant unique : home, about, services, portfolio, contact, blog, etc
 msgstr "معرف فريد: home, about, services, portfolio, contact, blog, إلخ."
 
 msgid "Identifier"
-msgstr "Identifier"
+msgstr "تحديد"
 
 msgid "Identité de l\\'offre"
-msgstr "Identité de l\\'offre"
+msgstr "هوية العرض"
 
 msgid "Identité de marque"
-msgstr "Identité de marque"
+msgstr "هوية العلامة التجارية"
 
 msgid "Identité du site"
 msgstr "هوية الموقع"
 
 msgid "Il se vend avec une vision. Nous combinons architecture, 3D, immersion, branding et technologie digitale pour permettre aux promoteurs de présenter leurs projets autrement — et surtout, plus tôt."
-msgstr "Il se vend avec une vision. Nous combinons architecture, 3D, immersion, branding et technologie digitale pour permettre aux promoteurs de présenter leurs projets autrement — et surtout, plus tôt."
+msgstr "يُباع برؤية. نجمع بين الهندسة المعمارية والتصميم ثلاثي الأبعاد والانغماس والعلامة التجارية والتكنولوجيا الرقمية لتمكين المطورين من تقديم مشاريعهم بطريقة مختلفة — والأهم، في وقت أبكر."
 
 msgid "Image"
 msgstr "صورة"
 
 msgid "Image / Illustration"
-msgstr "Image / Illustration"
+msgstr "صورة / رسم توضيحي"
 
 msgid "Image 1200x630px recommandée"
 msgstr "صورة 1200x630 بكسل موصى بها"
@@ -725,16 +725,16 @@ msgid "Image Open Graph"
 msgstr "صورة Open Graph"
 
 msgid "Image affichée pendant le chargement de la vidéo hero (1920x600 recommandé)"
-msgstr "Image affichée pendant le chargement de la vidéo hero (1920x600 recommandé)"
+msgstr "الصورة المعروضة أثناء تحميل فيديو البطل (1920x600 موصى به)"
 
 msgid "Image affichée sur la carte. Stockée dans le dossier media/services/"
-msgstr "Image affichée sur la carte. Stockée dans le dossier media/services/"
+msgstr "الصورة المعروضة على البطاقة. مخزّنة في مجلد media/services/"
 
 msgid "Image de fond"
-msgstr "Image de fond"
+msgstr "صورة الخلفية"
 
 msgid "Image de fond du hero de la page d\\'accueil"
-msgstr "Image de fond du hero de la page d\\'accueil"
+msgstr "صورة خلفية بانر الصفحة الرئيسية"
 
 msgid "Image du projet"
 msgstr "صورة المشروع"
@@ -746,7 +746,7 @@ msgid "Image hero accueil"
 msgstr "صورة البانر الرئيسي"
 
 msgid "Image optionnelle affichée sur la carte de cette prestation (400x300px recommandé)"
-msgstr "Image optionnelle affichée sur la carte de cette prestation (400x300px recommandé)"
+msgstr "صورة اختيارية تُعرض على بطاقة هذه الخدمة (400x300 بكسل موصى به)"
 
 msgid "Image page À propos"
 msgstr "صورة صفحة من نحن"
@@ -755,7 +755,7 @@ msgid "Image par défaut pour le partage social (1200x630px recommandé)"
 msgstr "صورة افتراضية للمشاركة الاجتماعية (1200x630 بكسل موصى بها)"
 
 msgid "Image poster vidéo hero"
-msgstr "Image poster vidéo hero"
+msgstr "صورة ملصق فيديو البطل"
 
 msgid "Image principale"
 msgstr "الصورة الرئيسية"
@@ -770,13 +770,13 @@ msgid "Images principales"
 msgstr "الصور الرئيسية"
 
 msgid "Imaginer"
-msgstr "Imaginer"
+msgstr "تخيّل"
 
 msgid "Immersion totale"
-msgstr "Immersion totale"
+msgstr "انغماس كامل"
 
 msgid "Immersion totale pour vos clients, navigable sur tous les appareils."
-msgstr "Immersion totale pour vos clients, navigable sur tous les appareils."
+msgstr "انغماس كامل لعملائكم، قابل للتصفح على جميع الأجهزة."
 
 msgid "Immobilier"
 msgstr "عقارات"
@@ -788,64 +788,64 @@ msgid "Importance du service"
 msgstr "أهمية الخدمة"
 
 msgid "Index du site"
-msgstr "Index du site"
+msgstr "فهرس الموقع"
 
 msgid "Indiquez le sujet principal, les axes clés ou les mots-clés que l'article doit aborder."
-msgstr "Indiquez le sujet principal, les axes clés ou les mots-clés que l'article doit aborder."
+msgstr "حدّدوا الموضوع الرئيسي أو المحاور الأساسية أو الكلمات المفتاحية التي يجب أن يتناولها المقال."
 
 msgid "Indiquez votre sujet ou vos mots-clés pour que l'IA rédige un article complet, structuré et optimisé SEO pour VR Creation."
-msgstr "Indiquez votre sujet ou vos mots-clés pour que l'IA rédige un article complet, structuré et optimisé SEO pour VR Creation."
+msgstr "أدخلوا موضوعكم أو كلماتكم المفتاحية ليقوم الذكاء الاصطناعي بكتابة مقال كامل ومنظّم ومحسّن لمحركات البحث لصالح VR Creation."
 
 msgid "Instagram"
 msgstr "إنستغرام"
 
 msgid "Intervenez-vous en dehors de Tanger ?"
-msgstr "Intervenez-vous en dehors de Tanger ?"
+msgstr "هل تتدخلون خارج طنجة؟"
 
 msgid "Intéressé par ce service ?"
-msgstr "Intéressé par ce service ?"
+msgstr "مهتمون بهذه الخدمة؟"
 
 msgid "Ksar El Kébir"
-msgstr "Ksar El Kébir"
+msgstr "القصر الكبير"
 
 msgid "L'IA Gemini rédige le titre, l'extrait et l'article structuré en Markdown. Veuillez patienter 5 à 15 secondes..."
-msgstr "L'IA Gemini rédige le titre, l'extrait et l'article structuré en Markdown. Veuillez patienter 5 à 15 secondes..."
+msgstr "يقوم الذكاء الاصطناعي Gemini بكتابة العنوان والمقتطف والمقال المنظّم بتنسيق Markdown. يرجى الانتظار من 5 إلى 15 ثانية..."
 
 msgid "L'adresse que vous avez saisie n'existe plus ou a été déplacée. Nous vous invitons à poursuivre votre visite via les accès ci-dessous :"
-msgstr "L'adresse que vous avez saisie n'existe plus ou a été déplacée. Nous vous invitons à poursuivre votre visite via les accès ci-dessous :"
+msgstr "العنوان الذي أدخلتموه لم يعد موجودًا أو تم نقله. ندعوكم لمتابعة زيارتكم عبر الروابط أدناه:"
 
 msgid "L'amélioration continue des fonctionnalités et de l'expérience utilisateur de notre site internet."
-msgstr "L'amélioration continue des fonctionnalités et de l'expérience utilisateur de notre site internet."
+msgstr "التحسين المستمر لوظائف موقعنا الإلكتروني وتجربة المستخدم."
 
 msgid "L'article sera automatiquement enregistré au statut"
-msgstr "L'article sera automatiquement enregistré au statut"
+msgstr "سيتم حفظ المقال تلقائيًا بحالة"
 
 msgid "L'ensemble de ce site (textes, rendus 3D, vidéos, photographies, visites virtuelles, logos, éléments graphiques) est la propriété exclusive de VR CREATION COMPANY SARL-AU ou de ses partenaires ayant autorisé son utilisation. Toute reproduction, représentation, modification ou diffusion, intégrale ou partielle, est strictement interdite sans autorisation écrite préalable."
-msgstr "L'ensemble de ce site (textes, rendus 3D, vidéos, photographies, visites virtuelles, logos, éléments graphiques) est la propriété exclusive de VR CREATION COMPANY SARL-AU ou de ses partenaires ayant autorisé son utilisation. Toute reproduction, représentation, modification ou diffusion, intégrale ou partielle, est strictement interdite sans autorisation écrite préalable."
+msgstr "جميع محتويات هذا الموقع (النصوص، التصورات ثلاثية الأبعاد، مقاطع الفيديو، الصور الفوتوغرافية، الجولات الافتراضية، الشعارات، العناصر الرسومية) هي ملكية حصرية لشركة VR CREATION COMPANY SARL-AU أو شركائها الذين أذنوا باستخدامها. يُمنع منعًا باتًا أي نسخ أو تمثيل أو تعديل أو نشر، كليًا أو جزئيًا، دون إذن كتابي مسبق."
 
 msgid "L'établissement et la transmission de devis personnalisés pour vos projets 3D, visites virtuelles ou branding."
-msgstr "L'établissement et la transmission de devis personnalisés pour vos projets 3D, visites virtuelles ou branding."
+msgstr "إعداد وإرسال عروض أسعار مخصصة لمشاريعكم ثلاثية الأبعاد أو الجولات الافتراضية أو العلامة التجارية."
 
 msgid "La Solution"
-msgstr "La Solution"
+msgstr "الحل"
 
 msgid "La gestion de la relation commerciale, des rendez-vous et du suivi de vos projets."
-msgstr "La gestion de la relation commerciale, des rendez-vous et du suivi de vos projets."
+msgstr "إدارة العلاقة التجارية والمواعيد ومتابعة مشاريعكم."
 
 msgid "La visite virtuelle 3D est créée avant même le début du chantier à partir des plans architecturaux. Elle permet à vos acheteurs en VEFA d'explorer les futurs appartements, duplex ou villas pièce par pièce et de se projeter immédiatement."
-msgstr "La visite virtuelle 3D est créée avant même le début du chantier à partir des plans architecturaux. Elle permet à vos acheteurs en VEFA d'explorer les futurs appartements, duplex ou villas pièce par pièce et de se projeter immédiatement."
+msgstr "يتم إنشاء الجولة الافتراضية ثلاثية الأبعاد قبل بدء أعمال البناء انطلاقًا من المخططات المعمارية. تتيح لمشتريكم في إطار البيع على التصاميم استكشاف الشقق أو الدوبلكس أو الفلل المستقبلية غرفة بغرفة وتصوّرها فورًا."
 
 msgid "Label du chiffre"
 msgstr "علامة الرقم"
 
 msgid "Langue de l'article"
-msgstr "Langue de l'article"
+msgstr "لغة المقال"
 
 msgid "Larache"
-msgstr "Larache"
+msgstr "العرائش"
 
 msgid "Le Contenu"
-msgstr "Le Contenu"
+msgstr "المحتوى"
 
 msgid "Le Défi"
 msgstr "التحدي"
@@ -857,31 +857,31 @@ msgid "Le Résultat"
 msgstr "النتيجة"
 
 msgid "Le scan 360° nécessite généralement 1 à 2 heures pour un espace de 100 à 250 m², sans perturber votre activité commerciale."
-msgstr "Le scan 360° nécessite généralement 1 à 2 heures pour un espace de 100 à 250 m², sans perturber votre activité commerciale."
+msgstr "يستغرق المسح 360° عادةً من ساعة إلى ساعتين لمساحة تتراوح بين 100 و250 م²، دون تعطيل نشاطكم التجاري."
 
 msgid "Le site est hébergé sur des serveurs haute performance administrés via cPanel & LiteSpeed Web Server, garantissant sécurité, haute disponibilité et chiffrement SSL."
-msgstr "Le site est hébergé sur des serveurs haute performance administrés via cPanel & LiteSpeed Web Server, garantissant sécurité, haute disponibilité et chiffrement SSL."
+msgstr "يُستضاف الموقع على خوادم عالية الأداء تُدار عبر cPanel وLiteSpeed Web Server، مما يضمن الأمان والتوفر العالي وتشفير SSL."
 
 msgid "Les données relatives aux prospects sont conservées pendant une durée maximale de 3 ans à compter du dernier contact émanant du prospect. Les données relatives aux clients sont conservées pendant la durée de la relation contractuelle augmentée des délais légaux de prescription."
-msgstr "Les données relatives aux prospects sont conservées pendant une durée maximale de 3 ans à compter du dernier contact émanant du prospect. Les données relatives aux clients sont conservées pendant la durée de la relation contractuelle augmentée des délais légaux de prescription."
+msgstr "تُحفظ بيانات العملاء المحتملين لمدة أقصاها 3 سنوات من تاريخ آخر تواصل صادر عن العميل المحتمل. تُحفظ بيانات العملاء طوال مدة العلاقة التعاقدية مضافًا إليها آجال التقادم القانونية."
 
 msgid "Les délais varient selon le projet : quelques jours pour un shooting photo, 1 à 3 semaines pour un branding complet, 2 à 6 semaines pour la modélisation 3D. Nous nous engageons sur un planning précis dès la validation du devis."
-msgstr "Les délais varient selon le projet : quelques jours pour un shooting photo, 1 à 3 semaines pour un branding complet, 2 à 6 semaines pour la modélisation 3D. Nous nous engageons sur un planning précis dès la validation du devis."
+msgstr "تختلف المواعيد حسب المشروع: بضعة أيام لجلسة تصوير، من أسبوع إلى 3 أسابيع لعلامة تجارية متكاملة، من أسبوعين إلى 6 أسابيع للنمذجة ثلاثية الأبعاد. نلتزم بجدول زمني دقيق منذ المصادقة على عرض الأسعار."
 
 msgid "Les informations recueillies via le formulaire de contact sont destinées exclusivement à VR Creation Company pour répondre à vos demandes de devis et d'informations. Conformément à la loi marocaine n° 09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel, vous disposez d'un droit d'accès, de rectification et d'opposition aux données vous concernant en nous contactant par email à"
-msgstr "Les informations recueillies via le formulaire de contact sont destinées exclusivement à VR Creation Company pour répondre à vos demandes de devis et d'informations. Conformément à la loi marocaine n° 09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel, vous disposez d'un droit d'accès, de rectification et d'opposition aux données vous concernant en nous contactant par email à"
+msgstr "المعلومات المجمّعة عبر نموذج الاتصال مخصصة حصريًا لشركة VR Creation Company للرد على طلبات عروض الأسعار والمعلومات الخاصة بكم. وفقًا للقانون المغربي رقم 09-08 المتعلق بحماية الأشخاص الذاتيين تجاه معالجة البيانات ذات الطابع الشخصي، لديكم حق الوصول والتصحيح والاعتراض على البيانات المتعلقة بكم عبر مراسلتنا بالبريد الإلكتروني على"
 
 msgid "Les maquettes physiques coûtent cher et prennent de nombreuses semaines à fabriquer."
-msgstr "Les maquettes physiques coûtent cher et prennent de nombreuses semaines à fabriquer."
+msgstr "المجسمات المادية مكلفة وتستغرق أسابيع عديدة لتصنيعها."
 
 msgid "Les piliers de notre engagement"
-msgstr "Les piliers de notre engagement"
+msgstr "ركائز التزامنا"
 
 msgid "Les plans 2D ne parlent qu'aux architectes, pas aux acheteurs finaux."
-msgstr "Les plans 2D ne parlent qu'aux architectes, pas aux acheteurs finaux."
+msgstr "المخططات ثنائية الأبعاد لا يفهمها إلا المهندسون المعماريون، وليس المشترون النهائيون."
 
 msgid "Limite de requêtes : %(msg)s"
-msgstr "Limite de requêtes : %(msg)s"
+msgstr "حد الطلبات: %(msg)s"
 
 msgid "LinkedIn"
 msgstr "لينكد إن"
@@ -893,37 +893,37 @@ msgid "Lire la suite"
 msgstr "اقرأ المزيد"
 
 msgid "Localisation VR Creation — Tanger, Maroc"
-msgstr "Localisation VR Creation — Tanger, Maroc"
+msgstr "موقع VR Creation — طنجة، المغرب"
 
 msgid "Logo"
 msgstr "شعار"
 
 msgid "Logo, charte graphique, supports print et digitaux."
-msgstr "Logo, charte graphique, supports print et digitaux."
+msgstr "الشعار، الميثاق الرسومي، المطبوعات والدعائم الرقمية."
 
 msgid "Longueur cible"
-msgstr "Longueur cible"
+msgstr "الطول المستهدف"
 
 msgid "Lu"
 msgstr "مقروء"
 
 msgid "Légal & Sécurité"
-msgstr "Légal & Sécurité"
+msgstr "قانوني وأمان"
 
 msgid "M'diq"
-msgstr "M'diq"
+msgstr "المضيق"
 
 msgid "Marketing digital"
-msgstr "Marketing digital"
+msgstr "التسويق الرقمي"
 
 msgid "Marketing digital & leads"
-msgstr "Marketing digital & leads"
+msgstr "التسويق الرقمي وتوليد العملاء المحتملين"
 
 msgid "Membre de l\\'équipe"
-msgstr "Membre de l\\'équipe"
+msgstr "عضو الفريق"
 
 msgid "Membres de l\\'équipe"
-msgstr "Membres de l\\'équipe"
+msgstr "أعضاء الفريق"
 
 msgid "Mentions légales"
 msgstr "إشعارات قانونية"
@@ -947,7 +947,7 @@ msgid "Mis en avant"
 msgstr "مميز"
 
 msgid "Mise en avant"
-msgstr "Mise en avant"
+msgstr "تسليط الضوء"
 
 msgid "Mode Cyber-VR"
 msgstr "وضع الواقع الافتراضي السيبراني"
@@ -962,22 +962,22 @@ msgid "Modélisation 3D"
 msgstr "النمذجة ثلاثية الأبعاد"
 
 msgid "Modélisation 3D & visites virtuelles à Tanger — VR Creation"
-msgstr "Modélisation 3D & visites virtuelles à Tanger — VR Creation"
+msgstr "النمذجة ثلاثية الأبعاد والجولات الافتراضية في طنجة — VR Creation"
 
 msgid "Modélisation 3D architecturale"
-msgstr "Modélisation 3D architecturale"
+msgstr "النمذجة المعمارية ثلاثية الأبعاد"
 
 msgid "Modélisation 3D et visites virtuelles immersives à Tanger"
-msgstr "Modélisation 3D et visites virtuelles immersives à Tanger"
+msgstr "النمذجة ثلاثية الأبعاد والجولات الافتراضية الغامرة في طنجة"
 
 msgid "Modélisation 3D, photographie, visites virtuelles, branding et communication visuelle — nous transformons vos projets en expériences visuelles qui séduisent et convertissent."
-msgstr "Modélisation 3D, photographie, visites virtuelles, branding et communication visuelle — nous transformons vos projets en expériences visuelles qui séduisent et convertissent."
+msgstr "النمذجة ثلاثية الأبعاد، التصوير الفوتوغرافي، الجولات الافتراضية، العلامة التجارية والتواصل البصري — نحوّل مشاريعكم إلى تجارب بصرية تجذب وتحقق النتائج."
 
 msgid "Mots-clés"
-msgstr "Mots-clés"
+msgstr "الكلمات المفتاحية"
 
 msgid "Mots-clés séparés par des virgules pour cette page (ex: modélisation 3D Tanger, visite virtuelle Maroc)"
-msgstr "Mots-clés séparés par des virgules pour cette page (ex: modélisation 3D Tanger, visite virtuelle Maroc)"
+msgstr "كلمات مفتاحية مفصولة بفواصل لهذه الصفحة (مثال: نمذجة ثلاثية الأبعاد طنجة، جولة افتراضية المغرب)"
 
 msgid "Métadonnées"
 msgstr "البيانات الوصفية"
@@ -995,10 +995,10 @@ msgid "Nom complet"
 msgstr "الاسم الكامل"
 
 msgid "Nom complet, adresse email professionnelle ou personnelle, numéro de téléphone, secteur d'activité, objet de la demande et descriptif du projet."
-msgstr "Nom complet, adresse email professionnelle ou personnelle, numéro de téléphone, secteur d'activité, objet de la demande et descriptif du projet."
+msgstr "الاسم الكامل، البريد الإلكتروني المهني أو الشخصي، رقم الهاتف، قطاع النشاط، موضوع الطلب ووصف المشروع."
 
 msgid "Nom de l\\'auteur"
-msgstr "Nom de l\\'auteur"
+msgstr "اسم الكاتب"
 
 msgid "Nom du site"
 msgstr "اسم الموقع"
@@ -1007,31 +1007,31 @@ msgid "Nos Coordonnées"
 msgstr "معلومات الاتصال"
 
 msgid "Nos Forces"
-msgstr "Nos Forces"
+msgstr "نقاط قوتنا"
 
 msgid "Nos Solutions"
-msgstr "Nos Solutions"
+msgstr "حلولنا"
 
 msgid "Nos bureaux se situent à Ibn Batouta bureaux, Avenue Youssef Ibn Tachfine, Tanger 90000, Maroc. Nous recevons sur rendez-vous."
-msgstr "Nos bureaux se situent à Ibn Batouta bureaux, Avenue Youssef Ibn Tachfine, Tanger 90000, Maroc. Nous recevons sur rendez-vous."
+msgstr "تقع مكاتبنا في مكاتب ابن بطوطة، شارع يوسف بن تاشفين، طنجة 90000، المغرب. نستقبلكم بموعد مسبق."
 
 msgid "Nos campagnes intègrent des critères de ciblage stricts (revenus, intention d'achat, localisation Maroc & MRE) et des formulaires avec pré-qualification budgétaire avant transmission à votre équipe."
-msgstr "Nos campagnes intègrent des critères de ciblage stricts (revenus, intention d'achat, localisation Maroc & MRE) et des formulaires avec pré-qualification budgétaire avant transmission à votre équipe."
+msgstr "تتضمن حملاتنا معايير استهداف صارمة (الدخل، نية الشراء، الموقع في المغرب والمغاربة المقيمين بالخارج) ونماذج تأهيل مسبق للميزانية قبل إحالتها إلى فريقكم."
 
 msgid "Nos offres exclusives pour accélérer vos projets"
-msgstr "Nos offres exclusives pour accélérer vos projets"
+msgstr "عروضنا الحصرية لتسريع مشاريعكم"
 
 msgid "Nos packs & offres exclusives"
-msgstr "Nos packs & offres exclusives"
+msgstr "باقاتنا وعروضنا الحصرية"
 
 msgid "Nos valeurs"
-msgstr "Nos valeurs"
+msgstr "قيمنا"
 
 msgid "Notre Différence"
-msgstr "Notre Différence"
+msgstr "ما يميّزنا"
 
 msgid "Notre Engagement"
-msgstr "Notre Engagement"
+msgstr "التزامنا"
 
 msgid "Notre Processus"
 msgstr "عمليتنا"
@@ -1040,64 +1040,64 @@ msgid "Notre Solution"
 msgstr "حلنا"
 
 msgid "Notre approche"
-msgstr "Notre approche"
+msgstr "منهجنا"
 
 msgid "Notre expertise"
-msgstr "Notre expertise"
+msgstr "خبرتنا"
 
 msgid "Notre mission : allier créativité, technologie et rigueur pour transformer chaque projet en une expérience visuelle mémorable. De la modélisation 3D à la photographie professionnelle, du branding à l'animation, nous offrons une palette complète de services adaptés aux besoins du marché local et régional."
-msgstr "Notre mission : allier créativité, technologie et rigueur pour transformer chaque projet en une expérience visuelle mémorable. De la modélisation 3D à la photographie professionnelle, du branding à l'animation, nous offrons une palette complète de services adaptés aux besoins du marché local et régional."
+msgstr "مهمتنا: الجمع بين الإبداع والتكنولوجيا والدقة لتحويل كل مشروع إلى تجربة بصرية لا تُنسى. من النمذجة ثلاثية الأبعاد إلى التصوير الفوتوغرافي الاحترافي، ومن العلامة التجارية إلى الرسوم المتحركة، نقدم مجموعة كاملة من الخدمات الملائمة لاحتياجات السوق المحلي والإقليمي."
 
 msgid "Notre méthode"
-msgstr "Notre méthode"
+msgstr "منهجيتنا"
 
 msgid "Notre méthode de travail"
-msgstr "Notre méthode de travail"
+msgstr "منهجية عملنا"
 
 msgid "Notre équipe technique a été informée et résout le problème. Veuillez recharger la page dans un instant ou revenir à l'accueil."
-msgstr "Notre équipe technique a été informée et résout le problème. Veuillez recharger la page dans un instant ou revenir à l'accueil."
+msgstr "تم إبلاغ فريقنا التقني وهو يعمل على حل المشكلة. يرجى إعادة تحميل الصفحة بعد لحظات أو العودة إلى الصفحة الرئيسية."
 
 msgid "Nous Contacter"
 msgstr "اتصل بنا"
 
 msgid "Nous accompagnons les entreprises à chaque étape de leur projet : visualisation, valorisation, expérience immersive et communication digitale. L'objectif : transformer votre vision en un véritable outil de croissance."
-msgstr "Nous accompagnons les entreprises à chaque étape de leur projet : visualisation, valorisation, expérience immersive et communication digitale. L'objectif : transformer votre vision en un véritable outil de croissance."
+msgstr "نرافق الشركات في كل مرحلة من مشروعها: التصور، التثمين، التجربة الغامرة والتواصل الرقمي. الهدف: تحويل رؤيتكم إلى أداة نمو حقيقية."
 
 msgid "Nous analysons votre projet et mettons en place la stratégie la plus efficace. Vous ne payez rien — nous ne gagnons que si vous vendez."
-msgstr "Nous analysons votre projet et mettons en place la stratégie la plus efficace. Vous ne payez rien — nous ne gagnons que si vous vendez."
+msgstr "نحلل مشروعكم وننفذ الاستراتيجية الأكثر فعالية. لا تدفعون شيئًا — نربح فقط عندما تبيعون."
 
 msgid "Nous collectons uniquement les données strictement nécessaires à l'exercice de notre activité professionnelle et au traitement de vos demandes :"
-msgstr "Nous collectons uniquement les données strictement nécessaires à l'exercice de notre activité professionnelle et au traitement de vos demandes :"
+msgstr "نجمع فقط البيانات الضرورية حصرًا لممارسة نشاطنا المهني ومعالجة طلباتكم:"
 
 msgid "Nous construisons son identité et son univers de marque."
-msgstr "Nous construisons son identité et son univers de marque."
+msgstr "نبني هويته وعالم علامته التجارية."
 
 msgid "Nous contacter"
 msgstr "اتصل بنا"
 
 msgid "Nous couvrons Tanger et le Nord du Maroc"
-msgstr "Nous couvrons Tanger et le Nord du Maroc"
+msgstr "نغطي طنجة وشمال المغرب"
 
 msgid "Nous créons des contenus 3D et immersifs pour le présenter."
-msgstr "Nous créons des contenus 3D et immersifs pour le présenter."
+msgstr "نصنع محتويات ثلاثية الأبعاد وغامرة لتقديمه."
 
 msgid "Nous créons des expériences visuelles adaptées à chaque secteur pour valoriser vos projets et accélérer vos ventes."
-msgstr "Nous créons des expériences visuelles adaptées à chaque secteur pour valoriser vos projets et accélérer vos ventes."
+msgstr "نبتكر تجارب بصرية ملائمة لكل قطاع لتثمين مشاريعكم وتسريع مبيعاتكم."
 
 msgid "Nous créons son écosystème digital."
-msgstr "Nous créons son écosystème digital."
+msgstr "نصنع منظومته الرقمية."
 
 msgid "Nous donnons forme au projet avant sa réalisation."
-msgstr "Nous donnons forme au projet avant sa réalisation."
+msgstr "نجسّد المشروع قبل تنفيذه."
 
 msgid "Nous signaler un problème"
-msgstr "Nous signaler un problème"
+msgstr "الإبلاغ عن مشكلة"
 
 msgid "Nous sélectionnons le meilleur pour vous"
-msgstr "Nous sélectionnons le meilleur pour vous"
+msgstr "نختار الأفضل لكم"
 
 msgid "Nous transformons l'intérêt en prospects commerciaux."
-msgstr "Nous transformons l'intérêt en prospects commerciaux."
+msgstr "نحوّل الاهتمام إلى عملاء محتملين."
 
 msgid "Nous trouver"
 msgstr "موقعنا"
@@ -1106,64 +1106,64 @@ msgid "Numéro WhatsApp au format international (ex: +33612345678)"
 msgstr "رقم واتساب بالصيغة الدولية (مثال: +33612345678)"
 
 msgid "Offre Exclusive"
-msgstr "Offre Exclusive"
+msgstr "عرض حصري"
 
 msgid "Offre sur commission — Zéro investissement"
-msgstr "Offre sur commission — Zéro investissement"
+msgstr "عرض بالعمولة — بدون استثمار"
 
 msgid "Offres Promotionnelles"
-msgstr "Offres Promotionnelles"
+msgstr "عروض ترويجية"
 
 msgid "Offres Stratégiques"
-msgstr "Offres Stratégiques"
+msgstr "عروض استراتيجية"
 
 msgid "Optimisation SEO"
-msgstr "Optimisation SEO"
+msgstr "تحسين محركات البحث (SEO)"
 
 msgid "Ordre"
 msgstr "الترتيب"
 
 msgid "Oui, nos devis incluent toujours un cycle de retouches pour affiner les textures, éclairages, mobilier et végétations selon vos exigences."
-msgstr "Oui, nos devis incluent toujours un cycle de retouches pour affiner les textures, éclairages, mobilier et végétations selon vos exigences."
+msgstr "نعم، تتضمن عروض أسعارنا دائمًا دورة تعديلات لتحسين الخامات والإضاءة والأثاث والنباتات وفق متطلباتكم."
 
 msgid "Oui, nous couvrons l'ensemble du Nord du Maroc : Tétouan, Asilah, Larache, Chefchaouen, Al Hoceima et les villes environnantes. Pour la modélisation 3D, le branding et l'animation, nous travaillons également à distance pour tout le Maroc."
-msgstr "Oui, nous couvrons l'ensemble du Nord du Maroc : Tétouan, Asilah, Larache, Chefchaouen, Al Hoceima et les villes environnantes. Pour la modélisation 3D, le branding et l'animation, nous travaillons également à distance pour tout le Maroc."
+msgstr "نعم، نغطي جميع أنحاء شمال المغرب: تطوان، أصيلة، العرائش، شفشاون، الحسيمة والمدن المجاورة. بالنسبة للنمذجة ثلاثية الأبعاد والعلامة التجارية والرسوم المتحركة، نعمل أيضًا عن بُعد في جميع أنحاء المغرب."
 
 msgid "Oui, nous intervenons dans tout le Nord du Maroc (Tétouan, Chefchaouen, Asilah, Larache, Al Hoceima) et à distance pour les projets de modélisation 3D."
-msgstr "Oui, nous intervenons dans tout le Nord du Maroc (Tétouan, Chefchaouen, Asilah, Larache, Al Hoceima) et à distance pour les projets de modélisation 3D."
+msgstr "نعم، نتدخل في جميع أنحاء شمال المغرب (تطوان، شفشاون، أصيلة، العرائش، الحسيمة) وعن بُعد لمشاريع النمذجة ثلاثية الأبعاد."
 
 msgid "Oui, nous travaillons aussi bien avec les entreprises (promoteurs, commerces, restaurants, agences) qu'avec les particuliers (projets de villa, événements privés)."
-msgstr "Oui, nous travaillons aussi bien avec les entreprises (promoteurs, commerces, restaurants, agences) qu'avec les particuliers (projets de villa, événements privés)."
+msgstr "نعم، نتعامل مع الشركات (المطورين العقاريين، المتاجر، المطاعم، الوكالات) وكذلك مع الأفراد (مشاريع الفلل، المناسبات الخاصة)."
 
 msgid "Oui, nous vous fournissons le code d'intégration iframe prêt à l'emploi et compatible avec tous les gestionnaires de contenu (WordPress, Django, etc.)."
-msgstr "Oui, nous vous fournissons le code d'intégration iframe prêt à l'emploi et compatible avec tous les gestionnaires de contenu (WordPress, Django, etc.)."
+msgstr "نعم، نوفر لكم كود التضمين iframe جاهزًا للاستخدام ومتوافقًا مع جميع أنظمة إدارة المحتوى (WordPress، Django، إلخ)."
 
 msgid "Oups ! Cette page est introuvable."
-msgstr "Oups ! Cette page est introuvable."
+msgstr "عذرًا! هذه الصفحة غير موجودة."
 
 msgid "Outils professionnels en 3D, photo, vidéo et design pour des résultats optimaux."
-msgstr "Outils professionnels en 3D, photo, vidéo et design pour des résultats optimaux."
+msgstr "أدوات احترافية في التصميم ثلاثي الأبعاد والتصوير والفيديو والتصميم لنتائج مثالية."
 
 msgid "Où se trouvent vos bureaux ?"
-msgstr "Où se trouvent vos bureaux ?"
+msgstr "أين تقع مكاتبكم؟"
 
 msgid "Pack"
-msgstr "Pack"
+msgstr "باقة"
 
 msgid "Pack Spécial Promoteurs Débutants"
-msgstr "Pack Spécial Promoteurs Débutants"
+msgstr "باقة خاصة للمطورين العقاريين المبتدئين"
 
 msgid "Packs & Offres"
-msgstr "Packs & Offres"
+msgstr "الباقات والعروض"
 
 msgid "Page introuvable (404) | VR Creation"
-msgstr "Page introuvable (404) | VR Creation"
+msgstr "الصفحة غير موجودة (404) | VR Creation"
 
 msgid "Pages Principales"
-msgstr "Pages Principales"
+msgstr "الصفحات الرئيسية"
 
 msgid "Paramètres du Pack"
-msgstr "Paramètres du Pack"
+msgstr "إعدادات الباقة"
 
 msgid "Paramètres du site"
 msgstr "إعدادات الموقع"
@@ -1178,10 +1178,10 @@ msgid "Permettent de vous proposer des publicités personnalisées et de partage
 msgstr "تتيح تقديم إعلانات مخصصة ومشاركة المحتوى."
 
 msgid "Personnalisable"
-msgstr "Personnalisable"
+msgstr "قابل للتخصيص"
 
 msgid "Personnalisation"
-msgstr "Personnalisation"
+msgstr "تخصيص"
 
 msgid "Personnaliser"
 msgstr "تخصيص"
@@ -1190,100 +1190,100 @@ msgid "Personnaliser mes choix"
 msgstr "تخصيص خياراتي"
 
 msgid "Personnalisez votre pack"
-msgstr "Personnalisez votre pack"
+msgstr "خصّصوا باقتكم"
 
 msgid "Persuasif & Commercial"
-msgstr "Persuasif & Commercial"
+msgstr "إقناعي وتجاري"
 
 msgid "Peut-on commander des modifications après la première version ?"
-msgstr "Peut-on commander des modifications après la première version ?"
+msgstr "هل يمكن طلب تعديلات بعد النسخة الأولى؟"
 
 msgid "Peut-on intégrer la visite sur notre site web ?"
-msgstr "Peut-on intégrer la visite sur notre site web ?"
+msgstr "هل يمكن دمج الجولة في موقعنا الإلكتروني؟"
 
 msgid "Photo"
 msgstr "صورة"
 
 msgid "Photographie & drone"
-msgstr "Photographie & drone"
+msgstr "التصوير الفوتوغرافي والطائرات المسيّرة"
 
 msgid "Photographie professionnelle"
-msgstr "Photographie professionnelle"
+msgstr "التصوير الفوتوغرافي الاحترافي"
 
 msgid "Pied de page"
 msgstr "تذييل الصفحة"
 
 msgid "Plan du site"
-msgstr "Plan du site"
+msgstr "خريطة الموقع"
 
 msgid "Plans 2D abstraits"
-msgstr "Plans 2D abstraits"
+msgstr "مخططات ثنائية الأبعاد مجردة"
 
 msgid "Point de comparaison"
-msgstr "Point de comparaison"
+msgstr "نقطة مقارنة"
 
 msgid "Point fort"
 msgstr "نقطة قوة"
 
 msgid "Points de comparaison"
-msgstr "Points de comparaison"
+msgstr "نقاط المقارنة"
 
 msgid "Points forts"
 msgstr "نقاط القوة"
 
 msgid "Politique de confidentialité"
-msgstr "Politique de confidentialité"
+msgstr "سياسة الخصوصية"
 
 msgid "Politique de confidentialité (Loi 09-08)"
-msgstr "Politique de confidentialité (Loi 09-08)"
+msgstr "سياسة الخصوصية (القانون 09-08)"
 
 msgid "Portfolio & Réalisations"
-msgstr "Portfolio & Réalisations"
+msgstr "معرض الأعمال والإنجازات"
 
 msgid "Portfolio Immersif"
-msgstr "Portfolio Immersif"
+msgstr "معرض أعمال غامر"
 
 msgid "Pour exercer ces droits, vous pouvez nous adresser une demande accompagnée d'une preuve d'identité par email à :"
-msgstr "Pour exercer ces droits, vous pouvez nous adresser une demande accompagnée d'une preuve d'identité par email à :"
+msgstr "لممارسة هذه الحقوق، يمكنكم إرسال طلب مرفق بإثبات هوية عبر البريد الإلكتروني إلى:"
 
 msgid "Pour modéliser votre projet avec précision, nous avons besoin des plans architecturaux 2D (fichiers DWG ou PDF vectoriels), des façades, coupes et idéalement du plan de masse avec les intentions de matériaux."
-msgstr "Pour modéliser votre projet avec précision, nous avons besoin des plans architecturaux 2D (fichiers DWG ou PDF vectoriels), des façades, coupes et idéalement du plan de masse avec les intentions de matériaux."
+msgstr "لنمذجة مشروعكم بدقة، نحتاج إلى المخططات المعمارية ثنائية الأبعاد (ملفات DWG أو PDF متجهية)، والواجهات، والمقاطع، ومن الأفضل مخطط الموقع مع توجهات المواد."
 
 msgid "Pour quels espaces recommandez-vous la capture 360° réelle ?"
-msgstr "Pour quels espaces recommandez-vous la capture 360° réelle ?"
+msgstr "لأي مساحات توصون بالتقاط 360° الحقيقي؟"
 
 msgid "Pourquoi Nous Choisir"
-msgstr "Pourquoi Nous Choisir"
+msgstr "لماذا تختاروننا"
 
 msgid "Pourquoi choisir notre solution"
-msgstr "Pourquoi choisir notre solution"
+msgstr "لماذا تختارون حلنا"
 
 msgid "Pourquoi nous choisir ?"
-msgstr "Pourquoi nous choisir ?"
+msgstr "لماذا تختاروننا؟"
 
 msgid "Prestation"
-msgstr "Prestation"
+msgstr "خدمة"
 
 msgid "Prestation incluse"
-msgstr "Prestation incluse"
+msgstr "خدمة مشمولة"
 
 msgid "Prestations incluses"
-msgstr "Prestations incluses"
+msgstr "الخدمات المشمولة"
 
 msgid "Problème / Contexte"
 msgstr "المشكلة / السياق"
 
 msgid "Processus"
-msgstr "Processus"
+msgstr "المراحل"
 
 msgid "Professionnel & Expert"
-msgstr "Professionnel & Expert"
+msgstr "احترافي ومتخصص"
 
 msgid "Projet"
 msgstr "مشروع"
 
 msgid "Projet Similaire en vue ?"
-msgstr "Projet Similaire en vue ?"
+msgstr "لديكم مشروع مماثل؟"
 
 msgid "Projet lié"
 msgstr "مشروع مرتبط"
@@ -1292,22 +1292,22 @@ msgid "Projets"
 msgstr "مشاريع"
 
 msgid "Projets Connexes"
-msgstr "Projets Connexes"
+msgstr "مشاريع ذات صلة"
 
 msgid "Projets Récents"
-msgstr "Projets Récents"
+msgstr "المشاريع الحديثة"
 
 msgid "Promotion"
-msgstr "Promotion"
+msgstr "عرض ترويجي"
 
 msgid "Promotions"
-msgstr "Promotions"
+msgstr "العروض الترويجية"
 
 msgid "Propriété intellectuelle"
 msgstr "الملكية الفكرية"
 
 msgid "Protection des données personnelles (Loi 09-08)"
-msgstr "Protection des données personnelles (Loi 09-08)"
+msgstr "حماية البيانات الشخصية (القانون 09-08)"
 
 msgid "Précédent"
 msgstr "السابق"
@@ -1316,64 +1316,61 @@ msgid "Préférences de cookies"
 msgstr "تفضيلات ملفات تعريف الارتباط"
 
 msgid "Présentation"
-msgstr "Présentation"
+msgstr "تقديم"
 
 msgid "Présentation du service"
-msgstr "Présentation du service"
+msgstr "تقديم الخدمة"
 
 msgid "Prêt à donner vie à votre projet ?"
-msgstr "Prêt à donner vie à votre projet ?"
+msgstr "مستعدون لإحياء مشروعكم؟"
 
 msgid "Publié"
 msgstr "منشور"
 
 msgid "Pédagogique & Informatif"
-msgstr "Pédagogique & Informatif"
+msgstr "تعليمي وإعلامي"
 
 msgid "Qu'est-ce qu'un cookie ?"
 msgstr "ما هو ملف تعريف الارتباط؟"
 
 msgid "Qualité premium, tarifs compétitifs"
-msgstr "Qualité premium, tarifs compétitifs"
+msgstr "جودة عالية وأسعار تنافسية"
 
 msgid "Quel est le délai pour lancer une première campagne ?"
-msgstr "Quel est le délai pour lancer une première campagne ?"
+msgstr "ما هي المدة اللازمة لإطلاق أول حملة؟"
 
 msgid "Quelle est la spécificité d'une visite virtuelle 3D sur plan ?"
-msgstr "Quelle est la spécificité d'une visite virtuelle 3D sur plan ?"
+msgstr "ما الذي يميّز الجولة الافتراضية ثلاثية الأبعاد على المخطط؟"
 
 msgid "Quels cookies utilisons-nous ?"
 msgstr "ما هي ملفات تعريف الارتباط التي نستخدمها؟"
 
 msgid "Quels documents sont nécessaires pour démarrer un projet 3D ?"
-msgstr "Quels documents sont nécessaires pour démarrer un projet 3D ?"
+msgstr "ما هي الوثائق اللازمة لبدء مشروع ثلاثي الأبعاد؟"
 
 msgid "Quels sont les délais de livraison des rendus 3D à Tanger ?"
-msgstr "Quels sont les délais de livraison des rendus 3D à Tanger ?"
+msgstr "ما هي مواعيد تسليم التصورات ثلاثية الأبعاد في طنجة؟"
 
 msgid "Quels sont vos délais de livraison ?"
-msgstr "Quels sont vos délais de livraison ?"
+msgstr "ما هي مواعيد التسليم لديكم؟"
 
 msgid "Questions fréquentes"
-msgstr "Questions fréquentes"
+msgstr "الأسئلة الشائعة"
 
 msgid "Questions fréquentes sur ce service"
-msgstr "Questions fréquentes sur ce service"
+msgstr "الأسئلة الشائعة حول هذه الخدمة"
 
 msgid "Qui sommes-nous ?"
-msgstr "Qui sommes-nous ?"
+msgstr "من نحن؟"
 
 msgid "Refuser"
 msgstr "رفض"
 
 msgid "Registre du Commerce (RC)"
-msgstr "Registre du Commerce (RC)"
-
-msgid "Rendu 3D photoréaliste d'une villa en construction à Tanger"
-msgstr "Rendu 3D photoréaliste d'une villa en construction à Tanger"
+msgstr "السجل التجاري (RC)"
 
 msgid "Rendus photoréalistes, maquettes interactives, perspectives architecturales."
-msgstr "Rendus photoréalistes, maquettes interactives, perspectives architecturales."
+msgstr "تصورات واقعية، مجسمات تفاعلية، منظورات معمارية."
 
 msgid "Requis pour le bon fonctionnement et la sécurité du site."
 msgstr "مطلوبة للتشغيل السليم للموقع وأمانه."
@@ -1394,16 +1391,16 @@ msgid "Retour à l'accueil"
 msgstr "العودة للرئيسية"
 
 msgid "Retrouvez l'ensemble des pages, services et ressources du site VR Creation Company à Tanger."
-msgstr "Retrouvez l'ensemble des pages, services et ressources du site VR Creation Company à Tanger."
+msgstr "تصفحوا جميع صفحات وخدمات وموارد موقع VR Creation Company في طنجة."
 
 msgid "Réalisations"
 msgstr "الأعمال"
 
 msgid "Réalisations (Portfolio)"
-msgstr "Réalisations (Portfolio)"
+msgstr "الإنجازات (معرض الأعمال)"
 
 msgid "Rédaction par IA en cours..."
-msgstr "Rédaction par IA en cours..."
+msgstr "جارٍ الكتابة بالذكاء الاصطناعي..."
 
 msgid "Réseaux sociaux"
 msgstr "شبكات التواصل الاجتماعي"
@@ -1415,13 +1412,13 @@ msgid "Résultat obtenu"
 msgstr "النتيجة المحققة"
 
 msgid "Résumé affiché dans la grille des promotions"
-msgstr "Résumé affiché dans la grille des promotions"
+msgstr "الملخص المعروض في شبكة العروض الترويجية"
 
 msgid "Résumé affiché dans les cartes (max 300 caractères)"
 msgstr "ملخص يظهر في البطاقات (حد أقصى 300 حرف)"
 
 msgid "Résumé de l\\'article (max 500 caractères)"
-msgstr "Résumé de l\\'article (max 500 caractères)"
+msgstr "ملخص المقال (حد أقصى 500 حرف)"
 
 msgid "Rôle"
 msgstr "الدور"
@@ -1439,61 +1436,61 @@ msgid "SEO — Pages statiques"
 msgstr "SEO — صفحات ثابتة"
 
 msgid "Sans VR Creation"
-msgstr "Sans VR Creation"
+msgstr "بدون VR Creation"
 
 msgid "Sans visuel fort, vos prospects hésitent, comparent et partent chez la concurrence qui a déjà de belles images."
-msgstr "Sans visuel fort, vos prospects hésitent, comparent et partent chez la concurrence qui a déjà de belles images."
+msgstr "بدون صور قوية، يتردد عملاؤكم المحتملون ويقارنون ويذهبون إلى المنافسين الذين لديهم صور جذابة بالفعل."
 
 msgid "Secteur"
 msgstr "القطاع"
 
 msgid "Secteur d\\'activité"
-msgstr "Secteur d\\'activité"
+msgstr "قطاع النشاط"
 
 msgid "Secteurs"
 msgstr "القطاعات"
 
 msgid "Section Accroche / Hero"
-msgstr "Section Accroche / Hero"
+msgstr "قسم العبارة الترويجية / البطل"
 
 msgid "Section Appel à l\\'action (CTA)"
-msgstr "Section Appel à l\\'action (CTA)"
+msgstr "قسم الدعوة للإجراء (CTA)"
 
 msgid "Section Problème"
-msgstr "Section Problème"
+msgstr "قسم المشكلة"
 
 msgid "Section Solution"
-msgstr "Section Solution"
+msgstr "قسم الحل"
 
 msgid "Service"
 msgstr "خدمة"
 
 msgid "Service Professionnel"
-msgstr "Service Professionnel"
+msgstr "خدمة احترافية"
 
 msgid "Service client"
-msgstr "Service client"
+msgstr "خدمة العملاء"
 
 msgid "Services"
 msgstr "الخدمات"
 
 msgid "Services & Solutions"
-msgstr "Services & Solutions"
+msgstr "الخدمات والحلول"
 
 msgid "Services inclus"
-msgstr "Services inclus"
+msgstr "الخدمات المشمولة"
 
 msgid "Services inclus dans ce pack. Pour les packs personnalisables, ces services sont pré-cochés."
-msgstr "Services inclus dans ce pack. Pour les packs personnalisables, ces services sont pré-cochés."
+msgstr "الخدمات المشمولة في هذه الباقة. بالنسبة للباقات القابلة للتخصيص، تكون هذه الخدمات محددة مسبقًا."
 
 msgid "Services inclus dans le pack"
-msgstr "Services inclus dans le pack"
+msgstr "الخدمات المشمولة في الباقة"
 
 msgid "Services sélectionnés"
-msgstr "Services sélectionnés"
+msgstr "الخدمات المختارة"
 
 msgid "Si coché, le client peut personnaliser les services inclus. Décocher pour les offres sur commission où VR Creation décide de la stratégie."
-msgstr "Si coché, le client peut personnaliser les services inclus. Décocher pour les offres sur commission où VR Creation décide de la stratégie."
+msgstr "إذا تم التحديد، يمكن للعميل تخصيص الخدمات المشمولة. أزيلوا التحديد لعروض العمولة حيث تقرر VR Creation الاستراتيجية."
 
 msgid "Simule un espace virtuel 3D (ambiance néon et particules cosmiques)."
 msgstr "يحاكي مساحة ثلاثية الأبعاد تفاعلية (تصميم نيون وجزيئات كونية)."
@@ -1502,13 +1499,13 @@ msgid "Simule un espace virtuel 3D en transformant le site avec un design néon 
 msgstr "يحاكي مساحة ثلاثية الأبعاد تفاعلية عن طريق تحويل الموقع بتصميم نيون وجزيئات كونية عائمة!"
 
 msgid "Site Web"
-msgstr "Site Web"
+msgstr "الموقع الإلكتروني"
 
 msgid "Site web officiel"
-msgstr "Site web officiel"
+msgstr "الموقع الإلكتروني الرسمي"
 
 msgid "Siège social"
-msgstr "Siège social"
+msgstr "المقر الاجتماعي"
 
 msgid "Slogan"
 msgstr "شعار"
@@ -1517,49 +1514,49 @@ msgid "Slug"
 msgstr "Slug"
 
 msgid "Société à Responsabilité Limitée d'Associé Unique au capital social enregistré à Tanger."
-msgstr "Société à Responsabilité Limitée d'Associé Unique au capital social enregistré à Tanger."
+msgstr "شركة ذات مسؤولية محدودة ذات الشريك الوحيد برأسمال اجتماعي مسجل في طنجة."
 
 msgid "Solution apportée"
 msgstr "الحل المقدم"
 
 msgid "Solutions 3D & Digitales"
-msgstr "Solutions 3D & Digitales"
+msgstr "حلول ثلاثية الأبعاد ورقمية"
 
 msgid "Solutions Sur Mesure"
-msgstr "Solutions Sur Mesure"
+msgstr "حلول مصمّمة خصيصًا"
 
 msgid "Solutions visuelles & technologiques pour valoriser vos projets à Tanger"
-msgstr "Solutions visuelles & technologiques pour valoriser vos projets à Tanger"
+msgstr "حلول بصرية وتكنولوجية لتثمين مشاريعكم في طنجة"
 
 msgid "Sous-titre / Explication courte"
-msgstr "Sous-titre / Explication courte"
+msgstr "العنوان الفرعي / شرح مختصر"
 
 msgid "Sous-titre hero accueil"
-msgstr "Sous-titre hero accueil"
+msgstr "العنوان الفرعي لقسم البطل في الصفحة الرئيسية"
 
 msgid "Spam detected."
 msgstr "تم اكتشاف رسائل غير مرغوب فيها."
 
 msgid "Standard (~600 à 800 mots)"
-msgstr "Standard (~600 à 800 mots)"
+msgstr "قياسي (من 600 إلى 800 كلمة تقريبًا)"
 
 msgid "Statut"
 msgstr "الحالة"
 
 msgid "Storytelling & Inspirant"
-msgstr "Storytelling & Inspirant"
+msgstr "سردي وملهم"
 
 msgid "Stratégie de contenu, lead generation, présence digitale."
-msgstr "Stratégie de contenu, lead generation, présence digitale."
+msgstr "استراتيجية المحتوى، توليد العملاء المحتملين، الحضور الرقمي."
 
 msgid "Studio de création 3D et audiovisuel VR Creation à Tanger"
-msgstr "Studio de création 3D et audiovisuel VR Creation à Tanger"
+msgstr "استوديو الإبداع ثلاثي الأبعاد والسمعي البصري VR Creation في طنجة"
 
 msgid "Succès stratégique"
-msgstr "Succès stratégique"
+msgstr "نجاح استراتيجي"
 
 msgid "Succès stratégiques"
-msgstr "Succès stratégiques"
+msgstr "نجاحات استراتيجية"
 
 msgid "Suivant"
 msgstr "التالي"
@@ -1574,55 +1571,55 @@ msgid "Sujet de votre message"
 msgstr "موضوع رسالتك"
 
 msgid "Sujet principal / Mots-clés"
-msgstr "Sujet principal / Mots-clés"
+msgstr "الموضوع الرئيسي / الكلمات المفتاحية"
 
 msgid "Sur commission"
-msgstr "Sur commission"
+msgstr "بالعمولة"
 
 msgid "Synergie unique"
-msgstr "Synergie unique"
+msgstr "تآزر فريد"
 
 msgid "Sécurité & Contrôle éditorial :"
-msgstr "Sécurité & Contrôle éditorial :"
+msgstr "الأمان والرقابة التحريرية:"
 
 msgid "Sélectionnez ou désélectionnez les services selon vos besoins. Les services inclus dans le pack sont pré-cochés."
-msgstr "Sélectionnez ou désélectionnez les services selon vos besoins. Les services inclus dans le pack sont pré-cochés."
+msgstr "حدّدوا أو ألغوا تحديد الخدمات حسب احتياجاتكم. الخدمات المشمولة في الباقة محددة مسبقًا."
 
 msgid "Sélectionné"
-msgstr "Sélectionné"
+msgstr "محدد"
 
 msgid "Tanger"
-msgstr "Tanger"
+msgstr "طنجة"
 
 msgid "Tarif"
-msgstr "Tarif"
+msgstr "السعر"
 
 msgid "Tarif / Condition de l\\'offre"
-msgstr "Tarif / Condition de l\\'offre"
+msgstr "التعريفة / شرط العرض"
 
 msgid "Taux de commission"
-msgstr "Taux de commission"
+msgstr "نسبة العمولة"
 
 msgid "Taxe Professionnelle / Patente"
-msgstr "Taxe Professionnelle / Patente"
+msgstr "الضريبة المهنية / البتانتا"
 
 msgid "Technique & Spécialisé 3D/VR"
-msgstr "Technique & Spécialisé 3D/VR"
+msgstr "تقني ومتخصص في ثلاثي الأبعاد/الواقع الافتراضي"
 
 msgid "Technologies de pointe"
-msgstr "Technologies de pointe"
+msgstr "تقنيات متطورة"
 
 msgid "Temps de lecture (min)"
 msgstr "وقت القراءة (دقيقة)"
 
 msgid "Texte CTA"
-msgstr "Texte CTA"
+msgstr "نص الدعوة إلى الإجراء"
 
 msgid "Texte Solution"
-msgstr "Texte Solution"
+msgstr "نص الحل"
 
 msgid "Texte affiché sous le titre du hero"
-msgstr "Texte affiché sous le titre du hero"
+msgstr "النص المعروض أسفل عنوان البطل"
 
 msgid "Texte alternatif"
 msgstr "نص بديل"
@@ -1631,13 +1628,13 @@ msgid "Texte copyright"
 msgstr "نص حقوق النشر"
 
 msgid "Texte du Badge"
-msgstr "Texte du Badge"
+msgstr "نص الشارة"
 
 msgid "Texte du pied de page"
 msgstr "نص التذييل"
 
 msgid "Texte introduction Problème"
-msgstr "Texte introduction Problème"
+msgstr "نص مقدمة المشكلة"
 
 msgid "TikTok"
 msgstr "تيك توك"
@@ -1646,34 +1643,34 @@ msgid "Titre"
 msgstr "عنوان"
 
 msgid "Titre CTA"
-msgstr "Titre CTA"
+msgstr "عنوان الدعوة إلى الإجراء"
 
 msgid "Titre Problème"
-msgstr "Titre Problème"
+msgstr "عنوان المشكلة"
 
 msgid "Titre SEO"
 msgstr "عنوان SEO"
 
 msgid "Titre Solution"
-msgstr "Titre Solution"
+msgstr "عنوان الحل"
 
 msgid "Titre de la prestation"
-msgstr "Titre de la prestation"
+msgstr "عنوان الخدمة"
 
 msgid "Titre de l’étape"
-msgstr "Titre de l’étape"
+msgstr "عنوان المرحلة"
 
 msgid "Titre hero accueil"
-msgstr "Titre hero accueil"
+msgstr "عنوان البطل في الصفحة الرئيسية"
 
 msgid "Titre pour les moteurs de recherche (max 70 caractères). Laisser vide pour utiliser le titre du service."
-msgstr "Titre pour les moteurs de recherche (max 70 caractères). Laisser vide pour utiliser le titre du service."
+msgstr "عنوان لمحركات البحث (70 حرفًا كحد أقصى). اتركوه فارغًا لاستخدام عنوان الخدمة."
 
 msgid "Titre principal affiché sur le hero de la page d\\'accueil"
-msgstr "Titre principal affiché sur le hero de la page d\\'accueil"
+msgstr "العنوان الرئيسي المعروض على بانر الصفحة الرئيسية"
 
 msgid "Ton de rédaction"
-msgstr "Ton de rédaction"
+msgstr "أسلوب الكتابة"
 
 msgid "Toujours actif"
 msgstr "نشط دائماً"
@@ -1685,10 +1682,10 @@ msgid "Tous droits réservés."
 msgstr "جميع الحقوق محفوظة."
 
 msgid "Tous nos services"
-msgstr "Tous nos services"
+msgstr "جميع خدماتنا"
 
 msgid "Travaillez-vous avec les particuliers ?"
-msgstr "Travaillez-vous avec les particuliers ?"
+msgstr "هل تتعاملون مع الأفراد؟"
 
 msgid "Twitter / X"
 msgstr "تويتر / X"
@@ -1700,13 +1697,13 @@ msgid "Téléphone"
 msgstr "الهاتف"
 
 msgid "Tétouan"
-msgstr "Tétouan"
+msgstr "تطوان"
 
 msgid "UN PROJET NE SE VEND PAS UNIQUEMENT AVEC DES MOTS."
-msgstr "UN PROJET NE SE VEND PAS UNIQUEMENT AVEC DES MOTS."
+msgstr "المشروع لا يُباع بالكلمات فقط."
 
 msgid "UN PROJET. UNE VISION. UN SEUL PARTENAIRE."
-msgstr "UN PROJET. UNE VISION. UN SEUL PARTENAIRE."
+msgstr "مشروع واحد. رؤية واحدة. شريك واحد."
 
 msgid "URL Google Maps (embed)"
 msgstr "رابط خرائط جوجل (مضمن)"
@@ -1721,43 +1718,46 @@ msgid "URL iframe de la visite virtuelle 360° (Pannellum, Matterport, etc.)"
 msgstr "رابط iframe للجولة الافتراضية 360°"
 
 msgid "URL ou ancre (ex: #services, /contact/)"
-msgstr "URL ou ancre (ex: #services, /contact/)"
+msgstr "رابط أو مرساة (مثال: #services, /contact/)"
 
 msgid "URL ou ancre (ex: /contact/)"
-msgstr "URL ou ancre (ex: /contact/)"
+msgstr "رابط أو مرساة (مثال: /contact/)"
 
 msgid "URL visite virtuelle"
 msgstr "رابط الجولة الافتراضية"
 
 msgid "Un accompagnement structuré en 5 étapes pour transformer votre projet en succès."
-msgstr "Un accompagnement structuré en 5 étapes pour transformer votre projet en succès."
+msgstr "مرافقة منظمة في 5 مراحل لتحويل مشروعكم إلى نجاح."
 
 msgid "Un cookie est un petit fichier texte déposé sur votre terminal (ordinateur, tablette ou smartphone) lors de la visite d'un site internet. Il permet de conserver des données utilisateur afin de faciliter la navigation et de permettre certaines fonctionnalités."
 msgstr "ملف تعريف الارتباط (الكوكيز) هو ملف نصي صغير يتم حفظه على جهازك (كمبيوتر، جهاز لوحي أو هاتف ذكي) عند زيارة موقع ويب. وهو يسمح بحفظ بيانات المستخدم لتسهيل التصفح وتفعيل ميزات معينة."
 
 msgid "Un interlocuteur dédié du premier rendez-vous à la livraison finale."
-msgstr "Un interlocuteur dédié du premier rendez-vous à la livraison finale."
+msgstr "مُحاور مخصص من أول اجتماع حتى التسليم النهائي."
 
 msgid "Un processus éprouvé pour garantir des résultats exceptionnels à chaque projet, du premier échange à la livraison finale."
-msgstr "Un processus éprouvé pour garantir des résultats exceptionnels à chaque projet, du premier échange à la livraison finale."
+msgstr "عملية مجرّبة لضمان نتائج استثنائية في كل مشروع، من أول تواصل حتى التسليم النهائي."
 
 msgid "Une erreur inattendue est survenue : %(msg)s"
-msgstr "Une erreur inattendue est survenue : %(msg)s"
+msgstr "حدث خطأ غير متوقع: %(msg)s"
 
 msgid "Une erreur inattendue s'est produite."
-msgstr "Une erreur inattendue s'est produite."
+msgstr "حدث خطأ غير متوقع."
 
 msgid "VOUS AVEZ UN PROJET EN PRÉPARATION ?"
-msgstr "VOUS AVEZ UN PROJET EN PRÉPARATION ?"
+msgstr "هل لديكم مشروع قيد التحضير؟"
 
 msgid "VR CREATION COMPANY"
 msgstr "VR CREATION COMPANY"
 
 msgid "VR Creation Company — Production visuelle haut de gamme à Tanger"
-msgstr "VR Creation Company — Production visuelle haut de gamme à Tanger"
+msgstr "VR Creation Company — إنتاج بصري راقٍ في طنجة"
 
 msgid "VR Creation met en œuvre toutes les mesures techniques et organisationnelles appropriées (chiffrement SSL/TLS HTTPS, restriction d'accès aux serveurs, pare-feu applicatif) afin de garantir la sécurité et la confidentialité de vos données personnelles et d'empêcher leur altération, perte ou divulgation non autorisée."
-msgstr "VR Creation met en œuvre toutes les mesures techniques et organisationnelles appropriées (chiffrement SSL/TLS HTTPS, restriction d'accès aux serveurs, pare-feu applicatif) afin de garantir la sécurité et la confidentialité de vos données personnelles et d'empêcher leur altération, perte ou divulgation non autorisée."
+msgstr "تطبّق VR Creation جميع التدابير التقنية والتنظيمية المناسبة (تشفير SSL/TLS HTTPS، تقييد الوصول إلى الخوادم، جدار حماية تطبيقي) لضمان أمان وسرية بياناتكم الشخصية ومنع تغييرها أو فقدانها أو إفشائها بشكل غير مصرح به."
+
+msgid "VR Creation — Modélisation 3D et visites virtuelles à Tanger"
+msgstr "VR Creation — النمذجة ثلاثية الأبعاد والجولات الافتراضية في طنجة"
 
 msgid "Valeur"
 msgstr "قيمة"
@@ -1766,46 +1766,46 @@ msgid "Valeurs"
 msgstr "القيم"
 
 msgid "Vedette"
-msgstr "Vedette"
+msgstr "مميز"
 
 msgid "Vente anticipée"
-msgstr "Vente anticipée"
+msgstr "البيع المسبق"
 
 msgid "Veuillez corriger les erreurs ci-dessous."
-msgstr "Veuillez corriger les erreurs ci-dessous."
+msgstr "يرجى تصحيح الأخطاء أدناه."
 
 msgid "Vidéo / 3D hero (toutes les pages)"
-msgstr "Vidéo / 3D hero (toutes les pages)"
+msgstr "فيديو / ثلاثي الأبعاد للبطل (جميع الصفحات)"
 
 msgid "Vidéo MP4 expliquant le pack (max 50 Mo). Affichée sur la page du pack si présente."
-msgstr "Vidéo MP4 expliquant le pack (max 50 Mo). Affichée sur la page du pack si présente."
+msgstr "فيديو MP4 يشرح الباقة (50 ميغابايت كحد أقصى). يُعرض على صفحة الباقة إن وُجد."
 
 msgid "Vidéo de fond (MP4, WebM) ou fichier 3D affichée derrière les titres de toutes les pages. Recommandé : MP4, max 15 Mo, 1920x1080."
-msgstr "Vidéo de fond (MP4, WebM) ou fichier 3D affichée derrière les titres de toutes les pages. Recommandé : MP4, max 15 Mo, 1920x1080."
+msgstr "فيديو خلفية (MP4، WebM) أو ملف ثلاثي الأبعاد يُعرض خلف عناوين جميع الصفحات. موصى به: MP4، 15 ميغابايت كحد أقصى، 1920x1080."
 
 msgid "Vidéo explicative du pack"
-msgstr "Vidéo explicative du pack"
+msgstr "فيديو توضيحي للباقة"
 
 msgid "Vidéos 3D, survols architecturaux, teasers percutants."
-msgstr "Vidéos 3D, survols architecturaux, teasers percutants."
+msgstr "فيديوهات ثلاثية الأبعاد، تحليقات معمارية، إعلانات تشويقية مؤثرة."
 
 msgid "Visite Virtuelle Immersive 360°"
-msgstr "Visite Virtuelle Immersive 360°"
+msgstr "جولة افتراضية غامرة 360°"
 
 msgid "Visite virtuelle"
 msgstr "جولة افتراضية"
 
 msgid "Visites 360° et réalité virtuelle"
-msgstr "Visites 360° et réalité virtuelle"
+msgstr "جولات 360° والواقع الافتراضي"
 
 msgid "Visites 3D"
-msgstr "Visites 3D"
+msgstr "جولات ثلاثية الأبعاد"
 
 msgid "Visites virtuelles 360°"
-msgstr "Visites virtuelles 360°"
+msgstr "جولات افتراضية 360°"
 
 msgid "Visualiser"
-msgstr "Visualiser"
+msgstr "تصوّر"
 
 msgid "Voir le projet"
 msgstr "عرض المشروع"
@@ -1814,19 +1814,19 @@ msgid "Voir le projet détaillé"
 msgstr "عرض المشروع بالتفصيل"
 
 msgid "Voir les détails de l'offre"
-msgstr "Voir les détails de l'offre"
+msgstr "عرض تفاصيل العرض"
 
 msgid "Voir les réalisations"
-msgstr "Voir les réalisations"
+msgstr "عرض الإنجازات"
 
 msgid "Voir toutes les promotions et packs"
-msgstr "Voir toutes les promotions et packs"
+msgstr "عرض جميع العروض الترويجية والباقات"
 
 msgid "Vos données sont traitées pour les finalités suivantes :"
-msgstr "Vos données sont traitées pour les finalités suivantes :"
+msgstr "تتم معالجة بياناتكم للأغراض التالية:"
 
 msgid "Votre navigateur ne supporte pas la lecture vidéo."
-msgstr "Votre navigateur ne supporte pas la lecture vidéo."
+msgstr "متصفحكم لا يدعم تشغيل الفيديو."
 
 msgid "Votre nom complet"
 msgstr "اسمك الكامل"
@@ -1835,25 +1835,25 @@ msgid "Votre numéro de téléphone"
 msgstr "رقم هاتفك"
 
 msgid "Votre sélection"
-msgstr "Votre sélection"
+msgstr "اختياركم"
 
 msgid "Vous avez envoyé trop de messages. Veuillez réessayer dans quelques minutes."
 msgstr "لقد أرسلت رسائل كثيرة. يرجى المحاولة بعد بضع دقائق."
 
 msgid "Vous avez un projet immobilier en préparation ? Vendez sur plan avant de poser la première pierre grâce à notre pack visuel 3D et visite virtuelle tout-en-un — conçu sans budget d'agence."
-msgstr "Vous avez un projet immobilier en préparation ? Vendez sur plan avant de poser la première pierre grâce à notre pack visuel 3D et visite virtuelle tout-en-un — conçu sans budget d'agence."
+msgstr "هل لديكم مشروع عقاري قيد التحضير؟ بيعوا على المخطط قبل وضع الحجر الأول بفضل باقتنا المتكاملة للتصور ثلاثي الأبعاد والجولة الافتراضية — مصمّمة بدون ميزانية وكالة."
 
 msgid "Vous ne payez que si vous vendez"
-msgstr "Vous ne payez que si vous vendez"
+msgstr "لا تدفعون إلا عند البيع"
 
 msgid "Vous pourrez le relire, ajuster le texte, ajouter une image et le publier manuellement."
-msgstr "Vous pourrez le relire, ajuster le texte, ajouter une image et le publier manuellement."
+msgstr "يمكنكم مراجعته وتعديل النص وإضافة صورة ونشره يدويًا."
 
 msgid "Vous pouvez à tout moment modifier vos préférences de cookies, accepter ou refuser le chargement des scripts analytiques ou marketing."
 msgstr "يمكنك تعديل تفضيلات ملفات تعريف الارتباط الخاصة بك في أي وقت، وقبول أو رفض تحميل نصوص التحليل أو التسويق."
 
 msgid "Vous souhaitez intégrer une visite virtuelle à votre programme immobilier ?"
-msgstr "Vous souhaitez intégrer une visite virtuelle à votre programme immobilier ?"
+msgstr "هل ترغبون في دمج جولة افتراضية في برنامجكم العقاري؟"
 
 msgid "WhatsApp"
 msgstr "واتساب"
@@ -1862,10 +1862,10 @@ msgid "YouTube"
 msgstr "يوتيوب"
 
 msgid "Zone d'intervention"
-msgstr "Zone d'intervention"
+msgstr "منطقة التدخل"
 
 msgid "Zone d'intervention : Tanger, Tétouan, Asilah, Chefchaouen — Nord du Maroc"
-msgstr "Zone d'intervention : Tanger, Tétouan, Asilah, Chefchaouen — Nord du Maroc"
+msgstr "منطقة التدخل: طنجة، تطوان، أصيلة، شفشاون — شمال المغرب"
 
 msgid "a-propos/"
 msgstr "a-propos/"
@@ -1886,7 +1886,7 @@ msgid "cookies/"
 msgstr "cookies/"
 
 msgid "est une agence de production visuelle basée à Tanger, au cœur du Nord du Maroc. Nous accompagnons les entreprises, promoteurs, commerces et institutions dans la création de contenus visuels qui valorisent leur image et accélèrent leur croissance."
-msgstr "est une agence de production visuelle basée à Tanger, au cœur du Nord du Maroc. Nous accompagnons les entreprises, promoteurs, commerces et institutions dans la création de contenus visuels qui valorisent leur image et accélèrent leur croissance."
+msgstr "هي وكالة إنتاج بصري مقرها في طنجة، في قلب شمال المغرب. نرافق الشركات والمطورين العقاريين والمتاجر والمؤسسات في إنشاء محتويات بصرية تعزز صورتها وتسرّع نموها."
 
 msgid "etudes-de-cas/"
 msgstr "etudes-de-cas/"
@@ -1895,7 +1895,7 @@ msgid "mentions-legales/"
 msgstr "mentions-legales/"
 
 msgid "non publié"
-msgstr "non publié"
+msgstr "غير منشور"
 
 msgid "plan-du-site/"
 msgstr "plan-du-site/"
@@ -1907,7 +1907,7 @@ msgid "realisations/"
 msgstr "realisations/"
 
 msgid "service(s) sélectionné(s)"
-msgstr "service(s) sélectionné(s)"
+msgstr "خدمة (خدمات) مختارة"
 
 msgid "services/"
 msgstr "services/"
@@ -1922,7 +1922,7 @@ msgid "À propos"
 msgstr "من نحن"
 
 msgid "À propos de l'agence"
-msgstr "À propos de l'agence"
+msgstr "حول الوكالة"
 
 msgid "À propos du projet"
 msgstr "عن المشروع"
@@ -1931,16 +1931,16 @@ msgid "Éditeur du site"
 msgstr "محرر الموقع"
 
 msgid "Équipe locale et réactive"
-msgstr "Équipe locale et réactive"
+msgstr "فريق محلي وسريع الاستجابة"
 
 msgid "Étape de l’offre"
-msgstr "Étape de l’offre"
+msgstr "مرحلة العرض"
 
 msgid "Étape du processus"
 msgstr "خطوة العملية"
 
 msgid "Étapes de l’offre"
-msgstr "Étapes de l’offre"
+msgstr "مراحل العرض"
 
 msgid "Étapes du processus"
 msgstr "خطوات العملية"
@@ -1952,7 +1952,7 @@ msgid "Études de cas"
 msgstr "دراسات الحالة"
 
 msgid "Études de cas & ROI"
-msgstr "Études de cas & ROI"
+msgstr "دراسات حالة والعائد على الاستثمار"
 
 msgid "Événementiel"
 msgstr "فعاليات"
@@ -1961,7 +1961,7 @@ msgid "العربية"
 msgstr "العربية"
 
 msgid "— Aucune catégorie (Général) —"
-msgstr "— Aucune catégorie (Général) —"
+msgstr "— بدون تصنيف (عام) —"
 
 msgid "✨ L'article IA <strong>« %(title)s »</strong> a été généré avec succès en mode <strong>Brouillon</strong>. Vous pouvez maintenant le relire et l'éditer."
-msgstr "✨ L'article IA <strong>« %(title)s »</strong> a été généré avec succès en mode <strong>Brouillon</strong>. Vous pouvez maintenant le relire et l'éditer."
+msgstr "✨ تم توليد مقال الذكاء الاصطناعي <strong>« %(title)s »</strong> بنجاح في وضع <strong>المسودة</strong>. يمكنكم الآن مراجعته وتعديله."

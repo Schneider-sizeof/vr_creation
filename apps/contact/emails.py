@@ -52,7 +52,7 @@ def _base_email_wrapper(content_html, is_rtl=False):
         <tr>
             <td style="padding: 20px 28px; background-color: {BG_LIGHT}; border-top: 1px solid {BORDER_COLOR}; text-align: center; font-size: 12px; color: {TEXT_MUTED};">
                 <div style="font-weight: 700; color: {TEXT_DARK}; margin-bottom: 4px; letter-spacing: 0.5px;">VR CREATION COMPANY</div>
-                <div style="margin-bottom: 8px;">Ibn Batouta bureaux, Av. Youssef Ibn Tachfine, Tangier 90000, Maroc</div>
+                <div style="margin-bottom: 8px;">Ibn Batouta bureaux, Av. Youssef Ibn Tachfine, Tanger 90000, Maroc</div>
                 <div>
                     <a href="https://vrcreationcompany.com" style="color: {PRIMARY}; text-decoration: none; font-weight: 600;">vrcreationcompany.com</a>
                     &nbsp;&bull;&nbsp;
@@ -253,7 +253,7 @@ def build_user_confirmation(submission, lang=None):
             f"Thank you for reaching out to us!\n"
             f"============================================================\n\n"
             f"Hello {submission.name},\n\n"
-            f"Thank you for contacting VR CREATION in Tangier.\n"
+            f"Thank you for contacting VR CREATION in Tanger.\n"
             f"We have successfully received your inquiry regarding \"{submission.subject}\".\n\n"
             f"Our team is currently reviewing your project details. A dedicated specialist will reach back to you shortly (typically within 24 business hours).\n\n"
             f"------------------------------------------------------------\n"

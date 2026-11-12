@@ -190,7 +190,7 @@ def get_translated_url(context, lang_code):
 
 @register.simple_tag(takes_context=True)
 def jsonld_organization(context):
-    """JSON-LD Organization schema with Tangier/Morocco locality."""
+    """JSON-LD Organization schema with Tanger/Morocco locality."""
     site_settings = context.get('site_settings')
     base_url = getattr(settings, 'SITE_URL', 'https://vrcreationcompany.com')
 
@@ -221,7 +221,7 @@ def jsonld_organization(context):
         data["address"] = {
             "@type": "PostalAddress",
             "streetAddress": site_settings.address,
-            "addressLocality": "Tangier",
+            "addressLocality": "Tanger",
             "addressRegion": "Tanger-Tétouan-Al Hoceïma",
             "postalCode": "90000",
             "addressCountry": "MA",
@@ -229,7 +229,7 @@ def jsonld_organization(context):
 
     data["areaServed"] = {
         "@type": "City",
-        "name": "Tangier",
+        "name": "Tanger",
         "containedInPlace": {
             "@type": "Country",
             "name": "Morocco",
@@ -291,8 +291,8 @@ def jsonld_service(context):
             "url": base_url,
         },
         "areaServed": [
-            {"@type": "City", "name": "Tangier"},
-            {"@type": "City", "name": "Tetouan"},
+            {"@type": "City", "name": "Tanger"},
+            {"@type": "City", "name": "Tétouan"},
             {"@type": "AdministrativeArea", "name": "Northern Morocco"}
         ]
     }

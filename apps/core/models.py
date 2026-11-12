@@ -47,7 +47,7 @@ class SiteSettings(SingletonModel):
         _('Téléphone'), max_length=30, blank=True, default='+212 625 07 1498'
     )
     address = models.TextField(
-        _('Adresse'), blank=True, default='Ibn Batouta bureaux, Av. Youssef Ibn Tachfine, Tangier 90000'
+        _('Adresse'), blank=True, default='Ibn Batouta bureaux, Av. Youssef Ibn Tachfine, Tanger 90000, Maroc'
     )
     google_analytics_id = models.CharField(
         _('Google Analytics ID'), max_length=30, blank=True,
