@@ -65,6 +65,7 @@ def casestudy_list(request):
 
     return render(request, 'portfolio/casestudy_list.html', {
         'case_studies': case_studies,
+        'casestudies': case_studies,  # backward compatibility with template
         'page_seo': page_seo,
         'page_identifier': 'case_studies',
     })

@@ -9,7 +9,7 @@
 <section class="section bg-white">
     <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {% for case in casestudies %}
+            {% for case in case_studies|default:casestudies %}
             <div class="card p-0 overflow-hidden border-0 border-l-4 border-primary group">
                 <div class="grid md:grid-cols-2 h-full">
                     <div class="relative h-64 md:h-auto">
