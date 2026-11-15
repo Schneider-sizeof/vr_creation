@@ -1871,7 +1871,7 @@ msgid "Siège Central & Hub Régional"
 msgstr "المقر الرئيسي والمركز الإقليمي"
 
 msgid "Siège central VR Creation"
-msgstr "VR Creation Central HQ"
+msgstr "المقر المركزي — VR Creation"
 
 msgid "Siège social"
 msgstr "المقر الاجتماعي"
@@ -2394,9 +2394,6 @@ msgstr "visites-virtuelles/"
 
 msgid "votre@email.com"
 msgstr "بريدك@مثال.com"
-
-msgid "zones-intervention/"
-msgstr "مناطق-الخدمة/"
 
 msgid "À propos"
 msgstr "من نحن"

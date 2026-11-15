@@ -144,7 +144,7 @@ ADDITIONAL_EN = {
     "Zones d'intervention (Nord du Maroc)": "Service Areas (Northern Morocco)",
     "Zones d'intervention (Villes)": "Service Areas (Cities)",
     "de lecture": "min read",
-    "zones-intervention/": "service-areas/",
+    "zones-intervention/": "zones-intervention/",
     "Échanger sur WhatsApp": "Chat on WhatsApp",
     "Étude de votre cahier des charges à distance, validation des conditions d'ensoleillement et planification de la mission.": "Remote project scope review, sunlight/weather check, and mission scheduling.",
 }
@@ -255,7 +255,7 @@ ADDITIONAL_AR = {
     "Services mobilisés": "الخدمات المنفذة",
     "Site web (optionnel)": "الموقع الإلكتروني (اختياري)",
     "Siège Central & Hub Régional": "المقر الرئيسي والمركز الإقليمي",
-    "Siège central VR Creation": "VR Creation Central HQ",
+    "Siège central VR Creation": "المقر المركزي — VR Creation",
     "Slug URL": "المعرف اللطيف (Slug)",
     "Sous-titre Hero": "العنوان الفرعي للترويسة",
     "Studio 3D, Visites Virtuelles & Drone dans tout le Nord du Maroc": "استوديو 3D، جولات افتراضية ودرون في سائر شمال المغرب",
@@ -288,7 +288,7 @@ ADDITIONAL_AR = {
     "Zones d'intervention (Nord du Maroc)": "مناطق الخدمة (شمال المغرب)",
     "Zones d'intervention (Villes)": "مناطق الخدمة (المدن)",
     "de lecture": "دقائق قراءة",
-    "zones-intervention/": "مناطق-الخدمة/",
+    "zones-intervention/": "zones-intervention/",
     "Échanger sur WhatsApp": "تواصل عبر واتساب",
     "Étude de votre cahier des charges à distance, validation des conditions d'ensoleillement et planification de la mission.": "دراسة دقيقة للمتطلبات عن بعد، التحقق من الإضاءة الشمسية وبرمجة موعد التصوير.",
 }

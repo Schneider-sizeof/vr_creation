@@ -2395,9 +2395,6 @@ msgstr "visites-virtuelles/"
 msgid "votre@email.com"
 msgstr "your@email.com"
 
-msgid "zones-intervention/"
-msgstr "service-areas/"
-
 msgid "À propos"
 msgstr "About"
 
