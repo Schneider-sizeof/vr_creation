@@ -1,0 +1,324 @@
+{% extends "base.html" %}
+{% load static i18n seo_tags %}
+
+{% block jsonld_extra %}
+{% trans "Zones d'intervention" as hub_crumb_label %}
+{% url 'services:city_hub' as hub_url %}
+{% jsonld_breadcrumb hub_crumb_label hub_url city.name "" %}
+{% jsonld_city %}
+{% if faqs %}
+{% jsonld_faq faqs %}
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="relative bg-gradient-to-br from-slate-900 via-primary-dark to-slate-950 text-white py-16 md:py-24 overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center opacity-20 pointer-events-none" style="background-image: url('{% if city.hero_image %}{{ city.hero_image.url }}{% else %}{% static 'img/strategic/projet-immobilier.jpg' %}{% endif %}');"></div>
+    <div class="container mx-auto px-4 relative z-10">
+        <!-- Breadcrumb navigation -->
+        <nav aria-label="{% trans "Fil d'Ariane" %}" class="mb-6">
+            <ol class="flex items-center flex-wrap gap-2 text-xs text-slate-300">
+                <li><a href="{% url 'core:home' %}" class="hover:text-white transition-colors">{% trans "Accueil" %}</a></li>
+                <li><span class="text-slate-500">/</span></li>
+                <li><a href="{% url 'services:city_hub' %}" class="hover:text-white transition-colors">{% trans "Zones d'intervention" %}</a></li>
+                <li><span class="text-slate-500">/</span></li>
+                <li class="text-white font-semibold" aria-current="page">{{ city.name }}</li>
+            </ol>
+        </nav>
+
+        <div class="max-w-4xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/30 text-primary-light text-xs font-bold uppercase tracking-wider mb-4 border border-primary/40">
+                <i class="fas fa-map-marker-alt text-accent"></i> {{ city.region }}
+            </div>
+            <h1 class="text-3xl md:text-5xl font-black tracking-tight leading-tight mb-6">
+                {{ city.hero_title|default:city.name }}
+            </h1>
+            <p class="text-lg md:text-xl text-slate-300 leading-relaxed font-light mb-8 max-w-3xl">
+                {{ city.hero_description|default:city.intro_text }}
+            </p>
+
+            <div class="flex flex-wrap items-center gap-4 text-xs">
+                {% if city.is_hub %}
+                <span class="bg-white/10 backdrop-blur-md px-3.5 py-2 rounded-lg border border-white/15 flex items-center gap-2">
+                    <i class="fas fa-star text-accent"></i>
+                    <span>{% trans "Siège central VR Creation" %}</span>
+                </span>
+                {% else %}
+                <span class="bg-white/10 backdrop-blur-md px-3.5 py-2 rounded-lg border border-white/15 flex items-center gap-2">
+                    <i class="fas fa-road text-primary"></i>
+                    <span>{% trans "Distance depuis Tanger :" %} <strong>{{ city.distance_from_tanger }}</strong></span>
+                </span>
+                <span class="bg-white/10 backdrop-blur-md px-3.5 py-2 rounded-lg border border-white/15 flex items-center gap-2">
+                    <i class="fas fa-clock text-primary"></i>
+                    <span>{% trans "Temps d'accès moyen :" %} <strong>{{ city.travel_time }}</strong></span>
+                </span>
+                {% endif %}
+                <a href="#demarrer-projet" class="bg-primary hover:bg-primary-dark text-white font-bold px-5 py-2 rounded-lg transition-colors flex items-center gap-2">
+                    <span>{% trans "Demander un devis local" %}</span>
+                    <i class="fas fa-arrow-down text-[10px]"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Detailed City Intro & Local Market Context -->
+<section class="section bg-white py-16 border-b border-gray-100">
+    <div class="container mx-auto px-4 max-w-5xl">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+            <div class="lg:col-span-2">
+                <span class="pill-badge mb-3">{% trans "Présence Locale" %}</span>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-dark uppercase tracking-tight mb-6">
+                    {% blocktrans with city_name=city.name %}Expertise visuelle 3D et captation immersive à {{ city_name }}{% endblocktrans %}
+                </h2>
+                <div class="prose max-w-none text-gray-700 leading-relaxed font-light space-y-4 mb-8">
+                    <p class="text-lg text-gray-800 font-normal">
+                        {{ city.intro_text }}
+                    </p>
+                    <p>
+                        {{ city.market_description }}
+                    </p>
+                </div>
+
+                {% if landmarks_list %}
+                <div class="pt-6 border-t border-gray-100">
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-3">
+                        <i class="fas fa-compass text-primary mr-1"></i> {% trans "Secteurs & quartiers couverts fréquemment :" %}
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        {% for landmark in landmarks_list %}
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-medium rounded-full border border-slate-200">
+                            {{ landmark }}
+                        </span>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+
+            <!-- Side Card: Fast Quote & Direct Contact -->
+            <div class="bg-slate-50 border border-gray-200 rounded-2xl p-6 shadow-sm">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-bold text-dark">{% trans "Bureau d'appui Tanger" %}</h4>
+                        <p class="text-[11px] text-gray-500">{% trans "Déplacements quotidiens dans le Nord" %}</p>
+                    </div>
+                </div>
+                <div class="text-xs text-gray-600 space-y-2 mb-6">
+                    <p class="flex items-center gap-2"><i class="fas fa-check-circle text-emerald-600"></i> {% trans "Devis gratuit sous 24 heures" %}</p>
+                    <p class="flex items-center gap-2"><i class="fas fa-check-circle text-emerald-600"></i> {% trans "Télépilotes drone certifiés DCAA" %}</p>
+                    <p class="flex items-center gap-2"><i class="fas fa-check-circle text-emerald-600"></i> {% trans "Scanners 360° LiDAR & HDR" %}</p>
+                    <p class="flex items-center gap-2"><i class="fas fa-check-circle text-emerald-600"></i> {% trans "Livraison hébergée ou fichiers bruts" %}</p>
+                </div>
+                <a href="https://wa.me/212625071498?text={% filter urlencode %}{% blocktrans with city_name=city.name %}Bonjour, je souhaite un devis pour un projet à {{ city_name }}.{% endblocktrans %}{% endfilter %}" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition-colors mb-3">
+                    <i class="fab fa-whatsapp text-sm"></i>
+                    <span>{% trans "WhatsApp direct Tanger" %}</span>
+                </a>
+                <a href="{% url 'contact:contact' %}" class="w-full py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-900 text-white font-bold text-xs flex items-center justify-center gap-2 transition-colors">
+                    <i class="fas fa-envelope text-sm"></i>
+                    <span>{% trans "Formulaire de contact" %}</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tailored Services for this City -->
+<section class="section bg-slate-50 py-16">
+    <div class="container mx-auto px-4 max-w-5xl">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="pill-badge mb-3">{% trans "Prestations Disponibles" %}</span>
+            <h2 class="text-2xl md:text-3xl font-extrabold text-dark uppercase tracking-tight mb-4">
+                {% blocktrans with city_name=city.name %}Nos solutions visuelles déployées à {{ city_name }}{% endblocktrans %}
+            </h2>
+            <p class="text-gray-600 font-light text-sm">
+                {% trans "Chaque prestation est adaptée aux typologies architecturales, aux contraintes lumineuses et aux attentes du public cible local." %}
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {% for item in tailored_services_list %}
+            <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
+                    <i class="fas fa-layer-group text-sm"></i>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed font-light">
+                    {{ item }}
+                </p>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Quick link to full services list -->
+        <div class="text-center mt-8">
+            <a href="{% url 'services:list' %}" class="inline-flex items-center gap-2 text-xs font-bold text-primary hover:text-primary-dark transition-colors">
+                <span>{% trans "Consulter le catalogue complet de nos 7 services" %}</span>
+                <i class="fas fa-arrow-right text-[10px]"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Typical Local Project Scenarios -->
+{% if typical_projects_list %}
+<section class="section bg-white py-16 border-t border-gray-100">
+    <div class="container mx-auto px-4 max-w-5xl">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="pill-badge mb-3">{% trans "Cas d'usage concrets" %}</span>
+            <h2 class="text-2xl md:text-3xl font-extrabold text-dark uppercase tracking-tight mb-4">
+                {% blocktrans with city_name=city.name %}Projets types réalisés à {{ city_name }}{% endblocktrans %}
+            </h2>
+            <p class="text-gray-600 font-light text-sm">
+                {% trans "Exemples récents de missions menées pour nos partenaires architectes, promoteurs et exploitants d'espaces." %}
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {% for project in typical_projects_list %}
+            <div class="bg-slate-50 border border-gray-100 rounded-2xl p-6 flex flex-col justify-between">
+                <div>
+                    <div class="w-8 h-8 rounded-full bg-accent/20 text-accent-dark flex items-center justify-center text-xs font-bold mb-4">
+                        #0{{ forloop.counter }}
+                    </div>
+                    <p class="text-xs text-gray-700 leading-relaxed font-light">
+                        {{ project }}
+                    </p>
+                </div>
+                <div class="pt-4 mt-4 border-t border-gray-200/60 flex items-center gap-2 text-[11px] text-gray-500">
+                    <i class="fas fa-check text-emerald-600"></i>
+                    <span>{% trans "Livrables validés" %}</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Logistics & Transport from Tanger Base -->
+<section class="section bg-slate-900 text-white py-16">
+    <div class="container mx-auto px-4 max-w-4xl">
+        <div class="text-center mb-10">
+            <span class="pill-badge mb-3">{% trans "Organisation & Déplacement" %}</span>
+            <h2 class="text-2xl md:text-3xl font-bold uppercase tracking-tight mb-4">
+                {% blocktrans with city_name=city.name %}Logistique d'intervention à {{ city_name }}{% endblocktrans %}
+            </h2>
+            <p class="text-slate-300 font-light text-sm">
+                {{ city.intervention_logistics }}
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+            <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+                <i class="fas fa-shield-alt text-primary text-xl mb-2"></i>
+                <h4 class="text-xs font-bold uppercase">{% trans "Assurance & Autorisations" %}</h4>
+                <p class="text-[11px] text-slate-300 font-light mt-1">{% trans "Démarches administratives prises en charge pour les vols de drone." %}</p>
+            </div>
+            <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+                <i class="fas fa-bolt text-accent text-xl mb-2"></i>
+                <h4 class="text-xs font-bold uppercase">{% trans "Réactivité Météo" %}</h4>
+                <p class="text-[11px] text-slate-300 font-light mt-1">{% trans "Créneaux flexibles selon le vent et la couverture nuageuse locale." %}</p>
+            </div>
+            <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+                <i class="fas fa-cloud-download-alt text-primary text-xl mb-2"></i>
+                <h4 class="text-xs font-bold uppercase">{% trans "Livraison Rapide" %}</h4>
+                <p class="text-[11px] text-slate-300 font-light mt-1">{% trans "Serveurs cloud sécurisés ou intégration iframe immédiate." %}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- City Specific FAQs (Schema FAQPage) -->
+{% if faqs %}
+<section class="section bg-white py-16 border-t border-gray-100">
+    <div class="container mx-auto px-4 max-w-4xl">
+        <div class="text-center mb-12">
+            <span class="pill-badge mb-3">{% trans "Foire Aux Questions" %}</span>
+            <h2 class="text-2xl md:text-3xl font-extrabold text-dark uppercase tracking-tight mb-4">
+                {% blocktrans with city_name=city.name %}Questions fréquentes sur nos services à {{ city_name }}{% endblocktrans %}
+            </h2>
+            <p class="text-gray-600 font-light text-sm">
+                {% trans "Retrouvez les réponses aux interrogations les plus courantes concernant nos déplacements, délais et spécificités techniques." %}
+            </p>
+        </div>
+
+        <div class="space-y-4">
+            {% for faq in faqs %}
+            <details class="group bg-slate-50 border border-gray-200 rounded-2xl p-6 transition-all duration-300 open:bg-white open:shadow-md">
+                <summary class="flex justify-between items-center cursor-pointer list-none font-bold text-dark text-base group-hover:text-primary transition-colors">
+                    <span>{{ faq.question }}</span>
+                    <span class="ml-4 flex-shrink-0 w-8 h-8 rounded-full bg-slate-100 text-slate-600 group-hover:bg-primary group-hover:text-white flex items-center justify-center text-xs transition-colors group-open:rotate-180">
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+                </summary>
+                <div class="mt-4 pt-4 border-t border-gray-100 text-xs md:text-sm text-gray-600 leading-relaxed font-light">
+                    {{ faq.answer }}
+                </div>
+            </details>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Nearby Cities Cross-Linking Block -->
+{% if nearby_cities %}
+<section class="section bg-slate-50 py-16 border-t border-gray-100">
+    <div class="container mx-auto px-4 max-w-5xl">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+            <div>
+                <span class="pill-badge mb-2">{% trans "Maillage Régional" %}</span>
+                <h3 class="text-xl md:text-2xl font-extrabold text-dark uppercase tracking-tight">
+                    {% blocktrans with city_name=city.name %}Villes voisines de {{ city_name }} également couvertes{% endblocktrans %}
+                </h3>
+            </div>
+            <a href="{% url 'services:city_hub' %}" class="text-xs font-bold text-primary hover:text-primary-dark transition-colors inline-flex items-center gap-1.5">
+                <span>{% trans "Voir toutes les zones d'intervention" %}</span>
+                <i class="fas fa-arrow-right text-[10px]"></i>
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+            {% for nearby in nearby_cities %}
+            <a href="{% url 'services:city_detail' nearby.slug %}" class="p-4 bg-white rounded-xl border border-gray-200 hover:border-primary hover:shadow-md transition-all group">
+                <div class="text-xs font-bold uppercase tracking-wider text-primary mb-1">{{ nearby.region }}</div>
+                <div class="font-bold text-dark group-hover:text-primary transition-colors text-sm mb-1">{{ nearby.name }}</div>
+                <div class="text-[11px] text-gray-500 flex items-center gap-1">
+                    <i class="fas fa-route text-slate-400"></i>
+                    <span>{{ nearby.travel_time|default:nearby.distance_from_tanger }}</span>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Dedicated City CTA -->
+<section id="demarrer-projet" class="section bg-gradient-to-br from-slate-900 via-primary-dark to-slate-950 text-white py-16">
+    <div class="container mx-auto px-4 max-w-3xl text-center">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/30 text-primary-light text-xs font-bold uppercase tracking-wider mb-4 border border-primary/40">
+            <i class="fas fa-rocket text-accent"></i> {% trans "Lancement de mission" %}
+        </span>
+        <h2 class="text-2xl md:text-4xl font-black mb-4">
+            {% blocktrans with city_name=city.name %}Prêt à valoriser votre projet à {{ city_name }} ?{% endblocktrans %}
+        </h2>
+        <p class="text-slate-300 font-light text-sm md:text-base mb-8">
+            {% blocktrans with city_name=city.name %}Contactez notre équipe basée à Tanger pour organiser un repérage sur site à {{ city_name }} et obtenir une proposition technique chiffrée sous 24h.{% endblocktrans %}
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="{% url 'contact:contact' %}" class="btn-primary text-sm font-bold shadow-lg">
+                <i class="fas fa-envelope mr-2"></i>{% trans "Demander un devis en ligne" %}
+            </a>
+            <a href="https://wa.me/212625071498?text={% filter urlencode %}{% blocktrans with city_name=city.name %}Bonjour, je souhaite démarrer un projet de production visuelle à {{ city_name }}. Pouvez-vous me transmettre une offre ?{% endblocktrans %}{% endfilter %}" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-lg transition-all duration-300 flex items-center gap-2">
+                <i class="fab fa-whatsapp text-lg"></i>
+                <span>{% trans "WhatsApp direct Tanger" %}</span>
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

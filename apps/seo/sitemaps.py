@@ -32,6 +32,7 @@ class StaticViewSitemap(BaseVRSitemap):
             'core:home',
             'core:about',
             'services:list',
+            'services:city_hub',
             'portfolio:project_list',
             'portfolio:casestudy_list',
             'portfolio:virtual_tours',
@@ -135,9 +136,23 @@ class PromotionSitemap(BaseVRSitemap):
         return obj.updated_at
 
 
+class CitySitemap(BaseVRSitemap):
+    """City / Service areas landing pages sitemap."""
+    changefreq = 'weekly'
+    priority = 0.85
+
+    def items(self):
+        from apps.services.models import City
+        return City.objects.filter(is_published=True).order_by('order')
+
+    def lastmod(self, obj):
+        return obj.updated_at
+
+
 VR_SITEMAPS = {
     'static': StaticViewSitemap,
     'services': ServiceSitemap,
+    'cities': CitySitemap,
     'projects': ProjectSitemap,
     'case_studies': CaseStudySitemap,
     'articles': ArticleSitemap,

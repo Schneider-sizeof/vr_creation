@@ -44,6 +44,7 @@
                     <li><a href="{% url 'portfolio:project_list' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2 rtl:mr-0 rtl:ml-2"></i>{% trans "Réalisations" %}</a></li>
                     <li><a href="{% url 'portfolio:casestudy_list' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2 rtl:mr-0 rtl:ml-2"></i>{% trans "Études de cas" %}</a></li>
                     <li><a href="{% url 'portfolio:virtual_tours' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2 rtl:mr-0 rtl:ml-2"></i>{% trans "Démos 360°" %}</a></li>
+                    <li><a href="{% url 'services:city_hub' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2 rtl:mr-0 rtl:ml-2"></i>{% trans "Zones d'intervention" %}</a></li>
                     <li><a href="{% url 'core:promotions' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2 rtl:mr-0 rtl:ml-2"></i>{% trans "Promotions" %}</a></li>
                     <li><a href="{% url 'contact:contact' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2 rtl:mr-0 rtl:ml-2"></i>{% trans "Contact" %}</a></li>
                     <li><a href="{% url 'core:html_sitemap' %}" class="footer-link"><i class="fas fa-chevron-right text-xs text-primary mr-2 rtl:mr-0 rtl:ml-2"></i>{% trans "Plan du site" %}</a></li>
@@ -93,8 +94,35 @@
             </div>
         </div>
 
+        <!-- Zones d'intervention (Nord Maroc) -->
+        <div class="border-t border-white/10 mt-10 pt-6">
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                <div>
+                    <a href="{% url 'services:city_hub' %}" class="text-xs font-bold text-white uppercase tracking-wider hover:text-primary transition-colors flex items-center gap-1.5">
+                        <i class="fas fa-map-marked-alt text-primary"></i>
+                        <span>{% trans "Zones d'intervention (Nord du Maroc)" %}</span>
+                        <i class="fas fa-arrow-right text-[10px]"></i>
+                    </a>
+                    <p class="text-[11px] text-gray-400 font-light mt-0.5">
+                        {% trans "Déplacements rapides pour modélisation 3D, visites virtuelles et drones :" %}
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-2 text-xs">
+                    <a href="{% url 'services:city_detail' 'tanger' %}" class="text-gray-300 hover:text-white px-2.5 py-1 rounded bg-white/5 hover:bg-white/10 transition-colors">Tanger</a>
+                    <a href="{% url 'services:city_detail' 'tetouan' %}" class="text-gray-300 hover:text-white px-2.5 py-1 rounded bg-white/5 hover:bg-white/10 transition-colors">Tétouan</a>
+                    <a href="{% url 'services:city_detail' 'asilah' %}" class="text-gray-300 hover:text-white px-2.5 py-1 rounded bg-white/5 hover:bg-white/10 transition-colors">Asilah</a>
+                    <a href="{% url 'services:city_detail' 'larache' %}" class="text-gray-300 hover:text-white px-2.5 py-1 rounded bg-white/5 hover:bg-white/10 transition-colors">Larache</a>
+                    <a href="{% url 'services:city_detail' 'chefchaouen' %}" class="text-gray-300 hover:text-white px-2.5 py-1 rounded bg-white/5 hover:bg-white/10 transition-colors">Chefchaouen</a>
+                    <a href="{% url 'services:city_detail' 'al-hoceima' %}" class="text-gray-300 hover:text-white px-2.5 py-1 rounded bg-white/5 hover:bg-white/10 transition-colors">Al Hoceima</a>
+                    <a href="{% url 'services:city_detail' 'mdiq' %}" class="text-gray-300 hover:text-white px-2.5 py-1 rounded bg-white/5 hover:bg-white/10 transition-colors">M'diq</a>
+                    <a href="{% url 'services:city_detail' 'martil' %}" class="text-gray-300 hover:text-white px-2.5 py-1 rounded bg-white/5 hover:bg-white/10 transition-colors">Martil</a>
+                    <a href="{% url 'services:city_detail' 'fnideq' %}" class="text-gray-300 hover:text-white px-2.5 py-1 rounded bg-white/5 hover:bg-white/10 transition-colors">Fnideq</a>
+                </div>
+            </div>
+        </div>
+
         <!-- Clean Footer Bottom Bar -->
-        <div class="border-t border-white/10 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="border-t border-white/10 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
             <p class="text-gray-400 text-sm">
                 &copy; {% now "Y" %} {{ site_settings.site_name|default:"VR Creation Company" }}. {% trans "Tous droits réservés." %}
             </p>

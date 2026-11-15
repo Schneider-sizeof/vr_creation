@@ -117,3 +117,42 @@ class ServiceImage(models.Model):
 
     def __str__(self):
         return f"{self.service.title} — Image {self.order}"
+
+
+class City(models.Model):
+    """City / Service Area landing page for Northern Morocco."""
+    name = models.CharField(_('Nom de la ville'), max_length=150)
+    slug = models.SlugField(_('Slug URL'), max_length=150, unique=True)
+    region = models.CharField(_('Région / Province'), max_length=150, blank=True)
+    hero_title = models.CharField(_('Titre Hero (H1)'), max_length=255, blank=True)
+    hero_description = models.TextField(_('Sous-titre Hero'), blank=True)
+    meta_title = models.CharField(_('Titre SEO (max 60 chars)'), max_length=70, blank=True)
+    meta_description = models.TextField(_('Meta description SEO (140–160 chars)'), blank=True)
+    intro_text = models.TextField(_('Introduction spécifique (120+ mots)'))
+    market_description = models.TextField(_('Contexte économique & immobilier local'))
+    landmarks = models.TextField(_('Quartiers & Repères locaux'), blank=True, help_text=_('Séparés par des virgules'))
+    typical_projects = models.TextField(_('Scénarios de projets types'))
+    services_tailored = models.TextField(_('Déclinaison des 7 services pour cette ville'))
+    intervention_logistics = models.TextField(_('Logistique & Déplacements depuis Tanger'))
+    faqs_data = models.JSONField(_('Questions fréquentes (FAQ)'), default=list, blank=True)
+    nearby_cities = models.ManyToManyField('self', blank=True, symmetrical=True, verbose_name=_('Villes voisines à lier'))
+    distance_from_tanger = models.CharField(_('Distance depuis Tanger'), max_length=100, blank=True)
+    travel_time = models.CharField(_('Temps de trajet moyen'), max_length=100, blank=True)
+    hero_image = models.ImageField(_('Image d\'en-tête'), upload_to='cities/', blank=True, null=True)
+    order = models.PositiveIntegerField(_('Ordre d\'affichage'), default=0)
+    is_published = models.BooleanField(_('Publié'), default=True)
+    is_hub = models.BooleanField(_('Ville Hub (Tanger)'), default=False)
+    created_at = models.DateTimeField(_('Date de création'), auto_now_add=True)
+    updated_at = models.DateTimeField(_('Dernière mise à jour'), auto_now=True)
+
+    class Meta:
+        verbose_name = _('Zone d\'intervention (Ville)')
+        verbose_name_plural = _('Zones d\'intervention (Villes)')
+        ordering = ['order', 'name']
+
+    def __str__(self):
+        return f"{self.name} ({self.region})"
+
+    def get_absolute_url(self):
+        return reverse('services:city_detail', kwargs={'slug': self.slug})
+

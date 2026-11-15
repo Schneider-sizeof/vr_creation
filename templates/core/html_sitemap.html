@@ -120,7 +120,29 @@
                 </ul>
             </div>
 
-            <!-- 6. Légal & Confidentialité -->
+            <!-- 6. Zones d'intervention (Nord Maroc) -->
+            <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 flex flex-col h-full">
+                <div class="flex items-center gap-3 mb-4 pb-3 border-b border-gray-200">
+                    <span class="w-10 h-10 rounded-xl bg-primary text-white flex items-center justify-center font-bold">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </span>
+                    <h3 class="text-lg font-bold text-dark">
+                        <a href="{% url 'services:city_hub' %}" class="hover:text-primary transition-colors">{% trans "Zones d'intervention" %}</a>
+                    </h3>
+                </div>
+                <ul class="space-y-2.5 text-sm text-gray-600 font-medium">
+                    {% for c in cities %}
+                    <li>
+                        <a href="{% url 'services:city_detail' c.slug %}" class="hover:text-primary transition-colors flex items-center justify-between">
+                            <span class="flex items-center gap-2"><i class="fas fa-map-pin text-xs text-primary"></i> {{ c.name }}</span>
+                            <span class="text-[11px] text-gray-600">{{ c.region }}</span>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <!-- 7. Légal & Confidentialité -->
             <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 flex flex-col h-full">
                 <div class="flex items-center gap-3 mb-4 pb-3 border-b border-gray-200">
                     <span class="w-10 h-10 rounded-xl bg-primary text-white flex items-center justify-center font-bold">

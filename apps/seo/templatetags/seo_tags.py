@@ -37,21 +37,27 @@ def seo_meta_tags(context):
         canonical = page_seo.canonical_url or ''
 
     # Fallbacks for dynamic content
-    obj = context.get('service') or context.get('project') or context.get('article') or context.get('case_study') or context.get('promotion')
+    obj = context.get('service') or context.get('project') or context.get('article') or context.get('case_study') or context.get('promotion') or context.get('city')
     if obj:
         if not title:
-            title = getattr(obj, 'meta_title', None) or getattr(obj, 'title', '')
+            title = getattr(obj, 'meta_title', None) or getattr(obj, 'title', None) or getattr(obj, 'name', '')
         if not description:
-            description = getattr(obj, 'meta_description', None) or getattr(obj, 'short_description', '') or getattr(obj, 'excerpt', '') or ''
+            description = getattr(obj, 'meta_description', None) or getattr(obj, 'short_description', None) or getattr(obj, 'hero_description', None) or getattr(obj, 'excerpt', '') or ''
             if not description:
                 desc_field = getattr(obj, 'description', '') or getattr(obj, 'problem', '') or ''
                 description = desc_field if desc_field else ''
         if not keywords:
             keywords = getattr(obj, 'keywords', '') or ''
         if not og_image:
-            img = getattr(obj, 'featured_image', None)
+            img = getattr(obj, 'featured_image', None) or getattr(obj, 'hero_image', None)
             if img:
                 og_image = img.url
+
+    # Check context page_title and page_desc
+    if not title and context.get('page_title'):
+        title = context.get('page_title')
+    if not description and context.get('page_desc'):
+        description = context.get('page_desc')
 
     base_url = getattr(settings, 'SITE_URL', 'https://vrcreationcompany.com')
 
@@ -68,6 +74,8 @@ def seo_meta_tags(context):
         'promotions': '/static/img/promotions/offre-performance.jpg',
         'contact': '/media/services/espace-bureau.webp',
         'sitemap': '/static/img/strategic/villa-en-construction.jpg',
+        'city_hub': '/media/services/visites-virtuelles-featured.webp',
+        'city_detail': '/media/services/visites-virtuelles-featured.webp',
     }
     if not og_image:
         if page_id in page_og_map:
@@ -533,5 +541,42 @@ def jsonld_local_business(context):
         "areaServed": area_served,
         "sameAs": social + ["https://share.google/CEh7vvvHw6o1atT6d"]
     }
+
+    return mark_safe(f'<script type="application/ld+json">\n{json.dumps(data, ensure_ascii=False, indent=2)}\n</script>')
+
+
+@register.simple_tag(takes_context=True)
+def jsonld_city(context):
+    """JSON-LD ProfessionalService schema for City landing pages."""
+    city = context.get('city')
+    if not city:
+        return ''
+
+    base_url = getattr(settings, 'SITE_URL', 'https://vrcreationcompany.com')
+    site_settings = context.get('site_settings')
+
+    data = {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": f"VR Creation — {city.name}",
+        "description": city.meta_description or city.hero_description,
+        "url": base_url + city.get_absolute_url(),
+        "telephone": site_settings.phone if (site_settings and site_settings.phone) else "+212625071498",
+        "areaServed": {
+            "@type": "City",
+            "name": city.name,
+            "containedInPlace": {
+                "@type": "AdministrativeArea",
+                "name": city.region or "Tanger-Tétouan-Al Hoceïma"
+            }
+        },
+        "parentOrganization": {
+            "@type": "Organization",
+            "name": "VR Creation Company",
+            "url": f"{base_url}/"
+        }
+    }
+    if city.hero_image:
+        data["image"] = base_url + city.hero_image.url
 
     return mark_safe(f'<script type="application/ld+json">\n{json.dumps(data, ensure_ascii=False, indent=2)}\n</script>')

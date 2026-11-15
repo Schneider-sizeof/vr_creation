@@ -43,6 +43,8 @@ urlpatterns = [
     path('promotions', RedirectView.as_view(url='/fr/promotions/', permanent=True)),
     path('plan-du-site/', RedirectView.as_view(url='/fr/plan-du-site/', permanent=True)),
     path('plan-du-site', RedirectView.as_view(url='/fr/plan-du-site/', permanent=True)),
+    path('zones-intervention/', RedirectView.as_view(url='/fr/zones-intervention/', permanent=True)),
+    path('zones-intervention', RedirectView.as_view(url='/fr/zones-intervention/', permanent=True)),
 ]
 
 # i18n URL patterns (prefixed by /fr/, /en/, /ar/)

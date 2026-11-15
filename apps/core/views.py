@@ -10,7 +10,7 @@ from .models import (
     TeamMember, Value, Strength, ProcessStep, HeroSlide, StrategicSuccess, Promotion,
     Testimonial, ClientLogo
 )
-from apps.services.models import Service
+from apps.services.models import Service, City
 from apps.portfolio.models import Project, CaseStudy
 from apps.blog.models import Article
 from apps.seo.models import PageSEO
@@ -137,6 +137,7 @@ def cookie_policy(request):
 def html_sitemap(request):
     """HTML Sitemap page for visitors and search engines."""
     services = Service.objects.filter(is_active=True)
+    cities = City.objects.filter(is_published=True).order_by('order')
     projects = Project.objects.all()[:12]
     case_studies = CaseStudy.objects.all()
     active_promotions = Promotion.objects.filter(is_active=True)
@@ -144,6 +145,7 @@ def html_sitemap(request):
 
     return render(request, 'core/html_sitemap.html', {
         'services': services,
+        'cities': cities,
         'projects': projects,
         'case_studies': case_studies,
         'promotions': active_promotions,

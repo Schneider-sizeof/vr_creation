@@ -6,7 +6,7 @@ from django.utils.html import format_html
 from django.utils.translation import gettext_lazy as _
 from modeltranslation.admin import TabbedTranslationAdmin, TranslationTabularInline
 
-from .models import Service, ServiceImage
+from .models import Service, ServiceImage, City
 
 
 class ServiceImageInline(TranslationTabularInline):
@@ -48,3 +48,31 @@ class ServiceAdmin(TabbedTranslationAdmin):
                 return '—'
         return '—'
     image_preview.short_description = _('Aperçu')
+
+
+@admin.register(City)
+class CityAdmin(TabbedTranslationAdmin):
+    list_display = ('name', 'slug', 'region', 'is_hub', 'is_published', 'order')
+    list_editable = ('is_published', 'order')
+    list_filter = ('is_published', 'is_hub', 'region')
+    search_fields = ('name', 'region', 'intro_text')
+    prepopulated_fields = {'slug': ('name',)}
+    filter_horizontal = ('nearby_cities',)
+
+    fieldsets = (
+        (_('Identité & En-tête'), {
+            'fields': ('name', 'slug', 'region', 'hero_title', 'hero_description', 'hero_image', 'is_hub', 'is_published', 'order')
+        }),
+        (_('Contenu spécifique'), {
+            'fields': ('intro_text', 'market_description', 'landmarks', 'typical_projects', 'services_tailored', 'intervention_logistics', 'distance_from_tanger', 'travel_time', 'nearby_cities')
+        }),
+        (_('Foire aux questions (FAQ)'), {
+            'fields': ('faqs_data',),
+            'description': 'Liste au format JSON d\'objets {"q": "Question", "a": "Réponse"}',
+        }),
+        (_('Optimisation SEO'), {
+            'classes': ('collapse',),
+            'fields': ('meta_title', 'meta_description'),
+        }),
+    )
+

@@ -13,4 +13,6 @@ urlpatterns = [
     path(_('services/') + 'branding-immobilier/', views.redirect_old_branding_slug, name='branding_redirect'),
     path(_('services/') + 'branding-communication-visuelle/', views.redirect_old_branding_slug, name='branding_comm_redirect'),
     path(_('services/') + '<slug:slug>/', views.service_detail, name='detail'),
+    path(_('zones-intervention/'), views.city_hub, name='city_hub'),
+    path(_('zones-intervention/') + '<slug:slug>/', views.city_detail, name='city_detail'),
 ]

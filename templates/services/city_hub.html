@@ -1,0 +1,181 @@
+{% extends "base.html" %}
+{% load static i18n seo_tags %}
+
+{% block jsonld_extra %}
+{% trans "Zones d'intervention" as crumb_title %}
+{% jsonld_breadcrumb crumb_title "" %}
+{% endblock %}
+
+{% block content %}
+{% trans "Zones d'intervention" as page_title_label %}
+{% trans "Nord du Maroc" as page_breadcrumb_label %}
+{% include "partials/page_hero.html" with title=page_title_label breadcrumb_label=page_breadcrumb_label %}
+
+<!-- Hub Editorial Section -->
+<section class="section bg-white pt-16 pb-12 border-b border-gray-100">
+    <div class="container mx-auto px-4 max-w-4xl text-center animate-on-scroll slide-up">
+        <span class="pill-badge mb-4">{% trans "Couverture Régionale" %}</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-dark uppercase tracking-tight mb-6">
+            {% trans "Studio 3D, Visites Virtuelles & Drone dans tout le Nord du Maroc" %}
+        </h2>
+        <p class="text-lg md:text-xl text-gray-600 leading-relaxed font-light mb-6">
+            {% blocktrans %}Basé au cœur de <strong>Tanger</strong> (Centre d'affaires Ibn Batouta, Av. Youssef Ibn Tachfine), <strong>VR Creation</strong> déploie ses équipes techniques et son matériel de pointe (scanners 360° HDR, drones télépilotés et caméras cinéma) sur l'ensemble des villes et pôles économiques de la région Tanger-Tétouan-Al Hoceïma.{% endblocktrans %}
+        </p>
+        <p class="text-base text-gray-500 leading-relaxed font-light">
+            {% blocktrans %}Que vous soyez promoteur immobilier sur la côte tétouanaise, gestionnaire de riad à Chefchaouen ou Asilah, hôtelier à M'diq ou investisseur à Al Hoceima, nous assurons des interventions rapides sous 24 à 48 heures avec un niveau d'exigence technique identique à notre studio tangérois.{% endblocktrans %}
+        </p>
+    </div>
+</section>
+
+<!-- Featured Hub: Tanger -->
+{% if hub_city %}
+<section class="section bg-slate-50 py-12">
+    <div class="container mx-auto px-4">
+        <div class="max-w-5xl mx-auto bg-gradient-to-br from-slate-900 via-primary-dark to-slate-950 text-white rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+            <div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-primary/20 blur-3xl pointer-events-none"></div>
+            <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="md:w-2/3">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/30 text-primary-light text-xs font-bold uppercase tracking-wider mb-4 border border-primary/40">
+                        <i class="fas fa-star text-accent"></i> {% trans "Siège Central & Hub Régional" %}
+                    </div>
+                    <h3 class="text-3xl md:text-4xl font-black mb-4">{{ hub_city.name }}</h3>
+                    <p class="text-slate-300 leading-relaxed font-light mb-6">
+                        {{ hub_city.hero_description|default:hub_city.intro_text|truncatewords:45 }}
+                    </p>
+                    <div class="flex flex-wrap gap-4 text-xs text-slate-300 mb-6">
+                        <span class="flex items-center gap-1.5"><i class="fas fa-map-marker-alt text-primary"></i> {{ hub_city.region }}</span>
+                        <span class="flex items-center gap-1.5"><i class="fas fa-tachometer-alt text-primary"></i> {% trans "Départ immédiat" %}</span>
+                        <span class="flex items-center gap-1.5"><i class="fas fa-building text-primary"></i> {% trans "Interventions quotidiennes" %}</span>
+                    </div>
+                    <a href="{% url 'services:city_detail' hub_city.slug %}" class="btn-primary inline-flex items-center gap-2 text-sm font-bold shadow-lg">
+                        <span>{% trans "Voir les services & réalisations à Tanger" %}</span>
+                        <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+                <div class="md:w-1/3 text-center">
+                    <div class="p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15">
+                        <i class="fas fa-cube text-5xl text-accent mb-4"></i>
+                        <div class="text-2xl font-black text-white">90000</div>
+                        <div class="text-xs text-slate-300 uppercase tracking-wider mt-1">{% trans "Tanger Centre" %}</div>
+                        <div class="mt-4 pt-4 border-t border-white/10 text-xs text-slate-300">
+                            {% trans "Bureaux ouverts du lundi au vendredi" %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Surrounding Cities Grid -->
+<section class="section bg-white py-16">
+    <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <h3 class="text-2xl md:text-3xl font-extrabold text-dark uppercase tracking-tight mb-4">
+                {% trans "Villes du Nord couvertes par nos équipes" %}
+            </h3>
+            <p class="text-gray-600 font-light">
+                {% trans "Sélectionnez votre ville pour découvrir nos solutions visuelles dédiées, les projets types et les conditions d'intervention." %}
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {% for city in other_cities %}
+            <div class="bg-slate-50 border border-gray-100 rounded-2xl p-6 hover:shadow-xl hover:border-primary/30 transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-primary">{{ city.region }}</span>
+                        {% if city.travel_time %}
+                        <span class="text-xs text-gray-500 bg-white px-2 py-1 rounded-md border border-gray-100 flex items-center gap-1">
+                            <i class="fas fa-clock text-primary text-[10px]"></i> {{ city.travel_time }}
+                        </span>
+                        {% endif %}
+                    </div>
+                    <h4 class="text-xl font-bold text-dark group-hover:text-primary transition-colors mb-3">
+                        {{ city.name }}
+                    </h4>
+                    <p class="text-xs text-gray-600 leading-relaxed font-light mb-4 line-clamp-3">
+                        {{ city.intro_text|truncatewords:25 }}
+                    </p>
+                    {% if city.distance_from_tanger %}
+                    <div class="text-[11px] text-gray-500 mb-4 flex items-center gap-1.5">
+                        <i class="fas fa-route text-slate-400"></i>
+                        <span>{% trans "Distance depuis Tanger :" %} <strong>{{ city.distance_from_tanger }}</strong></span>
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="pt-4 border-t border-gray-100">
+                    <a href="{% url 'services:city_detail' city.slug %}" class="inline-flex items-center gap-2 text-xs font-bold text-primary hover:text-primary-dark transition-colors">
+                        <span>{% blocktrans with city_name=city.name %}Découvrir nos services à {{ city_name }}{% endblocktrans %}</span>
+                        <i class="fas fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Regional Logistics Banner -->
+<section class="section bg-slate-900 text-white py-16">
+    <div class="container mx-auto px-4 max-w-5xl">
+        <div class="text-center mb-12">
+            <span class="pill-badge mb-3">{% trans "Mobilité & Réactivité" %}</span>
+            <h3 class="text-2xl md:text-3xl font-bold uppercase tracking-tight">
+                {% trans "Comment se déroulent nos interventions dans le Nord ?" %}
+            </h3>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+                <div class="w-14 h-14 mx-auto rounded-2xl bg-primary/20 text-accent flex items-center justify-center text-2xl mb-4">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <h4 class="text-lg font-bold mb-2">{% trans "1. Devis & Planification 24h" %}</h4>
+                <p class="text-xs text-slate-300 leading-relaxed font-light">
+                    {% trans "Étude de votre cahier des charges à distance, validation des conditions d'ensoleillement et planification de la mission." %}
+                </p>
+            </div>
+            <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+                <div class="w-14 h-14 mx-auto rounded-2xl bg-primary/20 text-accent flex items-center justify-center text-2xl mb-4">
+                    <i class="fas fa-shuttle-van"></i>
+                </div>
+                <h4 class="text-lg font-bold mb-2">{% trans "2. Déplacement avec Équipement" %}</h4>
+                <p class="text-xs text-slate-300 leading-relaxed font-light">
+                    {% trans "Notre équipe se déplace sur site avec scanners 360°, drones certifiés et caméras haute résolution autonomes." %}
+                </p>
+            </div>
+            <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+                <div class="w-14 h-14 mx-auto rounded-2xl bg-primary/20 text-accent flex items-center justify-center text-2xl mb-4">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h4 class="text-lg font-bold mb-2">{% trans "3. Post-production & Livraison" %}</h4>
+                <p class="text-xs text-slate-300 leading-relaxed font-light">
+                    {% trans "Traitement, calculs 3D et intégration web réalisés dans notre studio de Tanger avec livraison dématérialisée clé en main." %}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call To Action -->
+<section class="section bg-white py-16 border-t border-gray-100">
+    <div class="container mx-auto px-4 text-center max-w-3xl">
+        <h3 class="text-2xl md:text-3xl font-extrabold text-dark uppercase tracking-tight mb-4">
+            {% trans "Un projet immobilier ou commercial dans le Nord du Maroc ?" %}
+        </h3>
+        <p class="text-gray-600 font-light mb-8">
+            {% trans "Contactez nos équipes pour un devis personnalisé adapté aux spécificités de votre ville et de votre calendrier." %}
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="{% url 'contact:contact' %}" class="btn-primary text-sm font-bold shadow-lg">
+                <i class="fas fa-envelope mr-2"></i>{% trans "Demander un devis en ligne" %}
+            </a>
+            <a href="https://wa.me/212625071498?text={% filter urlencode %}{% trans "Bonjour, je souhaite un devis pour un projet dans le Nord du Maroc." %}{% endfilter %}" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-lg transition-all duration-300 flex items-center gap-2">
+                <i class="fab fa-whatsapp text-lg"></i>
+                <span>{% trans "Échanger sur WhatsApp" %}</span>
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}
