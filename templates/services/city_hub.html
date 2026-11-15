@@ -38,7 +38,7 @@
                     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/30 text-primary-light text-xs font-bold uppercase tracking-wider mb-4 border border-primary/40">
                         <i class="fas fa-star text-accent"></i> {% trans "Siège Central & Hub Régional" %}
                     </div>
-                    <h3 class="text-3xl md:text-4xl font-black mb-4">{{ hub_city.name }}</h3>
+                    <h3 class="text-3xl md:text-4xl font-black mb-4 text-white" style="color: #ffffff !important;">{{ hub_city.name }}</h3>
                     <p class="text-slate-300 leading-relaxed font-light mb-6">
                         {{ hub_city.hero_description|default:hub_city.intro_text|truncatewords:45 }}
                     </p>
