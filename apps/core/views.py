@@ -6,7 +6,10 @@ from django.shortcuts import render, get_object_or_404
 from django.utils.translation import gettext_lazy as _
 from django.views.decorators.cache import cache_page
 
-from .models import TeamMember, Value, Strength, ProcessStep, HeroSlide, StrategicSuccess, Promotion
+from .models import (
+    TeamMember, Value, Strength, ProcessStep, HeroSlide, StrategicSuccess, Promotion,
+    Testimonial, ClientLogo
+)
 from apps.services.models import Service
 from apps.portfolio.models import Project, CaseStudy
 from apps.blog.models import Article
@@ -62,6 +65,9 @@ def home(request):
         ]
     
     promotions = list(Promotion.objects.filter(is_active=True).order_by('order'))
+    testimonials = Testimonial.objects.filter(is_active=True)
+    client_logos = ClientLogo.objects.filter(is_active=True)
+    team_members = TeamMember.objects.all()
 
     context = {
         'services': services,
@@ -73,6 +79,9 @@ def home(request):
         'hero_slides': hero_slides,
         'strategic_successes': strategic_successes,
         'promotions': promotions,
+        'testimonials': testimonials,
+        'client_logos': client_logos,
+        'team_members': team_members,
         'page_seo': get_page_seo('home'),
         'page_identifier': 'home',
     }
@@ -85,12 +94,16 @@ def about(request):
     values = Value.objects.all()
     process_steps = ProcessStep.objects.all()
     strengths = Strength.objects.all()
+    testimonials = Testimonial.objects.filter(is_active=True)
+    client_logos = ClientLogo.objects.filter(is_active=True)
     
     context = {
         'team_members': team_members,
         'values': values,
         'process_steps': process_steps,
         'strengths': strengths,
+        'testimonials': testimonials,
+        'client_logos': client_logos,
         'page_seo': get_page_seo('about'),
         'page_identifier': 'about',
     }

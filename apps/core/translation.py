@@ -5,7 +5,7 @@ Must be defined before admin to work with modeltranslation.
 from modeltranslation.translator import translator, TranslationOptions
 from .models import (
     SiteSettings, TeamMember, Value, Strength, ProcessStep, HeroSlide, StrategicSuccess,
-    Promotion, PromotionDeliverable, PromotionComparison, PromotionStep
+    Promotion, PromotionDeliverable, PromotionComparison, PromotionStep, Testimonial
 )
 
 
@@ -56,6 +56,10 @@ class PromotionStepTranslation(TranslationOptions):
     fields = ('title', 'description')
 
 
+class TestimonialTranslation(TranslationOptions):
+    fields = ('role', 'quote', 'project')
+
+
 translator.register(SiteSettings, SiteSettingsTranslation)
 translator.register(TeamMember, TeamMemberTranslation)
 translator.register(Value, ValueTranslation)
@@ -67,3 +71,4 @@ translator.register(Promotion, PromotionTranslation)
 translator.register(PromotionDeliverable, PromotionDeliverableTranslation)
 translator.register(PromotionComparison, PromotionComparisonTranslation)
 translator.register(PromotionStep, PromotionStepTranslation)
+translator.register(Testimonial, TestimonialTranslation)

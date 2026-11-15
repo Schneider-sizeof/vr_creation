@@ -8,7 +8,7 @@ from modeltranslation.admin import TabbedTranslationAdmin, TranslationTabularInl
 
 from .models import (
     SiteSettings, TeamMember, Value, Strength, ProcessStep, HeroSlide, StrategicSuccess,
-    Promotion, PromotionDeliverable, PromotionComparison, PromotionStep
+    Promotion, PromotionDeliverable, PromotionComparison, PromotionStep, Testimonial, ClientLogo
 )
 
 
@@ -186,5 +186,22 @@ class PromotionAdmin(TabbedTranslationAdmin):
                            '• Décocher "Personnalisable" pour les offres sur commission.',
         }),
     )
+
+
+@admin.register(Testimonial)
+class TestimonialAdmin(TabbedTranslationAdmin):
+    list_display = ('client_name', 'company', 'project', 'rating', 'is_active', 'order', 'created_at')
+    list_editable = ('is_active', 'order')
+    list_filter = ('is_active', 'rating')
+    search_fields = ('client_name', 'company', 'quote', 'project')
+
+
+@admin.register(ClientLogo)
+class ClientLogoAdmin(admin.ModelAdmin):
+    list_display = ('name', 'website_url', 'is_active', 'order')
+    list_editable = ('is_active', 'order')
+    list_filter = ('is_active',)
+    search_fields = ('name',)
+
 
 

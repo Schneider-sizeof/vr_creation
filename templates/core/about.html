@@ -243,6 +243,92 @@
     </div>
 </section>
 
+<!-- Team Presence (Rendered ONLY if verified data exists - Zero fake data) -->
+{% if team_members %}
+<section class="section bg-white py-20 border-t border-gray-100">
+    <div class="container mx-auto px-4 max-w-6xl">
+        <div class="text-center mb-16 animate-on-scroll slide-up">
+            <span class="pill-badge mb-3">{% trans "Notre Équipe" %}</span>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-dark uppercase tracking-tight">{% trans "Les talents derrière vos créations" %}</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mt-4 font-light">{% trans "Des artistes 3D, photographes et spécialistes en communication visuelle basés à Tanger." %}</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for member in team_members %}
+            <div class="p-6 rounded-2xl bg-gray-50 border border-gray-100 text-center shadow-sm">
+                {% if member.photo %}
+                <img src="{{ member.photo.url }}" alt="{{ member.name }}" class="w-24 h-24 rounded-full mx-auto object-cover mb-4 shadow" loading="lazy">
+                {% else %}
+                <div class="w-24 h-24 rounded-full bg-primary/10 text-primary flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                    {{ member.name|slice:":1" }}
+                </div>
+                {% endif %}
+                <h3 class="text-lg font-bold text-dark">{{ member.name }}</h3>
+                <span class="text-xs font-semibold text-primary uppercase tracking-wider block mt-1 mb-3">{{ member.role }}</span>
+                {% if member.bio %}
+                <p class="text-xs text-gray-600 font-light leading-relaxed">{{ member.bio }}</p>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Testimonials (Rendered ONLY if real verified data exists - Zero fake data) -->
+{% if testimonials %}
+<section class="section bg-gray-50 py-20 border-t border-gray-100">
+    <div class="container mx-auto px-4 max-w-6xl">
+        <div class="text-center mb-16 animate-on-scroll slide-up">
+            <span class="pill-badge mb-3">{% trans "Témoignages Clients" %}</span>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-dark uppercase tracking-tight">{% trans "La confiance de nos partenaires" %}</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for t in testimonials %}
+            <div class="p-8 rounded-2xl bg-white border border-gray-100 shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="flex text-amber-400 mb-4">
+                        {% for i in "12345"|make_list %}
+                        <i class="fas fa-star text-xs mr-1"></i>
+                        {% endfor %}
+                    </div>
+                    <p class="text-gray-700 italic font-light leading-relaxed mb-6">"{{ t.quote }}"</p>
+                </div>
+                <div class="flex items-center gap-3 pt-4 border-t border-gray-50">
+                    {% if t.avatar %}
+                    <img src="{{ t.avatar.url }}" alt="{{ t.client_name }}" class="w-10 h-10 rounded-full object-cover">
+                    {% endif %}
+                    <div>
+                        <span class="font-bold text-dark text-sm block">{{ t.client_name }}</span>
+                        <span class="text-xs text-gray-500 block">{{ t.role }}{% if t.company %} • {{ t.company }}{% endif %}</span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Client Logos (Rendered ONLY if real logos exist) -->
+{% if client_logos %}
+<section class="py-12 bg-white border-y border-gray-100">
+    <div class="container mx-auto px-4 text-center">
+        <span class="text-xs uppercase font-bold text-gray-400 tracking-widest block mb-6">{% trans "Ils nous font confiance à Tanger et dans le Nord" %}</span>
+        <div class="flex flex-wrap items-center justify-center gap-8 md:gap-12 opacity-70 hover:opacity-100 transition-opacity">
+            {% for logo in client_logos %}
+            {% if logo.website_url %}
+            <a href="{{ logo.website_url }}" target="_blank" rel="noopener" class="grayscale hover:grayscale-0 transition-all">
+                <img src="{{ logo.logo.url }}" alt="{{ logo.name }}" class="h-10 w-auto object-contain" loading="lazy">
+            </a>
+            {% else %}
+            <img src="{{ logo.logo.url }}" alt="{{ logo.name }}" class="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all" loading="lazy">
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
 <!-- CTA & Contact Block -->
 <section class="section section-tint py-20">
     <div class="container mx-auto px-4">

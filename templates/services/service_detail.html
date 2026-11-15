@@ -3,6 +3,7 @@
 
 {% block jsonld_extra %}
 {% jsonld_service %}
+{% if faqs %}{% jsonld_faq faqs %}{% endif %}
 {% jsonld_breadcrumb "Services" "/fr/services/" service.title "" %}
 {% endblock %}
 
@@ -36,6 +37,54 @@
                     <div class="mt-6 rich-text-content leading-relaxed font-light text-gray-600">
                         {{ service.full_description|safe }}
                     </div>
+
+                    <!-- Target Audience & Turnaround Specifications -->
+                    {% if target_audience or turnaround %}
+                    <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-4 not-prose">
+                        {% if target_audience %}
+                        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100 flex items-start gap-3">
+                            <div class="w-9 h-9 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fas fa-users text-sm"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs uppercase tracking-wider font-bold text-gray-400">{% trans "Pour qui ?" %}</span>
+                                <p class="text-sm text-gray-700 font-medium mt-1 leading-snug">{{ target_audience }}</p>
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% if turnaround %}
+                        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100 flex items-start gap-3">
+                            <div class="w-9 h-9 rounded-xl bg-accent/20 text-dark flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fas fa-clock text-sm"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs uppercase tracking-wider font-bold text-gray-400">{% trans "Délais indicatifs" %}</span>
+                                <p class="text-sm text-gray-700 font-medium mt-1 leading-snug">{{ turnaround }}</p>
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+
+                    <!-- Technical Deliverables Section -->
+                    {% if deliverables %}
+                    <div class="mt-12 not-prose">
+                        <h3 class="text-2xl font-extrabold text-dark mb-6 uppercase tracking-wider">
+                            {% trans "Livrables & Spécifications techniques" %}
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {% for d in deliverables %}
+                            <div class="p-5 rounded-2xl bg-white border border-gray-100 shadow-sm hover:border-primary/40 transition-colors">
+                                <h4 class="font-bold text-dark text-base mb-1.5 flex items-center gap-2">
+                                    <i class="fas fa-check-circle text-primary text-sm"></i>
+                                    {{ d.title }}
+                                </h4>
+                                <p class="text-xs text-gray-600 leading-relaxed font-light">{{ d.desc }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
                 </div>
 
                 <!-- Gallery Section -->
@@ -90,151 +139,101 @@
                 </div>
                 {% endif %}
 
-                <!-- Process Steps -->
+                <!-- Process Steps (Tailored to this specific service) -->
                 <div class="mt-16">
                     <h3 class="text-2xl font-extrabold text-dark mb-8 uppercase tracking-wider">{% trans "Notre méthode de travail" %}</h3>
-                    {% if process_steps %}
                     <div class="space-y-4">
-                        {% for step in process_steps %}
-                        <div class="flex items-start gap-4 p-5 rounded-xl bg-gray-50 border border-gray-100">
-                            <div class="w-10 h-10 bg-primary text-white rounded-xl flex items-center justify-center text-sm font-bold shrink-0">{{ forloop.counter }}</div>
-                            <div>
-                                <h4 class="font-bold text-dark mb-1">{{ step.title }}</h4>
-                                <p class="text-gray-600 text-sm">{{ step.description }}</p>
+                        {% if custom_process_steps %}
+                            {% for step in custom_process_steps %}
+                            <div class="flex items-start gap-4 p-5 rounded-xl bg-gray-50 border border-gray-100">
+                                <div class="w-10 h-10 bg-primary text-white rounded-xl flex items-center justify-center text-sm font-bold shrink-0">{{ step.step|default:forloop.counter }}</div>
+                                <div>
+                                    <h4 class="font-bold text-dark mb-1">{{ step.title }}</h4>
+                                    <p class="text-gray-600 text-sm font-light leading-relaxed">{{ step.desc }}</p>
+                                </div>
                             </div>
-                        </div>
-                        {% endfor %}
+                            {% endfor %}
+                        {% elif process_steps %}
+                            {% for step in process_steps %}
+                            <div class="flex items-start gap-4 p-5 rounded-xl bg-gray-50 border border-gray-100">
+                                <div class="w-10 h-10 bg-primary text-white rounded-xl flex items-center justify-center text-sm font-bold shrink-0">{{ forloop.counter }}</div>
+                                <div>
+                                    <h4 class="font-bold text-dark mb-1">{{ step.title }}</h4>
+                                    <p class="text-gray-600 text-sm font-light leading-relaxed">{{ step.description }}</p>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        {% endif %}
                     </div>
-                    {% endif %}
                 </div>
 
-                <!-- Service FAQ (SEO Structured Content) -->
+                <!-- Service FAQ (SEO Structured Content with FAQPage Schema) -->
+                {% if faqs %}
                 <div class="mt-16">
                     <h3 class="text-2xl font-extrabold text-dark mb-6 uppercase tracking-wider">
                         {% trans "Questions fréquentes sur ce service" %}
                     </h3>
 
                     <div class="space-y-4">
-                        {% if service.slug == 'modelisation-3d' %}
-                        <details class="group p-5 rounded-xl bg-gray-50 border border-gray-100 transition-all cursor-pointer" open>
+                        {% for item in faqs %}
+                        <details class="group p-5 rounded-xl bg-gray-50 border border-gray-100 transition-all cursor-pointer"{% if forloop.first %} open{% endif %}>
                             <summary class="font-bold text-dark text-base list-none flex items-center justify-between">
-                                <span>{% trans "Quels documents sont nécessaires pour démarrer un projet 3D ?" %}</span>
+                                <span>{{ item.question }}</span>
                                 <i class="fas fa-chevron-down text-primary group-open:rotate-180 transition-transform"></i>
                             </summary>
-                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
-                                {% trans "Pour modéliser votre projet avec précision, nous avons besoin des plans architecturaux 2D (fichiers DWG ou PDF vectoriels), des façades, coupes et idéalement du plan de masse avec les intentions de matériaux." %}
+                            <p class="mt-3 text-gray-600 text-sm leading-relaxed font-light">
+                                {{ item.answer }}
                             </p>
                         </details>
-                        <details class="group p-5 rounded-xl bg-gray-50 border border-gray-100 transition-all cursor-pointer">
-                            <summary class="font-bold text-dark text-base list-none flex items-center justify-between">
-                                <span>{% trans "Quels sont les délais de livraison des rendus 3D à Tanger ?" %}</span>
-                                <i class="fas fa-chevron-down text-primary group-open:rotate-180 transition-transform"></i>
-                            </summary>
-                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
-                                {% trans "En règle générale, un pack de rendus intérieurs ou extérieurs est livré sous 5 à 10 jours ouvrés avec un cycle de validation intermédiaire pour les ajustements." %}
-                            </p>
-                        </details>
-                        <details class="group p-5 rounded-xl bg-gray-50 border border-gray-100 transition-all cursor-pointer">
-                            <summary class="font-bold text-dark text-base list-none flex items-center justify-between">
-                                <span>{% trans "Peut-on commander des modifications après la première version ?" %}</span>
-                                <i class="fas fa-chevron-down text-primary group-open:rotate-180 transition-transform"></i>
-                            </summary>
-                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
-                                {% trans "Oui, nos devis incluent toujours un cycle de retouches pour affiner les textures, éclairages, mobilier et végétations selon vos exigences." %}
-                            </p>
-                        </details>
-
-                        {% elif service.slug == 'visites-virtuelles' %}
-                        <details class="group p-5 rounded-xl bg-gray-50 border border-gray-100 transition-all cursor-pointer" open>
-                            <summary class="font-bold text-dark text-base list-none flex items-center justify-between">
-                                <span>{% trans "Quelle est la spécificité d'une visite virtuelle 3D sur plan ?" %}</span>
-                                <i class="fas fa-chevron-down text-primary group-open:rotate-180 transition-transform"></i>
-                            </summary>
-                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
-                                {% trans "La visite virtuelle 3D est créée avant même le début du chantier à partir des plans architecturaux. Elle permet à vos acheteurs en VEFA d'explorer les futurs appartements, duplex ou villas pièce par pièce et de se projeter immédiatement." %}
-                            </p>
-                        </details>
-                        <details class="group p-5 rounded-xl bg-gray-50 border border-gray-100 transition-all cursor-pointer">
-                            <summary class="font-bold text-dark text-base list-none flex items-center justify-between">
-                                <span>{% trans "Comment les clients accèdent-ils à la visite virtuelle ?" %}</span>
-                                <i class="fas fa-chevron-down text-primary group-open:rotate-180 transition-transform"></i>
-                            </summary>
-                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
-                                {% trans "Aucune application n'est requise. Un simple lien web ou QR code permet de visiter depuis n'importe quel smartphone, tablette, ordinateur ou casque VR." %}
-                            </p>
-                        </details>
-                        <details class="group p-5 rounded-xl bg-gray-50 border border-gray-100 transition-all cursor-pointer">
-                            <summary class="font-bold text-dark text-base list-none flex items-center justify-between">
-                                <span>{% trans "Peut-on intégrer la visite sur notre site web ?" %}</span>
-                                <i class="fas fa-chevron-down text-primary group-open:rotate-180 transition-transform"></i>
-                            </summary>
-                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
-                                {% trans "Oui, nous vous fournissons le code d'intégration iframe prêt à l'emploi et compatible avec tous les gestionnaires de contenu (WordPress, Django, etc.)." %}
-                            </p>
-                        </details>
-
-                        {% elif service.slug == 'captures-360' %}
-                        <details class="group p-5 rounded-xl bg-gray-50 border border-gray-100 transition-all cursor-pointer" open>
-                            <summary class="font-bold text-dark text-base list-none flex items-center justify-between">
-                                <span>{% trans "Pour quels espaces recommandez-vous la capture 360° réelle ?" %}</span>
-                                <i class="fas fa-chevron-down text-primary group-open:rotate-180 transition-transform"></i>
-                            </summary>
-                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
-                                {% trans "Elle est idéale pour les espaces déjà construits : showrooms, magasins, restaurants, hôtels, résidences témoins achevées et le suivi technique de chantiers à Tanger et dans le Nord." %}
-                            </p>
-                        </details>
-                        <details class="group p-5 rounded-xl bg-gray-50 border border-gray-100 transition-all cursor-pointer">
-                            <summary class="font-bold text-dark text-base list-none flex items-center justify-between">
-                                <span>{% trans "Combien de temps dure le tournage sur place ?" %}</span>
-                                <i class="fas fa-chevron-down text-primary group-open:rotate-180 transition-transform"></i>
-                            </summary>
-                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
-                                {% trans "Le scan 360° nécessite généralement 1 à 2 heures pour un espace de 100 à 250 m², sans perturber votre activité commerciale." %}
-                            </p>
-                        </details>
-
-                        {% elif service.slug == 'lead-generation' %}
-                        <details class="group p-5 rounded-xl bg-gray-50 border border-gray-100 transition-all cursor-pointer" open>
-                            <summary class="font-bold text-dark text-base list-none flex items-center justify-between">
-                                <span>{% trans "Comment garantissez-vous la qualité des prospects générés ?" %}</span>
-                                <i class="fas fa-chevron-down text-primary group-open:rotate-180 transition-transform"></i>
-                            </summary>
-                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
-                                {% trans "Nos campagnes intègrent des critères de ciblage stricts (revenus, intention d'achat, localisation Maroc & MRE) et des formulaires avec pré-qualification budgétaire avant transmission à votre équipe." %}
-                            </p>
-                        </details>
-                        <details class="group p-5 rounded-xl bg-gray-50 border border-gray-100 transition-all cursor-pointer">
-                            <summary class="font-bold text-dark text-base list-none flex items-center justify-between">
-                                <span>{% trans "Quel est le délai pour lancer une première campagne ?" %}</span>
-                                <i class="fas fa-chevron-down text-primary group-open:rotate-180 transition-transform"></i>
-                            </summary>
-                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
-                                {% trans "Comptez environ 5 à 7 jours pour la création de la page de destination, la configuration des publicités et le paramétrage du suivi." %}
-                            </p>
-                        </details>
-
-                        {% else %}
-                        <details class="group p-5 rounded-xl bg-gray-50 border border-gray-100 transition-all cursor-pointer" open>
-                            <summary class="font-bold text-dark text-base list-none flex items-center justify-between">
-                                <span>{% trans "Comment obtenir un devis personnalisé ?" %}</span>
-                                <i class="fas fa-chevron-down text-primary group-open:rotate-180 transition-transform"></i>
-                            </summary>
-                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
-                                {% trans "Contactez notre équipe via le formulaire de devis ou par téléphone. Nous étudions votre projet sous 24h et vous remettons une proposition détaillée." %}
-                            </p>
-                        </details>
-                        <details class="group p-5 rounded-xl bg-gray-50 border border-gray-100 transition-all cursor-pointer">
-                            <summary class="font-bold text-dark text-base list-none flex items-center justify-between">
-                                <span>{% trans "Intervenez-vous en dehors de Tanger ?" %}</span>
-                                <i class="fas fa-chevron-down text-primary group-open:rotate-180 transition-transform"></i>
-                            </summary>
-                            <p class="mt-3 text-gray-600 text-sm leading-relaxed">
-                                {% trans "Oui, nous intervenons dans tout le Nord du Maroc (Tétouan, Chefchaouen, Asilah, Larache, Al Hoceima) et à distance pour les projets de modélisation 3D." %}
-                            </p>
-                        </details>
-                        {% endif %}
+                        {% endfor %}
                     </div>
                 </div>
+                {% endif %}
+
+                <!-- Related Services (Internal Linking) -->
+                {% if related_services %}
+                <div class="mt-16 pt-10 border-t border-gray-100">
+                    <h3 class="text-2xl font-extrabold text-dark mb-6 uppercase tracking-wider">
+                        {% trans "Services complémentaires recommandés" %}
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        {% for rel in related_services %}
+                        <a href="{% url 'services:detail' rel.slug %}" class="group p-5 rounded-2xl bg-gray-50 hover:bg-white border border-gray-100 hover:border-primary/30 shadow-sm transition-all block">
+                            <i class="{{ rel.icon|default:'fas fa-cube' }} text-2xl text-primary mb-3 block group-hover:scale-110 transition-transform"></i>
+                            <h4 class="font-bold text-dark text-sm group-hover:text-primary transition-colors">{{ rel.title }}</h4>
+                            <p class="text-xs text-gray-500 mt-1 line-clamp-2">{{ rel.short_description }}</p>
+                        </a>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+
+                <!-- Related Portfolio Projects -->
+                {% if related_projects %}
+                <div class="mt-12">
+                    <h3 class="text-2xl font-extrabold text-dark mb-6 uppercase tracking-wider">
+                        {% trans "Exemples de réalisations associées" %}
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        {% for proj in related_projects %}
+                        <a href="{% url 'portfolio:project_detail' proj.slug %}" class="group block rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all">
+                            <div class="relative aspect-video bg-slate-900 overflow-hidden">
+                                {% if proj.featured_image %}
+                                <img src="{{ proj.featured_image.url }}" alt="{{ proj.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                                {% else %}
+                                <img src="{% static 'img/strategic/projet-immobilier.jpg' %}" alt="{{ proj.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                                {% endif %}
+                                <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">{{ proj.sector|default:"Immobilier" }}</span>
+                            </div>
+                            <div class="p-4 bg-white">
+                                <h4 class="font-bold text-dark text-sm group-hover:text-primary transition-colors">{{ proj.title }}</h4>
+                                <span class="text-xs text-gray-500 block mt-1"><i class="fas fa-map-marker-alt text-primary mr-1"></i>Tanger, Maroc</span>
+                            </div>
+                        </a>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
 
                 <!-- CTA -->
                 <div class="mt-16 bg-gradient-to-r from-primary to-primary-dark rounded-2xl p-8 md:p-12 text-white text-center">

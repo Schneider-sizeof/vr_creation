@@ -492,3 +492,43 @@ class PromotionStep(models.Model):
     def __str__(self):
         return f"{self.order}. {self.title}"
 
+
+class Testimonial(models.Model):
+    """Client testimonial (Trust Signal) — rendered only if real verified data exists."""
+    client_name = models.CharField(_('Nom du client'), max_length=200)
+    company = models.CharField(_('Entreprise / Établissement'), max_length=200, blank=True)
+    role = models.CharField(_('Fonction'), max_length=200, blank=True)
+    quote = models.TextField(_('Témoignage'))
+    project = models.CharField(_('Projet concerné'), max_length=200, blank=True)
+    avatar = models.ImageField(_('Photo / Logo client'), upload_to='testimonials/', blank=True, null=True)
+    rating = models.PositiveSmallIntegerField(_('Note (sur 5)'), default=5)
+    is_active = models.BooleanField(_('Actif / Publié'), default=True)
+    order = models.PositiveIntegerField(_('Ordre d\'affichage'), default=0)
+    created_at = models.DateTimeField(_('Date de création'), auto_now_add=True)
+
+    class Meta:
+        verbose_name = _('Témoignage client')
+        verbose_name_plural = _('Témoignages clients')
+        ordering = ['order', '-created_at']
+
+    def __str__(self):
+        return f"{self.client_name} ({self.company or 'Client'})"
+
+
+class ClientLogo(models.Model):
+    """Client / Partner logo (Trust Signal) — rendered only if real logos exist."""
+    name = models.CharField(_('Nom de l\'entreprise'), max_length=200)
+    logo = models.ImageField(_('Logo (format PNG transparent ou SVG)'), upload_to='clients/')
+    website_url = models.URLField(_('Site web (optionnel)'), blank=True)
+    is_active = models.BooleanField(_('Actif'), default=True)
+    order = models.PositiveIntegerField(_('Ordre d\'affichage'), default=0)
+
+    class Meta:
+        verbose_name = _('Logo client / Partenaire')
+        verbose_name_plural = _('Logos clients / Partenaires')
+        ordering = ['order', 'name']
+
+    def __str__(self):
+        return self.name
+
+

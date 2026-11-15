@@ -19,6 +19,32 @@
             <img src="{% static 'img/strategic/projet-immobilier.jpg' %}" alt="{{ case_study.title }}" class="w-full rounded-2xl shadow-md">
             {% endif %}
         </div>
+
+        <!-- Structured Project Specs Card -->
+        <div class="mb-12 bg-gray-50 border border-gray-100 p-6 md:p-8 rounded-2xl shadow-sm">
+            <h3 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-6 pb-3 border-b border-gray-200">
+                {% trans "Fiche Synthétique du Projet" %}
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div>
+                    <span class="block text-xs text-gray-400 uppercase font-semibold">{% trans "Secteur" %}</span>
+                    <span class="font-bold text-dark text-sm mt-1 block">{{ case_study.sector|default:"Immobilier" }}</span>
+                </div>
+                <div>
+                    <span class="block text-xs text-gray-400 uppercase font-semibold">{% trans "Localisation" %}</span>
+                    <span class="font-bold text-dark text-sm mt-1 block">Tanger & Nord du Maroc</span>
+                </div>
+                <div>
+                    <span class="block text-xs text-gray-400 uppercase font-semibold">{% trans "Périmètre" %}</span>
+                    <span class="font-bold text-dark text-sm mt-1 block">{% trans "Production visuelle & immersive" %}</span>
+                </div>
+                <div>
+                    <span class="block text-xs text-gray-400 uppercase font-semibold">{% trans "Outils mobilisés" %}</span>
+                    <span class="font-bold text-dark text-sm mt-1 block">3D Max, Unreal, HDR 360</span>
+                </div>
+            </div>
+            <!-- TODO_OWNER: valider les résultats chiffrés réels avec le client -->
+        </div>
         
         <div class="space-y-12">
             <!-- Problem -->
