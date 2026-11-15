@@ -43,9 +43,15 @@ class CanonicalDomainMiddleware:
         if raw_host == f"www.{canonical_domain}":
             return HttpResponsePermanentRedirect(f"{canonical_protocol}://{canonical_domain}{request.get_full_path()}")
 
-        # 301 redirect HTTP to HTTPS in production
-        proto = request.META.get('HTTP_X_FORWARDED_PROTO', request.scheme or 'http').lower()
-        if not is_debug and proto != 'https':
+        # 301 redirect HTTP to HTTPS in production (bulletproof against proxy/passenger loop)
+        is_secure = (
+            request.is_secure()
+            or (request.META.get('HTTP_X_FORWARDED_PROTO', '').lower() == 'https')
+            or (request.META.get('HTTPS', '').lower() in ('on', '1'))
+            or (request.META.get('HTTP_X_FORWARDED_SSL', '').lower() == 'on')
+            or (str(request.META.get('SERVER_PORT', '')) in ('443', '8443'))
+        )
+        if not is_debug and not is_secure:
             return HttpResponsePermanentRedirect(f"https://{canonical_domain}{request.get_full_path()}")
 
         return self.get_response(request)

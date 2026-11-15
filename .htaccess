@@ -5,8 +5,10 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
-    # 1. Force HTTPS
+    # 1. Force HTTPS (bulletproof for cPanel / Cloudflare / Reverse Proxy)
     RewriteCond %{HTTPS} off
+    RewriteCond %{HTTP:X-Forwarded-Proto} !https
+    RewriteCond %{HTTP:X-Forwarded-SSL} !on
     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
     # 2. Canonical Domain: redirect www to non-www

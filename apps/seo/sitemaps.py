@@ -52,16 +52,23 @@ class StaticViewSitemap(BaseVRSitemap):
 
 
 class LegalViewSitemap(BaseVRSitemap):
-    """Legal & compliance pages sitemap."""
+    """Legal & compliance pages sitemap — dynamically excludes any page marked no_index."""
     priority = 0.3
     changefreq = 'yearly'
 
     def items(self):
-        return [
-            'core:legal_notices',
-            'core:privacy_policy',
-            'core:cookie_policy',
-        ]
+        from apps.seo.models import PageSEO
+        mapping = {
+            'core:legal_notices': 'legal',
+            'core:privacy_policy': 'privacy',
+            'core:cookie_policy': 'cookies',
+        }
+        active_items = []
+        for view_name, page_id in mapping.items():
+            page_seo = PageSEO.objects.filter(page_identifier=page_id).first()
+            if not page_seo or not page_seo.no_index:
+                active_items.append(view_name)
+        return active_items
 
     def location(self, item):
         return reverse(item)

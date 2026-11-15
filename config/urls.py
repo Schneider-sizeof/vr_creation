@@ -45,6 +45,22 @@ urlpatterns = [
     path('plan-du-site', RedirectView.as_view(url='/fr/plan-du-site/', permanent=True)),
     path('zones-intervention/', RedirectView.as_view(url='/fr/zones-intervention/', permanent=True)),
     path('zones-intervention', RedirectView.as_view(url='/fr/zones-intervention/', permanent=True)),
+    path('contact/', RedirectView.as_view(url='/fr/contact/', permanent=True)),
+    path('contact', RedirectView.as_view(url='/fr/contact/', permanent=True)),
+    path('visites-virtuelles/', RedirectView.as_view(url='/fr/visites-virtuelles/', permanent=True)),
+    path('visites-virtuelles', RedirectView.as_view(url='/fr/visites-virtuelles/', permanent=True)),
+    path('etudes-de-cas/', RedirectView.as_view(url='/fr/etudes-de-cas/', permanent=True)),
+    path('etudes-de-cas', RedirectView.as_view(url='/fr/etudes-de-cas/', permanent=True)),
+    path('mentions-legales/', RedirectView.as_view(url='/fr/mentions-legales/', permanent=True)),
+    path('mentions-legales', RedirectView.as_view(url='/fr/mentions-legales/', permanent=True)),
+    path('confidentialite/', RedirectView.as_view(url='/fr/confidentialite/', permanent=True)),
+    path('confidentialite', RedirectView.as_view(url='/fr/confidentialite/', permanent=True)),
+    path('cookies/', RedirectView.as_view(url='/fr/cookies/', permanent=True)),
+    path('cookies', RedirectView.as_view(url='/fr/cookies/', permanent=True)),
+    path('offres/', RedirectView.as_view(url='/fr/promotions/', permanent=True)),
+    path('offres', RedirectView.as_view(url='/fr/promotions/', permanent=True)),
+    path('offres-speciales/', RedirectView.as_view(url='/fr/promotions/', permanent=True)),
+    path('offres-speciales', RedirectView.as_view(url='/fr/promotions/', permanent=True)),
 ]
 
 # i18n URL patterns (prefixed by /fr/, /en/, /ar/)
