@@ -217,7 +217,23 @@ Conformément à la règle de travail stricte d'intégrité (zéro donnée inven
 
 ---
 
-## 7. Checklist de Déploiement en Production (cPanel / SSH)
+## 7. Résolution Spécifique des 7 Lignes Google Search Console (GSC)
+
+Le rapport de couverture d'indexation GSC fourni montre 7 motifs de non-indexation. Voici le diagnostic technique de chaque motif et les correctifs déployés :
+
+| Ligne GSC | Volume | Cause Technique Identifiée | Correctif Appliqué |
+|---|---|---|---|
+| **1. Exclue par la balise "noindex"** | 9 pages | Les 3 pages de conformité (`legal`, `privacy`, `cookies`) étaient configurées avec `no_index=True` dans la base tout en étant soumises dans `sitemap.xml` via `LegalViewSitemap` (3 pages x 3 langues = 9 pages). Ce signal contradictoire générait l'exclusion GSC. | Basculement de `no_index` à `False` avec des balises titres et meta descriptions conformes (140-160 car.) en 3 langues. Filtrage dynamique automatique dans `LegalViewSitemap` si jamais une page repasse en noindex. |
+| **2. Erreur liée à des redirections** | 3 pages | Boucle de redirection HTTPS causée par la double réécriture entre Apache et Django : sous cPanel/Passenger, Apache terminait le SSL mais ne transmettait pas toujours `HTTP_X_FORWARDED_PROTO` à Python, provoquant une redirection en boucle 301 infinie sur les racines multilingues (`/fr/`, `/en/`, `/ar/`). | Sécurisation de `apps/seo/middleware.py` (détection multi-en-têtes `is_secure()` : `HTTPS=on`, `PORT=443`, `X-Forwarded-SSL`) et ajout dans `.htaccess` des conditions `RewriteCond %{HTTP:X-Forwarded-Proto} !https`. |
+| **3. Page avec redirection** | 3 pages | URLs racines non préfixées (ex. `/`, `/services`, `/about`) ou sans slash final qui renvoient un code 301/302 vers leur version canonique. Il ne s'agit pas d'une erreur d'après Google, mais d'un comportement d'aiguillage normal. | Maintien des redirections 301 permanentes canoniques et ajout de 301 explicites dans `config/urls.py` pour toutes les URLs racines nues. |
+| **4. Introuvable (404)** | 2 pages | Anciennes URLs ou URLs nues appelées sans préfixe de langue (ex. `/contact`, `/visites-virtuelles`, `/offres-speciales`) qui n'étaient pas déclarées dans les redirections racines de `config/urls.py`. | Ajout de 10 nouvelles règles `RedirectView(permanent=True)` dans `config/urls.py` pour capturer `/contact`, `/visites-virtuelles`, `/etudes-de-cas`, `/mentions-legales`, `/confidentialite`, `/cookies`, `/offres`, `/offres-speciales`. |
+| **5. Autre page avec balise canonique correcte** | 1 page | URL variante explorée par Google (ex. HTTP ou apex sans préfixe) où Google a détecté et respecté la balise `rel="canonical"` pointant vers la version officielle. | Conforme par conception : aucun changement négatif requis, la balise canonique protège le site contre la duplication. |
+| **6. Explorée, actuellement non indexée** | 26 pages | Avant l'overhaul, le site souffrait de contenus trop courts (150-200 mots sur les services), de titres tronqués au milieu des mots, d'absence de FAQs balisées et de descriptions génériques dupliquées. Google explorait ces pages mais repoussait leur indexation par manque de valeur perçue. | Enrichissement massif (Phase 2 & 3) : 1 200+ mots par page de service, 850+ mots par article, 1 800+ mots par ville, 42 FAQs locales avec schema `FAQPage` et `BreadcrumbList`. Lors du prochain passage de Googlebot, les critères de qualité seront largement dépassés. |
+| **7. Page en double : Google n'a pas choisi la même URL canonique que l'utilisateur** | 1 page | Conflit historique entre `/fr/visites-virtuelles/` (démos 360°) et `/fr/services/visites-virtuelles/` (service commercial), qui portaient auparavant le même nom et le même contenu. | Différenciation totale opérée en Phase 1.6 : `/fr/visites-virtuelles/` = « Galerie Démos 360° » (intention de démonstration) vs `/fr/services/visites-virtuelles/` = « Service Visite Virtuelle 3D » (intention de devis B2B). |
+
+---
+
+## 8. Checklist de Déploiement en Production (cPanel / SSH)
 
 Lors du déploiement de la branche `seo-overhaul` sur le serveur cPanel / production :
 
@@ -239,9 +255,10 @@ Lors du déploiement de la branche `seo-overhaul` sur le serveur cPanel / produc
    ```
    *Migrations appliquées :* `apps/services/migrations/0005_city.py`, `apps/blog/migrations/0003_alter_article_options...`, `apps/core/migrations/0020_testimonial_clientlogo...`.
 
-4. **Peuplement initial des villes du Nord :**
+4. **Peuplement initial des villes du Nord & Métadonnées légales :**
    ```bash
    python manage.py seed_northern_cities
+   python scripts/fix_legal_seo.py
    ```
 
 5. **Collecte des fichiers statiques :**
@@ -260,13 +277,16 @@ Lors du déploiement de la branche `seo-overhaul` sur le serveur cPanel / produc
    - Tester `curl -I https://vrcreationcompany.com/sitemap.xml` -> Doit renvoyer `200 OK` avec le contenu XML complet.
    - Tester `curl -I https://vrcreationcompany.com/robots.txt` -> Doit renvoyer `200 OK`.
 
-8. **Soumission aux Moteurs de Recherche :**
-   - **Google Search Console :** Soumettre `https://vrcreationcompany.com/sitemap.xml`. Demander l'indexation manuelle de la page d'accueil et du hub `/fr/zones-intervention/`.
-   - **Bing Webmaster Tools :** Soumettre l'URL du sitemap.
+8. **Validation dans Google Search Console :**
+   - Ouvrir la Search Console -> Menu **Indexation > Pages**.
+   - Cliquer sur la ligne **« Exclue par la balise "noindex" »** -> Cliquer sur le bouton bleu **« Valider la correction »**.
+   - Cliquer sur la ligne **« Erreur liée à des redirections »** -> Cliquer sur **« Valider la correction »**.
+   - Cliquer sur la ligne **« Introuvable (404) »** -> Cliquer sur **« Valider la correction »**.
+   - Dans le menu **Sitemaps**, resoumettre l'URL : `https://vrcreationcompany.com/sitemap.xml`.
 
 ---
 
-## 8. Recommandations SEO Hors-Site (Off-Page & Netlinking Local)
+## 9. Recommandations SEO Hors-Site (Off-Page & Netlinking Local)
 
 1. **Optimisation de la Fiche Google Business Profile (GBP) :**
    - Catégorie principale : *Studio de modélisation 3D* ou *Agence de photographie aérienne*.
