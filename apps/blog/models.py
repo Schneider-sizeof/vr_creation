@@ -41,6 +41,14 @@ class Article(models.Model):
         help_text=_('Résumé de l\'article (max 500 caractères)')
     )
     content = models.TextField(_('Contenu'))
+    meta_title = models.CharField(
+        _('Titre SEO'), max_length=70, blank=True,
+        help_text=_('Titre pour les moteurs de recherche (max 70 caractères). Laisser vide pour utiliser le titre de l\'article.')
+    )
+    meta_description = models.CharField(
+        _('Description SEO'), max_length=160, blank=True,
+        help_text=_('Description pour les moteurs de recherche (max 160 caractères). Laisser vide pour utiliser l\'extrait.')
+    )
     featured_image = models.ImageField(
         _('Image principale'), upload_to='blog/', blank=True, null=True
     )

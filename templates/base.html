@@ -12,8 +12,9 @@
     {# Hreflang alternates #}
     {% hreflang_tags %}
 
-    {# JSON-LD LocalBusiness (all pages & locales) #}
+    {# JSON-LD LocalBusiness & WebSite (all pages & locales) #}
     {% jsonld_local_business %}
+    {% jsonld_website %}
 
     {# Page-specific JSON-LD #}
     {% block jsonld_extra %}{% endblock %}

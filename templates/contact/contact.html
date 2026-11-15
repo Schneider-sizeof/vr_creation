@@ -1,5 +1,9 @@
 {% extends "base.html" %}
-{% load i18n static %}
+{% load i18n static seo_tags %}
+
+{% block jsonld_extra %}
+{% jsonld_breadcrumb "Contact" "" %}
+{% endblock %}
 
 {% block content %}
 {% trans "Contactez-nous" as page_title %}
@@ -53,21 +57,24 @@
                         {% endif %}
                     </ul>
                     
-                    {% if site_settings.social_linkedin or site_settings.social_instagram or site_settings.social_facebook %}
+                    {% if site_settings.social_linkedin or site_settings.social_instagram or site_settings.social_facebook or site_settings.social_tiktok %}
                     <div class="mt-8 pt-8 border-t border-gray-200">
                         <h4 class="font-bold text-dark mb-4">{% trans "Suivez-nous" %}</h4>
                         <div class="flex gap-4">
                             {% if site_settings.social_linkedin %}
-                            <a href="{{ site_settings.social_linkedin }}" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-dark hover:bg-primary hover:text-white transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="{{ site_settings.social_linkedin }}" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-dark hover:bg-primary hover:text-white transition-colors" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                             {% endif %}
                             {% if site_settings.social_instagram %}
-                            <a href="{{ site_settings.social_instagram }}" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-dark hover:bg-primary hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
+                            <a href="{{ site_settings.social_instagram }}" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-dark hover:bg-primary hover:text-white transition-colors" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                             {% endif %}
                             {% if site_settings.social_facebook %}
-                            <a href="{{ site_settings.social_facebook }}" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-dark hover:bg-primary hover:text-white transition-colors"><i class="fab fa-facebook-f"></i></a>
+                            <a href="{{ site_settings.social_facebook }}" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-dark hover:bg-primary hover:text-white transition-colors" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            {% endif %}
+                            {% if site_settings.social_tiktok %}
+                            <a href="{{ site_settings.social_tiktok }}" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-dark hover:bg-primary hover:text-white transition-colors" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                             {% endif %}
                             {% if site_settings.social_whatsapp %}
-                            <a href="https://wa.me/{{ site_settings.social_whatsapp }}?text=Bonjour%20VR%20Creation%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20vos%20services.%20Pouvez-vous%20me%20donner%20plus%20d%27informations%20%3F" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-dark hover:bg-green-500 hover:text-white transition-colors"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://wa.me/{{ site_settings.social_whatsapp }}?text=Bonjour%20VR%20Creation%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20vos%20services.%20Pouvez-vous%20me%20donner%20plus%20d%27informations%20%3F" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-dark hover:bg-green-500 hover:text-white transition-colors" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                             {% endif %}
                         </div>
                     </div>

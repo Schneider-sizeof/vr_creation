@@ -44,7 +44,7 @@
                 <!-- Background Image & Fallback Gradient -->
                 <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-primary-dark to-slate-950"></div>
                 {% if service.featured_image %}
-                <img src="{{ service.featured_image.url }}" alt="{{ service.title }} — VR Creation Tanger" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out z-0" width="800" height="600" loading="lazy" onerror="this.style.display='none'">
+                <img src="{{ service.featured_image.url }}" alt="{{ service.title }}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out z-0" width="800" height="600" loading="lazy" onerror="this.style.display='none'">
                 {% endif %}
                 
                 <!-- Dark readability overlay — full coverage for text contrast -->

@@ -158,8 +158,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (vrToggleBtn) vrToggleBtn.addEventListener('click', toggleVRMode);
   if (mobileVrToggleBtn) mobileVrToggleBtn.addEventListener('click', toggleVRMode);
 
-  // Restore saved VR Mode
-  if (localStorage.getItem('vr_mode') === 'active') {
+  // Restore saved VR Mode (respecting prefers-reduced-motion)
+  if (localStorage.getItem('vr_mode') === 'active' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     toggleVRMode();
   }
 
@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function toggleVRParticles(active) {
     let container = document.getElementById('vr-particles-container');
-    if (!active) {
+    if (!active || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       if (container) container.remove();
       return;
     }

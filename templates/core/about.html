@@ -44,7 +44,8 @@
                 {% if site_settings.about_image %}
                 <img src="{{ site_settings.about_image.url }}" alt="{% trans 'Studio de création 3D et audiovisuel VR Creation à Tanger' %}" class="absolute inset-0 w-full h-full object-cover" loading="lazy" width="800" height="500">
                 {% else %}
-                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1000&q=80" alt="{% trans 'Studio de création 3D et audiovisuel VR Creation à Tanger' %}" class="absolute inset-0 w-full h-full object-cover" loading="lazy" width="800" height="500">
+                <!-- TODO_OWNER: Upload studio / about image in site settings -->
+                <img src="{% static 'img/strategic/villa-en-construction.jpg' %}" alt="{% trans 'Studio de création 3D et audiovisuel VR Creation à Tanger' %}" class="absolute inset-0 w-full h-full object-cover" loading="lazy" width="800" height="500">
                 {% endif %}
             </div>
         </div>

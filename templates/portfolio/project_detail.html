@@ -17,7 +17,8 @@
             {% if project.featured_image %}
             <img src="{{ project.featured_image.url }}" alt="{{ project.title }}" class="w-full h-full object-cover">
             {% else %}
-            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1920&q=80" alt="{{ project.title }}" class="w-full h-full object-cover">
+            <!-- TODO_OWNER: Upload high-resolution project visual -->
+            <img src="{% static 'img/strategic/projet-immobilier.jpg' %}" alt="{{ project.title }}" class="w-full h-full object-cover">
             {% endif %}
             <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent"></div>
         </div>

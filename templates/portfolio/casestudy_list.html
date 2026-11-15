@@ -1,5 +1,9 @@
 {% extends "base.html" %}
-{% load i18n %}
+{% load i18n static seo_tags %}
+
+{% block jsonld_extra %}
+{% jsonld_breadcrumb "Études de cas" "" %}
+{% endblock %}
 
 {% block content %}
 {% trans "Études de Cas" as page_title %}
@@ -14,9 +18,10 @@
                 <div class="grid md:grid-cols-2 h-full">
                     <div class="relative h-64 md:h-auto">
                         {% if case.featured_image %}
-                        <img src="{{ case.featured_image.url }}" alt="{{ case.title }}" class="absolute inset-0 w-full h-full object-cover" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1542361345-89ce583cded4?w=600&q=80';">
+                        <img src="{{ case.featured_image.url }}" alt="{{ case.title }}" class="absolute inset-0 w-full h-full object-cover" onerror="this.onerror=null;this.src='{% static 'img/strategic/projet-immobilier.jpg' %}';">
                         {% else %}
-                        <img src="https://images.unsplash.com/photo-1542361345-89ce583cded4?w=600&q=80" alt="{{ case.title }}" class="absolute inset-0 w-full h-full object-cover">
+                        <!-- TODO_OWNER: Upload dedicated case study cover image -->
+                        <img src="{% static 'img/strategic/projet-immobilier.jpg' %}" alt="{{ case.title }}" class="absolute inset-0 w-full h-full object-cover">
                         {% endif %}
                     </div>
                     <div class="p-6 flex flex-col justify-center">

@@ -55,34 +55,59 @@ def seo_meta_tags(context):
 
     base_url = getattr(settings, 'SITE_URL', 'https://vrcreationcompany.com')
 
-    # Fallback to default OG image from site settings or branded fallback banner
-    if not og_image and site_settings and site_settings.default_og_image:
-        og_image = site_settings.default_og_image.url
+    # Unique OG image per page type if not already found on the object or page_seo
+    page_id = context.get('page_identifier') or (page_seo.page_identifier if page_seo else '')
+    page_og_map = {
+        'home': '/static/img/strategic/projet-immobilier.jpg',
+        'about': '/media/site/hero/vitrage-panoramique-coulissant-accordeon.jpeg',
+        'services': '/media/services/visites-virtuelles-featured.webp',
+        'portfolio': '/media/portfolio/projet-immobilier.webp',
+        'case_studies': '/media/case_studies/projet-immobilier.webp',
+        'virtual_tours': '/media/services/captures-360-featured.webp',
+        'blog': '/static/img/strategic/magasin-concept-store.jpg',
+        'promotions': '/static/img/promotions/offre-performance.jpg',
+        'contact': '/media/services/espace-bureau.webp',
+        'sitemap': '/static/img/strategic/villa-en-construction.jpg',
+    }
     if not og_image:
-        og_image = "/static/img/strategic/projet-immobilier.jpg"
+        if page_id in page_og_map:
+            og_image = page_og_map[page_id]
+        elif site_settings and site_settings.default_og_image:
+            og_image = site_settings.default_og_image.url
+        else:
+            og_image = "/static/img/strategic/projet-immobilier.jpg"
 
-    # Strict description trimming at word boundary (≤ 155 chars)
+    # Strict description trimming: target 140–160 chars
     if description:
         description = description.strip().replace('\r', ' ').replace('\n', ' ')
-        if len(description) > 155:
-            trimmed = description[:152].rsplit(' ', 1)[0]
+        if len(description) > 160:
+            trimmed = description[:157].rsplit(' ', 1)[0]
             description = f"{trimmed}..."
 
-    # Strict title enforcement: <= 60 characters
+    # Title enforcement: <= 60 characters without hard-truncating clean phrases
     site_name = site_settings.site_name if site_settings else 'VR Creation Tanger'
     brand_suffix = ' | VR Creation'
-    if title:
-        title = title.strip()
-        if 'VR Creation' in title:
-            full_title = title
-        elif len(title) + len(brand_suffix) <= 60:
-            full_title = f"{title}{brand_suffix}"
-        else:
-            full_title = title
-        if len(full_title) > 60:
-            full_title = full_title[:57].rsplit(' ', 1)[0] + '...'
+    raw_title = title.strip() if title else 'VR Creation | Studio 3D Tanger'
+
+    if 'VR Creation' in raw_title:
+        full_title = raw_title
+    elif len(raw_title) + len(brand_suffix) <= 60:
+        full_title = f"{raw_title}{brand_suffix}"
     else:
-        full_title = 'VR Creation | Studio 3D Tanger'
+        full_title = raw_title
+
+    # If full_title still exceeds 60 characters, trim cleanly at word boundary
+    if len(full_title) > 60:
+        clean_words = full_title[:60].rsplit(' ', 1)[0]
+        full_title = clean_words if len(clean_words) >= 40 else full_title[:60]
+
+    # Social title for OG / Twitter (can accommodate up to 70–90 chars without truncation)
+    if 'VR Creation' in raw_title:
+        social_title = raw_title
+    elif len(raw_title) + len(brand_suffix) <= 90:
+        social_title = f"{raw_title}{brand_suffix}"
+    else:
+        social_title = raw_title
 
     current_url = base_url + request.path if request else base_url
     if not canonical:
@@ -115,8 +140,21 @@ def seo_meta_tags(context):
         parts.append(f'<meta name="google-site-verification" content="{gsc_id}">')
 
     # Open Graph
-    parts.append(f'<meta property="og:title" content="{full_title}">')
-    parts.append('<meta property="og:type" content="website">')
+    parts.append(f'<meta property="og:title" content="{social_title}">')
+
+    is_article = bool(context.get('article'))
+    if is_article:
+        parts.append('<meta property="og:type" content="article">')
+        article_obj = context.get('article')
+        if hasattr(article_obj, 'published_date') and article_obj.published_date:
+            parts.append(f'<meta property="article:published_time" content="{article_obj.published_date.isoformat()}">')
+        if hasattr(article_obj, 'updated_at') and article_obj.updated_at:
+            parts.append(f'<meta property="article:modified_time" content="{article_obj.updated_at.isoformat()}">')
+        if hasattr(article_obj, 'author') and article_obj.author:
+            parts.append(f'<meta property="article:author" content="{article_obj.author}">')
+    else:
+        parts.append('<meta property="og:type" content="website">')
+
     parts.append(f'<meta property="og:url" content="{current_url}">')
     parts.append(f'<meta property="og:site_name" content="{site_name}">')
     parts.append(f'<meta property="og:locale" content="{og_locale}">')
@@ -134,7 +172,7 @@ def seo_meta_tags(context):
 
     # Twitter Card
     parts.append('<meta name="twitter:card" content="summary_large_image">')
-    parts.append(f'<meta name="twitter:title" content="{full_title}">')
+    parts.append(f'<meta name="twitter:title" content="{social_title}">')
     if description:
         parts.append(f'<meta name="twitter:description" content="{description}">')
     if og_image:
@@ -240,6 +278,22 @@ def jsonld_organization(context):
 
 
 @register.simple_tag(takes_context=True)
+def jsonld_website(context):
+    """JSON-LD WebSite schema for sitewide branding and search action."""
+    base_url = getattr(settings, 'SITE_URL', 'https://vrcreationcompany.com')
+    data = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": f"{base_url}/#website",
+        "url": f"{base_url}/",
+        "name": "VR Creation Company",
+        "description": "Studio de modélisation 3D, visites virtuelles immersives 360° et production visuelle à Tanger",
+        "inLanguage": ["fr-MA", "ar-MA", "en"]
+    }
+    return mark_safe(f'<script type="application/ld+json">\n{json.dumps(data, ensure_ascii=False, indent=2)}\n</script>')
+
+
+@register.simple_tag(takes_context=True)
 def jsonld_breadcrumb(context, *breadcrumbs):
     """
     JSON-LD BreadcrumbList.
@@ -248,8 +302,11 @@ def jsonld_breadcrumb(context, *breadcrumbs):
     """
     request = context.get('request')
     base_url = getattr(settings, 'SITE_URL', 'https://vrcreationcompany.com')
+    lang = get_language() or 'fr'
+    home_labels = {'fr': 'Accueil', 'en': 'Home', 'ar': 'الرئيسية'}
+    home_name = home_labels.get(lang, 'Accueil')
 
-    items = [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": base_url + "/fr/"}]
+    items = [{"@type": "ListItem", "position": 1, "name": home_name, "item": f"{base_url}/{lang}/"}]
 
     pos = 2
     for i in range(0, len(breadcrumbs), 2):
@@ -266,7 +323,7 @@ def jsonld_breadcrumb(context, *breadcrumbs):
         "@type": "BreadcrumbList",
         "itemListElement": items,
     }
-    return mark_safe(f'<script type="application/ld+json">{json.dumps(data, ensure_ascii=False)}</script>')
+    return mark_safe(f'<script type="application/ld+json">\n{json.dumps(data, ensure_ascii=False, indent=2)}\n</script>')
 
 
 @register.simple_tag(takes_context=True)
@@ -279,6 +336,9 @@ def jsonld_service(context):
     base_url = getattr(settings, 'SITE_URL', 'https://vrcreationcompany.com')
     site_settings = context.get('site_settings')
 
+    cities = ["Tanger", "Tétouan", "Asilah", "Larache", "Chefchaouen", "Al Hoceima", "M'diq", "Martil", "Fnideq"]
+    area_served = [{"@type": "City", "name": c} for c in cities] + [{"@type": "AdministrativeArea", "name": "Nord du Maroc"}]
+
     data = {
         "@context": "https://schema.org",
         "@type": "Service",
@@ -286,21 +346,26 @@ def jsonld_service(context):
         "description": service.short_description or (service.full_description[:200] if service.full_description else ""),
         "url": base_url + service.get_absolute_url(),
         "provider": {
-            "@type": "Organization",
+            "@type": ["Organization", "ProfessionalService"],
             "name": site_settings.site_name if site_settings else "VR Creation Company",
             "url": base_url,
+            "telephone": site_settings.phone if (site_settings and site_settings.phone) else "+212625071498",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Ibn Batouta bureaux, Av. Youssef Ibn Tachfine",
+                "addressLocality": "Tanger",
+                "addressRegion": "Tanger-Tétouan-Al Hoceïma",
+                "postalCode": "90000",
+                "addressCountry": "MA"
+            }
         },
-        "areaServed": [
-            {"@type": "City", "name": "Tanger"},
-            {"@type": "City", "name": "Tétouan"},
-            {"@type": "AdministrativeArea", "name": "Northern Morocco"}
-        ]
+        "areaServed": area_served
     }
 
     if service.featured_image:
         data["image"] = base_url + service.featured_image.url
 
-    return mark_safe(f'<script type="application/ld+json">{json.dumps(data, ensure_ascii=False)}</script>')
+    return mark_safe(f'<script type="application/ld+json">\n{json.dumps(data, ensure_ascii=False, indent=2)}\n</script>')
 
 
 @register.simple_tag(takes_context=True)
@@ -311,22 +376,36 @@ def jsonld_article(context):
         return ''
 
     base_url = getattr(settings, 'SITE_URL', 'https://vrcreationcompany.com')
+    author_name = article.author or "Équipe VR Creation"
 
     data = {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": article.title,
         "description": article.excerpt,
-        "author": {"@type": "Person", "name": article.author},
+        "author": {"@type": "Person", "name": author_name},
+        "publisher": {
+            "@type": "Organization",
+            "name": "VR Creation Company",
+            "url": f"{base_url}/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": f"{base_url}/media/site/logo.png"
+            }
+        },
         "datePublished": article.published_date.isoformat(),
         "dateModified": article.updated_at.isoformat(),
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": base_url + article.get_absolute_url()
+        },
         "url": base_url + article.get_absolute_url(),
     }
 
     if article.featured_image:
         data["image"] = base_url + article.featured_image.url
 
-    return mark_safe(f'<script type="application/ld+json">{json.dumps(data, ensure_ascii=False)}</script>')
+    return mark_safe(f'<script type="application/ld+json">\n{json.dumps(data, ensure_ascii=False, indent=2)}\n</script>')
 
 
 @register.simple_tag(takes_context=True)
@@ -416,6 +495,9 @@ def jsonld_local_business(context):
             "https://tiktok.com/@vrcreation"
         ]
 
+    cities = ["Tanger", "Tétouan", "Asilah", "Larache", "Chefchaouen", "Al Hoceima", "M'diq", "Martil", "Fnideq"]
+    area_served = [{"@type": "City", "name": c} for c in cities] + [{"@type": "AdministrativeArea", "name": "Nord du Maroc"}]
+
     data = {
         "@context": "https://schema.org",
         "@type": ["Organization", "ProfessionalService"],
@@ -439,12 +521,16 @@ def jsonld_local_business(context):
             "latitude": 35.7772,
             "longitude": -5.8047
         },
-        "areaServed": [
-            {"@type": "City", "name": "Tanger"},
-            {"@type": "City", "name": "Tétouan"},
-            {"@type": "City", "name": "Chefchaouen"},
-            {"@type": "AdministrativeArea", "name": "Nord du Maroc"}
+        # TODO_OWNER: verify exact opening hours for Tangier office (currently defaulted to Mo-Fr 09:00-18:00)
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+            }
         ],
+        "areaServed": area_served,
         "sameAs": social + ["https://share.google/CEh7vvvHw6o1atT6d"]
     }
 

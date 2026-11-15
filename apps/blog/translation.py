@@ -10,7 +10,7 @@ class CategoryTranslation(TranslationOptions):
 
 
 class ArticleTranslation(TranslationOptions):
-    fields = ('title', 'slug', 'author', 'excerpt', 'content')
+    fields = ('title', 'slug', 'author', 'excerpt', 'content', 'meta_title', 'meta_description')
 
 
 translator.register(Category, CategoryTranslation)

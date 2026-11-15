@@ -1,5 +1,9 @@
 {% extends "base.html" %}
-{% load i18n %}
+{% load i18n static seo_tags %}
+
+{% block jsonld_extra %}
+{% jsonld_breadcrumb "Réalisations" "" %}
+{% endblock %}
 
 {% block content %}
 {% trans "Notre Portfolio" as page_title %}
@@ -15,9 +19,10 @@
             <a href="{% url 'portfolio:project_detail' project.slug %}" class="group block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all border border-gray-100">
                 <div class="relative overflow-hidden aspect-[4/3]">
                     {% if project.featured_image %}
-                    <img src="{{ project.featured_image.url }}" alt="{{ project.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=600&q=80';">
+                    <img src="{{ project.featured_image.url }}" alt="{{ project.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null;this.src='{% static 'img/strategic/projet-immobilier.jpg' %}';">
                     {% else %}
-                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=600&q=80" alt="{{ project.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <!-- TODO_OWNER: Upload dedicated portfolio project visual -->
+                    <img src="{% static 'img/strategic/projet-immobilier.jpg' %}" alt="{{ project.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     {% endif %}
                     <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                         <span class="text-white border-2 border-white px-6 py-2 rounded-full font-medium">{% trans "Voir le projet" %}</span>

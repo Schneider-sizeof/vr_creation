@@ -17,9 +17,10 @@
                 <!-- Service Featured Image -->
                 <div class="relative overflow-hidden rounded-2xl shadow-lg mb-8 aspect-[16/9]">
                     {% if service.featured_image %}
-                    <img src="{{ service.featured_image.url }}" alt="{{ service.title }} — VR Creation Tanger" class="w-full h-full object-cover" loading="eager" width="1200" height="675">
+                    <img src="{{ service.featured_image.url }}" alt="{{ service.title }}" class="w-full h-full object-cover" loading="eager" width="1200" height="675">
                     {% else %}
-                    <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200&q=80" alt="{{ service.title }} — VR Creation Tanger" class="w-full h-full object-cover" loading="eager" width="1200" height="675">
+                    <!-- TODO_OWNER: Upload high-resolution photo for {{ service.title }} -->
+                    <img src="/static/img/strategic/projet-immobilier.jpg" alt="{{ service.title }}" class="w-full h-full object-cover" loading="eager" width="1200" height="675">
                     {% endif %}
                     <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
                 </div>
@@ -50,7 +51,7 @@
                         <div class="group relative rounded-xl overflow-hidden shadow-sm hover:shadow-md cursor-pointer aspect-square transition-all duration-300 transform hover:-translate-y-1 js-gallery-item" 
                              data-src="{{ item.image.url }}" 
                              data-alt="{{ item.alt_text|default:service.title }}">
-                            <img src="{{ item.image.url }}" alt="{{ item.alt_text|default:service.title }} — VR Creation Tanger" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width="400" height="400">
+                            <img src="{{ item.image.url }}" alt="{{ item.alt_text|default:service.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width="400" height="400">
                             <div class="absolute inset-0 bg-primary-dark/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white p-4">
                                 <i class="fas fa-search-plus text-2xl mb-2 transform scale-75 group-hover:scale-100 transition-transform"></i>
                                 {% if item.alt_text %}
@@ -74,6 +75,20 @@
                         {% trans "Voir les réalisations" %} <i class="fas fa-arrow-right ml-2 text-primary"></i>
                     </a>
                 </div>
+
+                {% if service.slug == 'visites-virtuelles' or service.slug == 'captures-360' %}
+                <!-- Interactive 360 Demo Callout (Cross-link to Demos) -->
+                <div class="mt-8 p-6 rounded-2xl bg-primary/10 border border-primary/20 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+                    <div>
+                        <span class="text-xs uppercase tracking-widest text-primary font-bold">{% trans "Démonstrations 360° en direct" %}</span>
+                        <h4 class="text-xl font-bold mt-1 text-dark">{% trans "Explorez nos visites immersives en ligne" %}</h4>
+                        <p class="text-gray-600 text-sm mt-1">{% trans "Manipulez nos projets d'exemple dans la visionneuse interactive pour tester le rendu final." %}</p>
+                    </div>
+                    <a href="{% url 'portfolio:virtual_tours' %}" class="btn btn-primary px-6 py-3 text-sm font-bold whitespace-nowrap shadow">
+                        {% trans "Tester les démos 360°" %} <i class="fas fa-vr-cardboard ml-2"></i>
+                    </a>
+                </div>
+                {% endif %}
 
                 <!-- Process Steps -->
                 <div class="mt-16">

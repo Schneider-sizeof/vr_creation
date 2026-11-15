@@ -72,6 +72,10 @@ class ArticleAdmin(TabbedTranslationAdmin):
         (_('Contenu'), {
             'fields': ('excerpt', 'content', 'featured_image')
         }),
+        (_('Optimisation SEO'), {
+            'fields': ('meta_title', 'meta_description'),
+            'classes': ('collapse',),
+        }),
         (_('Dates système'), {
             'fields': ('created_at', 'updated_at'),
             'classes': ('collapse',),

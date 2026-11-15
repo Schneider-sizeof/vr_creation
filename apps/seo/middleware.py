@@ -24,7 +24,7 @@ class CanonicalDomainMiddleware:
         canonical_protocol = getattr(settings, 'SITE_PROTOCOL', 'https')
 
         # Read host directly from META to intercept before DisallowedHost validation
-        raw_host = (request.META.get('HTTP_HOST') or '').split(':')[0].strip().lower()
+        raw_host = (request.META.get('HTTP_HOST') or request.META.get('SERVER_NAME') or '').split(':')[0].strip().lower()
 
         # In dev mode (DEBUG=True), allow localhost / 127.0.0.1 / testserver
         is_debug = getattr(settings, 'DEBUG', False)

@@ -1,5 +1,9 @@
 {% extends "base.html" %}
-{% load i18n static %}
+{% load i18n static seo_tags %}
+
+{% block jsonld_extra %}
+{% jsonld_breadcrumb "Offres & Promotions" "/fr/promotions/" promotion.title "" %}
+{% endblock %}
 
 {% block content %}
 {% include "partials/page_hero.html" with title=promotion.title breadcrumb_label=promotion.title %}

@@ -44,6 +44,11 @@ class StaticViewSitemap(BaseVRSitemap):
     def location(self, item):
         return reverse(item)
 
+    def lastmod(self, item):
+        from apps.services.models import Service
+        latest = Service.objects.order_by('-updated_at').first()
+        return latest.updated_at if latest else None
+
 
 class LegalViewSitemap(BaseVRSitemap):
     """Legal & compliance pages sitemap."""
@@ -59,6 +64,11 @@ class LegalViewSitemap(BaseVRSitemap):
 
     def location(self, item):
         return reverse(item)
+
+    def lastmod(self, item):
+        from apps.services.models import Service
+        latest = Service.objects.order_by('-updated_at').first()
+        return latest.updated_at if latest else None
 
 
 class ServiceSitemap(BaseVRSitemap):
