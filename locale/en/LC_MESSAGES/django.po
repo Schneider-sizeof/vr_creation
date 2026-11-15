@@ -169,8 +169,20 @@ msgstr "Blog"
 msgid "Blog & Actualités"
 msgstr "Blog & News"
 
+msgid "Bonjour, je souhaite démarrer un projet de production visuelle à %(city_name)s. Pouvez-vous me transmettre une offre ?"
+msgstr "Hello, I would like to start a visual production project in %(city_name)s. Could you send me an offer?"
+
+msgid "Bonjour, je souhaite démarrer un projet de production visuelle à {{ city_name }}. Pouvez-vous me transmettre une offre ?"
+msgstr "Hello, I would like to start a visual production project in {{ city_name }}. Could you send me an offer?"
+
 msgid "Bonjour, je souhaite un devis pour un projet dans le Nord du Maroc."
 msgstr "Hello, I would like a quote for a project in Northern Morocco."
+
+msgid "Bonjour, je souhaite un devis pour un projet à %(city_name)s."
+msgstr "Hello, I would like a quote for a project in %(city_name)s."
+
+msgid "Bonjour, je souhaite un devis pour un projet à {{ city_name }}."
+msgstr "Hello, I would like a quote for a project in {{ city_name }}."
 
 msgid "Bouton hero 1 — libellé"
 msgstr "Hero button 1 — label"
@@ -358,6 +370,12 @@ msgstr "Contact our team for a custom quote tailored to your city and project ti
 msgid "Contactez notre studio à Tanger pour transformer vos plans 2D en expériences immersives à fort impact commercial."
 msgstr "Contact our Tangier studio to transform your 2D blueprints into high-impact immersive sales experiences."
 
+msgid "Contactez notre équipe basée à Tanger pour organiser un repérage sur site à %(city_name)s et obtenir une proposition technique chiffrée sous 24h."
+msgstr "Contact our Tangier team to schedule an on-site visit in %(city_name)s and receive a detailed quote within 24h."
+
+msgid "Contactez notre équipe basée à Tanger pour organiser un repérage sur site à {{ city_name }} et obtenir une proposition technique chiffrée sous 24h."
+msgstr "Contact our Tangier team to schedule an on-site visit in {{ city_name }} and receive a detailed quote within 24h."
+
 msgid "Contactez notre équipe à Tanger pour un premier échange gratuit et sans engagement."
 msgstr "Contact our team in Tanger for a free, no-obligation initial consultation."
 
@@ -463,6 +481,12 @@ msgstr "Request a personalized quote"
 msgid "Depuis nos bureaux de Tanger, nous accompagnons les entreprises et institutions de toute la région nord."
 msgstr "From our offices in Tanger, we support businesses and institutions across the entire northern region."
 
+msgid "Depuis nos bureaux à Tanger, nos équipes interviennent sur l'ensemble du littoral et de l'arrière-pays du Nord marocain : Tétouan, Asilah, Larache, Chefchaouen, Al Hoceima, M'diq, Martil et Fnideq. <a href=\"%(hub_url)s\" class=\"text-primary font-semibold hover:underline\">Découvrez le détail de nos zones d'intervention &rarr;</a>"
+msgstr "From our Tangier headquarters, our crews operate across the entire Northern coastline and interior: Tetouan, Asilah, Larache, Chefchaouen, Al Hoceima, M'diq, Martil, and Fnideq. <a href=\"%(hub_url)s\" class=\"text-primary font-semibold hover:underline\">Explore our full service areas &rarr;</a>"
+
+msgid "Depuis nos bureaux à Tanger, nos équipes interviennent sur l'ensemble du littoral et de l'arrière-pays du Nord marocain : Tétouan, Asilah, Larache, Chefchaouen, Al Hoceima, M'diq, Martil et Fnideq. <a href=\"{{ hub_url }}\" class=\"text-primary font-semibold hover:underline\">Découvrez le détail de nos zones d'intervention &rarr;</a>"
+msgstr "From our Tangier headquarters, our crews operate across the entire Northern coastline and interior: Tetouan, Asilah, Larache, Chefchaouen, Al Hoceima, M'diq, Martil, and Fnideq. <a href=\"{{ hub_url }}\" class=\"text-primary font-semibold hover:underline\">Explore our full service areas &rarr;</a>"
+
 msgid "Dernière mise à jour"
 msgstr "Last Updated"
 
@@ -567,6 +591,12 @@ msgstr "Discover the 3D Tours service"
 
 msgid "Découvrir nos services"
 msgstr "Discover our services"
+
+msgid "Découvrir nos services à %(city_name)s"
+msgstr "Explore our services in %(city_name)s"
+
+msgid "Découvrir nos services à {{ city_name }}"
+msgstr "Explore our services in {{ city_name }}"
 
 msgid "Découvrir nos solutions"
 msgstr "Discover our solutions"
@@ -684,6 +714,12 @@ msgstr "Recent project scenarios executed for architects, real estate developers
 
 msgid "Expertise 360°"
 msgstr "360° Expertise"
+
+msgid "Expertise visuelle 3D et captation immersive à %(city_name)s"
+msgstr "3D Visual Expertise & Immersive Media in %(city_name)s"
+
+msgid "Expertise visuelle 3D et captation immersive à {{ city_name }}"
+msgstr "3D Visual Expertise & Immersive Media in {{ city_name }}"
 
 msgid "Explorez nos démonstrations de visites 360° interactives"
 msgstr "Explore our interactive 360° tour demonstrations"
@@ -1072,6 +1108,12 @@ msgstr "VR Creation Location — Tanger, Morocco"
 msgid "Logistique & Déplacements depuis Tanger"
 msgstr "Logistics & Travel from Tangier"
 
+msgid "Logistique d'intervention à %(city_name)s"
+msgstr "Field Intervention Logistics in %(city_name)s"
+
+msgid "Logistique d'intervention à {{ city_name }}"
+msgstr "Field Intervention Logistics in {{ city_name }}"
+
 msgid "Logo"
 msgstr "Logo"
 
@@ -1245,6 +1287,12 @@ msgstr "Our exclusive offers to accelerate your projects"
 
 msgid "Nos packs & offres exclusives"
 msgstr "Our packs & exclusive offers"
+
+msgid "Nos solutions visuelles déployées à %(city_name)s"
+msgstr "Our Visual Solutions Deployed in %(city_name)s"
+
+msgid "Nos solutions visuelles déployées à {{ city_name }}"
+msgstr "Our Visual Solutions Deployed in {{ city_name }}"
 
 msgid "Nos valeurs"
 msgstr "Our values"
@@ -1555,6 +1603,12 @@ msgstr "Related Projects"
 msgid "Projets Récents"
 msgstr "Recent Projects"
 
+msgid "Projets types réalisés à %(city_name)s"
+msgstr "Typical Projects Executed in %(city_name)s"
+
+msgid "Projets types réalisés à {{ city_name }}"
+msgstr "Typical Projects Executed in {{ city_name }}"
+
 msgid "Promotion"
 msgstr "Promotion"
 
@@ -1584,6 +1638,12 @@ msgstr "Service overview"
 
 msgid "Prêt à donner vie à votre projet ?"
 msgstr "Ready to bring your project to life?"
+
+msgid "Prêt à valoriser votre projet à %(city_name)s ?"
+msgstr "Ready to showcase your project in %(city_name)s?"
+
+msgid "Prêt à valoriser votre projet à {{ city_name }} ?"
+msgstr "Ready to showcase your project in {{ city_name }}?"
 
 msgid "Publié"
 msgstr "Published"
@@ -1620,6 +1680,12 @@ msgstr "Frequently Asked Questions (FAQ)"
 
 msgid "Questions fréquentes sur ce service"
 msgstr "Frequently asked questions about this service"
+
+msgid "Questions fréquentes sur nos services à %(city_name)s"
+msgstr "Frequently Asked Questions about our services in %(city_name)s"
+
+msgid "Questions fréquentes sur nos services à {{ city_name }}"
+msgstr "Frequently Asked Questions about our services in {{ city_name }}"
 
 msgid "Qui sommes-nous ?"
 msgstr "Who are we?"
@@ -2169,6 +2235,12 @@ msgstr "Hub City (Tangier)"
 
 msgid "Villes du Nord couvertes par nos équipes"
 msgstr "Northern Cities Covered by Our Crews"
+
+msgid "Villes voisines de %(city_name)s également couvertes"
+msgstr "Nearby Cities around %(city_name)s also covered"
+
+msgid "Villes voisines de {{ city_name }} également couvertes"
+msgstr "Nearby Cities around {{ city_name }} also covered"
 
 msgid "Villes voisines à lier"
 msgstr "Nearby Cities to Link"

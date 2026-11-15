@@ -169,8 +169,20 @@ msgstr "المدونة"
 msgid "Blog & Actualités"
 msgstr "المدوّنة والأخبار"
 
+msgid "Bonjour, je souhaite démarrer un projet de production visuelle à %(city_name)s. Pouvez-vous me transmettre une offre ?"
+msgstr "مرحباً، أرغب في بدء مشروع إنتاج بصري في %(city_name)s. هل يمكنكم تزويدي بعرض؟"
+
+msgid "Bonjour, je souhaite démarrer un projet de production visuelle à {{ city_name }}. Pouvez-vous me transmettre une offre ?"
+msgstr "مرحباً، أرغب في بدء مشروع إنتاج بصري في {{ city_name }}. هل يمكنكم تزويدي بعرض؟"
+
 msgid "Bonjour, je souhaite un devis pour un projet dans le Nord du Maroc."
 msgstr "مرحباً، أود الحصول على عرض أسعار لمشروع في شمال المغرب."
+
+msgid "Bonjour, je souhaite un devis pour un projet à %(city_name)s."
+msgstr "مرحباً، أود الحصول على عرض أسعار لمشروع في %(city_name)s."
+
+msgid "Bonjour, je souhaite un devis pour un projet à {{ city_name }}."
+msgstr "مرحباً، أود الحصول على عرض أسعار لمشروع في {{ city_name }}."
 
 msgid "Bouton hero 1 — libellé"
 msgstr "زر البطل 1 — النص"
@@ -358,6 +370,12 @@ msgstr "تواصل مع فريقنا للحصول على عرض أسعار مخ�
 msgid "Contactez notre studio à Tanger pour transformer vos plans 2D en expériences immersives à fort impact commercial."
 msgstr "تواصل مع استوديو طنجة لتحويل مخططاتك إلى تجارب تفاعلية غامرة ترفع وتيرة المبيعات."
 
+msgid "Contactez notre équipe basée à Tanger pour organiser un repérage sur site à %(city_name)s et obtenir une proposition technique chiffrée sous 24h."
+msgstr "تواصلوا مع فريقنا بطنجة لبرمجة معاينة ميدانية في %(city_name)s والحصول على عرض تقني مفصل خلال 24 ساعة."
+
+msgid "Contactez notre équipe basée à Tanger pour organiser un repérage sur site à {{ city_name }} et obtenir une proposition technique chiffrée sous 24h."
+msgstr "تواصلوا مع فريقنا بطنجة لبرمجة معاينة ميدانية في {{ city_name }} والحصول على عرض تقني مفصل خلال 24 ساعة."
+
 msgid "Contactez notre équipe à Tanger pour un premier échange gratuit et sans engagement."
 msgstr "تواصلوا مع فريقنا في طنجة لاستشارة أولى مجانية وبدون التزام."
 
@@ -463,6 +481,12 @@ msgstr "طلب عرض أسعار مخصص"
 msgid "Depuis nos bureaux de Tanger, nous accompagnons les entreprises et institutions de toute la région nord."
 msgstr "من مكاتبنا في طنجة، نرافق الشركات والمؤسسات في جميع أنحاء المنطقة الشمالية."
 
+msgid "Depuis nos bureaux à Tanger, nos équipes interviennent sur l'ensemble du littoral et de l'arrière-pays du Nord marocain : Tétouan, Asilah, Larache, Chefchaouen, Al Hoceima, M'diq, Martil et Fnideq. <a href=\"%(hub_url)s\" class=\"text-primary font-semibold hover:underline\">Découvrez le détail de nos zones d'intervention &rarr;</a>"
+msgstr "انطلاقاً من مكاتبنا في طنجة، تتدخل فرقنا في كامل الساحل والظهير الشمالي للمغرب: تطوان، أصيلة، العرائش، شفشاون، الحسيمة، المضيق، مرتيل والفنيدق. <a href=\"%(hub_url)s\" class=\"text-primary font-semibold hover:underline\">اكتشفوا تفاصيل مناطق تدخلنا &rarr;</a>"
+
+msgid "Depuis nos bureaux à Tanger, nos équipes interviennent sur l'ensemble du littoral et de l'arrière-pays du Nord marocain : Tétouan, Asilah, Larache, Chefchaouen, Al Hoceima, M'diq, Martil et Fnideq. <a href=\"{{ hub_url }}\" class=\"text-primary font-semibold hover:underline\">Découvrez le détail de nos zones d'intervention &rarr;</a>"
+msgstr "انطلاقاً من مكاتبنا في طنجة، تتدخل فرقنا في كامل الساحل والظهير الشمالي للمغرب: تطوان، أصيلة، العرائش، شفشاون، الحسيمة، المضيق، مرتيل والفنيدق. <a href=\"{{ hub_url }}\" class=\"text-primary font-semibold hover:underline\">اكتشفوا تفاصيل مناطق تدخلنا &rarr;</a>"
+
 msgid "Dernière mise à jour"
 msgstr "آخر تحديث"
 
@@ -567,6 +591,12 @@ msgstr "اكتشفوا خدمة الجولات ثلاثية الأبعاد"
 
 msgid "Découvrir nos services"
 msgstr "اكتشفوا خدماتنا"
+
+msgid "Découvrir nos services à %(city_name)s"
+msgstr "اكتشف خدماتنا في %(city_name)s"
+
+msgid "Découvrir nos services à {{ city_name }}"
+msgstr "اكتشف خدماتنا في {{ city_name }}"
 
 msgid "Découvrir nos solutions"
 msgstr "اكتشفوا حلولنا"
@@ -684,6 +714,12 @@ msgstr "نماذج حية لمشاريع أنجزناها مؤخراً لشرك�
 
 msgid "Expertise 360°"
 msgstr "خبرة 360°"
+
+msgid "Expertise visuelle 3D et captation immersive à %(city_name)s"
+msgstr "الخبرة البصرية 3D والتصوير التفاعلي الغامر في %(city_name)s"
+
+msgid "Expertise visuelle 3D et captation immersive à {{ city_name }}"
+msgstr "الخبرة البصرية 3D والتصوير التفاعلي الغامر في {{ city_name }}"
 
 msgid "Explorez nos démonstrations de visites 360° interactives"
 msgstr "استكشفوا عروضنا التوضيحية للجولات التفاعلية 360°"
@@ -1072,6 +1108,12 @@ msgstr "موقع VR Creation — طنجة، المغرب"
 msgid "Logistique & Déplacements depuis Tanger"
 msgstr "الترتيبات اللوجستية والتنقل من طنجة"
 
+msgid "Logistique d'intervention à %(city_name)s"
+msgstr "الترتيبات اللوجستية للتدخل في %(city_name)s"
+
+msgid "Logistique d'intervention à {{ city_name }}"
+msgstr "الترتيبات اللوجستية للتدخل في {{ city_name }}"
+
 msgid "Logo"
 msgstr "شعار"
 
@@ -1245,6 +1287,12 @@ msgstr "عروضنا الحصرية لتسريع مشاريعكم"
 
 msgid "Nos packs & offres exclusives"
 msgstr "باقاتنا وعروضنا الحصرية"
+
+msgid "Nos solutions visuelles déployées à %(city_name)s"
+msgstr "حلولنا البصرية المتوفرة في %(city_name)s"
+
+msgid "Nos solutions visuelles déployées à {{ city_name }}"
+msgstr "حلولنا البصرية المتوفرة في {{ city_name }}"
 
 msgid "Nos valeurs"
 msgstr "قيمنا"
@@ -1555,6 +1603,12 @@ msgstr "مشاريع ذات صلة"
 msgid "Projets Récents"
 msgstr "المشاريع الحديثة"
 
+msgid "Projets types réalisés à %(city_name)s"
+msgstr "نماذج المشاريع المنجزة في %(city_name)s"
+
+msgid "Projets types réalisés à {{ city_name }}"
+msgstr "نماذج المشاريع المنجزة في {{ city_name }}"
+
 msgid "Promotion"
 msgstr "عرض ترويجي"
 
@@ -1584,6 +1638,12 @@ msgstr "تقديم الخدمة"
 
 msgid "Prêt à donner vie à votre projet ?"
 msgstr "مستعدون لإحياء مشروعكم؟"
+
+msgid "Prêt à valoriser votre projet à %(city_name)s ?"
+msgstr "هل أنتم مستعدون لتثمين مشروعكم في %(city_name)s؟"
+
+msgid "Prêt à valoriser votre projet à {{ city_name }} ?"
+msgstr "هل أنتم مستعدون لتثمين مشروعكم في {{ city_name }}؟"
 
 msgid "Publié"
 msgstr "منشور"
@@ -1620,6 +1680,12 @@ msgstr "الأسئلة الشائعة (FAQ)"
 
 msgid "Questions fréquentes sur ce service"
 msgstr "الأسئلة الشائعة حول هذه الخدمة"
+
+msgid "Questions fréquentes sur nos services à %(city_name)s"
+msgstr "الأسئلة الشائعة حول خدماتنا في %(city_name)s"
+
+msgid "Questions fréquentes sur nos services à {{ city_name }}"
+msgstr "الأسئلة الشائعة حول خدماتنا في {{ city_name }}"
 
 msgid "Qui sommes-nous ?"
 msgstr "من نحن؟"
@@ -2169,6 +2235,12 @@ msgstr "المدينة المركزية (طنجة)"
 
 msgid "Villes du Nord couvertes par nos équipes"
 msgstr "مدن الشمال المغطاة من قبل فرقنا"
+
+msgid "Villes voisines de %(city_name)s également couvertes"
+msgstr "المدن المجاورة لـ %(city_name)s المشمولة بالتغطية أيضاً"
+
+msgid "Villes voisines de {{ city_name }} également couvertes"
+msgstr "المدن المجاورة لـ {{ city_name }} المشمولة بالتغطية أيضاً"
 
 msgid "Villes voisines à lier"
 msgstr "المدن المجاورة للربط"

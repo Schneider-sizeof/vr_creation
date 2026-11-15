@@ -169,8 +169,20 @@ msgstr "Blog"
 msgid "Blog & Actualités"
 msgstr "Blog & Actualités"
 
+msgid "Bonjour, je souhaite démarrer un projet de production visuelle à %(city_name)s. Pouvez-vous me transmettre une offre ?"
+msgstr "Bonjour, je souhaite démarrer un projet de production visuelle à %(city_name)s. Pouvez-vous me transmettre une offre ?"
+
+msgid "Bonjour, je souhaite démarrer un projet de production visuelle à {{ city_name }}. Pouvez-vous me transmettre une offre ?"
+msgstr "Bonjour, je souhaite démarrer un projet de production visuelle à {{ city_name }}. Pouvez-vous me transmettre une offre ?"
+
 msgid "Bonjour, je souhaite un devis pour un projet dans le Nord du Maroc."
 msgstr "Bonjour, je souhaite un devis pour un projet dans le Nord du Maroc."
+
+msgid "Bonjour, je souhaite un devis pour un projet à %(city_name)s."
+msgstr "Bonjour, je souhaite un devis pour un projet à %(city_name)s."
+
+msgid "Bonjour, je souhaite un devis pour un projet à {{ city_name }}."
+msgstr "Bonjour, je souhaite un devis pour un projet à {{ city_name }}."
 
 msgid "Bouton hero 1 — libellé"
 msgstr "Bouton hero 1 — libellé"
@@ -358,6 +370,12 @@ msgstr "Contactez nos équipes pour un devis personnalisé adapté aux spécific
 msgid "Contactez notre studio à Tanger pour transformer vos plans 2D en expériences immersives à fort impact commercial."
 msgstr "Contactez notre studio à Tanger pour transformer vos plans 2D en expériences immersives à fort impact commercial."
 
+msgid "Contactez notre équipe basée à Tanger pour organiser un repérage sur site à %(city_name)s et obtenir une proposition technique chiffrée sous 24h."
+msgstr "Contactez notre équipe basée à Tanger pour organiser un repérage sur site à %(city_name)s et obtenir une proposition technique chiffrée sous 24h."
+
+msgid "Contactez notre équipe basée à Tanger pour organiser un repérage sur site à {{ city_name }} et obtenir une proposition technique chiffrée sous 24h."
+msgstr "Contactez notre équipe basée à Tanger pour organiser un repérage sur site à {{ city_name }} et obtenir une proposition technique chiffrée sous 24h."
+
 msgid "Contactez notre équipe à Tanger pour un premier échange gratuit et sans engagement."
 msgstr "Contactez notre équipe à Tanger pour un premier échange gratuit et sans engagement."
 
@@ -463,6 +481,12 @@ msgstr "Demander un devis personnalisé"
 msgid "Depuis nos bureaux de Tanger, nous accompagnons les entreprises et institutions de toute la région nord."
 msgstr "Depuis nos bureaux de Tanger, nous accompagnons les entreprises et institutions de toute la région nord."
 
+msgid "Depuis nos bureaux à Tanger, nos équipes interviennent sur l'ensemble du littoral et de l'arrière-pays du Nord marocain : Tétouan, Asilah, Larache, Chefchaouen, Al Hoceima, M'diq, Martil et Fnideq. <a href=\"%(hub_url)s\" class=\"text-primary font-semibold hover:underline\">Découvrez le détail de nos zones d'intervention &rarr;</a>"
+msgstr "Depuis nos bureaux à Tanger, nos équipes interviennent sur l'ensemble du littoral et de l'arrière-pays du Nord marocain : Tétouan, Asilah, Larache, Chefchaouen, Al Hoceima, M'diq, Martil et Fnideq. <a href=\"%(hub_url)s\" class=\"text-primary font-semibold hover:underline\">Découvrez le détail de nos zones d'intervention &rarr;</a>"
+
+msgid "Depuis nos bureaux à Tanger, nos équipes interviennent sur l'ensemble du littoral et de l'arrière-pays du Nord marocain : Tétouan, Asilah, Larache, Chefchaouen, Al Hoceima, M'diq, Martil et Fnideq. <a href=\"{{ hub_url }}\" class=\"text-primary font-semibold hover:underline\">Découvrez le détail de nos zones d'intervention &rarr;</a>"
+msgstr "Depuis nos bureaux à Tanger, nos équipes interviennent sur l'ensemble du littoral et de l'arrière-pays du Nord marocain : Tétouan, Asilah, Larache, Chefchaouen, Al Hoceima, M'diq, Martil et Fnideq. <a href=\"{{ hub_url }}\" class=\"text-primary font-semibold hover:underline\">Découvrez le détail de nos zones d'intervention &rarr;</a>"
+
 msgid "Dernière mise à jour"
 msgstr "Dernière mise à jour"
 
@@ -567,6 +591,12 @@ msgstr "Découvrir le service Visites 3D"
 
 msgid "Découvrir nos services"
 msgstr "Découvrir nos services"
+
+msgid "Découvrir nos services à %(city_name)s"
+msgstr "Découvrir nos services à %(city_name)s"
+
+msgid "Découvrir nos services à {{ city_name }}"
+msgstr "Découvrir nos services à {{ city_name }}"
 
 msgid "Découvrir nos solutions"
 msgstr "Découvrir nos solutions"
@@ -684,6 +714,12 @@ msgstr "Exemples récents de missions menées pour nos partenaires architectes, 
 
 msgid "Expertise 360°"
 msgstr "Expertise 360°"
+
+msgid "Expertise visuelle 3D et captation immersive à %(city_name)s"
+msgstr "Expertise visuelle 3D et captation immersive à %(city_name)s"
+
+msgid "Expertise visuelle 3D et captation immersive à {{ city_name }}"
+msgstr "Expertise visuelle 3D et captation immersive à {{ city_name }}"
 
 msgid "Explorez nos démonstrations de visites 360° interactives"
 msgstr "Explorez nos démonstrations de visites 360° interactives"
@@ -1072,6 +1108,12 @@ msgstr "Localisation VR Creation — Tanger, Maroc"
 msgid "Logistique & Déplacements depuis Tanger"
 msgstr "Logistique & Déplacements depuis Tanger"
 
+msgid "Logistique d'intervention à %(city_name)s"
+msgstr "Logistique d'intervention à %(city_name)s"
+
+msgid "Logistique d'intervention à {{ city_name }}"
+msgstr "Logistique d'intervention à {{ city_name }}"
+
 msgid "Logo"
 msgstr "Logo"
 
@@ -1245,6 +1287,12 @@ msgstr "Nos offres exclusives pour accélérer vos projets"
 
 msgid "Nos packs & offres exclusives"
 msgstr "Nos packs & offres exclusives"
+
+msgid "Nos solutions visuelles déployées à %(city_name)s"
+msgstr "Nos solutions visuelles déployées à %(city_name)s"
+
+msgid "Nos solutions visuelles déployées à {{ city_name }}"
+msgstr "Nos solutions visuelles déployées à {{ city_name }}"
 
 msgid "Nos valeurs"
 msgstr "Nos valeurs"
@@ -1555,6 +1603,12 @@ msgstr "Projets Connexes"
 msgid "Projets Récents"
 msgstr "Projets Récents"
 
+msgid "Projets types réalisés à %(city_name)s"
+msgstr "Projets types réalisés à %(city_name)s"
+
+msgid "Projets types réalisés à {{ city_name }}"
+msgstr "Projets types réalisés à {{ city_name }}"
+
 msgid "Promotion"
 msgstr "Promotion"
 
@@ -1584,6 +1638,12 @@ msgstr "Présentation du service"
 
 msgid "Prêt à donner vie à votre projet ?"
 msgstr "Prêt à donner vie à votre projet ?"
+
+msgid "Prêt à valoriser votre projet à %(city_name)s ?"
+msgstr "Prêt à valoriser votre projet à %(city_name)s ?"
+
+msgid "Prêt à valoriser votre projet à {{ city_name }} ?"
+msgstr "Prêt à valoriser votre projet à {{ city_name }} ?"
 
 msgid "Publié"
 msgstr "Publié"
@@ -1620,6 +1680,12 @@ msgstr "Questions fréquentes (FAQ)"
 
 msgid "Questions fréquentes sur ce service"
 msgstr "Questions fréquentes sur ce service"
+
+msgid "Questions fréquentes sur nos services à %(city_name)s"
+msgstr "Questions fréquentes sur nos services à %(city_name)s"
+
+msgid "Questions fréquentes sur nos services à {{ city_name }}"
+msgstr "Questions fréquentes sur nos services à {{ city_name }}"
 
 msgid "Qui sommes-nous ?"
 msgstr "Qui sommes-nous ?"
@@ -2169,6 +2235,12 @@ msgstr "Ville Hub (Tanger)"
 
 msgid "Villes du Nord couvertes par nos équipes"
 msgstr "Villes du Nord couvertes par nos équipes"
+
+msgid "Villes voisines de %(city_name)s également couvertes"
+msgstr "Villes voisines de %(city_name)s également couvertes"
+
+msgid "Villes voisines de {{ city_name }} également couvertes"
+msgstr "Villes voisines de {{ city_name }} également couvertes"
 
 msgid "Villes voisines à lier"
 msgstr "Villes voisines à lier"

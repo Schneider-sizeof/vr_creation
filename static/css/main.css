@@ -43,6 +43,15 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
 }
 
+/* Ensure all headings inside dark sections, heroes and gradients are crisp white */
+.text-white h1, .text-white h2, .text-white h3, .text-white h4, .text-white h5, .text-white h6,
+.bg-slate-900 h1, .bg-slate-900 h2, .bg-slate-900 h3, .bg-slate-900 h4, .bg-slate-900 h5, .bg-slate-900 h6,
+.bg-slate-950 h1, .bg-slate-950 h2, .bg-slate-950 h3, .bg-slate-950 h4, .bg-slate-950 h5, .bg-slate-950 h6,
+.section-dark h1, .section-dark h2, .section-dark h3, .section-dark h4, .section-dark h5, .section-dark h6,
+[class*="from-slate-900"] h1, [class*="from-slate-900"] h2, [class*="from-slate-900"] h3, [class*="from-slate-900"] h4, [class*="from-slate-900"] h5, [class*="from-slate-900"] h6 {
+    color: #ffffff !important;
+}
+
 .font-display { font-family: var(--font-display); font-style: italic; }
 
 a { color: var(--primary); text-decoration: none; transition: all 0.3s ease; }
